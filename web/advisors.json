@@ -1,0 +1,32 @@
+[
+  {
+    "id": "xiang-rong",
+    "name": "项荣",
+    "english_name": "Xiang Rong",
+    "report": "Xiang_Rong_profile_zh.md",
+    "summary": "研究主线连接人类疾病候选变异发现、遗传学证据、功能验证与分子通路机制。",
+    "tags": ["疾病遗传", "分子机制", "生物信息", "细胞与动物实验"],
+    "academic_confidence": "High（研究主线）",
+    "has_experience_evidence": false
+  },
+  {
+    "id": "liu-jing",
+    "name": "刘静",
+    "english_name": "Jing Liu",
+    "report": "Liu_advisor_profile_v1_5_demo_display.md",
+    "summary": "公开研究主线集中在造血调控、血液恶性肿瘤机制与治疗靶点。",
+    "tags": ["造血调控", "血液肿瘤", "单细胞", "分子机制"],
+    "academic_confidence": "Medium",
+    "has_experience_evidence": true
+  },
+  {
+    "id": "li-faxiang",
+    "name": "李发祥",
+    "english_name": "Faxiang Li",
+    "report": "Li_advisor_profile_v1_5_demo_display.md",
+    "summary": "公开研究主线集中在蛋白复合物结构、抗噬菌体系统和蛋白互作机制。",
+    "tags": ["结构生物学", "蛋白质", "Cryo-EM", "抗噬菌体系统"],
+    "academic_confidence": "High（核心论文）",
+    "has_experience_evidence": true
+  }
+]

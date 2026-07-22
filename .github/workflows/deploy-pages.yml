@@ -1,0 +1,58 @@
+name: Deploy advisor website to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publish static website
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Verify publish directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s web/index.html
+          test -s web/advisor.html
+          test -s web/advisors.json
+          test -s web/styles.css
+          test -s web/app.js
+          test -s web/advisor.js
+          test -s web/vendor/marked.umd.js
+          test -s web/reports/Xiang_Rong_profile_zh.md
+          test -s web/reports/Liu_advisor_profile_v1_5_demo_display.md
+          test -s web/reports/Li_advisor_profile_v1_5_demo_display.md
+          if grep -RInE 'C:\\Users\\|API_KEY[[:space:]]*=|OPENALEX_API_KEY[[:space:]]*=|github_pat_|ghp_' web --exclude='README.md'; then
+            echo 'Potential local path or secret found in publish directory.' >&2
+            exit 1
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./web
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

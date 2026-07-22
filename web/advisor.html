@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Academic Intelligence 导师画像详情。">
+    <title>导师详情 · Academic Intelligence 0.1</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="detail-page">
+    <header class="site-header detail-header">
+      <a class="brand" href="index.html" aria-label="返回导师信息首页">
+        <span class="brand-mark" aria-hidden="true">AI</span>
+        <span><strong>Academic Intelligence</strong><small>导师信息 0.1</small></span>
+      </a>
+      <a class="back-link" href="index.html">← 返回导师列表</a>
+    </header>
+
+    <main class="detail-shell">
+      <div id="detail-loading" class="detail-loading">正在读取导师画像…</div>
+      <div id="detail-error" class="error-panel" hidden>
+        <h1>暂时无法打开这份导师画像</h1>
+        <p id="detail-error-message">请返回导师列表后重试。</p>
+        <a class="primary-button" href="index.html">返回导师列表</a>
+      </div>
+
+      <div id="detail-content" hidden>
+        <section class="detail-intro">
+          <p class="eyebrow">导师画像 · 证据辅助阅读</p>
+          <h1 id="advisor-name"></h1>
+          <p id="advisor-summary" class="detail-summary"></p>
+          <div id="advisor-meta" class="meta-row"></div>
+        </section>
+
+        <aside class="detail-boundary" aria-label="用途声明">
+          <strong>用途声明</strong>
+          <span>本页保留报告原有证据等级、来源和边界。内容仅供初步了解，不构成导师或实验室评价，也不承诺任务、指导方式或成果。</span>
+        </aside>
+
+        <article id="report-content" class="markdown-body"></article>
+        <nav class="end-navigation" aria-label="页面结束导航">
+          <a class="primary-button" href="index.html">← 返回导师列表</a>
+        </nav>
+      </div>
+    </main>
+
+    <script src="vendor/marked.umd.js"></script>
+    <script src="advisor.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="帮助本科生了解学业导师研究方向与可能科研路径的证据信息工具。">
+    <title>导师信息 · Academic Intelligence 0.1</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="返回导师信息首页">
+        <span class="brand-mark" aria-hidden="true">AI</span>
+        <span><strong>Academic Intelligence</strong><small>导师信息 0.1</small></span>
+      </a>
+      <span class="version-badge">测试版</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">本科生学业导师信息工具</p>
+          <h1>从证据出发，了解研究方向与可能的科研路径</h1>
+          <p class="hero-lead">汇集公开学术资料，以及经过授权的个别本科生经历，帮助你在联系导师前完成初步了解。</p>
+        </div>
+        <aside class="scope-note" aria-label="使用边界">
+          <strong>使用前请注意</strong>
+          <p>内容仅供了解和初步筛选，不构成导师评价、实验室评价、排名或成果承诺。个别学生经历不代表所有学生。</p>
+        </aside>
+      </section>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">当前收录</p>
+            <h2 id="directory-title">导师列表</h2>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">按姓名或研究方向搜索</span>
+            <input id="advisor-search" type="search" placeholder="搜索姓名或研究方向" autocomplete="off">
+          </label>
+        </div>
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+        <div id="advisor-list" class="advisor-grid" aria-live="polite">
+          <p class="loading-state">正在读取导师信息…</p>
+        </div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>没有找到匹配的导师</h3>
+          <p>请尝试输入姓名、研究方向或技术关键词。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Academic Intelligence 0.1 · 信息有边界，选择需沟通</p>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>

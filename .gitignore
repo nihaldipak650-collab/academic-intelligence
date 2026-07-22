@@ -1,0 +1,36 @@
+# Python 缓存与构建产物
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# 虚拟环境与本地配置
+.venv/
+venv/
+.env
+
+# 本地访谈原始材料（只发布已去标识化的 web/reports/ 成稿）
+/*.txt
+
+# 测试与工具缓存
+.pytest_cache/
+.coverage
+.pages-preview/
+
+# 编辑器与操作系统文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 运行时生成的数据（保留目录占位文件）
+data/raw/*
+data/cleaned/*
+data/knowledge/*
+data/analysis/*
+data/reports/*
+!data/raw/.gitkeep
+!data/cleaned/.gitkeep
+!data/knowledge/.gitkeep
+!data/reports/.gitkeep

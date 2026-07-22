@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>页面未找到 · Academic Intelligence 0.1</title>
+    <style>
+      :root { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; color: #17233a; background: #f5f7f6; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; }
+      main { width: min(560px, 100%); padding: 48px; border: 1px solid #dbe2e6; border-radius: 18px; background: white; box-shadow: 0 16px 40px rgba(23, 50, 77, 0.08); text-align: center; }
+      .code { margin: 0; color: #15766f; font-size: 14px; font-weight: 800; letter-spacing: 0.16em; }
+      h1 { margin: 8px 0 12px; color: #17324d; font-size: 34px; }
+      p { margin: 0 0 24px; color: #5f6b7a; line-height: 1.7; }
+      a { display: inline-block; padding: 11px 18px; border-radius: 10px; background: #17324d; color: white; font-weight: 700; text-decoration: none; }
+      a:hover { background: #244b6d; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">404</p>
+      <h1>没有找到这个页面</h1>
+      <p>链接可能已失效，或者导师信息尚未收录。你可以返回导师列表继续查看。</p>
+      <a id="home-link" href="index.html">返回导师列表</a>
+    </main>
+    <script>
+      const segments = window.location.pathname.split("/").filter(Boolean);
+      const projectRoot = segments.length > 1
+        ? `/${segments[0]}/`
+        : "/";
+      document.querySelector("#home-link").href = `${projectRoot}index.html`;
+    </script>
+  </body>
+</html>
