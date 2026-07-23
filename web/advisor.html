@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Academic Intelligence 导师画像详情。">
-    <title>导师详情 · Academic Intelligence 0.1</title>
+    <title>导师详情 · Academic Intelligence 0.5 Beta</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="detail-page">
     <header class="site-header detail-header">
       <a class="brand" href="index.html" aria-label="返回导师信息首页">
         <span class="brand-mark" aria-hidden="true">AI</span>
-        <span><strong>Academic Intelligence</strong><small>导师信息 0.1</small></span>
+        <span><strong>Academic Intelligence</strong><small>导师信息 0.5 Beta</small></span>
       </a>
       <a class="back-link" href="index.html">← 返回导师列表</a>
     </header>
@@ -32,6 +32,11 @@
           <div id="advisor-meta" class="meta-row"></div>
         </section>
 
+        <aside id="academic-only-note" class="academic-only-note" aria-label="Academic-only 证据说明" hidden>
+          <strong>仅公开学术证据</strong>
+          <span>当前仅包含公开学术证据，暂无经过授权的本科生经历材料。</span>
+        </aside>
+
         <aside class="detail-boundary" aria-label="用途声明">
           <strong>用途声明</strong>
           <span>本页保留报告原有证据等级、来源和边界。内容仅供初步了解，不构成导师或实验室评价，也不承诺任务、指导方式或成果。</span>
@@ -40,6 +45,8 @@
         <article id="report-content" class="markdown-body"></article>
         <nav class="end-navigation" aria-label="页面结束导航">
           <a class="primary-button" href="index.html">← 返回导师列表</a>
+          <a id="feedback-link" class="secondary-button" href="#" target="_blank" rel="noopener noreferrer" hidden>发现错误</a>
+          <span id="feedback-unavailable" class="feedback-unavailable">发现错误（反馈链接待配置）</span>
         </nav>
       </div>
     </main>

@@ -36,10 +36,15 @@ jobs:
           test -s web/styles.css
           test -s web/app.js
           test -s web/advisor.js
+          test -s web/site-config.json
           test -s web/vendor/marked.umd.js
           test -s web/reports/Xiang_Rong_profile_zh.md
           test -s web/reports/Liu_advisor_profile_v1_5_demo_display.md
           test -s web/reports/Li_advisor_profile_v1_5_demo_display.md
+          test -s web/reports/Guo_Hui_profile_academic_zh.md
+          test -s web/reports/Hu_Dehua_profile_academic_zh.md
+          test -s web/reports/Hu_Zhengmao_profile_academic_zh.md
+          test -s web/reports/Li_Jiada_profile_academic_zh.md
           if grep -RInE 'C:\\Users\\|API_KEY[[:space:]]*=|OPENALEX_API_KEY[[:space:]]*=|github_pat_|ghp_' web --exclude='README.md'; then
             echo 'Potential local path or secret found in publish directory.' >&2
             exit 1

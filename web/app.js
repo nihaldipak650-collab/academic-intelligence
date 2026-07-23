@@ -21,13 +21,27 @@ function renderCard(advisor) {
   titleGroup.append(makeElement("p", "english-name", advisor.english_name));
   headingRow.append(titleGroup);
 
-  const evidenceType = makeElement(
-    "span",
-    advisor.has_experience_evidence ? "evidence-pill mixed" : "evidence-pill academic",
-    advisor.has_experience_evidence ? "学术＋经历证据" : "公开学术证据"
+  const badgeStack = makeElement("div", "card-badges");
+  const isAcademicOnly = advisor.evidence_type === "academic_only";
+  badgeStack.append(
+    makeElement(
+      "span",
+      advisor.has_experience_evidence ? "evidence-pill mixed" : "evidence-pill academic",
+      advisor.has_experience_evidence
+        ? "学术＋经历证据"
+        : isAcademicOnly
+          ? "Academic-only"
+          : "公开学术证据"
+    )
   );
-  headingRow.append(evidenceType);
+  if (advisor.status === "beta") {
+    badgeStack.append(makeElement("span", "beta-pill", "0.5 Beta"));
+  }
+  headingRow.append(badgeStack);
   article.append(headingRow);
+  if (advisor.institution) {
+    article.append(makeElement("p", "institution-line", advisor.institution));
+  }
   article.append(makeElement("p", "card-summary", advisor.summary));
 
   const tagList = makeElement("ul", "tag-list");
@@ -36,10 +50,19 @@ function renderCard(advisor) {
   article.append(tagList);
 
   const footer = makeElement("div", "card-footer");
-  const confidence = makeElement("p", "confidence-line");
-  confidence.append(makeElement("span", "confidence-label", "学术证据"));
-  confidence.append(makeElement("strong", "confidence-value", advisor.academic_confidence));
-  footer.append(confidence);
+  const confidenceValue = advisor.author_match_confidence || advisor.academic_confidence;
+  if (confidenceValue) {
+    const confidence = makeElement("p", "confidence-line");
+    confidence.append(
+      makeElement(
+        "span",
+        "confidence-label",
+        advisor.author_match_confidence ? "作者身份匹配" : "学术证据"
+      )
+    );
+    confidence.append(makeElement("strong", "confidence-value", confidenceValue));
+    footer.append(confidence);
+  }
 
   const link = makeElement("a", "card-link", "查看详情 →");
   link.href = `advisor.html?id=${encodeURIComponent(advisor.id)}`;

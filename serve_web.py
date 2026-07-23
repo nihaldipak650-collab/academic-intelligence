@@ -1,4 +1,4 @@
-"""Sync selected evidence reports and serve the static 0.1 website locally."""
+"""Sync selected evidence reports and serve the static 0.5 Beta website locally."""
 
 from __future__ import annotations
 
@@ -26,7 +26,14 @@ def sync_reports() -> list[str]:
     copied: list[str] = []
     for advisor in advisors:
         report_name = Path(str(advisor["report"])).name
-        source = SOURCE_REPORTS / report_name
+        source_value = advisor.get("source_report")
+        source = (
+            (PROJECT_ROOT / str(source_value)).resolve()
+            if source_value
+            else (SOURCE_REPORTS / report_name).resolve()
+        )
+        if PROJECT_ROOT.resolve() not in source.parents:
+            raise ValueError(f"Configured report source is outside project root: {source}")
         if not source.is_file():
             raise FileNotFoundError(f"Configured report not found: {source}")
         shutil.copy2(source, PUBLIC_REPORTS / report_name)
@@ -35,7 +42,7 @@ def sync_reports() -> list[str]:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Serve the Academic Intelligence 0.1 website")
+    parser = argparse.ArgumentParser(description="Serve the Academic Intelligence 0.5 Beta website")
     parser.add_argument("--host", default="127.0.0.1", help="Bind address (default: 127.0.0.1)")
     parser.add_argument("--port", type=int, default=8000, help="Port (default: 8000)")
     parser.add_argument("--sync-only", action="store_true", help="Only refresh public report copies")
@@ -53,7 +60,7 @@ def main() -> None:
         *handler_args, directory=str(WEB_ROOT), **handler_kwargs
     )
     server = ThreadingHTTPServer((args.host, args.port), handler)
-    print(f"Academic Intelligence 0.1: http://{args.host}:{args.port}/")
+    print(f"Academic Intelligence 0.5 Beta: http://{args.host}:{args.port}/")
     print("Press Ctrl+C to stop.")
     try:
         server.serve_forever()
