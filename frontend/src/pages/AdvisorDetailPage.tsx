@@ -1,4 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+  type MouseEvent,
+} from "react";
 import { Link, useParams } from "react-router-dom";
 import { ConfidenceTag } from "../components/ConfidenceTag";
 import { EmptyState } from "../components/EmptyState";
@@ -15,6 +20,16 @@ import {
   versionLabel,
 } from "../data/advisorData";
 import type { Advisor } from "../types/advisor";
+
+function scrollToHeading(
+  event: MouseEvent<HTMLAnchorElement>,
+  headingId: string,
+) {
+  event.preventDefault();
+  const heading = document.getElementById(headingId);
+  heading?.scrollIntoView({ behavior: "smooth", block: "start" });
+  heading?.focus({ preventScroll: true });
+}
 
 function ExperiencePanel({ advisor }: { advisor: Advisor }) {
   if (!advisor.hasExperienceEvidence) {
@@ -88,6 +103,19 @@ export function AdvisorDetailPage() {
       document.title = "导师信息库｜中南大学生命科学学院";
     };
   }, [advisor]);
+
+  useEffect(() => {
+    if (reportState === "ready") {
+      const resetScroll = () => window.scrollTo({ top: 0, left: 0 });
+      resetScroll();
+      const frameId = window.requestAnimationFrame(resetScroll);
+      const timeoutId = window.setTimeout(resetScroll, 100);
+      return () => {
+        window.cancelAnimationFrame(frameId);
+        window.clearTimeout(timeoutId);
+      };
+    }
+  }, [advisor?.id, reportState]);
 
   if (dataLoading) {
     return <LoadingState />;
@@ -256,6 +284,7 @@ export function AdvisorDetailPage() {
                 <a
                   href={`#${heading.id}`}
                   className={`toc-depth-${heading.depth}`}
+                  onClick={(event) => scrollToHeading(event, heading.id)}
                   key={heading.id}
                 >
                   {heading.text}
@@ -272,6 +301,7 @@ export function AdvisorDetailPage() {
                   <a
                     href={`#${heading.id}`}
                     className={`toc-depth-${heading.depth}`}
+                    onClick={(event) => scrollToHeading(event, heading.id)}
                     key={heading.id}
                   >
                     {heading.text}

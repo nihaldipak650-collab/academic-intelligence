@@ -30,7 +30,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 104px;
 }
 
@@ -758,6 +757,7 @@ button {
   width: min(100% - 48px, 1340px);
   margin: 0 auto;
   padding: 34px 0 110px;
+  overflow-anchor: none;
 }
 
 .detail-toolbar {
@@ -1261,6 +1261,22 @@ button {
 }
 
 @media (max-width: 620px) {
+  .tooltip {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    width: auto;
+    transform: translateY(5px);
+  }
+
+  .confidence:hover .tooltip,
+  .confidence:focus .tooltip,
+  .evidence-tag:hover .tooltip,
+  .evidence-tag:focus .tooltip {
+    transform: translateY(0);
+  }
+
   .navbar__inner {
     min-height: 68px;
   }
