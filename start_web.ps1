@@ -15,7 +15,16 @@ New-Item -ItemType Directory -Force -Path $publicReports | Out-Null
 $advisors = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8 | ConvertFrom-Json
 foreach ($advisor in $advisors) {
     $reportName = [System.IO.Path]::GetFileName([string]$advisor.report)
-    $source = Join-Path $sourceReports $reportName
+    $source = if ([string]::IsNullOrWhiteSpace([string]$advisor.source_report)) {
+        Join-Path $sourceReports $reportName
+    }
+    else {
+        [System.IO.Path]::GetFullPath((Join-Path $projectRoot ([string]$advisor.source_report)))
+    }
+    $projectPrefix = [System.IO.Path]::GetFullPath($projectRoot).TrimEnd("\") + "\"
+    if (-not $source.StartsWith($projectPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+        throw "Configured report source is outside project root: $source"
+    }
     if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
         throw "Configured report not found: $source"
     }
@@ -44,7 +53,7 @@ $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopba
 $url = "http://localhost:$Port/"
 $listener.Start()
 Write-Host "Synced $($advisors.Count) advisor reports."
-Write-Host "Academic Intelligence 0.1: $url"
+Write-Host "Academic Intelligence 0.5 Beta: $url"
 Write-Host "Press Ctrl+C to stop."
 
 try {

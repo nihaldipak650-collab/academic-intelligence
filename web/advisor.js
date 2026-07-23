@@ -5,6 +5,9 @@ const errorElement = document.querySelector("#detail-error");
 const errorMessage = document.querySelector("#detail-error-message");
 const contentElement = document.querySelector("#detail-content");
 const reportElement = document.querySelector("#report-content");
+const academicOnlyNote = document.querySelector("#academic-only-note");
+const feedbackLink = document.querySelector("#feedback-link");
+const feedbackUnavailable = document.querySelector("#feedback-unavailable");
 
 function showError(message) {
   loadingElement.hidden = true;
@@ -66,6 +69,38 @@ function renderMarkdown(markdown) {
     table.before(wrapper);
     wrapper.append(table);
   });
+
+  reportElement.querySelectorAll("table").forEach((table) => {
+    const headers = [...table.querySelectorAll("thead th")];
+    const doiColumn = headers.findIndex((header) => header.textContent.trim().toUpperCase() === "DOI");
+    if (doiColumn < 0) return;
+    table.querySelectorAll("tbody tr").forEach((row) => {
+      const cell = row.children[doiColumn];
+      if (!cell || cell.querySelector("a")) return;
+      const doi = cell.textContent.trim();
+      if (!/^10\.\d{4,9}\/\S+$/i.test(doi)) return;
+      const link = document.createElement("a");
+      link.href = `https://doi.org/${doi}`;
+      link.textContent = doi;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      cell.replaceChildren(link);
+    });
+  });
+}
+
+async function loadSiteConfig() {
+  try {
+    const response = await fetch("site-config.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const config = await response.json();
+    if (typeof config.feedback_url !== "string" || !config.feedback_url.trim()) return;
+    feedbackLink.href = config.feedback_url.trim();
+    feedbackLink.hidden = false;
+    feedbackUnavailable.hidden = true;
+  } catch (error) {
+    console.warn("反馈入口配置读取失败", error);
+  }
 }
 
 async function loadAdvisor() {
@@ -90,17 +125,44 @@ async function loadAdvisor() {
     const markdown = await reportResponse.text();
     renderMarkdown(markdown);
 
-    document.title = `${advisor.name}导师画像 · Academic Intelligence 0.1`;
+    document.title = `${advisor.name}导师画像 · Academic Intelligence 0.5 Beta`;
     document.querySelector("#advisor-name").textContent = `${advisor.name}导师画像`;
     document.querySelector("#advisor-summary").textContent = advisor.summary;
     const meta = document.querySelector("#advisor-meta");
-    addMetaChip(meta, "学术证据", advisor.academic_confidence, "confidence");
+    if (advisor.author_match_confidence) {
+      addMetaChip(meta, "作者身份匹配", advisor.author_match_confidence, "confidence");
+    } else if (advisor.academic_confidence) {
+      addMetaChip(meta, "学术证据", advisor.academic_confidence, "confidence");
+    }
     addMetaChip(
       meta,
       "经历证据",
-      advisor.has_experience_evidence ? "包含单案例" : "未包含",
+      advisor.has_experience_evidence
+        ? "包含单案例"
+        : advisor.evidence_type === "academic_only"
+          ? `${advisor.experience_case_count ?? 0} 条（暂无授权材料）`
+          : "未包含",
       advisor.has_experience_evidence ? "experience" : ""
     );
+    if (advisor.evidence_type === "academic_only") {
+      addMetaChip(meta, "证据类型", "Academic-only");
+      academicOnlyNote.hidden = false;
+    }
+    if (advisor.version) {
+      addMetaChip(meta, "版本", advisor.version === "0.5-beta" ? "0.5 Beta 测试版" : advisor.version);
+    }
+    if (advisor.last_updated) {
+      const updatedDate = new Date(advisor.last_updated);
+      const displayedDate = Number.isNaN(updatedDate.getTime())
+        ? advisor.last_updated
+        : new Intl.DateTimeFormat("zh-CN", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            timeZone: "Asia/Shanghai"
+          }).format(updatedDate);
+      addMetaChip(meta, "最后更新", displayedDate);
+    }
     advisor.tags.forEach((tag) => addMetaChip(meta, "", tag));
 
     loadingElement.hidden = true;
@@ -111,4 +173,5 @@ async function loadAdvisor() {
   }
 }
 
+loadSiteConfig();
 loadAdvisor();
