@@ -1,9 +1,13 @@
-name: Deploy advisor website to GitHub Pages
+name: Rollback - deploy legacy advisor website 0.5
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+    inputs:
+      confirm_deploy:
+        description: "Deploy the legacy web/ site as a manual rollback"
+        required: true
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -16,7 +20,8 @@ concurrency:
 
 jobs:
   deploy:
-    name: Publish static website
+    if: ${{ inputs.confirm_deploy == true }}
+    name: Publish legacy web directory
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -24,7 +29,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Verify publish directory
         shell: bash
