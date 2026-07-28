@@ -15,9 +15,57 @@ export interface ReportHeading {
   text: string;
 }
 
+interface MarkdownAstNode {
+  type: string;
+  depth?: number;
+  value?: string;
+  children?: MarkdownAstNode[];
+}
+
+interface ExperienceVisibilityOptions {
+  enabled?: boolean;
+}
+
 const evidencePattern =
   /(No Evidence|Low[–-]Medium|High[–-]Medium|Medium[–-]High|High|Medium|Low)/g;
 const doiPattern = /\b10\.\d{4,9}\/[-._;()/:A-Z0-9]+/gi;
+
+function astPlainText(node: MarkdownAstNode): string {
+  if (typeof node.value === "string") return node.value;
+  return (node.children ?? []).map(astPlainText).join("");
+}
+
+function isExperienceHeading(value: string) {
+  const normalized = value.normalize("NFKC").toLocaleLowerCase();
+  return [
+    "本科生科研经历参考",
+    "本科生科研经历证据",
+    "本科生经历证据",
+    "undergraduate research experience",
+    "experience evidence",
+  ].some((marker) => normalized.includes(marker.toLocaleLowerCase()));
+}
+
+export function remarkHideExperienceSections(
+  options: ExperienceVisibilityOptions = {},
+) {
+  return (tree: MarkdownAstNode) => {
+    if (!options.enabled || !tree.children) return;
+    let hiddenDepth: number | null = null;
+    tree.children = tree.children.filter((node) => {
+      if (node.type === "heading" && typeof node.depth === "number") {
+        if (hiddenDepth !== null && node.depth <= hiddenDepth) {
+          hiddenDepth = null;
+        }
+        if (isExperienceHeading(astPlainText(node))) {
+          hiddenDepth = node.depth;
+          return false;
+        }
+      }
+      return hiddenDepth === null;
+    });
+  };
+}
 
 function plainText(value: ReactNode): string {
   return Children.toArray(value)
@@ -51,9 +99,12 @@ function uniqueSlug(base: string, used: Map<string, number>) {
   return count ? `${base}-${count + 1}` : base;
 }
 
-export function extractHeadings(markdown: string): ReportHeading[] {
+export function extractHeadings(
+  markdown: string,
+  hideExperienceSections = false,
+): ReportHeading[] {
   const used = new Map<string, number>();
-  return markdown
+  const headings = markdown
     .split(/\r?\n/)
     .map((line) => /^(#{2,4})\s+(.+?)\s*$/.exec(line))
     .filter((match): match is RegExpExecArray => Boolean(match))
@@ -65,6 +116,18 @@ export function extractHeadings(markdown: string): ReportHeading[] {
         text,
       };
     });
+  if (!hideExperienceSections) return headings;
+  let hiddenDepth: number | null = null;
+  return headings.filter((heading) => {
+    if (hiddenDepth !== null && heading.depth <= hiddenDepth) {
+      hiddenDepth = null;
+    }
+    if (isExperienceHeading(heading.text)) {
+      hiddenDepth = heading.depth;
+      return false;
+    }
+    return hiddenDepth === null;
+  });
 }
 
 function trimDoi(value: string) {
@@ -143,8 +206,17 @@ function decorateChildren(children: ReactNode) {
   );
 }
 
-export function MarkdownReport({ markdown }: { markdown: string }) {
-  const headings = useMemo(() => extractHeadings(markdown), [markdown]);
+export function MarkdownReport({
+  markdown,
+  hideExperienceSections = false,
+}: {
+  markdown: string;
+  hideExperienceSections?: boolean;
+}) {
+  const headings = useMemo(
+    () => extractHeadings(markdown, hideExperienceSections),
+    [hideExperienceSections, markdown],
+  );
   const components = useMemo<Components>(() => {
     let headingCursor = 0;
     const heading =
@@ -201,7 +273,13 @@ export function MarkdownReport({ markdown }: { markdown: string }) {
 
   return (
     <Fragment>
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown
+        remarkPlugins={[
+          [remarkHideExperienceSections, { enabled: hideExperienceSections }],
+          remarkGfm,
+        ]}
+        components={components}
+      >
         {markdown}
       </ReactMarkdown>
     </Fragment>

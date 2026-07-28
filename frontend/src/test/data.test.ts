@@ -6,6 +6,14 @@ import {
   filterAdvisors,
   getTagCounts,
 } from "../data/advisorData";
+import {
+  getAdvisorContact,
+  getAdvisorFreshness,
+  getPublicUndergraduateTasks,
+  MISSING_PUBLIC_INFO,
+  NO_RELIABLE_PUBLIC_EVIDENCE,
+  PENDING_VERIFICATION,
+} from "../data/advisorPresentation";
 import type { AdvisorDataEnvelope } from "../types/advisor";
 
 const data = advisorJson as AdvisorDataEnvelope;
@@ -34,6 +42,9 @@ describe("真实导师数据", () => {
 
   it("搜索中文姓名", () => {
     expect(filterAdvisors(data.advisors, "  郭辉  ", "")).toHaveLength(1);
+    expect(filterAdvisors(data.advisors, "正茂", [])[0]?.id).toBe(
+      "hu-zhengmao",
+    );
   });
 
   it("搜索英文姓名且不区分大小写", () => {
@@ -51,6 +62,19 @@ describe("真实导师数据", () => {
   it("搜索和标签筛选可组合", () => {
     expect(
       filterAdvisors(data.advisors, "孤独症", "应激颗粒").map(
+        (advisor) => advisor.id,
+      ),
+    ).toEqual(["guo-hui"]);
+  });
+
+  it("同类别多标签使用 OR，并与姓名搜索使用 AND", () => {
+    expect(
+      filterAdvisors(data.advisors, "", ["孤独症", "结构生物学"]).map(
+        (advisor) => advisor.id,
+      ),
+    ).toEqual(["li-faxiang", "guo-hui", "hu-zhengmao"]);
+    expect(
+      filterAdvisors(data.advisors, "郭", ["孤独症", "结构生物学"]).map(
         (advisor) => advisor.id,
       ),
     ).toEqual(["guo-hui"]);
@@ -76,6 +100,30 @@ describe("真实导师数据", () => {
       expect(advisor?.hasExperienceEvidence).toBe(true);
       expect(advisor?.experienceCaseCount).toBe(1);
     }
+  });
+
+  it("公开展示适配层不暴露混合摘要中的学生经历", () => {
+    for (const id of ["liu-jing", "li-faxiang"]) {
+      const advisor = data.advisors.find((item) => item.id === id);
+      expect(advisor).toBeDefined();
+      expect(getPublicUndergraduateTasks(advisor!)).toEqual([]);
+    }
+  });
+
+  it("联系方式、动态状态和分析缺失文案使用统一规则", () => {
+    const advisor = data.advisors.find((item) => item.id === "xiang-rong")!;
+    expect(getAdvisorContact(advisor)).toEqual({
+      officialEmail: null,
+      officialPhone: null,
+      officialHomepage: null,
+      laboratoryAddress: null,
+      sourceUrl: null,
+    });
+    expect(getAdvisorFreshness(advisor).opportunityStatus).toBe(
+      PENDING_VERIFICATION,
+    );
+    expect(MISSING_PUBLIC_INFO).toBe("暂无公开信息");
+    expect(NO_RELIABLE_PUBLIC_EVIDENCE).toBe("暂无可靠公开证据");
   });
 
   it("网页报告副本与 web 源报告逐字节一致", () => {

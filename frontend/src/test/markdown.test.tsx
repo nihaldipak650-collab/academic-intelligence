@@ -63,4 +63,32 @@ describe("Markdown 报告渲染", () => {
       screen.getByLabelText("Evidence Confidence：Medium"),
     ).toBeInTheDocument();
   });
+
+  it("按标题级 AST 隐藏学生经历章节并保留后续学术内容", () => {
+    const markdown = [
+      "## 公开学术事实",
+      "保留的公开内容。",
+      "## 第二部分：本科生科研经历参考（Undergraduate Research Experience）",
+      "### 本科生科研经历证据（Experience Evidence）",
+      "代表性：Unknown。具体学生经历正文。",
+      "## 第三部分：学术分析",
+      "保留的后续学术内容。",
+      "### 本科生经历证据（Experience Evidence）",
+      "另一段具体经历。",
+      "### Evidence Boundary",
+      "边界继续保留。",
+    ].join("\n\n");
+
+    render(<MarkdownReport markdown={markdown} hideExperienceSections />);
+    expect(screen.getByText("保留的公开内容。")).toBeInTheDocument();
+    expect(screen.getByText("保留的后续学术内容。")).toBeInTheDocument();
+    expect(screen.getByText("边界继续保留。")).toBeInTheDocument();
+    expect(screen.queryByText(/具体学生经历正文/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/另一段具体经历/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Unknown/)).not.toBeInTheDocument();
+
+    expect(
+      extractHeadings(markdown, true).map((heading) => heading.text),
+    ).toEqual(["公开学术事实", "第三部分：学术分析", "Evidence Boundary"]);
+  });
 });

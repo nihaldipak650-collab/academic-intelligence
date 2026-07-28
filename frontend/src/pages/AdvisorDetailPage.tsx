@@ -1,12 +1,8 @@
-import {
-  useEffect,
-  useMemo,
-  useState,
-  type MouseEvent,
-} from "react";
+import { useEffect, useMemo, useState, type MouseEvent } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ConfidenceTag } from "../components/ConfidenceTag";
 import { EmptyState } from "../components/EmptyState";
+import { EvidenceTag } from "../components/EvidenceTag";
 import { FeedbackLink } from "../components/FeedbackLink";
 import {
   extractHeadings,
@@ -14,43 +10,91 @@ import {
 } from "../components/MarkdownReport";
 import { ErrorState, LoadingState } from "../components/PageState";
 import { useAdvisorData } from "../data/AdvisorDataContext";
+import { assetPath, formatUpdatedAt } from "../data/advisorData";
 import {
-  assetPath,
-  formatUpdatedAt,
-  versionLabel,
-} from "../data/advisorData";
-import type { Advisor } from "../types/advisor";
+  getAdvisorContact,
+  getAdvisorFreshness,
+  getPublicUndergraduateTasks,
+  getResearchTermExplanations,
+  MISSING_PUBLIC_INFO,
+  NO_RELIABLE_PUBLIC_EVIDENCE,
+  PENDING_VERIFICATION,
+  publicEvidenceLabel,
+} from "../data/advisorPresentation";
+import type { AdvisorContact } from "../types/advisor";
+
+const publicSections = [
+  ["overview", "先看这里"],
+  ["research", "方向通俗解释"],
+  ["identity-contact", "身份与联系"],
+  ["tasks", "本科生可能任务"],
+  ["growth", "成长路线"],
+  ["evidence", "证据说明"],
+  ["contact-prep", "联系与线下核验"],
+  ["report", "完整学术报告"],
+] as const;
+
+function scrollToElement(elementId: string) {
+  const element = document.getElementById(elementId);
+  element?.scrollIntoView({ behavior: "smooth", block: "start" });
+  element?.focus({ preventScroll: true });
+}
 
 function scrollToHeading(
   event: MouseEvent<HTMLAnchorElement>,
   headingId: string,
 ) {
   event.preventDefault();
-  const heading = document.getElementById(headingId);
-  heading?.scrollIntoView({ behavior: "smooth", block: "start" });
-  heading?.focus({ preventScroll: true });
+  scrollToElement(headingId);
 }
 
-function ExperiencePanel({ advisor }: { advisor: Advisor }) {
-  if (!advisor.hasExperienceEvidence) {
-    return (
-      <EmptyState
-        title="当前仅包含公开学术证据，暂无经过授权的本科生经历材料。"
-        description="公开论文不能证明导师真实指导方式、实验室氛围、反馈频率或本科生任务安排。"
-      />
-    );
-  }
+function PublicValue({ value }: { value: string | null }) {
+  return <>{value?.trim() || MISSING_PUBLIC_INFO}</>;
+}
+
+function OfficialLink({ value }: { value: string | null }) {
+  if (!value) return <>{MISSING_PUBLIC_INFO}</>;
   return (
-    <div className="experience-panel" role="note">
-      <span>EXPERIENCE EVIDENCE</span>
-      <strong>
-        包含 {advisor.experienceCaseCount} 个经授权的本科生经历案例
-      </strong>
-      <p>
-        代表性为 Unknown。经历内容只代表特定学生和特定时期，不转化为对实验室整体的评价；
-        Case ID 与事实/体验分层请以完整报告原文为准。
-      </p>
-    </div>
+    <a href={value} target="_blank" rel="noopener noreferrer">
+      打开官方页面
+    </a>
+  );
+}
+
+function ContactFacts({ contact }: { contact: AdvisorContact }) {
+  return (
+    <>
+      <dl className="fact-list contact-facts">
+        <div>
+          <dt>官方邮箱</dt>
+          <dd><PublicValue value={contact.officialEmail} /></dd>
+        </div>
+        <div>
+          <dt>官方电话</dt>
+          <dd><PublicValue value={contact.officialPhone} /></dd>
+        </div>
+        <div>
+          <dt>实验室地址</dt>
+          <dd><PublicValue value={contact.laboratoryAddress} /></dd>
+        </div>
+        <div>
+          <dt>官方主页</dt>
+          <dd><OfficialLink value={contact.officialHomepage} /></dd>
+        </div>
+      </dl>
+      <details className="source-disclosure">
+        <summary>查看联系方式来源</summary>
+        <p>
+          {contact.sourceUrl ? (
+            <a href={contact.sourceUrl} target="_blank" rel="noopener noreferrer">
+              打开公开来源
+            </a>
+          ) : (
+            MISSING_PUBLIC_INFO
+          )}
+        </p>
+      </details>
+    </>
   );
 }
 
@@ -62,33 +106,41 @@ export function AdvisorDetailPage() {
   const [reportState, setReportState] = useState<
     "idle" | "loading" | "ready" | "error"
   >("idle");
-  const headings = useMemo(() => extractHeadings(markdown), [markdown]);
+  const headings = useMemo(
+    () => extractHeadings(markdown, true),
+    [markdown],
+  );
+  const contact = useMemo(() => getAdvisorContact(advisor), [advisor]);
+  const freshness = useMemo(
+    () => (advisor ? getAdvisorFreshness(advisor) : null),
+    [advisor],
+  );
+  const tasks = useMemo(
+    () => (advisor ? getPublicUndergraduateTasks(advisor) : []),
+    [advisor],
+  );
+  const terms = useMemo(
+    () => (advisor ? getResearchTermExplanations(advisor) : []),
+    [advisor],
+  );
 
   useEffect(() => {
-    if (!advisor) {
-      return;
-    }
+    if (!advisor) return;
     let active = true;
     setReportState("loading");
     setMarkdown("");
     fetch(assetPath(advisor.reportPath))
       .then(async (response) => {
-        if (!response.ok) {
-          throw new Error("报告请求失败");
-        }
+        if (!response.ok) throw new Error("报告请求失败");
         const content = await response.text();
-        if (!content.trim()) {
-          throw new Error("报告为空");
-        }
+        if (!content.trim()) throw new Error("报告为空");
         if (active) {
           setMarkdown(content);
           setReportState("ready");
         }
       })
       .catch(() => {
-        if (active) {
-          setReportState("error");
-        }
+        if (active) setReportState("error");
       });
     return () => {
       active = false;
@@ -97,7 +149,7 @@ export function AdvisorDetailPage() {
 
   useEffect(() => {
     document.title = advisor
-      ? `${advisor.nameZh}｜导师证据报告`
+      ? `${advisor.nameZh}｜导师公开信息`
       : "导师信息库｜中南大学生命科学学院";
     return () => {
       document.title = "导师信息库｜中南大学生命科学学院";
@@ -105,25 +157,22 @@ export function AdvisorDetailPage() {
   }, [advisor]);
 
   useEffect(() => {
-    if (reportState === "ready") {
-      const resetScroll = () => window.scrollTo({ top: 0, left: 0 });
-      resetScroll();
-      const frameId = window.requestAnimationFrame(resetScroll);
-      const timeoutId = window.setTimeout(resetScroll, 100);
-      return () => {
-        window.cancelAnimationFrame(frameId);
-        window.clearTimeout(timeoutId);
-      };
-    }
+    if (reportState !== "ready") return;
+    const resetScroll = () => window.scrollTo({ top: 0, left: 0 });
+    resetScroll();
+    const frameId = window.requestAnimationFrame(resetScroll);
+    const timeoutId = window.setTimeout(resetScroll, 100);
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.clearTimeout(timeoutId);
+    };
   }, [advisor?.id, reportState]);
 
-  if (dataLoading) {
-    return <LoadingState />;
-  }
+  if (dataLoading) return <LoadingState />;
   if (dataError) {
     return <ErrorState title="导师数据无法加载" description={dataError} />;
   }
-  if (!advisor) {
+  if (!advisor || !freshness) {
     return (
       <ErrorState
         title="没有找到这位导师"
@@ -135,9 +184,7 @@ export function AdvisorDetailPage() {
   return (
     <div className="detail-page">
       <div className="detail-toolbar">
-        <Link className="back-link" to="/">
-          ← 返回导师列表
-        </Link>
+        <Link className="back-link" to="/">← 返回导师列表</Link>
         <FeedbackLink />
       </div>
 
@@ -147,11 +194,7 @@ export function AdvisorDetailPage() {
             {advisor.initials}
           </div>
           <div>
-            <span className="profile-kicker">
-              {advisor.evidenceType === "academic_only"
-                ? "ACADEMIC-ONLY"
-                : "ACADEMIC + EXPERIENCE"}
-            </span>
+            <span className="profile-kicker">{publicEvidenceLabel()}</span>
             <h1>
               {advisor.nameZh}
               {advisor.nameEn && <small>{advisor.nameEn}</small>}
@@ -160,166 +203,226 @@ export function AdvisorDetailPage() {
           </div>
         </div>
         <dl className="profile-meta">
-          <div>
-            <dt>作者身份匹配</dt>
-            <dd>
-              <ConfidenceTag
-                level={advisor.authorMatchConfidence}
-                label="Confidence"
-                note={
-                  advisor.authorConfidenceSource ===
-                  "legacy_academic_confidence"
-                    ? "旧站来源仅提供 academic_confidence；本页原样归一化其等级，不额外扩大学术结论。"
-                    : undefined
-                }
-              />
-            </dd>
-          </div>
-          <div>
-            <dt>版本 / 状态</dt>
-            <dd>
-              {versionLabel(advisor.version)} · {advisor.status}
-            </dd>
-          </div>
-          <div>
-            <dt>最后更新</dt>
-            <dd>{formatUpdatedAt(advisor.lastUpdated)}</dd>
-          </div>
-          <div>
-            <dt>经历案例</dt>
-            <dd>{advisor.experienceCaseCount}</dd>
-          </div>
+          <div><dt>职位 / 身份</dt><dd>{advisor.position ?? MISSING_PUBLIC_INFO}</dd></div>
+          <div><dt>版本</dt><dd>1.0-rc1</dd></div>
+          <div><dt>最新核验</dt><dd>{formatUpdatedAt(freshness.lastVerifiedAt)}</dd></div>
+          <div><dt>当前本科生机会</dt><dd>{freshness.opportunityStatus}</dd></div>
         </dl>
       </header>
 
-      <section className="quick-summary" aria-labelledby="quick-summary-title">
+      <nav className="section-nav" aria-label="详情页主要内容">
+        {publicSections.map(([sectionId, label]) => (
+          <button type="button" onClick={() => scrollToElement(sectionId)} key={sectionId}>
+            {label}
+          </button>
+        ))}
+      </nav>
+
+      <section className="quick-summary content-section" id="overview" tabIndex={-1}>
         <div className="section-heading">
           <div>
-            <span className="section-kicker">QUICK READ</span>
-            <h2 id="quick-summary-title">先看这一页摘要</h2>
+            <span className="section-kicker">START HERE</span>
+            <h2>先看这里</h2>
           </div>
-          <span className="source-chip">{advisor.sourceTypeLabel}</span>
+          <span className="source-chip">1 分钟概览</span>
         </div>
         <div className="quick-grid">
           <article>
-            <span>01</span>
-            <h3>核心方向</h3>
+            <span>01 · 公开事实</span>
+            <h3>主要研究方向</h3>
             <div className="tag-list">
               {advisor.quickSummary.coreDirections.map((item) => (
-                <span className="tag" key={item}>
-                  {item}
-                </span>
+                <span className="tag" key={item}>{item}</span>
               ))}
             </div>
           </article>
           <article>
-            <span>02</span>
-            <h3>主要技术</h3>
+            <span>02 · AI整理</span>
+            <h3>报告中的主要方法</h3>
             {advisor.quickSummary.mainTechniques.length ? (
               <ul>
-                {advisor.quickSummary.mainTechniques.map((item) => (
+                {advisor.quickSummary.mainTechniques.slice(0, 3).map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            ) : (
-              <p>来源报告未提供可稳定抽取的技术条目，请阅读完整报告。</p>
-            )}
+            ) : <p>{NO_RELIABLE_PUBLIC_EVIDENCE}</p>}
           </article>
           <article>
-            <span>03</span>
-            <h3>本科生可能路径</h3>
-            {advisor.quickSummary.undergraduatePaths.length ? (
-              <ul>
-                {advisor.quickSummary.undergraduatePaths.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            ) : (
-              <p>来源报告未提供可稳定抽取的路径条目，请阅读完整报告。</p>
-            )}
+            <span>03 · 动态信息</span>
+            <h3>当前是否招收本科生</h3>
+            <p className="missing-copy">{PENDING_VERIFICATION}</p>
+            <p>公开论文不能证明当前名额、项目机会或实际带教安排。</p>
           </article>
           <article className="quick-grid__boundary">
-            <span>04</span>
-            <h3>重要边界</h3>
-            <p>
-              {advisor.hasExperienceEvidence
-                ? "单个经历案例的代表性为 Unknown；不得推广为实验室整体事实。"
-                : "当前仅有公开学术证据；真实带教方式与本科生安排均不能由论文推断。"}
-            </p>
+            <span>04 · 决策边界</span>
+            <h3>这页能做什么</h3>
+            <p>用于理解研究方向、缩小候选范围并准备联系问题，不替代本人联系、线下核验和最终决定。</p>
           </article>
         </div>
       </section>
 
-      <section className="experience-section" aria-labelledby="experience-title">
-        <span className="section-kicker">EXPERIENCE STATUS</span>
-        <h2 id="experience-title">本科生经历证据</h2>
-        <ExperiencePanel advisor={advisor} />
+      <section className="content-section" id="research" tabIndex={-1}>
+        <span className="section-kicker">PLAIN LANGUAGE</span>
+        <h2>方向与术语怎么理解</h2>
+        <div className="term-grid">
+          {terms.map((item) => (
+            <article className="term-card" key={item.term}>
+              <span className="tag">原始方向 · {item.term}</span>
+              <h3>{item.plainLanguage}</h3>
+              <p><strong>对本科生意味着什么：</strong>{item.undergraduateMeaning}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="content-section" id="identity-contact" tabIndex={-1}>
+        <span className="section-kicker">PUBLIC FACTS</span>
+        <h2>基础身份与官方联系</h2>
+        <dl className="fact-list identity-facts">
+          <div><dt>姓名</dt><dd>{advisor.nameZh}{advisor.nameEn ? ` / ${advisor.nameEn}` : ""}</dd></div>
+          <div><dt>所属机构</dt><dd><PublicValue value={advisor.institution ?? null} /></dd></div>
+          <div><dt>职位 / 身份</dt><dd>{advisor.position ?? MISSING_PUBLIC_INFO}</dd></div>
+          <div><dt>数据状态</dt><dd>{freshness.dataStatus}</dd></div>
+        </dl>
+        <ContactFacts contact={contact} />
+      </section>
+
+      <section className="content-section" id="tasks" tabIndex={-1}>
+        <span className="section-kicker">UNDERGRADUATE TASKS</span>
+        <h2>本科生可能任务</h2>
+        <p className="section-intro">以下内容仅是基于公开证据的理解线索，不是实验室承诺、岗位说明或实际安排。</p>
+        {tasks.length ? (
+          <div className="task-list">
+            {tasks.map((task) => (
+              <article className="task-card" key={task.id}>
+                <div className="task-card__heading">
+                  <span className="lane-label lane-label--ai">AI整理</span>
+                  <EvidenceTag level={task.evidenceStatus} />
+                </div>
+                <h3>{task.title}</h3>
+                <p>{task.description}</p>
+                <dl>
+                  <div><dt>研究背景</dt><dd>{task.background}</dd></div>
+                  <div><dt>为什么做</dt><dd>{task.whyItMatters}</dd></div>
+                  <div><dt>可能方法</dt><dd>{task.methods.length ? task.methods.join("、") : PENDING_VERIFICATION}</dd></div>
+                  <div><dt>可能产出</dt><dd>{task.expectedOutput}</dd></div>
+                </dl>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <EmptyState
+            title={NO_RELIABLE_PUBLIC_EVIDENCE}
+            description="当前公开展示层没有足够的结构化证据说明本科生具体任务。请在线下联系时确认任务边界、方法、时间投入和实际指导人。"
+          />
+        )}
+      </section>
+
+      <details className="content-collapse content-section" id="growth" tabIndex={-1}>
+        <summary>
+          <span><small>GENERAL REFERENCE</small><strong>科研成长路线与前置技能</strong></span>
+          <em>默认折叠 · 通用参考</em>
+        </summary>
+        <div className="collapse-body">
+          <p className="boundary-note">以下路线是面向本科生的通用准备参考，不是该导师或实验室的官方培养方案。</p>
+          <div className="growth-timeline">
+            <article><span>0—3 个月</span><h3>理解问题与建立基本规范</h3><p>阅读核心概念，学习文献记录、数据管理、实验安全与可复现要求。</p></article>
+            <article><span>3—6 个月</span><h3>完成边界清楚的小任务</h3><p>在明确指导和检查点下，尝试数据整理、文献矩阵或成熟流程中的单点练习。</p></article>
+            <article><span>6—12 个月</span><h3>形成可复核的小型结果</h3><p>围绕一个明确问题整理方法、结果与局限，并接受阶段性反馈。</p></article>
+          </div>
+          <h3>联系前可准备的通用技能</h3>
+          <ul className="check-list">
+            <li>能说明自己感兴趣的问题，而不仅是罗列技术名词。</li>
+            <li>准备一份近期课程、编程或实验基础的诚实说明。</li>
+            <li>了解文献记录、数据备份、实验安全和研究诚信要求。</li>
+            <li>具体前置技能与进入门槛：{PENDING_VERIFICATION}。</li>
+          </ul>
+        </div>
+      </details>
+
+      <section className="content-section" id="evidence" tabIndex={-1}>
+        <span className="section-kicker">EVIDENCE BOUNDARY</span>
+        <h2>证据来源与事实分层</h2>
+        <div className="evidence-lane-grid">
+          <article><span className="lane-label lane-label--fact">公开事实</span><p>姓名、公开研究标签、报告中列明的论文与 DOI。仍需关注来源时间和作者消歧边界。</p></article>
+          <article><span className="lane-label lane-label--ai">AI整理</span><p>对研究方向、技术和可能任务的结构化整理，不等同于导师本人承诺。</p></article>
+          <article><EvidenceTag level="High" /><p>公开证据支持较强，但不表示现实安排或未来状态已经确认。</p></article>
+          <article><EvidenceTag level="Medium" /><p>证据有限或解释仍有不确定性，应进一步核验。</p></article>
+          <article><EvidenceTag level="No Evidence" /><p>{NO_RELIABLE_PUBLIC_EVIDENCE}，不据此补写或猜测。</p></article>
+        </div>
+        <div className="confidence-row">
+          <ConfidenceTag level={advisor.authorMatchConfidence} label="作者身份匹配" />
+        </div>
+      </section>
+
+      <section className="content-section contact-prep" id="contact-prep" tabIndex={-1}>
+        <span className="section-kicker">CONTACT PREPARATION</span>
+        <h2>低压力联系准备与线下核验</h2>
+        <div className="contact-prep-grid">
+          <article>
+            <h3>联系前准备</h3>
+            <ul className="check-list">
+              <li>用两三句话说明自己的年级、基础和感兴趣的问题。</li>
+              <li>准备一份真正读过的公开论文或研究方向问题。</li>
+              <li>明确询问当前是否有本科生机会，不预设一定有名额。</li>
+            </ul>
+          </article>
+          <article>
+            <h3>线下核验清单</h3>
+            <ul className="check-list">
+              <li>实际带教人是谁，多久沟通一次？</li>
+              <li>本科生可参与哪些任务，时间投入和安全要求是什么？</li>
+              <li>是否有明确的试做范围、反馈节点和退出方式？</li>
+            </ul>
+          </article>
+        </div>
+        <div className="experience-public-note" role="note">
+          学生经历信息暂未纳入1.0公开展示。单个经历不能代表整个实验室，实际带教与相处情况请通过本人联系和线下了解进一步确认。
+        </div>
+        <blockquote className="decision-boundary">本站帮助理解公开信息和准备核验问题，不进行导师评价、推荐或排名，也不替代你的最终决定。</blockquote>
       </section>
 
       {reportState === "loading" && <LoadingState />}
       {reportState === "error" && (
-        <ErrorState
-          title="完整报告暂时无法读取"
-          description="报告文件不存在或请求失败。导师摘要仍可查看，请返回列表或稍后重试。"
-        />
+        <ErrorState title="完整报告暂时无法读取" description="报告文件不存在或请求失败。导师摘要仍可查看，请返回列表或稍后重试。" />
       )}
       {reportState === "ready" && (
-        <section className="report-section" aria-labelledby="full-report-title">
-          <div className="report-heading">
-            <div>
-              <span className="section-kicker">VERBATIM REPORT</span>
-              <h2 id="full-report-title">完整审核报告</h2>
-              <p>
-                下方按原始 Markdown 完整呈现，Evidence 编号、Confidence、
-                DOI、No Evidence 与 Boundary Statement 均不隐藏。
-              </p>
-            </div>
-            <span className="source-chip">{advisor.sourceLabel}</span>
-          </div>
-
-          <details className="mobile-toc">
-            <summary>展开本文目录</summary>
-            <nav aria-label="移动端报告目录">
-              {headings.map((heading) => (
-                <a
-                  href={`#${heading.id}`}
-                  className={`toc-depth-${heading.depth}`}
-                  onClick={(event) => scrollToHeading(event, heading.id)}
-                  key={heading.id}
-                >
-                  {heading.text}
-                </a>
-              ))}
-            </nav>
-          </details>
-
-          <div className="doc-layout">
-            <aside className="doc-rail">
-              <nav className="anchor-nav" aria-label="报告目录">
-                <strong>报告目录</strong>
+        <details className="content-collapse report-collapse content-section" id="report" tabIndex={-1}>
+          <summary>
+            <span><small>DEEP ACADEMIC CONTENT</small><strong>完整学术报告与论文证据</strong></span>
+            <em>默认折叠</em>
+          </summary>
+          <div className="collapse-body">
+            <p className="boundary-note">学生经历相关章节不进入1.0公开展示；其余公开学术报告按原文呈现，Evidence、Confidence、DOI、No Evidence 与 Boundary Statement 不隐藏。</p>
+            <details className="mobile-toc">
+              <summary>展开报告目录</summary>
+              <nav aria-label="移动端报告目录">
                 {headings.map((heading) => (
-                  <a
-                    href={`#${heading.id}`}
-                    className={`toc-depth-${heading.depth}`}
-                    onClick={(event) => scrollToHeading(event, heading.id)}
-                    key={heading.id}
-                  >
-                    {heading.text}
-                  </a>
+                  <a href={`#${heading.id}`} className={`toc-depth-${heading.depth}`} onClick={(event) => scrollToHeading(event, heading.id)} key={heading.id}>{heading.text}</a>
                 ))}
               </nav>
-            </aside>
-            <article className="markdown-body">
-              <MarkdownReport markdown={markdown} />
-            </article>
-            <aside className="evidence-rail">
-              <strong>阅读提示</strong>
-              <p>Evidence 表示来源支持程度，不是导师评分。</p>
-              <p>No Evidence 表示当前资料不足，不能补写或猜测。</p>
-              <p>外部 DOI 链接将在新窗口打开。</p>
-            </aside>
+            </details>
+            <div className="doc-layout">
+              <aside className="doc-rail">
+                <nav className="anchor-nav" aria-label="报告目录">
+                  <strong>报告目录</strong>
+                  {headings.map((heading) => (
+                    <a href={`#${heading.id}`} className={`toc-depth-${heading.depth}`} onClick={(event) => scrollToHeading(event, heading.id)} key={heading.id}>{heading.text}</a>
+                  ))}
+                </nav>
+              </aside>
+              <article className="markdown-body">
+                <MarkdownReport markdown={markdown} hideExperienceSections />
+              </article>
+              <aside className="evidence-rail">
+                <strong>阅读提示</strong>
+                <p>Evidence 表示来源支持程度，不是导师评分。</p>
+                <p>No Evidence 表示当前资料不足，不能补写或猜测。</p>
+                <p>外部 DOI 链接将在新窗口打开。</p>
+              </aside>
+            </div>
           </div>
-        </section>
+        </details>
       )}
     </div>
   );

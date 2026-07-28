@@ -1,4 +1,4 @@
-# Academic Intelligence 导师网站 1.0 前端
+# Academic Intelligence 导师网站 1.0 RC1 前端
 
 React + TypeScript + Vite 的独立、只读前端。它与仓库中的 `web/` 0.5 Beta 并行；本目录不会替换旧站，也不包含发布操作。
 
@@ -26,8 +26,12 @@ frontend/public/data/*.json
 缺失字段不会被编造。旧版 3 位导师没有独立的 `author_match_confidence` 和 `last_updated`：
 
 - 前端保留 `academic_confidence` 的等级，并用 `legacy_academic_confidence` 标记来源；
-- 最后更新时间显示“来源未标注”；
+- 最后更新时间显示“暂无公开信息”；
 - 同步命令会输出警告，便于后续数据维护者补齐。
+
+1.0 RC1 的公开展示层不呈现个体学生经历、案例数量或相处评价。源 JSON
+和 Markdown 保持原样；完整报告使用标题级 Markdown AST 过滤 Experience
+章节，不使用字符串截断。页面统一提醒用户通过本人联系和线下了解核验实际带教情况。
 
 ## 命令
 
@@ -46,8 +50,8 @@ npm.cmd run build
 
 路由：
 
-- `/#/`：导师列表、全文搜索、动态研究标签筛选。
-- `/#/advisor/:id`：统一导师详情页及完整 Markdown 报告。
+- `/#/`：导师列表、中文姓名搜索，以及同类标签 OR、标签与搜索 AND 的动态筛选。
+- `/#/advisor/:id`：分层详情页、联系准备、折叠式成长路线及学术报告。
 
 项目使用 Hash Router，`vite.config.ts` 使用 `base: "./"`，因此可在 GitHub Pages 的 `/academic-intelligence/` 仓库子路径下加载资源，刷新详情页也不需要服务端路由回退。
 
@@ -60,11 +64,11 @@ npm.cmd run build
    - `evidence_type: "academic_only"`
    - `has_experience_evidence: false`
    - `experience_case_count: 0`
-5. 对有经历证据的导师设置：
+5. 若源数据记录了经历证据，仍按审核要求保留源字段：
    - `evidence_type: "academic_and_experience"`
    - `has_experience_evidence: true`
    - `experience_case_count` 为真实授权案例数
-   - 报告内保留 Case ID、代表性 Unknown、事实层与体验层边界
+   - 源报告保留 Case ID、代表性和事实/体验边界；1.0 RC1 公开 UI 不展示这些内容
 6. 运行 `npm.cmd run sync:data`。脚本会复制报告、生成元数据并清理失效的生成副本。
 7. 运行 `npm.cmd run validate:data`。重复 ID、重复/错误报告路径、姓名串页、Experience 逻辑冲突、缺失报告、占位内容或副本不一致都会返回非零退出码。
 8. 运行 `npm.cmd run test` 和 `npm.cmd run build`。
@@ -90,8 +94,8 @@ npm.cmd run build
 - 搜索中文名、英文名、摘要和标签均可用；
 - 搜索与方向筛选组合正确；
 - 每个卡片 ID、姓名、摘要、标签和报告没有串页；
-- Academic-only 与 Experience 案例数量一致；
-- 报告内的 Growth Path 声明、Confidence、Evidence 编号、No Evidence、DOI 和 Boundary Statement 完整可见；
+- 公开 UI 不出现学生经历正文、案例数量、`Unknown`、`null` 或 `undefined`；
+- 学术报告内的 Growth Path 声明、Confidence、Evidence 编号、No Evidence、DOI 和 Boundary Statement 完整可见；
 - 表格只在自身容器横向滚动，375px 下无页面级横向溢出；
 - 键盘焦点、Tooltip、目录锚点和返回列表可用；
 - `dist/data/` 与 `dist/reports/` 存在；

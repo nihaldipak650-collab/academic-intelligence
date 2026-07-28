@@ -37,9 +37,14 @@ export async function loadSiteConfig(): Promise<SiteConfig> {
 export function filterAdvisors(
   advisors: Advisor[],
   query: string,
-  selectedTag: string,
+  selectedTags: string[] | string,
 ) {
   const needle = query.trim().toLocaleLowerCase();
+  const tags = Array.isArray(selectedTags)
+    ? selectedTags
+    : selectedTags
+      ? [selectedTags]
+      : [];
   return advisors.filter((advisor) => {
     const searchable = [
       advisor.nameZh,
@@ -50,7 +55,8 @@ export function filterAdvisors(
       .join("\n")
       .toLocaleLowerCase();
     const matchesQuery = !needle || searchable.includes(needle);
-    const matchesTag = !selectedTag || advisor.tags.includes(selectedTag);
+    const matchesTag =
+      tags.length === 0 || tags.some((tag) => advisor.tags.includes(tag));
     return matchesQuery && matchesTag;
   });
 }
@@ -69,7 +75,7 @@ export function getTagCounts(advisors: Advisor[]) {
 
 export function formatUpdatedAt(value: string | null) {
   if (!value) {
-    return "来源未标注";
+    return "暂无公开信息";
   }
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {

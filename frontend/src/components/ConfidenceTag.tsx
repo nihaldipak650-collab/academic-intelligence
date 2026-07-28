@@ -15,15 +15,16 @@ export function ConfidenceTag({
     High: "公开身份线索具有较强一致性，但不表示页面中的所有推断绝对正确。",
     Medium: "公开身份线索基本一致，仍保留同名作者或资料范围不完整的可能。",
     Low: "公开身份线索有限，阅读时需要特别留意作者消歧边界。",
-    Unknown: "来源没有提供可用于确定作者身份匹配程度的字段。",
+    Unknown: "来源没有提供可用于确定作者身份匹配程度的字段，需要进一步核验。",
   };
+  const publicLevel = level === "Unknown" ? "待核验" : level;
   return (
     <span
       className={`confidence confidence--${level.toLowerCase()}`}
       tabIndex={0}
-      aria-label={`${label}：${level}`}
+      aria-label={`${label}：${publicLevel}`}
     >
-      {label} · {level}
+      {label} · {publicLevel}
       <span className="tooltip" role="tooltip">
         {note ?? defaultNote[level]}
       </span>

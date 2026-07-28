@@ -26,8 +26,8 @@ export function AppShell() {
       </main>
       <footer className="footer">
         <p>
-          本科生视角的公开信息整理工具 · 不提供评分、排名或推荐 ·
-          内容需经人工复核后发布
+          聚合公开信息 · 帮助理解与缩小候选 · 提示未知并准备线下核验 ·
+          不提供评分、排名或自动推荐
         </p>
       </footer>
     </div>

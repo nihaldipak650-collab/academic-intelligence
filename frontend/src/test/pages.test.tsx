@@ -21,9 +21,9 @@ function renderList() {
   );
 }
 
-function renderDetail(path: string) {
+function renderDetail(path: string, initialData = data) {
   return render(
-    <AdvisorDataProvider initialData={data} initialConfig={config}>
+    <AdvisorDataProvider initialData={initialData} initialConfig={config}>
       <MemoryRouter initialEntries={[path]}>
         <Routes>
           <Route path="/advisor/:id" element={<AdvisorDetailPage />} />
@@ -39,10 +39,9 @@ describe("导师列表页", () => {
     expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(
       7,
     );
-    expect(screen.getAllByText("暂无经授权的本科生经历证据")).toHaveLength(5);
-    expect(
-      screen.getAllByText(/包含 1 个经授权的本科生经历案例/),
-    ).toHaveLength(2);
+    expect(screen.getAllByText("职位 / 身份：暂无公开信息")).toHaveLength(7);
+    expect(screen.getAllByText("公开学术证据 + AI整理")).toHaveLength(7);
+    expect(screen.queryByText(/经授权的本科生经历/)).not.toBeInTheDocument();
   });
 
   it("实时搜索并显示无结果 Empty State", async () => {
@@ -79,6 +78,16 @@ describe("导师列表页", () => {
     expect(screen.getByRole("heading", { name: /胡正茂/ })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: /郭辉/ })).not.toBeInTheDocument();
   });
+
+  it("多标签使用 OR 并可一键恢复全部", async () => {
+    const user = userEvent.setup();
+    renderList();
+    await user.click(screen.getByRole("button", { name: "孤独症 2" }));
+    await user.click(screen.getByRole("button", { name: "结构生物学 1" }));
+    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(3);
+    await user.click(screen.getByRole("button", { name: "全部 7" }));
+    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(7);
+  });
 });
 
 describe("导师详情页", () => {
@@ -88,7 +97,16 @@ describe("导师详情页", () => {
       vi.fn().mockResolvedValue({
         ok: true,
         text: async () =>
-          "# 导师画像：郭辉\n\n## 🔎 Evidence Confidence\n\nConfidence: Medium。\n\nDOI: 10.1000/test",
+          [
+            "# 导师画像",
+            "## 公开学术事实",
+            "保留的学术内容。Confidence: Medium。 DOI: 10.1000/test",
+            "## 第二部分：本科生科研经历参考（Undergraduate Research Experience）",
+            "### 本科生科研经历证据（Experience Evidence）",
+            "代表性：Unknown。具体学生经历正文。",
+            "## 第三部分：学术分析",
+            "保留的后续学术内容。",
+          ].join("\n\n"),
       }),
     );
   });
@@ -100,27 +118,73 @@ describe("导师详情页", () => {
   it("按 ID 呈现正确导师并加载报告", async () => {
     renderDetail("/advisor/guo-hui");
     expect(screen.getByRole("heading", { name: /郭辉/ })).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        "当前仅包含公开学术证据，暂无经过授权的本科生经历材料。",
-      ),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "先看这里" })).toBeInTheDocument();
+    expect(screen.getAllByText("待核验").length).toBeGreaterThanOrEqual(1);
     await waitFor(() =>
-      expect(screen.getByText("完整审核报告")).toBeInTheDocument(),
+      expect(screen.getByText("完整学术报告与论文证据")).toBeInTheDocument(),
     );
     expect(fetch).toHaveBeenCalledWith(
       expect.stringMatching(/reports\/Guo_Hui_profile_academic_zh\.md$/),
     );
   });
 
-  it("有经历导师显示单案例边界", () => {
+  it("Experience 来源导师不公开案例正文、数量或 Unknown", async () => {
     renderDetail("/advisor/liu-jing");
+    await waitFor(() =>
+      expect(screen.getByText("保留的后续学术内容。")).toBeInTheDocument(),
+    );
     expect(
-      screen.getByText("包含 1 个经授权的本科生经历案例"),
+      screen.getByText(/学生经历信息暂未纳入1\.0公开展示/),
     ).toBeInTheDocument();
+    expect(screen.queryByText(/具体学生经历正文/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/包含 1 个/)).not.toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/Unknown|null|undefined/i);
+  });
+
+  it("联系方式缺失、动态状态和任务证据缺失均显示规范空状态", () => {
+    renderDetail("/advisor/liu-jing");
+    expect(screen.getAllByText("暂无公开信息").length).toBeGreaterThanOrEqual(4);
+    expect(screen.getByRole("heading", { name: "暂无可靠公开证据" })).toBeInTheDocument();
+    expect(screen.getAllByText("待核验").length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("结构化官方主页和来源使用安全的新窗口链接", () => {
+    const first = data.advisors[0];
+    const contactData: AdvisorDataEnvelope = {
+      ...data,
+      advisors: data.advisors.map((advisor) =>
+        advisor.id === first.id
+          ? {
+              ...advisor,
+              position: "教授",
+              contact: {
+                officialEmail: "public@example.edu.cn",
+                officialPhone: null,
+                officialHomepage: "https://example.edu.cn/advisor",
+                laboratoryAddress: "校本部公开地址",
+                sourceUrl: "https://example.edu.cn/source",
+              },
+            }
+          : advisor,
+      ),
+    };
+    renderDetail(`/advisor/${first.id}`, contactData);
+    const homepage = screen.getByRole("link", { name: "打开官方页面" });
+    expect(homepage).toHaveAttribute("target", "_blank");
+    expect(homepage).toHaveAttribute("rel", "noopener noreferrer");
+    expect(homepage).toHaveAttribute("href", "https://example.edu.cn/advisor");
+  });
+
+  it("成长路线与完整报告默认折叠", async () => {
+    renderDetail("/advisor/guo-hui");
+    const growthSummary = screen.getByText("科研成长路线与前置技能");
+    expect(growthSummary.closest("details")).not.toHaveAttribute("open");
+    await waitFor(() =>
+      expect(screen.getByText("完整学术报告与论文证据")).toBeInTheDocument(),
+    );
     expect(
-      screen.getByText(/^代表性为 Unknown。经历内容/),
-    ).toBeInTheDocument();
+      screen.getByText("完整学术报告与论文证据").closest("details"),
+    ).not.toHaveAttribute("open");
   });
 
   it("无效 ID 显示错误页而不是空白或跳转", () => {

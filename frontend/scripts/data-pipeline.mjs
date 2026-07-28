@@ -148,6 +148,32 @@ function assertRelativeWebPath(label, value) {
   invariant(!value.includes(".."), `${label} 不能包含父目录跳转`);
 }
 
+function optionalText(value) {
+  return typeof value === "string" && value.trim() ? value.trim() : null;
+}
+
+function optionalHttpsUrl(label, value) {
+  const normalized = optionalText(value);
+  if (!normalized) return null;
+  invariant(/^https:\/\//i.test(normalized), `${label} 必须使用 HTTPS URL`);
+  return normalized;
+}
+
+function normalizeContact(raw, advisorId) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+  const contact = {
+    officialEmail: optionalText(raw.official_email),
+    officialPhone: optionalText(raw.official_phone),
+    officialHomepage: optionalHttpsUrl(
+      `${advisorId} official_homepage`,
+      raw.official_homepage,
+    ),
+    laboratoryAddress: optionalText(raw.laboratory_address),
+    sourceUrl: optionalHttpsUrl(`${advisorId} contact source_url`, raw.source_url),
+  };
+  return Object.values(contact).some(Boolean) ? contact : null;
+}
+
 export async function buildAdvisorData() {
   const sourceAdvisors = await readJson(sourceAdvisorFile);
   invariant(Array.isArray(sourceAdvisors), "web/advisors.json 必须是数组");
@@ -228,17 +254,20 @@ export async function buildAdvisorData() {
       );
     }
     if (!raw.last_updated) {
-      warnings.push(`${raw.name}：来源缺少 last_updated，前端显示“来源未标注”。`);
+      warnings.push(`${raw.name}：来源缺少 last_updated，前端显示“暂无公开信息”。`);
     }
 
     const reportPath = `reports/${raw.report}`;
     assertRelativeWebPath(`导师 ${raw.id} reportPath`, reportPath);
 
+    const contact = normalizeContact(raw.contact, raw.id);
     advisors.push({
       id: raw.id,
       nameZh: raw.name.trim(),
       ...(raw.english_name ? { nameEn: raw.english_name.trim() } : {}),
       ...(raw.institution ? { institution: raw.institution.trim() } : {}),
+      ...(optionalText(raw.position) ? { position: raw.position.trim() } : {}),
+      ...(contact ? { contact } : {}),
       initials: raw.name.trim().slice(0, 1),
       summary: raw.summary.trim(),
       tags: [...new Set(raw.tags.map((tag) => String(tag).trim()).filter(Boolean))],

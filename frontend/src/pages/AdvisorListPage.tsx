@@ -8,36 +8,35 @@ import {
   filterAdvisors,
   formatUpdatedAt,
   getTagCounts,
-  versionLabel,
 } from "../data/advisorData";
-import type { Advisor } from "../types/advisor";
-
-function evidenceLabel(advisor: Advisor) {
-  return advisor.evidenceType === "academic_only"
-    ? "仅公开学术证据"
-    : "学术 + 经历证据";
-}
-
-function experienceCopy(advisor: Advisor) {
-  return advisor.hasExperienceEvidence
-    ? `包含 ${advisor.experienceCaseCount} 个经授权的本科生经历案例，仅代表该案例`
-    : "暂无经授权的本科生经历证据";
-}
+import {
+  getAdvisorFreshness,
+  MISSING_PUBLIC_INFO,
+  publicEvidenceLabel,
+} from "../data/advisorPresentation";
 
 export function AdvisorListPage() {
   const { advisors, loading, error } = useAdvisorData();
   const [query, setQuery] = useState("");
-  const [selectedTag, setSelectedTag] = useState("");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const tagCounts = useMemo(() => getTagCounts(advisors), [advisors]);
   const filteredAdvisors = useMemo(
-    () => filterAdvisors(advisors, query, selectedTag),
-    [advisors, query, selectedTag],
+    () => filterAdvisors(advisors, query, selectedTags),
+    [advisors, query, selectedTags],
   );
-  const hasFilters = Boolean(query.trim() || selectedTag);
+  const hasFilters = Boolean(query.trim() || selectedTags.length);
 
   function resetFilters() {
     setQuery("");
-    setSelectedTag("");
+    setSelectedTags([]);
+  }
+
+  function toggleTag(tag: string) {
+    setSelectedTags((current) =>
+      current.includes(tag)
+        ? current.filter((item) => item !== tag)
+        : [...current, tag],
+    );
   }
 
   if (loading) {
@@ -51,7 +50,7 @@ export function AdvisorListPage() {
     <>
       <section className="hero">
         <div className="hero__content">
-          <span className="hero__eyebrow">ACADEMIC INTELLIGENCE · 1.0 PREVIEW</span>
+          <span className="hero__eyebrow">ACADEMIC INTELLIGENCE · 1.0 RC1</span>
           <h1>从公开证据出发，理解导师的研究路径。</h1>
           <p>
             面向中南大学生命科学学院本科生的只读信息工具。我们呈现研究主题、
@@ -59,7 +58,7 @@ export function AdvisorListPage() {
           </p>
           <div className="hero__meta" aria-label="资料概况">
             <span>{advisors.length} 位真实导师</span>
-            <span>配置驱动</span>
+            <span>公开信息与审核报告</span>
             <span>人工审核报告</span>
           </div>
         </div>
@@ -98,24 +97,24 @@ export function AdvisorListPage() {
             )}
           </div>
           <div className="filter-label">
-            <span>按真实研究标签筛选</span>
-            <small>可与搜索组合</small>
+            <span>按研究方向缩小候选范围</span>
+            <small>标签之间为 OR，与搜索条件为 AND</small>
           </div>
           <div className="segments" aria-label="按研究方向筛选">
             <button
               type="button"
-              className={!selectedTag ? "is-active" : ""}
-              aria-pressed={!selectedTag}
-              onClick={() => setSelectedTag("")}
+              className={!selectedTags.length ? "is-active" : ""}
+              aria-pressed={!selectedTags.length}
+              onClick={() => setSelectedTags([])}
             >
               全部 <span>{advisors.length}</span>
             </button>
             {tagCounts.map(([tag, count]) => (
               <button
                 type="button"
-                className={selectedTag === tag ? "is-active" : ""}
-                aria-pressed={selectedTag === tag}
-                onClick={() => setSelectedTag(tag)}
+                className={selectedTags.includes(tag) ? "is-active" : ""}
+                aria-pressed={selectedTags.includes(tag)}
+                onClick={() => toggleTag(tag)}
                 key={tag}
               >
                 {tag} <span>{count}</span>
@@ -132,16 +131,16 @@ export function AdvisorListPage() {
                   <div className="avatar" aria-hidden="true">
                     {advisor.initials}
                   </div>
-                  <span className="version-chip">
-                    {versionLabel(advisor.version)}
-                  </span>
+                  <span className="version-chip">1.0-rc1</span>
                 </div>
                 <div className="advisor-card__body">
-                  <p className="advisor-card__source">{evidenceLabel(advisor)}</p>
                   <h3>
                     {advisor.nameZh}
                     {advisor.nameEn && <small>{advisor.nameEn}</small>}
                   </h3>
+                  <p className="advisor-card__identity">
+                    职位 / 身份：{advisor.position ?? MISSING_PUBLIC_INFO}
+                  </p>
                   <p className="advisor-card__summary">{advisor.summary}</p>
                   <div className="tag-list" aria-label="研究方向">
                     {advisor.tags.slice(0, 5).map((tag) => (
@@ -150,8 +149,28 @@ export function AdvisorListPage() {
                       </span>
                     ))}
                   </div>
+                  <p className="advisor-card__source">{publicEvidenceLabel()}</p>
                 </div>
                 <div className="advisor-card__evidence">
+                  {(() => {
+                    const freshness = getAdvisorFreshness(advisor);
+                    return (
+                      <dl className="card-status-list">
+                        <div>
+                          <dt>最新核验</dt>
+                          <dd>{formatUpdatedAt(freshness.lastVerifiedAt)}</dd>
+                        </div>
+                        <div>
+                          <dt>数据状态</dt>
+                          <dd>{freshness.dataStatus}</dd>
+                        </div>
+                        <div>
+                          <dt>当前机会</dt>
+                          <dd>{freshness.opportunityStatus}</dd>
+                        </div>
+                      </dl>
+                    );
+                  })()}
                   <ConfidenceTag
                     level={advisor.authorMatchConfidence}
                     note={
@@ -161,19 +180,6 @@ export function AdvisorListPage() {
                         : undefined
                     }
                   />
-                  <p className={advisor.hasExperienceEvidence ? "has-case" : ""}>
-                    {experienceCopy(advisor)}
-                  </p>
-                  <dl>
-                    <div>
-                      <dt>状态</dt>
-                      <dd>{advisor.status}</dd>
-                    </div>
-                    <div>
-                      <dt>更新</dt>
-                      <dd>{formatUpdatedAt(advisor.lastUpdated)}</dd>
-                    </div>
-                  </dl>
                 </div>
                 <Link className="card-link" to={`/advisor/${advisor.id}`}>
                   查看完整证据报告 <span aria-hidden="true">↗</span>
