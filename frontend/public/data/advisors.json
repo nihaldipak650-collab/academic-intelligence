@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "source": "web/advisors.json + web/reports",
+  "advisorCount": 7,
+  "advisors": [
+    {
+      "id": "xiang-rong",
+      "nameZh": "项荣",
+      "nameEn": "Xiang Rong",
+      "initials": "项",
+      "summary": "研究主线连接人类疾病候选变异发现、遗传学证据、功能验证与分子通路机制。",
+      "tags": [
+        "疾病遗传",
+        "分子机制",
+        "生物信息",
+        "细胞与动物实验"
+      ],
+      "categoryTags": [
+        "疾病遗传",
+        "分子机制",
+        "生物信息",
+        "细胞与动物实验"
+      ],
+      "authorMatchConfidence": "High",
+      "authorConfidenceSource": "legacy_academic_confidence",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "version": "source-not-specified",
+      "status": "published",
+      "lastUpdated": null,
+      "reportPath": "reports/Xiang_Rong_profile_zh.md",
+      "reportSha256": "041a39012e724a7d07b6266781fb7a4b295ceb1389b8a5320f5673c56b1ed76c",
+      "sourceTypeLabel": "仅公开学术证据",
+      "sourceLabel": "web/advisors.json + web/reports/Xiang_Rong_profile_zh.md",
+      "quickSummary": {
+        "coreDirections": [
+          "疾病遗传",
+          "分子机制",
+          "生物信息",
+          "细胞与动物实验"
+        ],
+        "mainTechniques": [
+          "遗传发现层： 外显子/全外显子测序、家系共分离、候选变异筛选、Sanger 验证、基因型—表型分析。文本统计中，测序线索覆盖 18/41 篇，外显子测序线索覆盖 15 篇。",
+          "细胞功能层： 细胞系或原代细胞、基因表达检测、qPCR/RNA-seq、Western blot、免疫组织化学，以及蛋白定位、线粒体状态、脂质代谢、自噬和细胞死亡表型。数据中明确出现的细胞/分子技术关键词分布不完整，因此不能断言每篇机制论文都采用了同一套实验。",
+          "动物与组织层： 小鼠/大鼠或疾病模型线索至少覆盖 8 篇，用于连接分子变化与肾损伤、脂肪肝、纤维化、心肌病、肌肉肥大等整体表型。",
+          "计算与组学层： 生物信息学、转录组/RNA 测序、遗传变异注释和队列分析；2024–2025 还出现单细胞、转录因子图谱和人群队列预测，但其中部分可能来自协作项目，不能自动视为实验室全部成员的常规能力。"
+        ],
+        "undergraduatePaths": [
+          "可能整理特定疾病基因、变异、表型和通路的证据矩阵。Confidence: High，多篇论文直接采用病例/家系遗传与候选变异路线。",
+          "可能参与候选变异数据库注释、公开转录组复现或基础生物信息处理。Confidence: Medium，测序和组学技术反复出现，但本科生分工没有直接证据。",
+          "可能在成熟 protocol 下辅助 PCR/qPCR、Western blot、细胞培养或单一指标验证。Confidence: Medium，机制论文支持这些技术类型，但实际开放程度未知。"
+        ]
+      }
+    },
+    {
+      "id": "liu-jing",
+      "nameZh": "刘静",
+      "nameEn": "Jing Liu",
+      "initials": "刘",
+      "summary": "公开研究主线集中在造血调控、血液恶性肿瘤机制与治疗靶点。",
+      "tags": [
+        "造血调控",
+        "血液肿瘤",
+        "单细胞",
+        "分子机制"
+      ],
+      "categoryTags": [
+        "造血调控",
+        "血液肿瘤",
+        "单细胞",
+        "分子机制"
+      ],
+      "authorMatchConfidence": "Medium",
+      "authorConfidenceSource": "legacy_academic_confidence",
+      "evidenceType": "academic_and_experience",
+      "hasExperienceEvidence": true,
+      "experienceCaseCount": 1,
+      "version": "1.5-demo",
+      "status": "published",
+      "lastUpdated": null,
+      "reportPath": "reports/Liu_advisor_profile_v1_5_demo_display.md",
+      "reportSha256": "6b8fe3c27fb2ce901e4648942b811ba4efdf461d4bd984f88fa8903a5eec71e9",
+      "sourceTypeLabel": "学术证据 + 1 个授权经历案例",
+      "sourceLabel": "web/advisors.json + web/reports/Liu_advisor_profile_v1_5_demo_display.md",
+      "quickSummary": {
+        "coreDirections": [
+          "造血调控",
+          "血液肿瘤",
+          "单细胞",
+          "分子机制"
+        ],
+        "mainTechniques": [
+          "单细胞测序",
+          "蛋白质组/磷酸化组",
+          "生物信息学",
+          "血液肿瘤细胞机制和小鼠造血模型。"
+        ],
+        "undergraduatePaths": [
+          "Academic Evidence推测：可能涉及文献整理、基因/通路资料整理、基础组学数据处理或细胞分子实验辅助。Confidence: Low–Medium。",
+          "Experience Evidence事实：该案例中的学生早期观摩动物与分子实验、阅读师兄提供的论文，并曾按protocol独立完成一次配胶。Confidence: High（case-level）。",
+          "其他本科生是否会获得上述任务：Evidence insufficient. Unable to determine."
+        ]
+      }
+    },
+    {
+      "id": "li-faxiang",
+      "nameZh": "李发祥",
+      "nameEn": "Faxiang Li",
+      "initials": "李",
+      "summary": "公开研究主线集中在蛋白复合物结构、抗噬菌体系统和蛋白互作机制。",
+      "tags": [
+        "结构生物学",
+        "蛋白质",
+        "Cryo-EM",
+        "抗噬菌体系统"
+      ],
+      "categoryTags": [
+        "结构生物学",
+        "蛋白质",
+        "Cryo-EM",
+        "抗噬菌体系统"
+      ],
+      "authorMatchConfidence": "High",
+      "authorConfidenceSource": "legacy_academic_confidence",
+      "evidenceType": "academic_and_experience",
+      "hasExperienceEvidence": true,
+      "experienceCaseCount": 1,
+      "version": "1.5-demo",
+      "status": "published",
+      "lastUpdated": null,
+      "reportPath": "reports/Li_advisor_profile_v1_5_demo_display.md",
+      "reportSha256": "8fd404e33525d89230261c25f7dde654d4b050e23f98a7bc7e61e5a73dea540a",
+      "sourceTypeLabel": "学术证据 + 1 个授权经历案例",
+      "sourceLabel": "web/advisors.json + web/reports/Li_advisor_profile_v1_5_demo_display.md",
+      "quickSummary": {
+        "coreDirections": [
+          "结构生物学",
+          "蛋白质",
+          "Cryo-EM",
+          "抗噬菌体系统"
+        ],
+        "mainTechniques": [
+          "Cryo-EM",
+          "蛋白复合物与互作分析",
+          "酶活与防御系统功能",
+          "蛋白稳定性/相分离"
+        ],
+        "undergraduatePaths": [
+          "Academic Evidence推测：可能涉及结构论文阅读、蛋白序列/结构可视化、实验结果整理或蛋白实验辅助。Confidence: Low–Medium。",
+          "Experience Evidence事实：该案例中的学生学习了蛋白质纯化和互作验证，曾独立完成一次蛋白纯化，并围绕大创项目提交结果。Confidence: High（case-level）。",
+          "其他本科生是否会获得相同任务或设备权限：Evidence insufficient. Unable to determine."
+        ]
+      }
+    },
+    {
+      "id": "guo-hui",
+      "nameZh": "郭辉",
+      "nameEn": "Hui Guo",
+      "institution": "中南大学生命科学学院",
+      "initials": "郭",
+      "summary": "公开研究主线集中在孤独症及神经发育障碍（NDD）致病基因与分子机制（如应激颗粒、相分离、神经发生与突触发育）。",
+      "tags": [
+        "神经发育障碍",
+        "孤独症",
+        "应激颗粒",
+        "相分离",
+        "基因组学"
+      ],
+      "categoryTags": [
+        "神经发育障碍",
+        "孤独症",
+        "应激颗粒",
+        "相分离",
+        "基因组学"
+      ],
+      "authorMatchConfidence": "Medium",
+      "authorConfidenceSource": "author_match_confidence",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "version": "0.5-beta",
+      "status": "beta",
+      "lastUpdated": "2026-07-23T23:45:00+08:00",
+      "reportPath": "reports/Guo_Hui_profile_academic_zh.md",
+      "reportSha256": "644e84786f445591315a89602f25a2f1d1b561de3b0e81a43b84e10dfe9be21a",
+      "sourceTypeLabel": "仅公开学术证据",
+      "sourceLabel": "web/advisors.json + web/reports/Guo_Hui_profile_academic_zh.md",
+      "quickSummary": {
+        "coreDirections": [
+          "神经发育障碍",
+          "孤独症",
+          "应激颗粒",
+          "相分离",
+          "基因组学"
+        ],
+        "mainTechniques": [
+          "基因组学与生物信息学分析：全外显子组测序（WES）、全基因组测序（WGS）、表达谱/单细胞 RNA-seq 数据挖掘、De Novo 变异致病性评估 。",
+          "小鼠基因敲除/杂合子模型与行为学：Ubap2l、Adgrl1、Gigyf1、Celf2 等基因缺陷小鼠模型，社交、认知与神经发育行为学评估 。",
+          "细胞与分子生物学验证：应激颗粒（SG）形成与免疫荧光检测、液相分离（LLPS）测定、蛋白相互作用（Co-IP/Western blot）、皮层神经元原代培养与神经发生标记 。",
+          "数据质控与算法开发：基于 Massive Parallel Sequencing 数据的生物信息学工具开发（如 seGMM）。"
+        ],
+        "undergraduatePaths": [
+          "如果存在公开数据、任务边界与指导条件，本科生可能尝试利用已公开的测序数据或数据库进行 NDD De Novo 变异筛选、致病性预测与通路富集分析。Confidence: Medium。",
+          "如果存在成熟 protocol、细胞系与指导条件，本科生可能辅助开展细胞水平的应激颗粒（SG）诱导、免疫荧光染色与显微成像数据整理。Confidence: Low–Medium。",
+          "如果存在成熟实验体系与指导条件，本科生可能参与小鼠基因型鉴定（PCR）或基础行为学数据整理。Confidence: Low–Medium。"
+        ]
+      }
+    },
+    {
+      "id": "hu-dehua",
+      "nameZh": "胡德华",
+      "nameEn": "Dehua Hu",
+      "institution": "中南大学湘雅医学院医药信息系",
+      "initials": "胡",
+      "summary": "公开研究主线集中在健康信息行为与公共卫生信息化（如疫苗接种意愿、框架效应、网络舆情与科研诚信）以及医学数据挖掘、算法与工具开发。",
+      "tags": [
+        "健康信息行为",
+        "框架效应",
+        "公共卫生信息化",
+        "舆情分析",
+        "医学数据挖掘"
+      ],
+      "categoryTags": [
+        "健康信息行为",
+        "框架效应",
+        "公共卫生信息化",
+        "舆情分析",
+        "医学数据挖掘"
+      ],
+      "authorMatchConfidence": "High",
+      "authorConfidenceSource": "author_match_confidence",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "version": "0.5-beta",
+      "status": "beta",
+      "lastUpdated": "2026-07-23T23:45:00+08:00",
+      "reportPath": "reports/Hu_Dehua_profile_academic_zh.md",
+      "reportSha256": "6867c2bff001498d7af5e886e9e4a45ce73e199ec8c41be3e5f1f388c37929a5",
+      "sourceTypeLabel": "仅公开学术证据",
+      "sourceLabel": "web/advisors.json + web/reports/Hu_Dehua_profile_academic_zh.md",
+      "quickSummary": {
+        "coreDirections": [
+          "健康信息行为",
+          "框架效应",
+          "公共卫生信息化",
+          "舆情分析",
+          "医学数据挖掘"
+        ],
+        "mainTechniques": [
+          "问卷调查与量表编制（Psychometrics）：基于健康信念模型（HBM）、健康素养量表、自我量化 scale 编制与结构方程模型（SEM）分析 。",
+          "网络文本挖掘与舆情分析：社交媒体/在线健康社区文本爬取、主题建模（LDA）、情感分析与舆情演化网络分析 。",
+          "医学深度学习与影像组学：MIMIC 电子病历数据挖掘、DNN/CNN 临床预测模型构建、FDG-PET/CT 及冷冻切片图像深度学习 。",
+          "R 语言统计与生物信息软件包开发：R 包开发（R Package Development）、Bioconductor/tidyverse 生物信息图形与回归建模封装（ggalign, bregr）。"
+        ],
+        "undergraduatePaths": [
+          "如果存在问卷设计、数据抽取与指导条件，本科生可能尝试协助进行健康行为问卷数据清洗与结构方程模型（SEM）或回归统计分析。Confidence: Medium。",
+          "如果存在公开数据源与指导条件，本科生可能尝试参与社交媒体文本数据爬取、主题分析与舆情演化图表绘制。Confidence: Medium。",
+          "如果存在开放数据与指导条件，本科生可能辅助进行开源数据（如 MIMIC）的预处理、R 包（如 bregr, ggalign）测试或深度学习模型代码调优。Confidence: Low–Medium。"
+        ]
+      }
+    },
+    {
+      "id": "hu-zhengmao",
+      "nameZh": "胡正茂",
+      "nameEn": "Zhengmao Hu",
+      "institution": "中南大学生命科学学院",
+      "initials": "胡",
+      "summary": "公开研究主线集中在高度近视（High Myopia）与孤独症（ASD）等人类遗传性疾病的致病基因鉴定及分子功能机制。",
+      "tags": [
+        "高度近视",
+        "孤独症",
+        "眼科遗传学",
+        "三代长读长测序",
+        "Minigene剪接"
+      ],
+      "categoryTags": [
+        "高度近视",
+        "孤独症",
+        "眼科遗传学",
+        "三代长读长测序",
+        "Minigene剪接"
+      ],
+      "authorMatchConfidence": "High",
+      "authorConfidenceSource": "author_match_confidence",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "version": "0.5-beta",
+      "status": "beta",
+      "lastUpdated": "2026-07-23T23:45:00+08:00",
+      "reportPath": "reports/Hu_Zhengmao_profile_academic_zh.md",
+      "reportSha256": "8e8d81778ce27000a2848209432565b74140432ee936f8ac30d2443892d42cff",
+      "sourceTypeLabel": "仅公开学术证据",
+      "sourceLabel": "web/advisors.json + web/reports/Hu_Zhengmao_profile_academic_zh.md",
+      "quickSummary": {
+        "coreDirections": [
+          "高度近视",
+          "孤独症",
+          "眼科遗传学",
+          "三代长读长测序",
+          "Minigene剪接"
+        ],
+        "mainTechniques": [
+          "长读长与短读长基因组学：全外显子组测序（WES）、全基因组测序（WGS）、单倍型解析三代长读长测序（Long-read WGS）、串联重复变异（TRV）算法 。",
+          "胶原修饰、细胞外基质与有丝分裂检测：胶原蛋白电镜/荧光染色、P4HA2 脯氨酸羟化酶活性检测、细胞周期与有丝分裂荧光显微成像 。",
+          "线粒体融合/裂变与细胞凋亡验证：OPA1 突变体转染、线粒体形态高分辨成像、流式细胞术检测细胞凋亡 。",
+          "迷你基因（Minigene）与 RNA 剪接分析：体外 Minigene 构建、RT-PCR/qPCR 剪接产物分析、Western blot 蛋白表达验证 。"
+        ],
+        "undergraduatePaths": [
+          "如果存在测序数据、任务边界与指导条件，本科生可能尝试利用生物信息学工具分析高度近视或 ASD 患者的外显子/长读长测序数据，筛选候选突变。Confidence: Medium。",
+          "如果存在质粒载体、成熟 protocol 与指导条件，本科生可能辅助参与 Minigene 质粒构建、转染及 RT-PCR 验证罕见变异的剪接影响。Confidence: Low–Medium。",
+          "如果存在成熟实验体系与指导条件，本科生可能协助开展细胞水平的线粒体形态染色（OPA1）或胶原分泌检测。Confidence: Low–Medium。"
+        ]
+      }
+    },
+    {
+      "id": "li-jiada",
+      "nameZh": "李家大",
+      "nameEn": "Jiada Li",
+      "institution": "中南大学生命科学学院",
+      "initials": "李",
+      "summary": "公开研究主线集中在神经发育、神经精神障碍与先天性促性腺激素减退症（CHH）的遗传调控、动物模型与昼夜节律分子机制。",
+      "tags": [
+        "神经发育障碍",
+        "昼夜节律",
+        "动物模型",
+        "CHH遗传学",
+        "电生理与突触"
+      ],
+      "categoryTags": [
+        "神经发育障碍",
+        "昼夜节律",
+        "动物模型",
+        "CHH遗传学",
+        "电生理与突触"
+      ],
+      "authorMatchConfidence": "High",
+      "authorConfidenceSource": "author_match_confidence",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "version": "0.5-beta",
+      "status": "beta",
+      "lastUpdated": "2026-07-23T23:45:00+08:00",
+      "reportPath": "reports/Li_Jiada_profile_academic_zh.md",
+      "reportSha256": "94d711d1a0831d6dc47bf0dc5923c93a43507323801bcc75f2480c9f10784091",
+      "sourceTypeLabel": "仅公开学术证据",
+      "sourceLabel": "web/advisors.json + web/reports/Li_Jiada_profile_academic_zh.md",
+      "quickSummary": {
+        "coreDirections": [
+          "神经发育障碍",
+          "昼夜节律",
+          "动物模型",
+          "CHH遗传学",
+          "电生理与突触"
+        ],
+        "mainTechniques": [
+          "基因编辑动物模型与行为学：基因敲除/转基因/点突变小鼠模型，孤独症社交、ADHD 痛觉过敏/多动、NIID 神经退行性行为评估 。",
+          "电生理与神经电路分析：小鼠脑片电生理记录、深部脑刺激（DBS）、GABA 神经元递送与突触可塑性测定 。",
+          "生化与分子剪接/RNA-蛋白互作：γ-secretase 酶切检测、RNA-binding 蛋白结合测定（FMRP-Per1）、迷你基因（Minigene）剪接验证 。",
+          "线粒体与细胞器成像验证：线粒体分裂荧光成像（Drp1）、ER-线粒体接触位点（GRP75/PLA2G6）分析 。"
+        ],
+        "undergraduatePaths": [
+          "如果存在质粒载体、成熟 protocol 与指导条件，本科生可能尝试协助开展 Minigene 剪接构建与 RT-PCR/qPCR 剪接产物分析。Confidence: Medium。",
+          "如果存在细胞系、荧光表达载体与指导条件，本科生可能参与昼夜节律相关 RNA-蛋白互作或细胞水平节律荧光报道系统检测。Confidence: Medium。",
+          "如果存在小鼠系、成熟实验规范与指导条件，本科生可能辅助参与小鼠基因型鉴定（PCR）或行为学视频数据整理。Confidence: Low–Medium。"
+        ]
+      }
+    }
+  ]
+}
