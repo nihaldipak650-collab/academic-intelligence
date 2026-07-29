@@ -91,4 +91,49 @@ describe("Markdown 报告渲染", () => {
       extractHeadings(markdown, true).map((heading) => heading.text),
     ).toEqual(["公开学术事实", "第三部分：学术分析", "Evidence Boundary"]);
   });
+
+  it("混合报告按标题边界隐藏后续个案复述并保留使用边界", () => {
+    const markdown = [
+      "# 混合证据报告",
+      "> 用途声明：Experience Evidence 来自一名本科生访谈。",
+      "## 第一部分：学术基础",
+      "### 公开科研事实",
+      "保留的论文与技术内容。",
+      "## 第二部分：本科生科研经历参考（Undergraduate Research Experience）",
+      "具体经历正文。",
+      "## 第三部分：成长分析",
+      "### 成长路线",
+      "通用成长说明。",
+      "#### 3–6个月",
+      "该个案曾独立完成一次具体实验。",
+      "#### 6–12个月",
+      "保留的通用成长说明。",
+      "## 第四部分：证据与边界",
+      "### 学术证据与经历证据交叉",
+      "Experience Evidence 补充了该学生的具体经历。",
+      "### 使用边界声明（Boundary Statement）",
+      "不把单个学生经历推广为实验室事实；Academic Evidence 与 Experience Evidence 必须分开阅读。",
+    ].join("\n\n");
+
+    render(<MarkdownReport markdown={markdown} hideExperienceSections />);
+    expect(screen.getByText("保留的论文与技术内容。")).toBeInTheDocument();
+    expect(screen.getByText("通用成长说明。")).toBeInTheDocument();
+    expect(screen.getByText("保留的通用成长说明。")).toBeInTheDocument();
+    expect(screen.getByText(/不把单个学生经历推广/)).toBeInTheDocument();
+    expect(screen.queryByText(/一名本科生访谈/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/独立完成一次具体实验/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/补充了该学生的具体经历/)).not.toBeInTheDocument();
+
+    expect(
+      extractHeadings(markdown, true).map((heading) => heading.text),
+    ).toEqual([
+      "第一部分：学术基础",
+      "公开科研事实",
+      "第三部分：成长分析",
+      "成长路线",
+      "6–12个月",
+      "第四部分：证据与边界",
+      "使用边界声明（Boundary Statement）",
+    ]);
+  });
 });

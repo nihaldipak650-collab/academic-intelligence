@@ -11,7 +11,6 @@ import {
 } from "../data/advisorData";
 import {
   getAdvisorFreshness,
-  MISSING_PUBLIC_INFO,
   publicEvidenceLabel,
 } from "../data/advisorPresentation";
 
@@ -82,10 +81,10 @@ export function AdvisorListPage() {
           <div className="search-row">
             <label className="search-field">
               <span aria-hidden="true">⌕</span>
-              <span className="sr-only">搜索姓名、摘要或研究方向</span>
+              <span className="sr-only">搜索姓名、机构、摘要、研究方向或技术</span>
               <input
                 type="search"
-                placeholder="搜索中文名、英文名、摘要或研究标签"
+                placeholder="搜索姓名、机构、摘要、研究标签或技术"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
               />
@@ -131,16 +130,17 @@ export function AdvisorListPage() {
                   <div className="avatar" aria-hidden="true">
                     {advisor.initials}
                   </div>
-                  <span className="version-chip">1.0-rc1</span>
                 </div>
                 <div className="advisor-card__body">
                   <h3>
                     {advisor.nameZh}
                     {advisor.nameEn && <small>{advisor.nameEn}</small>}
                   </h3>
-                  <p className="advisor-card__identity">
-                    职位 / 身份：{advisor.position ?? MISSING_PUBLIC_INFO}
-                  </p>
+                  {advisor.position && (
+                    <p className="advisor-card__identity">
+                      职位 / 身份：{advisor.position}
+                    </p>
+                  )}
                   <p className="advisor-card__summary">{advisor.summary}</p>
                   <div className="tag-list" aria-label="研究方向">
                     {advisor.tags.slice(0, 5).map((tag) => (

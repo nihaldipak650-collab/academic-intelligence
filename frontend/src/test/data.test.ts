@@ -53,10 +53,26 @@ describe("真实导师数据", () => {
     );
   });
 
-  it("搜索研究标签", () => {
+  it("搜索技术手段 Cryo-EM 能找到李发祥", () => {
     expect(
       filterAdvisors(data.advisors, "Cryo-EM", "")[0]?.id,
     ).toBe("li-faxiang");
+  });
+
+  it("搜索本科路径中的 Minigene 能找到胡正茂和李家大", () => {
+    expect(
+      filterAdvisors(data.advisors, "Minigene", []).map(
+        (advisor) => advisor.id,
+      ),
+    ).toEqual(["hu-zhengmao", "li-jiada"]);
+  });
+
+  it("技术搜索与标签之间继续使用 AND", () => {
+    expect(
+      filterAdvisors(data.advisors, "Minigene", ["孤独症"]).map(
+        (advisor) => advisor.id,
+      ),
+    ).toEqual(["hu-zhengmao"]);
   });
 
   it("搜索和标签筛选可组合", () => {

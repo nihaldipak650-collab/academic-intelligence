@@ -400,13 +400,14 @@ button {
 }
 
 .advisor-card {
+  position: relative;
   min-width: 0;
   min-height: 520px;
   padding: 25px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
-  box-shadow: 0 14px 34px rgba(34, 54, 43, 0.045);
+  box-shadow: 0 15px 38px rgba(25, 67, 49, 0.07);
   display: flex;
   flex-direction: column;
   transition:
@@ -417,6 +418,11 @@ button {
 .advisor-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 46px rgba(34, 54, 43, 0.1);
+}
+
+.advisor-card:focus-within {
+  border-color: #8aab96;
+  box-shadow: 0 0 0 3px rgba(22, 101, 72, 0.13), 0 20px 46px rgba(34, 54, 43, 0.1);
 }
 
 .advisor-card__topline {
@@ -661,6 +667,13 @@ button {
   font-weight: 700;
 }
 
+.card-link::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+}
+
 .card-link span {
   font-size: 18px;
 }
@@ -892,6 +905,58 @@ button {
   letter-spacing: -0.03em;
 }
 
+.editorial-group {
+  margin-top: 82px;
+  padding: 44px 48px 18px;
+  border: 1px solid #ccd9cf;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(232, 241, 234, 0.76), transparent 42%),
+    rgba(255, 254, 249, 0.9);
+  box-shadow: 0 18px 48px rgba(29, 74, 55, 0.07);
+}
+
+.content-section.editorial-group {
+  padding-top: 44px;
+}
+
+.editorial-group__heading {
+  max-width: 880px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cdd9d0;
+}
+
+.editorial-group__heading h2 {
+  margin: 10px 0 12px;
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.editorial-group__heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.editorial-subsection {
+  padding: 34px 0;
+  scroll-margin-top: 104px;
+}
+
+.editorial-subsection + .editorial-subsection {
+  border-top: 1px solid #cdd9d0;
+}
+
+.editorial-subsection > h3 {
+  margin: 0;
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .section-intro {
   max-width: 850px;
   margin: 18px 0 27px;
@@ -961,9 +1026,9 @@ button {
   background: rgba(255, 254, 249, 0.76);
 }
 
-.term-card h3,
-.task-card h3,
-.contact-prep-grid h3 {
+.term-card h4,
+.task-card h4,
+.contact-prep-grid h4 {
   margin: 16px 0 10px;
   font-family: "Noto Serif SC", Georgia, serif;
   font-size: 18px;
@@ -979,6 +1044,22 @@ button {
   font-size: 12px;
   line-height: 1.85;
   overflow-wrap: anywhere;
+}
+
+.term-card {
+  border: 0;
+  background: rgba(226, 238, 229, 0.82);
+}
+
+.task-card {
+  border-top: 4px solid var(--green);
+  background: var(--paper);
+  box-shadow: 0 10px 28px rgba(29, 74, 55, 0.06);
+}
+
+.contact-prep-grid article {
+  border: 0;
+  background: #f2efe5;
 }
 
 .fact-list {
@@ -1250,6 +1331,16 @@ button {
   padding-top: 18px;
 }
 
+.report-section {
+  margin-top: 96px;
+  padding-top: 76px;
+  border-top: 2px solid var(--green);
+}
+
+.report-section .boundary-note {
+  margin-top: 28px;
+}
+
 .quick-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1291,6 +1382,23 @@ button {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.85;
+}
+
+.technique-disclosure {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(110, 130, 118, 0.24);
+}
+
+.technique-disclosure summary {
+  color: var(--green);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.technique-disclosure ul {
+  margin-top: 12px;
 }
 
 .quick-grid__boundary {
@@ -1677,6 +1785,11 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .editorial-group {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
   .evidence-lane-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1804,6 +1917,29 @@ button {
   .content-collapse {
     padding-top: 0;
     margin-top: 64px;
+  }
+
+  .editorial-group {
+    margin-top: 64px;
+    padding: 30px 20px 4px;
+    border-radius: 18px;
+  }
+
+  .content-section.editorial-group {
+    padding-top: 30px;
+  }
+
+  .editorial-subsection {
+    padding: 28px 0;
+  }
+
+  .editorial-subsection > h3 {
+    font-size: 21px;
+  }
+
+  .report-section {
+    margin-top: 72px;
+    padding-top: 58px;
   }
 
   .quick-grid article {

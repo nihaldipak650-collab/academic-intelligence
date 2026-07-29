@@ -51,6 +51,10 @@ export function filterAdvisors(
       advisor.nameEn ?? "",
       advisor.summary,
       ...advisor.tags,
+      ...advisor.quickSummary.mainTechniques,
+      ...advisor.quickSummary.undergraduatePaths,
+      advisor.position ?? "",
+      advisor.institution ?? "",
     ]
       .join("\n")
       .toLocaleLowerCase();

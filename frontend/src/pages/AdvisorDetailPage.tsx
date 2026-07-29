@@ -10,7 +10,11 @@ import {
 } from "../components/MarkdownReport";
 import { ErrorState, LoadingState } from "../components/PageState";
 import { useAdvisorData } from "../data/AdvisorDataContext";
-import { assetPath, formatUpdatedAt } from "../data/advisorData";
+import {
+  assetPath,
+  formatUpdatedAt,
+  versionLabel,
+} from "../data/advisorData";
 import {
   getAdvisorContact,
   getAdvisorFreshness,
@@ -25,12 +29,10 @@ import type { AdvisorContact } from "../types/advisor";
 
 const publicSections = [
   ["overview", "先看这里"],
-  ["research", "方向通俗解释"],
-  ["identity-contact", "身份与联系"],
-  ["tasks", "本科生可能任务"],
+  ["research", "研究与联系"],
+  ["undergraduate", "本科生准备"],
   ["growth", "成长路线"],
   ["evidence", "证据说明"],
-  ["contact-prep", "联系与线下核验"],
   ["report", "完整学术报告"],
 ] as const;
 
@@ -204,7 +206,8 @@ export function AdvisorDetailPage() {
         </div>
         <dl className="profile-meta">
           <div><dt>职位 / 身份</dt><dd>{advisor.position ?? MISSING_PUBLIC_INFO}</dd></div>
-          <div><dt>版本</dt><dd>1.0-rc1</dd></div>
+          <div><dt>网站版本</dt><dd>1.0 RC1</dd></div>
+          <div><dt>档案版本</dt><dd>{versionLabel(advisor.version)}</dd></div>
           <div><dt>最新核验</dt><dd>{formatUpdatedAt(freshness.lastVerifiedAt)}</dd></div>
           <div><dt>当前本科生机会</dt><dd>{freshness.opportunityStatus}</dd></div>
         </dl>
@@ -240,11 +243,25 @@ export function AdvisorDetailPage() {
             <span>02 · AI整理</span>
             <h3>报告中的主要方法</h3>
             {advisor.quickSummary.mainTechniques.length ? (
-              <ul>
-                {advisor.quickSummary.mainTechniques.slice(0, 3).map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <>
+                <ul>
+                  {advisor.quickSummary.mainTechniques.slice(0, 3).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                {advisor.quickSummary.mainTechniques.length > 3 && (
+                  <details className="technique-disclosure">
+                    <summary>
+                      查看全部技术（共{advisor.quickSummary.mainTechniques.length}项）
+                    </summary>
+                    <ul>
+                      {advisor.quickSummary.mainTechniques.slice(3).map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </details>
+                )}
+              </>
             ) : <p>{NO_RELIABLE_PUBLIC_EVIDENCE}</p>}
           </article>
           <article>
@@ -261,61 +278,96 @@ export function AdvisorDetailPage() {
         </div>
       </section>
 
-      <section className="content-section" id="research" tabIndex={-1}>
-        <span className="section-kicker">PLAIN LANGUAGE</span>
-        <h2>方向与术语怎么理解</h2>
-        <div className="term-grid">
-          {terms.map((item) => (
-            <article className="term-card" key={item.term}>
-              <span className="tag">原始方向 · {item.term}</span>
-              <h3>{item.plainLanguage}</h3>
-              <p><strong>对本科生意味着什么：</strong>{item.undergraduateMeaning}</p>
-            </article>
-          ))}
+      <section className="content-section editorial-group" id="research" tabIndex={-1}>
+        <div className="editorial-group__heading">
+          <span className="section-kicker">RESEARCH &amp; PUBLIC FACTS</span>
+          <h2>研究方向与公开联系</h2>
+          <p>先用通俗解释理解研究主题，再核对身份、机构与官方联系方式。</p>
         </div>
-      </section>
-
-      <section className="content-section" id="identity-contact" tabIndex={-1}>
-        <span className="section-kicker">PUBLIC FACTS</span>
-        <h2>基础身份与官方联系</h2>
-        <dl className="fact-list identity-facts">
-          <div><dt>姓名</dt><dd>{advisor.nameZh}{advisor.nameEn ? ` / ${advisor.nameEn}` : ""}</dd></div>
-          <div><dt>所属机构</dt><dd><PublicValue value={advisor.institution ?? null} /></dd></div>
-          <div><dt>职位 / 身份</dt><dd>{advisor.position ?? MISSING_PUBLIC_INFO}</dd></div>
-          <div><dt>数据状态</dt><dd>{freshness.dataStatus}</dd></div>
-        </dl>
-        <ContactFacts contact={contact} />
-      </section>
-
-      <section className="content-section" id="tasks" tabIndex={-1}>
-        <span className="section-kicker">UNDERGRADUATE TASKS</span>
-        <h2>本科生可能任务</h2>
-        <p className="section-intro">以下内容仅是基于公开证据的理解线索，不是实验室承诺、岗位说明或实际安排。</p>
-        {tasks.length ? (
-          <div className="task-list">
-            {tasks.map((task) => (
-              <article className="task-card" key={task.id}>
-                <div className="task-card__heading">
-                  <span className="lane-label lane-label--ai">AI整理</span>
-                  <EvidenceTag level={task.evidenceStatus} />
-                </div>
-                <h3>{task.title}</h3>
-                <p>{task.description}</p>
-                <dl>
-                  <div><dt>研究背景</dt><dd>{task.background}</dd></div>
-                  <div><dt>为什么做</dt><dd>{task.whyItMatters}</dd></div>
-                  <div><dt>可能方法</dt><dd>{task.methods.length ? task.methods.join("、") : PENDING_VERIFICATION}</dd></div>
-                  <div><dt>可能产出</dt><dd>{task.expectedOutput}</dd></div>
-                </dl>
+        <div className="editorial-subsection">
+          <h3>方向与术语怎么理解</h3>
+          <div className="term-grid">
+            {terms.map((item) => (
+              <article className="term-card" key={item.term}>
+                <span className="tag">原始方向 · {item.term}</span>
+                <h4>{item.plainLanguage}</h4>
+                <p><strong>对本科生意味着什么：</strong>{item.undergraduateMeaning}</p>
               </article>
             ))}
           </div>
-        ) : (
-          <EmptyState
-            title={NO_RELIABLE_PUBLIC_EVIDENCE}
-            description="当前公开展示层没有足够的结构化证据说明本科生具体任务。请在线下联系时确认任务边界、方法、时间投入和实际指导人。"
-          />
-        )}
+        </div>
+        <div className="editorial-subsection" id="identity-contact" tabIndex={-1}>
+          <h3>基础身份与官方联系</h3>
+          <dl className="fact-list identity-facts">
+            <div><dt>姓名</dt><dd>{advisor.nameZh}{advisor.nameEn ? ` / ${advisor.nameEn}` : ""}</dd></div>
+            <div><dt>所属机构</dt><dd><PublicValue value={advisor.institution ?? null} /></dd></div>
+            <div><dt>职位 / 身份</dt><dd>{advisor.position ?? MISSING_PUBLIC_INFO}</dd></div>
+            <div><dt>数据状态</dt><dd>{freshness.dataStatus}</dd></div>
+          </dl>
+          <ContactFacts contact={contact} />
+        </div>
+      </section>
+
+      <section className="content-section editorial-group" id="undergraduate" tabIndex={-1}>
+        <div className="editorial-group__heading">
+          <span className="section-kicker">UNDERGRADUATE PREPARATION</span>
+          <h2>本科生任务与联系准备</h2>
+          <p>把公开证据中的可能任务和线下核验问题放在同一处阅读，不将推测写成现实安排。</p>
+        </div>
+        <div className="editorial-subsection" id="tasks" tabIndex={-1}>
+          <h3>本科生可能任务</h3>
+          <p className="section-intro">以下内容仅是基于公开证据的理解线索，不是实验室承诺、岗位说明或实际安排。</p>
+          {tasks.length ? (
+            <div className="task-list">
+              {tasks.map((task) => (
+                <article className="task-card" key={task.id}>
+                  <div className="task-card__heading">
+                    <span className="lane-label lane-label--ai">AI整理</span>
+                    <EvidenceTag level={task.evidenceStatus} />
+                  </div>
+                  <h4>{task.title}</h4>
+                  <p>{task.description}</p>
+                  <dl>
+                    <div><dt>研究背景</dt><dd>{task.background}</dd></div>
+                    <div><dt>为什么做</dt><dd>{task.whyItMatters}</dd></div>
+                    <div><dt>可能方法</dt><dd>{task.methods.length ? task.methods.join("、") : PENDING_VERIFICATION}</dd></div>
+                    <div><dt>可能产出</dt><dd>{task.expectedOutput}</dd></div>
+                  </dl>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <EmptyState
+              title={NO_RELIABLE_PUBLIC_EVIDENCE}
+              description="当前公开展示层没有足够的结构化证据说明本科生具体任务。请在线下联系时确认任务边界、方法、时间投入和实际指导人。"
+            />
+          )}
+        </div>
+        <div className="editorial-subsection contact-prep" id="contact-prep" tabIndex={-1}>
+          <h3>低压力联系准备与线下核验</h3>
+          <div className="contact-prep-grid">
+            <article>
+              <h4>联系前准备</h4>
+              <ul className="check-list">
+                <li>用两三句话说明自己的年级、基础和感兴趣的问题。</li>
+                <li>准备一份真正读过的公开论文或研究方向问题。</li>
+                <li>明确询问当前是否有本科生机会，不预设一定有名额。</li>
+              </ul>
+            </article>
+            <article>
+              <h4>线下核验清单</h4>
+              <ul className="check-list">
+                <li>实际带教人是谁，多久沟通一次？</li>
+                <li>本科生可参与哪些任务，时间投入和安全要求是什么？</li>
+                <li>是否有明确的试做范围、反馈节点和退出方式？</li>
+              </ul>
+            </article>
+          </div>
+          <div className="experience-public-note" role="note">
+            学生经历信息暂未纳入1.0公开展示。单个经历不能代表整个实验室，实际带教与相处情况请通过本人联系和线下了解进一步确认。
+          </div>
+          <blockquote className="decision-boundary">本站帮助理解公开信息和准备核验问题，不进行导师评价、推荐或排名，也不替代你的最终决定。</blockquote>
+        </div>
       </section>
 
       <details className="content-collapse content-section" id="growth" tabIndex={-1}>
@@ -355,74 +407,49 @@ export function AdvisorDetailPage() {
         </div>
       </section>
 
-      <section className="content-section contact-prep" id="contact-prep" tabIndex={-1}>
-        <span className="section-kicker">CONTACT PREPARATION</span>
-        <h2>低压力联系准备与线下核验</h2>
-        <div className="contact-prep-grid">
-          <article>
-            <h3>联系前准备</h3>
-            <ul className="check-list">
-              <li>用两三句话说明自己的年级、基础和感兴趣的问题。</li>
-              <li>准备一份真正读过的公开论文或研究方向问题。</li>
-              <li>明确询问当前是否有本科生机会，不预设一定有名额。</li>
-            </ul>
-          </article>
-          <article>
-            <h3>线下核验清单</h3>
-            <ul className="check-list">
-              <li>实际带教人是谁，多久沟通一次？</li>
-              <li>本科生可参与哪些任务，时间投入和安全要求是什么？</li>
-              <li>是否有明确的试做范围、反馈节点和退出方式？</li>
-            </ul>
-          </article>
-        </div>
-        <div className="experience-public-note" role="note">
-          学生经历信息暂未纳入1.0公开展示。单个经历不能代表整个实验室，实际带教与相处情况请通过本人联系和线下了解进一步确认。
-        </div>
-        <blockquote className="decision-boundary">本站帮助理解公开信息和准备核验问题，不进行导师评价、推荐或排名，也不替代你的最终决定。</blockquote>
-      </section>
-
       {reportState === "loading" && <LoadingState />}
       {reportState === "error" && (
         <ErrorState title="完整报告暂时无法读取" description="报告文件不存在或请求失败。导师摘要仍可查看，请返回列表或稍后重试。" />
       )}
       {reportState === "ready" && (
-        <details className="content-collapse report-collapse content-section" id="report" tabIndex={-1}>
-          <summary>
-            <span><small>DEEP ACADEMIC CONTENT</small><strong>完整学术报告与论文证据</strong></span>
-            <em>默认折叠</em>
-          </summary>
-          <div className="collapse-body">
-            <p className="boundary-note">学生经历相关章节不进入1.0公开展示；其余公开学术报告按原文呈现，Evidence、Confidence、DOI、No Evidence 与 Boundary Statement 不隐藏。</p>
-            <details className="mobile-toc">
-              <summary>展开报告目录</summary>
-              <nav aria-label="移动端报告目录">
+        <section className="report-section content-section" id="report" tabIndex={-1} aria-labelledby="full-report-title">
+          <div className="report-heading">
+            <div>
+              <span className="section-kicker">DEEP ACADEMIC CONTENT</span>
+              <h2 id="full-report-title">完整学术报告与论文证据</h2>
+              <p>向下滚动即可阅读完整公开学术内容；Evidence、Confidence、DOI、No Evidence 与 Boundary Statement 均不隐藏。</p>
+            </div>
+            <span className="source-chip">{advisor.sourceLabel}</span>
+          </div>
+          <p className="boundary-note">学生经历相关章节不进入1.0公开展示；其余公开学术报告按原文呈现。</p>
+          <details className="mobile-toc">
+            <summary>展开报告目录</summary>
+            <nav aria-label="移动端报告目录">
+              {headings.map((heading) => (
+                <a href={`#${heading.id}`} className={`toc-depth-${heading.depth}`} onClick={(event) => scrollToHeading(event, heading.id)} key={heading.id}>{heading.text}</a>
+              ))}
+            </nav>
+          </details>
+          <div className="doc-layout">
+            <aside className="doc-rail">
+              <nav className="anchor-nav" aria-label="报告目录">
+                <strong>报告目录</strong>
                 {headings.map((heading) => (
                   <a href={`#${heading.id}`} className={`toc-depth-${heading.depth}`} onClick={(event) => scrollToHeading(event, heading.id)} key={heading.id}>{heading.text}</a>
                 ))}
               </nav>
-            </details>
-            <div className="doc-layout">
-              <aside className="doc-rail">
-                <nav className="anchor-nav" aria-label="报告目录">
-                  <strong>报告目录</strong>
-                  {headings.map((heading) => (
-                    <a href={`#${heading.id}`} className={`toc-depth-${heading.depth}`} onClick={(event) => scrollToHeading(event, heading.id)} key={heading.id}>{heading.text}</a>
-                  ))}
-                </nav>
-              </aside>
-              <article className="markdown-body">
-                <MarkdownReport markdown={markdown} hideExperienceSections />
-              </article>
-              <aside className="evidence-rail">
-                <strong>阅读提示</strong>
-                <p>Evidence 表示来源支持程度，不是导师评分。</p>
-                <p>No Evidence 表示当前资料不足，不能补写或猜测。</p>
-                <p>外部 DOI 链接将在新窗口打开。</p>
-              </aside>
-            </div>
+            </aside>
+            <article className="markdown-body">
+              <MarkdownReport markdown={markdown} hideExperienceSections />
+            </article>
+            <aside className="evidence-rail">
+              <strong>阅读提示</strong>
+              <p>Evidence 表示来源支持程度，不是导师评分。</p>
+              <p>No Evidence 表示当前资料不足，不能补写或猜测。</p>
+              <p>外部 DOI 链接将在新窗口打开。</p>
+            </aside>
           </div>
-        </details>
+        </section>
       )}
     </div>
   );

@@ -39,7 +39,7 @@ describe("导师列表页", () => {
     expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(
       7,
     );
-    expect(screen.getAllByText("职位 / 身份：暂无公开信息")).toHaveLength(7);
+    expect(screen.queryByText("职位 / 身份：暂无公开信息")).not.toBeInTheDocument();
     expect(screen.getAllByText("公开学术证据 + AI整理")).toHaveLength(7);
     expect(screen.queryByText(/经授权的本科生经历/)).not.toBeInTheDocument();
   });
@@ -49,7 +49,7 @@ describe("导师列表页", () => {
     renderList();
     await user.type(
       screen.getByRole("searchbox", {
-        name: "搜索姓名、摘要或研究方向",
+        name: "搜索姓名、机构、摘要、研究方向或技术",
       }),
       "不存在的导师",
     );
@@ -71,7 +71,7 @@ describe("导师列表页", () => {
     );
     await user.type(
       screen.getByRole("searchbox", {
-        name: "搜索姓名、摘要或研究方向",
+        name: "搜索姓名、机构、摘要、研究方向或技术",
       }),
       "高度近视",
     );
@@ -175,16 +175,44 @@ describe("导师详情页", () => {
     expect(homepage).toHaveAttribute("href", "https://example.edu.cn/advisor");
   });
 
-  it("成长路线与完整报告默认折叠", async () => {
+  it("成长路线保持折叠，完整报告无需点击即可直接阅读", async () => {
     renderDetail("/advisor/guo-hui");
     const growthSummary = screen.getByText("科研成长路线与前置技能");
     expect(growthSummary.closest("details")).not.toHaveAttribute("open");
     await waitFor(() =>
       expect(screen.getByText("完整学术报告与论文证据")).toBeInTheDocument(),
     );
+    expect(screen.getByText("保留的后续学术内容。")).toBeVisible();
     expect(
       screen.getByText("完整学术报告与论文证据").closest("details"),
-    ).not.toHaveAttribute("open");
+    ).toBeNull();
+  });
+
+  it("网站版本与真实档案版本语义分离", () => {
+    renderDetail("/advisor/guo-hui");
+    expect(screen.getByText("网站版本")).toBeInTheDocument();
+    expect(screen.getByText("1.0 RC1")).toBeInTheDocument();
+    expect(screen.getByText("档案版本")).toBeInTheDocument();
+    expect(screen.getByText("0.5-beta")).toBeInTheDocument();
+  });
+
+  it("主要技术先显示三项，并可展开查看全部四项", async () => {
+    const user = userEvent.setup();
+    const advisor = data.advisors.find((item) => item.id === "li-faxiang")!;
+    renderDetail("/advisor/li-faxiang");
+    const disclosure = screen.getByText("查看全部技术（共4项）");
+    expect(advisor.quickSummary.mainTechniques).toHaveLength(4);
+    expect(screen.getByText(advisor.quickSummary.mainTechniques[3])).toBeInTheDocument();
+    await user.click(disclosure);
+    expect(disclosure.closest("details")).toHaveAttribute("open");
+  });
+
+  it("7 位导师的详情路由均能呈现正确姓名", () => {
+    data.advisors.forEach((advisor) => {
+      const view = renderDetail(`/advisor/${advisor.id}`);
+      expect(screen.getByRole("heading", { name: new RegExp(advisor.nameZh) })).toBeInTheDocument();
+      view.unmount();
+    });
   });
 
   it("无效 ID 显示错误页而不是空白或跳转", () => {
