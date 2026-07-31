@@ -1,10 +1,15 @@
 {
-  "schema_version": "1.0.1",
+  "schema_version": "1.0.2",
   "advisor_id": "xiang-rong",
   "valid": true,
   "release_eligible": false,
   "requested_publication_status": "review_pending",
   "effective_publication_status": "review_pending",
+  "candidate_evidence_count": 41,
+  "adopted_public_evidence_count": 16,
+  "featured_publication_count": 0,
+  "pending_version_group_count": 1,
+  "schema_and_field_binding_status": "passed",
   "errors": [],
   "warnings": [
     {

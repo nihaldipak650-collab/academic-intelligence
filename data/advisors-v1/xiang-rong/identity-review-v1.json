@@ -1,68 +1,326 @@
 {
-  "schema_version": "1.0.1",
-  "advisor_id": "xiang-rong",
-  "review_status": "unresolved",
-  "reviewed_at": "2026-07-31",
-  "reviewer_role": "codex_mechanical_migration",
-  "publication_identity": [
-    {"evidence_id":"E1","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E2","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E3","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E4","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E5","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E6","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E7","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E8","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E9","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E10","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E11","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E12","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E13","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E14","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E15","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E16","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录；与 E17 的版本关系仍需人工核验。"},
-    {"evidence_id":"E17","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录；现有报告标记为 preprint，并提示可能与 E16 重复。"},
-    {"evidence_id":"E18","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E19","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E20","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E21","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E22","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E23","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E24","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E25","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E26","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E27","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E28","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E29","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E30","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E31","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E32","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E33","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E34","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E35","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E36","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E37","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E38","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E39","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E40","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"},
-    {"evidence_id":"E41","identity_status":"unresolved","notes":"仓库没有独立论文级身份记录。"}
-  ],
-  "p0_blockers": [
-    {
-      "code": "MISSING_INDEPENDENT_IDENTITY_RECORD",
-      "description": "当前仓库没有项荣的独立论文级身份记录或 Evidence Manifest 原始输入，不能把现有报告中的署名筛选结论视为身份闭环。",
-      "evidence_ids": ["E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40", "E41"]
-    },
-    {
-      "code": "AUTHOR_ID_SPLIT_AND_NAME_COLLISION",
-      "description": "现有报告记录 OpenAlex 作者 ID 拆分并混入同名记录；本次不联网，无法重新核验。",
-      "evidence_ids": ["E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40", "E41"]
-    },
-    {
-      "code": "PUBLICATION_VERSION_REVIEW_REQUIRED",
-      "description": "E16 与 E17 在现有报告中被标记为可能的正式论文/预印本重复；Manifest 已建立候选关联并只计入 E16，但仍需人工确认。",
-      "evidence_ids": ["E16", "E17"]
-    }
-  ],
-  "notes": "只读迁移检查；未联网、未新增身份事实。"
+    "schema_version":  "1.0.2",
+    "advisor_id":  "xiang-rong",
+    "review_status":  "unresolved",
+    "reviewed_at":  "2026-07-31",
+    "reviewer_role":  "codex_mechanical_migration",
+    "publication_identity":  [
+                                 {
+                                     "evidence_id":  "E1",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E2",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E3",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E4",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E5",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E6",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E7",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E8",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E9",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E10",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E11",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E12",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E13",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E14",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E15",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E16",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录；与 E17 的版本关系仍需人工核验。"
+                                 },
+                                 {
+                                     "evidence_id":  "E17",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录；现有报告标记为 preprint，并提示可能与 E16 重复。"
+                                 },
+                                 {
+                                     "evidence_id":  "E18",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E19",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E20",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E21",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E22",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E23",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E24",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E25",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E26",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E27",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E28",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E29",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E30",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E31",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E32",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E33",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E34",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E35",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E36",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E37",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E38",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E39",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E40",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 },
+                                 {
+                                     "evidence_id":  "E41",
+                                     "identity_status":  "unresolved",
+                                     "notes":  "仓库没有独立论文级身份记录。"
+                                 }
+                             ],
+    "p0_blockers":  [
+                        {
+                            "code":  "MISSING_INDEPENDENT_IDENTITY_RECORD",
+                            "description":  "当前仓库没有项荣的独立论文级身份记录或 Evidence Manifest 原始输入，不能把现有报告中的署名筛选结论视为身份闭环。",
+                            "evidence_ids":  [
+                                                 "E1",
+                                                 "E2",
+                                                 "E3",
+                                                 "E4",
+                                                 "E5",
+                                                 "E6",
+                                                 "E7",
+                                                 "E8",
+                                                 "E9",
+                                                 "E10",
+                                                 "E11",
+                                                 "E12",
+                                                 "E13",
+                                                 "E14",
+                                                 "E15",
+                                                 "E16",
+                                                 "E17",
+                                                 "E18",
+                                                 "E19",
+                                                 "E20",
+                                                 "E21",
+                                                 "E22",
+                                                 "E23",
+                                                 "E24",
+                                                 "E25",
+                                                 "E26",
+                                                 "E27",
+                                                 "E28",
+                                                 "E29",
+                                                 "E30",
+                                                 "E31",
+                                                 "E32",
+                                                 "E33",
+                                                 "E34",
+                                                 "E35",
+                                                 "E36",
+                                                 "E37",
+                                                 "E38",
+                                                 "E39",
+                                                 "E40",
+                                                 "E41"
+                                             ]
+                        },
+                        {
+                            "code":  "AUTHOR_ID_SPLIT_AND_NAME_COLLISION",
+                            "description":  "现有报告记录 OpenAlex 作者 ID 拆分并混入同名记录；本次不联网，无法重新核验。",
+                            "evidence_ids":  [
+                                                 "E1",
+                                                 "E2",
+                                                 "E3",
+                                                 "E4",
+                                                 "E5",
+                                                 "E6",
+                                                 "E7",
+                                                 "E8",
+                                                 "E9",
+                                                 "E10",
+                                                 "E11",
+                                                 "E12",
+                                                 "E13",
+                                                 "E14",
+                                                 "E15",
+                                                 "E16",
+                                                 "E17",
+                                                 "E18",
+                                                 "E19",
+                                                 "E20",
+                                                 "E21",
+                                                 "E22",
+                                                 "E23",
+                                                 "E24",
+                                                 "E25",
+                                                 "E26",
+                                                 "E27",
+                                                 "E28",
+                                                 "E29",
+                                                 "E30",
+                                                 "E31",
+                                                 "E32",
+                                                 "E33",
+                                                 "E34",
+                                                 "E35",
+                                                 "E36",
+                                                 "E37",
+                                                 "E38",
+                                                 "E39",
+                                                 "E40",
+                                                 "E41"
+                                             ]
+                        },
+                        {
+                            "code":  "PUBLICATION_VERSION_REVIEW_REQUIRED",
+                            "description":  "E16 与 E17 在现有报告中被标记为可能的正式论文/预印本重复；Manifest 已建立候选关联并只计入 E16，但仍需人工确认。",
+                            "evidence_ids":  [
+                                                 "E16",
+                                                 "E17"
+                                             ]
+                        }
+                    ],
+    "notes":  "只读迁移检查；未联网、未新增身份事实。",
+    "advisor_identity":  {
+                             "name_match_status":  "unresolved",
+                             "institution_match_status":  "unresolved",
+                             "orcid_status":  "not_found",
+                             "candidate_orcid":  null,
+                             "notes":  "仓库现有材料不足以形成独立身份闭环；未联网补充来源。"
+                         }
 }

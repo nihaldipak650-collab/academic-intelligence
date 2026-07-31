@@ -1,7 +1,7 @@
 """Validate a public advisor package and its release gates.
 
 The structural validator implements every JSON Schema keyword used by the
-v1.0.1 contract.  Semantic checks then enforce cross-file Evidence, identity,
+v1.0.2 contract.  Semantic checks then enforce cross-file Evidence, identity,
 privacy, provenance, and publication rules that JSON Schema cannot express.
 """
 
@@ -22,7 +22,7 @@ DEFAULT_SCHEMA_PATH = (
     REPO_ROOT
     / "docs"
     / "advisor-template-v1"
-    / "public-advisor-schema-v1.0.1.json"
+    / "public-advisor-schema-v1.0.2.json"
 )
 
 PUBLIC_STATUSES = {"approved", "published"}
@@ -207,10 +207,10 @@ def _normalize_title(value: str) -> str:
     return re.sub(r"\W+", "", without_version_label.casefold(), flags=re.UNICODE)
 
 
-def _collect_public_evidence_ids(public: dict[str, Any]) -> set[str]:
+def _collect_claim_evidence_ids(public: dict[str, Any]) -> set[str]:
     result: set[str] = set()
     for _path, key, value in _walk(public):
-        if key in {"evidence_ids", "representative_publication_evidence_ids"} and isinstance(value, list):
+        if key == "evidence_ids" and isinstance(value, list):
             result.update(item for item in value if isinstance(item, str))
     return result
 
@@ -227,16 +227,12 @@ def _evidence_field_binding_issues(public: dict[str, Any], evidence: list[dict[s
     issues: list[ValidationIssue] = []
     by_id = {item.get("evidence_id"): item for item in evidence if isinstance(item, dict)}
     for field, value in public.items():
-        if field in {"evidence_ids", "representative_publication_evidence_ids"}:
+        if field in {"adopted_public_evidence_ids", "featured_publication_evidence_ids"}:
             continue
         for evidence_id in _ids_below(value):
             item = by_id.get(evidence_id)
             if item is not None and field not in item.get("supported_fields", []):
                 issues.append(_issue("EVIDENCE_FIELD_BINDING_MISMATCH", f"$.{field}", f"{evidence_id} does not declare support for {field}."))
-    for evidence_id in public.get("representative_publication_evidence_ids", []):
-        item = by_id.get(evidence_id)
-        if item is not None and not item.get("include_in_report"):
-            issues.append(_issue("REPRESENTATIVE_PUBLICATION_EXCLUDED", "$.representative_publication_evidence_ids", f"{evidence_id} is excluded by the Manifest."))
     return issues
 
 
@@ -259,13 +255,13 @@ def _privacy_issues(values: Iterable[tuple[str, Any]]) -> list[ValidationIssue]:
 def _missing_state_issues(public: dict[str, Any]) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     for path, key, value in _walk(public):
-        if isinstance(value, dict) and {"value", "source_url", "source_ref", "source_authority", "last_verified_at", "missing_status"}.issubset(value):
+        if isinstance(value, dict) and {"value", "value_en", "source_url", "source_ref", "source_authority", "last_verified_at", "missing_status"}.issubset(value):
             status = value["missing_status"]
             if status == "available":
                 if value["value"] is None or not (value["source_url"] or value["source_ref"]) or not value["last_verified_at"]:
                     issues.append(_issue("INVALID_MISSING_STATE", path, "Available sourced values require a value, source URL/ref, and verification date."))
             elif status == "no_public_information":
-                if any(value[item] is not None for item in ("value", "source_url", "source_ref", "source_authority", "last_verified_at")):
+                if any(value[item] is not None for item in ("value", "value_en", "source_url", "source_ref", "source_authority", "last_verified_at")):
                     issues.append(_issue("INVALID_MISSING_STATE", path, "No-public-information values must use null value and provenance fields."))
             elif status == "needs_verification":
                 if value["last_verified_at"] is not None:
@@ -320,47 +316,42 @@ def _dedup_issues(evidence: list[dict[str, Any]]) -> list[ValidationIssue]:
                 continue
             types = {left.get("source_type"), right.get("source_type")}
             if "preprint" in types and len(types) > 1:
-                linked = {
-                    left.get("related_version_evidence_id"),
-                    right.get("related_version_evidence_id"),
-                }
-                expected = {left.get("evidence_id"), right.get("evidence_id")}
-                if not expected.issubset(linked | expected.intersection(linked)):
-                    issues.append(_issue("UNLINKED_PUBLICATION_VERSION", "manifest.evidence", "Matching preprint and formal titles must be explicitly linked."))
-                if left.get("include_in_report") and right.get("include_in_report"):
-                    issues.append(_issue("DUPLICATE_PUBLICATION_VERSION", "manifest.evidence", "Only one linked publication version may be included in the report."))
+                if not left.get("version_group") or left.get("version_group") != right.get("version_group"):
+                    issues.append(_issue("UNLINKED_PUBLICATION_VERSION", "manifest.candidate_evidence", "Matching preprint and formal titles must share a version_group."))
+                if "adopted" in left.get("candidate_statuses", []) and "adopted" in right.get("candidate_statuses", []):
+                    issues.append(_issue("DUPLICATE_PUBLICATION_VERSION", "manifest.candidate_evidence", "Only one record in a publication version group may be adopted."))
     return issues
 
 
 def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
-    for key in ("schema_version", "advisor_id", "evidence"):
+    for key in ("schema_version", "advisor_id", "candidate_evidence"):
         if key not in manifest:
             issues.append(_issue("MANIFEST_REQUIRED", f"manifest.{key}", "Required Manifest field is missing."))
-    if manifest.get("schema_version") != "1.0.1":
-        issues.append(_issue("MANIFEST_VERSION", "manifest.schema_version", "Manifest must use v1.0.1."))
-    evidence = manifest.get("evidence")
+    if manifest.get("schema_version") != "1.0.2":
+        issues.append(_issue("MANIFEST_VERSION", "manifest.schema_version", "Manifest must use v1.0.2."))
+    evidence = manifest.get("candidate_evidence")
     if not isinstance(evidence, list) or not evidence:
-        issues.append(_issue("MANIFEST_EVIDENCE_REQUIRED", "manifest.evidence", "Manifest requires at least one Evidence record."))
+        issues.append(_issue("MANIFEST_EVIDENCE_REQUIRED", "manifest.candidate_evidence", "Manifest requires at least one candidate Evidence record."))
         return issues
     required = {
         "evidence_id", "evidence_type", "title", "publication_year", "doi",
         "source_type", "source_url", "author_position", "is_co_first",
-        "is_corresponding", "identity_verified", "related_version_evidence_id",
-        "include_in_report", "supported_fields", "repository_source_ref",
+        "is_corresponding", "identity_verified", "candidate_statuses", "reason",
+        "version_group", "supported_fields", "repository_source_ref",
     }
     allowed_positions = {"first", "middle", "last", "unknown"}
     allowed_types = {"journal_article", "preprint", "conference", "review", "other"}
-    ids = {item.get("evidence_id") for item in evidence if isinstance(item, dict)}
+    allowed_statuses = {"candidate", "adopted", "excluded", "duplicate_candidate", "identity_pending"}
     for index, item in enumerate(evidence):
-        path = f"manifest.evidence[{index}]"
+        path = f"manifest.candidate_evidence[{index}]"
         if not isinstance(item, dict):
             issues.append(_issue("MANIFEST_RECORD_TYPE", path, "Evidence record must be an object."))
             continue
         for key in required - item.keys():
             issues.append(_issue("MANIFEST_REQUIRED", f"{path}.{key}", "Required Evidence field is missing."))
         if "advisor_author_role" in item:
-            issues.append(_issue("LEGACY_AUTHOR_ROLE", f"{path}.advisor_author_role", "Merged author role is forbidden in v1.0.1."))
+            issues.append(_issue("LEGACY_AUTHOR_ROLE", f"{path}.advisor_author_role", "Merged author role is forbidden in v1.0.2."))
         if item.get("author_position") not in allowed_positions:
             issues.append(_issue("AUTHOR_POSITION", f"{path}.author_position", "Invalid author_position."))
         for key in ("is_co_first", "is_corresponding"):
@@ -375,30 +366,38 @@ def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue
             issues.append(_issue("MANIFEST_DOI", f"{path}.doi", "DOI must preserve the valid source value or be null."))
         if not isinstance(item.get("identity_verified"), bool):
             issues.append(_issue("IDENTITY_FLAG", f"{path}.identity_verified", "identity_verified must be boolean."))
-        if not isinstance(item.get("include_in_report"), bool):
-            issues.append(_issue("INCLUDE_FLAG", f"{path}.include_in_report", "include_in_report must be boolean."))
         if not isinstance(item.get("supported_fields"), list) or not item.get("supported_fields"):
             issues.append(_issue("SUPPORTED_FIELDS", f"{path}.supported_fields", "Each Evidence record must list supported public fields."))
-        relation = item.get("related_version_evidence_id")
-        if relation is not None:
-            if relation not in ids or relation == item.get("evidence_id"):
-                issues.append(_issue("INVALID_VERSION_LINK", f"{path}.related_version_evidence_id", "Version link must reference another Manifest Evidence ID."))
-            else:
-                peer = next((candidate for candidate in evidence if candidate.get("evidence_id") == relation), {})
-                if peer.get("related_version_evidence_id") != item.get("evidence_id"):
-                    issues.append(_issue("NONRECIPROCAL_VERSION_LINK", f"{path}.related_version_evidence_id", "Publication version links must be reciprocal."))
+        statuses = item.get("candidate_statuses")
+        if not isinstance(statuses, list) or not statuses or len(statuses) != len(set(statuses)) or any(status not in allowed_statuses for status in statuses):
+            issues.append(_issue("CANDIDATE_STATUSES", f"{path}.candidate_statuses", "Candidate statuses must be a non-empty unique list of allowed states."))
+            statuses = []
+        if "adopted" in statuses and ({"excluded", "duplicate_candidate"} & set(statuses)):
+            issues.append(_issue("CONFLICTING_CANDIDATE_STATUS", f"{path}.candidate_statuses", "Adopted Evidence cannot also be excluded or a duplicate candidate."))
+        if ({"excluded", "duplicate_candidate"} & set(statuses)) and not item.get("reason"):
+            issues.append(_issue("EXCLUSION_REASON_REQUIRED", f"{path}.reason", "Excluded and duplicate candidate records require a reason."))
+        if "duplicate_candidate" in statuses and not item.get("version_group"):
+            issues.append(_issue("VERSION_GROUP_REQUIRED", f"{path}.version_group", "Duplicate candidates require a version_group."))
+        if item.get("identity_verified") is False and "identity_pending" not in statuses:
+            issues.append(_issue("IDENTITY_PENDING_STATUS_REQUIRED", f"{path}.candidate_statuses", "Unverified candidate Evidence must include identity_pending."))
+        if item.get("identity_verified") is True and "identity_pending" in statuses:
+            issues.append(_issue("IDENTITY_STATUS_CONFLICT", f"{path}.candidate_statuses", "Verified Evidence cannot remain identity_pending."))
     return issues
 
 
 def _identity_structure_issues(identity_review: dict[str, Any]) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
-    required = {"schema_version", "advisor_id", "review_status", "reviewed_at", "reviewer_role", "publication_identity", "p0_blockers", "notes"}
+    required = {"schema_version", "advisor_id", "review_status", "reviewed_at", "reviewer_role", "advisor_identity", "publication_identity", "p0_blockers", "notes"}
     for key in required - identity_review.keys():
         issues.append(_issue("IDENTITY_REVIEW_REQUIRED", f"identity.{key}", "Required Identity Review field is missing."))
-    if identity_review.get("schema_version") != "1.0.1":
-        issues.append(_issue("IDENTITY_REVIEW_VERSION", "identity.schema_version", "Identity Review must use v1.0.1."))
+    if identity_review.get("schema_version") != "1.0.2":
+        issues.append(_issue("IDENTITY_REVIEW_VERSION", "identity.schema_version", "Identity Review must use v1.0.2."))
     if identity_review.get("review_status") not in {"verified", "unresolved", "conflict"}:
         issues.append(_issue("IDENTITY_REVIEW_STATUS", "identity.review_status", "Invalid Identity Review status."))
+    advisor_identity = identity_review.get("advisor_identity")
+    advisor_required = {"name_match_status", "institution_match_status", "orcid_status", "candidate_orcid", "notes"}
+    if not isinstance(advisor_identity, dict) or not advisor_required.issubset(advisor_identity):
+        issues.append(_issue("ADVISOR_IDENTITY_REQUIRED", "identity.advisor_identity", "Advisor identity requires name, institution, ORCID, and notes fields."))
     items = identity_review.get("publication_identity")
     if not isinstance(items, list) or not items:
         issues.append(_issue("IDENTITY_RECORDS_REQUIRED", "identity.publication_identity", "Identity Review requires publication-level records."))
@@ -446,13 +445,36 @@ def validate_package(
     if len(advisor_ids) != 1:
         errors.append(_issue("ADVISOR_ID_MISMATCH", "$", "All package files must have the same advisor_id."))
 
-    evidence = manifest.get("evidence", [])
+    evidence = manifest.get("candidate_evidence", [])
     manifest_ids = [item.get("evidence_id") for item in evidence if isinstance(item, dict)]
     if len(manifest_ids) != len(set(manifest_ids)):
-        errors.append(_issue("DUPLICATE_EVIDENCE_ID", "manifest.evidence", "Manifest Evidence IDs must be unique."))
-    public_ids = _collect_public_evidence_ids(public)
-    if public_ids != set(manifest_ids):
-        errors.append(_issue("EVIDENCE_ID_MISMATCH", "$", f"Public IDs {sorted(public_ids)} do not match Manifest IDs {sorted(set(manifest_ids))}."))
+        errors.append(_issue("DUPLICATE_EVIDENCE_ID", "manifest.candidate_evidence", "Manifest Evidence IDs must be unique."))
+
+    manifest_id_set = set(manifest_ids)
+    by_id = {item.get("evidence_id"): item for item in evidence if isinstance(item, dict)}
+    adopted_ids = set(public.get("adopted_public_evidence_ids", []))
+    featured_ids = set(public.get("featured_publication_evidence_ids", []))
+    claim_ids = _collect_claim_evidence_ids(public)
+    if not adopted_ids.issubset(manifest_id_set):
+        errors.append(_issue("ADOPTED_EVIDENCE_MISSING", "$.adopted_public_evidence_ids", "Every adopted public Evidence ID must exist in the candidate Manifest."))
+    if claim_ids != adopted_ids:
+        errors.append(_issue("ADOPTED_CLAIM_MISMATCH", "$", f"Public claim IDs {sorted(claim_ids)} must exactly equal adopted IDs {sorted(adopted_ids)}."))
+    if not featured_ids.issubset(adopted_ids):
+        errors.append(_issue("FEATURED_NOT_ADOPTED", "$.featured_publication_evidence_ids", "Featured publications must be a subset of adopted public Evidence."))
+    selection_status = public.get("featured_selection_status")
+    if selection_status == "pending_manual_review" and featured_ids:
+        errors.append(_issue("FEATURED_SELECTION_NOT_REVIEWED", "$.featured_publication_evidence_ids", "Pending manual review requires an empty featured publication list."))
+    if selection_status == "manually_reviewed" and not featured_ids:
+        errors.append(_issue("FEATURED_SELECTION_EMPTY", "$.featured_publication_evidence_ids", "A manually reviewed featured selection cannot be empty."))
+    for evidence_id in adopted_ids:
+        item = by_id.get(evidence_id)
+        statuses = set(item.get("candidate_statuses", [])) if item else set()
+        if item and ("adopted" not in statuses or statuses & {"excluded", "duplicate_candidate"}):
+            errors.append(_issue("INVALID_ADOPTED_STATUS", f"manifest.{evidence_id}.candidate_statuses", "Publicly adopted Evidence must have only an eligible adopted state."))
+    for evidence_id in featured_ids:
+        item = by_id.get(evidence_id)
+        if item and "duplicate_candidate" in item.get("candidate_statuses", []):
+            errors.append(_issue("DUPLICATE_FEATURED_PUBLICATION", f"manifest.{evidence_id}", "Duplicate candidates cannot be featured."))
     errors.extend(_evidence_field_binding_issues(public, evidence))
 
     identity_items = identity_review.get("publication_identity", [])
@@ -462,12 +484,20 @@ def validate_package(
 
     errors.extend(_dedup_issues(evidence))
 
+    adopted_items = [by_id[item] for item in adopted_ids if item in by_id]
+    identity_by_id = {item.get("evidence_id"): item for item in identity_items if isinstance(item, dict)}
     unresolved_identity = (
         identity_review.get("review_status") != "verified"
         or bool(identity_review.get("p0_blockers"))
-        or any(not item.get("identity_verified") for item in evidence if isinstance(item, dict))
-        or any(item.get("identity_status") != "verified" for item in identity_items if isinstance(item, dict))
+        or any(not item.get("identity_verified") for item in adopted_items)
+        or any(identity_by_id.get(item, {}).get("identity_status") != "verified" for item in adopted_ids)
     )
+
+    publication_identity_status = public.get("publication_identity_status")
+    if unresolved_identity and publication_identity_status == "verified":
+        errors.append(_issue("PUBLIC_IDENTITY_STATUS_INVALID", "$.publication_identity_status", "Unresolved adopted records cannot be labelled identity verified."))
+    if not unresolved_identity and publication_identity_status != "verified":
+        errors.append(_issue("PUBLIC_IDENTITY_STATUS_INVALID", "$.publication_identity_status", "Fully verified adopted records must use publication identity status verified."))
 
     requested_status = public.get("publication_status", "review_pending")
     effective_status = "review_pending" if unresolved_identity else requested_status
@@ -486,21 +516,29 @@ def validate_package(
                     errors.append(_issue("EXPERIENCE_CONTENT_DETECTED", str(file_path), "Experience content found in package file."))
         markdown_path = package_dir / "public-advisor-v1.md"
         if markdown_path.exists():
-            markdown_ids = set(re.findall(r"\bE[1-9][0-9]*\b", markdown_path.read_text(encoding="utf-8")))
-            if markdown_ids != set(manifest_ids):
-                errors.append(_issue("MARKDOWN_EVIDENCE_ID_MISMATCH", str(markdown_path), "Generated Markdown Evidence IDs must match the Manifest exactly."))
+            markdown_text = markdown_path.read_text(encoding="utf-8")
+            markdown_ids = set(re.findall(r"\bE[1-9][0-9]*\b", markdown_text))
+            if markdown_ids != adopted_ids:
+                errors.append(_issue("MARKDOWN_EVIDENCE_ID_MISMATCH", str(markdown_path), "Generated Markdown Evidence IDs must exactly match adopted public Evidence IDs."))
+            if re.search(r"web/(?:advisors\.json|reports/)|source_ref|repository_source_ref|:[0-9]+\b", markdown_text, re.IGNORECASE):
+                errors.append(_issue("INTERNAL_REFERENCE_LEAK", str(markdown_path), "Internal repository references are forbidden in public Markdown."))
 
     unique_errors = list({(item.code, item.path, item.message): item for item in errors}.values())
     unique_warnings = list({(item.code, item.path, item.message): item for item in warnings}.values())
     valid = not unique_errors
     release_eligible = valid and effective_status in PUBLIC_STATUSES and not unresolved_identity
     return {
-        "schema_version": "1.0.1",
+        "schema_version": "1.0.2",
         "advisor_id": public.get("advisor_id"),
         "valid": valid,
         "release_eligible": release_eligible,
         "requested_publication_status": requested_status,
         "effective_publication_status": effective_status,
+        "candidate_evidence_count": len(manifest_ids),
+        "adopted_public_evidence_count": len(adopted_ids),
+        "featured_publication_count": len(featured_ids),
+        "pending_version_group_count": len({item.get("version_group") for item in evidence if item.get("version_group") and "duplicate_candidate" in item.get("candidate_statuses", [])}),
+        "schema_and_field_binding_status": "passed" if not any(item.code.startswith("SCHEMA_") or item.code == "EVIDENCE_FIELD_BINDING_MISMATCH" for item in unique_errors) else "failed",
         "errors": [asdict(item) for item in unique_errors],
         "warnings": [asdict(item) for item in unique_warnings],
     }
