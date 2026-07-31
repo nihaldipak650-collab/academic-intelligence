@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://academic-intelligence.local/schemas/evidence-manifest-schema-v1.0.3.json",
+  "title": "Academic Intelligence Evidence Manifest v1.0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "advisor_id", "candidate_evidence"],
+  "properties": {
+    "schema_version": {"const": "1.0.3"},
+    "advisor_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "source_scope": {"type": "string", "minLength": 1},
+    "candidate_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/candidate_evidence"}
+    }
+  },
+  "$defs": {
+    "evidence_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+    "candidate_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id", "evidence_type", "title", "publication_year", "doi",
+        "source_type", "source_url", "author_position", "is_co_first",
+        "is_corresponding", "identity_verified", "candidate_statuses", "reason",
+        "version_group", "supported_fields", "repository_source_ref"
+      ],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/evidence_id"},
+        "evidence_type": {"enum": ["publication", "official_profile", "official_institution", "dataset", "other"]},
+        "title": {"type": "string", "minLength": 1},
+        "publication_year": {"type": ["integer", "null"], "minimum": 1900, "maximum": 2100},
+        "doi": {"type": ["string", "null"], "pattern": "^10\\.[0-9]{4,9}/\\S+$"},
+        "source_type": {"enum": ["journal_article", "preprint", "conference", "review", "other"]},
+        "source_url": {"type": "string", "format": "uri"},
+        "author_position": {"enum": ["first", "middle", "last", "unknown"]},
+        "is_co_first": {"type": ["boolean", "null"]},
+        "is_corresponding": {"type": ["boolean", "null"]},
+        "identity_verified": {"type": "boolean"},
+        "candidate_statuses": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["candidate", "adopted", "excluded", "duplicate_candidate", "identity_pending"]}
+        },
+        "reason": {"type": ["string", "null"]},
+        "version_group": {"type": ["string", "null"]},
+        "supported_fields": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "repository_source_ref": {"type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:\\\\|/).+$"}
+      }
+    }
+  }
+}

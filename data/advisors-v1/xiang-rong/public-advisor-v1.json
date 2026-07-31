@@ -1,5 +1,5 @@
 {
-    "schema_version":  "1.0.2",
+    "schema_version":  "1.0.3",
     "advisor_id":  "xiang-rong",
     "name_zh":  {
                     "value":  "项荣",
@@ -458,9 +458,10 @@
                  "生物信息",
                  "细胞与动物实验"
              ],
-    "version":  "1.0.2",
+    "version":  "1.0.3",
     "publication_status":  "review_pending",
     "report_path":  "reports/xiang-rong-public-advisor-v1.md",
+    "record_created_at":  "2026-08-01",
     "migrated_at":  "2026-07-31",
     "adopted_public_evidence_ids":  [
                                         "E3",
@@ -484,6 +485,13 @@
 
                                           ],
     "featured_selection_status":  "pending_manual_review",
+    "featured_selection_review":  {
+        "status":  "pending",
+        "reviewed_at":  null,
+        "reviewer_role":  null,
+        "selection_criteria":  [],
+        "notes":  "尚未进行人工精选审核。"
+    },
     "publication_identity_status":  "pending_verification",
     "data_status_note":  "部分论文作者身份及版本关系仍待进一步核验。"
 }

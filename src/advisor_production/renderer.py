@@ -1,4 +1,4 @@
-"""Deterministically render a v1.0.2 public advisor review document."""
+"""Deterministically render a v1.0.3 public advisor review document."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from typing import Any, Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-MAPPING_PATH = REPO_ROOT / "docs" / "advisor-template-v1" / "display-label-mapping-v1.0.2.json"
+MAPPING_PATH = REPO_ROOT / "docs" / "advisor-template-v1" / "display-label-mapping-v1.0.3.json"
 NO_PUBLIC_INFO = "暂无公开信息"
 NEEDS_VERIFICATION = "待核验"
 NO_RELIABLE_EVIDENCE = "暂无可靠公开证据"
@@ -24,7 +24,11 @@ def _mapping() -> dict[str, dict[str, str]]:
 def _label(group: str, value: Any) -> str:
     if value is None:
         return NEEDS_VERIFICATION
-    return _mapping().get("enum_labels", {}).get(str(value), str(value))
+    labels = _mapping().get("enum_labels", {})
+    key = str(value)
+    if key not in labels:
+        raise ValueError(f"Missing Chinese display mapping for {group}: {key}")
+    return labels[key]
 
 
 def _escape(value: Any) -> str:
@@ -140,17 +144,16 @@ def render_markdown(public: dict[str, Any], manifest: dict[str, Any]) -> str:
         lines.append(f"| {_escape(item['task'])} | {_escape(item['task_context'])}；{_escape(item['task_purpose'])} | {_escape('、'.join(item['possible_methods']))} | {_escape(item['possible_output'])} | {_citations(item['evidence_ids'])} | {_label('confidence', item['confidence'])} | {_label('evidence_lane', item['evidence_lane'])} | {_escape(item['uncertainty_note'])} |")
     lines.extend(["", "## 9. 前置技能与学习成本", "", "### 前置技能", ""]); lines.extend(_claim_lines(public["prerequisite_skills"]))
     lines.extend(["", "### 学习成本", ""]); lines.extend(_claim_lines([public["learning_cost"]]) if public["learning_cost"] else [f"- {NO_RELIABLE_EVIDENCE}。"])
-    stage_labels = {"foundation":"基础阶段", "bounded_task":"边界明确的小任务", "independent_module":"相对独立的模块"}
     lines.extend(["", "## 10. 通用成长路径", "", f"> {GROWTH_DISCLAIMER}", ""])
     for item in public["generic_growth_path"]:
-        lines.extend([f"### {stage_labels[item['stage']]}", "", f"- 可能活动：{_escape('、'.join(item['possible_activities']))}", f"- 可能产出：{_escape('、'.join(item['possible_outputs']))}", f"- 证据：{_citations(item['evidence_ids'])}", f"- 证据支持程度：{_label('confidence', item['confidence'])}", f"- 内容类型：{_label('evidence_lane', item['evidence_lane'])}", f"- 不确定性：{_escape(item['uncertainty_note'])}", ""])
+        lines.extend([f"### {_label('stage', item['stage'])}", "", f"- 可能活动：{_escape('、'.join(item['possible_activities']))}", f"- 可能产出：{_escape('、'.join(item['possible_outputs']))}", f"- 证据：{_citations(item['evidence_ids'])}", f"- 证据支持程度：{_label('confidence', item['confidence'])}", f"- 内容类型：{_label('evidence_lane', item['evidence_lane'])}", f"- 不确定性：{_escape(item['uncertainty_note'])}", ""])
     lines.extend(["## 11. 联系前准备与线下核验", "", "- 当前招募、名额、真实任务、组会要求、资源与反馈方式：待核验。", "- 可根据公开研究方向准备具体问题，但不得把可能任务视为承诺。", ""])
 
     records = manifest["candidate_evidence"]
-    version_groups = {item["version_group"] for item in records if item.get("version_group")}
-    lines.extend(["## 12. 证据与数据状态", "", f"- 候选 Evidence 总数：{len(records)}", f"- 已采用公开 Evidence 数：{len(public['adopted_public_evidence_ids'])}", f"- 精选代表论文数：{len(featured)}", f"- 身份核验状态：{_label('publication_identity_status', public['publication_identity_status'])}", f"- 正式版/预印本待处理数量：{len(version_groups)}", "- Schema 和字段绑定状态：已通过机械校验", ""])
+    lines.extend(["## 12. 证据与数据状态", "", f"- 候选证据总数：{len(records)}", f"- 已采用公开证据数：{len(public['adopted_public_evidence_ids'])}", f"- 精选代表论文数：{len(featured)}", f"- 身份核验状态：{_label('publication_identity_status', public['publication_identity_status'])}", "- 版本关系状态：请以validation-report-v1.json为准。", "- Schema与字段绑定结果：请以validation-report-v1.json为准。", ""])
     verified_dates = sorted({field["last_verified_at"] for _path, field in _all_sourced_fields(public) if field.get("last_verified_at")})
-    lines.extend(["## 13. 更新时间与发布状态", "", f"- 迁移日期：{_escape(public['migrated_at'])}", f"- 字段核验日期：{_escape('、'.join(verified_dates)) if verified_dates else NEEDS_VERIFICATION}", f"- 数据版本：{_escape(public['version'])}", f"- 更新状态：{_label('update_status', public['update_status'])}", f"- 发布状态：{_label('publication_status', public['publication_status'])}", "", "## 14. 使用边界说明", "", _escape(public["boundary_statement"]), ""])
+    migrated_at = _escape(public["migrated_at"]) if public.get("migrated_at") else "不适用（全新生产记录）"
+    lines.extend(["## 13. 更新时间与发布状态", "", f"- 记录创建日期：{_escape(public['record_created_at'])}", f"- 迁移日期：{migrated_at}", f"- 字段核验日期：{_escape('、'.join(verified_dates)) if verified_dates else NEEDS_VERIFICATION}", f"- 数据版本：{_escape(public['version'])}", f"- 更新状态：{_label('update_status', public['update_status'])}", f"- 发布状态：{_label('publication_status', public['publication_status'])}", "", "## 14. 使用边界说明", "", _escape(public["boundary_statement"]), ""])
     return "\n".join(lines)
 
 

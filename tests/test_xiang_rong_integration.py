@@ -25,7 +25,7 @@ class XiangRongIntegrationTests(unittest.TestCase):
         cls.by_id = {item["evidence_id"]: item for item in cls.manifest["candidate_evidence"]}
 
     def test_01_real_package_schema_and_bindings_pass(self):
-        self.assertTrue(self.report["valid"], self.report); self.assertEqual(self.report["schema_and_field_binding_status"], "passed")
+        self.assertTrue(self.report["valid"], self.report); self.assertEqual(self.report["schema_and_field_binding_status"], "passed"); self.assertEqual(set(self.report["schema_results"].values()), {"passed"})
 
     def test_02_real_package_is_not_release_eligible(self):
         self.assertFalse(self.report["release_eligible"]); self.assertFalse(self.saved_report["release_eligible"])
@@ -34,7 +34,7 @@ class XiangRongIntegrationTests(unittest.TestCase):
         self.assertEqual(self.public["publication_status"], "review_pending"); self.assertEqual(self.report["effective_publication_status"], "review_pending")
 
     def test_04_featured_is_subset_of_adopted(self):
-        self.assertLessEqual(set(self.public["featured_publication_evidence_ids"]), set(self.public["adopted_public_evidence_ids"]))
+        self.assertLessEqual(set(self.public["featured_publication_evidence_ids"]), set(self.public["adopted_public_evidence_ids"])); self.assertEqual(self.public["featured_selection_review"]["status"], "pending")
 
     def test_05_excluded_and_candidate_only_records_are_not_publicly_cited(self):
         cited = set(re.findall(r"\bE[1-9][0-9]*\b", self.saved_markdown))
@@ -57,8 +57,10 @@ class XiangRongIntegrationTests(unittest.TestCase):
     def test_10_markdown_has_no_machine_enum_codes(self):
         codes = ["public_fact", "ai_synthesis", "review_pending", "pending_verification", "pending_manual_review", "needs_reverification", "journal_article", "duplicate_candidate", "identity_pending"]
         for code in codes: self.assertNotIn(code, self.saved_markdown)
+        self.assertNotIn("Evidence", self.saved_markdown); self.assertNotIn("已通过机械校验", self.saved_markdown)
 
     def test_11_migration_date_does_not_claim_repository_fields_were_verified(self):
+        self.assertEqual(self.public["record_created_at"], "2026-08-01")
         self.assertEqual(self.public["migrated_at"], "2026-07-31")
         for key in ("name_zh", "name_en", "institution"):
             self.assertEqual(self.public[key]["missing_status"], "needs_verification"); self.assertIsNone(self.public[key]["last_verified_at"])

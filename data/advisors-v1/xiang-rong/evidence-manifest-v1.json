@@ -1,5 +1,5 @@
 {
-    "schema_version":  "1.0.2",
+    "schema_version":  "1.0.3",
     "advisor_id":  "xiang-rong",
     "source_scope":  "Extracted without network access from the existing public paper table in web/reports/Xiang_Rong_profile_zh.md.",
     "candidate_evidence":  [

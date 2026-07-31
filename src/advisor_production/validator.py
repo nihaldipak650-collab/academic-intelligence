@@ -1,7 +1,7 @@
 """Validate a public advisor package and its release gates.
 
 The structural validator implements every JSON Schema keyword used by the
-v1.0.2 contract.  Semantic checks then enforce cross-file Evidence, identity,
+v1.0.3 contract.  Semantic checks then enforce cross-file Evidence, identity,
 privacy, provenance, and publication rules that JSON Schema cannot express.
 """
 
@@ -18,12 +18,10 @@ from urllib.parse import urlparse
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_SCHEMA_PATH = (
-    REPO_ROOT
-    / "docs"
-    / "advisor-template-v1"
-    / "public-advisor-schema-v1.0.2.json"
-)
+SCHEMA_DIR = REPO_ROOT / "docs" / "advisor-template-v1"
+DEFAULT_SCHEMA_PATH = SCHEMA_DIR / "public-advisor-schema-v1.0.3.json"
+DEFAULT_MANIFEST_SCHEMA_PATH = SCHEMA_DIR / "evidence-manifest-schema-v1.0.3.json"
+DEFAULT_IDENTITY_SCHEMA_PATH = SCHEMA_DIR / "identity-review-schema-v1.0.3.json"
 
 PUBLIC_STATUSES = {"approved", "published"}
 OFFICIAL_AUTHORITIES = {
@@ -181,6 +179,19 @@ def validate_against_schema(data: dict[str, Any], schema_path: Path = DEFAULT_SC
     return _validate_schema_node(data, schema, schema, "$")
 
 
+def _schema_issues(data: dict[str, Any], schema_path: Path, root_name: str) -> list[ValidationIssue]:
+    """Validate one document and make its error paths unambiguous."""
+    return [
+        ValidationIssue(
+            code=issue.code,
+            path=root_name + issue.path.removeprefix("$"),
+            message=issue.message,
+            severity=issue.severity,
+        )
+        for issue in validate_against_schema(data, schema_path)
+    ]
+
+
 def _walk(value: Any, path: str = "$") -> Iterable[tuple[str, str | None, Any]]:
     if isinstance(value, dict):
         for key, child in value.items():
@@ -257,6 +268,8 @@ def _missing_state_issues(public: dict[str, Any]) -> list[ValidationIssue]:
     for path, key, value in _walk(public):
         if isinstance(value, dict) and {"value", "value_en", "source_url", "source_ref", "source_authority", "last_verified_at", "missing_status"}.issubset(value):
             status = value["missing_status"]
+            if value.get("source_authority") == "repository_existing_public_report" and value.get("last_verified_at") is not None:
+                issues.append(_issue("MIGRATION_DATE_AS_VERIFICATION", path, "Repository migration material cannot claim a source verification date."))
             if status == "available":
                 if value["value"] is None or not (value["source_url"] or value["source_ref"]) or not value["last_verified_at"]:
                     issues.append(_issue("INVALID_MISSING_STATE", path, "Available sourced values require a value, source URL/ref, and verification date."))
@@ -328,8 +341,8 @@ def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue
     for key in ("schema_version", "advisor_id", "candidate_evidence"):
         if key not in manifest:
             issues.append(_issue("MANIFEST_REQUIRED", f"manifest.{key}", "Required Manifest field is missing."))
-    if manifest.get("schema_version") != "1.0.2":
-        issues.append(_issue("MANIFEST_VERSION", "manifest.schema_version", "Manifest must use v1.0.2."))
+    if manifest.get("schema_version") != "1.0.3":
+        issues.append(_issue("MANIFEST_VERSION", "manifest.schema_version", "Manifest must use v1.0.3."))
     evidence = manifest.get("candidate_evidence")
     if not isinstance(evidence, list) or not evidence:
         issues.append(_issue("MANIFEST_EVIDENCE_REQUIRED", "manifest.candidate_evidence", "Manifest requires at least one candidate Evidence record."))
@@ -351,7 +364,7 @@ def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue
         for key in required - item.keys():
             issues.append(_issue("MANIFEST_REQUIRED", f"{path}.{key}", "Required Evidence field is missing."))
         if "advisor_author_role" in item:
-            issues.append(_issue("LEGACY_AUTHOR_ROLE", f"{path}.advisor_author_role", "Merged author role is forbidden in v1.0.2."))
+            issues.append(_issue("LEGACY_AUTHOR_ROLE", f"{path}.advisor_author_role", "Merged author role is forbidden in v1.0.3."))
         if item.get("author_position") not in allowed_positions:
             issues.append(_issue("AUTHOR_POSITION", f"{path}.author_position", "Invalid author_position."))
         for key in ("is_co_first", "is_corresponding"):
@@ -390,8 +403,8 @@ def _identity_structure_issues(identity_review: dict[str, Any]) -> list[Validati
     required = {"schema_version", "advisor_id", "review_status", "reviewed_at", "reviewer_role", "advisor_identity", "publication_identity", "p0_blockers", "notes"}
     for key in required - identity_review.keys():
         issues.append(_issue("IDENTITY_REVIEW_REQUIRED", f"identity.{key}", "Required Identity Review field is missing."))
-    if identity_review.get("schema_version") != "1.0.2":
-        issues.append(_issue("IDENTITY_REVIEW_VERSION", "identity.schema_version", "Identity Review must use v1.0.2."))
+    if identity_review.get("schema_version") != "1.0.3":
+        issues.append(_issue("IDENTITY_REVIEW_VERSION", "identity.schema_version", "Identity Review must use v1.0.3."))
     if identity_review.get("review_status") not in {"verified", "unresolved", "conflict"}:
         issues.append(_issue("IDENTITY_REVIEW_STATUS", "identity.review_status", "Invalid Identity Review status."))
     advisor_identity = identity_review.get("advisor_identity")
@@ -430,8 +443,13 @@ def validate_package(
     *,
     package_dir: Path | None = None,
     schema_path: Path = DEFAULT_SCHEMA_PATH,
+    manifest_schema_path: Path = DEFAULT_MANIFEST_SCHEMA_PATH,
+    identity_schema_path: Path = DEFAULT_IDENTITY_SCHEMA_PATH,
 ) -> dict[str, Any]:
-    errors = validate_against_schema(public, schema_path)
+    public_schema_errors = _schema_issues(public, schema_path, "public")
+    manifest_schema_errors = _schema_issues(manifest, manifest_schema_path, "manifest")
+    identity_schema_errors = _schema_issues(identity_review, identity_schema_path, "identity")
+    errors = public_schema_errors + manifest_schema_errors + identity_schema_errors
     warnings: list[ValidationIssue] = []
 
     errors.extend(_manifest_structure_issues(manifest))
@@ -462,10 +480,21 @@ def validate_package(
     if not featured_ids.issubset(adopted_ids):
         errors.append(_issue("FEATURED_NOT_ADOPTED", "$.featured_publication_evidence_ids", "Featured publications must be a subset of adopted public Evidence."))
     selection_status = public.get("featured_selection_status")
+    selection_review = public.get("featured_selection_review", {})
     if selection_status == "pending_manual_review" and featured_ids:
         errors.append(_issue("FEATURED_SELECTION_NOT_REVIEWED", "$.featured_publication_evidence_ids", "Pending manual review requires an empty featured publication list."))
+    if selection_status == "pending_manual_review" and selection_review.get("status") != "pending":
+        errors.append(_issue("FEATURED_REVIEW_STATUS_MISMATCH", "$.featured_selection_review.status", "Pending manual review requires featured review status pending."))
     if selection_status == "manually_reviewed" and not featured_ids:
         errors.append(_issue("FEATURED_SELECTION_EMPTY", "$.featured_publication_evidence_ids", "A manually reviewed featured selection cannot be empty."))
+    if selection_status == "manually_reviewed" and selection_review.get("status") != "approved":
+        errors.append(_issue("FEATURED_REVIEW_STATUS_MISMATCH", "$.featured_selection_review.status", "Manually reviewed selection requires featured review status approved."))
+    if selection_review.get("status") == "approved":
+        if not selection_review.get("reviewed_at") or selection_review.get("reviewer_role") not in {"user", "content_reviewer"} or not selection_review.get("selection_criteria"):
+            errors.append(_issue("FEATURED_APPROVAL_INCOMPLETE", "$.featured_selection_review", "Approved selection requires date, user/content reviewer role, and non-empty criteria."))
+    if selection_review.get("status") == "pending":
+        if selection_review.get("reviewed_at") is not None or selection_review.get("reviewer_role") is not None or selection_review.get("selection_criteria"):
+            errors.append(_issue("FEATURED_PENDING_METADATA", "$.featured_selection_review", "Pending selection cannot claim reviewer approval metadata."))
     for evidence_id in adopted_ids:
         item = by_id.get(evidence_id)
         statuses = set(item.get("candidate_statuses", [])) if item else set()
@@ -528,7 +557,7 @@ def validate_package(
     valid = not unique_errors
     release_eligible = valid and effective_status in PUBLIC_STATUSES and not unresolved_identity
     return {
-        "schema_version": "1.0.2",
+        "schema_version": "1.0.3",
         "advisor_id": public.get("advisor_id"),
         "valid": valid,
         "release_eligible": release_eligible,
@@ -538,6 +567,11 @@ def validate_package(
         "adopted_public_evidence_count": len(adopted_ids),
         "featured_publication_count": len(featured_ids),
         "pending_version_group_count": len({item.get("version_group") for item in evidence if item.get("version_group") and "duplicate_candidate" in item.get("candidate_statuses", [])}),
+        "schema_results": {
+            "public_advisor": "failed" if public_schema_errors else "passed",
+            "evidence_manifest": "failed" if manifest_schema_errors else "passed",
+            "identity_review": "failed" if identity_schema_errors else "passed",
+        },
         "schema_and_field_binding_status": "passed" if not any(item.code.startswith("SCHEMA_") or item.code == "EVIDENCE_FIELD_BINDING_MISMATCH" for item in unique_errors) else "failed",
         "errors": [asdict(item) for item in unique_errors],
         "warnings": [asdict(item) for item in unique_warnings],

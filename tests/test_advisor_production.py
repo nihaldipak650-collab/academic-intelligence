@@ -19,26 +19,26 @@ def claim(text: str, lane: str = "public_fact") -> dict:
 
 def complete_public_record() -> dict:
     return {
-        "schema_version":"1.0.2", "advisor_id":"test-advisor", "migrated_at":"2026-07-31",
+        "schema_version":"1.0.3", "advisor_id":"test-advisor", "record_created_at":"2026-08-01", "migrated_at":None,
         "name_zh":sourced("测试导师"), "name_en":sourced("Test Advisor"), "institution":sourced("测试大学"),
         "school_or_department":sourced("生命科学学院"), "position":sourced("教授"), "public_roles":[sourced("博士生导师")],
         "contact":{"official_profile_url":sourced("https://faculty.test.edu.cn/profile"), "official_lab_url":sourced(None, authority=None, missing_status="no_public_information"), "official_email":sourced("advisor@test.edu.cn"), "official_phone":sourced(None, authority=None, missing_status="no_public_information"), "lab_address":sourced(None, authority=None, missing_status="needs_verification")},
         "research_directions_original":[claim("疾病遗传学")],
         "research_directions_plain_language":[{"term_original":"疾病遗传学", "explanation_zh":"研究遗传变异与疾病之间的关系。", "undergraduate_meaning":"可从公开数据整理入门。", "evidence_ids":["E1"], "confidence":"High", "evidence_lane":"ai_synthesis"}],
         "research_questions":[claim("哪些遗传变异与疾病机制相关？", "ai_synthesis")], "main_techniques":[claim("公开论文使用测序与功能验证方法。")], "research_workflow":[claim("从候选变异到功能验证的公开论文流程。", "ai_synthesis")],
-        "adopted_public_evidence_ids":["E1"], "featured_publication_evidence_ids":["E1"], "featured_selection_status":"manually_reviewed", "publication_identity_status":"verified",
+        "adopted_public_evidence_ids":["E1"], "featured_publication_evidence_ids":["E1"], "featured_selection_status":"manually_reviewed", "featured_selection_review":{"status":"approved", "reviewed_at":"2026-08-01", "reviewer_role":"content_reviewer", "selection_criteria":["与公开研究方向直接相关"], "notes":"测试审核。"}, "publication_identity_status":"verified",
         "possible_undergraduate_tasks":[{"task":"公开数据整理", "task_context":"基于公开论文数据", "task_purpose":"理解候选变异证据链", "possible_methods":["文献整理"], "possible_output":"结构化证据表", "evidence_ids":["E1"], "confidence":"Medium", "evidence_lane":"ai_synthesis", "uncertainty_note":"仅为基于公开技术栈的可能任务，不代表实验室真实安排。"}],
         "prerequisite_skills":[claim("基础遗传学与文献阅读。", "ai_synthesis")], "learning_cost":claim("学习成本取决于任务范围，不能据公开论文推断真实时长。", "ai_synthesis"),
         "generic_growth_path":[{"stage":"foundation", "possible_activities":["学习基础遗传学"], "possible_outputs":["文献笔记"], "evidence_ids":["E1"], "confidence":"Medium", "evidence_lane":"ai_synthesis", "uncertainty_note":"通用学习场景，不代表导师官方培养方案。"}],
         "evidence_status":"verified", "confidence":"High", "public_fact_or_ai_synthesis":"mixed_labeled", "no_evidence_reason":None,
         "boundary_statement":"本页仅依据公开学术证据整理，不代表导师评价、招募承诺或真实培养安排。", "update_status":"verified",
         "summary":claim("研究公开证据集中于疾病遗传学。", "ai_synthesis"), "data_status_note":"内容和身份均已完成测试核验。",
-        "search_keywords":["疾病遗传学"], "tags":["疾病遗传"], "version":"1.0.2", "publication_status":"approved", "report_path":"reports/test-advisor.md",
+        "search_keywords":["疾病遗传学"], "tags":["疾病遗传"], "version":"1.0.3", "publication_status":"approved", "report_path":"reports/test-advisor.md",
     }
 
 
 def complete_manifest() -> dict:
-    return {"schema_version":"1.0.2", "advisor_id":"test-advisor", "candidate_evidence":[{
+    return {"schema_version":"1.0.3", "advisor_id":"test-advisor", "candidate_evidence":[{
         "evidence_id":"E1", "evidence_type":"publication", "title":"A verified publication title", "publication_year":2024,
         "doi":"10.1234/test.1", "source_type":"journal_article", "source_url":"https://doi.org/10.1234/test.1",
         "author_position":"middle", "is_co_first":False, "is_corresponding":False, "identity_verified":True,
@@ -48,7 +48,7 @@ def complete_manifest() -> dict:
 
 
 def complete_identity_review() -> dict:
-    return {"schema_version":"1.0.2", "advisor_id":"test-advisor", "review_status":"verified", "reviewed_at":"2026-07-31", "reviewer_role":"human_reviewer", "advisor_identity":{"name_match_status":"verified", "institution_match_status":"verified", "orcid_status":"verified", "candidate_orcid":"0000-0000-0000-0001", "notes":"测试身份。"}, "publication_identity":[{"evidence_id":"E1", "identity_status":"verified", "notes":"机构和论文级署名已核验。"}], "p0_blockers":[], "notes":"测试正例。"}
+    return {"schema_version":"1.0.3", "advisor_id":"test-advisor", "review_status":"verified", "reviewed_at":"2026-07-31", "reviewer_role":"human_reviewer", "advisor_identity":{"name_match_status":"verified", "institution_match_status":"verified", "orcid_status":"verified", "candidate_orcid":"0000-0000-0000-0001", "notes":"测试身份。"}, "publication_identity":[{"evidence_id":"E1", "identity_status":"verified", "notes":"机构和论文级署名已核验。"}], "p0_blockers":[], "notes":"测试正例。"}
 
 
 def pending_identity(public: dict, manifest: dict, identity: dict) -> None:
