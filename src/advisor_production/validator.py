@@ -24,6 +24,9 @@ DEFAULT_MANIFEST_SCHEMA_PATH = SCHEMA_DIR / "evidence-manifest-schema-v1.0.3.jso
 DEFAULT_IDENTITY_SCHEMA_PATH = SCHEMA_DIR / "identity-review-schema-v1.0.3.json"
 
 PUBLIC_STATUSES = {"approved", "published"}
+HUMAN_IDENTITY_REVIEW_ROLES = {"human_reviewer", "user", "content_reviewer"}
+RELEASE_READY_ORCID_STATUSES = {"verified", "not_found"}
+ORCID_PATTERN = re.compile(r"^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$")
 OFFICIAL_AUTHORITIES = {
     "official_institution",
     "official_advisor",
@@ -436,6 +439,83 @@ def _identity_structure_issues(identity_review: dict[str, Any]) -> list[Validati
     return issues
 
 
+def _advisor_identity_gate_issues(
+    identity_review: dict[str, Any],
+) -> tuple[list[ValidationIssue], list[ValidationIssue]]:
+    """Return release-gate deficiencies and unconditional ORCID consistency errors."""
+    gate_issues: list[ValidationIssue] = []
+    consistency_errors: list[ValidationIssue] = []
+
+    if identity_review.get("review_status") != "verified":
+        gate_issues.append(_issue(
+            "ADVISOR_IDENTITY_NOT_RELEASE_READY",
+            "identity.review_status",
+            "Advisor identity review must be verified before release.",
+        ))
+
+    reviewed_at = identity_review.get("reviewed_at")
+    if not isinstance(reviewed_at, str) or not _format_valid(reviewed_at, "date"):
+        gate_issues.append(_issue(
+            "IDENTITY_REVIEW_DATE_REQUIRED",
+            "identity.reviewed_at",
+            "Release requires a valid human identity review date.",
+        ))
+
+    reviewer_role = identity_review.get("reviewer_role")
+    if reviewer_role not in HUMAN_IDENTITY_REVIEW_ROLES:
+        gate_issues.append(_issue(
+            "IDENTITY_HUMAN_REVIEW_REQUIRED",
+            "identity.reviewer_role",
+            "Release requires human_reviewer, user, or content_reviewer; mechanical migration cannot approve release.",
+        ))
+
+    advisor_identity = identity_review.get("advisor_identity")
+    if not isinstance(advisor_identity, dict):
+        gate_issues.append(_issue(
+            "ADVISOR_IDENTITY_NOT_RELEASE_READY",
+            "identity.advisor_identity",
+            "Advisor identity details are required before release.",
+        ))
+        return gate_issues, consistency_errors
+
+    if advisor_identity.get("name_match_status") != "verified":
+        gate_issues.append(_issue(
+            "ADVISOR_NAME_IDENTITY_UNRESOLVED",
+            "identity.advisor_identity.name_match_status",
+            "Advisor name identity must be verified before release.",
+        ))
+    if advisor_identity.get("institution_match_status") != "verified":
+        gate_issues.append(_issue(
+            "ADVISOR_INSTITUTION_IDENTITY_UNRESOLVED",
+            "identity.advisor_identity.institution_match_status",
+            "Advisor institution identity must be verified before release.",
+        ))
+
+    orcid_status = advisor_identity.get("orcid_status")
+    candidate_orcid = advisor_identity.get("candidate_orcid")
+    if orcid_status == "verified":
+        if not isinstance(candidate_orcid, str) or not ORCID_PATTERN.fullmatch(candidate_orcid):
+            consistency_errors.append(_issue(
+                "ORCID_STATUS_INCONSISTENT",
+                "identity.advisor_identity.candidate_orcid",
+                "Verified ORCID status requires a candidate ORCID in canonical format.",
+            ))
+    elif orcid_status == "not_found":
+        if candidate_orcid is not None:
+            consistency_errors.append(_issue(
+                "ORCID_STATUS_INCONSISTENT",
+                "identity.advisor_identity.candidate_orcid",
+                "ORCID status not_found requires candidate_orcid to be null.",
+            ))
+    if orcid_status not in RELEASE_READY_ORCID_STATUSES:
+        gate_issues.append(_issue(
+            "ADVISOR_IDENTITY_NOT_RELEASE_READY",
+            "identity.advisor_identity.orcid_status",
+            "ORCID status must be verified or not_found before release.",
+        ))
+    return gate_issues, consistency_errors
+
+
 def validate_package(
     public: dict[str, Any],
     manifest: dict[str, Any],
@@ -515,11 +595,17 @@ def validate_package(
 
     adopted_items = [by_id[item] for item in adopted_ids if item in by_id]
     identity_by_id = {item.get("evidence_id"): item for item in identity_items if isinstance(item, dict)}
-    unresolved_identity = (
-        identity_review.get("review_status") != "verified"
-        or bool(identity_review.get("p0_blockers"))
-        or any(not item.get("identity_verified") for item in adopted_items)
+    advisor_gate_issues, orcid_consistency_errors = _advisor_identity_gate_issues(identity_review)
+    errors.extend(orcid_consistency_errors)
+    publication_identity_unresolved = (
+        any(not item.get("identity_verified") for item in adopted_items)
         or any(identity_by_id.get(item, {}).get("identity_status") != "verified" for item in adopted_ids)
+    )
+    unresolved_identity = (
+        bool(advisor_gate_issues)
+        or bool(orcid_consistency_errors)
+        or bool(identity_review.get("p0_blockers"))
+        or publication_identity_unresolved
     )
 
     publication_identity_status = public.get("publication_identity_status")
@@ -533,6 +619,13 @@ def validate_package(
     if unresolved_identity:
         warnings.append(_issue("IDENTITY_REVIEW_PENDING", "identity", "Unresolved identity or P0 blockers force review_pending.", "warning"))
         if requested_status in PUBLIC_STATUSES:
+            errors.extend(advisor_gate_issues)
+            if identity_review.get("p0_blockers") or publication_identity_unresolved:
+                errors.append(_issue(
+                    "ADVISOR_IDENTITY_NOT_RELEASE_READY",
+                    "identity",
+                    "Advisor identity, P0 blockers, and all adopted publication identities must be release-ready.",
+                ))
             errors.append(_issue("PUBLICATION_STATUS_NOT_ALLOWED", "$.publication_status", "approved/published requires all identities verified and no P0 blockers."))
 
     if package_dir is not None and package_dir.exists():
