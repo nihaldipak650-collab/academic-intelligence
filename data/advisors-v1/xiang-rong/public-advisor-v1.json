@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0.1",
+  "advisor_id": "xiang-rong",
+  "name_zh": {
+    "value": "项荣",
+    "source_url": null,
+    "source_ref": "web/advisors.json",
+    "source_authority": "repository_existing_public_report",
+    "last_verified_at": "2026-07-31",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Xiang Rong",
+    "source_url": null,
+    "source_ref": "web/advisors.json",
+    "source_authority": "repository_existing_public_report",
+    "last_verified_at": "2026-07-31",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "Central South University",
+    "source_url": null,
+    "source_ref": "web/reports/Xiang_Rong_profile_zh.md:240",
+    "source_authority": "repository_existing_public_report",
+    "last_verified_at": null,
+    "missing_status": "needs_verification"
+  },
+  "school_or_department": {
+    "value": null,
+    "source_url": null,
+    "source_ref": null,
+    "source_authority": null,
+    "last_verified_at": null,
+    "missing_status": "no_public_information"
+  },
+  "position": {
+    "value": null,
+    "source_url": null,
+    "source_ref": null,
+    "source_authority": null,
+    "last_verified_at": null,
+    "missing_status": "needs_verification"
+  },
+  "public_roles": [],
+  "contact": {
+    "official_profile_url": {
+      "value": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_lab_url": {
+      "value": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_phone": {
+      "value": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "needs_verification"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "现有论文表覆盖人类疾病候选变异识别、遗传学证据和基因型—表型关联。",
+      "evidence_status": "partially_verified",
+      "confidence": "High",
+      "source_urls": ["https://doi.org/10.3389/fgene.2025.1663959", "https://doi.org/10.1186/s13018-024-04928-0", "https://doi.org/10.15212/cvia.2024.0018"],
+      "evidence_ids": ["E7", "E16", "E19"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "现有论文表还覆盖细胞功能、代谢、炎症、细胞死亡和疾病机制研究。",
+      "evidence_status": "partially_verified",
+      "confidence": "High",
+      "source_urls": ["https://doi.org/10.1186/s10020-025-01119-3", "https://doi.org/10.7150/ijbs.110125", "https://doi.org/10.1002/mco2.226", "https://doi.org/10.1038/s12276-022-00763-7"],
+      "evidence_ids": ["E3", "E5", "E24", "E37"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "人类疾病候选变异识别",
+      "explanation_zh": "从病例、家系或队列数据中寻找可能与疾病相关的遗传变异，并结合公开证据判断其关联。",
+      "undergraduate_meaning": "可以先理解变异、表型和论文证据如何被整理成可核验的证据链。",
+      "evidence_ids": ["E7", "E16", "E19"],
+      "confidence": "High",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "疾病基因的功能与分子机制",
+      "explanation_zh": "进一步观察候选基因如何影响细胞过程、信号通路和疾病表型。",
+      "undergraduate_meaning": "相关工作可能同时涉及文献、数据、细胞实验或动物模型，具体任务必须另行核验。",
+      "evidence_ids": ["E3", "E5", "E24", "E37"],
+      "confidence": "High",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "哪些遗传变异与特定疾病表型相关，以及这些关联能否得到家系或功能证据支持？",
+      "evidence_status": "partially_verified",
+      "confidence": "High",
+      "source_urls": ["https://doi.org/10.3389/fgene.2025.1663959", "https://doi.org/10.15212/cvia.2024.0018"],
+      "evidence_ids": ["E7", "E19"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "候选基因如何改变细胞器稳态、代谢、炎症或细胞死亡通路并形成疾病表型？",
+      "evidence_status": "partially_verified",
+      "confidence": "High",
+      "source_urls": ["https://doi.org/10.1186/s10020-025-01119-3", "https://doi.org/10.7150/ijbs.110125", "https://doi.org/10.1002/mco2.226", "https://doi.org/10.1038/s12276-022-00763-7"],
+      "evidence_ids": ["E3", "E5", "E24", "E37"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "论文表和现有报告反复出现外显子测序、候选变异筛选、Sanger 验证及基因型—表型分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "High",
+      "source_urls": ["https://doi.org/10.3389/fgene.2025.1663959", "https://doi.org/10.1186/s13018-024-04928-0", "https://doi.org/10.15212/cvia.2024.0018"],
+      "evidence_ids": ["E7", "E16", "E19"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "机制研究涉及细胞与分子实验、表达检测、蛋白与通路分析；不能据此断言每个项目使用同一套方法。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": ["https://doi.org/10.1186/s10020-025-01119-3", "https://doi.org/10.1016/j.mito.2024.101851", "https://doi.org/10.1002/mco2.226"],
+      "evidence_ids": ["E3", "E12", "E24"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "可把现有公开研究概括为候选变异发现、遗传学证据整理、功能验证和分子通路解释；这不是实验室 SOP。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": ["https://doi.org/10.3389/fgene.2025.1663959", "https://doi.org/10.15212/cvia.2024.0018", "https://doi.org/10.1002/mco2.226"],
+      "evidence_ids": ["E7", "E19", "E24"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "representative_publication_evidence_ids": ["E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40", "E41"],
+  "possible_undergraduate_tasks": [
+    {
+      "task": "疾病基因、变异、表型与通路的公开证据整理",
+      "task_context": "基于现有论文表和公开书目信息",
+      "task_purpose": "形成可复核的候选变异证据矩阵",
+      "possible_methods": ["文献检索与整理", "变异数据库注释", "表格清洗"],
+      "possible_output": "结构化证据表或可复核注释记录",
+      "evidence_ids": ["E7", "E16", "E19", "E22", "E29", "E35"],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅为基于公开论文技术栈推测的可能任务，不代表实验室真实分工或招募承诺。"
+    },
+    {
+      "task": "公开组学或队列数据的基础复现",
+      "task_context": "现有报告记录了组学、转录组和队列分析线索",
+      "task_purpose": "理解公开数据如何支持研究问题",
+      "possible_methods": ["公开数据整理", "基础统计", "可复现图表"],
+      "possible_output": "分析流程、图表或方法笔记",
+      "evidence_ids": ["E4", "E14", "E15", "E23"],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "论文技术栈不能证明实验室会向本科生分配该任务。"
+    },
+    {
+      "task": "成熟方案下的单一指标辅助验证",
+      "task_context": "现有机制论文涉及细胞和分子实验",
+      "task_purpose": "在明确边界内理解功能证据",
+      "possible_methods": ["PCR/qPCR", "Western blot", "实验记录整理"],
+      "possible_output": "单一指标的实验记录或核验结果",
+      "evidence_ids": ["E3", "E5", "E12", "E24", "E34", "E37"],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "方法来自公开论文，实际 protocol、资源、准入和指导方式均待核验。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "可能需要人类遗传学、分子生物学、英文论文阅读和基础数据处理能力。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": ["https://doi.org/10.15212/cvia.2024.0018", "https://doi.org/10.1093/qjmed/hcad243", "https://doi.org/10.1016/j.mito.2024.101851"],
+      "evidence_ids": ["E12", "E19", "E29"],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "公开技术栈跨越遗传分析、数据处理和细胞分子实验，学习成本取决于实际任务边界，不能据现有论文给出真实时长。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": ["https://doi.org/10.15212/cvia.2024.0018", "https://doi.org/10.1002/mco2.226", "https://doi.org/10.1038/s12276-022-00763-7"],
+    "evidence_ids": ["E19", "E24", "E37"],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": ["建立基因—疾病—通路词表", "学习变异和表型证据的基础概念"],
+      "possible_outputs": ["文献笔记", "小型证据矩阵"],
+      "evidence_ids": ["E3", "E16", "E19", "E24", "E37"],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用学习场景，不代表导师官方培养方案或时间表。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": ["候选变异注释", "公开数据复现", "单个通路的证据整理"],
+      "possible_outputs": ["注释表", "脚本", "可复核图表"],
+      "evidence_ids": ["E7", "E14", "E16", "E19", "E23", "E35"],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "是否存在此类任务、数据和指导资源必须联系导师核验。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": ["在已有数据和明确边界下完成一个证据整理或分析子模块"],
+      "possible_outputs": ["可复现分析记录", "阶段性研究备忘录"],
+      "evidence_ids": ["E14", "E15", "E23"],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "现有公开证据不能证明本科生会获得独立项目、论文或其他成果。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "evidence_ids": ["E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40", "E41"],
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "本样本仅迁移仓库现有公开学术材料。没有独立身份记录，论文归属、机构现状、职位、联系方式、真实本科生任务、资源、反馈方式和招募情况均未完成当期核验；不得据此评价导师或宣称达到发布条件。",
+  "update_status": "needs_reverification",
+  "summary": {
+    "text": "现有论文表显示研究主题连接人类疾病候选变异、遗传学证据、功能验证和分子机制；该概括仍受作者身份与版本去重未闭环的限制。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": ["https://doi.org/10.1186/s10020-025-01119-3", "https://doi.org/10.15212/cvia.2024.0018", "https://doi.org/10.1002/mco2.226", "https://doi.org/10.1038/s12276-022-00763-7"],
+    "evidence_ids": ["E3", "E19", "E24", "E37"],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "search_keywords": ["项荣", "Xiang Rong", "疾病遗传", "候选变异", "分子机制", "RTN3"],
+  "tags": ["疾病遗传", "分子机制", "生物信息", "细胞与动物实验"],
+  "version": "1.0.1",
+  "publication_status": "review_pending",
+  "report_path": "reports/xiang-rong-public-advisor-v1.md"
+}

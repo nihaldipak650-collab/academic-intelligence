@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.1",
+  "advisor_id": "xiang-rong",
+  "valid": true,
+  "release_eligible": false,
+  "requested_publication_status": "review_pending",
+  "effective_publication_status": "review_pending",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "IDENTITY_REVIEW_PENDING",
+      "path": "identity",
+      "message": "Unresolved identity or P0 blockers force review_pending.",
+      "severity": "warning"
+    }
+  ]
+}
