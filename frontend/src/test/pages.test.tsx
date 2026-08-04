@@ -220,7 +220,7 @@ describe("导师详情页", () => {
     expect(screen.getByText("没有找到这位导师")).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: "返回导师列表" }),
-    ).toBeInTheDocument();
+    ).toHaveAttribute("href", "/advisors");
   });
 
   it("报告请求失败显示可恢复错误", async () => {
@@ -234,6 +234,6 @@ describe("导师详情页", () => {
     );
     expect(
       screen.getByRole("link", { name: "返回导师列表" }),
-    ).toBeInTheDocument();
+    ).toHaveAttribute("href", "/advisors");
   });
 });

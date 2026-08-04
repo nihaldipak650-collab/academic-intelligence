@@ -186,7 +186,7 @@ export function AdvisorDetailPage() {
   return (
     <div className="detail-page">
       <div className="detail-toolbar">
-        <Link className="back-link" to="/">← 返回导师列表</Link>
+        <Link className="back-link" to="/advisors">← 返回导师列表</Link>
         <FeedbackLink />
       </div>
 

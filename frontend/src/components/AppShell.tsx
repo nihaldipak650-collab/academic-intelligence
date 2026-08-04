@@ -6,7 +6,7 @@ export function AppShell() {
     <div className="app-shell">
       <header className="navbar">
         <div className="navbar__inner">
-          <Link className="brand" to="/" aria-label="返回导师信息库首页">
+          <Link className="brand" to="/advisors" aria-label="返回导师信息库首页">
             <span className="brand__seal" aria-hidden="true">
               生
             </span>
@@ -16,7 +16,8 @@ export function AppShell() {
             </span>
           </Link>
           <nav aria-label="主导航">
-            <NavLink to="/">导师一览</NavLink>
+            <NavLink to="/">平台首页</NavLink>
+            <NavLink to="/advisors">导师一览</NavLink>
             <FeedbackLink compact />
           </nav>
         </div>

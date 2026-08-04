@@ -168,6 +168,8 @@ describe("真实导师数据", () => {
     const app = readFileSync(path.join(frontendRoot, "src", "App.tsx"), "utf8");
     const vite = readFileSync(path.join(frontendRoot, "vite.config.ts"), "utf8");
     expect(app).toContain("HashRouter");
+    expect(app).toContain('path="advisors"');
+    expect(app).toContain("PlatformHomePage");
     expect(vite).toContain('base: "./"');
   });
 });

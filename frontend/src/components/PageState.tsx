@@ -23,7 +23,7 @@ export function ErrorState({
         title={title}
         description={description}
         action={
-          <Link className="button" to="/">
+          <Link className="button" to="/advisors">
             返回导师列表
           </Link>
         }
