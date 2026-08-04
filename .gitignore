@@ -36,3 +36,7 @@ data/reports/*
 !data/cleaned/.gitkeep
 !data/knowledge/.gitkeep
 !data/reports/.gitkeep
+
+node_modules/
+frontend/node_modules/
+
