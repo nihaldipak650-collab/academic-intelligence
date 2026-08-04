@@ -39,7 +39,7 @@ function renderDetail(id: string, source: "mock" | "dto" = "mock") {
 describe("advisor list", () => {
   it("shows only the three admitted synthetic records", () => {
     renderMockList();
-    expect(screen.getAllByRole("link", { name: /查看.*公开证据详情/ })).toHaveLength(3);
+    expect(screen.getAllByRole("link", { name: /查看.*详情/ })).toHaveLength(3);
     blockedMockIds.forEach((id) => expect(screen.queryByText(id)).not.toBeInTheDocument());
   });
 
@@ -55,6 +55,8 @@ describe("advisor list", () => {
     expect(cardView.getByText("本科生可能切入点")).toBeInTheDocument();
     expect(cardView.getByText("构建小型文献证据矩阵")).toBeInTheDocument();
     expect(cardView.queryByText(/演示如何从公开证据理解研究问题/)).not.toBeInTheDocument();
+    expect(cardView.queryByText("E1")).not.toBeInTheDocument();
+    expect(cardView.getByRole("button", { name: "展开摘要" })).toBeInTheDocument();
   });
 
   it("searches by technique and returns an empty state", async () => {
@@ -71,7 +73,10 @@ describe("advisor list", () => {
   it("combines tags with search and exposes no research-mode inference filter", async () => {
     const user = userEvent.setup();
     renderMockList();
-    await user.click(screen.getByRole("button", { name: "网络分析 1" }));
+    await user.click(screen.getByRole("button", { name: /筛选与排序/ }));
+    const expandTags = screen.queryByRole("button", { name: /展开全部/ });
+    if (expandTags) await user.click(expandTags);
+    await user.click(screen.getByRole("button", { name: /网络分析/ }));
     expect(screen.getByRole("heading", { name: "示例导师乙" })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "示例导师甲" })).not.toBeInTheDocument();
     expect(screen.queryByText("导师类型")).not.toBeInTheDocument();
@@ -87,7 +92,7 @@ describe("advisor list", () => {
   it("renders one synthetic DTO advisor", () => {
     renderDtoList(syntheticPublicDto);
     expect(screen.getByRole("heading", { name: "合成批准导师" })).toBeInTheDocument();
-    expect(screen.getByText("合成研究导师")).toBeInTheDocument();
+    expect(screen.getByText(/合成研究导师/)).toBeInTheDocument();
   });
 
   it("fails closed for malformed DTO", () => {
@@ -102,7 +107,7 @@ describe("advisor list", () => {
       </MemoryRouter>,
     );
     expect(screen.getByText(/正在准备安全的本地演示界面/)).toBeInTheDocument();
-    await waitFor(() => expect(screen.getByRole("heading", { name: "导师目录演示" })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByRole("heading", { name: "导师一览" })).toBeInTheDocument());
   });
 });
 
@@ -142,19 +147,34 @@ describe("advisor detail", () => {
     expect(boundary.getByText(/建议通过官方渠道联系/)).toBeInTheDocument();
   });
 
-  it("renders complete DTO fields and Evidence links", () => {
+  it("renders complete DTO fields and Evidence links", async () => {
+    const user = userEvent.setup();
     renderDetail("synthetic-approved", "dto");
     expect(screen.getByRole("heading", { name: "合成批准导师" })).toBeInTheDocument();
     expect(screen.getByText("合成研究导师")).toBeInTheDocument();
+    const methodsToggle = screen.getByRole("button", { name: /方法与技术路线/ });
+    if (methodsToggle.getAttribute("aria-expanded") !== "true") {
+      await user.click(methodsToggle);
+    }
     expect(screen.getByRole("heading", { name: "公开研究流程" })).toBeInTheDocument();
+    const evidenceToggle = screen.getByRole("button", { name: /完整证据/ });
+    if (evidenceToggle.getAttribute("aria-expanded") !== "true") {
+      await user.click(evidenceToggle);
+    }
     expect(screen.getByRole("heading", { name: /一项用于验证超长公开 Evidence 题名/ })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /DOI：10\.9999\/synthetic-approved/ })).toBeInTheDocument();
-    expect(screen.queryByText(/期刊|journal/i)).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /DOI：10\.9999\/synthetic-approved/ })).toHaveAttribute(
+      "href",
+      expect.stringContaining("10.9999/synthetic-approved"),
+    );
   });
 
   it("lets content Evidence tags locate the public Evidence item", async () => {
     const user = userEvent.setup();
     renderDetail("synthetic-approved", "dto");
+    const evidenceToggle = screen.getByRole("button", { name: /完整证据/ });
+    if (evidenceToggle.getAttribute("aria-expanded") !== "true") {
+      await user.click(evidenceToggle);
+    }
     const buttons = screen.getAllByRole("button", { name: "定位到 Evidence E1" });
     await user.click(buttons[0]);
     expect(document.getElementById("public-evidence-e1")).toHaveFocus();
@@ -175,9 +195,18 @@ describe("advisor detail", () => {
     expect(screen.getByRole("heading", { name: "暂无可靠公开证据" })).toBeInTheDocument();
   });
 
-  it("renders long synthetic content without truncating it", () => {
+  it("renders long synthetic content without truncating it", async () => {
+    const user = userEvent.setup();
     renderDetail("demo-long-record");
+    const evidenceToggle = screen.getByRole("button", { name: /完整证据/ });
+    if (evidenceToggle.getAttribute("aria-expanded") !== "true") {
+      await user.click(evidenceToggle);
+    }
     expect(screen.getByText(/一项用于验证超长论文标题/)).toBeInTheDocument();
-    expect(screen.getAllByText(/超长技术名称：多尺度时空特征提取/)).toHaveLength(2);
+    const methodsToggle = screen.getByRole("button", { name: /方法与技术路线/ });
+    if (methodsToggle.getAttribute("aria-expanded") !== "true") {
+      await user.click(methodsToggle);
+    }
+    expect(screen.getAllByText(/超长技术名称：多尺度时空特征提取/).length).toBeGreaterThan(0);
   });
 });

@@ -3,6 +3,7 @@ import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
 import { AppShell } from "../components/AppShell";
 import { AdvisorDetailPage } from "../pages/AdvisorDetailPage";
+import { AdvisorListPage } from "../pages/AdvisorListPage";
 
 const REVIEW_NOTE = "待项目负责人人工审核，仅用于本地预览，未经公开批准。";
 
@@ -55,9 +56,17 @@ const pendingAdvisor = {
   dataStatusNote: REVIEW_NOTE,
 };
 
+const approvedAdvisor = {
+  ...pendingAdvisor,
+  id: "chen-miao",
+  name: "陈苗",
+  publicationStatus: "approved" as const,
+  dataStatusNote: undefined,
+};
+
 vi.mock("../data/AdvisorDataContext", () => ({
   useAdvisorData: () => ({
-    snapshot: { mode: "review", advisors: [pendingAdvisor], rejectedCount: 0 },
+    snapshot: { mode: "review", advisors: [pendingAdvisor, approvedAdvisor], rejectedCount: 0 },
     siteConfig: { feedbackUrl: null },
     loading: false,
     error: null,
@@ -65,7 +74,7 @@ vi.mock("../data/AdvisorDataContext", () => ({
 }));
 
 describe("local review UI", () => {
-  it("shows the review banner on AppShell", () => {
+  it("shows a lightweight review status bar on AppShell", () => {
     render(
       <MemoryRouter>
         <AppShell />
@@ -74,6 +83,23 @@ describe("local review UI", () => {
     const banner = screen.getByLabelText("本地审核预览状态");
     expect(banner).toHaveTextContent("本地审核预览");
     expect(banner).toHaveTextContent("尚未正式上线");
+    expect(screen.getByRole("link", { name: "返回生命科学平台" })).toHaveAttribute("href", "/");
+    expect(screen.getByRole("link", { name: "导师一览" })).toHaveAttribute("href", "/advisors");
+  });
+
+  it("shows pending human-review badges on list cards", () => {
+    render(
+      <MemoryRouter>
+        <AdvisorListPage />
+      </MemoryRouter>,
+    );
+    expect(screen.getAllByLabelText("待项目负责人人工审核")).toHaveLength(1);
+    expect(screen.getByRole("heading", { name: "郭辉" }).closest("article")).toHaveTextContent(
+      "待项目负责人人工审核",
+    );
+    expect(screen.getByRole("heading", { name: "陈苗" }).closest("article")).not.toHaveTextContent(
+      "待项目负责人人工审核",
+    );
   });
 
   it("shows the pending human-review note on detail pages", () => {
@@ -85,6 +111,8 @@ describe("local review UI", () => {
       </MemoryRouter>,
     );
     expect(screen.getByLabelText("待审核状态说明")).toHaveTextContent(REVIEW_NOTE);
-    expect(screen.getByRole("link", { name: "← 返回导师目录" })).toHaveAttribute("href", "/advisors");
+    expect(screen.getByRole("link", { name: "← 返回导师一览" })).toHaveAttribute("href", "/advisors");
+    expect(screen.getByLabelText("页面目录")).toHaveTextContent("决策速览");
+    expect(screen.getByLabelText("页面目录").querySelector('a[href="#decision"]')).not.toBeNull();
   });
 });

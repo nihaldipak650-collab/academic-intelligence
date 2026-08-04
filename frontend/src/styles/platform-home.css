@@ -295,15 +295,18 @@
       text-align: right;
     }
     .platform-home #academic-intelligence .section-heading {
-      align-items: start;
-      gap: clamp(20px, 3vw, 36px);
+      align-items: flex-start;
+      gap: clamp(16px, 2.5vw, 28px);
+      margin-bottom: 18px;
     }
     .platform-home #academic-intelligence .section-intro {
-      flex: 0 1 400px;
-      max-width: min(400px, 42%);
+      flex: 0 1 340px;
+      max-width: min(340px, 38%);
       font-size: 13px;
-      line-height: 1.65;
+      line-height: 1.6;
+      text-align: right;
       text-wrap: pretty;
+      hyphens: auto;
     }
     .platform-home .text-link {
       color: var(--green);
@@ -512,18 +515,19 @@
       .platform-home .nav-links.open {
         position: absolute;
         top: 72px;
-        left: 0;
-        right: 0;
+        left: auto;
+        right: 18px;
+        width: min(240px, calc(100vw - 36px));
         display: grid;
         gap: 0;
-        padding: 10px 18px;
+        padding: 6px 10px;
         border: 1px solid var(--line);
         border-radius: 10px;
         background: var(--paper);
         box-shadow: var(--shadow);
         z-index: 60;
       }
-      .platform-home .nav-links.open a { padding: 12px 0; border-top: 1px solid var(--line); }
+      .platform-home .nav-links.open a { padding: 9px 6px; border-top: 1px solid var(--line); font-size: 13px; }
       .platform-home .nav-links.open a:first-child { border-top: 0; }
       .platform-home .hero-grid {
         grid-template-columns: minmax(0, 1.15fr) minmax(0, 300px);
@@ -541,7 +545,7 @@
       .platform-home .nav { min-height: 64px; }
       .platform-home .brand-copy span { display: none; }
       .platform-home .nav-ai { display: none; }
-      .platform-home .nav-links.open { top: 64px; }
+      .platform-home .nav-links.open { top: 64px; right: 16px; width: min(220px, calc(100vw - 32px)); }
       .platform-home .hero-grid {
         min-height: 0;
         grid-template-columns: 1fr;
@@ -551,12 +555,14 @@
       .platform-home .hero h1 { font-size: clamp(34px, 9vw, 48px); line-height: 1.15; }
       .platform-home .hero-description { font-size: 15px; }
       .platform-home .hero-aside { margin-top: 0; }
-      .platform-home main { padding: 55px 0 70px; }
-      .platform-home .section-heading { align-items: start; flex-direction: column; gap: 8px; }
+      .platform-home main { padding: 40px 0 70px; }
+      .platform-home .section-heading { align-items: start; flex-direction: column; gap: 6px; margin-bottom: 14px; }
       .platform-home .section-heading p,
       .platform-home .section-intro { text-align: left; max-width: none; flex: none; }
-      .platform-home .flagship { grid-template-columns: 1fr; min-height: 0; padding: 29px; }
-      .platform-home .intelligence-preview { margin-top: 4px; }
+      .platform-home #academic-intelligence .section-heading { margin-bottom: 12px; gap: 6px; }
+      .platform-home #academic-intelligence .section-intro { max-width: none; }
+      .platform-home .flagship { grid-template-columns: 1fr; min-height: 0; padding: 29px; margin-top: 0; }
+      .platform-home .intelligence-preview { margin-top: 0; }
       .platform-home .path-section, .platform-home .services-section, .platform-home .workspace-section { margin-top: 56px; }
       .platform-home .path-grid { grid-template-columns: 1fr 1fr; }
       .platform-home .path-step:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
