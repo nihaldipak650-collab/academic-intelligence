@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "xiang-rong",
+  "source_scope": "正式Roster、中南大学生命科学学院官方个人主页，以及官网代表论文种子对应的正式 DOI、出版社、PubMed/PMC 页面；candidate_retrieval_lane=chatgpt_web_research。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1161/CIRCULATIONAHA.117.030718",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e1",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、PubMed/PMC 题名、作者集合和中南大学细胞生物学系机构信息一致；Rong Xiang 为第一作者、共同第一作者和通讯作者。",
+      "title": "Increased Reticulon 3 (RTN3) Leads to Obesity and Hypertriglyceridemia by Interacting With Heat Shock Protein Family A (Hsp70) Member 5 (HSPA5)",
+      "publication_year": 2018,
+      "doi": "10.1161/CIRCULATIONAHA.117.030718",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.tem.2024.02.009",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e2",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、PubMed 和期刊页面一致；Rong Xiang 为末位作者，PubMed 列出中南大学生命科学学院细胞生物学系机构与电子邮箱。",
+      "title": "Mitochondrial dysfunction in lipid processing and gastrointestinal disorders",
+      "publication_year": 2024,
+      "doi": "10.1016/j.tem.2024.02.009",
+      "source_type": "review",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/mco2.226",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e3",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与 Wiley/PMC 正式记录一致；Rong Xiang 为末位作者和通讯作者；2024 年勘误 DOI 10.1002/mco2.466 仅作为原文勘误，不单独采用为第二篇公开证据。",
+      "title": "Increased RTN3 phenocopies nonalcoholic fatty liver disease by inhibiting the AMPK-IDH2 pathway",
+      "publication_year": 2023,
+      "doi": "10.1002/mco2.226",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/mco2.480",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e4",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与 Wiley/PubMed/PMC 正式记录一致；Rong Xiang 为末位作者和通讯作者，机构为中南大学生命科学学院细胞生物学系。",
+      "title": "Reticulon 3 regulates sphingosine-1-phosphate synthesis in endothelial cells to control blood pressure",
+      "publication_year": 2024,
+      "doi": "10.1002/mco2.480",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s11427-024-2576-x",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e5",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与 Springer/Science China 正式记录一致；Rong Xiang 为末位作者和通讯作者。该文为 Research Highlight，公共解释保持综述/评论边界。",
+      "title": "GCGR: novel potential therapeutic target for chronic kidney disease",
+      "publication_year": 2024,
+      "doi": "10.1007/s11427-024-2576-x",
+      "source_type": "other",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2515.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "main_techniques",
+        "summary",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-official-profile",
+      "last_verified_at": "2026-08-03",
+      "notes": "中南大学生命科学学院官方个人主页；只提取身份、研究方向、官方工作邮箱和代表论文种子，不迁移基金、评价、引用次数或宣传性内容。",
+      "page_title": "项荣-中南大学生命科学学院",
+      "profile_name": "项荣",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院细胞生物学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "项荣为中南大学生命科学学院细胞生物学系教授。",
+          "fact_category": "professional_title",
+          "source_anchor": "师资队伍/个人简介",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "官方页面明确记载导师类型为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_anchor": "师资队伍/类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "研究病原微生物感染、肿瘤、原发性多囊肾等疾病中细胞器、信号转导、物质运输和细胞代谢等结构与功能异常。",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向[1]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "运用新一代测序、色谱、细胞免疫等技术，从基因、分子、细胞、模式动物及人体层面研究心血管相关疾病机制，并结合临床筛选早期诊断和预后标志物。",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向[2]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "main_techniques",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "官方工作邮箱为 shirlesmile@csu.edu.cn。",
+          "fact_category": "official_contact",
+          "source_anchor": "个人简介/Email",
+          "supported_public_fields": [
+            "contact"
+          ]
+        }
+      ]
+    }
+  ]
+}

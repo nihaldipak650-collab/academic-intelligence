@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "li-jiada",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-04",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0002-4236-3518",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+    "human_review_status": "verified",
+    "notes": "中南大学官方主页确认李家大为生命科学学院遗传学系研究员、博士生导师和学院院长。Science Advances及Molecular Psychiatry正式页面将Jia-Da Li、ORCID 0000-0002-4236-3518与中南大学生命科学学院直接桥接。内容已完成外部核验，已获得项目负责人人工发布批准。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E1未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Science Advances正式作者页直接列出Jia-Da Li、ORCID 0000-0002-4236-3518及中南大学生命科学学院机构。",
+        "作者贡献为Resources，且未列为通讯作者。"
+      ],
+      "matched_author_name": "Jia-Da Li",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-4236-3518",
+      "notes": "身份桥接已核验；仅作为候选，不进入公开核心Evidence。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E3未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E4未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "PubMed正式记录显示Jia-Da Li为末位作者并具中南大学生命科学学院署名。",
+        "中南大学官方个人主页代表论文列表以Li JD*标示该论文。"
+      ],
+      "matched_author_name": "Jia-Da Li",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "末位通讯作者身份已由正式论文记录与第一方代表论文列表交叉核验。"
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E6未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E7未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E8未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E9未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "verified",
+      "verification_basis": [
+        "JCI Insight正式页面显示Jia-Da Li为末位作者及中南大学生命科学学院作者。",
+        "正式页面明确写明Address correspondence to Jia-Da Li。"
+      ],
+      "matched_author_name": "Jia-Da Li",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "末位通讯作者身份已核验。"
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E11未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E12",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E12未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E13",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E13未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E14",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E14未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E15",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E15未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E16",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E16未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E17",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Springer正式页面列出Jia-Da Li为第9位作者及中南大学生命科学学院作者。",
+        "正式页面Corresponding authors列出Xuyi Wang、Jia-Da Li和Suixin Deng。"
+      ],
+      "matched_author_name": "Jia-Da Li",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "中间作者、共同通讯作者身份已核验。"
+    },
+    {
+      "evidence_id": "E18",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E18未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E19",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E19未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E20",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E20未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E21",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E21未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E22",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Molecular Psychiatry正式页面列出Jia-Da Li为末位作者、ORCID 0000-0002-4236-3518及中南大学生命科学学院机构。",
+        "正式页面Corresponding authors列出Huadie Liu、Jing Zhang和Jia-Da Li。"
+      ],
+      "matched_author_name": "Jia-Da Li",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-4236-3518",
+      "notes": "末位共同通讯作者身份已核验；正式卷期年份为2026。"
+    },
+    {
+      "evidence_id": "E23",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E23未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E24",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E24未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E25",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E25未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E26",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E26未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E27",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E27未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E28",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E28未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E29",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E29未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E30",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E30未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E31",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E31未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E32",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E32未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E33",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E33未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E34",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E34未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E35",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E35未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E36",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E36未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E37",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E37未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E38",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E38未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E39",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E39未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E40",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E40未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E41",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E41未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E42",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E42未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E43",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E43未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    },
+    {
+      "evidence_id": "E44",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "历史候选E44未纳入本轮公开核心证据，作者角色与主线相关性未作发布级核验。"
+      ],
+      "matched_author_name": "Jiada Li",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "保留为内部候选；不得用于公开页面字段、标签、关键词或发布判断。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E45",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-04",
+      "notes": "life.csu.edu.cn为中南大学生命科学学院官方域名，页面姓名、学院、院系、职称、导师类型及联系方式与Roster一致。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "中南大学生命科学学院官方主页确认李家大、遗传学系、研究员、博士生导师身份。项目负责人于 2026-08-04 人工审核通过进入正式公开候选。"
+}

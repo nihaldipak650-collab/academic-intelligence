@@ -1,213 +1,273 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ConfidenceTag } from "../components/ConfidenceTag";
 import { EmptyState } from "../components/EmptyState";
 import { ErrorState, LoadingState } from "../components/PageState";
 import { useAdvisorData } from "../data/AdvisorDataContext";
-import {
-  filterAdvisors,
-  formatUpdatedAt,
-  getTagCounts,
-} from "../data/advisorData";
-import {
-  getAdvisorFreshness,
-  publicEvidenceLabel,
-} from "../data/advisorPresentation";
+import { filterAndSortAdvisors, getTagCounts } from "../data/advisorData";
+import type { PublicAdvisor } from "../types/advisor";
+
+const TAG_PREVIEW_COUNT = 8;
+const PENDING_LABEL = "待项目负责人人工审核";
+
+function truncate(text: string, max: number) {
+  const trimmed = text.trim();
+  if (trimmed.length <= max) return trimmed;
+  return `${trimmed.slice(0, max).trimEnd()}…`;
+}
+
+function AdvisorCard({ advisor, index }: { advisor: PublicAdvisor; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+  const pending = advisor.publicationStatus === "review_pending";
+  const coreTheme = advisor.researchDirections[0]?.text ?? "暂无可靠公开证据";
+  const methods = advisor.techniques.length
+    ? advisor.techniques.slice(0, 2).map((item) => item.text).join("；")
+    : "暂无可靠公开证据";
+  const undergrad = advisor.undergraduateScenarios[0]?.task ?? "暂无可靠公开证据";
+
+  return (
+    <article className={`advisor-card${expanded ? " is-expanded" : " is-compact"}`}>
+      <div className="advisor-card__top">
+        <div className="advisor-card__identity">
+          <span className="avatar" aria-hidden="true">{advisor.name.slice(0, 1)}</span>
+          <div>
+            <div className="advisor-card__title-row">
+              <h3>{advisor.name}</h3>
+              {pending && (
+                <span className="pending-badge" aria-label={PENDING_LABEL}>
+                  {PENDING_LABEL}
+                </span>
+              )}
+            </div>
+            <p className="advisor-card__meta">
+              {[advisor.position, advisor.department].filter(Boolean).join(" · ") || "院系信息待核验"}
+              {advisor.publicRoles.length ? ` · ${advisor.publicRoles.join(" / ")}` : ""}
+            </p>
+            {advisor.nameEn && <p className="advisor-card__name-en" lang="en">{advisor.nameEn}</p>}
+          </div>
+        </div>
+        <span className="advisor-card__index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+      </div>
+
+      <div className="advisor-card__decision">
+        <div>
+          <span>核心研究主题</span>
+          <p>{expanded ? coreTheme : truncate(coreTheme, 72)}</p>
+        </div>
+        <div>
+          <span>主要方法</span>
+          <p>{expanded ? methods : truncate(methods, 56)}</p>
+        </div>
+        <div>
+          <span>本科生可能切入点</span>
+          <p>{expanded ? undergrad : truncate(undergrad, 40)}</p>
+        </div>
+      </div>
+
+      {expanded && (
+        <div className="advisor-card__summary">
+          <span>公开摘要</span>
+          <p>{advisor.summary}</p>
+          <div className="advisor-card__keywords" aria-label={`${advisor.name}的关键词`}>
+            {advisor.tags.slice(0, 5).map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="advisor-card__footer">
+        <button
+          className="text-button"
+          type="button"
+          aria-expanded={expanded}
+          onClick={() => setExpanded((value) => !value)}
+        >
+          {expanded ? "收起摘要" : "展开摘要"}
+        </button>
+        <Link to={`/advisor/${advisor.id}`} aria-label={`查看${advisor.name}的公开证据详情`}>
+          查看详情 <span aria-hidden="true">↗</span>
+        </Link>
+      </div>
+    </article>
+  );
+}
 
 export function AdvisorListPage() {
-  const { advisors, loading, error } = useAdvisorData();
+  const { snapshot, loading, error } = useAdvisorData();
   const [query, setQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [sort, setSort] = useState<"name" | "updated">("name");
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [tagsExpanded, setTagsExpanded] = useState(false);
+  const advisors = snapshot?.advisors ?? [];
+  const dtoMode = snapshot?.mode === "dto";
+  const reviewMode = snapshot?.mode === "review";
   const tagCounts = useMemo(() => getTagCounts(advisors), [advisors]);
-  const filteredAdvisors = useMemo(
-    () => filterAdvisors(advisors, query, selectedTags),
-    [advisors, query, selectedTags],
+  const visibleTags = tagsExpanded ? tagCounts : tagCounts.slice(0, TAG_PREVIEW_COUNT);
+  const filtered = useMemo(
+    () => filterAndSortAdvisors(advisors, { query, tags: selectedTags, sort }),
+    [advisors, query, selectedTags, sort],
   );
-  const hasFilters = Boolean(query.trim() || selectedTags.length);
+  const hasFilters = Boolean(query.trim() || selectedTags.length || sort !== "name");
 
   function resetFilters() {
     setQuery("");
     setSelectedTags([]);
+    setSort("name");
   }
 
   function toggleTag(tag: string) {
     setSelectedTags((current) =>
-      current.includes(tag)
-        ? current.filter((item) => item !== tag)
-        : [...current, tag],
+      current.includes(tag) ? current.filter((item) => item !== tag) : [...current, tag],
     );
   }
 
-  if (loading) {
-    return <LoadingState />;
-  }
-  if (error) {
-    return <ErrorState title="导师列表无法加载" description={error} />;
-  }
+  if (loading) return <LoadingState />;
+  if (error) return <ErrorState title="数据安全门已关闭" description={error} />;
 
   return (
-    <>
-      <section className="hero">
-        <div className="hero__content">
-          <span className="hero__eyebrow">ACADEMIC INTELLIGENCE · 1.0 RC1</span>
-          <h1>从公开证据出发，理解导师的研究路径。</h1>
+    <div className="list-page">
+      <section className="hero hero--directory">
+        <div className="hero__copy">
+          <span className="eyebrow">导师与研究方向信息库</span>
+          <h1>
+            导师与研究方向
+            <wbr />
+            信息库
+          </h1>
           <p>
-            面向中南大学生命科学学院本科生的只读信息工具。我们呈现研究主题、
-            技术路线与证据边界，不做导师评分、排名或推荐。
+            {dtoMode
+              ? "浏览已通过公开门禁的导师结构化资料，了解研究方向、方法与本科生可参考的公开场景。"
+              : reviewMode
+                ? "本地审核预览：可查看白名单内导师资料。待审核记录仅供项目负责人预览，未经公开批准。"
+                : "用结构化公开证据理解研究问题、技术路线与不确定性。本地演示仅使用合成数据。"}
           </p>
-          <div className="hero__meta" aria-label="资料概况">
-            <span>{advisors.length} 位真实导师</span>
-            <span>公开信息与审核报告</span>
-            <span>人工审核报告</span>
-          </div>
-        </div>
-        <div className="hero__index" aria-hidden="true">
-          <span>AI</span>
-          <strong>01</strong>
-          <small>EVIDENCE DIRECTORY</small>
+          <p className="hero__count" aria-live="polite">
+            当前可见 <strong>{advisors.length}</strong>
+            {dtoMode ? " 位公开导师" : reviewMode ? " 位本地审核导师" : " 条合成记录"}
+          </p>
         </div>
       </section>
 
       <section className="directory" aria-labelledby="directory-title">
         <div className="section-heading">
           <div>
-            <span className="section-kicker">ADVISOR DIRECTORY</span>
-            <h2 id="directory-title">导师资料</h2>
+            <span className="eyebrow">ADVISOR DIRECTORY</span>
+            <h2 id="directory-title">导师一览</h2>
           </div>
-          <p aria-live="polite">{filteredAdvisors.length} 个匹配结果</p>
+          <p className="result-count" aria-live="polite">
+            <strong>{filtered.length}</strong> 个匹配结果
+          </p>
         </div>
 
-        <div className="filters">
-          <div className="search-row">
-            <label className="search-field">
-              <span aria-hidden="true">⌕</span>
-              <span className="sr-only">搜索姓名、机构、摘要、研究方向或技术</span>
-              <input
-                type="search"
-                placeholder="搜索姓名、机构、摘要、研究标签或技术"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-              />
+        <label className="search-field">
+          <span className="search-field__icon" aria-hidden="true">⌕</span>
+          <span className="sr-only">搜索导师姓名、机构、身份、方向或技术</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="搜索姓名、机构、导师身份、研究方向或技术"
+          />
+          {query && (
+            <button type="button" onClick={() => setQuery("")} aria-label="清空搜索">
+              ×
+            </button>
+          )}
+        </label>
+
+        <div className={`filter-panel${filtersOpen ? " is-open" : ""}`}>
+          <button
+            className="filter-panel__toggle"
+            type="button"
+            aria-expanded={filtersOpen}
+            aria-controls="advisor-filter-panel"
+            onClick={() => setFiltersOpen((open) => !open)}
+          >
+            <span>筛选与排序</span>
+            <span className="filter-panel__toggle-meta">
+              <small>{selectedTags.length ? `已选 ${selectedTags.length} 个方向` : "可组合筛选"}</small>
+              <span className="filter-panel__chevron" aria-hidden="true">
+                {filtersOpen ? "▲" : "▼"}
+              </span>
+            </span>
+          </button>
+          <div className="filter-panel__content" id="advisor-filter-panel" hidden={!filtersOpen}>
+            <fieldset>
+              <legend>
+                研究方向 <small>同类标签为 OR，与搜索为 AND</small>
+              </legend>
+              <div className="choice-row choice-row--tags">
+                {visibleTags.map(([tag, count]) => (
+                  <button
+                    type="button"
+                    aria-pressed={selectedTags.includes(tag)}
+                    onClick={() => toggleTag(tag)}
+                    key={tag}
+                  >
+                    {tag}
+                    <span>{count}</span>
+                  </button>
+                ))}
+              </div>
+              {tagCounts.length > TAG_PREVIEW_COUNT && (
+                <button
+                  className="text-button tag-expand-button"
+                  type="button"
+                  aria-expanded={tagsExpanded}
+                  onClick={() => setTagsExpanded((value) => !value)}
+                >
+                  {tagsExpanded ? "收起研究方向" : `展开全部（${tagCounts.length}）`}
+                </button>
+              )}
+            </fieldset>
+            <label className="sort-field">
+              <span>排序</span>
+              <select value={sort} onChange={(event) => setSort(event.target.value as "name" | "updated")}>
+                <option value="name">按姓名</option>
+                <option value="updated">按最近更新</option>
+              </select>
             </label>
             {hasFilters && (
-              <button className="clear-button" type="button" onClick={resetFilters}>
-                清除条件
+              <button className="text-button" type="button" onClick={resetFilters}>
+                清除全部条件
               </button>
             )}
           </div>
-          <div className="filter-label">
-            <span>按研究方向缩小候选范围</span>
-            <small>标签之间为 OR，与搜索条件为 AND</small>
-          </div>
-          <div className="segments" aria-label="按研究方向筛选">
-            <button
-              type="button"
-              className={!selectedTags.length ? "is-active" : ""}
-              aria-pressed={!selectedTags.length}
-              onClick={() => setSelectedTags([])}
-            >
-              全部 <span>{advisors.length}</span>
-            </button>
-            {tagCounts.map(([tag, count]) => (
-              <button
-                type="button"
-                className={selectedTags.includes(tag) ? "is-active" : ""}
-                aria-pressed={selectedTags.includes(tag)}
-                onClick={() => toggleTag(tag)}
-                key={tag}
-              >
-                {tag} <span>{count}</span>
-              </button>
-            ))}
-          </div>
         </div>
 
-        {filteredAdvisors.length ? (
+        {filtered.length ? (
           <div className="card-grid">
-            {filteredAdvisors.map((advisor) => (
-              <article className="advisor-card" key={advisor.id}>
-                <div className="advisor-card__topline">
-                  <div className="avatar" aria-hidden="true">
-                    {advisor.initials}
-                  </div>
-                </div>
-                <div className="advisor-card__body">
-                  <h3>
-                    {advisor.nameZh}
-                    {advisor.nameEn && <small>{advisor.nameEn}</small>}
-                  </h3>
-                  {advisor.position && (
-                    <p className="advisor-card__identity">
-                      职位 / 身份：{advisor.position}
-                    </p>
-                  )}
-                  <p className="advisor-card__summary">{advisor.summary}</p>
-                  <div className="tag-list" aria-label="研究方向">
-                    {advisor.tags.slice(0, 5).map((tag) => (
-                      <span className="tag" key={tag}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="advisor-card__source">{publicEvidenceLabel()}</p>
-                </div>
-                <div className="advisor-card__evidence">
-                  {(() => {
-                    const freshness = getAdvisorFreshness(advisor);
-                    return (
-                      <dl className="card-status-list">
-                        <div>
-                          <dt>最新核验</dt>
-                          <dd>{formatUpdatedAt(freshness.lastVerifiedAt)}</dd>
-                        </div>
-                        <div>
-                          <dt>数据状态</dt>
-                          <dd>{freshness.dataStatus}</dd>
-                        </div>
-                        <div>
-                          <dt>当前机会</dt>
-                          <dd>{freshness.opportunityStatus}</dd>
-                        </div>
-                      </dl>
-                    );
-                  })()}
-                  <ConfidenceTag
-                    level={advisor.authorMatchConfidence}
-                    note={
-                      advisor.authorConfidenceSource ===
-                      "legacy_academic_confidence"
-                        ? "旧站来源仅提供 academic_confidence；本页保留其等级并明确标记来源，不额外推断。"
-                        : undefined
-                    }
-                  />
-                </div>
-                <Link className="card-link" to={`/advisor/${advisor.id}`}>
-                  查看完整证据报告 <span aria-hidden="true">↗</span>
-                </Link>
-              </article>
+            {filtered.map((advisor, index) => (
+              <AdvisorCard advisor={advisor} index={index} key={advisor.id} />
             ))}
           </div>
         ) : (
           <EmptyState
-            title="当前筛选条件没有匹配导师"
-            description="这不是系统错误。请尝试其他关键词、方向标签，或清除全部条件。"
-            action={
-              <button className="button" type="button" onClick={resetFilters}>
-                清除筛选
-              </button>
+            title={
+              advisors.length
+                ? dtoMode || reviewMode
+                  ? "没有匹配的导师资料"
+                  : "没有匹配的合成记录"
+                : dtoMode
+                  ? "当前暂无获准公开的导师资料"
+                  : reviewMode
+                    ? "本地审核暂无可预览资料"
+                    : "暂无可公开记录"
             }
+            description={
+              advisors.length
+                ? "请调整关键词或方向标签；门禁规则不会因搜索而放宽。"
+                : dtoMode
+                  ? "正式数据模式运行正常；当前安全 DTO 中没有获准公开记录，也不会回退到合成数据。"
+                  : reviewMode
+                    ? "本地审核数据未通过契约校验；页面不会回退到 mock 或正式 DTO。"
+                    : "当前没有记录同时满足发布状态与发布资格。"
+            }
+            action={hasFilters ? <button className="button" type="button" onClick={resetFilters}>清除筛选</button> : undefined}
           />
         )}
       </section>
-
-      <section className="usage-boundary" id="usage-boundary">
-        <span className="section-kicker">READING BOUNDARY</span>
-        <h2>把证据当作起点，不把未知写成结论。</h2>
-        <p>
-          公开论文不能证明导师真实指导方式、实验室氛围、反馈频率或本科生任务安排。
-          单个学生经历只代表特定学生与特定时期，不推广为实验室整体事实。
-        </p>
-      </section>
-    </>
+    </div>
   );
 }

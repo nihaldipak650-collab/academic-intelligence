@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "xiang-rong",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-03",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "not_found",
+    "candidate_orcid": null,
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2515.htm",
+    "human_review_status": "verified",
+    "notes": "正式Roster、学院师资页与官方个人主页的姓名、机构、院系、职称和博士生导师类型一致。已采用正式出版物使用 Rong Xiang，并通过中南大学细胞生物学系、固定工作邮箱与共同作者形成身份桥接；未在本轮采用来源中发现可可靠归属的 ORCID。项目负责人于2026-08-03完成人工身份与内容审核，并批准进入公开候选。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Rong Xiang 与中南大学生命科学学院细胞生物学系、官方工作邮箱或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Rong Xiang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=first，is_co_first=true，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Rong Xiang 与中南大学生命科学学院细胞生物学系、官方工作邮箱或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Rong Xiang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=last，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Rong Xiang 与中南大学生命科学学院细胞生物学系、官方工作邮箱或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Rong Xiang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=last，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Rong Xiang 与中南大学生命科学学院细胞生物学系、官方工作邮箱或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Rong Xiang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=last，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Rong Xiang 与中南大学生命科学学院细胞生物学系、官方工作邮箱或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Rong Xiang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=last，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-03",
+      "notes": "life.csu.edu.cn 为中南大学生命科学学院官方域名；姓名、机构和细胞生物学系与正式Roster一致。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "项目负责人于2026-08-03确认项荣身份与页面内容，并批准进入公开候选；featured仍为空，联系方式不属于当前安全DTO发布范围。"
+}

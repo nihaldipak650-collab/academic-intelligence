@@ -1,0 +1,724 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "li-faxiang",
+  "record_created_at": "2026-08-04",
+  "migrated_at": "2026-08-04",
+  "name_zh": {
+    "value": "李发祥",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Faxiang Li",
+    "value_en": "Faxiang Li",
+    "source_url": "https://doi.org/10.1038/s41467-024-50410-0",
+    "source_ref": "evidence-manifest-v1.json#E2",
+    "source_authority": "publication",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院遗传学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "特聘教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2556.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+      "source_ref": "evidence-manifest-v1.json#E6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": "chinalfx@163.com",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F7",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "综合运用冷冻电镜、X射线晶体衍射、核磁共振、生物化学和细胞生物学研究生物大分子机器的结构与功能。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "研究细胞周期相关蛋白质机器的分子结构与工作机理，以及遗传突变导致相关疾病的机制。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "研究病原微生物与宿主相互作用的分子机制。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "以蛋白质结构为基础，针对神经退行性疾病、心脏病等相关重要蛋白靶点开展小分子抑制剂筛选和优化。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "蛋白质机器与高尔基体重建",
+      "explanation_zh": "基于公开证据，官方方向强调生物大分子机器；VCPIP1–P97/VCP论文提供了一个具体案例，说明结构、生化和细胞证据如何连接复合体组织、构象调控与有丝分裂后高尔基体重建。",
+      "undergraduate_meaning": "适合先学习“结构—界面—活性—细胞表型”的分层证据链，不把单一结构图直接等同于完整细胞机制。",
+      "evidence_ids": [
+        "E1",
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "细菌抗噬菌体防御与噬菌体反防御",
+      "explanation_zh": "DSR2、ShosTA和Sofic论文分别展示NADase、防御型毒素—抗毒素和AMPylation相关系统的结构与调控。",
+      "undergraduate_meaning": "可比较不同防御系统的触发信号、毒性输出、抗毒或抑制机制以及用于验证的结构和功能实验。",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "结构驱动的疾病靶点与小分子研究",
+      "explanation_zh": "官方主页提出基于蛋白质结构开展疾病相关靶点的小分子筛选和优化。",
+      "undergraduate_meaning": "本科阶段可先从结构口袋、突变位点和已公开活性证据的整理入手；公开资料不能证明当前具体项目或本科生准入。",
+      "evidence_ids": [
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "VCPIP1–P97/VCP复合体的组织方式和构象变化如何调控有丝分裂后的高尔基体膜融合与重建？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "噬菌体蛋白TTP与DSAD1如何分别激活或抑制DSR2 NADase，从而形成细菌防御与噬菌体免疫逃逸的结构基础？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-50410-0"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "ShosT毒素、ShosA抗毒素、ssDNA和RecA之间的结构与生化关系如何参与ShosTA介导的中止感染？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1093/nar/gkag197"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "Sofic的二聚化、ATP/CTD构象变化和AS1抗毒蛋白如何共同调节其抗噬菌体毒性？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/ijms26136074"
+      ],
+      "evidence_ids": [
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "基于公开证据，可能涉及冷冻电镜结构测定、三维重构与原子模型构建。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用X射线晶体学解析ShosTA和Sofic相关蛋白或复合物结构。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能涉及重组蛋白表达纯化、凝胶过滤、酶活/结合实验和定点突变验证。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用细胞生物学与免疫荧光读出，连接VCPIP1–P97/VCP结构机制和高尔基体重建表型。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用细菌菌落形成、EMSA、蛋白互作等功能实验，检验抗噬菌体系统的毒性、抗毒与核酸/蛋白相互作用。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "从蛋白质机器、宿主—病原互作或抗噬菌体防御问题出发，界定需要研究的组成分子和可检验机制。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开论文，研究可能表达纯化蛋白或复合物，并通过生化活性、结合或寡聚状态实验建立基础功能读出。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开论文，研究可能利用冷冻电镜或X射线晶体学解析结构，识别界面、口袋和构象变化。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开论文，研究可能设计界面或催化位点突变，并在细胞或细菌功能实验中检验结构解释。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开证据，结论需限制在相应蛋白、模型和实验条件内，避免从单一系统直接外推到临床或其他物种。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E6"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "采用论文已完成身份与元数据核验，但featured仍需项目负责人逐篇人工选择。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "整理结构—功能证据矩阵",
+      "task_context": "从E1–E4中选择一个蛋白机器或防御系统，区分结构观察、界面突变、生化活性和细胞/细菌表型",
+      "task_purpose": "训练把论文机制图拆解为可核验的多层证据。",
+      "possible_methods": [
+        "结构化文献摘录",
+        "突变—界面—活性映射",
+        "证据等级标注"
+      ],
+      "possible_output": "一份带Evidence定位的结构—功能矩阵",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅为基于公开论文推导的可能任务，不代表实验室当前项目、真实分工、准入、名额、指导方式或成果保证。"
+    },
+    {
+      "task": "复现公开结构图或界面注释",
+      "task_context": "利用论文和公开PDB信息，复现单个复合物的结构域、界面、突变位点或构象比较",
+      "task_purpose": "熟悉结构可视化和从原子模型到机制假设的基本步骤。",
+      "possible_methods": [
+        "PyMOL或ChimeraX",
+        "PDB结构检索",
+        "图注与方法核对"
+      ],
+      "possible_output": "可复核的结构图、操作记录和限制说明",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "公开结构可用于学习，但不能证明实验室会提供相同任务、软件、数据或指导。"
+    },
+    {
+      "task": "比较三类抗噬菌体系统的机制",
+      "task_context": "比较DSR2、ShosTA和Sofic在触发信号、毒性输出、抗毒/抑制机制和验证方法上的异同",
+      "task_purpose": "建立跨论文比较能力，同时保留每个系统的实验边界。",
+      "possible_methods": [
+        "机制表格",
+        "摘要与图表核对",
+        "实验读出分类"
+      ],
+      "possible_output": "抗噬菌体系统对照表或短报告",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是公开证据导向的学习任务，不代表实验室的真实培养安排或当前招募计划。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "建议准备分子生物学、生物化学、细胞生物学和基础微生物学知识。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "结构方向可先学习蛋白质结构层级、冷冻电镜/X射线晶体学基本概念，以及PyMOL或ChimeraX等结构可视化工具。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074",
+        "https://life.csu.edu.cn/info/1042/2556.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "实验方向可能需要理解重组蛋白表达纯化、酶活/结合实验、对照设计和实验安全；计算整理可补充基础Python或R。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1002/advs.202403417",
+        "https://doi.org/10.1038/s41467-024-50410-0",
+        "https://doi.org/10.1093/nar/gkag197",
+        "https://doi.org/10.3390/ijms26136074"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于公开证据，入门成本主要来自结构生物学术语、蛋白质生化实验和细胞/细菌功能验证三类语言的衔接；从读图到独立解释通常需要分阶段练习。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://doi.org/10.1002/advs.202403417",
+      "https://doi.org/10.1038/s41467-024-50410-0",
+      "https://doi.org/10.1093/nar/gkag197",
+      "https://doi.org/10.3390/ijms26136074",
+      "https://life.csu.edu.cn/info/1042/2556.htm"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E6"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习蛋白质结构与复合物基础",
+        "熟悉冷冻电镜和晶体学论文图",
+        "建立抗噬菌体系统术语表"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "论文证据卡片",
+        "结构图阅读笔记"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实培养方案、当前任务、名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "复现一个结构图",
+        "整理一个突变—活性证据链",
+        "比较一个防御系统机制"
+      ],
+      "possible_outputs": [
+        "结构可视化文件",
+        "证据矩阵",
+        "可复核短报告"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实培养方案、当前任务、名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确论文边界内提出一个结构—功能问题",
+        "设计可证伪的突变或比较方案"
+      ],
+      "possible_outputs": [
+        "小型研究方案",
+        "带限制说明的机制分析"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实培养方案、当前任务、名额、招募承诺或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "公共身份与原始研究方向来自中南大学官方主页；论文机制与方法仅依据本导师已采用的正式出版物。AI整理内容均单独标注，不包含学生Experience，不评价导师管理风格、实验室氛围、经费、真实名额、毕业难度或成果保证。可能任务与成长路径不代表真实实验室安排或招募承诺。",
+  "update_status": "verified",
+  "summary": {
+    "text": "官方页面显示，李发祥为中南大学生命科学学院遗传学系特聘教授、博士生导师，主要以结构生物学、生物化学和细胞生物学解析与健康和疾病相关的生物大分子机器。已核验的近期公开论文覆盖VCPIP1–P97/VCP介导的高尔基体重建，以及DSR2、ShosTA和Sofic等细菌抗噬菌体防御系统的结构与调控机制。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1002/advs.202403417",
+      "https://doi.org/10.1038/s41467-024-50410-0",
+      "https://doi.org/10.1093/nar/gkag197",
+      "https://doi.org/10.3390/ijms26136074",
+      "https://life.csu.edu.cn/info/1042/2556.htm"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E6"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "官方身份、ORCID和四篇核心正式论文已完成v1.0.4机械核验；E5仅保留为非核心合作候选。联系方式已由官方来源或正式论文确认，但当前安全DTO不输出contact字段。人工页面审核、featured选择和公开发布授权仍待项目负责人完成。",
+  "search_keywords": [
+    "李发祥",
+    "Faxiang Li",
+    "结构生物学",
+    "冷冻电镜",
+    "X射线晶体学",
+    "p97/VCP",
+    "VCPIP1",
+    "DSR2",
+    "ShosTA",
+    "Sofic",
+    "抗噬菌体防御",
+    "toxin-antitoxin"
+  ],
+  "tags": [
+    "结构生物学",
+    "蛋白质机器",
+    "抗噬菌体防御",
+    "冷冻电镜"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/li-faxiang.md"
+}

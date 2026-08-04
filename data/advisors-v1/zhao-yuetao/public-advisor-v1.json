@@ -1,0 +1,556 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "zhao-yuetao",
+  "record_created_at": "2026-08-02",
+  "migrated_at": null,
+  "name_zh": {
+    "value": "赵岳涛",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": null,
+    "value_en": null,
+    "source_url": null,
+    "source_ref": null,
+    "source_authority": null,
+    "last_verified_at": null,
+    "missing_status": "no_public_information"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院生物化学与分子生物学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "副教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "硕士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-01",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2530.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+      "source_ref": "evidence-manifest-v1.json#E6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-01",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "新型生物材料构建及生物医学应用；生物材料的结构、功能与安全性调节；光热治疗、肿瘤免疫与疾病检测材料。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2530.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "生物材料与光热肿瘤治疗",
+      "explanation_zh": "基于公开论文，可把这一方向理解为设计具有靶向或仿生特征的纳米材料，并利用光热刺激参与肿瘤治疗研究。",
+      "undergraduate_meaning": "本科阶段可能先从材料设计逻辑、对照组设置和公开结果解读入手。",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "肿瘤免疫微环境调节",
+      "explanation_zh": "依据公开论文，该主题可能关注腺苷相关通路如何影响T细胞浸润与活性，以及材料干预和光热刺激的协同关系。",
+      "undergraduate_meaning": "需要区分材料作用、免疫机制和动物实验结论的证据层级。",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "外泌体蛋白检测",
+      "explanation_zh": "基于公开论文，可关注利用增强拉曼平台和深度学习对多种外泌体蛋白进行无标记分析，以探索早期癌症检测。",
+      "undergraduate_meaning": "适合练习信号数据预处理、分类评估与检测性能边界。",
+      "evidence_ids": [
+        "E3"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开研究，仿生光热纳米材料可能如何增强多发性骨髓瘤细胞凋亡并影响NF-κB信号干扰？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开论文，阻断腺苷-A2AR或CD73相关环节可能怎样与光热刺激协同改善抗肿瘤免疫反应？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.cej.2022.138139",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开研究，无标记多重SERS信号与深度学习可能如何组合用于外泌体蛋白分析和早期癌症识别？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1021/acs.analchem.4c00669"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "可能涉及靶向或仿生纳米材料构建、光热刺激及细胞凋亡评估。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1016/j.cej.2022.138139",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及腺苷-A2AR、CD73和T细胞相关免疫指标的检测与比较。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.cej.2022.138139",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能使用三维增强SERS平台、外泌体蛋白多重检测与深度学习分类。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1021/acs.analchem.4c00669"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于公开论文，流程可能先从材料功能目标、靶点或检测对象的界定开始。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1016/j.cej.2022.138139",
+        "https://doi.org/10.1021/acs.analchem.4c00669",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "随后可能进行材料或传感平台构建，并通过理化表征、信号采集或生物学实验检查性能。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1021/acs.analchem.4c00669",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "最后可在细胞、动物或分类数据层面比较对照条件，并谨慎解释治疗或诊断指标。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1016/j.cej.2022.138139",
+        "https://doi.org/10.1021/acs.analchem.4c00669",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E6"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "仍需用户人工审核；未选择featured论文。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "整理光热纳米材料的设计变量",
+      "task_context": "基于三篇治疗方向论文，可能比较靶向方式、材料功能、光热刺激和免疫通路设置。",
+      "task_purpose": "理解材料结构、作用机制和评价指标之间的对应关系。",
+      "possible_methods": [
+        "提取材料组成",
+        "整理实验分组",
+        "比较关键终点"
+      ],
+      "possible_output": "设计变量与证据对应表",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "复核外泌体蛋白检测流程",
+      "task_context": "依据SERS与深度学习论文，可能拆解样本、信号、特征和分类评价步骤。",
+      "task_purpose": "建立检测数据从采集到模型评估的流程意识。",
+      "possible_methods": [
+        "绘制处理流程",
+        "整理性能指标",
+        "记录训练与测试边界"
+      ],
+      "possible_output": "检测流程图或指标核对表",
+      "evidence_ids": [
+        "E3"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "比较腺苷通路干预策略",
+      "task_context": "基于A2AR和CD73相关公开论文，可能比较两种干预位置及其与光热刺激的组合。",
+      "task_purpose": "练习机制假设与实验读出的对应分析。",
+      "possible_methods": [
+        "整理通路节点",
+        "比较免疫指标",
+        "标注证据限制"
+      ],
+      "possible_output": "机制比较摘要",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "建议准备材料科学、细胞生物学与肿瘤免疫的基础概念。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1016/j.cej.2022.138139",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能需要理解光热转换、纳米材料表征、SERS信号和常见生物学对照。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1021/acs.analchem.4c00669",
+        "https://doi.org/10.1186/s12951-024-02487-4"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若处理检测数据，建议具备基础统计、Python数据分析和模型评价知识。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1021/acs.analchem.4c00669"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于这些公开论文，入门成本可能来自纳米材料表征、肿瘤免疫机制、光热实验和信号或模型数据分析的跨学科衔接。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://doi.org/10.1016/j.biomaterials.2023.122096",
+      "https://doi.org/10.1016/j.cej.2022.138139",
+      "https://doi.org/10.1021/acs.analchem.4c00669",
+      "https://doi.org/10.1186/s12951-024-02487-4"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习纳米生物材料与肿瘤免疫基础",
+        "识别常见材料和生物学评价指标",
+        "阅读实验分组"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "论文方法卡片"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "整理一类材料或检测平台的输入输出",
+        "复核图表与对照组",
+        "记录关键参数"
+      ],
+      "possible_outputs": [
+        "变量表",
+        "流程图",
+        "图表复核笔记"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确问题下比较一种材料功能或信号分析方案",
+        "加入重复性和边界检查"
+      ],
+      "possible_outputs": [
+        "小型比较模块",
+        "带限制说明的分析报告"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+  "update_status": "verified",
+  "summary": {
+    "text": "官方方向聚焦新型生物材料及其医学应用；基于已采用论文，可进一步理解为围绕光热纳米治疗、肿瘤免疫通路调节以及外泌体蛋白检测平台开展研究。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1016/j.biomaterials.2023.122096",
+      "https://doi.org/10.1016/j.cej.2022.138139",
+      "https://doi.org/10.1021/acs.analchem.4c00669",
+      "https://doi.org/10.1186/s12951-024-02487-4"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "身份、论文与官方来源已完成机械核验，但人工身份审核、featured选择和发布授权仍待用户完成。",
+  "search_keywords": [
+    "生物材料",
+    "光热治疗",
+    "肿瘤免疫",
+    "biomimetic nanodrug",
+    "multiple myeloma",
+    "adenosine A2AR",
+    "CD73",
+    "exosomal proteins",
+    "SERS",
+    "deep learning"
+  ],
+  "tags": [
+    "生物化学与分子生物学",
+    "纳米生物材料",
+    "肿瘤免疫",
+    "疾病检测"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/zhao-yuetao.md"
+}

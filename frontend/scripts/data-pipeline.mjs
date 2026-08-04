@@ -9,12 +9,19 @@ import {
 } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  evaluatePublicationGate,
+  evaluateReleaseProvenance,
+  findExperienceContentViolations,
+} from "./public-content-scan.mjs";
+export { evaluatePublicationGate } from "./public-content-scan.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 export const frontendDir = path.resolve(scriptDir, "..");
 export const repoRoot = path.resolve(frontendDir, "..");
 export const sourceAdvisorFile = path.join(repoRoot, "web", "advisors.json");
 export const sourceReportDir = path.join(repoRoot, "web", "reports");
+export const validationRoot = path.join(repoRoot, "data", "advisors-v1");
 export const sourceSiteConfigFile = path.join(
   repoRoot,
   "web",
@@ -30,6 +37,21 @@ export const generatedSiteConfigFile = path.join(
   publicDataDir,
   "site-config.json",
 );
+
+export const defaultPipelinePaths = Object.freeze({
+  sourceAdvisorFile,
+  sourceReportDir,
+  validationRoot,
+  sourceSiteConfigFile,
+  publicDataDir,
+  publicReportDir,
+  generatedAdvisorFile,
+  generatedSiteConfigFile,
+});
+
+function resolvePipelinePaths(overrides = {}) {
+  return { ...defaultPipelinePaths, ...overrides };
+}
 
 const forbiddenPatterns = [
   [/placeholder/i, "placeholder"],
@@ -174,44 +196,40 @@ function normalizeContact(raw, advisorId) {
   return Object.values(contact).some(Boolean) ? contact : null;
 }
 
-export async function buildAdvisorData() {
-  const sourceAdvisors = await readJson(sourceAdvisorFile);
+export async function buildAdvisorData(pathOverrides = {}) {
+  const paths = resolvePipelinePaths(pathOverrides);
+  const sourceAdvisors = await readJson(paths.sourceAdvisorFile);
   invariant(Array.isArray(sourceAdvisors), "web/advisors.json 必须是数组");
-  invariant(sourceAdvisors.length > 0, "导师配置为空");
 
   const seenIds = new Set();
   const seenReports = new Set();
   const advisors = [];
   const reports = [];
   const warnings = [];
+  const rejections = [];
 
   for (const raw of sourceAdvisors) {
-    invariant(raw && typeof raw === "object", "导师配置项必须是对象");
-    invariant(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(raw.id), `ID 非法：${raw.id}`);
+    const gate = evaluatePublicationGate(raw);
+    if (!gate.allowed) {
+      const id = raw && typeof raw === "object" && raw.id ? raw.id : "unknown";
+      rejections.push({ id, reasons: gate.reasons });
+      warnings.push(`${id}：拒绝公开导出（${gate.reasons.join(", ")}）。`);
+      continue;
+    }
+    const provenance = await evaluateReleaseProvenance(raw, paths.validationRoot);
+    if (!provenance.allowed) {
+      rejections.push({ id: raw.id, reasons: provenance.reasons });
+      warnings.push(`${raw.id}：拒绝公开导出（${provenance.reasons.join(", ")}）。`);
+      continue;
+    }
+
     invariant(!seenIds.has(raw.id), `导师 ID 重复：${raw.id}`);
-    invariant(typeof raw.name === "string" && raw.name.trim(), `导师 ${raw.id} 缺少姓名`);
-    invariant(
-      typeof raw.summary === "string" && raw.summary.trim(),
-      `导师 ${raw.id} 缺少摘要`,
-    );
-    invariant(
-      Array.isArray(raw.tags) && raw.tags.length > 0,
-      `导师 ${raw.id} 缺少研究标签`,
-    );
-    invariant(
-      typeof raw.report === "string" && raw.report.endsWith(".md"),
-      `导师 ${raw.id} 报告路径无效`,
-    );
     invariant(!seenReports.has(raw.report), `报告路径重复：${raw.report}`);
-    invariant(
-      typeof raw.has_experience_evidence === "boolean",
-      `导师 ${raw.id} 缺少 Experience 状态`,
-    );
 
     seenIds.add(raw.id);
     seenReports.add(raw.report);
 
-    const reportFile = path.join(sourceReportDir, raw.report);
+    const reportFile = path.join(paths.sourceReportDir, raw.report);
     const markdown = await readFile(reportFile, "utf8").catch(() => {
       throw new Error(`导师 ${raw.id} 的报告不存在：web/reports/${raw.report}`);
     });
@@ -221,29 +239,14 @@ export async function buildAdvisorData() {
     );
     assertNoPlaceholder(`导师 ${raw.id} 配置`, JSON.stringify(raw));
     assertNoPlaceholder(`导师 ${raw.id} 报告`, markdown);
+    invariant(
+      findExperienceContentViolations(markdown).length === 0,
+      `导师 ${raw.id} 的获批报告仍含 Experience 内容标记`,
+    );
 
-    const hasExperience = raw.has_experience_evidence;
-    const experienceCaseCount =
-      raw.experience_case_count ?? (hasExperience ? 1 : 0);
-    invariant(
-      Number.isInteger(experienceCaseCount) && experienceCaseCount >= 0,
-      `导师 ${raw.id} 的 experience_case_count 非法`,
-    );
-    invariant(
-      hasExperience === (experienceCaseCount > 0),
-      `导师 ${raw.id} 的 Experience 布尔值与案例数量不一致`,
-    );
-    const evidenceType =
-      raw.evidence_type ??
-      (hasExperience ? "academic_and_experience" : "academic_only");
-    invariant(
-      ["academic_only", "academic_and_experience"].includes(evidenceType),
-      `导师 ${raw.id} 的 evidence_type 非法`,
-    );
-    invariant(
-      (evidenceType === "academic_only") === !hasExperience,
-      `导师 ${raw.id} 的 Evidence 类型与 Experience 状态不一致`,
-    );
+    const hasExperience = false;
+    const experienceCaseCount = 0;
+    const evidenceType = "academic_only";
 
     const authorConfidenceRaw =
       raw.author_match_confidence ?? raw.academic_confidence;
@@ -282,7 +285,10 @@ export async function buildAdvisorData() {
       hasExperienceEvidence: hasExperience,
       experienceCaseCount,
       version: extractVersion(raw, markdown),
-      status: raw.status ?? "published",
+      status: "published",
+      schemaVersion: raw.schema_version,
+      publicationStatus: raw.publication_status,
+      releaseEligible: true,
       lastUpdated: raw.last_updated ?? null,
       reportPath,
       reportSha256: sha256(markdown),
@@ -309,12 +315,14 @@ export async function buildAdvisorData() {
     },
     reports,
     warnings,
+    rejections,
   };
 }
 
-export async function syncAdvisorData() {
-  const result = await buildAdvisorData();
-  const sourceSiteConfig = await readJson(sourceSiteConfigFile).catch(() => ({}));
+export async function syncAdvisorData(pathOverrides = {}) {
+  const paths = resolvePipelinePaths(pathOverrides);
+  const result = await buildAdvisorData(paths);
+  const sourceSiteConfig = await readJson(paths.sourceSiteConfigFile).catch(() => ({}));
   const siteConfig = {
     feedbackUrl:
       typeof sourceSiteConfig.feedback_url === "string"
@@ -322,29 +330,29 @@ export async function syncAdvisorData() {
         : "",
   };
 
-  await mkdir(publicDataDir, { recursive: true });
-  await mkdir(publicReportDir, { recursive: true });
+  await mkdir(paths.publicDataDir, { recursive: true });
+  await mkdir(paths.publicReportDir, { recursive: true });
 
   const expectedReports = new Set(result.reports.map((report) => report.name));
-  const existingReports = await readdir(publicReportDir).catch(() => []);
+  const existingReports = await readdir(paths.publicReportDir).catch(() => []);
   for (const name of existingReports) {
     if (name.endsWith(".md") && !expectedReports.has(name)) {
-      await rm(path.join(publicReportDir, name));
+      await rm(path.join(paths.publicReportDir, name));
     }
   }
 
   await Promise.all(
     result.reports.map((report) =>
-      copyFile(report.source, path.join(publicReportDir, report.name)),
+      copyFile(report.source, path.join(paths.publicReportDir, report.name)),
     ),
   );
   await writeFile(
-    generatedAdvisorFile,
+    paths.generatedAdvisorFile,
     `${JSON.stringify(result.envelope, null, 2)}\n`,
     "utf8",
   );
   await writeFile(
-    generatedSiteConfigFile,
+    paths.generatedSiteConfigFile,
     `${JSON.stringify(siteConfig, null, 2)}\n`,
     "utf8",
   );
@@ -352,9 +360,10 @@ export async function syncAdvisorData() {
   return { ...result, siteConfig };
 }
 
-export async function validateGeneratedData() {
-  const expected = await buildAdvisorData();
-  const generated = await readJson(generatedAdvisorFile).catch(() => {
+export async function validateGeneratedData(pathOverrides = {}) {
+  const paths = resolvePipelinePaths(pathOverrides);
+  const expected = await buildAdvisorData(paths);
+  const generated = await readJson(paths.generatedAdvisorFile).catch(() => {
     throw new Error("缺少 frontend/public/data/advisors.json，请先运行 sync:data");
   });
   invariant(
@@ -384,9 +393,9 @@ export async function validateGeneratedData() {
       `${advisor.id} 的 Experience 状态不一致`,
     );
 
-    const publicFile = path.join(frontendDir, "public", advisor.reportPath);
+    const publicFile = path.join(paths.publicDataDir, "..", advisor.reportPath);
     const sourceName = path.basename(advisor.reportPath);
-    const sourceFile = path.join(sourceReportDir, sourceName);
+    const sourceFile = path.join(paths.sourceReportDir, sourceName);
     const [publicContent, sourceContent] = await Promise.all([
       readFile(publicFile, "utf8"),
       readFile(sourceFile, "utf8"),
@@ -407,13 +416,13 @@ export async function validateGeneratedData() {
     assertNoPlaceholder(`${advisor.id} 网页报告`, publicContent);
   }
 
-  const generatedText = await readFile(generatedAdvisorFile, "utf8");
+  const generatedText = await readFile(paths.generatedAdvisorFile, "utf8");
   invariant(
     !/[a-z]:\\/i.test(generatedText),
     "生成的前端数据包含 Windows 绝对路径",
   );
 
-  const actualReports = (await readdir(publicReportDir))
+  const actualReports = (await readdir(paths.publicReportDir))
     .filter((name) => name.endsWith(".md"))
     .sort();
   const expectedReports = expected.reports.map((item) => item.name).sort();
@@ -422,10 +431,10 @@ export async function validateGeneratedData() {
     "frontend/public/reports 中存在缺失或多余报告",
   );
 
-  const generatedConfig = await readJson(generatedSiteConfigFile).catch(() => {
+  const generatedConfig = await readJson(paths.generatedSiteConfigFile).catch(() => {
     throw new Error("缺少 frontend/public/data/site-config.json");
   });
-  const sourceConfig = await readJson(sourceSiteConfigFile).catch(() => ({}));
+  const sourceConfig = await readJson(paths.sourceSiteConfigFile).catch(() => ({}));
   invariant(
     generatedConfig.feedbackUrl === (sourceConfig.feedback_url ?? "").trim(),
     "反馈链接未与 web/site-config.json 同步",

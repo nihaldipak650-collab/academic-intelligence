@@ -12,8 +12,7 @@ on:
     branches: [main]
     paths:
       - "frontend/**"
-      - "web/advisors.json"
-      - "web/reports/**"
+      - "data/advisors-v1/**"
       - ".github/workflows/deploy-frontend-pages.yml"
 
 permissions:
@@ -72,16 +71,16 @@ jobs:
           const data = JSON.parse(
             readFileSync("frontend/dist/data/advisors.json", "utf8"),
           );
-          if (data.advisorCount !== 7 || data.advisors.length !== 7) {
-            throw new Error("Pages artifact must contain exactly 7 advisors");
+          if (data.advisorCount !== 11 || data.advisors.length !== 11) {
+            throw new Error("Pages artifact must contain exactly 11 advisors");
           }
 
           const reportDirectory = "frontend/dist/reports";
           const reportFiles = readdirSync(reportDirectory).filter((name) =>
             name.endsWith(".md"),
           );
-          if (reportFiles.length !== 7) {
-            throw new Error("Pages artifact must contain exactly 7 Markdown reports");
+          if (reportFiles.length !== 11) {
+            throw new Error("Pages artifact must contain exactly 11 Markdown reports");
           }
 
           for (const advisor of data.advisors) {
@@ -91,9 +90,16 @@ jobs:
             ) {
               throw new Error(`Missing report for advisor ${advisor.id}`);
             }
+            if (
+              advisor.releaseEligible !== true ||
+              advisor.publicationStatus === "review_pending" ||
+              advisor.hasExperienceEvidence !== false
+            ) {
+              throw new Error(`Unsafe advisor slipped into Pages artifact: ${advisor.id}`);
+            }
           }
 
-          console.log("Verified Pages artifact: 7 advisors and 7 reports");
+          console.log("Verified Pages artifact: 11 advisors and 11 reports");
           NODE
 
       - name: Upload frontend 1.0 artifact

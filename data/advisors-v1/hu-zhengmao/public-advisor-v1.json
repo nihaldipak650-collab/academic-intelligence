@@ -1,0 +1,699 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "hu-zhengmao",
+  "record_created_at": "2026-08-04",
+  "migrated_at": "2026-08-04",
+  "name_zh": {
+    "value": "胡正茂",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Zhengmao Hu",
+    "value_en": "Zhengmao Hu",
+    "source_url": "https://doi.org/10.1136/jmedgenet-2022-108425",
+    "source_ref": "evidence-manifest-v1.json#E3",
+    "source_authority": "publication",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院遗传学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "研究员",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    {
+      "value": "硕士生导师",
+      "value_en": null,
+      "source_url": "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm",
+      "source_ref": "evidence-manifest-v1.json#E11:F1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "长期从事人类遗传性疾病致病基因的鉴定及功能研究。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2564.htm",
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E11"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "聚焦高度近视和儿童自闭症的遗传发病机制研究。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2564.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "公开方法包括传统基因定位、候选克隆、外显子组捕获结合高通量测序。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E11"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "遗传性疾病致病基因发现",
+      "explanation_zh": "依据官方方向，可把这一主线理解为从家系、患者或变异数据中寻找候选致病基因，再用正式研究证据评估其与疾病表型的关系。",
+      "undergraduate_meaning": "需要区分候选发现、遗传证据、功能验证和临床解释，不能把单一关联直接等同于致病机制。",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E6",
+        "E11"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "高度近视遗传机制",
+      "explanation_zh": "官方主页明确将高度近视列为重点方向；GLRA2论文提供了人群遗传证据与小鼠功能研究相连接的正式案例。",
+      "undergraduate_meaning": "可从基因变异、眼部表型和模型验证三层证据理解该方向。",
+      "evidence_ids": [
+        "E3",
+        "E6",
+        "E11"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "儿童自闭症相关基因功能",
+      "explanation_zh": "官方主页将儿童自闭症列为重点方向；CNTN4论文展示了风险基因与树突、树突棘形成等神经细胞表型之间的研究联系。",
+      "undergraduate_meaning": "需要把人类遗传关联与神经细胞功能结果分别核验。",
+      "evidence_ids": [
+        "E5",
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "跨疾病罕见变异与功能验证",
+      "explanation_zh": "官网代表论文还涉及PITX2调控区、TRMT2B和NF1，说明公开研究线索覆盖非编码调控、神经退行性疾病与体细胞变异等不同遗传问题。",
+      "undergraduate_meaning": "不同疾病与样本类型的方法不能机械互换，页面只保留共同的遗传证据链框架。",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4",
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开证据，编码变异、非编码调控变异或体细胞变异可能如何与遗传性疾病表型建立可复核联系？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1007/s00439-021-02429-2",
+        "https://life.csu.edu.cn/info/1042/2564.htm",
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4",
+        "E6",
+        "E11"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据GLRA2研究，高度近视候选基因可能如何通过人群遗传证据与模型表型得到分层验证？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://life.csu.edu.cn/info/1042/2564.htm"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据CNTN4研究，自闭症风险基因的变化可能如何影响树突和树突棘形成等神经细胞表型？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1093/hmg/ddab233",
+        "https://life.csu.edu.cn/info/1042/2564.htm"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据PITX2、TRMT2B和NF1代表论文，不同类型的罕见变异证据应如何避免跨疾病过度外推？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1007/s11684-023-1005-y",
+        "https://doi.org/10.1007/s00439-021-02429-2"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "依据教师主页，公开方法包括传统基因定位、候选克隆、外显子组捕获和高通量测序。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E11"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于代表论文，可能涉及家系或患者变异分析、基因型—表型比较以及正式出版物中的遗传证据核验。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1007/s11684-023-1005-y",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1007/s00439-021-02429-2"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据GLRA2和CNTN4论文，部分研究可能结合小鼠或神经细胞模型观察与疾病相关的功能表型。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1093/hmg/ddab233"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据PITX2和CNTN4论文，部分问题可能涉及非编码调控功能验证或树突、树突棘等细胞形态读出。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1093/hmg/ddab233"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于官方方法描述，研究可能先从家系、患者或测序数据中定位候选基因和变异。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1007/s00439-021-02429-2",
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E11"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "随后可能结合临床或组织表型，判断候选变异与疾病表型之间的遗传一致性。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1007/s11684-023-1005-y",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1007/s00439-021-02429-2"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "最后可能在明确模型和实验边界下进行功能验证，并限制从细胞或动物模型到患者结论的外推。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1093/hmg/ddab233"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E11"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "仍需用户逐篇人工审核；本轮不选择 featured 论文。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "整理基因—变异—表型—模型证据矩阵",
+      "task_context": "基于采用论文，比较PITX2、TRMT2B、GLRA2、NF1和CNTN4研究中的样本、变异类型、表型和功能证据。",
+      "task_purpose": "练习区分遗传发现、功能验证与临床解释。",
+      "possible_methods": [
+        "文献结构化摘录",
+        "基因—表型映射",
+        "证据层级标注"
+      ],
+      "possible_output": "可复核的证据矩阵",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅为基于公开证据推导的可能任务，不代表实验室真实分工、当前项目、名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "复现公开变异注释或论文图表逻辑",
+      "task_context": "依据正式论文的方法和图表，核对样本、变量、分组、注释步骤与结论边界。",
+      "task_purpose": "理解从公开数据或图表到遗传结论的分析链。",
+      "possible_methods": [
+        "公开数据整理",
+        "基础R/Python分析",
+        "图表复现与步骤记录"
+      ],
+      "possible_output": "复现脚本、图表或方法笔记",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "公开论文不能证明实验室会提供相同数据、软件、指导或本科生任务。"
+    },
+    {
+      "task": "在成熟方案下协助单一数据或图像质控",
+      "task_context": "基于GLRA2与CNTN4论文，理解一个模型表型或细胞形态指标如何支持有限结论。",
+      "task_purpose": "训练对照、记录、重复和证据边界意识。",
+      "possible_methods": [
+        "实验记录整理",
+        "基础图像质控",
+        "单一指标统计"
+      ],
+      "possible_output": "规范记录、质控表或指标摘要",
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "具体 protocol、准入、安全培训、样本资源和指导方式均需导师或实验室另行确认。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "建议准备遗传学、分子生物学、基础统计和医学遗传学术语。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1007/s11684-023-1005-y",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1007/s00439-021-02429-2",
+        "https://doi.org/10.1093/hmg/ddab233",
+        "https://life.csu.edu.cn/info/1042/2564.htm",
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E11"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若走计算路径，可能需要R或Python、基础命令行、变异注释和结果可视化。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1007/s11684-023-1005-y",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1007/s00439-021-02429-2",
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E11"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若走实验路径，可能需要理解分子克隆、细胞或动物模型、显微成像与实验对照的基本逻辑。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.177032",
+        "https://doi.org/10.1136/jmedgenet-2022-108425",
+        "https://doi.org/10.1093/hmg/ddab233",
+        "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E5",
+        "E11"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于公开证据，入门成本主要来自人类遗传学、变异分析和功能验证三类证据语言的衔接；完整干湿结合路线通常需要分阶段学习。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://doi.org/10.1172/jci.insight.177032",
+      "https://doi.org/10.1007/s11684-023-1005-y",
+      "https://doi.org/10.1136/jmedgenet-2022-108425",
+      "https://doi.org/10.1007/s00439-021-02429-2",
+      "https://doi.org/10.1093/hmg/ddab233",
+      "https://life.csu.edu.cn/info/1042/2564.htm",
+      "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E11"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习人类遗传学与高度近视/自闭症基础",
+        "认识变异、表型和模型术语",
+        "练习阅读遗传证据图"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "论文证据卡片"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E5",
+        "E6",
+        "E11"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "整理一个基因证据链",
+        "复现一个公开图表",
+        "完成一个数据或图像质控练习"
+      ],
+      "possible_outputs": [
+        "证据矩阵",
+        "复现脚本",
+        "质控清单"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确边界下提出一个变异解释问题",
+        "设计可证伪的比较方案"
+      ],
+      "possible_outputs": [
+        "小型研究方案",
+        "带限制说明的分析报告"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E11"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "公共身份、导师资格、研究方向和方法只来自中南大学官方页面；AI整理仅依据本导师已采用的正式论文和官方方向。页面不纳入未由公开学术证据支持的内部评价、资源信息或培养承诺；可能任务与成长路径仅为条件式学习参考，不代表真实实验室安排。",
+  "update_status": "verified",
+  "summary": {
+    "text": "官方页面显示，胡正茂为中南大学生命科学学院遗传学系研究员、博士生导师和硕士生导师，公开研究聚焦人类遗传性疾病致病基因鉴定与功能研究，重点包括高度近视和儿童自闭症。基于五篇官网代表论文，可进一步理解其公开研究线索涉及非编码调控、罕见变异、高度近视基因、体细胞NF1变异和CNTN4相关神经细胞表型。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1172/jci.insight.177032",
+      "https://doi.org/10.1007/s11684-023-1005-y",
+      "https://doi.org/10.1136/jmedgenet-2022-108425",
+      "https://doi.org/10.1007/s00439-021-02429-2",
+      "https://doi.org/10.1093/hmg/ddab233",
+      "https://life.csu.edu.cn/info/1042/2564.htm",
+      "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E11"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "官方身份、独立 ORCID 桥接、五篇官网代表论文、历史候选排除与预印本去重已完成 v1.0.4 机械核验；人工身份确认、页面内容审核、featured 选择和公开发布授权仍待项目负责人完成。",
+  "search_keywords": [
+    "human genetics",
+    "hereditary disease",
+    "high myopia",
+    "autism",
+    "medical genetics",
+    "rare variants",
+    "GLRA2",
+    "CNTN4",
+    "PITX2",
+    "TRMT2B",
+    "NF1",
+    "exome sequencing"
+  ],
+  "tags": [
+    "遗传性疾病",
+    "高度近视",
+    "儿童自闭症",
+    "医学遗传学"
+  ],
+  "version": "1.0.4",
+  "publication_status": "review_pending",
+  "report_path": "reports/hu-zhengmao.md"
+}

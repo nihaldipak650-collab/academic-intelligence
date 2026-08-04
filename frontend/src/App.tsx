@@ -9,6 +9,7 @@ import { AppShell } from "./components/AppShell";
 import { AdvisorDataProvider } from "./data/AdvisorDataContext";
 import { AdvisorDetailPage } from "./pages/AdvisorDetailPage";
 import { AdvisorListPage } from "./pages/AdvisorListPage";
+import { PlatformHomePage } from "./pages/PlatformHomePage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,14 +27,14 @@ export default function App() {
       <HashRouter>
         <ScrollToTop />
         <Routes>
+          <Route index element={<PlatformHomePage />} />
           <Route element={<AppShell />}>
-            <Route index element={<AdvisorListPage />} />
+            <Route path="advisors" element={<AdvisorListPage />} />
             <Route path="advisor/:id" element={<AdvisorDetailPage />} />
-            <Route path="*" element={<AdvisorListPage />} />
           </Route>
+          <Route path="*" element={<PlatformHomePage />} />
         </Routes>
       </HashRouter>
     </AdvisorDataProvider>
   );
 }
-

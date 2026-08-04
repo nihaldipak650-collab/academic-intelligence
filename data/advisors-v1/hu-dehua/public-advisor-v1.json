@@ -1,0 +1,749 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "hu-dehua",
+  "record_created_at": "2026-08-04",
+  "migrated_at": "2026-08-04",
+  "name_zh": {
+    "value": "胡德华",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+    "source_ref": "evidence-manifest-v1.json#E22",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Dehua Hu",
+    "value_en": "Dehua Hu",
+    "source_url": "https://www.jmir.org/2024/1/e48564",
+    "source_ref": "evidence-manifest-v1.json#E13",
+    "source_authority": "publication",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+    "source_ref": "evidence-manifest-v1.json#E22",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院生物医学信息学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+    "source_ref": "evidence-manifest-v1.json#E22:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+    "source_ref": "evidence-manifest-v1.json#E22:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_ref": "evidence-manifest-v1.json#E22:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    {
+      "value": "生命科学学院副院长",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_ref": "evidence-manifest-v1.json#E22:F3",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_ref": "evidence-manifest-v1.json#E22",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": "hudehua2000@163.com",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_ref": "evidence-manifest-v1.json#E22:F8",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "official_phone": {
+      "value": "0731-82650240",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_ref": "evidence-manifest-v1.json#E22:F8",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "lab_address": {
+      "value": "湖南省长沙市桐梓坡路172号 生命科学学院生物医学信息学系",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_ref": "evidence-manifest-v1.json#E22:F8",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    }
+  },
+  "summary": {
+    "text": "官方资料确认胡德华为中南大学生命科学学院生物医学信息学系教授、博士生导师和学院副院长，研究方向包括医药信息管理、医学人工智能、生物医学大数据挖掘与健康信息学。公开论文显示，其研究可能连接临床风险预测、医学影像深度学习、健康信息素养以及网络谣言和公共舆情分析。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+      "https://doi.org/10.3390/diagnostics13193107",
+      "https://doi.org/10.3390/ijerph192013601",
+      "https://www.jmir.org/2024/1/e48564",
+      "https://doi.org/10.3389/fpubh.2025.1438854",
+      "https://life.csu.edu.cn/info/1042/2502.htm"
+    ],
+    "evidence_ids": [
+      "E2",
+      "E4",
+      "E6",
+      "E13",
+      "E16",
+      "E22"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "research_directions_original": [
+    {
+      "text": "医药信息管理。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E22"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "医学人工智能。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E22"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "生物医学大数据挖掘。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E22"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "健康信息学。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E22"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "医学人工智能与临床风险预测",
+      "explanation_zh": "基于公开论文，可能通过电子病历、医学影像和深度学习模型预测重症患者结局或肿瘤相关指标，并用可解释方法理解模型特征。",
+      "undergraduate_meaning": "本科生可先理解数据清洗、训练/验证划分、分类指标和模型解释，不应把论文模型直接视为可用于临床决策的工具。",
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "生物医学大数据挖掘",
+      "explanation_zh": "公开证据可能涉及 MIMIC-IV 临床数据、FDG-PET/CT 影像、微博文本和搜索指数等异构数据，并采用机器学习、统计分析或主题模型提取模式。",
+      "undergraduate_meaning": "适合从可复现的数据字典、特征表、分析脚本和结果核对入手。",
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E16",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "健康信息学与信息素养",
+      "explanation_zh": "疫苗信息素养研究通过量表开发和因子分析考察公众获取、理解与判断健康信息的能力。",
+      "undergraduate_meaning": "本科生可学习问卷变量编码、量表结构、信效度概念和结果可视化。",
+      "evidence_ids": [
+        "E6",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "公共健康信息管理与网络舆情",
+      "explanation_zh": "谣言与公共舆情论文可能通过网页抓取、内容编码、情感分析和主题模型研究信息传播及政策调整前后的讨论变化。",
+      "undergraduate_meaning": "本科生可从公开文本的合规采集、标注规范、分类一致性和主题解释边界入手。",
+      "evidence_ids": [
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于电子病历的深度神经网络可能如何预测 ICU 急性心衰患者院内死亡风险，并用 SHAP 解释关键特征？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "FDG-PET/CT 影像与临床信息可能如何用于预测非小细胞肺癌的 Ki-67 水平和预后？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/diagnostics13193107",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E4",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "如何开发并初步验证面向中国居民的疫苗信息素养量表，以及不同特征与素养水平之间可能存在什么关系？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/ijerph192013601",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "重大公共卫生事件中，网络谣言、情感与讨论主题可能如何随政策阶段变化，并可如何被结构化分析？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://www.jmir.org/2024/1/e48564",
+        "https://doi.org/10.3389/fpubh.2025.1438854",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "基于公开证据，可能使用电子病历数据预处理、SMOTE、BPNN/RNN、传统机器学习对照、阈值调整和 SHAP 模型解释。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用 FDG-PET/CT 影像、DenseNet201、影像—临床联合建模以及 Kaplan–Meier 和 Cox 生存分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/diagnostics13193107",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E4",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用在线横断面调查、量表条目设计、探索性因子分析和验证性因子分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/ijerph192013601",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用网页抓取、标题模糊去重、内容编码、一致性检验和卡方比较分析网络谣言。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://www.jmir.org/2024/1/e48564",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E13",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开证据，可能使用百度指数、微博文本、SKEP 情感分析、LDA 主题模型、Gensim、余弦相似度和桑基图。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3389/fpubh.2025.1438854",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E16",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "临床预测研究可能遵循“定义结局与队列—清洗并平衡数据—训练和比较模型—调整阈值—解释关键特征”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "医学影像研究可能遵循“整理影像与临床标签—构建影像模型—融合临床变量—评估分类与生存结果”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/diagnostics13193107",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E4",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "健康信息素养研究可能遵循“设计或翻译条目—在线调查—探索性因子分析—验证性因子分析—解释群体差异”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/ijerph192013601",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "网络健康信息研究可能遵循“合规获取公开文本—去重或编码—质量控制—情感/主题/统计分析—形成边界清晰的解释”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://www.jmir.org/2024/1/e48564",
+        "https://doi.org/10.3389/fpubh.2025.1438854",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E2",
+    "E4",
+    "E6",
+    "E13",
+    "E16",
+    "E22"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "核心 Evidence 已完成结构化核验；精选代表作仍待项目负责人单独人工选择。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "建立临床数据字段与缺失值检查表",
+      "task_context": "围绕公开临床预测论文的变量和数据处理步骤。",
+      "task_purpose": "帮助理解模型输入、缺失值、类别不平衡与数据泄漏风险。",
+      "possible_methods": [
+        "整理数据字典",
+        "检查缺失与异常值",
+        "记录预处理规则",
+        "复核训练/验证划分"
+      ],
+      "possible_output": "字段说明表、数据质量报告或可复现预处理脚本。",
+      "evidence_ids": [
+        "E2",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。"
+    },
+    {
+      "task": "复现基础分类模型和评价指标",
+      "task_context": "围绕公开的深度学习或医学影像预测任务建立受限复现。",
+      "task_purpose": "比较不同模型和阈值下准确率、召回率、F1 与 AUC。",
+      "possible_methods": [
+        "运行基线模型",
+        "计算评价指标",
+        "制作混淆矩阵",
+        "记录参数和随机种子"
+      ],
+      "possible_output": "可复现 notebook、指标对比表或简短方法说明。",
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。"
+    },
+    {
+      "task": "辅助健康信息量表数据整理",
+      "task_context": "围绕疫苗信息素养量表的公开结构进行方法学习。",
+      "task_purpose": "理解条目编码、描述统计和因子分析前的数据准备。",
+      "possible_methods": [
+        "建立变量编码表",
+        "检查反向条目",
+        "绘制分布",
+        "复核缺失规则"
+      ],
+      "possible_output": "变量字典、描述统计表或质量检查记录。",
+      "evidence_ids": [
+        "E6",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。"
+    },
+    {
+      "task": "构建公共健康文本标注或主题分析样例",
+      "task_context": "围绕公开谣言和微博研究设计小规模、合规的数据练习。",
+      "task_purpose": "学习采集边界、去重、标注一致性、情感或主题结果解释。",
+      "possible_methods": [
+        "制定标注手册",
+        "抽样标注公开文本",
+        "计算一致性",
+        "运行情感或主题模型"
+      ],
+      "possible_output": "标注规范、小型数据集、分析脚本或结果可视化。",
+      "evidence_ids": [
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "可能需要基础 Python 或 R、表格数据处理、统计学和可复现记录能力。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+        "https://doi.org/10.3390/diagnostics13193107",
+        "https://doi.org/10.3390/ijerph192013601",
+        "https://www.jmir.org/2024/1/e48564",
+        "https://doi.org/10.3389/fpubh.2025.1438854",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E6",
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "涉及临床预测时，可能需要理解分类指标、训练/验证划分、类别不平衡和模型解释的基本概念。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+        "https://doi.org/10.3390/diagnostics13193107",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "涉及问卷和健康信息研究时，可能需要描述统计、量表信效度和因子分析的基础。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.3390/ijerph192013601",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "涉及网络文本时，可能需要数据采集合规、文本清洗、标注一致性、情感分析或主题模型的基础。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://www.jmir.org/2024/1/e48564",
+        "https://doi.org/10.3389/fpubh.2025.1438854",
+        "https://life.csu.edu.cn/info/1042/2502.htm"
+      ],
+      "evidence_ids": [
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "公开方法跨度较大，可能同时涉及医学背景、统计学、机器学习、问卷测量和文本分析；适合先选择一个边界明确的数据模块，再逐步补充领域知识与方法。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+      "https://doi.org/10.3390/diagnostics13193107",
+      "https://doi.org/10.3390/ijerph192013601",
+      "https://www.jmir.org/2024/1/e48564",
+      "https://doi.org/10.3389/fpubh.2025.1438854",
+      "https://life.csu.edu.cn/info/1042/2502.htm"
+    ],
+    "evidence_ids": [
+      "E2",
+      "E4",
+      "E6",
+      "E13",
+      "E16",
+      "E22"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习 Python/R、统计与研究伦理基础",
+        "阅读一篇核心论文并复现图表或指标",
+        "建立规范的数据与代码记录"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "文献卡片",
+        "可运行 notebook"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E6",
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是依据公开研究流程整理的通用成长路径，具体安排需通过官方渠道与导师确认。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "承担数据字典、清洗、标注或基线模型中的单一模块",
+        "与原论文结果进行受限核对",
+        "记录失败案例与不确定性"
+      ],
+      "possible_outputs": [
+        "数据质量报告",
+        "基线模型对比",
+        "标注一致性报告"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E6",
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是依据公开研究流程整理的通用成长路径，具体安排需通过官方渠道与导师确认。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确边界下提出可检验的小问题",
+        "完成数据、方法、结果和限制的闭环",
+        "准备可复现材料与阶段汇报"
+      ],
+      "possible_outputs": [
+        "小型复现项目",
+        "方法备忘录",
+        "阶段性研究报告"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E6",
+        "E13",
+        "E16",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是依据公开研究流程整理的通用成长路径，具体安排需通过官方渠道与导师确认。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "本页面仅依据官方身份与公开论文证据整理。可能任务、前置技能、学习成本和成长路径均为有证据边界的条件性推导，不代表真实实验室安排、招生名额、经费、指导方式、录取承诺或毕业保证；具体情况需通过官方渠道与导师确认。",
+  "update_status": "verified",
+  "data_status_note": "官方身份、正确 ORCID 与核心研究证据已完成结构化核验；当前资料仍待项目负责人完成人工发布审核。",
+  "search_keywords": [
+    "胡德华",
+    "Dehua Hu",
+    "中南大学",
+    "生命科学学院",
+    "生物医学信息学系",
+    "医药信息管理",
+    "医学人工智能",
+    "生物医学大数据挖掘",
+    "健康信息学",
+    "临床风险预测",
+    "网络舆情"
+  ],
+  "tags": [
+    "医学人工智能",
+    "生物医学大数据",
+    "健康信息学",
+    "医药信息管理",
+    "网络健康信息"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/hu-dehua.md"
+}

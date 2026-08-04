@@ -1,12 +1,20 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { useAdvisorData } from "../data/AdvisorDataContext";
 import { FeedbackLink } from "./FeedbackLink";
+import "../styles/advisor-app.css";
 
 export function AppShell() {
+  const { snapshot } = useAdvisorData();
+  const reviewMode = snapshot?.mode === "review";
+
   return (
-    <div className="app-shell">
+    <div className="app-shell advisor-app">
+      <a className="skip-link" href="#main-content">
+        跳到主要内容
+      </a>
       <header className="navbar">
         <div className="navbar__inner">
-          <Link className="brand" to="/" aria-label="返回导师信息库首页">
+          <Link className="brand" to="/advisors" aria-label="导师信息库">
             <span className="brand__seal" aria-hidden="true">
               生
             </span>
@@ -16,12 +24,19 @@ export function AppShell() {
             </span>
           </Link>
           <nav aria-label="主导航">
-            <NavLink to="/">导师一览</NavLink>
+            <Link to="/">返回生命科学平台</Link>
+            <NavLink to="/advisors">导师一览</NavLink>
             <FeedbackLink compact />
           </nav>
         </div>
       </header>
-      <main>
+      {reviewMode && (
+        <aside className="review-status-bar" aria-label="本地审核预览状态">
+          <span>本地审核预览</span>
+          <span>仅本机可见 · 尚未正式上线</span>
+        </aside>
+      )}
+      <main id="main-content" tabIndex={-1}>
         <Outlet />
       </main>
       <footer className="footer">
@@ -33,4 +48,3 @@ export function AppShell() {
     </div>
   );
 }
-

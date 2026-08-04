@@ -1,0 +1,645 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "li-jiada",
+  "record_created_at": "2026-08-04",
+  "migrated_at": "2026-08-04",
+  "name_zh": {
+    "value": "李家大",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+    "source_ref": "evidence-manifest-v1.json#E45",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Jia-Da Li",
+    "value_en": "Jia-Da Li",
+    "source_url": "https://doi.org/10.1038/s41380-025-03187-7",
+    "source_ref": "evidence-manifest-v1.json#E22",
+    "source_authority": "publication",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+    "source_ref": "evidence-manifest-v1.json#E45",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院遗传学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+    "source_ref": "evidence-manifest-v1.json#E45",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "研究员",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+    "source_ref": "evidence-manifest-v1.json#E45:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "source_ref": "evidence-manifest-v1.json#E45:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    {
+      "value": "生命科学学院院长",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "source_ref": "evidence-manifest-v1.json#E45:F3",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "source_ref": "evidence-manifest-v1.json#E45",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": "lijiada@csu.edu.cn",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "source_ref": "evidence-manifest-v1.json#E45:F8",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "summary": {
+    "text": "综合官方主页与公开论文，李家大的公开研究方向聚焦神经发育障碍的遗传调控机制。已核验的核心论文可能覆盖CNTNAP2与Necdin–SynGAP相关的孤独症/突触机制，以及Cry1和Bmal1相关的昼夜节律、多巴胺信号与ADHD样表型，并使用细胞、小鼠、行为学、电生理和分子验证形成证据链。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1038/s41392-023-01431-6",
+      "https://doi.org/10.1172/jci.insight.170434",
+      "https://doi.org/10.1186/s12993-025-00287-w",
+      "https://doi.org/10.1038/s41380-025-03187-7",
+      "https://life.csu.edu.cn/info/1042/2566.htm"
+    ],
+    "evidence_ids": [
+      "E5",
+      "E10",
+      "E17",
+      "E22",
+      "E45"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "research_directions_original": [
+    {
+      "text": "神经发育障碍的遗传调控机制。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E45"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "综合运用遗传学、生物化学、分子生物学、电生理和行为学技术，分析ASD、ADHD、GnRH缺陷疾病等神经发育障碍的遗传学基础。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E45"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "在细胞和小鼠水平探索上述疾病的分子病理机制及新的诊疗靶点。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E45"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "孤独症相关突触蛋白稳态与行为机制",
+      "explanation_zh": "基于公开论文，研究可能关注CNTNAP2胞内结构域以及Necdin–SynGAP蛋白稳态如何影响突触功能和孤独症相关行为。",
+      "undergraduate_meaning": "本科生可从基因—蛋白—突触—行为之间的证据链入手，区分分子互作、细胞读出和动物行为结果。",
+      "evidence_ids": [
+        "E5",
+        "E22",
+        "E45"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "昼夜节律基因、 多巴胺信号与ADHD样表型",
+      "explanation_zh": "依据Cry1Δ11和多巴胺能神经元Bmal1敲除研究，公开证据可能连接昼夜节律基因、D1受体或多巴胺释放与ADHD样行为。",
+      "undergraduate_meaning": "本科生可学习如何把基因工程小鼠、行为学、电生理和光纤记录结果组织成可检验的机制链。",
+      "evidence_ids": [
+        "E10",
+        "E17",
+        "E45"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "神经发育障碍的遗传模型与机制验证",
+      "explanation_zh": "官方方向和代表论文显示，研究可能从疾病相关基因或变异出发，在细胞与小鼠模型中验证分子病理机制并评估救援策略。",
+      "undergraduate_meaning": "适合从文献证据表、模型定义、表型指标和因果验证边界开始，而不能把动物结果直接等同于临床疗效。",
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开证据，CNTNAP2胞内结构域与Necdin–SynGAP蛋白稳态分别可能如何影响突触功能和社交行为？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1038/s41380-025-03187-7"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开论文，Cry1Δ11或多巴胺能神经元Bmal1缺失可能如何改变多巴胺信号并产生ADHD样表型？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w"
+      ],
+      "evidence_ids": [
+        "E10",
+        "E17"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "公开研究中，细胞或小鼠模型的分子、神经生理和行为表型可如何通过遗传或病毒救援实验形成因果证据链？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "基于官方方向与公开论文，可能使用基因工程小鼠、条件性敲除或疾病相关突变模型，并结合基因型和分子表达验证。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7",
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开研究，可能使用动物行为学、脑片电生理、免疫荧光以及多巴胺光纤记录等神经功能方法。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7",
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "公开证据还可能涉及蛋白互作与稳定性分析、细胞实验、组织成像和病毒介导的功能救援。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1038/s41380-025-03187-7",
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E22",
+        "E45"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于公开证据，研究可能遵循“疾病相关基因或变异—细胞/小鼠模型—分子与行为表型—机制验证—救援实验”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7",
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "昼夜节律与ADHD方向可能遵循“构建Cry1或Bmal1模型—量化活动与注意相关行为—检测多巴胺信号和神经电活动—药理或遗传验证”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w"
+      ],
+      "evidence_ids": [
+        "E10",
+        "E17"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "突触蛋白稳态方向可能遵循“筛选蛋白互作—验证稳定性变化—检测突触形态和电生理—在特定脑区实施救援”的流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1038/s41380-025-03187-7"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E5",
+    "E10",
+    "E17",
+    "E22",
+    "E45"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "核心Evidence已完成身份和元数据核验；featured仍待项目负责人单独人工选择。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "神经发育障碍核心论文证据表整理",
+      "task_context": "围绕ASD、ADHD及突触稳态论文，可能整理基因、模型、实验读出与结论边界。",
+      "task_purpose": "训练从论文中区分公开事实、实验结果和机制推断。",
+      "possible_methods": [
+        "PubMed与出版社元数据核对",
+        "论文图表阅读",
+        "结构化证据表"
+      ],
+      "possible_output": "带DOI、模型和证据层级的文献表或短报告",
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是依据公开论文推导的可能训练任务，不代表实验室真实安排、当前名额或招募承诺。"
+    },
+    {
+      "task": "行为学与神经信号结果的受限复现或质量核对",
+      "task_context": "若获得公开补充数据或图表，本科生可能复核行为指标、多巴胺光纤记录或电生理结果的统计展示。",
+      "task_purpose": "理解数据处理、可视化和结果解释边界。",
+      "possible_methods": [
+        "公开数据或图表数字化",
+        "基础统计与可视化",
+        "分析记录与版本控制"
+      ],
+      "possible_output": "可复现notebook、图表核对记录或质量报告",
+      "evidence_ids": [
+        "E10",
+        "E17",
+        "E22"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "是否存在可用公开数据和具体任务需另行确认；不代表学生可接触内部数据或动物实验。"
+    },
+    {
+      "task": "蛋白稳态与突触机制图谱整理",
+      "task_context": "可能围绕CNTNAP2、Necdin、SynGAP及相关救援实验整理分子互作和因果链。",
+      "task_purpose": "建立从蛋白调控到突触与行为表型的机制阅读框架。",
+      "possible_methods": [
+        "通路图绘制",
+        "实验读出分类",
+        "不同论文结果对照"
+      ],
+      "possible_output": "机制图、证据矩阵或组会型汇报材料",
+      "evidence_ids": [
+        "E5",
+        "E22"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是公开证据导向的学习任务，不代表实验室真实培养计划或成果保证。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "基于公开研究，可能需要遗传学、分子生物学、神经生物学和基础统计知识。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7",
+        "https://life.csu.edu.cn/info/1042/2566.htm"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "阅读动物模型研究时，建议理解基因型、对照组、行为指标、电生理或光纤记录的基本概念。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7"
+      ],
+      "evidence_ids": [
+        "E10",
+        "E17",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若承担数据或文献整理，可能需要英文论文阅读、表格处理、基础Python/R和可复现记录能力。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41392-023-01431-6",
+        "https://doi.org/10.1172/jci.insight.170434",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41380-025-03187-7"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "公开方法跨度可能涵盖分子遗传、动物模型、神经电生理和行为分析；建议先从一条清晰的论文证据链与单一数据模块入手，再逐步补充实验背景。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1038/s41392-023-01431-6",
+      "https://doi.org/10.1172/jci.insight.170434",
+      "https://doi.org/10.1186/s12993-025-00287-w",
+      "https://doi.org/10.1038/s41380-025-03187-7",
+      "https://life.csu.edu.cn/info/1042/2566.htm"
+    ],
+    "evidence_ids": [
+      "E5",
+      "E10",
+      "E17",
+      "E22",
+      "E45"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习神经发育障碍与遗传模型基础",
+        "完成核心论文证据卡和术语表",
+        "练习基础统计与可复现记录"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "文献证据卡",
+        "可运行notebook或图表核对记录"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22",
+        "E45"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是依据公开研究方法整理的通用成长路径，具体安排需通过官方渠道与导师确认。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "承担文献、图表或公开数据中的单一模块",
+        "记录模型、对照与结果边界",
+        "与原论文结论进行受限核对"
+      ],
+      "possible_outputs": [
+        "数据质量记录",
+        "机制图或证据矩阵",
+        "阶段性复现报告"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是公开证据导向的可能路径，不代表真实实验室任务或招生承诺。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确边界下提出可检验的小问题",
+        "完成方法、结果、限制和复现材料闭环",
+        "进行阶段汇报并记录不确定性"
+      ],
+      "possible_outputs": [
+        "小型复现项目",
+        "方法备忘录",
+        "阶段性研究报告"
+      ],
+      "evidence_ids": [
+        "E5",
+        "E10",
+        "E17",
+        "E22"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "能否进入独立模块取决于实际项目、伦理权限和指导安排，不构成培养或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "本页面仅依据中南大学官方身份与公开论文证据整理。可能任务、前置技能、学习成本和成长路径均为有证据边界的条件性推导，不代表真实实验室安排、导师风格、实验室氛围、经费、招生名额、录取承诺、成果承诺或毕业保证；具体情况需通过官方渠道与导师确认。",
+  "update_status": "verified",
+  "data_status_note": "官方身份与研究证据已完成结构化核验；当前资料仍待项目负责人完成人工发布审核。",
+  "search_keywords": [
+    "李家大",
+    "Jia-Da Li",
+    "神经发育障碍",
+    "孤独症",
+    "ASD",
+    "多动症",
+    "ADHD",
+    "CNTNAP2",
+    "Necdin",
+    "SynGAP",
+    "Cry1",
+    "Bmal1",
+    "多巴胺",
+    "遗传学",
+    "小鼠模型",
+    "电生理"
+  ],
+  "tags": [
+    "神经发育障碍",
+    "孤独症机制",
+    "ADHD机制",
+    "分子遗传学",
+    "动物模型",
+    "神经电生理"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/li-jiada.md"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "chen-miao",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-03",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-9311-3466",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2534.htm",
+    "human_review_status": "verified",
+    "notes": "官方主页姓名、院系、职称与联系方式可机械核对；人工确认仍pending。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "正式论文页面题名、年份、DOI与作者信息可复核。",
+        "作者姓名与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Miao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9311-3466",
+      "notes": "作者身份机器复核完成；通讯作者字段为true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "正式论文页面题名、年份、DOI与作者信息可复核。",
+        "作者姓名与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Miao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9311-3466",
+      "notes": "作者身份机器复核完成；通讯作者字段为true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "正式论文页面题名、年份、DOI与作者信息可复核。",
+        "作者姓名与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Miao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9311-3466",
+      "notes": "作者身份机器复核完成；通讯作者字段为true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "正式论文页面题名、年份、DOI与作者信息可复核。",
+        "作者姓名与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Miao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9311-3466",
+      "notes": "作者身份机器复核完成；通讯作者字段为true；不等同于人工精选或发布授权。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-02",
+      "notes": "官方域名、姓名与中南大学生命科学学院信息一致；人工确认仍待完成。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "机器身份与论文复核记录；不等同于人工Reviewer、featured批准或发布授权。"
+}

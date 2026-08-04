@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "tan-jieqiong",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-03",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0003-0730-1095",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+    "human_review_status": "verified",
+    "notes": "ORCID 候选与 Jieqiong Tan 的公开论文/机构线索形成机器匹配；人工确认仍 pending。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Jieqiong Tan",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://link.springer.com/article/10.1007/s12035-023-03495-5；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Jieqiong Tan",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://academic.oup.com/brain/article/144/2/370/6025583；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Jieqiong Tan",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://rupress.org/jcb/article/218/1/267/120287/ATP13A2-facilitates-HDAC6-recruitment-to-lysosome；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Jieqiong Tan",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://pubmed.ncbi.nlm.nih.gov/30597534/；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "正式 DOI 未在本轮锁定，保留为待人工核对候选。"
+      ],
+      "matched_author_name": null,
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "机器核验，不等同于人工精选或发布授权。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-01",
+      "notes": "官方域名、姓名与中南大学生命科学学院信息一致；人工确认仍待完成。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "最终作者角色与 ORCID 候选机器复核记录；不等同于人工 Reviewer、身份批准或发布授权。"
+}

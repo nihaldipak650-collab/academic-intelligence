@@ -1,0 +1,2258 @@
+{
+  "schema_version": "1.0.0",
+  "roster_id": "life-sciences-faculty-roster-v1",
+  "scope": "college_faculty",
+  "record_created_at": "2026-08-01",
+  "last_verified_at": "2026-08-01",
+  "official_source": {
+    "name": "中南大学生命科学学院官网“师资队伍”",
+    "url": "https://life.csu.edu.cn/szdw.htm"
+  },
+  "snapshot_comparison": {
+    "user_snapshot_date": "2026-08-01",
+    "user_snapshot_count": 96,
+    "official_snapshot_date": "2026-08-01",
+    "official_snapshot_count": 96,
+    "user_only_names": [],
+    "official_only_names": [],
+    "normalized_name_differences": [],
+    "result": "exact_match"
+  },
+  "counts": {
+    "faculty_total": 96,
+    "doctoral_supervisors": 35,
+    "masters_supervisors": 48,
+    "both_types_explicitly_listed": 0,
+    "type_needs_verification": 13,
+    "profile_pages_accessible": 74,
+    "profile_pages_unavailable": 22
+  },
+  "people": [
+    {
+      "person_id": "chen-chao",
+      "name_zh": "陈超",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2563.htm",
+      "department": "遗传学系",
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:59:53+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "chen-guodong",
+      "name_zh": "陈国栋",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2549.htm",
+      "department": "遗传学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:03:47+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "chen-huiyong",
+      "name_zh": "陈慧勇",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2529.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:46:23+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "chen-miao",
+      "name_zh": "陈苗",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2534.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:06:54+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "chen-shuhua",
+      "name_zh": "陈淑华",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:13:44+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "chen-ting",
+      "name_zh": "谌婷",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "遗传学系",
+      "professional_title": "讲师",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:14:25+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "deng-meichun",
+      "name_zh": "邓梅春",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2539.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:45:12+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "deng-suixin",
+      "name_zh": "邓穗馨",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+      "department": "遗传学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T12:55:04+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "duan-ranhui",
+      "name_zh": "段然慧",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2559.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:51:27+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "fan-liangliang",
+      "name_zh": "范亮亮",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2514.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:49:05+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "guo-hui",
+      "name_zh": "郭辉",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+      "department": "遗传学系",
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T14:05:40+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。"
+      ]
+    },
+    {
+      "person_id": "guo-yi",
+      "name_zh": "虢毅",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2500.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:34:22+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "han-xu",
+      "name_zh": "韩旭",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2535.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "特聘教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:10:07+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "he-hailun",
+      "name_zh": "何海伦",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2540.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:47:20+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "hu-dehua",
+      "name_zh": "胡德华",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:42:30+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。"
+      ]
+    },
+    {
+      "person_id": "hu-jingping",
+      "name_zh": "胡景平",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2531.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:00:36+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "hu-qian",
+      "name_zh": "胡乾",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "遗传学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:02:06+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "hu-zhengmao",
+      "name_zh": "胡正茂",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+      "department": "遗传学系",
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T14:02:24+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。"
+      ]
+    },
+    {
+      "person_id": "huang-biyun",
+      "name_zh": "黄碧云",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T17:02:12+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "huang-hao",
+      "name_zh": "黄皓",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2511.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:41:31+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "huang-wen",
+      "name_zh": "黄文",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2555.htm",
+      "department": "遗传学系",
+      "professional_title": "副研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:38:05+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "jia-xiangbin",
+      "name_zh": "贾相斌",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2546.htm",
+      "department": "遗传学系",
+      "professional_title": "助理研究员",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T12:49:58+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。"
+      ]
+    },
+    {
+      "person_id": "jiang-hao",
+      "name_zh": "姜浩",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2499.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:06:34+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "kuang-wenjun",
+      "name_zh": "匡文君",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "细胞生物学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:55:37+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "li-bei",
+      "name_zh": "李蓓",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2495.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T21:53:58+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "li-bin",
+      "name_zh": "李滨",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2490.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T17:01:27+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "li-faxiang",
+      "name_zh": "李发祥",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+      "department": "遗传学系",
+      "professional_title": "特聘教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:43:39+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。"
+      ]
+    },
+    {
+      "person_id": "li-jiada",
+      "name_zh": "李家大",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "department": "遗传学系",
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T14:09:04+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。"
+      ]
+    },
+    {
+      "person_id": "li-jie",
+      "name_zh": "李杰",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2513.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:46:55+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "li-jinchen",
+      "name_zh": "李津臣",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2483.htm",
+      "department": null,
+      "professional_title": "特聘教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T16:26:16+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "li-shanni",
+      "name_zh": "李善妮",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2503.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:46:04+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "li-xing",
+      "name_zh": "李星",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2538.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:21:50+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "li-zhongmin",
+      "name_zh": "李忠民",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2496.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T22:07:19+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "li-zhuo",
+      "name_zh": "李卓",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2561.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:55:51+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "liang-desheng",
+      "name_zh": "梁德生",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2567.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T14:12:59+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "liang-long",
+      "name_zh": "梁龙",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2532.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:03:17+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "liu-canhua",
+      "name_zh": "刘灿华",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "讲师",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:58:43+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "liu-haixia",
+      "name_zh": "刘海霞",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T17:04:23+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "liu-huaying",
+      "name_zh": "刘华英",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2474.htm",
+      "department": null,
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T11:40:05+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "liu-jianwei",
+      "name_zh": "刘建炜",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2497.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T22:11:47+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "liu-jing",
+      "name_zh": "刘静",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T12:39:37+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。"
+      ]
+    },
+    {
+      "person_id": "liu-kefu",
+      "name_zh": "刘可夫",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物医学信息学系",
+      "professional_title": "讲师",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T17:00:08+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "liu-mujun",
+      "name_zh": "刘慕君",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2509.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T00:02:24+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "liu-rui",
+      "name_zh": "刘瑞",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "细胞生物学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:56:40+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "liu-xionghao",
+      "name_zh": "刘雄昊",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2558.htm",
+      "department": "遗传学系",
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:48:51+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "luo-zhiyong",
+      "name_zh": "罗志勇",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2543.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T12:30:52+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "luo-yaping",
+      "name_zh": "骆亚萍",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:59:53+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "ma-changbei",
+      "name_zh": "马昌杯",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:34:39+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "ma-long",
+      "name_zh": "马龙",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2560.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:54:21+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "peng-xiaoqing",
+      "name_zh": "彭小清",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2554.htm",
+      "department": "遗传学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:30:22+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "qiu-jian",
+      "name_zh": "邱健",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2485.htm",
+      "department": null,
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T16:46:59+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "sheng-yue",
+      "name_zh": "盛岳",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2482.htm",
+      "department": null,
+      "professional_title": "特聘教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T16:03:38+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "su-haomiao",
+      "name_zh": "苏浩淼",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2525.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:25:03+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "su-zhifang",
+      "name_zh": "苏志芳",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2478.htm",
+      "department": null,
+      "professional_title": "研究馆员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T14:27:40+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "sun-shengjie",
+      "name_zh": "孙圣杰",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2494.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T21:47:35+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "sun-shuming",
+      "name_zh": "孙曙明",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2528.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:42:49+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "tan-jieqiong",
+      "name_zh": "谭洁琼",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:57:43+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "tang-lijun",
+      "name_zh": "汤立军",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2537.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:18:37+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "tang-lulu",
+      "name_zh": "唐璐璐",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2507.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:58:26+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。"
+      ]
+    },
+    {
+      "person_id": "tian-qi",
+      "name_zh": "田奇",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "遗传学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T12:45:38+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "wang-anli",
+      "name_zh": "王安莉",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2476.htm",
+      "department": null,
+      "professional_title": "高级工程师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T12:02:22+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "wang-lijun",
+      "name_zh": "王利君",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2472.htm",
+      "department": null,
+      "professional_title": "副研究馆员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T11:22:45+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "wang-shixiang",
+      "name_zh": "王诗翔",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T17:07:07+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "wang-zi",
+      "name_zh": "王梓",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:06:14+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "wen-doudou",
+      "name_zh": "文斗斗",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2508.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T00:00:13+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "wen-tingxiao",
+      "name_zh": "文庭孝",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2501.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:38:26+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "wu-lingqian",
+      "name_zh": "邬玲仟",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2568.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T14:14:44+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "wu-kunlu",
+      "name_zh": "吴坤陆",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:13:47+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "xia-jiahui",
+      "name_zh": "夏家辉",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2569.htm",
+      "department": "遗传学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T14:16:17+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "xia-lu",
+      "name_zh": "夏露",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2553.htm",
+      "department": "遗传学系",
+      "professional_title": "副研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:26:15+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "xiang-yu",
+      "name_zh": "向禹",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2481.htm",
+      "department": null,
+      "professional_title": "研究馆员/教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T15:42:46+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "xiang-rong",
+      "name_zh": "项荣",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2515.htm",
+      "department": "细胞生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:51:06+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": true,
+      "has_v1_advisor_data": true,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "该人员存在于web/advisors.json；此标记仅表示current_website_index。",
+        "仓库中已有完整v1导师五文件。"
+      ]
+    },
+    {
+      "person_id": "xiao-xiaojuan",
+      "name_zh": "萧小鹃",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2542.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T12:18:55+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "xie-wenzhao",
+      "name_zh": "谢文照",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2473.htm",
+      "department": null,
+      "professional_title": "副研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T11:35:26+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "xiong-dehui",
+      "name_zh": "熊德慧",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:00:38+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "xu-linyong",
+      "name_zh": "许林勇",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2475.htm",
+      "department": null,
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T11:51:23+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "yan-jinpeng",
+      "name_zh": "颜金鹏",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2512.htm",
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:44:48+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "yang-feilong",
+      "name_zh": "杨飞龙",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2479.htm",
+      "department": null,
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T14:39:34+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "yang-han",
+      "name_zh": "杨韩",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:57:27+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "yi-minhan",
+      "name_zh": "易敏寒",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2498.htm",
+      "department": "生物医学信息学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T22:21:20+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "yin-huaiqiong",
+      "name_zh": "尹怀琼",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2477.htm",
+      "department": null,
+      "professional_title": "研究馆员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T12:09:25+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "yuan-kai",
+      "name_zh": "袁凯",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2484.htm",
+      "department": null,
+      "professional_title": "研究员",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T16:42:54+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "yuan-ling",
+      "name_zh": "袁玲",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2557.htm",
+      "department": "遗传学系",
+      "professional_title": "特聘教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:46:39+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "zeng-zhaojun",
+      "name_zh": "曾赵军",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2541.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T11:57:23+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "zhang-shubing",
+      "name_zh": "张树冰",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2516.htm",
+      "department": "细胞生物学系",
+      "professional_title": "教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:54:52+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "zhang-wei",
+      "name_zh": "张伟",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物医学信息学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T16:58:21+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "zhang-ying",
+      "name_zh": "张颖",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物医学信息学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T16:56:35+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "zhao-yuetao",
+      "name_zh": "赵岳涛",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:54:53+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "zheng-chuan",
+      "name_zh": "郑川",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2471.htm",
+      "department": null,
+      "professional_title": "副研究馆员",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T10:31:50+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网结构化院系字段为空。"
+      ]
+    },
+    {
+      "person_id": "zheng-wei",
+      "name_zh": "郑伟",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2552.htm",
+      "department": "遗传学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "博导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:21:57+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "zhong-hui",
+      "name_zh": "钟慧",
+      "name_en": null,
+      "official_profile_url": "https://life.csu.edu.cn/info/1042/2527.htm",
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:36:32+08:00",
+      "profile_page_access_status": "accessible",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。"
+      ]
+    },
+    {
+      "person_id": "zhou-yefang",
+      "name_zh": "周叶方",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "细胞生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-05T23:57:57+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "zhu-feizhou",
+      "name_zh": "朱飞舟",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副教授",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T10:04:28+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "zhu-jingtan",
+      "name_zh": "朱京谭",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "遗传学系",
+      "professional_title": "特聘副教授",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T13:21:01+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "zhu-lipeng",
+      "name_zh": "朱里鹏",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "讲师",
+      "supervisor_types": [
+        "硕导"
+      ],
+      "type_status": "official_structured_confirmed",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:58:07+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "导师类型来自官网师资页结构化类型字段。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    },
+    {
+      "person_id": "zhu-min",
+      "name_zh": "朱敏",
+      "name_en": null,
+      "official_profile_url": null,
+      "department": "生物化学与分子生物学系",
+      "professional_title": "副研究员",
+      "supervisor_types": [],
+      "type_status": "needs_verification",
+      "faculty_roster_status": "current_official_faculty_roster",
+      "source_url": "https://life.csu.edu.cn/szdw.htm",
+      "last_verified_at": "2026-08-01",
+      "official_source_record_updated_at": "2026-05-06T09:59:10+08:00",
+      "profile_page_access_status": "no_profile_link",
+      "current_website_index": false,
+      "has_v1_advisor_data": false,
+      "notes": [
+        "官网未提供独立英文姓名字段，name_en保留null，未从网站索引反填。",
+        "官网结构化类型为空；不得推断导师身份。",
+        "官网列表未提供可访问个人页链接（链接为#）。"
+      ]
+    }
+  ]
+}

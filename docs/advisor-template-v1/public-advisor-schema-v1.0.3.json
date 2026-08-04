@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://academic-intelligence.local/schemas/public-advisor-schema-v1.0.3.json",
+  "title": "Academic Intelligence Public Advisor Contract v1.0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "advisor_id", "record_created_at", "migrated_at", "name_zh", "name_en",
+    "institution", "school_or_department", "position", "public_roles", "contact",
+    "research_directions_original", "research_directions_plain_language",
+    "research_questions", "main_techniques", "research_workflow",
+    "adopted_public_evidence_ids", "featured_publication_evidence_ids",
+    "featured_selection_status", "featured_selection_review", "publication_identity_status",
+    "possible_undergraduate_tasks", "prerequisite_skills", "learning_cost",
+    "generic_growth_path", "evidence_status", "confidence",
+    "public_fact_or_ai_synthesis", "no_evidence_reason", "boundary_statement",
+    "update_status", "summary", "data_status_note", "search_keywords", "tags",
+    "version", "publication_status", "report_path"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.3"},
+    "advisor_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "record_created_at": {"type": "string", "format": "date"},
+    "migrated_at": {"type": ["string", "null"], "format": "date"},
+    "name_zh": {"$ref": "#/$defs/sourced_value"},
+    "name_en": {"$ref": "#/$defs/sourced_value"},
+    "institution": {"$ref": "#/$defs/sourced_value"},
+    "school_or_department": {"$ref": "#/$defs/sourced_value"},
+    "position": {"$ref": "#/$defs/sourced_value"},
+    "public_roles": {"type": "array", "items": {"$ref": "#/$defs/sourced_value"}, "uniqueItems": true},
+    "contact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["official_profile_url", "official_lab_url", "official_email", "official_phone", "lab_address"],
+      "properties": {
+        "official_profile_url": {"$ref": "#/$defs/sourced_value"},
+        "official_lab_url": {"$ref": "#/$defs/sourced_value"},
+        "official_email": {"$ref": "#/$defs/sourced_value"},
+        "official_phone": {"$ref": "#/$defs/sourced_value"},
+        "lab_address": {"$ref": "#/$defs/sourced_value"}
+      }
+    },
+    "research_directions_original": {"type": "array", "items": {"$ref": "#/$defs/evidence_claim"}, "minItems": 1},
+    "research_directions_plain_language": {"type": "array", "items": {"$ref": "#/$defs/plain_language_direction"}, "minItems": 1},
+    "research_questions": {"type": "array", "items": {"$ref": "#/$defs/evidence_claim"}},
+    "main_techniques": {"type": "array", "items": {"$ref": "#/$defs/evidence_claim"}},
+    "research_workflow": {"type": "array", "items": {"$ref": "#/$defs/evidence_claim"}},
+    "adopted_public_evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidence_id"}, "uniqueItems": true, "minItems": 1},
+    "featured_publication_evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidence_id"}, "uniqueItems": true},
+    "featured_selection_status": {"enum": ["pending_manual_review", "manually_reviewed"]},
+    "featured_selection_review": {"$ref": "#/$defs/featured_selection_review"},
+    "publication_identity_status": {"enum": ["verified", "partially_verified", "pending_verification"]},
+    "possible_undergraduate_tasks": {"type": "array", "items": {"$ref": "#/$defs/undergraduate_task"}},
+    "prerequisite_skills": {"type": "array", "items": {"$ref": "#/$defs/evidence_claim"}},
+    "learning_cost": {"oneOf": [{"$ref": "#/$defs/evidence_claim"}, {"type": "null"}]},
+    "generic_growth_path": {"type": "array", "items": {"$ref": "#/$defs/growth_stage"}},
+    "evidence_status": {"$ref": "#/$defs/evidence_status"},
+    "confidence": {"$ref": "#/$defs/confidence"},
+    "public_fact_or_ai_synthesis": {"enum": ["public_fact", "ai_synthesis", "mixed_labeled"]},
+    "no_evidence_reason": {"type": ["string", "null"]},
+    "boundary_statement": {"type": "string", "minLength": 1},
+    "update_status": {"enum": ["verified", "partially_verified", "needs_reverification", "stale"]},
+    "summary": {"$ref": "#/$defs/evidence_claim"},
+    "data_status_note": {"type": "string", "minLength": 1},
+    "search_keywords": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "tags": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true, "minItems": 1},
+    "version": {"const": "1.0.3"},
+    "publication_status": {"enum": ["draft", "review_pending", "approved", "published", "retracted"]},
+    "report_path": {"type": "string", "pattern": "^reports/[A-Za-z0-9_.-]+\\.md$"}
+  },
+  "$defs": {
+    "evidence_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+    "evidence_status": {"enum": ["verified", "partially_verified", "no_reliable_public_evidence", "not_applicable"]},
+    "confidence": {"enum": ["High", "Medium", "Low", "No Evidence", "Unknown"]},
+    "evidence_lane": {"enum": ["public_fact", "ai_synthesis"]},
+    "source_authority": {"enum": ["official_institution", "official_advisor", "official_lab", "publication", "repository_existing_public_report"]},
+    "featured_selection_review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "reviewed_at", "reviewer_role", "selection_criteria", "notes"],
+      "properties": {
+        "status": {"enum": ["pending", "approved", "rejected"]},
+        "reviewed_at": {"type": ["string", "null"], "format": "date"},
+        "reviewer_role": {"type": ["string", "null"], "enum": ["user", "content_reviewer", null]},
+        "selection_criteria": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "sourced_value": {
+      "type": "object", "additionalProperties": false,
+      "required": ["value", "value_en", "source_url", "source_ref", "source_authority", "last_verified_at", "missing_status"],
+      "properties": {
+        "value": {"type": ["string", "null"]},
+        "value_en": {"type": ["string", "null"]},
+        "source_url": {"type": ["string", "null"], "format": "uri"},
+        "source_ref": {"type": ["string", "null"], "pattern": "^(?![A-Za-z]:\\\\|/).+$"},
+        "source_authority": {"oneOf": [{"$ref": "#/$defs/source_authority"}, {"type": "null"}]},
+        "last_verified_at": {"type": ["string", "null"], "format": "date"},
+        "missing_status": {"enum": ["available", "no_public_information", "needs_verification"]}
+      }
+    },
+    "evidence_claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "evidence_status", "confidence", "source_urls", "evidence_ids", "evidence_lane", "no_evidence_reason"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "evidence_status": {"$ref": "#/$defs/evidence_status"},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "source_urls": {"type": "array", "items": {"type": "string", "format": "uri"}, "uniqueItems": true},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidence_id"}, "uniqueItems": true},
+        "evidence_lane": {"$ref": "#/$defs/evidence_lane"},
+        "no_evidence_reason": {"type": ["string", "null"]}
+      }
+    },
+    "plain_language_direction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["term_original", "explanation_zh", "undergraduate_meaning", "evidence_ids", "confidence", "evidence_lane"],
+      "properties": {
+        "term_original": {"type": "string", "minLength": 1},
+        "explanation_zh": {"type": "string", "minLength": 1},
+        "undergraduate_meaning": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidence_id"}, "uniqueItems": true},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "evidence_lane": {"const": "ai_synthesis"}
+      }
+    },
+    "undergraduate_task": {
+      "type": "object", "additionalProperties": false,
+      "required": ["task", "task_context", "task_purpose", "possible_methods", "possible_output", "evidence_ids", "confidence", "evidence_lane", "uncertainty_note"],
+      "properties": {
+        "task": {"type": "string", "minLength": 1}, "task_context": {"type": "string", "minLength": 1},
+        "task_purpose": {"type": "string", "minLength": 1},
+        "possible_methods": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "possible_output": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidence_id"}, "uniqueItems": true},
+        "confidence": {"$ref": "#/$defs/confidence"}, "evidence_lane": {"const": "ai_synthesis"},
+        "uncertainty_note": {"type": "string", "minLength": 1}
+      }
+    },
+    "growth_stage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["stage", "possible_activities", "possible_outputs", "evidence_ids", "confidence", "evidence_lane", "uncertainty_note"],
+      "properties": {
+        "stage": {"enum": ["foundation", "bounded_task", "independent_module"]},
+        "possible_activities": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "possible_outputs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidence_id"}, "uniqueItems": true},
+        "confidence": {"$ref": "#/$defs/confidence"}, "evidence_lane": {"const": "ai_synthesis"},
+        "uncertainty_note": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
