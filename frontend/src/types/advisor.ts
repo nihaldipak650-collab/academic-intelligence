@@ -5,7 +5,7 @@ export type PublicationStatus =
   | "published"
   | "retracted";
 
-export type AdvisorDataMode = "mock" | "dto" | "staging" | "review";
+export type AdvisorDataMode = "mock" | "dto" | "review";
 export type Confidence = "High" | "Medium" | "Low" | "No Evidence" | "Unknown";
 
 export interface TraceableText {

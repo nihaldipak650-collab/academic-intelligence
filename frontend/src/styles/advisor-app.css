@@ -44,9 +44,12 @@
 .advisor-app .navbar nav a.active { color: var(--green-bright); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
 .advisor-app .mode-badge { display: inline-flex; align-items: center; gap: .35rem; padding: .4rem .7rem; border: 1px solid #9fb9af; border-radius: 999px; color: var(--green); background: #edf7f2; font-size: .76rem; font-weight: 700; white-space: nowrap; }
 .advisor-app .mode-badge::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--green-bright); }
-.advisor-app .staging-banner { display: flex; justify-content: center; align-items: center; gap: .8rem; padding: .7rem 1rem; color: #fff; background: #9a5f13; border-bottom: 1px solid #74470d; letter-spacing: .04em; }
-.advisor-app .staging-banner strong { font-family: var(--serif); font-size: 1.05rem; }
-.advisor-app .staging-banner span { padding-left: .8rem; border-left: 1px solid rgba(255, 255, 255, .55); font-weight: 700; }
+.advisor-app .review-status-bar,
+.advisor-app .status-banner { display: flex; justify-content: center; align-items: center; gap: .8rem; padding: .55rem 1rem; color: #3a342c; background: #f3efe6; border-bottom: 1px solid #ddd4c4; letter-spacing: .02em; font-size: .92rem; }
+.advisor-app .review-status-bar strong,
+.advisor-app .status-banner strong { font-family: var(--serif); font-size: 1rem; }
+.advisor-app .review-status-bar span,
+.advisor-app .status-banner span { padding-left: .8rem; border-left: 1px solid rgba(58, 52, 44, .25); font-weight: 600; }
 .advisor-app .review-status-bar {
   display: flex;
   justify-content: center;
@@ -427,8 +430,10 @@
   .advisor-app .navbar__inner { min-height: 66px; }
   .advisor-app .brand small { display: none; }
   .advisor-app .mode-badge { display: none; }
-  .advisor-app .staging-banner { align-items: flex-start; flex-direction: column; gap: .25rem; }
-  .advisor-app .staging-banner span { padding-left: 0; border-left: 0; }
+  .advisor-app .review-status-bar,
+  .advisor-app .status-banner { align-items: flex-start; flex-direction: column; gap: .25rem; }
+  .advisor-app .review-status-bar span,
+  .advisor-app .status-banner span { padding-left: 0; border-left: 0; }
   .advisor-app .navbar nav { gap: .75rem; }
   .advisor-app .navbar nav a { font-size: .84rem; white-space: nowrap; }
   .advisor-app .hero { margin-top: 1rem; min-height: 0; border-radius: 1rem; }

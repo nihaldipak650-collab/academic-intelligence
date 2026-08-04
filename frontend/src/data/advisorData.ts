@@ -9,8 +9,10 @@ import type {
   UndergraduateScenario,
   V104Candidate,
 } from "../types/advisor";
+import reviewCohort from "../../config/local-review-cohort-13.json";
 
 const PUBLIC_STATUSES = new Set(["approved", "published"]);
+const REVIEW_COHORT_DATE = reviewCohort.cohort_date;
 const STAGE_LABELS: Record<string, { label: string; period: string | null }> = {
   foundation: { label: "基础准备", period: "0—3个月" },
   bounded_task: { label: "边界任务", period: "3—6个月" },
@@ -160,16 +162,12 @@ function assertEvidenceTraceability(advisor: PublicAdvisor) {
   }
 }
 
-function adaptSafeDtoAdvisor(value: unknown, mode: "dto" | "staging" | "review"): PublicAdvisor {
+function adaptSafeDtoAdvisor(value: unknown, mode: "dto" | "review"): PublicAdvisor {
   const raw = object(value);
   const status = String(raw?.publicationStatus);
   const approvedGate = raw?.releaseEligible === true && PUBLIC_STATUSES.has(status);
   const pendingGate = raw?.releaseEligible === false && status === "review_pending";
-  const gateValid = mode === "dto"
-    ? approvedGate
-    : mode === "staging"
-      ? pendingGate
-      : approvedGate || pendingGate;
+  const gateValid = mode === "dto" ? approvedGate : approvedGate || pendingGate;
   if (
     !raw || raw.dtoVersion !== "1.0.4" || raw.schemaVersion !== "1.0.4" ||
     !gateValid || raw.evidenceType !== "academic_only" ||
@@ -252,29 +250,15 @@ export function adaptPublicAdvisorDtoEnvelope(value: unknown): AdvisorDataSnapsh
   return { mode: "dto", advisors, rejectedCount: 0 };
 }
 
-export function adaptLocalStagingDtoEnvelope(value: unknown): AdvisorDataSnapshot {
-  const raw = object(value);
-  if (
-    !raw || raw.schemaVersion !== 1 || raw.dtoVersion !== "1.0.4" ||
-    raw.source !== "local-staging-advisor-contract" ||
-    raw.scope !== "local_staging_only" || raw.publicReleaseApproved !== false ||
-    raw.cohortDate !== "2026-08-03" || raw.advisorCount !== 6 ||
-    !Array.isArray(raw.advisors) || raw.advisorCount !== raw.advisors.length
-  ) throw new Error("LOCAL_STAGING_DTO_ENVELOPE_INVALID");
-  const advisors = raw.advisors.map((advisor) => adaptSafeDtoAdvisor(advisor, "staging"));
-  if (new Set(advisors.map((advisor) => advisor.id)).size !== advisors.length) {
-    throw new Error("LOCAL_STAGING_DTO_DUPLICATE_ID");
-  }
-  return { mode: "staging", advisors, rejectedCount: 0 };
-}
-
 export function adaptLocalReviewDtoEnvelope(value: unknown): AdvisorDataSnapshot {
   const raw = object(value);
+  const cohortDate = text(raw?.cohortDate);
   if (
     !raw || raw.schemaVersion !== 1 || raw.dtoVersion !== "1.0.4" ||
     raw.source !== "local-review-advisor-contract" ||
     raw.scope !== "local_review_only" || raw.publicReleaseApproved !== false ||
-    raw.cohortDate !== "2026-08-04" || raw.advisorCount !== 13 ||
+    !cohortDate || !/^\d{4}-\d{2}-\d{2}$/.test(cohortDate) ||
+    cohortDate !== REVIEW_COHORT_DATE || raw.advisorCount !== 13 ||
     !Array.isArray(raw.advisors) || raw.advisorCount !== raw.advisors.length
   ) throw new Error("LOCAL_REVIEW_DTO_ENVELOPE_INVALID");
   const advisors = raw.advisors.map((advisor) => adaptSafeDtoAdvisor(advisor, "review"));

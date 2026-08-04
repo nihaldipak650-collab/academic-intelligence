@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { loadAdvisorSnapshot, resolveAdvisorDataMode } from "../data/AdvisorDataContext";
 import { adaptLocalReviewDtoEnvelope, adaptPublicAdvisorDtoEnvelope } from "../data/advisorData";
 import { syntheticPublicDto } from "./fixtures/advisors";
+import reviewCohort from "../../config/local-review-cohort-13.json";
 
 const REVIEW_NOTE = "待项目负责人人工审核，仅用于本地预览，未经公开批准。";
 
@@ -40,7 +41,7 @@ function reviewEnvelope() {
     source: "local-review-advisor-contract",
     scope: "local_review_only",
     publicReleaseApproved: false,
-    cohortDate: "2026-08-04",
+    cohortDate: reviewCohort.cohort_date,
     advisorCount: 13,
     advisors,
   };
@@ -64,12 +65,18 @@ describe("local review data mode", () => {
     expect(snapshot.advisors.filter((advisor) => advisor.publicationStatus === "approved")).toHaveLength(11);
   });
 
-  it("rejects formal public envelopes and wrong-sized review envelopes", () => {
+  it("rejects formal public envelopes, wrong-sized review envelopes, and cohortDate mismatches", () => {
     expect(() => adaptLocalReviewDtoEnvelope(syntheticPublicDto)).toThrow("LOCAL_REVIEW_DTO_ENVELOPE_INVALID");
     const short = reviewEnvelope();
     short.advisors.pop();
     short.advisorCount = 12;
     expect(() => adaptLocalReviewDtoEnvelope(short)).toThrow("LOCAL_REVIEW_DTO_ENVELOPE_INVALID");
+    const badDate = reviewEnvelope();
+    badDate.cohortDate = "not-a-date";
+    expect(() => adaptLocalReviewDtoEnvelope(badDate)).toThrow("LOCAL_REVIEW_DTO_ENVELOPE_INVALID");
+    const mismatched = reviewEnvelope();
+    mismatched.cohortDate = "2099-01-01";
+    expect(() => adaptLocalReviewDtoEnvelope(mismatched)).toThrow("LOCAL_REVIEW_DTO_ENVELOPE_INVALID");
   });
 
   it("keeps guo-hui and hu-zhengmao out of formal dto adaptation", () => {

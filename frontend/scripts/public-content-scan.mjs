@@ -218,68 +218,6 @@ function setDifferences(actual, expected) {
   };
 }
 
-async function scanSourceAllowlist({ sourceAdvisorFile, sourceReportRoot, validationRoot }) {
-  const source = await readJson(sourceAdvisorFile);
-  invariant(Array.isArray(source), `${sourceAdvisorFile} 必须是数组`);
-  const decisions = [];
-  for (const raw of source) {
-    const shapeGate = evaluatePublicationGate(raw);
-    const provenanceGate = shapeGate.allowed
-      ? await evaluateReleaseProvenance(raw, validationRoot)
-      : { allowed: false, reasons: [] };
-    decisions.push({
-      raw,
-      gate: {
-        allowed: shapeGate.allowed && provenanceGate.allowed,
-        reasons: [...shapeGate.reasons, ...provenanceGate.reasons],
-      },
-    });
-  }
-  const allowed = decisions.filter(({ gate }) => gate.allowed).map(({ raw }) => raw);
-  const rejected = decisions.filter(({ gate }) => !gate.allowed);
-  const expectedReports = new Set(allowed.map((raw) => raw.report));
-  invariant(expectedReports.size === allowed.length, "获批来源中存在重复报告路径");
-
-  const reportFiles = (await walkFiles(sourceReportRoot)).filter((file) =>
-    file.toLowerCase().endsWith(".md"),
-  );
-  const actualReports = new Set(reportFiles.map((file) => path.relative(sourceReportRoot, file).replaceAll("\\", "/")));
-  const differences = setDifferences(actualReports, expectedReports);
-  const contentViolations = [];
-  for (const file of reportFiles) {
-    const violations = findExperienceContentViolations(await readFile(file, "utf8"));
-    if (violations.length) contentViolations.push(path.relative(sourceReportRoot, file));
-  }
-
-  const failures = [];
-  if (differences.unexpected.length) {
-    failures.push(`web/reports 存在未获批报告：${differences.unexpected.join(", ")}`);
-  }
-  if (differences.missing.length) {
-    failures.push(`获批记录缺少源报告：${differences.missing.join(", ")}`);
-  }
-  if (contentViolations.length) {
-    failures.push(`获批源报告含 Experience 内容标记：${contentViolations.join(", ")}`);
-  }
-  invariant(failures.length === 0, failures.join("; "));
-
-  return {
-    mode: "prebuild",
-    sourceRecords: source.length,
-    sourceAllowedRecords: allowed.length,
-    sourceRejectedRecords: rejected.length,
-    publicAdvisorRecords: allowed.length,
-    trackedOrArtifactReports: actualReports.size,
-    experienceRecords: 0,
-    experienceContentFiles: 0,
-    sensitiveNames: 0,
-    reviewPendingRecords: 0,
-    releaseEligibleFalse: 0,
-    missingUnknownStatusPublished: 0,
-    legacyFallbackReferences: differences.unexpected.length,
-  };
-}
-
 async function scanGeneratedAllowlist({ mode, root }) {
   const dataFile = path.join(root, "data", "advisors.json");
   const reportRoot = path.join(root, "reports");
@@ -385,6 +323,84 @@ async function scanGeneratedAllowlist({ mode, root }) {
   };
 }
 
+async function scanProductionPrebuild({
+  validationRoot,
+  legacyReportRoot,
+  publicRoot,
+  buildPublicAdvisorDto: buildFn,
+}) {
+  const buildPublicAdvisorDto =
+    buildFn ?? (await import("./public-advisor-dto.mjs")).buildPublicAdvisorDto;
+  const built = await buildPublicAdvisorDto({ sourceRoot: validationRoot });
+  const approvedIds = built.envelope.advisors.map((advisor) => advisor.id).sort();
+  invariant(built.envelope.advisorCount === approvedIds.length, "正式 DTO advisorCount 不一致");
+  invariant(approvedIds.length > 0, "正式公开门禁结果为空，请检查 data/advisors-v1");
+  invariant(
+    built.envelope.advisors.every(
+      (advisor) =>
+        advisor.releaseEligible === true &&
+        ALLOWED_PUBLICATION_STATUSES.has(advisor.publicationStatus) &&
+        advisor.hasExperienceEvidence === false &&
+        advisor.experienceCaseCount === 0,
+    ),
+    "正式 DTO 混入了不可公开发布或 Experience 字段",
+  );
+
+  for (const advisor of built.envelope.advisors) {
+    const validation = await readJson(path.join(validationRoot, advisor.id, "validation-report-v1.json"));
+    invariant(validation.valid === true, `${advisor.id} validation.valid 必须为 true`);
+    invariant(validation.release_eligible === true, `${advisor.id} release_eligible 必须为 true`);
+    const status = validation.effective_publication_status ?? validation.publication_status;
+    invariant(ALLOWED_PUBLICATION_STATUSES.has(status), `${advisor.id} 发布状态未获批`);
+  }
+
+  const formalPath = path.join(publicRoot, "data", "advisors.json");
+  const formalRaw = await readFile(formalPath, "utf8").catch(() => null);
+  if (formalRaw !== null) {
+    const formal = JSON.parse(formalRaw);
+    invariant(formal.advisorCount === built.envelope.advisorCount, "frontend/public DTO 与生产包门禁结果不一致，请重新 export:dto");
+    const formalIds = formal.advisors.map((advisor) => advisor.id).sort();
+    invariant(JSON.stringify(formalIds) === JSON.stringify(approvedIds), "frontend/public DTO ID 集合与生产包不一致");
+  }
+
+  for (const report of built.reports) {
+    const violations = findExperienceContentViolations(report.content);
+    invariant(violations.length === 0, `正式安全报告含 Experience 内容标记：${report.name}`);
+  }
+
+  const legacyReports = (await walkFiles(legacyReportRoot))
+    .filter((file) => file.toLowerCase().endsWith(".md"))
+    .map((file) => path.relative(legacyReportRoot, file).replaceAll("\\", "/"))
+    .sort();
+  invariant(
+    legacyReports.length === 0,
+    `legacy web/reports 必须为空（已退役）；发现：${legacyReports.join(", ")}`,
+  );
+  for (const name of legacyReports) {
+    invariant(!LEGACY_REPORT_NAMES.has(path.basename(name)), `封禁旧报告不得回潮：${name}`);
+  }
+
+  return {
+    mode: "prebuild",
+    sourceRecords: built.sourceAdvisorCount,
+    sourceAllowedRecords: approvedIds.length,
+    sourceRejectedRecords: built.rejections.length,
+    publicAdvisorRecords: approvedIds.length,
+    trackedOrArtifactReports: built.reports.length,
+    experienceRecords: 0,
+    experienceContentFiles: 0,
+    sensitiveNames: 0,
+    reviewPendingRecords: built.rejections.filter((item) =>
+      item.reasons.some((reason) => /review_pending|release_eligible_not_true/.test(reason)),
+    ).length,
+    releaseEligibleFalse: built.rejections.filter((item) =>
+      item.reasons.includes("validation_release_eligible_not_true"),
+    ).length,
+    missingUnknownStatusPublished: 0,
+    legacyFallbackReferences: 0,
+  };
+}
+
 export async function scanPublicContent({
   mode,
   publicRoot = path.join(frontendDir, "public"),
@@ -392,13 +408,22 @@ export async function scanPublicContent({
   sourceAdvisorFile = path.join(repoRoot, "web", "advisors.json"),
   sourceReportRoot = path.join(repoRoot, "web", "reports"),
   validationRoot = path.join(repoRoot, "data", "advisors-v1"),
+  buildPublicAdvisorDto,
 } = {}) {
   invariant(
     ["prebuild", "public", "artifact"].includes(mode),
     "扫描模式必须是 prebuild、public 或 artifact",
   );
+  // sourceAdvisorFile is retained for call-site compatibility; prebuild no longer
+  // treats legacy web/advisors.json as an authoritative allowlist source.
+  void sourceAdvisorFile;
   if (mode === "prebuild") {
-    return scanSourceAllowlist({ sourceAdvisorFile, sourceReportRoot, validationRoot });
+    return scanProductionPrebuild({
+      validationRoot,
+      legacyReportRoot: sourceReportRoot,
+      publicRoot,
+      buildPublicAdvisorDto,
+    });
   }
   return scanGeneratedAllowlist({
     mode,

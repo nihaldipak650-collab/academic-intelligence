@@ -10,9 +10,9 @@ Academic Intelligence 是一个面向学术资料处理的 Python 项目。Retri
 powershell -ExecutionPolicy Bypass -File .\start_web.ps1
 ```
 
-然后访问 <http://localhost:8000/>。启动时会从 `data/reports/` 同步配置中选定的报告，但不会修改原始报告。网站配置、更新方式和静态部署说明见 [`web/README.md`](web/README.md)。
+然后访问 <http://localhost:8000/>。注意：`web/` 静态站与 `web/reports` 已退役，正式与审核预览请使用 `frontend/`（见 [`frontend/README.md`](frontend/README.md)、[`web/README.md`](web/README.md)）。
 
-生产环境采用 GitHub Pages，并由 `.github/workflows/deploy-pages.yml` 在 `main` 分支推送后自动发布。详细的首次启用、内容更新和回滚步骤见网站说明。
+正式 GitHub Pages 使用 `.github/workflows/deploy-frontend-pages.yml`。旧的 `.github/workflows/deploy-pages.yml` legacy 回滚路径已 fail-closed，请勿重新启用。
 
 ## 安装
 

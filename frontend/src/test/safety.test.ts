@@ -13,23 +13,27 @@ function sourceFiles(directory: string): string[] {
 }
 
 describe("dual-mode safety contract", () => {
-  it("keeps mock publicDir disabled and enables public only for dto mode", () => {
+  it("keeps mock publicDir disabled and enables public only for dto and local review", () => {
     const config = readFileSync(path.join(frontendRoot, "vite.config.ts"), "utf8");
     expect(config).toContain('mode === "dto"');
     expect(config).toContain('".local-review/public"');
-    expect(config).toContain('".local-staging/public"');
-    expect(config).toContain('mode === "staging" || mode === "review"');
+    expect(config).not.toContain(".local-staging");
+    expect(config).not.toContain('"staging"');
+    expect(config).toContain('mode === "review"');
+    expect(config).toContain("LOCAL_REVIEW_BUILD_FORBIDDEN");
   });
 
-  it("preserves DTO export, validation, prebuild and artifact scans", () => {
+  it("preserves DTO export, validation, prebuild and artifact scans without staging", () => {
     const packageJson = JSON.parse(readFileSync(path.join(frontendRoot, "package.json"), "utf8"));
     expect(packageJson.scripts["dev:mock"]).toContain("--mode mock");
     expect(packageJson.scripts["dev:dto"]).toContain("--mode dto");
     expect(packageJson.scripts["dev:review"]).toMatch(/generate:review.*--mode review/);
-    expect(packageJson.scripts["dev:staging"]).toMatch(/generate:staging.*--mode staging/);
+    expect(packageJson.scripts["dev:staging"]).toBeUndefined();
+    expect(packageJson.scripts["generate:staging"]).toBeUndefined();
     expect(packageJson.scripts["build:mock"]).toContain("--mode mock");
     expect(packageJson.scripts["build:safe"]).toMatch(/scan:prebuild.*sync:data.*validate:data.*scan:public.*--mode dto.*scan:artifact/);
     expect(packageJson.scripts["sync:data"]).toContain("export:dto");
+    expect(packageJson.scripts.test).toBe("vitest run");
   });
 
   it("contains no runtime reference to legacy report or production directories", () => {

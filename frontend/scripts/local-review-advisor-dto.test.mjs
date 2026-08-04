@@ -58,13 +58,14 @@ describe("local review advisor DTO (13 advisor cohort)", () => {
 
   it("marks the envelope as an unapproved local-only review scope", async () => {
     const result = await buildLocalReviewDto();
+    expect(result.cohort.cohort_date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     expect(result.envelope).toMatchObject({
       schemaVersion: 1,
       dtoVersion: "1.0.4",
       source: "local-review-advisor-contract",
       scope: "local_review_only",
       publicReleaseApproved: false,
-      cohortDate: "2026-08-04",
+      cohortDate: result.cohort.cohort_date,
       advisorCount: 13,
     });
   });

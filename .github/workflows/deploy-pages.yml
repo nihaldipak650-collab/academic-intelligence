@@ -1,68 +1,30 @@
-name: Rollback - deploy legacy advisor website 0.5
+name: Retired - legacy web rollback (disabled)
+
+# Legacy web/ GitHub Pages rollback is permanently retired.
+# It previously required web/reports/*.md that may contain Experience
+# markers or review_pending content. Do not re-enable without a full
+# security review. Use deploy-frontend-pages.yml for production.
 
 on:
   workflow_dispatch:
     inputs:
-      confirm_deploy:
-        description: "Deploy the legacy web/ site as a manual rollback"
+      confirm_retired_path:
+        description: "This workflow is retired and will always fail closed"
         required: true
         type: boolean
         default: false
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
-  deploy:
-    if: ${{ inputs.confirm_deploy == true }}
-    name: Publish legacy web directory
+  refuse:
+    name: Refuse legacy web rollback
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v7
-
-      - name: Verify publish directory
-        shell: bash
+      - name: Fail closed
         run: |
-          set -euo pipefail
-          test -s web/index.html
-          test -s web/advisor.html
-          test -s web/advisors.json
-          test -s web/styles.css
-          test -s web/app.js
-          test -s web/advisor.js
-          test -s web/site-config.json
-          test -s web/vendor/marked.umd.js
-          test -s web/reports/Xiang_Rong_profile_zh.md
-          test -s web/reports/Liu_advisor_profile_v1_5_demo_display.md
-          test -s web/reports/Li_advisor_profile_v1_5_demo_display.md
-          test -s web/reports/Guo_Hui_profile_academic_zh.md
-          test -s web/reports/Hu_Dehua_profile_academic_zh.md
-          test -s web/reports/Hu_Zhengmao_profile_academic_zh.md
-          test -s web/reports/Li_Jiada_profile_academic_zh.md
-          if grep -RInE 'C:\\Users\\|API_KEY[[:space:]]*=|OPENALEX_API_KEY[[:space:]]*=|github_pat_|ghp_' web --exclude='README.md'; then
-            echo 'Potential local path or secret found in publish directory.' >&2
-            exit 1
-          fi
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload website artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./web
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          echo "Legacy web/ Pages rollback is retired."
+          echo "web/reports has been removed; restoring Experience or review_pending reports is forbidden."
+          echo "Use .github/workflows/deploy-frontend-pages.yml for the frontend 1.0 artifact."
+          exit 1

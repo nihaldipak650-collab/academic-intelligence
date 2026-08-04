@@ -6,23 +6,6 @@ import { LEGACY_REPORT_NAMES, scanPublicContent } from "./public-content-scan.mj
 
 const roots = [];
 
-function sourceAdvisor(overrides = {}) {
-  return {
-    id: "future-safe-advisor",
-    name: "未来测试导师",
-    summary: "合成公开学术摘要。",
-    tags: ["合成标签"],
-    report: "future-safe-advisor.md",
-    schema_version: "1.0.4",
-    release_eligible: true,
-    publication_status: "approved",
-    has_experience_evidence: false,
-    experience_case_count: 0,
-    evidence_type: "academic_only",
-    ...overrides,
-  };
-}
-
 function publishedAdvisor(overrides = {}) {
   return {
     id: "future-safe-advisor",
@@ -52,7 +35,7 @@ async function makeTree() {
     await mkdir(path.join(tree, "assets"), { recursive: true });
     await writeFile(
       path.join(tree, "data", "advisors.json"),
-      '{"schemaVersion":1,"source":"web/advisors.json + web/reports","advisorCount":0,"advisors":[]}\n',
+      '{"schemaVersion":1,"source":"approved-public-advisor-contract","advisorCount":0,"advisors":[]}\n',
     );
     await writeFile(path.join(tree, "data", "site-config.json"), '{"feedbackUrl":""}\n');
     await writeFile(path.join(tree, "index.html"), "<!doctype html><title>safe</title>");
@@ -63,20 +46,6 @@ async function makeTree() {
   await mkdir(validationRoot, { recursive: true });
   await writeFile(sourceAdvisorFile, "[]\n");
   return { publicRoot, artifactRoot, sourceReportRoot, sourceAdvisorFile, validationRoot };
-}
-
-async function writeValidation(paths, advisor, overrides = {}) {
-  const dir = path.join(paths.validationRoot, advisor.id);
-  await mkdir(dir, { recursive: true });
-  await writeFile(
-    path.join(dir, "validation-report-v1.json"),
-    JSON.stringify({
-      valid: true,
-      release_eligible: true,
-      effective_publication_status: advisor.publication_status,
-      ...overrides,
-    }),
-  );
 }
 
 async function writeGeneratedTree(root, advisors, reports = {}) {
@@ -94,9 +63,9 @@ afterEach(async () => {
 });
 
 describe("reusable public content allowlist scanner", () => {
-  it("接受当前空集合的 source、public 和 artifact", async () => {
+  it("接受当前空集合的 public 和 artifact", async () => {
     const paths = await makeTree();
-    for (const mode of ["prebuild", "public", "artifact"]) {
+    for (const mode of ["public", "artifact"]) {
       await expect(scanPublicContent({ mode, ...paths })).resolves.toEqual(
         expect.objectContaining({
           publicAdvisorRecords: 0,
@@ -107,19 +76,111 @@ describe("reusable public content allowlist scanner", () => {
     }
   });
 
-  it("允许未来显式获批记录及其唯一白名单报告通过所有阶段", async () => {
+  it("prebuild 基于 data/advisors-v1 正式门禁，拒绝空生产包", async () => {
     const paths = await makeTree();
-    const advisor = sourceAdvisor();
-    await writeFile(paths.sourceAdvisorFile, JSON.stringify([advisor]));
-    await writeValidation(paths, advisor);
-    await writeFile(
-      path.join(paths.sourceReportRoot, "future-safe-advisor.md"),
-      "# 未来测试导师\n\n## 公开学术事实\n\n合成公开内容。\n",
-    );
-    await expect(scanPublicContent({ mode: "prebuild", ...paths })).resolves.toEqual(
-      expect.objectContaining({ sourceAllowedRecords: 1, trackedOrArtifactReports: 1 }),
-    );
+    await expect(scanPublicContent({ mode: "prebuild", ...paths })).rejects.toThrow(/正式公开门禁结果为空/);
+  });
 
+  it("prebuild 接受获批生产包，并校验 formal DTO 与空 legacy reports", async () => {
+    const paths = await makeTree();
+    const advisor = publishedAdvisor();
+    await mkdir(path.join(paths.validationRoot, advisor.id), { recursive: true });
+    await writeFile(
+      path.join(paths.validationRoot, advisor.id, "validation-report-v1.json"),
+      JSON.stringify({
+        valid: true,
+        release_eligible: true,
+        effective_publication_status: "approved",
+      }),
+    );
+    await writeFile(
+      path.join(paths.publicRoot, "data", "advisors.json"),
+      JSON.stringify({ schemaVersion: 1, advisorCount: 1, advisors: [advisor] }),
+    );
+    await expect(
+      scanPublicContent({
+        mode: "prebuild",
+        ...paths,
+        buildPublicAdvisorDto: async () => ({
+          envelope: { schemaVersion: 1, advisorCount: 1, advisors: [advisor] },
+          reports: [{ name: "future-safe-advisor.md", content: "# 未来测试导师\n\n公开内容。\n" }],
+          sourceAdvisorCount: 1,
+          rejections: [],
+        }),
+      }),
+    ).resolves.toEqual(
+      expect.objectContaining({
+        sourceAllowedRecords: 1,
+        publicAdvisorRecords: 1,
+        trackedOrArtifactReports: 1,
+        sourceRejectedRecords: 0,
+      }),
+    );
+  });
+
+  it("prebuild 拒绝 legacy web/reports 回潮", async () => {
+    const paths = await makeTree();
+    const advisor = publishedAdvisor();
+    await mkdir(path.join(paths.validationRoot, advisor.id), { recursive: true });
+    await writeFile(
+      path.join(paths.validationRoot, advisor.id, "validation-report-v1.json"),
+      JSON.stringify({
+        valid: true,
+        release_eligible: true,
+        effective_publication_status: "approved",
+      }),
+    );
+    await writeFile(
+      path.join(paths.publicRoot, "data", "advisors.json"),
+      JSON.stringify({ schemaVersion: 1, advisorCount: 1, advisors: [advisor] }),
+    );
+    await writeFile(path.join(paths.sourceReportRoot, "leak.md"), "synthetic");
+    await expect(
+      scanPublicContent({
+        mode: "prebuild",
+        ...paths,
+        buildPublicAdvisorDto: async () => ({
+          envelope: { schemaVersion: 1, advisorCount: 1, advisors: [advisor] },
+          reports: [{ name: "future-safe-advisor.md", content: "# ok\n" }],
+          sourceAdvisorCount: 1,
+          rejections: [],
+        }),
+      }),
+    ).rejects.toThrow(/legacy web\/reports 必须为空/);
+  });
+
+  it("prebuild 拒绝 formal DTO 与生产包不一致", async () => {
+    const paths = await makeTree();
+    const advisor = publishedAdvisor();
+    await mkdir(path.join(paths.validationRoot, advisor.id), { recursive: true });
+    await writeFile(
+      path.join(paths.validationRoot, advisor.id, "validation-report-v1.json"),
+      JSON.stringify({
+        valid: true,
+        release_eligible: true,
+        effective_publication_status: "approved",
+      }),
+    );
+    await writeFile(
+      path.join(paths.publicRoot, "data", "advisors.json"),
+      JSON.stringify({ schemaVersion: 1, advisorCount: 0, advisors: [] }),
+    );
+    await expect(
+      scanPublicContent({
+        mode: "prebuild",
+        ...paths,
+        buildPublicAdvisorDto: async () => ({
+          envelope: { schemaVersion: 1, advisorCount: 1, advisors: [advisor] },
+          reports: [{ name: "future-safe-advisor.md", content: "# ok\n" }],
+          sourceAdvisorCount: 1,
+          rejections: [],
+        }),
+      }),
+    ).rejects.toThrow(/与生产包门禁结果不一致/);
+  });
+
+  it("允许未来显式获批记录及其唯一白名单报告通过 public/artifact", async () => {
+    const paths = await makeTree();
     for (const [mode, root] of [["public", paths.publicRoot], ["artifact", paths.artifactRoot]]) {
       await writeGeneratedTree(root, [publishedAdvisor()], {
         "future-safe-advisor.md": "# 未来测试导师\n\n## 公开学术事实\n\n合成公开内容。\n",
@@ -128,33 +189,6 @@ describe("reusable public content allowlist scanner", () => {
         expect.objectContaining({ publicAdvisorRecords: 1, trackedOrArtifactReports: 1 }),
       );
     }
-  });
-
-  it("拒绝 source 中没有显式获批记录的报告", async () => {
-    const paths = await makeTree();
-    await writeFile(path.join(paths.sourceReportRoot, "unallowlisted.md"), "synthetic");
-    await expect(scanPublicContent({ mode: "prebuild", ...paths })).rejects.toThrow(/未获批报告/);
-  });
-
-  it("拒绝获批记录缺少对应源报告", async () => {
-    const paths = await makeTree();
-    const advisor = sourceAdvisor();
-    await writeFile(paths.sourceAdvisorFile, JSON.stringify([advisor]));
-    await writeValidation(paths, advisor);
-    await expect(scanPublicContent({ mode: "prebuild", ...paths })).rejects.toThrow(/缺少源报告/);
-  });
-
-  it("拒绝 Roster 获批但正式 validation report 不可发布的记录", async () => {
-    const paths = await makeTree();
-    const advisor = sourceAdvisor();
-    await writeFile(paths.sourceAdvisorFile, JSON.stringify([advisor]));
-    await writeValidation(paths, advisor, {
-      valid: true,
-      release_eligible: false,
-      effective_publication_status: "review_pending",
-    });
-    await writeFile(path.join(paths.sourceReportRoot, advisor.report), "synthetic");
-    await expect(scanPublicContent({ mode: "prebuild", ...paths })).rejects.toThrow(/未获批报告/);
   });
 
   it("拒绝 generated 目录中缺失、多余或含 Experience 标记的报告", async () => {
@@ -264,14 +298,9 @@ describe("reusable public content allowlist scanner", () => {
     await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/门禁违规/);
   });
 
-  it("拒绝封禁旧报告文件名在 source 或 artifact 中重新出现", async () => {
+  it("拒绝封禁旧报告文件名在 artifact 中重新出现", async () => {
     const paths = await makeTree();
     const legacyName = [...LEGACY_REPORT_NAMES][0];
-    await writeFile(paths.sourceAdvisorFile, JSON.stringify([sourceAdvisor({ report: legacyName })]));
-    await writeFile(path.join(paths.sourceReportRoot, legacyName), "synthetic");
-    await expect(scanPublicContent({ mode: "prebuild", ...paths })).rejects.toThrow(/未获批报告/);
-
-    await rm(path.join(paths.sourceReportRoot, legacyName));
     await writeFile(path.join(paths.artifactRoot, "index.html"), legacyName);
     await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/封禁旧报告/);
   });

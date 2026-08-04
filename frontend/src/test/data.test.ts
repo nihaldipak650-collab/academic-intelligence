@@ -70,7 +70,7 @@ describe("explicit data modes", () => {
   it("keeps unknown modes fail-closed", () => {
     expect(resolveAdvisorDataMode("dto")).toBe("dto");
     expect(resolveAdvisorDataMode("mock")).toBe("mock");
-    expect(resolveAdvisorDataMode("staging")).toBe("staging");
+    expect(resolveAdvisorDataMode("staging")).toBe("closed");
     expect(resolveAdvisorDataMode("production")).toBe("closed");
     expect(resolveAdvisorDataMode(undefined)).toBe("closed");
   });

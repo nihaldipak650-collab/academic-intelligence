@@ -5,7 +5,6 @@ import type { AdvisorDataSnapshot, SiteConfig, V104Candidate } from "../types/ad
 import {
   adaptAdvisorCandidates,
   adaptLocalReviewDtoEnvelope,
-  adaptLocalStagingDtoEnvelope,
   adaptPublicAdvisorDtoEnvelope,
 } from "./advisorData";
 
@@ -29,12 +28,11 @@ interface AdvisorDataProviderProps {
   delayMs?: number;
 }
 
-export type ConfiguredDataMode = "mock" | "dto" | "staging" | "review" | "closed";
+export type ConfiguredDataMode = "mock" | "dto" | "review" | "closed";
 
 export function resolveAdvisorDataMode(value: unknown): ConfiguredDataMode {
   if (value === "mock" || value === "test") return "mock";
   if (value === "dto") return "dto";
-  if (value === "staging") return "staging";
   if (value === "review") return "review";
   return "closed";
 }
@@ -54,13 +52,12 @@ export async function loadAdvisorSnapshot(
   fetcher: typeof fetch = fetch,
 ): Promise<AdvisorDataSnapshot> {
   if (mode === "mock") return adaptAdvisorCandidates(mockCandidates);
-  if (mode !== "dto" && mode !== "staging" && mode !== "review") throw new Error("DATA_MODE_NOT_APPROVED");
+  if (mode !== "dto" && mode !== "review") throw new Error("DATA_MODE_NOT_APPROVED");
   const response = await fetcher(`${import.meta.env.BASE_URL}data/advisors.json`, {
     headers: { Accept: "application/json" },
   });
   if (!response.ok) throw new Error("PUBLIC_DTO_REQUEST_FAILED");
   const envelope = await response.json();
-  if (mode === "staging") return adaptLocalStagingDtoEnvelope(envelope);
   if (mode === "review") return adaptLocalReviewDtoEnvelope(envelope);
   return adaptPublicAdvisorDtoEnvelope(envelope);
 }
@@ -140,7 +137,7 @@ export function AdvisorDataProvider({
         setState((current) => ({ ...current, snapshot: null, loading: false, error: "数据加载失败，请刷新后重试。" }));
         return;
       }
-      const siteConfig = mode === "dto" || mode === "review" || mode === "staging"
+      const siteConfig = mode === "dto" || mode === "review"
         ? await loadSiteConfig()
         : DEFAULT_SITE_CONFIG;
       if (!active) return;

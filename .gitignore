@@ -10,14 +10,13 @@ dist/
 venv/
 .env
 
-# 本地访谈原始材料（只发布已去标识化的 web/reports/ 成稿）
+# 本地访谈原始材料（legacy web/reports 已退役，勿回潮）
 /*.txt
 
 # 测试与工具缓存
 .pytest_cache/
 .coverage
 .pages-preview/
-/frontend/.local-staging/
 /frontend/.local-review/
 
 # 编辑器与操作系统文件
