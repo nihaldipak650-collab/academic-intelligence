@@ -1,4 +1,10 @@
-import { useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useLayoutEffect,
+  useState,
+  type MouseEvent,
+  type ReactNode,
+} from "react";
 import { Link, useParams } from "react-router-dom";
 import { EmptyState } from "../components/EmptyState";
 import { EvidenceRefs, evidenceAnchorId } from "../components/EvidenceRefs";
@@ -19,28 +25,41 @@ const pageNav = [
   ["evidence", "证据"],
 ] as const;
 
+type SectionId = (typeof pageNav)[number][0];
+
+type ExpandableSection = "questions" | "methods" | "undergraduate" | "growth" | "evidence";
+
+const EXPANDABLE = new Set<string>([
+  "questions",
+  "methods",
+  "undergraduate",
+  "growth",
+  "evidence",
+]);
+
 function CollapsibleBlock({
   title,
   children,
-  defaultOpen = false,
+  open,
+  onOpenChange,
 }: {
   title: string;
   children: ReactNode;
-  defaultOpen?: boolean;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 }) {
-  const [open, setOpen] = useState(defaultOpen);
   return (
     <div className={`collapsible-block${open ? " is-open" : ""}`}>
       <button
         className="collapsible-block__toggle"
         type="button"
         aria-expanded={open}
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => onOpenChange(!open)}
       >
         <span>{title}</span>
         <span aria-hidden="true">{open ? "收起 ▲" : "展开 ▼"}</span>
       </button>
-      {open && <div className="collapsible-block__body">{children}</div>}
+      {open ? <div className="collapsible-block__body">{children}</div> : null}
     </div>
   );
 }
@@ -52,6 +71,72 @@ export function AdvisorDetailPage() {
   const dtoMode = snapshot?.mode === "dto";
   const reviewMode = snapshot?.mode === "review";
   const pendingReview = advisor?.publicationStatus === "review_pending";
+
+  const [openSections, setOpenSections] = useState<Record<ExpandableSection, boolean>>({
+    questions: false,
+    methods: false,
+    undergraduate: false,
+    growth: false,
+    evidence: false,
+  });
+  const [plainOpen, setPlainOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<SectionId>("overview");
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    setOpenSections({
+      questions: false,
+      methods: false,
+      undergraduate: false,
+      growth: false,
+      evidence: false,
+    });
+    setPlainOpen(false);
+    setActiveSection("overview");
+    setPendingScroll(null);
+  }, [id]);
+
+  useEffect(() => {
+    if (!pendingScroll) return;
+    const target = document.getElementById(pendingScroll);
+    if (!target) return;
+    const frame = window.requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (typeof target.focus === "function") {
+        try {
+          target.focus({ preventScroll: true });
+        } catch {
+          target.focus();
+        }
+      }
+      setPendingScroll(null);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [pendingScroll, openSections]);
+
+  function expandSection(section: ExpandableSection) {
+    setOpenSections((current) => (current[section] ? current : { ...current, [section]: true }));
+  }
+
+  function goToSection(section: SectionId) {
+    setActiveSection(section);
+    if (EXPANDABLE.has(section)) {
+      expandSection(section as ExpandableSection);
+    }
+    setPendingScroll(section);
+  }
+
+  function handleNavClick(event: MouseEvent<HTMLAnchorElement>, section: SectionId) {
+    event.preventDefault();
+    goToSection(section);
+  }
+
+  function locateEvidence(evidenceId: string) {
+    expandSection("evidence");
+    setActiveSection("evidence");
+    setPendingScroll(evidenceAnchorId(evidenceId));
+  }
 
   if (loading) return <LoadingState />;
   if (error) return <ErrorState title="数据安全门已关闭" description={error} />;
@@ -139,7 +224,12 @@ export function AdvisorDetailPage() {
 
       <nav className="detail-page-nav" aria-label="页面目录">
         {pageNav.map(([target, label]) => (
-          <a href={`#${target}`} key={target}>
+          <a
+            href={`#${target}`}
+            key={target}
+            className={activeSection === target ? "is-active" : undefined}
+            onClick={(event) => handleNavClick(event, target)}
+          >
             {label}
           </a>
         ))}
@@ -167,7 +257,11 @@ export function AdvisorDetailPage() {
                 ))}
               </div>
               {advisor.researchDirectionsPlain.length > 0 && (
-                <CollapsibleBlock title="术语通俗解释">
+                <CollapsibleBlock
+                  title="术语通俗解释"
+                  open={plainOpen}
+                  onOpenChange={setPlainOpen}
+                >
                   <div className="plain-direction-list">
                     {advisor.researchDirectionsPlain.map((direction) => (
                       <article key={direction.term}>
@@ -189,13 +283,20 @@ export function AdvisorDetailPage() {
             <div>
               <span className="eyebrow">科学问题</span>
               <h2>主要科学问题</h2>
-              <ol className="question-list">
-                {advisor.researchQuestions.map((question) => (
-                  <li key={question.text}>
-                    <p>{question.text}</p>
-                  </li>
-                ))}
-              </ol>
+              <CollapsibleBlock
+                title="科学问题列表"
+                open={openSections.questions}
+                onOpenChange={(open) => setOpenSections((current) => ({ ...current, questions: open }))}
+              >
+                <ol className="question-list">
+                  {advisor.researchQuestions.map((question) => (
+                    <li key={question.text}>
+                      <p>{question.text}</p>
+                      <EvidenceRefs evidenceIds={question.evidenceIds} onLocate={locateEvidence} />
+                    </li>
+                  ))}
+                </ol>
+              </CollapsibleBlock>
             </div>
           </section>
 
@@ -204,13 +305,18 @@ export function AdvisorDetailPage() {
             <div>
               <span className="eyebrow">方法路线</span>
               <h2>研究方法与技术路线</h2>
-              <CollapsibleBlock title="方法与技术路线" defaultOpen={advisor.techniques.length <= 3}>
+              <CollapsibleBlock
+                title="方法与技术路线"
+                open={openSections.methods}
+                onOpenChange={(open) => setOpenSections((current) => ({ ...current, methods: open }))}
+              >
                 {advisor.techniques.length ? (
                   <div className="method-grid">
                     {advisor.techniques.map((method, index) => (
                       <article key={method.text}>
                         <span>{String(index + 1).padStart(2, "0")}</span>
                         <h3>{method.text}</h3>
+                        <EvidenceRefs evidenceIds={method.evidenceIds} onLocate={locateEvidence} />
                       </article>
                     ))}
                   </div>
@@ -224,6 +330,7 @@ export function AdvisorDetailPage() {
                       <article key={step.text}>
                         <strong>{String(index + 1).padStart(2, "0")}</strong>
                         <p>{step.text}</p>
+                        <EvidenceRefs evidenceIds={step.evidenceIds} onLocate={locateEvidence} />
                       </article>
                     ))}
                   </div>
@@ -237,42 +344,55 @@ export function AdvisorDetailPage() {
             <div>
               <span className="eyebrow">本科准备</span>
               <h2>本科阶段可能的公开研究场景</h2>
-              <p className="section-intro">
-                以下内容只描述由公开 Evidence 支持的可能学习场景，不表示现实课题、名额、指导方式或时间承诺。
-              </p>
-              <div className="scenario-list">
-                {advisor.undergraduateScenarios.map((scenario) => (
-                  <article key={scenario.task}>
-                    <h3>{scenario.task}</h3>
-                    <p>{scenario.context}</p>
-                    <dl>
-                      <div>
-                        <dt>目的</dt>
-                        <dd>{scenario.purpose}</dd>
-                      </div>
-                      <div>
-                        <dt>可能方法</dt>
-                        <dd>{scenario.methods.join("、")}</dd>
-                      </div>
-                      <div>
-                        <dt>可能产出</dt>
-                        <dd>{scenario.output}</dd>
-                      </div>
-                    </dl>
-                    <p className="boundary-note">{scenario.uncertaintyNote}</p>
-                  </article>
-                ))}
-              </div>
-              <h3>联系前可准备</h3>
-              <ul className="check-list">
-                {advisor.prerequisiteSkills.map((item) => (
-                  <li key={item.text}>{item.text}</li>
-                ))}
-              </ul>
-              <div className="learning-cost">
-                <h3>学习成本提示</h3>
-                <p>{advisor.learningCost.text}</p>
-              </div>
+              <CollapsibleBlock
+                title="本科准备与学习成本"
+                open={openSections.undergraduate}
+                onOpenChange={(open) =>
+                  setOpenSections((current) => ({ ...current, undergraduate: open }))
+                }
+              >
+                <p className="section-intro">
+                  以下内容只描述由公开 Evidence 支持的可能学习场景，不表示现实课题、名额、指导方式或时间承诺。
+                </p>
+                <div className="scenario-list">
+                  {advisor.undergraduateScenarios.map((scenario) => (
+                    <article key={scenario.task}>
+                      <h3>{scenario.task}</h3>
+                      <p>{scenario.context}</p>
+                      <dl>
+                        <div>
+                          <dt>目的</dt>
+                          <dd>{scenario.purpose}</dd>
+                        </div>
+                        <div>
+                          <dt>可能方法</dt>
+                          <dd>{scenario.methods.join("、")}</dd>
+                        </div>
+                        <div>
+                          <dt>可能产出</dt>
+                          <dd>{scenario.output}</dd>
+                        </div>
+                      </dl>
+                      <p className="boundary-note">{scenario.uncertaintyNote}</p>
+                      <EvidenceRefs evidenceIds={scenario.evidenceIds} onLocate={locateEvidence} />
+                    </article>
+                  ))}
+                </div>
+                <h3>联系前可准备</h3>
+                <ul className="check-list">
+                  {advisor.prerequisiteSkills.map((item) => (
+                    <li key={item.text}>
+                      {item.text}
+                      <EvidenceRefs evidenceIds={item.evidenceIds} onLocate={locateEvidence} />
+                    </li>
+                  ))}
+                </ul>
+                <div className="learning-cost">
+                  <h3>学习成本提示</h3>
+                  <p>{advisor.learningCost.text}</p>
+                  <EvidenceRefs evidenceIds={advisor.learningCost.evidenceIds} onLocate={locateEvidence} />
+                </div>
+              </CollapsibleBlock>
             </div>
           </section>
 
@@ -281,18 +401,25 @@ export function AdvisorDetailPage() {
             <div>
               <span className="eyebrow">成长路径</span>
               <h2>通用成长路径</h2>
-              <div className="timeline">
-                {advisor.growthPath.map((stage) => (
-                  <article key={`${stage.stage}-${stage.period ?? "open"}`}>
-                    {stage.period && <span>{stage.period}</span>}
-                    <h3>{stage.stage}</h3>
-                    <p>{stage.possibleActivities.join("；")}</p>
-                    <small>
-                      可能产出：{stage.possibleOutputs.join("、")}。{stage.uncertaintyNote}
-                    </small>
-                  </article>
-                ))}
-              </div>
+              <CollapsibleBlock
+                title="成长路径详情"
+                open={openSections.growth}
+                onOpenChange={(open) => setOpenSections((current) => ({ ...current, growth: open }))}
+              >
+                <div className="timeline">
+                  {advisor.growthPath.map((stage) => (
+                    <article key={`${stage.stage}-${stage.period ?? "open"}`}>
+                      {stage.period && <span>{stage.period}</span>}
+                      <h3>{stage.stage}</h3>
+                      <p>{stage.possibleActivities.join("；")}</p>
+                      <small>
+                        可能产出：{stage.possibleOutputs.join("、")}。{stage.uncertaintyNote}
+                      </small>
+                      <EvidenceRefs evidenceIds={stage.evidenceIds} onLocate={locateEvidence} />
+                    </article>
+                  ))}
+                </div>
+              </CollapsibleBlock>
             </div>
           </section>
 
@@ -304,7 +431,11 @@ export function AdvisorDetailPage() {
               {advisor.publicEvidence.length === 0 ? (
                 <EmptyState title="暂无可靠公开证据" description="当前记录没有可关联的公开 Evidence，页面不会补写或猜测。" />
               ) : (
-                <CollapsibleBlock title={`完整证据（${advisor.publicEvidence.length}）`}>
+                <CollapsibleBlock
+                  title={`完整证据（${advisor.publicEvidence.length}）`}
+                  open={openSections.evidence}
+                  onOpenChange={(open) => setOpenSections((current) => ({ ...current, evidence: open }))}
+                >
                   <div className="evidence-list">
                     {advisor.publicEvidence.map((item) => (
                       <article id={evidenceAnchorId(item.evidenceId)} tabIndex={-1} key={item.evidenceId}>
@@ -331,9 +462,6 @@ export function AdvisorDetailPage() {
                   </div>
                 </CollapsibleBlock>
               )}
-              <div className="evidence-inline-refs">
-                <EvidenceRefs evidenceIds={advisor.summaryEvidenceIds} />
-              </div>
             </div>
           </section>
 

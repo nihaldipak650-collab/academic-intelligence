@@ -130,7 +130,11 @@ export function AdvisorListPage() {
       <section className="hero hero--directory">
         <div className="hero__copy">
           <span className="eyebrow">导师与研究方向信息库</span>
-          <h1>导师与研究方向信息库</h1>
+          <h1>
+            导师与研究方向
+            <wbr />
+            信息库
+          </h1>
           <p>
             {dtoMode
               ? "浏览已通过公开门禁的导师结构化资料，了解研究方向、方法与本科生可参考的公开场景。"

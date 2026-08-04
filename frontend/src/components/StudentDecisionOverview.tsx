@@ -1,5 +1,4 @@
 import type { PublicAdvisor, TraceableText } from "../types/advisor";
-import { EvidenceRefs } from "./EvidenceRefs";
 
 function TraceableItems({ items }: { items: TraceableText[] }) {
   if (!items.length) return <p className="decision-empty">暂无可靠公开证据</p>;
@@ -8,15 +7,14 @@ function TraceableItems({ items }: { items: TraceableText[] }) {
       {items.map((item) => (
         <li key={item.text}>
           <span>{item.text}</span>
-          <EvidenceRefs evidenceIds={item.evidenceIds} />
         </li>
       ))}
     </ul>
   );
 }
+
 export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor }) {
   const scenario = advisor.undergraduateScenarios[0];
-  const evidenceIds = advisor.publicEvidence.map((item) => item.evidenceId);
 
   return (
     <section className="content-section decision-section" id="decision">
@@ -52,9 +50,10 @@ export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor })
               <>
                 <strong>{scenario.task}</strong>
                 <p>{scenario.context}</p>
-                <EvidenceRefs evidenceIds={scenario.evidenceIds} />
               </>
-            ) : <p className="decision-empty">暂无可靠公开证据</p>}
+            ) : (
+              <p className="decision-empty">暂无可靠公开证据</p>
+            )}
           </article>
 
           <article>
@@ -67,19 +66,24 @@ export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor })
             <span className="decision-index">06</span>
             <h3>公开成果与 Evidence</h3>
             {advisor.publicEvidence.length ? (
-              <>
-                <p>当前结构化记录关联 {advisor.publicEvidence.length} 条公开 Evidence，可跳转至原始条目复核。</p>
-                <EvidenceRefs evidenceIds={evidenceIds} />
-              </>
-            ) : <p className="decision-empty">暂无可靠公开证据</p>}
+              <p>当前结构化记录关联 {advisor.publicEvidence.length} 条公开 Evidence，可在「证据」章节展开后复核原始条目。</p>
+            ) : (
+              <p className="decision-empty">暂无可靠公开证据</p>
+            )}
           </article>
 
           <article className="decision-status-card">
             <span className="decision-index">07</span>
             <h3>官方公开项目或招生信息状态</h3>
             <dl>
-              <div><dt>官方招生信息</dt><dd>暂无公开信息</dd></div>
-              <div><dt>公开项目或基金</dt><dd>暂无公开信息</dd></div>
+              <div>
+                <dt>官方招生信息</dt>
+                <dd>暂无公开信息</dd>
+              </div>
+              <div>
+                <dt>公开项目或基金</dt>
+                <dd>暂无公开信息</dd>
+              </div>
             </dl>
           </article>
 
@@ -90,7 +94,9 @@ export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor })
           </article>
         </div>
 
-        <p className="decision-disclaimer">本科生任务仅为根据公开研究内容推导的可能场景，不代表实验室真实安排、当前名额或导师承诺。</p>
+        <p className="decision-disclaimer">
+          本科生任务仅为根据公开研究内容推导的可能场景，不代表实验室真实安排、当前名额或导师承诺。
+        </p>
       </div>
     </section>
   );

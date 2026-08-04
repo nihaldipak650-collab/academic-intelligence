@@ -171,13 +171,28 @@ describe("advisor detail", () => {
   it("lets content Evidence tags locate the public Evidence item", async () => {
     const user = userEvent.setup();
     renderDetail("synthetic-approved", "dto");
-    const evidenceToggle = screen.getByRole("button", { name: /完整证据/ });
-    if (evidenceToggle.getAttribute("aria-expanded") !== "true") {
-      await user.click(evidenceToggle);
-    }
+    expect(screen.queryByRole("button", { name: "定位到 Evidence E1" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /方法与技术路线/ }));
     const buttons = screen.getAllByRole("button", { name: "定位到 Evidence E1" });
     await user.click(buttons[0]);
-    expect(document.getElementById("public-evidence-e1")).toHaveFocus();
+    await waitFor(() => {
+      expect(screen.getByRole("button", { name: /完整证据/ })).toHaveAttribute("aria-expanded", "true");
+    });
+    await waitFor(() => {
+      expect(document.getElementById("public-evidence-e1")).toHaveFocus();
+    });
+  });
+
+  it("expands collapsed sections when page nav is clicked", async () => {
+    const user = userEvent.setup();
+    renderDetail("synthetic-approved", "dto");
+    const methodsToggle = screen.getByRole("button", { name: /方法与技术路线/ });
+    expect(methodsToggle).toHaveAttribute("aria-expanded", "false");
+    await user.click(screen.getByRole("link", { name: "方法路线" }));
+    await waitFor(() => {
+      expect(methodsToggle).toHaveAttribute("aria-expanded", "true");
+    });
+    expect(screen.getByLabelText("页面目录").querySelector('a[href="#methods"]')).toHaveClass("is-active");
   });
 
   it.each(blockedMockIds)("returns the same unavailable page for blocked direct link %s", (id) => {

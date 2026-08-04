@@ -114,5 +114,7 @@ describe("local review UI", () => {
     expect(screen.getByRole("link", { name: "← 返回导师一览" })).toHaveAttribute("href", "/advisors");
     expect(screen.getByLabelText("页面目录")).toHaveTextContent("决策速览");
     expect(screen.getByLabelText("页面目录").querySelector('a[href="#decision"]')).not.toBeNull();
+    expect(screen.getByRole("button", { name: /方法与技术路线/ })).toHaveAttribute("aria-expanded", "false");
+    expect(screen.getByRole("button", { name: /完整证据/ })).toHaveAttribute("aria-expanded", "false");
   });
 });
