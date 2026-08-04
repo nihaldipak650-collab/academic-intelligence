@@ -29,6 +29,11 @@ describe("父平台首页", () => {
     expect(
       screen.getByRole("link", { name: /Academic Intelligence/ }),
     ).toHaveAttribute("href", "/advisors");
+    expect(screen.getByRole("heading", { name: "最近更新" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /查看完整更新日志/ })).toHaveAttribute(
+      "href",
+      "/updates",
+    );
   });
 
   it("未开放服务入口显示即将开放 toast", async () => {

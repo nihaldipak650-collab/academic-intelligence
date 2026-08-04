@@ -56,6 +56,9 @@ export function PlatformHeader() {
             >
               学生工作台
             </a>
+            <Link to="/updates" onClick={() => setMenuOpen(false)}>
+              更新日志
+            </Link>
           </nav>
           <div className="nav-actions">
             <Link className="nav-ai" to="/advisors">
