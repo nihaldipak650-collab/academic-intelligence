@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "hu-zhengmao",
+  "source_scope": "中南大学生命科学学院官方个人主页、中南大学教师个人主页、官网列出的五篇代表论文种子及其正式 DOI/出版社/PubMed 页面；历史提交 2675d579 中的 33 条 DOI 表仅作为检索线索。旧 OpenAlex 作者聚合与旧 ORCID 记录不自动继承，ORCID 由正式出版页面重新桥接。候选统计按“正式论文作品”与“预印本版本”分开：历史表含 33 条正式 DOI，官网新增 1 篇 2021 在线/2022 卷期论文，另识别 1 条 TRMT2B 预印本版本。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1172/jci.insight.177032",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E10",
+      "last_verified_at": "2026-08-04",
+      "notes": "学院官网代表论文种子与 JCI Insight 正式记录一致；Zhengmao Hu 为末位通讯作者，官方主页与正式作者信息形成身份桥接。",
+      "title": "Intergenic sequences harboring potential enhancer elements contribute to Axenfeld-Rieger syndrome by regulating PITX2",
+      "publication_year": 2024,
+      "doi": "10.1172/jci.insight.177032",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s11684-023-1005-y",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E16",
+      "last_verified_at": "2026-08-04",
+      "notes": "学院官网代表论文种子与 Frontiers of Medicine 正式卷期记录一致；旧报告按在线年份写作 2023，本包按正式卷期年份 2024 记录。Zhengmao Hu 为通讯作者。",
+      "title": "Association of TRMT2B gene variants with juvenile amyotrophic lateral sclerosis",
+      "publication_year": 2024,
+      "doi": "10.1007/s11684-023-1005-y",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": "trmt2b-jals-version-group"
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1136/jmedgenet-2022-108425",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E5",
+      "last_verified_at": "2026-08-04",
+      "notes": "学院官网代表论文种子、J Med Genet/PubMed 题名与 DOI 一致；正式页面将 Zhengmao Hu、ORCID 0000-0002-3921-8205 与中南大学生命科学学院机构信息直接关联。",
+      "title": "GLRA2 gene mutations cause high myopia in humans and mice",
+      "publication_year": 2023,
+      "doi": "10.1136/jmedgenet-2022-108425",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s00439-021-02429-2",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E23",
+      "last_verified_at": "2026-08-04",
+      "notes": "学院官网代表论文种子与 Human Genetics/PubMed 正式记录一致；Zhengmao Hu 为末位通讯作者，正式记录包含中南大学机构桥接。",
+      "title": "Case series of congenital pseudarthrosis of the tibia unfulfilling neurofibromatosis type 1 diagnosis: 21% with somatic NF1 haploinsufficiency in the periosteum",
+      "publication_year": 2022,
+      "doi": "10.1007/s00439-021-02429-2",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/hmg/ddab233",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "official-profile:life.csu.edu.cn/info/1042/2564.htm#representative-paper-5",
+      "last_verified_at": "2026-08-04",
+      "notes": "学院官网代表论文种子与 Human Molecular Genetics/PubMed 正式卷期记录一致；旧官网引用在线发表年份 2021，本包按正式卷期年份 2022 记录。Zhengmao Hu 为末位通讯作者。",
+      "title": "The autism risk gene CNTN4 modulates dendritic spine formation",
+      "publication_year": 2022,
+      "doi": "10.1093/hmg/ddab233",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "official-profile:life.csu.edu.cn/info/1042/2564.htm",
+      "last_verified_at": "2026-08-04",
+      "notes": "中南大学生命科学学院官方主页；采用姓名、职称、导师类型、院系、研究方向、官方邮箱和五篇代表论文种子。基金数量、奖项和宣传性表述不进入安全 DTO；官方邮箱只保留在本权威证据文件。",
+      "page_title": "胡正茂-中南大学生命科学学院",
+      "profile_name": "胡正茂",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院遗传学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "胡正茂为中南大学生命科学学院遗传学系研究员。",
+          "fact_category": "professional_title",
+          "source_section": "师资队伍/个人简介",
+          "source_anchor": "职称与院系",
+          "supported_public_fields": [
+            "position",
+            "school_or_department"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "官方页面明确记载导师类型为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "师资队伍",
+          "source_anchor": "类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "长期从事人类遗传性疾病致病基因的鉴定及功能研究。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "研究方向第1句",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "聚焦高度近视和儿童自闭症的遗传发病机制研究。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "研究方向第2句",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "summary",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "官方主页列出五篇代表论文，涉及PITX2调控区、TRMT2B、GLRA2、NF1与CNTN4。",
+          "fact_category": "representative_publication_seed",
+          "source_section": "代表论文",
+          "source_anchor": "代表论文[1]-[5]",
+          "supported_public_fields": [
+            "summary",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "fact_text": "官方工作邮箱为 huzhengmao@sklmg.edu.cn。",
+          "fact_category": "official_contact",
+          "source_section": "个人简介",
+          "source_anchor": "Email",
+          "supported_public_fields": [
+            "contact"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1126/sciadv.abo7112",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded"
+      ],
+      "reason": "正式 DOI、作者与中南大学机构桥接可复核，但该文不是当前官方个人主页列出的代表论文种子；为控制页面范围，本轮不采用。",
+      "supported_fields": [
+        "research_directions_plain_language"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E2",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史 33 条表中的候选；正式出版信息与 Zhengmao Hu 作者记录已复核，但不作为本次公开页面 Evidence。",
+      "title": "De novo variants in genes regulating stress granule assembly associate with neurodevelopmental disorders",
+      "publication_year": 2022,
+      "doi": "10.1126/sciadv.abo7112",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1172/JCI159806",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded"
+      ],
+      "reason": "正式 DOI、作者与中南大学机构桥接可复核，但该文不是当前官方个人主页列出的代表论文种子；为控制页面范围，本轮不采用。",
+      "supported_fields": [
+        "research_directions_plain_language"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E4",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史 33 条表中的候选；正式出版信息与 Zhengmao Hu 作者记录已复核，但不作为本次公开页面 Evidence。",
+      "title": "GIGYF1 disruption associates with autism and impaired IGF-1R signaling",
+      "publication_year": 2022,
+      "doi": "10.1172/JCI159806",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.jgg.2022.03.004",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded"
+      ],
+      "reason": "正式 DOI、作者与中南大学机构桥接可复核，但该文不是当前官方个人主页列出的代表论文种子；为控制页面范围，本轮不采用。",
+      "supported_fields": [
+        "research_directions_plain_language"
+      ],
+      "repository_source_ref": "git-history:2675d579d623063a3e264fdaf56d0f2eb0ebfafa:web/reports/Hu_Zhengmao_profile_academic_zh.md#historical-E6",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史 33 条表中的候选；正式出版信息与 Zhengmao Hu 作者记录已复核，但不作为本次公开页面 Evidence。",
+      "title": "Loss-of-function of KMT5B leads to neurodevelopmental disorder and impairs neuronal development and neurogenesis",
+      "publication_year": 2022,
+      "doi": "10.1016/j.jgg.2022.03.004",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-1478039/v1",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded",
+        "duplicate_candidate"
+      ],
+      "reason": "该预印本已由正式期刊论文 E2 取代；按同一 version_group 去重，仅采用正式版本。",
+      "supported_fields": [
+        "research_directions_plain_language"
+      ],
+      "repository_source_ref": "version-audit:TRMT2B-preprint-v1",
+      "last_verified_at": "2026-08-04",
+      "notes": "预印本与正式论文题名相同，作者集合和研究内容对应；单独保留为版本审计记录，不计入正式论文数量。",
+      "title": "Association of TRMT2B gene variants with juvenile amyotrophic lateral sclerosis",
+      "publication_year": 2022,
+      "doi": "10.21203/rs.3.rs-1478039/v1",
+      "source_type": "preprint",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": "trmt2b-jals-version-group"
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "official_profile",
+      "source_url": "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "official-profile:faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm",
+      "last_verified_at": "2026-08-04",
+      "notes": "中南大学教师个人主页；采用姓名、单位、职称、博士/硕士生导师资格，以及传统基因定位、候选克隆、外显子组捕获和高通量测序等公开方法描述。办公地点等联系信息不进入安全 DTO。",
+      "page_title": "中南大学 胡正茂",
+      "profile_name": "胡正茂",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "胡正茂为中南大学生命科学学院研究员、博士生导师和硕士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "基本信息",
+          "source_anchor": "职称/所在单位/导师类型",
+          "supported_public_fields": [
+            "position",
+            "public_roles",
+            "institution"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "长期从事人类遗传性疾病致病基因定位克隆及功能研究。",
+          "fact_category": "research_direction",
+          "source_section": "个人简介",
+          "source_anchor": "研究方向",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "research_workflow",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "公开方法包括传统基因定位、候选克隆、外显子组捕获结合高通量测序。",
+          "fact_category": "research_method",
+          "source_section": "个人简介",
+          "source_anchor": "方法描述",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "zhao-yuetao",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-03",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-5338-0789",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+    "human_review_status": "verified",
+    "notes": "ORCID 公共记录显示 Yuetao Zhao，并列出 Central South University 当前任职；机器候选已记录，人工确认仍 pending。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Yuetao Zhao",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-5338-0789",
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://doi.org/10.1016/j.biomaterials.2023.122096；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Yuetao Zhao",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-5338-0789",
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://doi.org/10.1016/j.cej.2022.138139；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Yuetao Zhao",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-5338-0789",
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://pubs.acs.org/doi/10.1021/acs.analchem.4c00669；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Yuetao Zhao",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-5338-0789",
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-024-02487-4；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "正式 DOI 未在本轮锁定，保留为待人工核对候选。"
+      ],
+      "matched_author_name": null,
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "机器核验，不等同于人工精选或发布授权。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-01",
+      "notes": "官方域名、姓名与中南大学生命科学学院信息一致；人工确认仍待完成。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "最终作者角色与 ORCID 候选机器复核记录；不等同于人工 Reviewer、身份批准或发布授权。"
+}

@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "hu-dehua",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-04",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-8027-405X",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+    "human_review_status": "verified",
+    "notes": "中南大学生命科学学院官方主页确认胡德华为生物医学信息学系教授、博士生导师和学院副院长。ORCID 0000-0001-8027-405X 与 E4、E17 的正式 DOI 作品重合；历史候选 0000-0001-9257-2270 未获可靠作品桥接，予以否定。内容证据已完成外部审核，仍待项目负责人决定是否公开。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "PubMed列出 Dehua Hu 为末位作者并关联中南大学生命科学学院。",
+        "作者机构条目提供电子邮箱 803298@csu.edu.cn，支持通讯联系归属。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": "Department of Biomedical Informatics, School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "PubMed确认 Dehua Hu 为末位作者，署名中南大学生命科学学院，并在其作者机构条目给出电子邮箱；论文使用 MIMIC-IV、SMOTE、BPNN/RNN、比较机器学习模型、阈值调整与 SHAP 解释急性心衰 ICU 院内死亡风险。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "MDPI/PubMed列出 Dehua Hu 为第一作者、共同第一作者并关联中南大学生物医学信息学系。",
+        "MDPI明确通讯作者为 Yonggang Wu 与 Hao Jiang，因此 Dehua Hu 非通讯作者。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": "Department of Biomedical Informatics, School of Life Sciences, Central South University",
+      "matched_orcid": "0000-0001-8027-405X",
+      "notes": "MDPI/PubMed确认 Dehua Hu 为第一作者并与 Xiang Li 共同第一，署名中南大学生命科学学院生物医学信息学系；通讯作者为 Yonggang Wu 与 Hao Jiang。研究使用 FDG-PET/CT、DenseNet201、临床影像联合模型及生存分析。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "MDPI列出 Dehua Hu 为末位通讯作者并关联中南大学生命科学学院生物医学信息学系。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": "Department of Biomedical Informatics, School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "MDPI正式页面确认 Dehua Hu 为末位通讯作者，署名中南大学生命科学学院生物医学信息学系；研究通过在线横断面调查、15项量表、探索性与验证性因子分析研究疫苗信息素养。"
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E12",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E13",
+      "identity_status": "verified",
+      "verification_basis": [
+        "JMIR/PubMed列出 Dehua Hu 为末位通讯作者并关联中南大学生命科学学院生物医学信息学系。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": "Department of Biomedical Informatics, School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "JMIR/PubMed确认 Dehua Hu 为末位通讯作者，署名中南大学生命科学学院生物医学信息学系；研究通过网页抓取、标题模糊去重、672条谣言内容编码与统计比较分析谣言传播和辟谣。"
+    },
+    {
+      "evidence_id": "E14",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E15",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E16",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Frontiers列出 Dehua Hu 为末位通讯作者并关联中南大学生命科学学院生物医学信息学系。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": "Department of Biomedical Informatics, School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "Frontiers正式页面确认 Dehua Hu 为末位通讯作者，署名中南大学生命科学学院生物医学信息学系；研究使用百度指数、微博数据、时间序列、SKEP情感模型、LDA主题模型、Gensim、余弦相似度与桑基图分析公共舆情演化。"
+    },
+    {
+      "evidence_id": "E17",
+      "identity_status": "verified",
+      "verification_basis": [
+        "ORCID 0000-0001-8027-405X 的作品列表包含 DOI 10.3390/biomedicines12092157。",
+        "正式记录作者列表含 Dehua Hu。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-8027-405X",
+      "notes": "用于确认正确 ORCID 的非核心合作论文；不进入公开采用 Evidence。"
+    },
+    {
+      "evidence_id": "E18",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E19",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E20",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    },
+    {
+      "evidence_id": "E21",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "本轮未将该历史论文作为公开核心 Evidence，保留待后续按需核验。"
+      ],
+      "matched_author_name": "Dehua Hu",
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "非公开核心候选；身份未用于本页公开结论。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E22",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-04",
+      "notes": "life.csu.edu.cn 为中南大学生命科学学院官方域名；页面直接确认姓名、院系、职称、导师类型、副院长角色及主要研究方向。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "中南大学生命科学学院官方主页确认胡德华、医学信息学系、教授、博士生导师身份。项目负责人于 2026-08-04 人工审核通过进入正式公开候选。"
+}

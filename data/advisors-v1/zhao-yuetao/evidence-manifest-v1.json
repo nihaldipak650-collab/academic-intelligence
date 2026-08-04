@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "zhao-yuetao",
+  "source_scope": "学院官方个人页、正式期刊/DOI页面与可复核书目信息；候选检索由 Luna web research 完成",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.biomaterials.2023.122096",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#zhao-yuetao-e1",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=middle，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://doi.org/10.1016/j.biomaterials.2023.122096",
+      "title": "Anti-BCMA surface engineered biomimetic photothermal nanomissile enhances multiple myeloma cell apoptosis and overcomes the disturbance of NF-κB signaling in vivo",
+      "publication_year": 2023,
+      "doi": "10.1016/j.biomaterials.2023.122096",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.cej.2022.138139",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#zhao-yuetao-e2",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=first，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://doi.org/10.1016/j.cej.2022.138139",
+      "title": "Photothermal nanobomb blocking metabolic adenosine-A2AR potentiates infiltration and activity of T cells for robust antitumor immunotherapy",
+      "publication_year": 2022,
+      "doi": "10.1016/j.cej.2022.138139",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1021/acs.analchem.4c00669",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#zhao-yuetao-e3",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=last，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://pubs.acs.org/doi/10.1021/acs.analchem.4c00669",
+      "title": "Label-Free Multiplex Profiling of Exosomal Proteins with a Deep Learning-Driven 3D Surround-Enhancing SERS Platform for Early Cancer Diagnosis",
+      "publication_year": 2024,
+      "doi": "10.1021/acs.analchem.4c00669",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1186/s12951-024-02487-4",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#zhao-yuetao-e4",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=last，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://jnanobiotechnology.biomedcentral.com/articles/10.1186/s12951-024-02487-4",
+      "title": "Biomimetic nanodrug blocks CD73 to inhibit adenosine and boosts antitumor immune response synergically with photothermal stimulation",
+      "publication_year": 2024,
+      "doi": "10.1186/s12951-024-02487-4",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "正式 DOI 未在本轮锁定，保留为候选待人工核对",
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#zhao-yuetao-e5",
+      "last_verified_at": "2026-08-01",
+      "notes": "学院官方个人页代表论文种子；标题、年份、作者角色及机构桥接需按期刊页复核。期刊：Nano Research。",
+      "title": "Immunostimulant Nanomodulator Boosts Antitumor Immune Response in Triple Negative Breast Cancer by Synergism of Vessel Normalization and Photothermal Therapy",
+      "publication_year": 2023,
+      "doi": null,
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2530.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#zhao-yuetao-official-profile",
+      "last_verified_at": "2026-08-01",
+      "notes": "中南大学生命科学学院官方个人主页。",
+      "page_title": "赵岳涛-中南大学生命科学学院",
+      "profile_name": "赵岳涛",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物化学与分子生物学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "赵岳涛为中南大学生命科学学院生物化学与分子生物学系副教授、硕导导师。",
+          "fact_category": "professional_title",
+          "source_anchor": "个人简介",
+          "supported_public_fields": [
+            "position",
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "新型生物材料构建及生物医学应用；生物材料的结构、功能与安全性调节；光热治疗、肿瘤免疫与疾病检测材料",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向",
+          "supported_public_fields": [
+            "research_directions_original"
+          ]
+        }
+      ]
+    }
+  ]
+}

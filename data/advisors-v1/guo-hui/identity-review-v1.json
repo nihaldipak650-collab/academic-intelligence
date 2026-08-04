@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "guo-hui",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-03",
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0002-1570-2545",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+    "human_review_status": "pending",
+    "notes": "中南大学生命科学学院官方主页确认郭辉、研究员、博士生导师、遗传学系及研究方向。公开ORCID 0000-0002-1570-2545显示Hui Guo并收录GIGYF1等匹配论文；人工身份与公开发布批准仍待项目负责人完成。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Hui Guo 与中南大学生命科学学院医学遗传学研究中心、官方工作邮箱、公开ORCID或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Hui Guo",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-1570-2545",
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=last，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Hui Guo 与中南大学生命科学学院医学遗传学研究中心、官方工作邮箱、公开ORCID或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Hui Guo",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-1570-2545",
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=last，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Hui Guo 与中南大学生命科学学院医学遗传学研究中心、官方工作邮箱、公开ORCID或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Hui Guo",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=middle，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Hui Guo 与中南大学生命科学学院医学遗传学研究中心、官方工作邮箱、公开ORCID或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Hui Guo",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=first，is_co_first=true，is_corresponding=true；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方个人主页列出该论文题名种子。",
+        "正式 DOI、出版社或 PubMed/PMC 页面题名、年份与作者集合一致。",
+        "Hui Guo 与中南大学生命科学学院医学遗传学研究中心、官方工作邮箱、公开ORCID或固定共同作者形成身份桥接。"
+      ],
+      "matched_author_name": "Hui Guo",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者身份与作者角色已按正式来源保守记录：author_position=first，is_co_first=false，is_corresponding=true；不等同于人工精选或发布授权。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-03",
+      "notes": "life.csu.edu.cn 为中南大学生命科学学院官方域名，页面姓名、机构、院系和研究方向与正式Roster一致。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "旧站23条OpenAlex过滤结果不直接迁移为已验证证据。本次只采用官方主页五篇代表论文种子与对应正式出版物；人工身份、内容和公开发布审核仍待项目负责人完成。"
+}

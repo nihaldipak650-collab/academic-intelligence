@@ -1,0 +1,749 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "hu-dehua",
+  "source_scope": "联网核验完成的 v1.0.4 候选包：官方身份以中南大学生命科学学院主页为主；核心论文以 PubMed、出版社正式页面和 ORCID 作品重合进行身份交叉核验。仅采用 E2、E4、E6、E13、E16 与官方主页 E22；其余历史论文保留为非公开候选。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2024.1258188",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "A study on the factors influencing the intention to receive booster shots of the COVID-19 vaccine in China based on the information frame effect",
+      "publication_year": 2024,
+      "doi": "10.3389/fpubh.2024.1258188",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/39236563/",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": "2026-08-04",
+      "notes": "PubMed确认 Dehua Hu 为末位作者，署名中南大学生命科学学院，并在其作者机构条目给出电子邮箱；论文使用 MIMIC-IV、SMOTE、BPNN/RNN、比较机器学习模型、阈值调整与 SHAP 解释急性心衰 ICU 院内死亡风险。",
+      "title": "Prediction of mortality events of patients with acute heart failure in intensive care unit based on deep neural network",
+      "publication_year": 2024,
+      "doi": "10.1016/j.cmpb.2024.108403",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/vaccines10010090",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "The Uptake and Vaccination Willingness of COVID-19 Vaccine among Chinese Residents: Web-Based Online Cross-Sectional Study",
+      "publication_year": 2022,
+      "doi": "10.3390/vaccines10010090",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/diagnostics13193107",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": "2026-08-04",
+      "notes": "MDPI/PubMed确认 Dehua Hu 为第一作者并与 Xiang Li 共同第一，署名中南大学生命科学学院生物医学信息学系；通讯作者为 Yonggang Wu 与 Hao Jiang。研究使用 FDG-PET/CT、DenseNet201、临床影像联合模型及生存分析。",
+      "title": "Deep Learning to Predict the Cell Proliferation and Prognosis of Non-Small Cell Lung Cancer Based on FDG-PET/CT Images",
+      "publication_year": 2023,
+      "doi": "10.3390/diagnostics13193107",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2022.849859",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Development and Validation of a Self-Quantification Scale for Patients With Hypertension",
+      "publication_year": 2022,
+      "doi": "10.3389/fpubh.2022.849859",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/ijerph192013601",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": "2026-08-04",
+      "notes": "MDPI正式页面确认 Dehua Hu 为末位通讯作者，署名中南大学生命科学学院生物医学信息学系；研究通过在线横断面调查、15项量表、探索性与验证性因子分析研究疫苗信息素养。",
+      "title": "The Development and Preliminary Application of the Chinese Version of the COVID-19 Vaccine Literacy Scale",
+      "publication_year": 2022,
+      "doi": "10.3390/ijerph192013601",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/bib/bbae079",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "A novel approach to study multi-domain motions in JAK1's activation mechanism based on energy landscape",
+      "publication_year": 2024,
+      "doi": "10.1093/bib/bbae079",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/advs.202507799",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "ggalign: Bridging the Grammar of Graphics and Biological Multilayered Complexity",
+      "publication_year": 2025,
+      "doi": "10.1002/advs.202507799",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2022.811792",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Effect of Information Framing on Wearing Masks During the COVID-19 Pandemic: Interaction With Social Norms and Information Credibility",
+      "publication_year": 2022,
+      "doi": "10.3389/fpubh.2022.811792",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/vaccines10081336",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Exploring the Willingness of the COVID-19 Vaccine Booster Shots in China Using the Health Belief Model: Web-Based Online Cross-Sectional Study",
+      "publication_year": 2022,
+      "doi": "10.3390/vaccines10081336",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2023.1043485",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "How information processing and risk/benefit perception affect COVID-19 vaccination intention of users in online health communities",
+      "publication_year": 2023,
+      "doi": "10.3389/fpubh.2023.1043485",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E12",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/ijerph191811783",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Exploring Users' Health Behavior Changes in Online Health Communities: Heuristic-Systematic Perspective Study",
+      "publication_year": 2022,
+      "doi": "10.3390/ijerph191811783",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E13",
+      "evidence_type": "publication",
+      "source_url": "https://www.jmir.org/2024/1/e48564",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": "2026-08-04",
+      "notes": "JMIR/PubMed确认 Dehua Hu 为末位通讯作者，署名中南大学生命科学学院生物医学信息学系；研究通过网页抓取、标题模糊去重、672条谣言内容编码与统计比较分析谣言传播和辟谣。",
+      "title": "Difference in Rumor Dissemination and Debunking Before and After the Relaxation of COVID-19 Prevention and Control Measures in China: Infodemiology Study",
+      "publication_year": 2024,
+      "doi": "10.2196/48564",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E14",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1080/08989621.2025.2554696",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Assessing the influence of generative artificial intelligence (GenAI) on awareness and behavior in medical research integrity: An online survey study",
+      "publication_year": 2025,
+      "doi": "10.1080/08989621.2025.2554696",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E15",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1371/journal.pone.0308377",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Scientific misconduct responsibility attribution: An empirical study on byline position and team identity in Chinese medical papers",
+      "publication_year": 2024,
+      "doi": "10.1371/journal.pone.0308377",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E16",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2025.1438854",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": "2026-08-04",
+      "notes": "Frontiers正式页面确认 Dehua Hu 为末位通讯作者，署名中南大学生命科学学院生物医学信息学系；研究使用百度指数、微博数据、时间序列、SKEP情感模型、LDA主题模型、Gensim、余弦相似度与桑基图分析公共舆情演化。",
+      "title": "How online public opinion evolves before and after policy adjustments in response to major public health emergencies",
+      "publication_year": 2025,
+      "doi": "10.3389/fpubh.2025.1438854",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": "VG_HU_DEHUA_OPINION_PREPRINT"
+    },
+    {
+      "evidence_id": "E17",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/biomedicines12092157",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "ORCID作品重合用于身份消歧，但该合作论文不作为首发页面核心研究主线。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": "2026-08-04",
+      "notes": "ORCID 0000-0001-8027-405X 与该 DOI 的作者记录重合，确认这是中南大学胡德华的合作论文；不作为公开核心 Evidence。",
+      "title": "Identifying Key Genes as Progression Indicators of Prostate Cancer with Castration Resistance Based on Dynamic Network Biomarker Algorithm and Weighted Gene Correlation Network Analysis",
+      "publication_year": 2024,
+      "doi": "10.3390/biomedicines12092157",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E18",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/mdr2.70028",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "bregr: An R Package for Streamlined Batch Processing and Visualization of Biomedical Regression Models",
+      "publication_year": 2025,
+      "doi": "10.1002/mdr2.70028",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E19",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.2139/ssrn.4469391",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "duplicate_candidate",
+        "identity_pending"
+      ],
+      "reason": "与正式期刊论文 E16 属于同一研究的历史预印本候选；公开采用正式版本 E16。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "SSRN历史预印本候选；正式期刊版本 E16 已采用，本条不进入公开字段。",
+      "title": "Characteristics of Network Public Opinion Evolution Before and after Policy Adjustment in Response to Major Public Health Emergencies: Evidence from the Optimization of Containment Measures for COVID-19 in China",
+      "publication_year": 2023,
+      "doi": "10.2139/ssrn.4469391",
+      "source_type": "preprint",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": "VG_HU_DEHUA_OPINION_PREPRINT"
+    },
+    {
+      "evidence_id": "E20",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fonc.2025.1676360",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Deep learning for multitask prediction on thyroid nodule frozen sections",
+      "publication_year": 2026,
+      "doi": "10.3389/fonc.2025.1676360",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E21",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2026.1849221",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=hu-dehua",
+      "last_verified_at": null,
+      "notes": "历史候选论文；本轮未将其作为公开核心证据，作者身份与公开字段支持仍保持待核验。",
+      "title": "Willingness and influencing factors of herpes zoster vaccination intention among Chinese residents: a study based on framing effects",
+      "publication_year": 2026,
+      "doi": "10.3389/fpubh.2026.1849221",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E22",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2502.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "official-profile:life.csu.edu.cn/info/1042/2502.htm",
+      "last_verified_at": "2026-08-04",
+      "notes": "中南大学生命科学学院官方主页确认姓名、教授职称、博士生导师资格、生物医学信息学系归属、副院长角色、四项主要研究方向及公开联系方式。联系方式保留在权威源包，当前安全 DTO 不输出 contact 字段。",
+      "page_title": "胡德华-中南大学生命科学学院",
+      "profile_name": "胡德华",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物医学信息学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "胡德华为中南大学生命科学学院生物医学信息学系教授。",
+          "fact_category": "professional_title",
+          "source_section": "师资队伍/个人简介",
+          "source_anchor": "职称与院系",
+          "supported_public_fields": [
+            "position",
+            "school_or_department"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "官方页面明确记载导师类型为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "师资队伍",
+          "source_anchor": "类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "胡德华现任中南大学生命科学学院副院长。",
+          "fact_category": "other_official_fact",
+          "source_section": "个人简介",
+          "source_anchor": "现任职务",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "主要研究方向之一为医药信息管理。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[1]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "主要研究方向之一为医学人工智能。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[2]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "possible_undergraduate_tasks",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "fact_text": "主要研究方向之一为生物医学大数据挖掘。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[3]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "possible_undergraduate_tasks",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F7",
+          "fact_text": "主要研究方向之一为健康信息学。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[4]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "possible_undergraduate_tasks",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F8",
+          "fact_text": "官方主页公开邮箱 hudehua2000@163.com、联系电话 0731-82650240 和学院地址。当前安全 DTO 政策不展示联系方式。",
+          "fact_category": "official_contact",
+          "source_section": "联系信息",
+          "source_anchor": "Email/联系电话/地址",
+          "supported_public_fields": [
+            "contact"
+          ]
+        },
+        {
+          "fact_id": "F9",
+          "fact_text": "官方主页将疫苗信息素养、在线健康社区、疫苗加强针意愿与口罩信息框架等论文列为代表性成果种子。",
+          "fact_category": "representative_publication_seed",
+          "source_section": "代表论文",
+          "source_anchor": "代表论文列表",
+          "supported_public_fields": [
+            "summary",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow"
+          ]
+        }
+      ]
+    }
+  ]
+}

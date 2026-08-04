@@ -1,239 +1,183 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import advisorJson from "../../public/data/advisors.json";
+import { describe, expect, it } from "vitest";
 import { AdvisorDataProvider } from "../data/AdvisorDataContext";
+import { blockedMockIds, mockCandidates } from "../mocks/advisors";
 import { AdvisorDetailPage } from "../pages/AdvisorDetailPage";
 import { AdvisorListPage } from "../pages/AdvisorListPage";
-import type { AdvisorDataEnvelope } from "../types/advisor";
+import { emptyPublicDto, syntheticPublicDto } from "./fixtures/advisors";
 
-const data = advisorJson as AdvisorDataEnvelope;
-const config = { feedbackUrl: "https://v.wjx.cn/vm/Pw7GGmz.aspx" };
-
-function renderList() {
+function renderMockList(options?: { candidates?: typeof mockCandidates; error?: boolean; delayMs?: number }) {
   return render(
-    <AdvisorDataProvider initialData={data} initialConfig={config}>
-      <MemoryRouter>
+    <MemoryRouter>
+      <AdvisorDataProvider initialCandidates={options?.candidates ?? mockCandidates} simulatedError={options?.error} delayMs={options?.delayMs}>
         <AdvisorListPage />
-      </MemoryRouter>
-    </AdvisorDataProvider>,
+      </AdvisorDataProvider>
+    </MemoryRouter>,
   );
 }
 
-function renderDetail(path: string, initialData = data) {
+function renderDtoList(dto: unknown) {
   return render(
-    <AdvisorDataProvider initialData={initialData} initialConfig={config}>
-      <MemoryRouter initialEntries={[path]}>
-        <Routes>
-          <Route path="/advisor/:id" element={<AdvisorDetailPage />} />
-        </Routes>
-      </MemoryRouter>
-    </AdvisorDataProvider>,
+    <MemoryRouter>
+      <AdvisorDataProvider initialDto={dto}><AdvisorListPage /></AdvisorDataProvider>
+    </MemoryRouter>,
   );
 }
 
-describe("导师列表页", () => {
-  it("显示全部真实导师和明确证据边界", () => {
-    renderList();
-    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(
-      7,
-    );
-    expect(screen.queryByText("职位 / 身份：暂无公开信息")).not.toBeInTheDocument();
-    expect(screen.getAllByText("公开学术证据 + AI整理")).toHaveLength(7);
-    expect(screen.queryByText(/经授权的本科生经历/)).not.toBeInTheDocument();
+function renderDetail(id: string, source: "mock" | "dto" = "mock") {
+  return render(
+    <MemoryRouter initialEntries={[`/advisor/${id}`]}>
+      <AdvisorDataProvider {...(source === "dto" ? { initialDto: syntheticPublicDto } : { initialCandidates: mockCandidates })}>
+        <Routes><Route path="advisor/:id" element={<AdvisorDetailPage />} /></Routes>
+      </AdvisorDataProvider>
+    </MemoryRouter>,
+  );
+}
+
+describe("advisor list", () => {
+  it("shows only the three admitted synthetic records", () => {
+    renderMockList();
+    expect(screen.getAllByRole("link", { name: /查看.*公开证据详情/ })).toHaveLength(3);
+    blockedMockIds.forEach((id) => expect(screen.queryByText(id)).not.toBeInTheDocument());
   });
 
-  it("实时搜索并显示无结果 Empty State", async () => {
-    const user = userEvent.setup();
-    renderList();
-    await user.type(
-      screen.getByRole("searchbox", {
-        name: "搜索姓名、机构、摘要、研究方向或技术",
-      }),
-      "不存在的导师",
-    );
-    expect(
-      screen.getByText("当前筛选条件没有匹配导师"),
-    ).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "清除筛选" }));
-    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(
-      7,
-    );
+  it("prioritizes decision-ready research facts on advisor cards", () => {
+    renderMockList();
+    const card = screen.getByRole("heading", { name: "示例导师甲" }).closest("article");
+    expect(card).not.toBeNull();
+    const cardView = within(card!);
+    expect(cardView.getByText("核心研究主题")).toBeInTheDocument();
+    expect(cardView.getByText("围绕细胞图谱建立可复核的公开研究问题。")).toBeInTheDocument();
+    expect(cardView.getByText("主要方法")).toBeInTheDocument();
+    expect(cardView.getByText("显微成像；细胞标记")).toBeInTheDocument();
+    expect(cardView.getByText("本科生可能切入点")).toBeInTheDocument();
+    expect(cardView.getByText("构建小型文献证据矩阵")).toBeInTheDocument();
+    expect(cardView.queryByText(/演示如何从公开证据理解研究问题/)).not.toBeInTheDocument();
   });
 
-  it("筛选按钮可与搜索组合", async () => {
+  it("searches by technique and returns an empty state", async () => {
     const user = userEvent.setup();
-    renderList();
-    await user.click(screen.getByRole("button", { name: "孤独症 2" }));
-    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(
-      2,
-    );
-    await user.type(
-      screen.getByRole("searchbox", {
-        name: "搜索姓名、机构、摘要、研究方向或技术",
-      }),
-      "高度近视",
-    );
-    expect(screen.getByRole("heading", { name: /胡正茂/ })).toBeInTheDocument();
-    expect(screen.queryByRole("heading", { name: /郭辉/ })).not.toBeInTheDocument();
+    renderMockList();
+    const search = screen.getByRole("searchbox");
+    await user.type(search, "统计建模");
+    expect(screen.getByRole("heading", { name: "示例导师乙" })).toBeInTheDocument();
+    await user.clear(search);
+    await user.type(search, "不存在的合成方向");
+    expect(screen.getByRole("heading", { name: "没有匹配的合成记录" })).toBeInTheDocument();
   });
 
-  it("多标签使用 OR 并可一键恢复全部", async () => {
+  it("combines tags with search and exposes no research-mode inference filter", async () => {
     const user = userEvent.setup();
-    renderList();
-    await user.click(screen.getByRole("button", { name: "孤独症 2" }));
-    await user.click(screen.getByRole("button", { name: "结构生物学 1" }));
-    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(3);
-    await user.click(screen.getByRole("button", { name: "全部 7" }));
-    expect(screen.getAllByRole("link", { name: /查看完整证据报告/ })).toHaveLength(7);
+    renderMockList();
+    await user.click(screen.getByRole("button", { name: "网络分析 1" }));
+    expect(screen.getByRole("heading", { name: "示例导师乙" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "示例导师甲" })).not.toBeInTheDocument();
+    expect(screen.queryByText("导师类型")).not.toBeInTheDocument();
+  });
+
+  it("renders real DTO zero as a normal safe empty state without mock records", () => {
+    renderDtoList(emptyPublicDto);
+    expect(screen.getByRole("heading", { name: "当前暂无获准公开的导师资料" })).toBeInTheDocument();
+    expect(screen.getByText("0", { selector: ".result-count strong" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "示例导师甲" })).not.toBeInTheDocument();
+  });
+
+  it("renders one synthetic DTO advisor", () => {
+    renderDtoList(syntheticPublicDto);
+    expect(screen.getByRole("heading", { name: "合成批准导师" })).toBeInTheDocument();
+    expect(screen.getByText("合成研究导师")).toBeInTheDocument();
+  });
+
+  it("fails closed for malformed DTO", () => {
+    renderDtoList({ ...emptyPublicDto, advisorCount: 2 });
+    expect(screen.getByRole("heading", { name: "数据安全门已关闭" })).toBeInTheDocument();
+  });
+
+  it("shows loading and then resolves in configured mock tests", async () => {
+    render(
+      <MemoryRouter>
+        <AdvisorDataProvider delayMs={1}><AdvisorListPage /></AdvisorDataProvider>
+      </MemoryRouter>,
+    );
+    expect(screen.getByText(/正在准备安全的本地演示界面/)).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByRole("heading", { name: "导师目录演示" })).toBeInTheDocument());
   });
 });
 
-describe("导师详情页", () => {
-  beforeEach(() => {
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue({
-        ok: true,
-        text: async () =>
-          [
-            "# 导师画像",
-            "## 公开学术事实",
-            "保留的学术内容。Confidence: Medium。 DOI: 10.1000/test",
-            "## 第二部分：本科生科研经历参考（Undergraduate Research Experience）",
-            "### 本科生科研经历证据（Experience Evidence）",
-            "代表性：Unknown。具体学生经历正文。",
-            "## 第三部分：学术分析",
-            "保留的后续学术内容。",
-          ].join("\n\n"),
-      }),
-    );
+describe("advisor detail", () => {
+  it("renders the undergraduate decision snapshot from existing evidence fields", () => {
+    renderDetail("synthetic-approved", "dto");
+    const heading = screen.getByRole("heading", { name: "本科生决策速览" });
+    const section = heading.closest("section");
+    expect(section).not.toBeNull();
+    const snapshot = within(section!);
+    [
+      "核心研究问题",
+      "研究工作形态",
+      "常用技术与数据",
+      "本科生可能切入的公开研究场景",
+      "建议准备",
+      "公开成果与 Evidence",
+      "官方公开项目或招生信息状态",
+      "公开资料无法判断的事项",
+    ].forEach((label) => expect(snapshot.getByRole("heading", { name: label })).toBeInTheDocument());
+    expect(snapshot.getByText("合成科学问题如何被公开证据支持？")).toBeInTheDocument();
+    expect(snapshot.getByText(/本科生任务仅为根据公开研究内容推导的可能场景/)).toBeInTheDocument();
   });
 
-  afterEach(() => {
-    vi.unstubAllGlobals();
+  it("shows official-information empty states and interview-only boundaries", () => {
+    renderDetail("synthetic-approved", "dto");
+    const heading = screen.getByRole("heading", { name: "你可能还想知道" });
+    const section = heading.closest("section");
+    expect(section).not.toBeNull();
+    const boundary = within(section!);
+    expect(boundary.getByRole("heading", { name: "官方招生信息" })).toBeInTheDocument();
+    expect(boundary.getByRole("heading", { name: "公开项目或基金" })).toBeInTheDocument();
+    expect(boundary.getAllByText("暂无公开信息")).toHaveLength(2);
+    expect(boundary.getByText("导师管理风格与沟通方式")).toBeInTheDocument();
+    expect(boundary.getByText("实验室真实氛围与学生体验")).toBeInTheDocument();
+    expect(boundary.getByText("当前名额与具体招募安排")).toBeInTheDocument();
+    expect(boundary.getByText(/建议通过官方渠道联系/)).toBeInTheDocument();
   });
 
-  it("按 ID 呈现正确导师并加载报告", async () => {
-    renderDetail("/advisor/guo-hui");
-    expect(screen.getByRole("heading", { name: /郭辉/ })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "先看这里" })).toBeInTheDocument();
-    expect(screen.getAllByText("待核验").length).toBeGreaterThanOrEqual(1);
-    await waitFor(() =>
-      expect(screen.getByText("完整学术报告与论文证据")).toBeInTheDocument(),
-    );
-    expect(fetch).toHaveBeenCalledWith(
-      expect.stringMatching(/reports\/Guo_Hui_profile_academic_zh\.md$/),
-    );
+  it("renders complete DTO fields and Evidence links", () => {
+    renderDetail("synthetic-approved", "dto");
+    expect(screen.getByRole("heading", { name: "合成批准导师" })).toBeInTheDocument();
+    expect(screen.getByText("合成研究导师")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "公开研究流程" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /一项用于验证超长公开 Evidence 题名/ })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /DOI：10\.9999\/synthetic-approved/ })).toBeInTheDocument();
+    expect(screen.queryByText(/期刊|journal/i)).not.toBeInTheDocument();
   });
 
-  it("Experience 来源导师不公开案例正文、数量或 Unknown", async () => {
-    renderDetail("/advisor/liu-jing");
-    await waitFor(() =>
-      expect(screen.getByText("保留的后续学术内容。")).toBeInTheDocument(),
-    );
-    expect(
-      screen.getByText(/学生经历信息暂未纳入1\.0公开展示/),
-    ).toBeInTheDocument();
-    expect(screen.queryByText(/具体学生经历正文/)).not.toBeInTheDocument();
-    expect(screen.queryByText(/包含 1 个/)).not.toBeInTheDocument();
-    expect(document.body.textContent).not.toMatch(/Unknown|null|undefined/i);
-  });
-
-  it("联系方式缺失、动态状态和任务证据缺失均显示规范空状态", () => {
-    renderDetail("/advisor/liu-jing");
-    expect(screen.getAllByText("暂无公开信息").length).toBeGreaterThanOrEqual(4);
-    expect(screen.getByRole("heading", { name: "暂无可靠公开证据" })).toBeInTheDocument();
-    expect(screen.getAllByText("待核验").length).toBeGreaterThanOrEqual(2);
-  });
-
-  it("结构化官方主页和来源使用安全的新窗口链接", () => {
-    const first = data.advisors[0];
-    const contactData: AdvisorDataEnvelope = {
-      ...data,
-      advisors: data.advisors.map((advisor) =>
-        advisor.id === first.id
-          ? {
-              ...advisor,
-              position: "教授",
-              contact: {
-                officialEmail: "public@example.edu.cn",
-                officialPhone: null,
-                officialHomepage: "https://example.edu.cn/advisor",
-                laboratoryAddress: "校本部公开地址",
-                sourceUrl: "https://example.edu.cn/source",
-              },
-            }
-          : advisor,
-      ),
-    };
-    renderDetail(`/advisor/${first.id}`, contactData);
-    const homepage = screen.getByRole("link", { name: "打开官方页面" });
-    expect(homepage).toHaveAttribute("target", "_blank");
-    expect(homepage).toHaveAttribute("rel", "noopener noreferrer");
-    expect(homepage).toHaveAttribute("href", "https://example.edu.cn/advisor");
-  });
-
-  it("成长路线保持折叠，完整报告无需点击即可直接阅读", async () => {
-    renderDetail("/advisor/guo-hui");
-    const growthSummary = screen.getByText("科研成长路线与前置技能");
-    expect(growthSummary.closest("details")).not.toHaveAttribute("open");
-    await waitFor(() =>
-      expect(screen.getByText("完整学术报告与论文证据")).toBeInTheDocument(),
-    );
-    expect(screen.getByText("保留的后续学术内容。")).toBeVisible();
-    expect(
-      screen.getByText("完整学术报告与论文证据").closest("details"),
-    ).toBeNull();
-  });
-
-  it("网站版本与真实档案版本语义分离", () => {
-    renderDetail("/advisor/guo-hui");
-    expect(screen.getByText("网站版本")).toBeInTheDocument();
-    expect(screen.getByText("1.0 RC1")).toBeInTheDocument();
-    expect(screen.getByText("档案版本")).toBeInTheDocument();
-    expect(screen.getByText("0.5-beta")).toBeInTheDocument();
-  });
-
-  it("主要技术先显示三项，并可展开查看全部四项", async () => {
+  it("lets content Evidence tags locate the public Evidence item", async () => {
     const user = userEvent.setup();
-    const advisor = data.advisors.find((item) => item.id === "li-faxiang")!;
-    renderDetail("/advisor/li-faxiang");
-    const disclosure = screen.getByText("查看全部技术（共4项）");
-    expect(advisor.quickSummary.mainTechniques).toHaveLength(4);
-    expect(screen.getByText(advisor.quickSummary.mainTechniques[3])).toBeInTheDocument();
-    await user.click(disclosure);
-    expect(disclosure.closest("details")).toHaveAttribute("open");
+    renderDetail("synthetic-approved", "dto");
+    const buttons = screen.getAllByRole("button", { name: "定位到 Evidence E1" });
+    await user.click(buttons[0]);
+    expect(document.getElementById("public-evidence-e1")).toHaveFocus();
   });
 
-  it("7 位导师的详情路由均能呈现正确姓名", () => {
-    data.advisors.forEach((advisor) => {
-      const view = renderDetail(`/advisor/${advisor.id}`);
-      expect(screen.getByRole("heading", { name: new RegExp(advisor.nameZh) })).toBeInTheDocument();
-      view.unmount();
-    });
+  it.each(blockedMockIds)("returns the same unavailable page for blocked direct link %s", (id) => {
+    renderDetail(id);
+    expect(screen.getByRole("heading", { name: "此导师资料不可用" })).toBeInTheDocument();
   });
 
-  it("无效 ID 显示错误页而不是空白或跳转", () => {
-    renderDetail("/advisor/not-a-real-id");
-    expect(screen.getByText("没有找到这位导师")).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: "返回导师列表" }),
-    ).toHaveAttribute("href", "/advisors");
+  it("returns the unavailable page for an invalid DTO id", () => {
+    renderDetail("not-a-record", "dto");
+    expect(screen.getByRole("heading", { name: "此导师资料不可用" })).toBeInTheDocument();
   });
 
-  it("报告请求失败显示可恢复错误", async () => {
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue({ ok: false, status: 404 }),
-    );
-    renderDetail("/advisor/guo-hui");
-    await waitFor(() =>
-      expect(screen.getByText("完整报告暂时无法读取")).toBeInTheDocument(),
-    );
-    expect(
-      screen.getByRole("link", { name: "返回导师列表" }),
-    ).toHaveAttribute("href", "/advisors");
+  it("renders an explicit empty Evidence state", () => {
+    renderDetail("demo-compute");
+    expect(screen.getByRole("heading", { name: "暂无可靠公开证据" })).toBeInTheDocument();
+  });
+
+  it("renders long synthetic content without truncating it", () => {
+    renderDetail("demo-long-record");
+    expect(screen.getByText(/一项用于验证超长论文标题/)).toBeInTheDocument();
+    expect(screen.getAllByText(/超长技术名称：多尺度时空特征提取/)).toHaveLength(2);
   });
 });

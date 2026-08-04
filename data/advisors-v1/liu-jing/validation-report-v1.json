@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "liu-jing",
+  "valid": true,
+  "release_eligible": true,
+  "requested_publication_status": "approved",
+  "effective_publication_status": "approved",
+  "candidate_evidence_count": 6,
+  "adopted_public_evidence_count": 5,
+  "official_profile_evidence_count": 1,
+  "publication_candidate_evidence_count": 5,
+  "adopted_official_evidence_count": 1,
+  "adopted_publication_evidence_count": 4,
+  "featured_publication_count": 0,
+  "pending_version_group_count": 0,
+  "schema_results": {
+    "public_advisor": "passed",
+    "evidence_manifest": "passed",
+    "identity_review": "passed"
+  },
+  "schema_and_field_binding_status": "passed",
+  "errors": [],
+  "warnings": []
+}

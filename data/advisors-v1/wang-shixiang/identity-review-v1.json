@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "wang-shixiang",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-03",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-9855-7357",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+    "human_review_status": "verified",
+    "notes": "ORCID 公共记录显示 Shixiang Wang，机构与研究方向可形成机器候选；人工确认仍 pending。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Shixiang Wang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://www.nature.com/articles/s41467-024-45479-6；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Shixiang Wang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://doi.org/10.1136/jitc-2023-008040；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Shixiang Wang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://www.nature.com/articles/s42003-024-06891-2；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Shixiang Wang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://academic.oup.com/bioinformatics/article/38/2/527/6369562；不等同于人工精选或发布授权。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "学院官方主页列出论文种子。",
+        "DOI或正式期刊页面题名、年份与作者信息可复核。",
+        "作者与中南大学相关机构形成桥接。"
+      ],
+      "matched_author_name": "Shixiang Wang",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色与论文身份机器复核完成；正式来源：https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009557；不等同于人工精选或发布授权。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-01",
+      "notes": "官方域名、姓名与中南大学生命科学学院信息一致；人工确认仍待完成。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "最终作者角色与 ORCID 候选机器复核记录；不等同于人工 Reviewer、身份批准或发布授权。"
+}

@@ -1,1019 +1,256 @@
 {
-    "schema_version":  "1.0.3",
-    "advisor_id":  "xiang-rong",
-    "source_scope":  "Extracted without network access from the existing public paper table in web/reports/Xiang_Rong_profile_zh.md.",
-    "candidate_evidence":  [
-                               {
-                                   "evidence_id":  "E1",
-                                   "evidence_type":  "publication",
-                                   "title":  "Targeting WSTF degradation to resolve chronic inflammation",
-                                   "publication_year":  2025,
-                                   "doi":  "10.1016/j.it.2025.07.009",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.it.2025.07.009",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:198",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E2",
-                                   "evidence_type":  "publication",
-                                   "title":  "Reticulon 3 deficiency induces ferroptosis via chaperone-mediated autophagy in ischemia-reperfusion induced acute kidney injury",
-                                   "publication_year":  2025,
-                                   "doi":  "10.1016/j.freeradbiomed.2025.10.256",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.freeradbiomed.2025.10.256",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:199",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E3",
-                                   "evidence_type":  "publication",
-                                   "title":  "RTN3 regulates collagen biosynthesis and profibrotic macrophage differentiation to promote pulmonary fibrosis via interacting with CRTH2",
-                                   "publication_year":  2025,
-                                   "doi":  "10.1186/s10020-025-01119-3",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1186/s10020-025-01119-3",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "research_questions",
-                                                            "main_techniques",
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "summary",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:200",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E4",
-                                   "evidence_type":  "publication",
-                                   "title":  "Predictive value and robustness of the stress hyperglycemia ratio combined with hypertension for stroke risk: evidence from the CHARLS cohort",
-                                   "publication_year":  2025,
-                                   "doi":  "10.1186/s12933-025-02898-z",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1186/s12933-025-02898-z",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:201",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E5",
-                                   "evidence_type":  "publication",
-                                   "title":  "Lipin3 deficiency aggravates cisplatin induced acute kidney injury via activating Sirt1-p21-Caspase 3-GSDME pyroptosis pathway",
-                                   "publication_year":  2025,
-                                   "doi":  "10.7150/ijbs.110125",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.7150/ijbs.110125",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "research_questions",
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:202",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E6",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of Houge type of X-linked syndromic mental retardation caused by CNKSR2 truncated variants",
-                                   "publication_year":  2025,
-                                   "doi":  "10.1186/s13052-025-01877-0",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1186/s13052-025-01877-0",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:203",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E7",
-                                   "evidence_type":  "publication",
-                                   "title":  "Case Report: a novel missense variant of FGD5 in a family with tetralogy of Fallot",
-                                   "publication_year":  2025,
-                                   "doi":  "10.3389/fgene.2025.1663959",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fgene.2025.1663959",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "research_questions",
-                                                            "main_techniques",
-                                                            "research_workflow",
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:204",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E8",
-                                   "evidence_type":  "publication",
-                                   "title":  "ATRX loss induces lineage plasticity and squamous-like phenotype to promote colorectal cancer metastasis",
-                                   "publication_year":  2025,
-                                   "doi":  "10.1016/j.tcb.2025.07.003",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.tcb.2025.07.003",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:205",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E9",
-                                   "evidence_type":  "publication",
-                                   "title":  "Tnni3k regulates cardiomyopathy and cardiac conduction disease through Nfatc1 signaling",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1016/j.gendis.2024.101464",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.gendis.2024.101464",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:206",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E10",
-                                   "evidence_type":  "publication",
-                                   "title":  "Superoxide is an Intrinsic Signaling Molecule Triggering Muscle Hypertrophy",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1089/ars.2024.0595",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1089/ars.2024.0595",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:207",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E11",
-                                   "evidence_type":  "publication",
-                                   "title":  "Reticulon 3 regulates sphingosine-1-phosphate synthesis in endothelial cells to control blood pressure",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1002/mco2.480",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1002/mco2.480",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:208",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E12",
-                                   "evidence_type":  "publication",
-                                   "title":  "RTN3 deficiency exacerbates cisplatin-induced acute kidney injury through the disruption of mitochondrial stability",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1016/j.mito.2024.101851",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.mito.2024.101851",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "main_techniques",
-                                                            "possible_undergraduate_tasks",
-                                                            "prerequisite_skills",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:209",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E13",
-                                   "evidence_type":  "publication",
-                                   "title":  "Mitochondrial dysfunction in lipid processing and gastrointestinal disorders",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1016/j.tem.2024.02.009",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.tem.2024.02.009",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:210",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E14",
-                                   "evidence_type":  "publication",
-                                   "title":  "Linking APOE4/4 genotype to microglial lipid droplets and neurotoxicity in Alzheimer\u0027s disease",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1186/s40035-024-00433-w",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1186/s40035-024-00433-w",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:211",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E15",
-                                   "evidence_type":  "publication",
-                                   "title":  "Intermittent fasting shifts the diurnal transcriptome atlas of transcription factors",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1007/s11010-024-04928-y",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1007/s11010-024-04928-y",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:212",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E16",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of truncated variants in GLI family zinc finger 3 (GLI3) associated with polydactyly",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1186/s13018-024-04928-0",
-                                   "source_type":  "journal_article",
-                                   "source_url":  "https://doi.org/10.1186/s13018-024-04928-0",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "main_techniques",
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:213",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  "GLI3-polydactyly-2024"
-                               },
-                               {
-                                   "evidence_id":  "E17",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of truncated variants in GLI family zinc finger 3 (GLI3) associated with polydactyly (preprint)",
-                                   "publication_year":  2024,
-                                   "doi":  "10.21203/rs.3.rs-4269168/v1",
-                                   "source_type":  "preprint",
-                                   "source_url":  "https://doi.org/10.21203/rs.3.rs-4269168/v1",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:214",
-                                   "candidate_statuses":  [
-                                                              "excluded",
-                                                              "duplicate_candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  "现有报告标记为预印本且可能与 E16 为同一成果版本；在人工确认前不进入公开采用集合。",
-                                   "version_group":  "GLI3-polydactyly-2024"
-                               },
-                               {
-                                   "evidence_id":  "E18",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of a novel MYO1D variant associated with laterality defects, congenital heart diseases, and sperm defects in humans",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1007/s11684-023-1042-6",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1007/s11684-023-1042-6",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:215",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E19",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of Arrhythmia-Associated Gene Mutations in Chinese Patients with Primary Electrical Disorders or Sudden Cardiac Death",
-                                   "publication_year":  2024,
-                                   "doi":  "10.15212/cvia.2024.0018",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.15212/cvia.2024.0018",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "research_questions",
-                                                            "main_techniques",
-                                                            "research_workflow",
-                                                            "possible_undergraduate_tasks",
-                                                            "prerequisite_skills",
-                                                            "learning_cost",
-                                                            "generic_growth_path",
-                                                            "summary",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:216",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E20",
-                                   "evidence_type":  "publication",
-                                   "title":  "A missense variant in MYOF is associated with ARVC and sudden cardiac death",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1016/j.gene.2024.148193",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.gene.2024.148193",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:217",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E21",
-                                   "evidence_type":  "publication",
-                                   "title":  "A compound heterozygous mutation of ERCC8 is responsible for a family with Cockayne syndrome",
-                                   "publication_year":  2024,
-                                   "doi":  "10.1007/s11033-024-09235-9",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1007/s11033-024-09235-9",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:218",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E22",
-                                   "evidence_type":  "publication",
-                                   "title":  "Late-onset hereditary spastic paraplegia associated with a genetic variant in IFIH1",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1093/qjmed/hcad055",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1093/qjmed/hcad055",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:219",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E23",
-                                   "evidence_type":  "publication",
-                                   "title":  "Integrative analysis reveals the recurrent genetic etiologies in idiopathic pulmonary fibrosis",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1093/qjmed/hcad206",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1093/qjmed/hcad206",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:220",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E24",
-                                   "evidence_type":  "publication",
-                                   "title":  "Increased RTN3 phenocopies nonalcoholic fatty liver disease by inhibiting the AMPK-IDH2 pathway",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1002/mco2.226",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1002/mco2.226",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "research_questions",
-                                                            "main_techniques",
-                                                            "research_workflow",
-                                                            "possible_undergraduate_tasks",
-                                                            "learning_cost",
-                                                            "generic_growth_path",
-                                                            "summary",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:221",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E25",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of a de novo heterozygous mutation of ANKZF1 in a Chinese patient with inflammatory bowel disease",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1093/qjmed/hcad030",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1093/qjmed/hcad030",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:222",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E26",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of A Novel Variant of Filamin A in Developmental Dysplasia of the Hip",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1089/dna.2023.0159",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1089/dna.2023.0159",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:223",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E27",
-                                   "evidence_type":  "publication",
-                                   "title":  "Haploinsufficiency of Lipin3 leads to hypertriglyceridemia and obesity by disrupting Lipin1",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1007/s11684-023-1003-0",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1007/s11684-023-1003-0",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:224",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E28",
-                                   "evidence_type":  "publication",
-                                   "title":  "Familial congenital heart disease caused by a frameshift variant in GLYR1",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1093/qjmed/hcad281",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1093/qjmed/hcad281",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:225",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E29",
-                                   "evidence_type":  "publication",
-                                   "title":  "Exome sequencing reveals two novel TTC37 mutations in Chinese patients with Crohn\u0027s disease",
-                                   "publication_year":  2023,
-                                   "doi":  "10.1093/qjmed/hcad243",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1093/qjmed/hcad243",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "prerequisite_skills",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:226",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E30",
-                                   "evidence_type":  "publication",
-                                   "title":  "Identification of novel fibrillin-2 variants causing congenital contractural arachnodactyly",
-                                   "publication_year":  2023,
-                                   "doi":  "10.3389/fgene.2023.1035887",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fgene.2023.1035887",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:227",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E31",
-                                   "evidence_type":  "publication",
-                                   "title":  "A novel heterozygous frameshift mutation of ACAN in a Chinese family with short stature and advanced bone age",
-                                   "publication_year":  2023,
-                                   "doi":  "10.3389/fgene.2023.1101695",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fgene.2023.1101695",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:228",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E32",
-                                   "evidence_type":  "publication",
-                                   "title":  "A de novo nonsense SOX9 mutation responsible for Campomelic Dysplasia",
-                                   "publication_year":  2023,
-                                   "doi":  "10.3389/fped.2022.1089194",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fped.2022.1089194",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:229",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E33",
-                                   "evidence_type":  "publication",
-                                   "title":  "ZPA Regulatory Sequence Variants in Chinese Patients With Preaxial Polydactyly",
-                                   "publication_year":  2022,
-                                   "doi":  "10.3389/fped.2022.797978",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fped.2022.797978",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:230",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E34",
-                                   "evidence_type":  "publication",
-                                   "title":  "ADAR1 alleviates high-fat diet-induced nonalcoholic fatty liver disease by inhibiting NLRP3 inflammasome",
-                                   "publication_year":  2022,
-                                   "doi":  "10.1038/s41374-022-00805-8",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1038/s41374-022-00805-8",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:231",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E35",
-                                   "evidence_type":  "publication",
-                                   "title":  "Whole Exome Sequencing Identifies Four Novel Mutations in Chinese Families with Chronic Kidney Disease",
-                                   "publication_year":  2022,
-                                   "doi":  "10.1016/j.ekir.2022.01.463",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1016/j.ekir.2022.01.463",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "possible_undergraduate_tasks",
-                                                            "generic_growth_path",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:232",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E36",
-                                   "evidence_type":  "publication",
-                                   "title":  "Novel heterozygous COL4A4 mutation responsible for Alport syndrome in a Chinese family",
-                                   "publication_year":  2022,
-                                   "doi":  "10.3389/fgene.2022.899006",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fgene.2022.899006",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:233",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E37",
-                                   "evidence_type":  "publication",
-                                   "title":  "Loss of RTN3 phenocopies chronic kidney disease and activates the IGF2-JAK2 pathway",
-                                   "publication_year":  2022,
-                                   "doi":  "10.1038/s12276-022-00763-7",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1038/s12276-022-00763-7",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "research_directions_original",
-                                                            "research_directions_plain_language",
-                                                            "research_questions",
-                                                            "main_techniques",
-                                                            "possible_undergraduate_tasks",
-                                                            "learning_cost",
-                                                            "generic_growth_path",
-                                                            "summary",
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:234",
-                                   "candidate_statuses":  [
-                                                              "adopted",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E38",
-                                   "evidence_type":  "publication",
-                                   "title":  "Genetic analysis combined with 3D-printing assistant surgery for X-linked hypophosphatemia",
-                                   "publication_year":  2022,
-                                   "doi":  "10.1002/jcla.24243",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.1002/jcla.24243",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:235",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E39",
-                                   "evidence_type":  "publication",
-                                   "title":  "GLIS1 was linked with Preaxial Polydactyly I in humans by stepwise genetic analysis",
-                                   "publication_year":  2022,
-                                   "doi":  "10.3389/fcell.2021.781388",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fcell.2021.781388",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:236",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E40",
-                                   "evidence_type":  "publication",
-                                   "title":  "A synonymous MYBPC3 variant altering RNA splicing in cardiomyopathy and sudden cardiac death",
-                                   "publication_year":  2022,
-                                   "doi":  "10.3389/fcvm.2022.806977",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fcvm.2022.806977",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:237",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               },
-                               {
-                                   "evidence_id":  "E41",
-                                   "evidence_type":  "publication",
-                                   "title":  "A de novo NFIB mutation responsible for brain malformation and lung lobulation defects",
-                                   "publication_year":  2022,
-                                   "doi":  "10.3389/fped.2022.865181",
-                                   "source_type":  "other",
-                                   "source_url":  "https://doi.org/10.3389/fped.2022.865181",
-                                   "author_position":  "unknown",
-                                   "is_co_first":  null,
-                                   "is_corresponding":  null,
-                                   "identity_verified":  false,
-                                   "supported_fields":  [
-                                                            "evidence_ids"
-                                                        ],
-                                   "repository_source_ref":  "web/reports/Xiang_Rong_profile_zh.md:238",
-                                   "candidate_statuses":  [
-                                                              "candidate",
-                                                              "identity_pending"
-                                                          ],
-                                   "reason":  null,
-                                   "version_group":  null
-                               }
-                           ]
+  "schema_version": "1.0.4",
+  "advisor_id": "xiang-rong",
+  "source_scope": "正式Roster、中南大学生命科学学院官方个人主页，以及官网代表论文种子对应的正式 DOI、出版社、PubMed/PMC 页面；candidate_retrieval_lane=chatgpt_web_research。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1161/CIRCULATIONAHA.117.030718",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e1",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、PubMed/PMC 题名、作者集合和中南大学细胞生物学系机构信息一致；Rong Xiang 为第一作者、共同第一作者和通讯作者。",
+      "title": "Increased Reticulon 3 (RTN3) Leads to Obesity and Hypertriglyceridemia by Interacting With Heat Shock Protein Family A (Hsp70) Member 5 (HSPA5)",
+      "publication_year": 2018,
+      "doi": "10.1161/CIRCULATIONAHA.117.030718",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.tem.2024.02.009",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e2",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、PubMed 和期刊页面一致；Rong Xiang 为末位作者，PubMed 列出中南大学生命科学学院细胞生物学系机构与电子邮箱。",
+      "title": "Mitochondrial dysfunction in lipid processing and gastrointestinal disorders",
+      "publication_year": 2024,
+      "doi": "10.1016/j.tem.2024.02.009",
+      "source_type": "review",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/mco2.226",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e3",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与 Wiley/PMC 正式记录一致；Rong Xiang 为末位作者和通讯作者；2024 年勘误 DOI 10.1002/mco2.466 仅作为原文勘误，不单独采用为第二篇公开证据。",
+      "title": "Increased RTN3 phenocopies nonalcoholic fatty liver disease by inhibiting the AMPK-IDH2 pathway",
+      "publication_year": 2023,
+      "doi": "10.1002/mco2.226",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/mco2.480",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e4",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与 Wiley/PubMed/PMC 正式记录一致；Rong Xiang 为末位作者和通讯作者，机构为中南大学生命科学学院细胞生物学系。",
+      "title": "Reticulon 3 regulates sphingosine-1-phosphate synthesis in endothelial cells to control blood pressure",
+      "publication_year": 2024,
+      "doi": "10.1002/mco2.480",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s11427-024-2576-x",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-e5",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与 Springer/Science China 正式记录一致；Rong Xiang 为末位作者和通讯作者。该文为 Research Highlight，公共解释保持综述/评论边界。",
+      "title": "GCGR: novel potential therapeutic target for chronic kidney disease",
+      "publication_year": 2024,
+      "doi": "10.1007/s11427-024-2576-x",
+      "source_type": "other",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2515.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "main_techniques",
+        "summary",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "docs/advisor-batches/xiang-rong-v1.0.4-migration-review.md#xiang-rong-official-profile",
+      "last_verified_at": "2026-08-03",
+      "notes": "中南大学生命科学学院官方个人主页；只提取身份、研究方向、官方工作邮箱和代表论文种子，不迁移基金、评价、引用次数或宣传性内容。",
+      "page_title": "项荣-中南大学生命科学学院",
+      "profile_name": "项荣",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院细胞生物学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "项荣为中南大学生命科学学院细胞生物学系教授。",
+          "fact_category": "professional_title",
+          "source_anchor": "师资队伍/个人简介",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "官方页面明确记载导师类型为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_anchor": "师资队伍/类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "研究病原微生物感染、肿瘤、原发性多囊肾等疾病中细胞器、信号转导、物质运输和细胞代谢等结构与功能异常。",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向[1]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "运用新一代测序、色谱、细胞免疫等技术，从基因、分子、细胞、模式动物及人体层面研究心血管相关疾病机制，并结合临床筛选早期诊断和预后标志物。",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向[2]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "main_techniques",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "官方工作邮箱为 shirlesmile@csu.edu.cn。",
+          "fact_category": "official_contact",
+          "source_anchor": "个人简介/Email",
+          "supported_public_fields": [
+            "contact"
+          ]
+        }
+      ]
+    }
+  ]
 }

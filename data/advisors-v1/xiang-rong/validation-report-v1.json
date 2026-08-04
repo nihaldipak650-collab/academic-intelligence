@@ -1,14 +1,18 @@
 {
-  "schema_version": "1.0.3",
+  "schema_version": "1.0.4",
   "advisor_id": "xiang-rong",
   "valid": true,
-  "release_eligible": false,
-  "requested_publication_status": "review_pending",
-  "effective_publication_status": "review_pending",
-  "candidate_evidence_count": 41,
-  "adopted_public_evidence_count": 16,
+  "release_eligible": true,
+  "requested_publication_status": "approved",
+  "effective_publication_status": "approved",
+  "candidate_evidence_count": 6,
+  "adopted_public_evidence_count": 6,
+  "official_profile_evidence_count": 1,
+  "publication_candidate_evidence_count": 5,
+  "adopted_official_evidence_count": 1,
+  "adopted_publication_evidence_count": 5,
   "featured_publication_count": 0,
-  "pending_version_group_count": 1,
+  "pending_version_group_count": 0,
   "schema_results": {
     "public_advisor": "passed",
     "evidence_manifest": "passed",
@@ -16,12 +20,5 @@
   },
   "schema_and_field_binding_status": "passed",
   "errors": [],
-  "warnings": [
-    {
-      "code": "IDENTITY_REVIEW_PENDING",
-      "path": "identity",
-      "message": "Unresolved identity or P0 blockers force review_pending.",
-      "severity": "warning"
-    }
-  ]
+  "warnings": []
 }

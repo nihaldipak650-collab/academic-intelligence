@@ -1,0 +1,1316 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "li-jiada",
+  "source_scope": "联网核验完成：官方身份来自中南大学生命科学学院主页；44篇历史论文候选保留用于审计，其中E5、E10、E17、E22作为公开核心论文，E2用于ORCID身份桥接；其余候选不进入公开内容。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41392-022-00933-z",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E1，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "PINK1-mediated Drp1S616 phosphorylation modulates synaptic development and plasticity via promoting mitochondrial fission",
+      "publication_year": 2022,
+      "doi": "10.1038/s41392-022-00933-z",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1126/sciadv.add6391",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "已核验用于ORCID与机构身份桥接，但并非本页公开研究主线核心证据。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "Science Advances正式页面直接列出Jia-Da Li、ORCID 0000-0002-4236-3518及中南大学生命科学学院机构；作者贡献为Resources。仅用于身份桥接，不进入公开核心研究主线。",
+      "title": "Expression of expanded GGC repeats within NOTCH2NLC causes behavioral deficits and neurodegeneration in a mouse model of neuronal intranuclear inclusion disease",
+      "publication_year": 2022,
+      "doi": "10.1126/sciadv.add6391",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-025-59113-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E3，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Deep brain stimulation alleviates Parkinsonian motor deficits through desynchronizing GABA release in mice",
+      "publication_year": 2025,
+      "doi": "10.1038/s41467-025-59113-6",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_DBS_PARKINSON_PREPRINT"
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1111/febs.16990",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E4，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "A genome-wide CRISPR screen identifies USP1 as a novel regulator of the mammalian circadian clock",
+      "publication_year": 2023,
+      "doi": "10.1111/febs.16990",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41392-023-01431-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "PubMed与中南大学官方代表论文列表核验：Jia-Da Li为末位作者，具中南大学生命科学学院机构桥接；官方列表以星号标示通讯作者。",
+      "title": "CNTNAP2 intracellular domain (CICD) generated by γ-secretase cleavage improves autism-related behaviors",
+      "publication_year": 2023,
+      "doi": "10.1038/s41392-023-01431-6",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1111/jipb.13336",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E6，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "FERONIA is involved in phototropin 1-mediated blue light phototropic growth in Arabidopsis",
+      "publication_year": 2022,
+      "doi": "10.1111/jipb.13336",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s00432-024-05753-y",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E7，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Targeting BMAL1 reverses drug resistance of acute myeloid leukemia cells and promotes ferroptosis through HMGB1-GPX4 signaling pathway",
+      "publication_year": 2024,
+      "doi": "10.1007/s00432-024-05753-y",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_BMAL1_AML_PREPRINT"
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1128/jvi.00741-22",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E8，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "UBR5 Acts as an Antiviral Host Factor against MERS-CoV via Promoting Ubiquitination and Degradation of ORF4b",
+      "publication_year": 2022,
+      "doi": "10.1128/jvi.00741-22",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41392-024-01768-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E9，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Contactin-associated protein-like 2 (CNTNAP2) mutations impair the essential α-secretase cleavages, leading to autism-like phenotypes",
+      "publication_year": 2024,
+      "doi": "10.1038/s41392-024-01768-6",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1172/jci.insight.170434",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "JCI Insight正式页面核验：Jia-Da Li为末位作者，并明确列为通讯联系人；机构为中南大学生命科学学院。",
+      "title": "Cry1Δ11 mutation induces ADHD-like symptoms through hyperactive dopamine D1 receptor signaling",
+      "publication_year": 2023,
+      "doi": "10.1172/jci.insight.170434",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.20517/and.2021.10",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E11，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Influence of sleep disruption on protein accumulation in neurodegenerative diseases",
+      "publication_year": 2022,
+      "doi": "10.20517/and.2021.10",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E12",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1159/000525769",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E12，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "SLIT2 Rare Sequencing Variants Identified in Idiopathic Hypogonadotropic Hypogonadism",
+      "publication_year": 2022,
+      "doi": "10.1159/000525769",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E13",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1073/pnas.2315707121",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E13，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "KCTD10 regulates brain development by destabilizing brain disorder-associated protein KCTD13",
+      "publication_year": 2024,
+      "doi": "10.1073/pnas.2315707121",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E14",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.24272/j.issn.2095-8137.2024.055",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E14，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "PCDH17 restricts dendritic spine morphogenesis by regulating ROCK2-dependent control of the actin cytoskeleton, modulating emotional behavior",
+      "publication_year": 2024,
+      "doi": "10.24272/j.issn.2095-8137.2024.055",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E15",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fnint.2024.1419607",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E15，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Prenatal low-dose Bisphenol A exposure impacts cortical development via cAMP-PKA-CREB pathway in offspring",
+      "publication_year": 2024,
+      "doi": "10.3389/fnint.2024.1419607",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E16",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/biology14010042",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E16，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Epigenetic Mechanisms in the Transcriptional Regulation of Circadian Rhythm in Mammals",
+      "publication_year": 2025,
+      "doi": "10.3390/biology14010042",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E17",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1186/s12993-025-00287-w",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "Springer正式页面核验：Jia-Da Li为第9/10位作者，列为共同通讯作者；机构为中南大学生命科学学院。",
+      "title": "Knockout of Bmal1 in dopaminergic neurons induces ADHD-like symptoms via hyperactive dopamine signaling in male mice",
+      "publication_year": 2025,
+      "doi": "10.1186/s12993-025-00287-w",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E18",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/ana.27002",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E18，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Mutations in CLCN6 as a Novel Genetic Cause of Neuronal Ceroid Lipofuscinosis in Patients and a Murine Model",
+      "publication_year": 2024,
+      "doi": "10.1002/ana.27002",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E19",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.pneurobio.2022.102310",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E19，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Recurrent de novo single point variant on the gene encoding Na+/K+ pump results in epilepsy",
+      "publication_year": 2022,
+      "doi": "10.1016/j.pneurobio.2022.102310",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_EPILEPSY_PREPRINT"
+    },
+    {
+      "evidence_id": "E20",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1073/pnas.2400464121",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E20，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "KCTD10 p.C124W variant contributes to schizophrenia by attenuating LLPS-mediated synapse formation",
+      "publication_year": 2024,
+      "doi": "10.1073/pnas.2400464121",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E21",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.isci.2025.112054",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E21，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "BMAL1-depletion remodels ceramide metabolism to regulate ferroptosis and sorafenib chemosensitivity in acute myeloid leukemia",
+      "publication_year": 2025,
+      "doi": "10.1016/j.isci.2025.112054",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E22",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41380-025-03187-7",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "Molecular Psychiatry正式卷期为2026（在线发表于2025）；Jia-Da Li为末位共同通讯作者，ORCID 0000-0002-4236-3518，机构为中南大学生命科学学院。",
+      "title": "Loss of Necdin causes social deficit and aberrant synaptic function through destabilization of SynGAP",
+      "publication_year": 2026,
+      "doi": "10.1038/s41380-025-03187-7",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E23",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1136/jnnp-2022-330465",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E23，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "GSN gene frameshift mutations in Alzheimer's disease",
+      "publication_year": 2023,
+      "doi": "10.1136/jnnp-2022-330465",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E24",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/hmg/ddac223",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E24，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "A non-coding variant in 5' untranslated region drove up-regulation of pseudo-kinase EPHA10 and caused non-syndromic hearing loss in humans",
+      "publication_year": 2022,
+      "doi": "10.1093/hmg/ddac223",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E25",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-024-52193-w",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E25，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "EXTL3 and NPC1 are mammalian host factors for Autographa californica multiple nucleopolyhedrovirus infection",
+      "publication_year": 2024,
+      "doi": "10.1038/s41467-024-52193-w",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E26",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1172/jci191729",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E26，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Disrupting integrator complex subunit INTS6 causes neurodevelopmental disorders and impairs neurogenesis and synapse development",
+      "publication_year": 2025,
+      "doi": "10.1172/jci191729",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E27",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.isci.2024.111110",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E27，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Overactive PKA signaling underlies the hyperalgesia in an ADHD mouse model",
+      "publication_year": 2024,
+      "doi": "10.1016/j.isci.2024.111110",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E28",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.jri.2024.104398",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E28，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Metabonomics analysis of decidual tissue in patients with recurrent spontaneous abortion",
+      "publication_year": 2024,
+      "doi": "10.1016/j.jri.2024.104398",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E29",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41598-024-76981-y",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E29，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Prader-Willi syndrome protein necdin regulates the nucleocytoplasmic distribution and dopaminergic neuron development",
+      "publication_year": 2024,
+      "doi": "10.1038/s41598-024-76981-y",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E30",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41380-026-03681-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E30，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Evidence supporting the role of GIGYF2 in synapse development and autism",
+      "publication_year": 2026,
+      "doi": "10.1038/s41380-026-03681-6",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E31",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.celrep.2023.112012",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E31，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "TRIM28 secures skeletal stem cell fate during skeletogenesis by silencing neural gene expression and repressing GREM1/AKT/mTOR signaling axis",
+      "publication_year": 2023,
+      "doi": "10.1016/j.celrep.2023.112012",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E32",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/b978-0-323-96106-6.00004-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E32，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Regulated cell death in cyanobacteria: Evidences, classification, and significances",
+      "publication_year": 2022,
+      "doi": "10.1016/b978-0-323-96106-6.00004-6",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E33",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fbioe.2023.1052607",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E33，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "A glucose-blue light AND gate-controlled chemi-optogenetic cell-implanted therapy for treating type-1 diabetes in mice",
+      "publication_year": 2023,
+      "doi": "10.3389/fbioe.2023.1052607",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E34",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/hmg/ddad014",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E34，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "A functional spectrum of PROKR2 mutations identified in isolated hypogonadotropic hypogonadism",
+      "publication_year": 2023,
+      "doi": "10.1093/hmg/ddad014",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E35",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.11817/j.issn.1672-7347.2022.220071",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E35，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "ANOS1 variants in a large cohort of Chinese patients with congenital hypogonadotropic hypogonadism",
+      "publication_year": 2022,
+      "doi": "10.11817/j.issn.1672-7347.2022.220071",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E36",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1186/s13041-023-01023-z",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E36，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "FMRP binds Per1 mRNA and downregulates its protein expression in mice",
+      "publication_year": 2023,
+      "doi": "10.1186/s13041-023-01023-z",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E37",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3760/cma.j.cn112138-20210821-00571",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E37，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Analysis of PROKR2 gene mutation in patients with hypogonadotropic hypogonadism",
+      "publication_year": 2022,
+      "doi": "10.3760/cma.j.cn112138-20210821-00571",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E38",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.2139/ssrn.4016079",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E38，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Recurrent de novo Single Point Mutation on the Gene Encoding Na+/K+ Pump Results in Epilepsy (Preprint)",
+      "publication_year": 2022,
+      "doi": "10.2139/ssrn.4016079",
+      "source_type": "preprint",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_EPILEPSY_PREPRINT"
+    },
+    {
+      "evidence_id": "E39",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-3878236/v1",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E39，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Targeting BMAL1 reverse drug resistance of acute myeloid leukemia cells (Preprint)",
+      "publication_year": 2024,
+      "doi": "10.21203/rs.3.rs-3878236/v1",
+      "source_type": "preprint",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_BMAL1_AML_PREPRINT"
+    },
+    {
+      "evidence_id": "E40",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-5047146/v1",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E40，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Deep brain stimulation alleviates Parkinsonian motor deficits through desynchronizing GABA release (Preprint)",
+      "publication_year": 2024,
+      "doi": "10.21203/rs.3.rs-5047146/v1",
+      "source_type": "preprint",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_DBS_PARKINSON_PREPRINT"
+    },
+    {
+      "evidence_id": "E41",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-7426255/v1",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E41，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Mutations in PLA2G6 impair ER-mitochondria contacts and ceramide homeostasis (Preprint)",
+      "publication_year": 2025,
+      "doi": "10.21203/rs.3.rs-7426255/v1",
+      "source_type": "preprint",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": "VG_LI_JIADA_PLA2G6_PREPRINT"
+    },
+    {
+      "evidence_id": "E42",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.13294/j.aps.2025.0065",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E42，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Circadian rhythm disturbances and neurodevelopmental disorders",
+      "publication_year": 2025,
+      "doi": "10.13294/j.aps.2025.0065",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E43",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1111/cge.70114",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E43，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Functional Validation and Phenotypic Spectrum of Splice-Site Variants in CHD7, FGFR1, and ANOS1 in Congenital Hypogonadotropic Hypogonadism",
+      "publication_year": 2025,
+      "doi": "10.1111/cge.70114",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E44",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1172/jci.insight.193622",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "历史候选，未纳入本轮公开核心证据；作者角色或研究主线相关性仍需单篇复核。",
+      "supported_fields": [
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "历史旧站报告候选论文 E44，待联网核验真实作者位置、ORCID 0000-0002-4236-3518 与中南大学机构桥接。",
+      "title": "Reciprocal regulation between autism risk gene POGZ and circadian clock",
+      "publication_year": 2026,
+      "doi": "10.1172/jci.insight.193622",
+      "source_type": "journal_article",
+      "author_position": "unknown",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E45",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2566.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=li-jiada",
+      "last_verified_at": "2026-08-04",
+      "notes": "中南大学生命科学学院第一方主页已联网核验，确认身份、职称、导师类型、院长职务、官方邮箱、研究方向与方法。",
+      "page_title": "李家大-中南大学生命科学学院",
+      "profile_name": "李家大",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院遗传学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职称为研究员；个人简介同时表述为教授。",
+          "fact_category": "professional_title",
+          "source_section": "师资队伍/个人简介",
+          "source_anchor": "职称/个人简介",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "师资队伍",
+          "source_anchor": "类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "中南大学生命科学学院院长。",
+          "fact_category": "other_official_fact",
+          "source_section": "个人简介",
+          "source_anchor": "院长",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "研究方向为神经发育障碍的遗传调控机制。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "研究方向",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "综合运用遗传学、生物化学、分子生物学、电生理和行为学技术。",
+          "fact_category": "research_method",
+          "source_section": "主要研究方向",
+          "source_anchor": "技术方法",
+          "supported_public_fields": [
+            "research_directions_original",
+            "main_techniques",
+            "research_workflow",
+            "possible_undergraduate_tasks",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "fact_text": "分析ASD、ADHD和GnRH缺陷疾病等神经发育障碍的遗传学基础。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "疾病方向",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "summary",
+            "search_keywords",
+            "tags"
+          ]
+        },
+        {
+          "fact_id": "F7",
+          "fact_text": "在细胞和小鼠水平探索分子病理机制及新的诊疗靶点。",
+          "fact_category": "model_organism",
+          "source_section": "主要研究方向",
+          "source_anchor": "研究层级",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "possible_undergraduate_tasks",
+            "generic_growth_path",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F8",
+          "fact_text": "官方邮箱为lijiada@csu.edu.cn，官方教师主页为https://faculty.csu.edu.cn/lijiada/zh_CN/index.htm。",
+          "fact_category": "official_contact",
+          "source_section": "个人简介",
+          "source_anchor": "Email/教师个人主页",
+          "supported_public_fields": [
+            "contact"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://academic-intelligence.local/schemas/identity-review-schema-v1.0.4.json",
+  "title": "Academic Intelligence Typed Identity Review v1.0.4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "advisor_id", "review_status", "reviewed_at", "reviewer_role", "advisor_identity", "publication_identity", "official_source_identity", "p0_blockers", "notes"],
+  "properties": {
+    "schema_version": {"const": "1.0.4"},
+    "advisor_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "review_status": {"enum": ["verified", "unresolved", "conflict"]},
+    "reviewed_at": {"type": ["string", "null"], "format": "date"},
+    "reviewer_role": {"enum": ["human_reviewer", "user", "content_reviewer", "codex_mechanical_migration"]},
+    "advisor_identity": {"$ref": "#/$defs/advisor_identity"},
+    "publication_identity": {"type": "array", "items": {"$ref": "#/$defs/publication_identity"}},
+    "official_source_identity": {"type": "array", "items": {"$ref": "#/$defs/official_source_identity"}},
+    "p0_blockers": {"type": "array", "items": {"$ref": "#/$defs/p0_blocker"}},
+    "notes": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "evidence_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+    "match_status": {"enum": ["verified", "unresolved", "conflict"]},
+    "advisor_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name_match_status", "institution_match_status", "school_or_department_match_status", "official_profile_match_status", "orcid_status", "candidate_orcid", "official_profile_url", "human_review_status", "notes"],
+      "properties": {
+        "name_match_status": {"$ref": "#/$defs/match_status"},
+        "institution_match_status": {"$ref": "#/$defs/match_status"},
+        "school_or_department_match_status": {"$ref": "#/$defs/match_status"},
+        "official_profile_match_status": {"$ref": "#/$defs/match_status"},
+        "orcid_status": {"enum": ["verified", "not_found", "unresolved", "conflict"]},
+        "candidate_orcid": {"type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"},
+        "official_profile_url": {"type": ["string", "null"], "format": "uri"},
+        "human_review_status": {"enum": ["verified", "pending", "rejected"]},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "publication_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "identity_status", "verification_basis", "matched_author_name", "matched_institution", "matched_orcid", "notes"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/evidence_id"},
+        "identity_status": {"$ref": "#/$defs/match_status"},
+        "verification_basis": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "matched_author_name": {"type": ["string", "null"]},
+        "matched_institution": {"type": ["string", "null"]},
+        "matched_orcid": {"type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "official_source_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "identity_status", "official_domain_status", "profile_name_match_status", "institution_match_status", "reviewed_at", "notes"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/evidence_id"},
+        "identity_status": {"$ref": "#/$defs/match_status"},
+        "official_domain_status": {"$ref": "#/$defs/match_status"},
+        "profile_name_match_status": {"$ref": "#/$defs/match_status"},
+        "institution_match_status": {"$ref": "#/$defs/match_status"},
+        "reviewed_at": {"type": ["string", "null"], "format": "date"},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "p0_blocker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "description", "evidence_ids"],
+      "properties": {
+        "code": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/evidence_id"}}
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 """Validate a public advisor package and its release gates.
 
 The structural validator implements every JSON Schema keyword used by the
-v1.0.3 contract.  Semantic checks then enforce cross-file Evidence, identity,
+v1.0.3 and v1.0.4 contracts. Semantic checks enforce typed Evidence, identity,
 privacy, provenance, and publication rules that JSON Schema cannot express.
 """
 
@@ -19,9 +19,20 @@ from urllib.parse import urlparse
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_DIR = REPO_ROOT / "docs" / "advisor-template-v1"
-DEFAULT_SCHEMA_PATH = SCHEMA_DIR / "public-advisor-schema-v1.0.3.json"
-DEFAULT_MANIFEST_SCHEMA_PATH = SCHEMA_DIR / "evidence-manifest-schema-v1.0.3.json"
-DEFAULT_IDENTITY_SCHEMA_PATH = SCHEMA_DIR / "identity-review-schema-v1.0.3.json"
+DEFAULT_CONTRACT_VERSION = "1.0.4"
+SCHEMA_PATHS = {
+    "1.0.3": (
+        SCHEMA_DIR / "public-advisor-schema-v1.0.3.json",
+        SCHEMA_DIR / "evidence-manifest-schema-v1.0.3.json",
+        SCHEMA_DIR / "identity-review-schema-v1.0.3.json",
+    ),
+    "1.0.4": (
+        SCHEMA_DIR / "public-advisor-schema-v1.0.4.json",
+        SCHEMA_DIR / "evidence-manifest-schema-v1.0.4.json",
+        SCHEMA_DIR / "identity-review-schema-v1.0.4.json",
+    ),
+}
+DEFAULT_SCHEMA_PATH, DEFAULT_MANIFEST_SCHEMA_PATH, DEFAULT_IDENTITY_SCHEMA_PATH = SCHEMA_PATHS[DEFAULT_CONTRACT_VERSION]
 
 PUBLIC_STATUSES = {"approved", "published"}
 HUMAN_IDENTITY_REVIEW_ROLES = {"human_reviewer", "user", "content_reviewer"}
@@ -31,6 +42,17 @@ OFFICIAL_AUTHORITIES = {
     "official_institution",
     "official_advisor",
     "official_lab",
+}
+PUBLIC_FACT_EVIDENCE_TYPES = {"official_profile", "official_institution", "official_advisor", "official_lab"}
+PUBLICATION_ONLY_FIELDS = {
+    "title", "publication_year", "doi", "source_type", "author_position",
+    "is_co_first", "is_corresponding", "identity_verified", "version_group",
+}
+AI_CONDITIONAL_PATTERN = re.compile(r"可能|可|基于|依据|公开|不代表|不能|需|尚|仅|取决于|建议|若|待核验")
+AI_SYNTHESIS_ALLOWED_STATUSES = {
+    "partially_verified",
+    "no_reliable_public_evidence",
+    "not_applicable",
 }
 EXPERIENCE_KEY_PATTERN = re.compile(
     r"(?:^|_)(?:experience|interview|participant|student_case|verbatim|"
@@ -250,6 +272,82 @@ def _evidence_field_binding_issues(public: dict[str, Any], evidence: list[dict[s
     return issues
 
 
+def _typed_claim_issues(
+    public: dict[str, Any],
+    by_id: dict[str, dict[str, Any]],
+    contract_version: str,
+) -> list[ValidationIssue]:
+    if contract_version != "1.0.4":
+        return []
+    issues: list[ValidationIssue] = []
+    for path, _key, value in _walk(public):
+        if not isinstance(value, dict) or "evidence_lane" not in value or "evidence_ids" not in value:
+            continue
+        if value.get("evidence_lane") == "public_fact":
+            for evidence_id in value.get("evidence_ids", []):
+                item = by_id.get(evidence_id, {})
+                if item.get("evidence_type") not in PUBLIC_FACT_EVIDENCE_TYPES or item.get("source_authority") not in OFFICIAL_AUTHORITIES:
+                    issues.append(_issue(
+                        "PUBLIC_FACT_SOURCE_NOT_ALLOWED",
+                        path,
+                        f"Public fact {evidence_id} must be supported by adopted first-party official Evidence.",
+                    ))
+        elif value.get("evidence_lane") == "ai_synthesis":
+            evidence_status = value.get("evidence_status")
+            if evidence_status is not None and evidence_status not in AI_SYNTHESIS_ALLOWED_STATUSES:
+                issues.append(_issue(
+                    "AI_SYNTHESIS_STATUS_INVALID",
+                    path,
+                    "AI synthesis cannot be verified; use an allowed bounded evidence status.",
+                ))
+            if not value.get("uncertainty_note"):
+                text_parts = [value.get(key) for key in ("text", "explanation_zh", "undergraduate_meaning") if isinstance(value.get(key), str)]
+                text = " ".join(text_parts)
+                if text and not (AI_CONDITIONAL_PATTERN.search(text) or text.rstrip().endswith(("？", "?"))):
+                    issues.append(_issue(
+                        "AI_SYNTHESIS_NOT_CONDITIONAL",
+                        path,
+                        "AI synthesis must retain conditional, evidence-bounded wording.",
+                    ))
+    return issues
+
+
+def _typed_identity_issues(
+    evidence: list[dict[str, Any]],
+    identity_review: dict[str, Any],
+    adopted_ids: set[str],
+    contract_version: str,
+) -> list[ValidationIssue]:
+    if contract_version != "1.0.4":
+        return []
+    issues: list[ValidationIssue] = []
+    publication_ids = {item.get("evidence_id") for item in evidence if item.get("evidence_type") == "publication"}
+    official_ids = {item.get("evidence_id") for item in evidence if item.get("evidence_type") == "official_profile"}
+    publication_identity = identity_review.get("publication_identity", [])
+    official_identity = identity_review.get("official_source_identity", [])
+    publication_identity_ids = {item.get("evidence_id") for item in publication_identity if isinstance(item, dict)}
+    official_identity_ids = {item.get("evidence_id") for item in official_identity if isinstance(item, dict)}
+    if publication_identity_ids != publication_ids:
+        issues.append(_issue("PUBLICATION_IDENTITY_MISMATCH", "identity.publication_identity", "Publication identity must cover every and only publication Evidence ID."))
+    if official_identity_ids != official_ids:
+        issues.append(_issue("OFFICIAL_SOURCE_IDENTITY_MISMATCH", "identity.official_source_identity", "Official source identity must cover every and only official profile Evidence ID."))
+
+    official_by_id = {item.get("evidence_id"): item for item in official_identity if isinstance(item, dict)}
+    for evidence_id in adopted_ids & official_ids:
+        item = official_by_id.get(evidence_id, {})
+        ready = (
+            item.get("identity_status") == "verified"
+            and item.get("official_domain_status") == "verified"
+            and item.get("profile_name_match_status") == "verified"
+            and item.get("institution_match_status") == "verified"
+            and isinstance(item.get("reviewed_at"), str)
+            and _format_valid(item["reviewed_at"], "date")
+        )
+        if not ready:
+            issues.append(_issue("OFFICIAL_SOURCE_NOT_ADOPTABLE", f"identity.official_source_identity.{evidence_id}", "Adopted official Evidence requires verified domain, profile name, institution, and review date."))
+    return issues
+
+
 def _privacy_issues(values: Iterable[tuple[str, Any]]) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     for root_name, value in values:
@@ -317,8 +415,9 @@ def _required_identity_issues(public: dict[str, Any]) -> list[ValidationIssue]:
 
 def _dedup_issues(evidence: list[dict[str, Any]]) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
+    publications = [item for item in evidence if item.get("evidence_type") == "publication"]
     doi_owner: dict[str, str] = {}
-    for item in evidence:
+    for item in publications:
         normalized = _normalize_doi(item.get("doi"))
         if normalized:
             if normalized in doi_owner:
@@ -326,8 +425,8 @@ def _dedup_issues(evidence: list[dict[str, Any]]) -> list[ValidationIssue]:
             else:
                 doi_owner[normalized] = item.get("evidence_id", "?")
 
-    for index, left in enumerate(evidence):
-        for right in evidence[index + 1 :]:
+    for index, left in enumerate(publications):
+        for right in publications[index + 1 :]:
             if _normalize_title(left.get("title", "")) != _normalize_title(right.get("title", "")):
                 continue
             types = {left.get("source_type"), right.get("source_type")}
@@ -339,22 +438,30 @@ def _dedup_issues(evidence: list[dict[str, Any]]) -> list[ValidationIssue]:
     return issues
 
 
-def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue]:
+def _manifest_structure_issues(manifest: dict[str, Any], contract_version: str) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     for key in ("schema_version", "advisor_id", "candidate_evidence"):
         if key not in manifest:
             issues.append(_issue("MANIFEST_REQUIRED", f"manifest.{key}", "Required Manifest field is missing."))
-    if manifest.get("schema_version") != "1.0.3":
-        issues.append(_issue("MANIFEST_VERSION", "manifest.schema_version", "Manifest must use v1.0.3."))
+    if manifest.get("schema_version") != contract_version:
+        issues.append(_issue("MANIFEST_VERSION", "manifest.schema_version", f"Manifest must use v{contract_version}."))
     evidence = manifest.get("candidate_evidence")
     if not isinstance(evidence, list) or not evidence:
         issues.append(_issue("MANIFEST_EVIDENCE_REQUIRED", "manifest.candidate_evidence", "Manifest requires at least one candidate Evidence record."))
         return issues
-    required = {
+    publication_required = {
         "evidence_id", "evidence_type", "title", "publication_year", "doi",
         "source_type", "source_url", "author_position", "is_co_first",
         "is_corresponding", "identity_verified", "candidate_statuses", "reason",
         "version_group", "supported_fields", "repository_source_ref",
+    }
+    common_v104 = {
+        "evidence_id", "evidence_type", "source_url", "source_authority",
+        "candidate_statuses", "reason", "supported_fields", "repository_source_ref",
+        "last_verified_at", "notes",
+    }
+    official_required = common_v104 | {
+        "page_title", "profile_name", "institution", "school_or_department", "extracted_facts",
     }
     allowed_positions = {"first", "middle", "last", "unknown"}
     allowed_types = {"journal_article", "preprint", "conference", "review", "other"}
@@ -364,24 +471,48 @@ def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue
         if not isinstance(item, dict):
             issues.append(_issue("MANIFEST_RECORD_TYPE", path, "Evidence record must be an object."))
             continue
+        evidence_type = item.get("evidence_type")
+        if contract_version == "1.0.3":
+            required = publication_required
+        elif evidence_type == "publication":
+            required = common_v104 | PUBLICATION_ONLY_FIELDS
+        elif evidence_type == "official_profile":
+            required = official_required
+        else:
+            required = common_v104
+            issues.append(_issue("EVIDENCE_TYPE", f"{path}.evidence_type", "v1.0.4 supports publication and official_profile Evidence."))
         for key in required - item.keys():
             issues.append(_issue("MANIFEST_REQUIRED", f"{path}.{key}", "Required Evidence field is missing."))
         if "advisor_author_role" in item:
             issues.append(_issue("LEGACY_AUTHOR_ROLE", f"{path}.advisor_author_role", "Merged author role is forbidden in v1.0.3."))
-        if item.get("author_position") not in allowed_positions:
-            issues.append(_issue("AUTHOR_POSITION", f"{path}.author_position", "Invalid author_position."))
-        for key in ("is_co_first", "is_corresponding"):
-            if item.get(key) not in {True, False, None}:
-                issues.append(_issue("AUTHOR_ROLE_FLAG", f"{path}.{key}", "Author role flag must be true, false, or null when unresolved."))
-        if item.get("source_type") not in allowed_types:
-            issues.append(_issue("SOURCE_TYPE", f"{path}.source_type", "Invalid publication source_type."))
+        is_publication = contract_version == "1.0.3" or evidence_type == "publication"
+        if is_publication:
+            if item.get("author_position") not in allowed_positions:
+                issues.append(_issue("AUTHOR_POSITION", f"{path}.author_position", "Invalid author_position."))
+            for key in ("is_co_first", "is_corresponding"):
+                if item.get(key) not in {True, False, None}:
+                    issues.append(_issue("AUTHOR_ROLE_FLAG", f"{path}.{key}", "Author role flag must be true, false, or null when unresolved."))
+            if item.get("source_type") not in allowed_types:
+                issues.append(_issue("SOURCE_TYPE", f"{path}.source_type", "Invalid publication source_type."))
+            doi = item.get("doi")
+            if doi is not None and (not isinstance(doi, str) or not re.fullmatch(r"10\.[0-9]{4,9}/\S+", doi)):
+                issues.append(_issue("MANIFEST_DOI", f"{path}.doi", "DOI must preserve the valid source value or be null."))
+            if not isinstance(item.get("identity_verified"), bool):
+                issues.append(_issue("IDENTITY_FLAG", f"{path}.identity_verified", "identity_verified must be boolean."))
+        elif evidence_type == "official_profile":
+            mixed_fields = sorted(PUBLICATION_ONLY_FIELDS & item.keys())
+            if mixed_fields:
+                issues.append(_issue("OFFICIAL_PROFILE_MIXED_FIELDS", path, f"Official profile Evidence contains publication-only fields: {mixed_fields}."))
+            facts = item.get("extracted_facts")
+            if not isinstance(facts, list) or not facts:
+                issues.append(_issue("OFFICIAL_FACTS_REQUIRED", f"{path}.extracted_facts", "Official profile Evidence requires extracted facts."))
+            else:
+                for fact_index, fact in enumerate(facts):
+                    fact_path = f"{path}.extracted_facts[{fact_index}]"
+                    if not isinstance(fact, dict) or not (fact.get("source_section") or fact.get("source_anchor")):
+                        issues.append(_issue("OFFICIAL_FACT_SOURCE_ANCHOR_REQUIRED", fact_path, "Each official fact requires source_section or source_anchor."))
         if not isinstance(item.get("source_url"), str) or not _format_valid(item["source_url"], "uri"):
             issues.append(_issue("MANIFEST_SOURCE_URL", f"{path}.source_url", "Evidence requires an HTTP(S) source URL."))
-        doi = item.get("doi")
-        if doi is not None and (not isinstance(doi, str) or not re.fullmatch(r"10\.[0-9]{4,9}/\S+", doi)):
-            issues.append(_issue("MANIFEST_DOI", f"{path}.doi", "DOI must preserve the valid source value or be null."))
-        if not isinstance(item.get("identity_verified"), bool):
-            issues.append(_issue("IDENTITY_FLAG", f"{path}.identity_verified", "identity_verified must be boolean."))
         if not isinstance(item.get("supported_fields"), list) or not item.get("supported_fields"):
             issues.append(_issue("SUPPORTED_FIELDS", f"{path}.supported_fields", "Each Evidence record must list supported public fields."))
         statuses = item.get("candidate_statuses")
@@ -394,34 +525,41 @@ def _manifest_structure_issues(manifest: dict[str, Any]) -> list[ValidationIssue
             issues.append(_issue("EXCLUSION_REASON_REQUIRED", f"{path}.reason", "Excluded and duplicate candidate records require a reason."))
         if "duplicate_candidate" in statuses and not item.get("version_group"):
             issues.append(_issue("VERSION_GROUP_REQUIRED", f"{path}.version_group", "Duplicate candidates require a version_group."))
-        if item.get("identity_verified") is False and "identity_pending" not in statuses:
+        if is_publication and item.get("identity_verified") is False and "identity_pending" not in statuses:
             issues.append(_issue("IDENTITY_PENDING_STATUS_REQUIRED", f"{path}.candidate_statuses", "Unverified candidate Evidence must include identity_pending."))
-        if item.get("identity_verified") is True and "identity_pending" in statuses:
+        if is_publication and item.get("identity_verified") is True and "identity_pending" in statuses:
             issues.append(_issue("IDENTITY_STATUS_CONFLICT", f"{path}.candidate_statuses", "Verified Evidence cannot remain identity_pending."))
     return issues
 
 
-def _identity_structure_issues(identity_review: dict[str, Any]) -> list[ValidationIssue]:
+def _identity_structure_issues(identity_review: dict[str, Any], contract_version: str) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     required = {"schema_version", "advisor_id", "review_status", "reviewed_at", "reviewer_role", "advisor_identity", "publication_identity", "p0_blockers", "notes"}
+    if contract_version == "1.0.4":
+        required.add("official_source_identity")
     for key in required - identity_review.keys():
         issues.append(_issue("IDENTITY_REVIEW_REQUIRED", f"identity.{key}", "Required Identity Review field is missing."))
-    if identity_review.get("schema_version") != "1.0.3":
-        issues.append(_issue("IDENTITY_REVIEW_VERSION", "identity.schema_version", "Identity Review must use v1.0.3."))
+    if identity_review.get("schema_version") != contract_version:
+        issues.append(_issue("IDENTITY_REVIEW_VERSION", "identity.schema_version", f"Identity Review must use v{contract_version}."))
     if identity_review.get("review_status") not in {"verified", "unresolved", "conflict"}:
         issues.append(_issue("IDENTITY_REVIEW_STATUS", "identity.review_status", "Invalid Identity Review status."))
     advisor_identity = identity_review.get("advisor_identity")
     advisor_required = {"name_match_status", "institution_match_status", "orcid_status", "candidate_orcid", "notes"}
+    if contract_version == "1.0.4":
+        advisor_required |= {"school_or_department_match_status", "official_profile_match_status", "official_profile_url", "human_review_status"}
     if not isinstance(advisor_identity, dict) or not advisor_required.issubset(advisor_identity):
         issues.append(_issue("ADVISOR_IDENTITY_REQUIRED", "identity.advisor_identity", "Advisor identity requires name, institution, ORCID, and notes fields."))
     items = identity_review.get("publication_identity")
-    if not isinstance(items, list) or not items:
-        issues.append(_issue("IDENTITY_RECORDS_REQUIRED", "identity.publication_identity", "Identity Review requires publication-level records."))
+    if not isinstance(items, list) or (contract_version == "1.0.3" and not items):
+        issues.append(_issue("IDENTITY_RECORDS_REQUIRED", "identity.publication_identity", "Identity Review requires a publication identity array."))
     else:
         seen: set[str] = set()
         for index, item in enumerate(items):
             path = f"identity.publication_identity[{index}]"
-            if not isinstance(item, dict) or not {"evidence_id", "identity_status", "notes"}.issubset(item):
+            item_required = {"evidence_id", "identity_status", "notes"}
+            if contract_version == "1.0.4":
+                item_required |= {"verification_basis", "matched_author_name", "matched_institution", "matched_orcid"}
+            if not isinstance(item, dict) or not item_required.issubset(item):
                 issues.append(_issue("IDENTITY_RECORD_REQUIRED", path, "Identity record requires evidence_id, identity_status, and notes."))
                 continue
             if item["evidence_id"] in seen:
@@ -429,6 +567,21 @@ def _identity_structure_issues(identity_review: dict[str, Any]) -> list[Validati
             seen.add(item["evidence_id"])
             if item["identity_status"] not in {"verified", "unresolved", "conflict"}:
                 issues.append(_issue("IDENTITY_RECORD_STATUS", f"{path}.identity_status", "Invalid publication identity status."))
+    if contract_version == "1.0.4":
+        official_items = identity_review.get("official_source_identity")
+        if not isinstance(official_items, list):
+            issues.append(_issue("OFFICIAL_SOURCE_IDENTITY_REQUIRED", "identity.official_source_identity", "Identity Review requires an official source identity array."))
+        else:
+            seen_official: set[str] = set()
+            official_required = {"evidence_id", "identity_status", "official_domain_status", "profile_name_match_status", "institution_match_status", "reviewed_at", "notes"}
+            for index, item in enumerate(official_items):
+                path = f"identity.official_source_identity[{index}]"
+                if not isinstance(item, dict) or not official_required.issubset(item):
+                    issues.append(_issue("OFFICIAL_SOURCE_IDENTITY_RECORD_REQUIRED", path, "Official source identity record is incomplete."))
+                    continue
+                if item["evidence_id"] in seen_official:
+                    issues.append(_issue("DUPLICATE_OFFICIAL_SOURCE_IDENTITY", path, "Official source Evidence IDs must be unique."))
+                seen_official.add(item["evidence_id"])
     blockers = identity_review.get("p0_blockers")
     if not isinstance(blockers, list):
         issues.append(_issue("P0_BLOCKERS_TYPE", "identity.p0_blockers", "p0_blockers must be an array."))
@@ -490,6 +643,25 @@ def _advisor_identity_gate_issues(
             "identity.advisor_identity.institution_match_status",
             "Advisor institution identity must be verified before release.",
         ))
+    if identity_review.get("schema_version") == "1.0.4":
+        if advisor_identity.get("school_or_department_match_status") != "verified":
+            gate_issues.append(_issue(
+                "ADVISOR_SCHOOL_IDENTITY_UNRESOLVED",
+                "identity.advisor_identity.school_or_department_match_status",
+                "Advisor school or department identity must be verified before release.",
+            ))
+        if advisor_identity.get("official_profile_match_status") != "verified":
+            gate_issues.append(_issue(
+                "ADVISOR_OFFICIAL_PROFILE_UNRESOLVED",
+                "identity.advisor_identity.official_profile_match_status",
+                "Advisor official profile must be verified before release.",
+            ))
+        if advisor_identity.get("human_review_status") != "verified":
+            gate_issues.append(_issue(
+                "IDENTITY_HUMAN_REVIEW_REQUIRED",
+                "identity.advisor_identity.human_review_status",
+                "Advisor identity requires an explicit verified human review status before release.",
+            ))
 
     orcid_status = advisor_identity.get("orcid_status")
     candidate_orcid = advisor_identity.get("candidate_orcid")
@@ -522,18 +694,34 @@ def validate_package(
     identity_review: dict[str, Any],
     *,
     package_dir: Path | None = None,
-    schema_path: Path = DEFAULT_SCHEMA_PATH,
-    manifest_schema_path: Path = DEFAULT_MANIFEST_SCHEMA_PATH,
-    identity_schema_path: Path = DEFAULT_IDENTITY_SCHEMA_PATH,
+    schema_path: Path | None = None,
+    manifest_schema_path: Path | None = None,
+    identity_schema_path: Path | None = None,
+    contract_version: str | None = None,
 ) -> dict[str, Any]:
+    document_versions = {
+        public.get("schema_version"),
+        manifest.get("schema_version"),
+        identity_review.get("schema_version"),
+    }
+    if contract_version is None:
+        contract_version = next(iter(document_versions)) if len(document_versions) == 1 and next(iter(document_versions)) in SCHEMA_PATHS else DEFAULT_CONTRACT_VERSION
+    if contract_version not in SCHEMA_PATHS:
+        raise ValueError(f"Unsupported advisor production contract version: {contract_version}")
+    selected_paths = SCHEMA_PATHS[contract_version]
+    schema_path = schema_path or selected_paths[0]
+    manifest_schema_path = manifest_schema_path or selected_paths[1]
+    identity_schema_path = identity_schema_path or selected_paths[2]
     public_schema_errors = _schema_issues(public, schema_path, "public")
     manifest_schema_errors = _schema_issues(manifest, manifest_schema_path, "manifest")
     identity_schema_errors = _schema_issues(identity_review, identity_schema_path, "identity")
     errors = public_schema_errors + manifest_schema_errors + identity_schema_errors
     warnings: list[ValidationIssue] = []
+    if document_versions != {contract_version}:
+        errors.append(_issue("CONTRACT_VERSION_MISMATCH", "$", f"All three documents must explicitly use contract v{contract_version}."))
 
-    errors.extend(_manifest_structure_issues(manifest))
-    errors.extend(_identity_structure_issues(identity_review))
+    errors.extend(_manifest_structure_issues(manifest, contract_version))
+    errors.extend(_identity_structure_issues(identity_review, contract_version))
     errors.extend(_privacy_issues((("public", public), ("manifest", manifest), ("identity", identity_review))))
     errors.extend(_missing_state_issues(public))
     errors.extend(_contact_issues(public))
@@ -559,6 +747,9 @@ def validate_package(
         errors.append(_issue("ADOPTED_CLAIM_MISMATCH", "$", f"Public claim IDs {sorted(claim_ids)} must exactly equal adopted IDs {sorted(adopted_ids)}."))
     if not featured_ids.issubset(adopted_ids):
         errors.append(_issue("FEATURED_NOT_ADOPTED", "$.featured_publication_evidence_ids", "Featured publications must be a subset of adopted public Evidence."))
+    for evidence_id in featured_ids:
+        if by_id.get(evidence_id, {}).get("evidence_type") != "publication":
+            errors.append(_issue("FEATURED_NON_PUBLICATION", f"$.featured_publication_evidence_ids.{evidence_id}", "Featured publication IDs may reference only publication Evidence."))
     selection_status = public.get("featured_selection_status")
     selection_review = public.get("featured_selection_review", {})
     if selection_status == "pending_manual_review" and featured_ids:
@@ -585,33 +776,40 @@ def validate_package(
         if item and "duplicate_candidate" in item.get("candidate_statuses", []):
             errors.append(_issue("DUPLICATE_FEATURED_PUBLICATION", f"manifest.{evidence_id}", "Duplicate candidates cannot be featured."))
     errors.extend(_evidence_field_binding_issues(public, evidence))
+    errors.extend(_typed_claim_issues(public, by_id, contract_version))
 
     identity_items = identity_review.get("publication_identity", [])
     identity_ids = {item.get("evidence_id") for item in identity_items if isinstance(item, dict)}
-    if identity_ids != set(manifest_ids):
+    if contract_version == "1.0.3" and identity_ids != set(manifest_ids):
         errors.append(_issue("IDENTITY_EVIDENCE_MISMATCH", "identity.publication_identity", "Identity review must cover every Manifest Evidence ID exactly once."))
+    typed_identity_errors = _typed_identity_issues(evidence, identity_review, adopted_ids, contract_version)
+    errors.extend(typed_identity_errors)
 
     errors.extend(_dedup_issues(evidence))
 
     adopted_items = [by_id[item] for item in adopted_ids if item in by_id]
+    adopted_publications = [item for item in adopted_items if item.get("evidence_type") == "publication"]
     identity_by_id = {item.get("evidence_id"): item for item in identity_items if isinstance(item, dict)}
     advisor_gate_issues, orcid_consistency_errors = _advisor_identity_gate_issues(identity_review)
     errors.extend(orcid_consistency_errors)
     publication_identity_unresolved = (
-        any(not item.get("identity_verified") for item in adopted_items)
-        or any(identity_by_id.get(item, {}).get("identity_status") != "verified" for item in adopted_ids)
+        any(not item.get("identity_verified") for item in adopted_publications)
+        or any(identity_by_id.get(item.get("evidence_id"), {}).get("identity_status") != "verified" for item in adopted_publications)
     )
+    official_source_unresolved = any(item.code == "OFFICIAL_SOURCE_NOT_ADOPTABLE" for item in typed_identity_errors)
     unresolved_identity = (
         bool(advisor_gate_issues)
         or bool(orcid_consistency_errors)
         or bool(identity_review.get("p0_blockers"))
         or publication_identity_unresolved
+        or official_source_unresolved
     )
 
     publication_identity_status = public.get("publication_identity_status")
-    if unresolved_identity and publication_identity_status == "verified":
+    public_identity_unresolved = publication_identity_unresolved if contract_version == "1.0.4" else unresolved_identity
+    if public_identity_unresolved and publication_identity_status == "verified":
         errors.append(_issue("PUBLIC_IDENTITY_STATUS_INVALID", "$.publication_identity_status", "Unresolved adopted records cannot be labelled identity verified."))
-    if not unresolved_identity and publication_identity_status != "verified":
+    if not public_identity_unresolved and publication_identity_status != "verified":
         errors.append(_issue("PUBLIC_IDENTITY_STATUS_INVALID", "$.publication_identity_status", "Fully verified adopted records must use publication identity status verified."))
 
     requested_status = public.get("publication_status", "review_pending")
@@ -650,7 +848,7 @@ def validate_package(
     valid = not unique_errors
     release_eligible = valid and effective_status in PUBLIC_STATUSES and not unresolved_identity
     return {
-        "schema_version": "1.0.3",
+        "schema_version": contract_version,
         "advisor_id": public.get("advisor_id"),
         "valid": valid,
         "release_eligible": release_eligible,
@@ -658,6 +856,10 @@ def validate_package(
         "effective_publication_status": effective_status,
         "candidate_evidence_count": len(manifest_ids),
         "adopted_public_evidence_count": len(adopted_ids),
+        "official_profile_evidence_count": sum(item.get("evidence_type") == "official_profile" for item in evidence),
+        "publication_candidate_evidence_count": sum(item.get("evidence_type") == "publication" for item in evidence),
+        "adopted_official_evidence_count": sum(by_id.get(item, {}).get("evidence_type") == "official_profile" for item in adopted_ids),
+        "adopted_publication_evidence_count": sum(by_id.get(item, {}).get("evidence_type") == "publication" for item in adopted_ids),
         "featured_publication_count": len(featured_ids),
         "pending_version_group_count": len({item.get("version_group") for item in evidence if item.get("version_group") and "duplicate_candidate" in item.get("candidate_statuses", [])}),
         "schema_results": {

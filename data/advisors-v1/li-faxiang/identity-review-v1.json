@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "li-faxiang",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-04",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0002-6442-9063",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2556.htm",
+    "human_review_status": "verified",
+    "notes": "官方主页确认李发祥为中南大学生命科学学院遗传学系特聘教授、博士生导师。E2/E3正式出版页面将Faxiang Li、ORCID 0000-0002-6442-9063与中南大学生命科学学院直接关联。等待项目负责人完成人工页面与发布审核。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Wiley/PMC列出Faxiang Li为末位通讯作者。",
+        "作者机构包含中南大学生命科学学院；通讯邮箱为lifaxiang@csu.edu.cn。"
+      ],
+      "matched_author_name": "Faxiang Li",
+      "matched_institution": "School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "Wiley/PMC正式记录确认Faxiang Li为末位通讯作者，署名单位为中南大学生命科学学院；论文以冷冻电镜、生化和细胞实验解析VCPIP1–P97/VCP复合体及有丝分裂后高尔基体重建。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Nature Communications列出Faxiang Li为末位作者、通讯作者与ORCID 0000-0002-6442-9063。",
+        "作者机构包含中南大学生命科学学院。"
+      ],
+      "matched_author_name": "Faxiang Li",
+      "matched_institution": "School of Life Sciences, Central South University",
+      "matched_orcid": "0000-0002-6442-9063",
+      "notes": "Nature Communications正式页面确认Faxiang Li为末位通讯作者、ORCID 0000-0002-6442-9063，署名单位为中南大学生命科学学院；研究结合冷冻电镜、生化活性和突变验证解析DSR2的激活与抑制。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Nucleic Acids Research列出Faxiang Li为末位通讯作者与ORCID 0000-0002-6442-9063。",
+        "作者机构包含中南大学生命科学学院。"
+      ],
+      "matched_author_name": "Faxiang Li",
+      "matched_institution": "School of Life Sciences, Central South University",
+      "matched_orcid": "0000-0002-6442-9063",
+      "notes": "Nucleic Acids Research正式页面确认Faxiang Li为末位通讯作者、ORCID 0000-0002-6442-9063，署名单位为中南大学生命科学学院；研究使用晶体结构、蛋白生化、菌落形成、EMSA和互作实验解析ShosTA抗噬菌体机制。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "MDPI/PMC列出Faxiang Li为末位通讯作者。",
+        "作者机构包含中南大学生命科学学院；通讯邮箱为lifaxiang@csu.edu.cn。"
+      ],
+      "matched_author_name": "Faxiang Li",
+      "matched_institution": "School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "MDPI/PMC正式页面确认Faxiang Li为末位通讯作者，署名单位为中南大学生命科学学院；研究结合晶体结构、突变和菌落形成实验解析Sofic毒性及AS1抗毒调控。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "PubMed列出Faxiang Li为中间作者并具有中南大学机构署名。",
+        "通讯作者为其他作者；该条不作为核心采用证据。"
+      ],
+      "matched_author_name": "Faxiang Li",
+      "matched_institution": "School of Life Sciences, Central South University",
+      "matched_orcid": null,
+      "notes": "PubMed正式记录确认Faxiang Li为中间作者并具有中南大学机构署名；通讯作者为其他作者。该合作论文不作为本页核心研究证据，仅保留为已核验候选。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-04",
+      "notes": "life.csu.edu.cn为中南大学生命科学学院官方域名；姓名、职称、导师类型、院系、方法和研究方向均由页面直接确认。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "中南大学生命科学学院官方主页确认李发祥、遗传学系、副教授、博士生导师身份。项目负责人于 2026-08-04 人工审核通过进入正式公开候选。"
+}

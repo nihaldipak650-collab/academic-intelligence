@@ -1,4 +1,4 @@
-"""Deterministically render a v1.0.3 public advisor review document."""
+"""Deterministically render v1.0.3 and typed v1.0.4 advisor documents."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from typing import Any, Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-MAPPING_PATH = REPO_ROOT / "docs" / "advisor-template-v1" / "display-label-mapping-v1.0.3.json"
+MAPPING_PATH = REPO_ROOT / "docs" / "advisor-template-v1" / "display-label-mapping-v1.0.4.json"
 NO_PUBLIC_INFO = "暂无公开信息"
 NEEDS_VERIFICATION = "待核验"
 NO_RELIABLE_EVIDENCE = "暂无可靠公开证据"
@@ -137,6 +137,8 @@ def render_markdown(public: dict[str, Any], manifest: dict[str, Any]) -> str:
         for item in sorted(manifest["candidate_evidence"], key=_publication_sort_key):
             if item["evidence_id"] not in featured:
                 continue
+            if item.get("evidence_type") != "publication":
+                continue
             lines.append(f"| {item['evidence_id']} | {_escape(item['title'])} | {_escape(item['publication_year'] or NO_PUBLIC_INFO)} | {_escape(item['doi'] or NO_PUBLIC_INFO)} | {_label('source_type', item['source_type'])} | {_label('author_position', item['author_position'])} | {_tri_state(item['is_co_first'])} | {_tri_state(item['is_corresponding'])} | {_source_link(item['source_url'])} |")
 
     lines.extend(["", "## 8. 本科生可能参与的任务", "", "| 可能任务 | 场景与目的 | 可能方法 | 可能产出 | 证据 | 证据支持程度 | 内容类型 | 不确定性 |", "|---|---|---|---|---|---|---|---|"])
@@ -150,7 +152,26 @@ def render_markdown(public: dict[str, Any], manifest: dict[str, Any]) -> str:
     lines.extend(["## 11. 联系前准备与线下核验", "", "- 当前招募、名额、真实任务、组会要求、资源与反馈方式：待核验。", "- 可根据公开研究方向准备具体问题，但不得把可能任务视为承诺。", ""])
 
     records = manifest["candidate_evidence"]
-    lines.extend(["## 12. 证据与数据状态", "", f"- 候选证据总数：{len(records)}", f"- 已采用公开证据数：{len(public['adopted_public_evidence_ids'])}", f"- 精选代表论文数：{len(featured)}", f"- 身份核验状态：{_label('publication_identity_status', public['publication_identity_status'])}", "- 版本关系状态：请以validation-report-v1.json为准。", "- Schema与字段绑定结果：请以validation-report-v1.json为准。", ""])
+    if public.get("schema_version") == "1.0.4":
+        adopted = set(public["adopted_public_evidence_ids"])
+        official_profiles = [item for item in records if item.get("evidence_type") == "official_profile"]
+        publications = [item for item in records if item.get("evidence_type") == "publication"]
+        adopted_official = sum(item.get("evidence_id") in adopted for item in official_profiles)
+        adopted_publications = sum(item.get("evidence_id") in adopted for item in publications)
+        lines.extend([
+            "## 12. 证据与数据状态", "",
+            f"- 官方主页证据数：{len(official_profiles)}",
+            f"- 论文候选证据数：{len(publications)}",
+            f"- 已采用官方证据数：{adopted_official}",
+            f"- 已采用论文证据数：{adopted_publications}",
+            f"- 精选代表论文数：{len(featured)}",
+            f"- 论文身份核验状态：{_label('publication_identity_status', public['publication_identity_status'])}",
+            "- 官方来源核验状态：请以validation-report-v1.json为准。",
+            "- 版本关系状态：请以validation-report-v1.json为准。",
+            "- Schema与Validator结果：请以validation-report-v1.json为准。", "",
+        ])
+    else:
+        lines.extend(["## 12. 证据与数据状态", "", f"- 候选证据总数：{len(records)}", f"- 已采用公开证据数：{len(public['adopted_public_evidence_ids'])}", f"- 精选代表论文数：{len(featured)}", f"- 身份核验状态：{_label('publication_identity_status', public['publication_identity_status'])}", "- 版本关系状态：请以validation-report-v1.json为准。", "- Schema与字段绑定结果：请以validation-report-v1.json为准。", ""])
     verified_dates = sorted({field["last_verified_at"] for _path, field in _all_sourced_fields(public) if field.get("last_verified_at")})
     migrated_at = _escape(public["migrated_at"]) if public.get("migrated_at") else "不适用（全新生产记录）"
     lines.extend(["## 13. 更新时间与发布状态", "", f"- 记录创建日期：{_escape(public['record_created_at'])}", f"- 迁移日期：{migrated_at}", f"- 字段核验日期：{_escape('、'.join(verified_dates)) if verified_dates else NEEDS_VERIFICATION}", f"- 数据版本：{_escape(public['version'])}", f"- 更新状态：{_label('update_status', public['update_status'])}", f"- 发布状态：{_label('publication_status', public['publication_status'])}", "", "## 14. 使用边界说明", "", _escape(public["boundary_statement"]), ""])

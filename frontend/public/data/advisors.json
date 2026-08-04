@@ -1,373 +1,4747 @@
 {
   "schemaVersion": 1,
-  "source": "web/advisors.json + web/reports",
-  "advisorCount": 7,
+  "dtoVersion": "1.0.4",
+  "source": "approved-public-advisor-contract",
+  "advisorCount": 11,
   "advisors": [
     {
-      "id": "xiang-rong",
-      "nameZh": "项荣",
-      "nameEn": "Xiang Rong",
-      "initials": "项",
-      "summary": "研究主线连接人类疾病候选变异发现、遗传学证据、功能验证与分子通路机制。",
+      "dtoVersion": "1.0.4",
+      "id": "chen-miao",
+      "nameZh": "陈苗",
+      "nameEn": "Miao Chen",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物化学与分子生物学系",
+      "position": "副教授",
+      "publicRoles": [
+        "博士生导师"
+      ],
+      "summary": {
+        "text": "官方方向聚焦疾病早期无创诊断；多色振动探针与活细胞拉曼成像；新污染物检测及生物效应机制研究。基于已采用论文，可进一步核对具体研究问题、方法与证据边界。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "疾病早期无创诊断；多色振动探针与活细胞拉曼成像；新污染物检测及生物效应机制研究。",
+          "evidenceIds": [
+            "E5"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "SERS与AI辅助诊断",
+          "explanation": "公开论文将表面增强拉曼光谱与深度学习结合，用于复杂生物样本的分类和诊断。",
+          "undergraduateMeaning": "可先学习光谱预处理、训练集边界和诊断评价指标。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "term": "三维SERS与外泌体蛋白谱",
+          "explanation": "研究利用三维增强结构获取外泌体蛋白相关信号并进行多重分析。",
+          "undergraduateMeaning": "需要理解纳米结构、信号增强和多指标分类。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "term": "SERS环境检测与分子识别",
+          "explanation": "基于已采用公开论文，可看到农药多重检测、手性氨基酸识别和蛋白小分子结合位点筛查等应用。",
+          "undergraduateMeaning": "适合比较不同检测对象对应的样品制备和验证策略。",
+          "evidenceIds": [
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开论文，三维环绕增强SERS如何支持外泌体多蛋白的无标记分析？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "基于公开论文，奎宁构建的手性SERS平台如何区分脂肪族氨基酸对映体？",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "基于公开论文，多捕获剂SERS光谱如何与深度学习结合识别水中多种有机磷农药？",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "基于公开论文，无标记SERS筛查如何辅助定位蛋白的小分子结合位点？",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "可能涉及SERS基底构建、拉曼光谱采集和信号质量控制。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能涉及深度学习分类、交叉验证与混淆矩阵等评价。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能涉及外泌体样本、环境水样、蛋白酶解及质谱验证。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开论文，研究流程可能先明确问题、样本或数据来源，并设置可比较的对照。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "随后可能完成实验或数据处理，记录质量控制、主要读出和统计分析。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "最后可能通过独立验证、敏感性分析或多层证据比较来界定结论边界。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "整理SERS-AI分析链",
+          "context": "从光谱采集到模型评价拆解论文流程",
+          "purpose": "理解数据处理与实验环节的接口",
+          "methods": [
+            "核对评价指标",
+            "记录预处理",
+            "提取样本类型"
+          ],
+          "output": "分析流程表",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "task": "比较三类SERS应用",
+          "context": "比较外泌体、农药和手性氨基酸检测",
+          "purpose": "识别不同应用的样本与对照差异",
+          "methods": [
+            "比较基底设计",
+            "归类检测对象",
+            "记录验证方法"
+          ],
+          "output": "应用比较矩阵",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        },
+        {
+          "task": "复核蛋白结合位点证据",
+          "context": "梳理SERS筛查、分离和质谱确认步骤",
+          "purpose": "理解筛查结果如何转化为位点证据",
+          "methods": [
+            "标注筛选阈值",
+            "核对质谱确认",
+            "绘制实验流程"
+          ],
+          "output": "位点证据流程图",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "建议准备与该研究方向相关的生命科学、统计或实验设计基础概念。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "建议能够阅读英文论文，区分研究问题、方法、结果与讨论。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "涉及数据分析时，可能需要表格整理、基础统计和可重复记录能力。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于这些公开论文，入门成本可能来自领域术语、实验或数据流程、质量控制以及对结论边界的准确表达。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "复核证据来源",
+            "建立术语表",
+            "阅读四篇采用论文"
+          ],
+          "possibleOutputs": [
+            "论文卡片",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "加入对照与质量检查",
+            "完成一个证据整理任务"
+          ],
+          "possibleOutputs": [
+            "流程图",
+            "证据表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "完成复核并报告限制",
+            "在明确边界下提出小问题"
+          ],
+          "possibleOutputs": [
+            "可复核附件",
+            "小型分析报告"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
       "tags": [
-        "疾病遗传",
-        "分子机制",
-        "生物信息",
-        "细胞与动物实验"
+        "三维SERS与外泌体蛋白谱",
+        "生命科学",
+        "SERS与AI辅助诊断"
       ],
       "categoryTags": [
-        "疾病遗传",
-        "分子机制",
-        "生物信息",
-        "细胞与动物实验"
+        "三维SERS与外泌体蛋白谱",
+        "生命科学",
+        "SERS与AI辅助诊断"
       ],
-      "authorMatchConfidence": "High",
-      "authorConfidenceSource": "legacy_academic_confidence",
+      "searchKeywords": [
+        "三维SERS与外泌体蛋白谱",
+        "Miao Chen",
+        "SERS环境检测与分子识别",
+        "SERS与AI辅助诊断"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Label-Free Multiplex Profiling of Exosomal Proteins with a Deep Learning-Driven 3D Surround-Enhancing SERS Platform for Early Cancer Diagnosis",
+          "year": 2024,
+          "doi": "10.1021/acs.analchem.4c00669",
+          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/38624007/"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "Quinine-Fabricated Surface-Enhanced Raman Spectroscopy Chiral Sensing Platform Enables Simultaneous Enantioselective Discrimination and Identification of Aliphatic Amino Acids",
+          "year": 2023,
+          "doi": "10.1021/acs.analchem.2c04839",
+          "sourceUrl": "https://pubs.acs.org/doi/10.1021/acs.analchem.2c04839"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Deep Learning-Based Multicapturer SERS Platform on Plasmonic Nanocube Metasurfaces for Multiplex Detection of Organophosphorus Pesticides in Environmental Water",
+          "year": 2022,
+          "doi": "10.1021/acs.analchem.2c02973",
+          "sourceUrl": "https://pubs.acs.org/doi/10.1021/acs.analchem.2c02973"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Deep Learning-Based Label-Free Surface-Enhanced Raman Scattering Screening and Recognition of Small-Molecule Binding Sites in Proteins",
+          "year": 2022,
+          "doi": "10.1021/acs.analchem.2c01158",
+          "sourceUrl": "https://pubs.acs.org/doi/10.1021/acs.analchem.2c01158"
+        },
+        {
+          "evidenceId": "E5",
+          "title": "陈苗-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2534.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+      "lastUpdated": "2026-08-02",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
       "evidenceType": "academic_only",
       "hasExperienceEvidence": false,
       "experienceCaseCount": 0,
-      "version": "source-not-specified",
-      "status": "published",
-      "lastUpdated": null,
-      "reportPath": "reports/Xiang_Rong_profile_zh.md",
-      "reportSha256": "041a39012e724a7d07b6266781fb7a4b295ceb1389b8a5320f5673c56b1ed76c",
-      "sourceTypeLabel": "仅公开学术证据",
-      "sourceLabel": "web/advisors.json + web/reports/Xiang_Rong_profile_zh.md",
+      "reportPath": "reports/chen-miao.md",
+      "initials": "陈",
       "quickSummary": {
         "coreDirections": [
-          "疾病遗传",
-          "分子机制",
-          "生物信息",
-          "细胞与动物实验"
+          {
+            "text": "疾病早期无创诊断；多色振动探针与活细胞拉曼成像；新污染物检测及生物效应机制研究。",
+            "evidenceIds": [
+              "E5"
+            ]
+          }
         ],
         "mainTechniques": [
-          "遗传发现层： 外显子/全外显子测序、家系共分离、候选变异筛选、Sanger 验证、基因型—表型分析。文本统计中，测序线索覆盖 18/41 篇，外显子测序线索覆盖 15 篇。",
-          "细胞功能层： 细胞系或原代细胞、基因表达检测、qPCR/RNA-seq、Western blot、免疫组织化学，以及蛋白定位、线粒体状态、脂质代谢、自噬和细胞死亡表型。数据中明确出现的细胞/分子技术关键词分布不完整，因此不能断言每篇机制论文都采用了同一套实验。",
-          "动物与组织层： 小鼠/大鼠或疾病模型线索至少覆盖 8 篇，用于连接分子变化与肾损伤、脂肪肝、纤维化、心肌病、肌肉肥大等整体表型。",
-          "计算与组学层： 生物信息学、转录组/RNA 测序、遗传变异注释和队列分析；2024–2025 还出现单细胞、转录因子图谱和人群队列预测，但其中部分可能来自协作项目，不能自动视为实验室全部成员的常规能力。"
+          {
+            "text": "可能涉及SERS基底构建、拉曼光谱采集和信号质量控制。",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "可能涉及深度学习分类、交叉验证与混淆矩阵等评价。",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "可能涉及外泌体样本、环境水样、蛋白酶解及质谱验证。",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          }
         ],
         "undergraduatePaths": [
-          "可能整理特定疾病基因、变异、表型和通路的证据矩阵。Confidence: High，多篇论文直接采用病例/家系遗传与候选变异路线。",
-          "可能参与候选变异数据库注释、公开转录组复现或基础生物信息处理。Confidence: Medium，测序和组学技术反复出现，但本科生分工没有直接证据。",
-          "可能在成熟 protocol 下辅助 PCR/qPCR、Western blot、细胞培养或单一指标验证。Confidence: Medium，机制论文支持这些技术类型，但实际开放程度未知。"
+          {
+            "text": "整理SERS-AI分析链",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "比较三类SERS应用",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E3"
+            ]
+          },
+          {
+            "text": "复核蛋白结合位点证据",
+            "evidenceIds": [
+              "E4"
+            ]
+          }
         ]
-      }
+      },
+      "reportSha256": "c52073895973f0afa4526e21c081937a93968425e48649150ccc21b1d841478c"
     },
     {
-      "id": "liu-jing",
-      "nameZh": "刘静",
-      "nameEn": "Jing Liu",
-      "initials": "刘",
-      "summary": "公开研究主线集中在造血调控、血液恶性肿瘤机制与治疗靶点。",
-      "tags": [
-        "造血调控",
-        "血液肿瘤",
-        "单细胞",
-        "分子机制"
-      ],
-      "categoryTags": [
-        "造血调控",
-        "血液肿瘤",
-        "单细胞",
-        "分子机制"
-      ],
-      "authorMatchConfidence": "Medium",
-      "authorConfidenceSource": "legacy_academic_confidence",
-      "evidenceType": "academic_and_experience",
-      "hasExperienceEvidence": true,
-      "experienceCaseCount": 1,
-      "version": "1.5-demo",
-      "status": "published",
-      "lastUpdated": null,
-      "reportPath": "reports/Liu_advisor_profile_v1_5_demo_display.md",
-      "reportSha256": "6b8fe3c27fb2ce901e4648942b811ba4efdf461d4bd984f88fa8903a5eec71e9",
-      "sourceTypeLabel": "学术证据 + 1 个授权经历案例",
-      "sourceLabel": "web/advisors.json + web/reports/Liu_advisor_profile_v1_5_demo_display.md",
-      "quickSummary": {
-        "coreDirections": [
-          "造血调控",
-          "血液肿瘤",
-          "单细胞",
-          "分子机制"
-        ],
-        "mainTechniques": [
-          "单细胞测序",
-          "蛋白质组/磷酸化组",
-          "生物信息学",
-          "血液肿瘤细胞机制和小鼠造血模型。"
-        ],
-        "undergraduatePaths": [
-          "Academic Evidence推测：可能涉及文献整理、基因/通路资料整理、基础组学数据处理或细胞分子实验辅助。Confidence: Low–Medium。",
-          "Experience Evidence事实：该案例中的学生早期观摩动物与分子实验、阅读师兄提供的论文，并曾按protocol独立完成一次配胶。Confidence: High（case-level）。",
-          "其他本科生是否会获得上述任务：Evidence insufficient. Unable to determine."
-        ]
-      }
-    },
-    {
-      "id": "li-faxiang",
-      "nameZh": "李发祥",
-      "nameEn": "Faxiang Li",
-      "initials": "李",
-      "summary": "公开研究主线集中在蛋白复合物结构、抗噬菌体系统和蛋白互作机制。",
-      "tags": [
-        "结构生物学",
-        "蛋白质",
-        "Cryo-EM",
-        "抗噬菌体系统"
-      ],
-      "categoryTags": [
-        "结构生物学",
-        "蛋白质",
-        "Cryo-EM",
-        "抗噬菌体系统"
-      ],
-      "authorMatchConfidence": "High",
-      "authorConfidenceSource": "legacy_academic_confidence",
-      "evidenceType": "academic_and_experience",
-      "hasExperienceEvidence": true,
-      "experienceCaseCount": 1,
-      "version": "1.5-demo",
-      "status": "published",
-      "lastUpdated": null,
-      "reportPath": "reports/Li_advisor_profile_v1_5_demo_display.md",
-      "reportSha256": "8fd404e33525d89230261c25f7dde654d4b050e23f98a7bc7e61e5a73dea540a",
-      "sourceTypeLabel": "学术证据 + 1 个授权经历案例",
-      "sourceLabel": "web/advisors.json + web/reports/Li_advisor_profile_v1_5_demo_display.md",
-      "quickSummary": {
-        "coreDirections": [
-          "结构生物学",
-          "蛋白质",
-          "Cryo-EM",
-          "抗噬菌体系统"
-        ],
-        "mainTechniques": [
-          "Cryo-EM",
-          "蛋白复合物与互作分析",
-          "酶活与防御系统功能",
-          "蛋白稳定性/相分离"
-        ],
-        "undergraduatePaths": [
-          "Academic Evidence推测：可能涉及结构论文阅读、蛋白序列/结构可视化、实验结果整理或蛋白实验辅助。Confidence: Low–Medium。",
-          "Experience Evidence事实：该案例中的学生学习了蛋白质纯化和互作验证，曾独立完成一次蛋白纯化，并围绕大创项目提交结果。Confidence: High（case-level）。",
-          "其他本科生是否会获得相同任务或设备权限：Evidence insufficient. Unable to determine."
-        ]
-      }
-    },
-    {
-      "id": "guo-hui",
-      "nameZh": "郭辉",
-      "nameEn": "Hui Guo",
-      "institution": "中南大学生命科学学院",
-      "initials": "郭",
-      "summary": "公开研究主线集中在孤独症及神经发育障碍（NDD）致病基因与分子机制（如应激颗粒、相分离、神经发生与突触发育）。",
-      "tags": [
-        "神经发育障碍",
-        "孤独症",
-        "应激颗粒",
-        "相分离",
-        "基因组学"
-      ],
-      "categoryTags": [
-        "神经发育障碍",
-        "孤独症",
-        "应激颗粒",
-        "相分离",
-        "基因组学"
-      ],
-      "authorMatchConfidence": "Medium",
-      "authorConfidenceSource": "author_match_confidence",
-      "evidenceType": "academic_only",
-      "hasExperienceEvidence": false,
-      "experienceCaseCount": 0,
-      "version": "0.5-beta",
-      "status": "beta",
-      "lastUpdated": "2026-07-23T23:45:00+08:00",
-      "reportPath": "reports/Guo_Hui_profile_academic_zh.md",
-      "reportSha256": "644e84786f445591315a89602f25a2f1d1b561de3b0e81a43b84e10dfe9be21a",
-      "sourceTypeLabel": "仅公开学术证据",
-      "sourceLabel": "web/advisors.json + web/reports/Guo_Hui_profile_academic_zh.md",
-      "quickSummary": {
-        "coreDirections": [
-          "神经发育障碍",
-          "孤独症",
-          "应激颗粒",
-          "相分离",
-          "基因组学"
-        ],
-        "mainTechniques": [
-          "基因组学与生物信息学分析：全外显子组测序（WES）、全基因组测序（WGS）、表达谱/单细胞 RNA-seq 数据挖掘、De Novo 变异致病性评估 。",
-          "小鼠基因敲除/杂合子模型与行为学：Ubap2l、Adgrl1、Gigyf1、Celf2 等基因缺陷小鼠模型，社交、认知与神经发育行为学评估 。",
-          "细胞与分子生物学验证：应激颗粒（SG）形成与免疫荧光检测、液相分离（LLPS）测定、蛋白相互作用（Co-IP/Western blot）、皮层神经元原代培养与神经发生标记 。",
-          "数据质控与算法开发：基于 Massive Parallel Sequencing 数据的生物信息学工具开发（如 seGMM）。"
-        ],
-        "undergraduatePaths": [
-          "如果存在公开数据、任务边界与指导条件，本科生可能尝试利用已公开的测序数据或数据库进行 NDD De Novo 变异筛选、致病性预测与通路富集分析。Confidence: Medium。",
-          "如果存在成熟 protocol、细胞系与指导条件，本科生可能辅助开展细胞水平的应激颗粒（SG）诱导、免疫荧光染色与显微成像数据整理。Confidence: Low–Medium。",
-          "如果存在成熟实验体系与指导条件，本科生可能参与小鼠基因型鉴定（PCR）或基础行为学数据整理。Confidence: Low–Medium。"
-        ]
-      }
-    },
-    {
+      "dtoVersion": "1.0.4",
       "id": "hu-dehua",
       "nameZh": "胡德华",
       "nameEn": "Dehua Hu",
-      "institution": "中南大学湘雅医学院医药信息系",
-      "initials": "胡",
-      "summary": "公开研究主线集中在健康信息行为与公共卫生信息化（如疫苗接种意愿、框架效应、网络舆情与科研诚信）以及医学数据挖掘、算法与工具开发。",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物医学信息学系",
+      "position": "教授",
+      "publicRoles": [
+        "博士生导师",
+        "生命科学学院副院长"
+      ],
+      "summary": {
+        "text": "官方资料确认胡德华为中南大学生命科学学院生物医学信息学系教授、博士生导师和学院副院长，研究方向包括医药信息管理、医学人工智能、生物医学大数据挖掘与健康信息学。公开论文显示，其研究可能连接临床风险预测、医学影像深度学习、健康信息素养以及网络谣言和公共舆情分析。",
+        "evidenceIds": [
+          "E2",
+          "E4",
+          "E6",
+          "E13",
+          "E16",
+          "E22"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "医药信息管理。",
+          "evidenceIds": [
+            "E22"
+          ]
+        },
+        {
+          "text": "医学人工智能。",
+          "evidenceIds": [
+            "E22"
+          ]
+        },
+        {
+          "text": "生物医学大数据挖掘。",
+          "evidenceIds": [
+            "E22"
+          ]
+        },
+        {
+          "text": "健康信息学。",
+          "evidenceIds": [
+            "E22"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "医学人工智能与临床风险预测",
+          "explanation": "基于公开论文，可能通过电子病历、医学影像和深度学习模型预测重症患者结局或肿瘤相关指标，并用可解释方法理解模型特征。",
+          "undergraduateMeaning": "本科生可先理解数据清洗、训练/验证划分、分类指标和模型解释，不应把论文模型直接视为可用于临床决策的工具。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E22"
+          ]
+        },
+        {
+          "term": "生物医学大数据挖掘",
+          "explanation": "公开证据可能涉及 MIMIC-IV 临床数据、FDG-PET/CT 影像、微博文本和搜索指数等异构数据，并采用机器学习、统计分析或主题模型提取模式。",
+          "undergraduateMeaning": "适合从可复现的数据字典、特征表、分析脚本和结果核对入手。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E16",
+            "E22"
+          ]
+        },
+        {
+          "term": "健康信息学与信息素养",
+          "explanation": "疫苗信息素养研究通过量表开发和因子分析考察公众获取、理解与判断健康信息的能力。",
+          "undergraduateMeaning": "本科生可学习问卷变量编码、量表结构、信效度概念和结果可视化。",
+          "evidenceIds": [
+            "E6",
+            "E22"
+          ]
+        },
+        {
+          "term": "公共健康信息管理与网络舆情",
+          "explanation": "谣言与公共舆情论文可能通过网页抓取、内容编码、情感分析和主题模型研究信息传播及政策调整前后的讨论变化。",
+          "undergraduateMeaning": "本科生可从公开文本的合规采集、标注规范、分类一致性和主题解释边界入手。",
+          "evidenceIds": [
+            "E13",
+            "E16",
+            "E22"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于电子病历的深度神经网络可能如何预测 ICU 急性心衰患者院内死亡风险，并用 SHAP 解释关键特征？",
+          "evidenceIds": [
+            "E2",
+            "E22"
+          ]
+        },
+        {
+          "text": "FDG-PET/CT 影像与临床信息可能如何用于预测非小细胞肺癌的 Ki-67 水平和预后？",
+          "evidenceIds": [
+            "E4",
+            "E22"
+          ]
+        },
+        {
+          "text": "如何开发并初步验证面向中国居民的疫苗信息素养量表，以及不同特征与素养水平之间可能存在什么关系？",
+          "evidenceIds": [
+            "E6",
+            "E22"
+          ]
+        },
+        {
+          "text": "重大公共卫生事件中，网络谣言、情感与讨论主题可能如何随政策阶段变化，并可如何被结构化分析？",
+          "evidenceIds": [
+            "E13",
+            "E16",
+            "E22"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "基于公开证据，可能使用电子病历数据预处理、SMOTE、BPNN/RNN、传统机器学习对照、阈值调整和 SHAP 模型解释。",
+          "evidenceIds": [
+            "E2",
+            "E22"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用 FDG-PET/CT 影像、DenseNet201、影像—临床联合建模以及 Kaplan–Meier 和 Cox 生存分析。",
+          "evidenceIds": [
+            "E4",
+            "E22"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用在线横断面调查、量表条目设计、探索性因子分析和验证性因子分析。",
+          "evidenceIds": [
+            "E6",
+            "E22"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用网页抓取、标题模糊去重、内容编码、一致性检验和卡方比较分析网络谣言。",
+          "evidenceIds": [
+            "E13",
+            "E22"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用百度指数、微博文本、SKEP 情感分析、LDA 主题模型、Gensim、余弦相似度和桑基图。",
+          "evidenceIds": [
+            "E16",
+            "E22"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "临床预测研究可能遵循“定义结局与队列—清洗并平衡数据—训练和比较模型—调整阈值—解释关键特征”的流程。",
+          "evidenceIds": [
+            "E2",
+            "E22"
+          ]
+        },
+        {
+          "text": "医学影像研究可能遵循“整理影像与临床标签—构建影像模型—融合临床变量—评估分类与生存结果”的流程。",
+          "evidenceIds": [
+            "E4",
+            "E22"
+          ]
+        },
+        {
+          "text": "健康信息素养研究可能遵循“设计或翻译条目—在线调查—探索性因子分析—验证性因子分析—解释群体差异”的流程。",
+          "evidenceIds": [
+            "E6",
+            "E22"
+          ]
+        },
+        {
+          "text": "网络健康信息研究可能遵循“合规获取公开文本—去重或编码—质量控制—情感/主题/统计分析—形成边界清晰的解释”的流程。",
+          "evidenceIds": [
+            "E13",
+            "E16",
+            "E22"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "建立临床数据字段与缺失值检查表",
+          "context": "围绕公开临床预测论文的变量和数据处理步骤。",
+          "purpose": "帮助理解模型输入、缺失值、类别不平衡与数据泄漏风险。",
+          "methods": [
+            "复核训练/验证划分",
+            "记录预处理规则",
+            "检查缺失与异常值",
+            "整理数据字典"
+          ],
+          "output": "字段说明表、数据质量报告或可复现预处理脚本。",
+          "uncertaintyNote": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。",
+          "evidenceIds": [
+            "E2",
+            "E22"
+          ]
+        },
+        {
+          "task": "复现基础分类模型和评价指标",
+          "context": "围绕公开的深度学习或医学影像预测任务建立受限复现。",
+          "purpose": "比较不同模型和阈值下准确率、召回率、F1 与 AUC。",
+          "methods": [
+            "计算评价指标",
+            "记录参数和随机种子",
+            "运行基线模型",
+            "制作混淆矩阵"
+          ],
+          "output": "可复现 notebook、指标对比表或简短方法说明。",
+          "uncertaintyNote": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E22"
+          ]
+        },
+        {
+          "task": "辅助健康信息量表数据整理",
+          "context": "围绕疫苗信息素养量表的公开结构进行方法学习。",
+          "purpose": "理解条目编码、描述统计和因子分析前的数据准备。",
+          "methods": [
+            "复核缺失规则",
+            "绘制分布",
+            "检查反向条目",
+            "建立变量编码表"
+          ],
+          "output": "变量字典、描述统计表或质量检查记录。",
+          "uncertaintyNote": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。",
+          "evidenceIds": [
+            "E6",
+            "E22"
+          ]
+        },
+        {
+          "task": "构建公共健康文本标注或主题分析样例",
+          "context": "围绕公开谣言和微博研究设计小规模、合规的数据练习。",
+          "purpose": "学习采集边界、去重、标注一致性、情感或主题结果解释。",
+          "methods": [
+            "抽样标注公开文本",
+            "计算一致性",
+            "运行情感或主题模型",
+            "制定标注手册"
+          ],
+          "output": "标注规范、小型数据集、分析脚本或结果可视化。",
+          "uncertaintyNote": "仅依据公开论文方法推导为可能的入门任务，不代表当前课题、名额、分工或招募承诺。",
+          "evidenceIds": [
+            "E13",
+            "E16",
+            "E22"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "可能需要基础 Python 或 R、表格数据处理、统计学和可复现记录能力。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E6",
+            "E13",
+            "E16",
+            "E22"
+          ]
+        },
+        {
+          "text": "涉及临床预测时，可能需要理解分类指标、训练/验证划分、类别不平衡和模型解释的基本概念。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E22"
+          ]
+        },
+        {
+          "text": "涉及问卷和健康信息研究时，可能需要描述统计、量表信效度和因子分析的基础。",
+          "evidenceIds": [
+            "E6",
+            "E22"
+          ]
+        },
+        {
+          "text": "涉及网络文本时，可能需要数据采集合规、文本清洗、标注一致性、情感分析或主题模型的基础。",
+          "evidenceIds": [
+            "E13",
+            "E16",
+            "E22"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "公开方法跨度较大，可能同时涉及医学背景、统计学、机器学习、问卷测量和文本分析；适合先选择一个边界明确的数据模块，再逐步补充领域知识与方法。",
+        "evidenceIds": [
+          "E2",
+          "E4",
+          "E6",
+          "E13",
+          "E16",
+          "E22"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "建立规范的数据与代码记录",
+            "学习 Python/R、统计与研究伦理基础",
+            "阅读一篇核心论文并复现图表或指标"
+          ],
+          "possibleOutputs": [
+            "可运行 notebook",
+            "术语表",
+            "文献卡片"
+          ],
+          "uncertaintyNote": "这是依据公开研究流程整理的通用成长路径，具体安排需通过官方渠道与导师确认。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E6",
+            "E13",
+            "E16",
+            "E22"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "承担数据字典、清洗、标注或基线模型中的单一模块",
+            "记录失败案例与不确定性",
+            "与原论文结果进行受限核对"
+          ],
+          "possibleOutputs": [
+            "标注一致性报告",
+            "基线模型对比",
+            "数据质量报告"
+          ],
+          "uncertaintyNote": "这是依据公开研究流程整理的通用成长路径，具体安排需通过官方渠道与导师确认。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E6",
+            "E13",
+            "E16",
+            "E22"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "完成数据、方法、结果和限制的闭环",
+            "在明确边界下提出可检验的小问题",
+            "准备可复现材料与阶段汇报"
+          ],
+          "possibleOutputs": [
+            "方法备忘录",
+            "阶段性研究报告",
+            "小型复现项目"
+          ],
+          "uncertaintyNote": "这是依据公开研究流程整理的通用成长路径，具体安排需通过官方渠道与导师确认。",
+          "evidenceIds": [
+            "E2",
+            "E4",
+            "E6",
+            "E13",
+            "E16",
+            "E22"
+          ]
+        }
+      ],
       "tags": [
-        "健康信息行为",
-        "框架效应",
-        "公共卫生信息化",
-        "舆情分析",
-        "医学数据挖掘"
+        "健康信息学",
+        "生物医学大数据",
+        "网络健康信息",
+        "医学人工智能",
+        "医药信息管理"
       ],
       "categoryTags": [
-        "健康信息行为",
-        "框架效应",
-        "公共卫生信息化",
-        "舆情分析",
-        "医学数据挖掘"
+        "健康信息学",
+        "生物医学大数据",
+        "网络健康信息",
+        "医学人工智能",
+        "医药信息管理"
       ],
-      "authorMatchConfidence": "High",
-      "authorConfidenceSource": "author_match_confidence",
+      "searchKeywords": [
+        "胡德华",
+        "健康信息学",
+        "临床风险预测",
+        "生命科学学院",
+        "生物医学大数据挖掘",
+        "生物医学信息学系",
+        "网络舆情",
+        "医学人工智能",
+        "医药信息管理",
+        "中南大学",
+        "Dehua Hu"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E13",
+          "title": "Difference in Rumor Dissemination and Debunking Before and After the Relaxation of COVID-19 Prevention and Control Measures in China: Infodemiology Study",
+          "year": 2024,
+          "doi": "10.2196/48564",
+          "sourceUrl": "https://www.jmir.org/2024/1/e48564"
+        },
+        {
+          "evidenceId": "E16",
+          "title": "How online public opinion evolves before and after policy adjustments in response to major public health emergencies",
+          "year": 2025,
+          "doi": "10.3389/fpubh.2025.1438854",
+          "sourceUrl": "https://doi.org/10.3389/fpubh.2025.1438854"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "Prediction of mortality events of patients with acute heart failure in intensive care unit based on deep neural network",
+          "year": 2024,
+          "doi": "10.1016/j.cmpb.2024.108403",
+          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/39236563/"
+        },
+        {
+          "evidenceId": "E22",
+          "title": "胡德华-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2502.htm"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Deep Learning to Predict the Cell Proliferation and Prognosis of Non-Small Cell Lung Cancer Based on FDG-PET/CT Images",
+          "year": 2023,
+          "doi": "10.3390/diagnostics13193107",
+          "sourceUrl": "https://doi.org/10.3390/diagnostics13193107"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "The Development and Preliminary Application of the Chinese Version of the COVID-19 Vaccine Literacy Scale",
+          "year": 2022,
+          "doi": "10.3390/ijerph192013601",
+          "sourceUrl": "https://doi.org/10.3390/ijerph192013601"
+        }
+      ],
+      "boundaryStatement": "本页面仅依据官方身份与公开论文证据整理。可能任务、前置技能、学习成本和成长路径均为有证据边界的条件性推导，不代表真实实验室安排、招生名额、经费、指导方式、录取承诺或毕业保证；具体情况需通过官方渠道与导师确认。",
+      "lastUpdated": "2026-08-04",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
       "evidenceType": "academic_only",
       "hasExperienceEvidence": false,
       "experienceCaseCount": 0,
-      "version": "0.5-beta",
-      "status": "beta",
-      "lastUpdated": "2026-07-23T23:45:00+08:00",
-      "reportPath": "reports/Hu_Dehua_profile_academic_zh.md",
-      "reportSha256": "6867c2bff001498d7af5e886e9e4a45ce73e199ec8c41be3e5f1f388c37929a5",
-      "sourceTypeLabel": "仅公开学术证据",
-      "sourceLabel": "web/advisors.json + web/reports/Hu_Dehua_profile_academic_zh.md",
+      "reportPath": "reports/hu-dehua.md",
+      "initials": "胡",
       "quickSummary": {
         "coreDirections": [
-          "健康信息行为",
-          "框架效应",
-          "公共卫生信息化",
-          "舆情分析",
-          "医学数据挖掘"
+          {
+            "text": "医药信息管理。",
+            "evidenceIds": [
+              "E22"
+            ]
+          },
+          {
+            "text": "医学人工智能。",
+            "evidenceIds": [
+              "E22"
+            ]
+          },
+          {
+            "text": "生物医学大数据挖掘。",
+            "evidenceIds": [
+              "E22"
+            ]
+          },
+          {
+            "text": "健康信息学。",
+            "evidenceIds": [
+              "E22"
+            ]
+          }
         ],
         "mainTechniques": [
-          "问卷调查与量表编制（Psychometrics）：基于健康信念模型（HBM）、健康素养量表、自我量化 scale 编制与结构方程模型（SEM）分析 。",
-          "网络文本挖掘与舆情分析：社交媒体/在线健康社区文本爬取、主题建模（LDA）、情感分析与舆情演化网络分析 。",
-          "医学深度学习与影像组学：MIMIC 电子病历数据挖掘、DNN/CNN 临床预测模型构建、FDG-PET/CT 及冷冻切片图像深度学习 。",
-          "R 语言统计与生物信息软件包开发：R 包开发（R Package Development）、Bioconductor/tidyverse 生物信息图形与回归建模封装（ggalign, bregr）。"
+          {
+            "text": "基于公开证据，可能使用电子病历数据预处理、SMOTE、BPNN/RNN、传统机器学习对照、阈值调整和 SHAP 模型解释。",
+            "evidenceIds": [
+              "E2",
+              "E22"
+            ]
+          },
+          {
+            "text": "基于公开证据，可能使用 FDG-PET/CT 影像、DenseNet201、影像—临床联合建模以及 Kaplan–Meier 和 Cox 生存分析。",
+            "evidenceIds": [
+              "E4",
+              "E22"
+            ]
+          },
+          {
+            "text": "基于公开证据，可能使用在线横断面调查、量表条目设计、探索性因子分析和验证性因子分析。",
+            "evidenceIds": [
+              "E6",
+              "E22"
+            ]
+          },
+          {
+            "text": "基于公开证据，可能使用网页抓取、标题模糊去重、内容编码、一致性检验和卡方比较分析网络谣言。",
+            "evidenceIds": [
+              "E13",
+              "E22"
+            ]
+          }
         ],
         "undergraduatePaths": [
-          "如果存在问卷设计、数据抽取与指导条件，本科生可能尝试协助进行健康行为问卷数据清洗与结构方程模型（SEM）或回归统计分析。Confidence: Medium。",
-          "如果存在公开数据源与指导条件，本科生可能尝试参与社交媒体文本数据爬取、主题分析与舆情演化图表绘制。Confidence: Medium。",
-          "如果存在开放数据与指导条件，本科生可能辅助进行开源数据（如 MIMIC）的预处理、R 包（如 bregr, ggalign）测试或深度学习模型代码调优。Confidence: Low–Medium。"
+          {
+            "text": "建立临床数据字段与缺失值检查表",
+            "evidenceIds": [
+              "E2",
+              "E22"
+            ]
+          },
+          {
+            "text": "复现基础分类模型和评价指标",
+            "evidenceIds": [
+              "E2",
+              "E4",
+              "E22"
+            ]
+          },
+          {
+            "text": "辅助健康信息量表数据整理",
+            "evidenceIds": [
+              "E6",
+              "E22"
+            ]
+          }
         ]
-      }
+      },
+      "reportSha256": "fcfeaf0773b8f53e3a74152b77434650fe737850be1d019182b4a9ebb9f5bd44"
     },
     {
-      "id": "hu-zhengmao",
-      "nameZh": "胡正茂",
-      "nameEn": "Zhengmao Hu",
-      "institution": "中南大学生命科学学院",
-      "initials": "胡",
-      "summary": "公开研究主线集中在高度近视（High Myopia）与孤独症（ASD）等人类遗传性疾病的致病基因鉴定及分子功能机制。",
+      "dtoVersion": "1.0.4",
+      "id": "li-faxiang",
+      "nameZh": "李发祥",
+      "nameEn": "Faxiang Li",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院遗传学系",
+      "position": "特聘教授",
+      "publicRoles": [
+        "博士生导师"
+      ],
+      "summary": {
+        "text": "官方页面显示，李发祥为中南大学生命科学学院遗传学系特聘教授、博士生导师，主要以结构生物学、生物化学和细胞生物学解析与健康和疾病相关的生物大分子机器。已核验的近期公开论文覆盖VCPIP1–P97/VCP介导的高尔基体重建，以及DSR2、ShosTA和Sofic等细菌抗噬菌体防御系统的结构与调控机制。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E6"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "综合运用冷冻电镜、X射线晶体衍射、核磁共振、生物化学和细胞生物学研究生物大分子机器的结构与功能。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "text": "研究细胞周期相关蛋白质机器的分子结构与工作机理，以及遗传突变导致相关疾病的机制。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "text": "研究病原微生物与宿主相互作用的分子机制。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "text": "以蛋白质结构为基础，针对神经退行性疾病、心脏病等相关重要蛋白靶点开展小分子抑制剂筛选和优化。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "蛋白质机器与高尔基体重建",
+          "explanation": "基于公开证据，官方方向强调生物大分子机器；VCPIP1–P97/VCP论文提供了一个具体案例，说明结构、生化和细胞证据如何连接复合体组织、构象调控与有丝分裂后高尔基体重建。",
+          "undergraduateMeaning": "适合先学习“结构—界面—活性—细胞表型”的分层证据链，不把单一结构图直接等同于完整细胞机制。",
+          "evidenceIds": [
+            "E1",
+            "E6"
+          ]
+        },
+        {
+          "term": "细菌抗噬菌体防御与噬菌体反防御",
+          "explanation": "DSR2、ShosTA和Sofic论文分别展示NADase、防御型毒素—抗毒素和AMPylation相关系统的结构与调控。",
+          "undergraduateMeaning": "可比较不同防御系统的触发信号、毒性输出、抗毒或抑制机制以及用于验证的结构和功能实验。",
+          "evidenceIds": [
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "term": "结构驱动的疾病靶点与小分子研究",
+          "explanation": "官方主页提出基于蛋白质结构开展疾病相关靶点的小分子筛选和优化。",
+          "undergraduateMeaning": "本科阶段可先从结构口袋、突变位点和已公开活性证据的整理入手；公开资料不能证明当前具体项目或本科生准入。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "VCPIP1–P97/VCP复合体的组织方式和构象变化如何调控有丝分裂后的高尔基体膜融合与重建？",
+          "evidenceIds": [
+            "E1",
+            "E6"
+          ]
+        },
+        {
+          "text": "噬菌体蛋白TTP与DSAD1如何分别激活或抑制DSR2 NADase，从而形成细菌防御与噬菌体免疫逃逸的结构基础？",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "ShosT毒素、ShosA抗毒素、ssDNA和RecA之间的结构与生化关系如何参与ShosTA介导的中止感染？",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "Sofic的二聚化、ATP/CTD构象变化和AS1抗毒蛋白如何共同调节其抗噬菌体毒性？",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "基于公开证据，可能涉及冷冻电镜结构测定、三维重构与原子模型构建。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用X射线晶体学解析ShosTA和Sofic相关蛋白或复合物结构。",
+          "evidenceIds": [
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能涉及重组蛋白表达纯化、凝胶过滤、酶活/结合实验和定点突变验证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用细胞生物学与免疫荧光读出，连接VCPIP1–P97/VCP结构机制和高尔基体重建表型。",
+          "evidenceIds": [
+            "E1",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开证据，可能使用细菌菌落形成、EMSA、蛋白互作等功能实验，检验抗噬菌体系统的毒性、抗毒与核酸/蛋白相互作用。",
+          "evidenceIds": [
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "从蛋白质机器、宿主—病原互作或抗噬菌体防御问题出发，界定需要研究的组成分子和可检验机制。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开论文，研究可能表达纯化蛋白或复合物，并通过生化活性、结合或寡聚状态实验建立基础功能读出。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "基于公开论文，研究可能利用冷冻电镜或X射线晶体学解析结构，识别界面、口袋和构象变化。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开论文，研究可能设计界面或催化位点突变，并在细胞或细菌功能实验中检验结构解释。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "依据公开证据，结论需限制在相应蛋白、模型和实验条件内，避免从单一系统直接外推到临床或其他物种。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "整理结构—功能证据矩阵",
+          "context": "从E1–E4中选择一个蛋白机器或防御系统，区分结构观察、界面突变、生化活性和细胞/细菌表型",
+          "purpose": "训练把论文机制图拆解为可核验的多层证据。",
+          "methods": [
+            "结构化文献摘录",
+            "突变—界面—活性映射",
+            "证据等级标注"
+          ],
+          "output": "一份带Evidence定位的结构—功能矩阵",
+          "uncertaintyNote": "仅为基于公开论文推导的可能任务，不代表实验室当前项目、真实分工、准入、名额、指导方式或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "task": "复现公开结构图或界面注释",
+          "context": "利用论文和公开PDB信息，复现单个复合物的结构域、界面、突变位点或构象比较",
+          "purpose": "熟悉结构可视化和从原子模型到机制假设的基本步骤。",
+          "methods": [
+            "图注与方法核对",
+            "PDB结构检索",
+            "PyMOL或ChimeraX"
+          ],
+          "output": "可复核的结构图、操作记录和限制说明",
+          "uncertaintyNote": "公开结构可用于学习，但不能证明实验室会提供相同任务、软件、数据或指导。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "task": "比较三类抗噬菌体系统的机制",
+          "context": "比较DSR2、ShosTA和Sofic在触发信号、毒性输出、抗毒/抑制机制和验证方法上的异同",
+          "purpose": "建立跨论文比较能力，同时保留每个系统的实验边界。",
+          "methods": [
+            "机制表格",
+            "实验读出分类",
+            "摘要与图表核对"
+          ],
+          "output": "抗噬菌体系统对照表或短报告",
+          "uncertaintyNote": "这是公开证据导向的学习任务，不代表实验室的真实培养安排或当前招募计划。",
+          "evidenceIds": [
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "建议准备分子生物学、生物化学、细胞生物学和基础微生物学知识。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "结构方向可先学习蛋白质结构层级、冷冻电镜/X射线晶体学基本概念，以及PyMOL或ChimeraX等结构可视化工具。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "实验方向可能需要理解重组蛋白表达纯化、酶活/结合实验、对照设计和实验安全；计算整理可补充基础Python或R。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于公开证据，入门成本主要来自结构生物学术语、蛋白质生化实验和细胞/细菌功能验证三类语言的衔接；从读图到独立解释通常需要分阶段练习。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E6"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "建立抗噬菌体系统术语表",
+            "熟悉冷冻电镜和晶体学论文图",
+            "学习蛋白质结构与复合物基础"
+          ],
+          "possibleOutputs": [
+            "结构图阅读笔记",
+            "论文证据卡片",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实培养方案、当前任务、名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "比较一个防御系统机制",
+            "复现一个结构图",
+            "整理一个突变—活性证据链"
+          ],
+          "possibleOutputs": [
+            "结构可视化文件",
+            "可复核短报告",
+            "证据矩阵"
+          ],
+          "uncertaintyNote": "不代表实验室真实培养方案、当前任务、名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "设计可证伪的突变或比较方案",
+            "在明确论文边界内提出一个结构—功能问题"
+          ],
+          "possibleOutputs": [
+            "带限制说明的机制分析",
+            "小型研究方案"
+          ],
+          "uncertaintyNote": "不代表实验室真实培养方案、当前任务、名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        }
+      ],
       "tags": [
-        "高度近视",
-        "孤独症",
-        "眼科遗传学",
-        "三代长读长测序",
-        "Minigene剪接"
+        "蛋白质机器",
+        "结构生物学",
+        "抗噬菌体防御",
+        "冷冻电镜"
       ],
       "categoryTags": [
-        "高度近视",
-        "孤独症",
-        "眼科遗传学",
-        "三代长读长测序",
-        "Minigene剪接"
+        "蛋白质机器",
+        "结构生物学",
+        "抗噬菌体防御",
+        "冷冻电镜"
       ],
-      "authorMatchConfidence": "High",
-      "authorConfidenceSource": "author_match_confidence",
+      "searchKeywords": [
+        "结构生物学",
+        "抗噬菌体防御",
+        "冷冻电镜",
+        "李发祥",
+        "DSR2",
+        "Faxiang Li",
+        "p97/VCP",
+        "ShosTA",
+        "Sofic",
+        "toxin-antitoxin",
+        "VCPIP1",
+        "X射线晶体学"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Molecular Basis of VCPIP1 and P97/VCP Interaction Reveals Its Functions in Post-Mitotic Golgi Reassembly",
+          "year": 2024,
+          "doi": "10.1002/advs.202403417",
+          "sourceUrl": "https://doi.org/10.1002/advs.202403417"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "The structural basis of the activation and inhibition of DSR2 NADase by phage proteins",
+          "year": 2024,
+          "doi": "10.1038/s41467-024-50410-0",
+          "sourceUrl": "https://doi.org/10.1038/s41467-024-50410-0"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "The molecular mechanisms of the ShosTA system in mediating anti-phage defense",
+          "year": 2026,
+          "doi": "10.1093/nar/gkag197",
+          "sourceUrl": "https://doi.org/10.1093/nar/gkag197"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Structural Insights into the Regulatory Mechanisms of the Toxic Activity of Sofic in Anti-Phage Defense Systems",
+          "year": 2025,
+          "doi": "10.3390/ijms26136074",
+          "sourceUrl": "https://doi.org/10.3390/ijms26136074"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "李发祥-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2556.htm"
+        }
+      ],
+      "boundaryStatement": "公共身份与原始研究方向来自中南大学官方主页；论文机制与方法仅依据本导师已采用的正式出版物。AI整理内容均单独标注，不包含学生Experience，不评价导师管理风格、实验室氛围、经费、真实名额、毕业难度或成果保证。可能任务与成长路径不代表真实实验室安排或招募承诺。",
+      "lastUpdated": "2026-08-04",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
       "evidenceType": "academic_only",
       "hasExperienceEvidence": false,
       "experienceCaseCount": 0,
-      "version": "0.5-beta",
-      "status": "beta",
-      "lastUpdated": "2026-07-23T23:45:00+08:00",
-      "reportPath": "reports/Hu_Zhengmao_profile_academic_zh.md",
-      "reportSha256": "8e8d81778ce27000a2848209432565b74140432ee936f8ac30d2443892d42cff",
-      "sourceTypeLabel": "仅公开学术证据",
-      "sourceLabel": "web/advisors.json + web/reports/Hu_Zhengmao_profile_academic_zh.md",
+      "reportPath": "reports/li-faxiang.md",
+      "initials": "李",
       "quickSummary": {
         "coreDirections": [
-          "高度近视",
-          "孤独症",
-          "眼科遗传学",
-          "三代长读长测序",
-          "Minigene剪接"
+          {
+            "text": "综合运用冷冻电镜、X射线晶体衍射、核磁共振、生物化学和细胞生物学研究生物大分子机器的结构与功能。",
+            "evidenceIds": [
+              "E6"
+            ]
+          },
+          {
+            "text": "研究细胞周期相关蛋白质机器的分子结构与工作机理，以及遗传突变导致相关疾病的机制。",
+            "evidenceIds": [
+              "E6"
+            ]
+          },
+          {
+            "text": "研究病原微生物与宿主相互作用的分子机制。",
+            "evidenceIds": [
+              "E6"
+            ]
+          },
+          {
+            "text": "以蛋白质结构为基础，针对神经退行性疾病、心脏病等相关重要蛋白靶点开展小分子抑制剂筛选和优化。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
         ],
         "mainTechniques": [
-          "长读长与短读长基因组学：全外显子组测序（WES）、全基因组测序（WGS）、单倍型解析三代长读长测序（Long-read WGS）、串联重复变异（TRV）算法 。",
-          "胶原修饰、细胞外基质与有丝分裂检测：胶原蛋白电镜/荧光染色、P4HA2 脯氨酸羟化酶活性检测、细胞周期与有丝分裂荧光显微成像 。",
-          "线粒体融合/裂变与细胞凋亡验证：OPA1 突变体转染、线粒体形态高分辨成像、流式细胞术检测细胞凋亡 。",
-          "迷你基因（Minigene）与 RNA 剪接分析：体外 Minigene 构建、RT-PCR/qPCR 剪接产物分析、Western blot 蛋白表达验证 。"
+          {
+            "text": "基于公开证据，可能涉及冷冻电镜结构测定、三维重构与原子模型构建。",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E6"
+            ]
+          },
+          {
+            "text": "基于公开证据，可能使用X射线晶体学解析ShosTA和Sofic相关蛋白或复合物结构。",
+            "evidenceIds": [
+              "E3",
+              "E4",
+              "E6"
+            ]
+          },
+          {
+            "text": "基于公开证据，可能涉及重组蛋白表达纯化、凝胶过滤、酶活/结合实验和定点突变验证。",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E3",
+              "E4",
+              "E6"
+            ]
+          },
+          {
+            "text": "基于公开证据，可能使用细胞生物学与免疫荧光读出，连接VCPIP1–P97/VCP结构机制和高尔基体重建表型。",
+            "evidenceIds": [
+              "E1",
+              "E6"
+            ]
+          }
         ],
         "undergraduatePaths": [
-          "如果存在测序数据、任务边界与指导条件，本科生可能尝试利用生物信息学工具分析高度近视或 ASD 患者的外显子/长读长测序数据，筛选候选突变。Confidence: Medium。",
-          "如果存在质粒载体、成熟 protocol 与指导条件，本科生可能辅助参与 Minigene 质粒构建、转染及 RT-PCR 验证罕见变异的剪接影响。Confidence: Low–Medium。",
-          "如果存在成熟实验体系与指导条件，本科生可能协助开展细胞水平的线粒体形态染色（OPA1）或胶原分泌检测。Confidence: Low–Medium。"
+          {
+            "text": "整理结构—功能证据矩阵",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "复现公开结构图或界面注释",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "比较三类抗噬菌体系统的机制",
+            "evidenceIds": [
+              "E2",
+              "E3",
+              "E4"
+            ]
+          }
         ]
-      }
+      },
+      "reportSha256": "25e002b70c5fb396a6fc4824749b392b6a16b2beba678ea2c7d1f0b89d01d4a1"
     },
     {
+      "dtoVersion": "1.0.4",
       "id": "li-jiada",
       "nameZh": "李家大",
-      "nameEn": "Jiada Li",
-      "institution": "中南大学生命科学学院",
-      "initials": "李",
-      "summary": "公开研究主线集中在神经发育、神经精神障碍与先天性促性腺激素减退症（CHH）的遗传调控、动物模型与昼夜节律分子机制。",
+      "nameEn": "Jia-Da Li",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院遗传学系",
+      "position": "研究员",
+      "publicRoles": [
+        "博士生导师",
+        "生命科学学院院长"
+      ],
+      "summary": {
+        "text": "综合官方主页与公开论文，李家大的公开研究方向聚焦神经发育障碍的遗传调控机制。已核验的核心论文可能覆盖CNTNAP2与Necdin–SynGAP相关的孤独症/突触机制，以及Cry1和Bmal1相关的昼夜节律、多巴胺信号与ADHD样表型，并使用细胞、小鼠、行为学、电生理和分子验证形成证据链。",
+        "evidenceIds": [
+          "E5",
+          "E10",
+          "E17",
+          "E22",
+          "E45"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "神经发育障碍的遗传调控机制。",
+          "evidenceIds": [
+            "E45"
+          ]
+        },
+        {
+          "text": "综合运用遗传学、生物化学、分子生物学、电生理和行为学技术，分析ASD、ADHD、GnRH缺陷疾病等神经发育障碍的遗传学基础。",
+          "evidenceIds": [
+            "E45"
+          ]
+        },
+        {
+          "text": "在细胞和小鼠水平探索上述疾病的分子病理机制及新的诊疗靶点。",
+          "evidenceIds": [
+            "E45"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "孤独症相关突触蛋白稳态与行为机制",
+          "explanation": "基于公开论文，研究可能关注CNTNAP2胞内结构域以及Necdin–SynGAP蛋白稳态如何影响突触功能和孤独症相关行为。",
+          "undergraduateMeaning": "本科生可从基因—蛋白—突触—行为之间的证据链入手，区分分子互作、细胞读出和动物行为结果。",
+          "evidenceIds": [
+            "E5",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "term": "昼夜节律基因、 多巴胺信号与ADHD样表型",
+          "explanation": "依据Cry1Δ11和多巴胺能神经元Bmal1敲除研究，公开证据可能连接昼夜节律基因、D1受体或多巴胺释放与ADHD样行为。",
+          "undergraduateMeaning": "本科生可学习如何把基因工程小鼠、行为学、电生理和光纤记录结果组织成可检验的机制链。",
+          "evidenceIds": [
+            "E10",
+            "E17",
+            "E45"
+          ]
+        },
+        {
+          "term": "神经发育障碍的遗传模型与机制验证",
+          "explanation": "官方方向和代表论文显示，研究可能从疾病相关基因或变异出发，在细胞与小鼠模型中验证分子病理机制并评估救援策略。",
+          "undergraduateMeaning": "适合从文献证据表、模型定义、表型指标和因果验证边界开始，而不能把动物结果直接等同于临床疗效。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开证据，CNTNAP2胞内结构域与Necdin–SynGAP蛋白稳态分别可能如何影响突触功能和社交行为？",
+          "evidenceIds": [
+            "E5",
+            "E22"
+          ]
+        },
+        {
+          "text": "依据公开论文，Cry1Δ11或多巴胺能神经元Bmal1缺失可能如何改变多巴胺信号并产生ADHD样表型？",
+          "evidenceIds": [
+            "E10",
+            "E17"
+          ]
+        },
+        {
+          "text": "公开研究中，细胞或小鼠模型的分子、神经生理和行为表型可如何通过遗传或病毒救援实验形成因果证据链？",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "基于官方方向与公开论文，可能使用基因工程小鼠、条件性敲除或疾病相关突变模型，并结合基因型和分子表达验证。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "text": "依据公开研究，可能使用动物行为学、脑片电生理、免疫荧光以及多巴胺光纤记录等神经功能方法。",
+          "evidenceIds": [
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "text": "公开证据还可能涉及蛋白互作与稳定性分析、细胞实验、组织成像和病毒介导的功能救援。",
+          "evidenceIds": [
+            "E5",
+            "E22",
+            "E45"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开证据，研究可能遵循“疾病相关基因或变异—细胞/小鼠模型—分子与行为表型—机制验证—救援实验”的流程。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "text": "昼夜节律与ADHD方向可能遵循“构建Cry1或Bmal1模型—量化活动与注意相关行为—检测多巴胺信号和神经电活动—药理或遗传验证”的流程。",
+          "evidenceIds": [
+            "E10",
+            "E17"
+          ]
+        },
+        {
+          "text": "突触蛋白稳态方向可能遵循“筛选蛋白互作—验证稳定性变化—检测突触形态和电生理—在特定脑区实施救援”的流程。",
+          "evidenceIds": [
+            "E5",
+            "E22"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "神经发育障碍核心论文证据表整理",
+          "context": "围绕ASD、ADHD及突触稳态论文，可能整理基因、模型、实验读出与结论边界。",
+          "purpose": "训练从论文中区分公开事实、实验结果和机制推断。",
+          "methods": [
+            "结构化证据表",
+            "论文图表阅读",
+            "PubMed与出版社元数据核对"
+          ],
+          "output": "带DOI、模型和证据层级的文献表或短报告",
+          "uncertaintyNote": "这是依据公开论文推导的可能训练任务，不代表实验室真实安排、当前名额或招募承诺。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "task": "行为学与神经信号结果的受限复现或质量核对",
+          "context": "若获得公开补充数据或图表，本科生可能复核行为指标、多巴胺光纤记录或电生理结果的统计展示。",
+          "purpose": "理解数据处理、可视化和结果解释边界。",
+          "methods": [
+            "分析记录与版本控制",
+            "公开数据或图表数字化",
+            "基础统计与可视化"
+          ],
+          "output": "可复现notebook、图表核对记录或质量报告",
+          "uncertaintyNote": "是否存在可用公开数据和具体任务需另行确认；不代表学生可接触内部数据或动物实验。",
+          "evidenceIds": [
+            "E10",
+            "E17",
+            "E22"
+          ]
+        },
+        {
+          "task": "蛋白稳态与突触机制图谱整理",
+          "context": "可能围绕CNTNAP2、Necdin、SynGAP及相关救援实验整理分子互作和因果链。",
+          "purpose": "建立从蛋白调控到突触与行为表型的机制阅读框架。",
+          "methods": [
+            "不同论文结果对照",
+            "实验读出分类",
+            "通路图绘制"
+          ],
+          "output": "机制图、证据矩阵或组会型汇报材料",
+          "uncertaintyNote": "这是公开证据导向的学习任务，不代表实验室真实培养计划或成果保证。",
+          "evidenceIds": [
+            "E5",
+            "E22"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "基于公开研究，可能需要遗传学、分子生物学、神经生物学和基础统计知识。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "text": "阅读动物模型研究时，建议理解基因型、对照组、行为指标、电生理或光纤记录的基本概念。",
+          "evidenceIds": [
+            "E10",
+            "E17",
+            "E22"
+          ]
+        },
+        {
+          "text": "若承担数据或文献整理，可能需要英文论文阅读、表格处理、基础Python/R和可复现记录能力。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "公开方法跨度可能涵盖分子遗传、动物模型、神经电生理和行为分析；建议先从一条清晰的论文证据链与单一数据模块入手，再逐步补充实验背景。",
+        "evidenceIds": [
+          "E5",
+          "E10",
+          "E17",
+          "E22",
+          "E45"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "练习基础统计与可复现记录",
+            "完成核心论文证据卡和术语表",
+            "学习神经发育障碍与遗传模型基础"
+          ],
+          "possibleOutputs": [
+            "可运行notebook或图表核对记录",
+            "术语表",
+            "文献证据卡"
+          ],
+          "uncertaintyNote": "这是依据公开研究方法整理的通用成长路径，具体安排需通过官方渠道与导师确认。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22",
+            "E45"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "承担文献、图表或公开数据中的单一模块",
+            "记录模型、对照与结果边界",
+            "与原论文结论进行受限核对"
+          ],
+          "possibleOutputs": [
+            "机制图或证据矩阵",
+            "阶段性复现报告",
+            "数据质量记录"
+          ],
+          "uncertaintyNote": "这是公开证据导向的可能路径，不代表真实实验室任务或招生承诺。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "进行阶段汇报并记录不确定性",
+            "完成方法、结果、限制和复现材料闭环",
+            "在明确边界下提出可检验的小问题"
+          ],
+          "possibleOutputs": [
+            "方法备忘录",
+            "阶段性研究报告",
+            "小型复现项目"
+          ],
+          "uncertaintyNote": "能否进入独立模块取决于实际项目、伦理权限和指导安排，不构成培养或成果保证。",
+          "evidenceIds": [
+            "E5",
+            "E10",
+            "E17",
+            "E22"
+          ]
+        }
+      ],
       "tags": [
-        "神经发育障碍",
-        "昼夜节律",
         "动物模型",
-        "CHH遗传学",
-        "电生理与突触"
+        "分子遗传学",
+        "孤独症机制",
+        "神经电生理",
+        "神经发育障碍",
+        "ADHD机制"
       ],
       "categoryTags": [
-        "神经发育障碍",
-        "昼夜节律",
         "动物模型",
-        "CHH遗传学",
-        "电生理与突触"
+        "分子遗传学",
+        "孤独症机制",
+        "神经电生理",
+        "神经发育障碍",
+        "ADHD机制"
       ],
-      "authorMatchConfidence": "High",
-      "authorConfidenceSource": "author_match_confidence",
+      "searchKeywords": [
+        "电生理",
+        "多巴胺",
+        "多动症",
+        "孤独症",
+        "李家大",
+        "神经发育障碍",
+        "小鼠模型",
+        "遗传学",
+        "ADHD",
+        "ASD",
+        "Bmal1",
+        "CNTNAP2",
+        "Cry1",
+        "Jia-Da Li",
+        "Necdin",
+        "SynGAP"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E10",
+          "title": "Cry1Δ11 mutation induces ADHD-like symptoms through hyperactive dopamine D1 receptor signaling",
+          "year": 2023,
+          "doi": "10.1172/jci.insight.170434",
+          "sourceUrl": "https://doi.org/10.1172/jci.insight.170434"
+        },
+        {
+          "evidenceId": "E17",
+          "title": "Knockout of Bmal1 in dopaminergic neurons induces ADHD-like symptoms via hyperactive dopamine signaling in male mice",
+          "year": 2025,
+          "doi": "10.1186/s12993-025-00287-w",
+          "sourceUrl": "https://doi.org/10.1186/s12993-025-00287-w"
+        },
+        {
+          "evidenceId": "E22",
+          "title": "Loss of Necdin causes social deficit and aberrant synaptic function through destabilization of SynGAP",
+          "year": 2026,
+          "doi": "10.1038/s41380-025-03187-7",
+          "sourceUrl": "https://doi.org/10.1038/s41380-025-03187-7"
+        },
+        {
+          "evidenceId": "E45",
+          "title": "李家大-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2566.htm"
+        },
+        {
+          "evidenceId": "E5",
+          "title": "CNTNAP2 intracellular domain (CICD) generated by γ-secretase cleavage improves autism-related behaviors",
+          "year": 2023,
+          "doi": "10.1038/s41392-023-01431-6",
+          "sourceUrl": "https://doi.org/10.1038/s41392-023-01431-6"
+        }
+      ],
+      "boundaryStatement": "本页面仅依据中南大学官方身份与公开论文证据整理。可能任务、前置技能、学习成本和成长路径均为有证据边界的条件性推导，不代表真实实验室安排、导师风格、实验室氛围、经费、招生名额、录取承诺、成果承诺或毕业保证；具体情况需通过官方渠道与导师确认。",
+      "lastUpdated": "2026-08-04",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
       "evidenceType": "academic_only",
       "hasExperienceEvidence": false,
       "experienceCaseCount": 0,
-      "version": "0.5-beta",
-      "status": "beta",
-      "lastUpdated": "2026-07-23T23:45:00+08:00",
-      "reportPath": "reports/Li_Jiada_profile_academic_zh.md",
-      "reportSha256": "94d711d1a0831d6dc47bf0dc5923c93a43507323801bcc75f2480c9f10784091",
-      "sourceTypeLabel": "仅公开学术证据",
-      "sourceLabel": "web/advisors.json + web/reports/Li_Jiada_profile_academic_zh.md",
+      "reportPath": "reports/li-jiada.md",
+      "initials": "李",
       "quickSummary": {
         "coreDirections": [
-          "神经发育障碍",
-          "昼夜节律",
-          "动物模型",
-          "CHH遗传学",
-          "电生理与突触"
+          {
+            "text": "神经发育障碍的遗传调控机制。",
+            "evidenceIds": [
+              "E45"
+            ]
+          },
+          {
+            "text": "综合运用遗传学、生物化学、分子生物学、电生理和行为学技术，分析ASD、ADHD、GnRH缺陷疾病等神经发育障碍的遗传学基础。",
+            "evidenceIds": [
+              "E45"
+            ]
+          },
+          {
+            "text": "在细胞和小鼠水平探索上述疾病的分子病理机制及新的诊疗靶点。",
+            "evidenceIds": [
+              "E45"
+            ]
+          }
         ],
         "mainTechniques": [
-          "基因编辑动物模型与行为学：基因敲除/转基因/点突变小鼠模型，孤独症社交、ADHD 痛觉过敏/多动、NIID 神经退行性行为评估 。",
-          "电生理与神经电路分析：小鼠脑片电生理记录、深部脑刺激（DBS）、GABA 神经元递送与突触可塑性测定 。",
-          "生化与分子剪接/RNA-蛋白互作：γ-secretase 酶切检测、RNA-binding 蛋白结合测定（FMRP-Per1）、迷你基因（Minigene）剪接验证 。",
-          "线粒体与细胞器成像验证：线粒体分裂荧光成像（Drp1）、ER-线粒体接触位点（GRP75/PLA2G6）分析 。"
+          {
+            "text": "基于官方方向与公开论文，可能使用基因工程小鼠、条件性敲除或疾病相关突变模型，并结合基因型和分子表达验证。",
+            "evidenceIds": [
+              "E5",
+              "E10",
+              "E17",
+              "E22",
+              "E45"
+            ]
+          },
+          {
+            "text": "依据公开研究，可能使用动物行为学、脑片电生理、免疫荧光以及多巴胺光纤记录等神经功能方法。",
+            "evidenceIds": [
+              "E10",
+              "E17",
+              "E22",
+              "E45"
+            ]
+          },
+          {
+            "text": "公开证据还可能涉及蛋白互作与稳定性分析、细胞实验、组织成像和病毒介导的功能救援。",
+            "evidenceIds": [
+              "E5",
+              "E22",
+              "E45"
+            ]
+          }
         ],
         "undergraduatePaths": [
-          "如果存在质粒载体、成熟 protocol 与指导条件，本科生可能尝试协助开展 Minigene 剪接构建与 RT-PCR/qPCR 剪接产物分析。Confidence: Medium。",
-          "如果存在细胞系、荧光表达载体与指导条件，本科生可能参与昼夜节律相关 RNA-蛋白互作或细胞水平节律荧光报道系统检测。Confidence: Medium。",
-          "如果存在小鼠系、成熟实验规范与指导条件，本科生可能辅助参与小鼠基因型鉴定（PCR）或行为学视频数据整理。Confidence: Low–Medium。"
+          {
+            "text": "神经发育障碍核心论文证据表整理",
+            "evidenceIds": [
+              "E5",
+              "E10",
+              "E17",
+              "E22",
+              "E45"
+            ]
+          },
+          {
+            "text": "行为学与神经信号结果的受限复现或质量核对",
+            "evidenceIds": [
+              "E10",
+              "E17",
+              "E22"
+            ]
+          },
+          {
+            "text": "蛋白稳态与突触机制图谱整理",
+            "evidenceIds": [
+              "E5",
+              "E22"
+            ]
+          }
         ]
-      }
+      },
+      "reportSha256": "eda028dce9b91c1fed3abef84f3bf6f437115254cd3e5c485f5a2d87c120b663"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "li-xing",
+      "nameZh": "李星",
+      "nameEn": "Xing Li",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物化学与分子生物学系",
+      "position": "教授",
+      "publicRoles": [
+        "博士生导师"
+      ],
+      "summary": {
+        "text": "官方方向聚焦脊髓损伤微环境、神经再生、内源神经干/前体细胞及功能生物支架。基于已采用论文，可进一步核对具体研究问题、方法与证据边界。",
+        "evidenceIds": [
+          "E5",
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "脊髓损伤微环境、神经再生、内源神经干/前体细胞及功能生物支架。",
+          "evidenceIds": [
+            "E5"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "靶向炎性小胶质细胞的持续递送",
+          "explanation": "利用水凝胶纳米颗粒持续释放系统调节脊髓损伤中的促炎小胶质细胞。",
+          "undergraduateMeaning": "可理解为让材料在损伤部位按时间释放并作用于特定细胞。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "term": "ROS响应水凝胶与DUSP26",
+          "explanation": "通过活性氧响应材料递送DUSP26抑制策略研究脊髓损伤修复。",
+          "undergraduateMeaning": "可理解为让损伤环境触发材料释放干预。",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "term": "神经干细胞迁移与分化微环境",
+          "explanation": "比较功能水凝胶和抗体修饰胶原支架对内源神经发生的调控。",
+          "undergraduateMeaning": "可理解为利用支架同时提供空间结构和生物信号。",
+          "evidenceIds": [
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开论文，持续释放纳米颗粒系统如何选择性调节促炎小胶质细胞并支持脊髓损伤修复？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "基于公开论文，活性氧响应介孔硅水凝胶递送的DUSP26抑制如何影响脊髓损伤修复？",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "基于公开论文，功能水凝胶如何重塑神经干细胞迁移和神经元分化微环境？",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "基于公开论文，西妥昔单抗修饰胶原支架如何引导损伤激活的内源神经干细胞神经发生？",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "可能涉及水凝胶与纳米颗粒制备、释放动力学和材料表征。",
+          "evidenceIds": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "text": "可能涉及小胶质细胞、神经干细胞迁移分化及分子信号评价。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        },
+        {
+          "text": "可能涉及啮齿动物脊髓损伤模型、组织学、神经环路与运动功能评估。",
+          "evidenceIds": [
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于已采用公开论文，研究流程可能先明确问题、样本或模型来源，并设置可比较的对照。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "基于已采用公开论文，随后可能完成实验或数据处理，记录质量控制、主要读出和统计分析。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "基于已采用公开论文，最后可能通过独立验证、敏感性分析或多层证据比较来界定结论边界。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "比较两类响应递送系统",
+          "context": "基于已采用公开论文，对照持续释放和活性氧响应水凝胶的材料设计与细胞靶点",
+          "purpose": "建立材料参数到生物读出的映射",
+          "methods": [
+            "比较细胞读出",
+            "提取释放机制",
+            "整理材料组成"
+          ],
+          "output": "递送系统对照表",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "task": "追踪神经干细胞微环境证据",
+          "context": "基于已采用公开论文，整理迁移、分化、成熟和功能恢复的证据层级",
+          "purpose": "避免把单一读出等同于整体修复",
+          "methods": [
+            "标注细胞阶段",
+            "核对行为结果",
+            "整理组织学读出"
+          ],
+          "output": "神经再生证据链",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "task": "复核抗体修饰胶原支架机制",
+          "context": "基于已采用公开论文，梳理支架修饰、神经发生和急性损伤模型",
+          "purpose": "区分材料功能与细胞命运证据",
+          "methods": [
+            "记录模型边界",
+            "提取支架设计",
+            "整理细胞命运"
+          ],
+          "output": "胶原支架机制卡",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "基于已采用公开论文，建议准备与该方向相关的生命科学、统计或实验设计基础概念。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "基于已采用公开论文，建议能够阅读英文论文并区分研究问题、方法、结果与讨论。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "基于已采用公开论文，涉及数据分析时可能需要表格整理、基础统计和可重复记录能力。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于已采用公开论文，入门成本可能来自领域术语、实验或数据流程、质量控制以及对结论边界的准确表达。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "复核证据来源",
+            "建立术语表",
+            "阅读四篇采用论文"
+          ],
+          "possibleOutputs": [
+            "论文卡片",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "记录方法与质量控制",
+            "完成一个边界明确的证据整理或复核任务"
+          ],
+          "possibleOutputs": [
+            "可重复记录",
+            "证据表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "独立完成小型分析或实验设计",
+            "在公开证据范围内提出可检验问题"
+          ],
+          "possibleOutputs": [
+            "边界清楚的结果说明",
+            "小型研究方案"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "tags": [
+        "脊髓损伤",
+        "神经再生",
+        "生物材料"
+      ],
+      "categoryTags": [
+        "脊髓损伤",
+        "神经再生",
+        "生物材料"
+      ],
+      "searchKeywords": [
+        "脊髓损伤",
+        "胶原支架",
+        "神经干细胞",
+        "水凝胶",
+        "小胶质细胞",
+        "DUSP26"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "A hydrogel-based nanoparticles sustained-release system selectively targeting pro-inflammatory microglia for spinal cord injury repair",
+          "year": 2025,
+          "doi": "10.1016/j.jconrel.2025.114180",
+          "sourceUrl": "https://doi.org/10.1016/j.jconrel.2025.114180"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "Neuronal Dual-Specificity Phosphatase 26 Inhibition via Reactive-Oxygen-Species Responsive Mesoporous-Silica-Loaded Hydrogel for Spinal Cord Injury Repair",
+          "year": 2025,
+          "doi": "10.1021/acsnano.4c16875",
+          "sourceUrl": "https://doi.org/10.1021/acsnano.4c16875"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Functional Hydrogel Co‐Remolding Migration and Differentiation Microenvironment for Severe Spinal Cord Injury Repair",
+          "year": 2024,
+          "doi": "10.1002/adhm.202301662",
+          "sourceUrl": "https://doi.org/10.1002/adhm.202301662"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Cetuximab modified collagen scaffold directs neurogenesis of injury-activated endogenous neural stem cells for acute spinal cord injury repair",
+          "year": 2017,
+          "doi": "10.1016/j.biomaterials.2017.05.027",
+          "sourceUrl": "https://doi.org/10.1016/j.biomaterials.2017.05.027"
+        },
+        {
+          "evidenceId": "E5",
+          "title": "李星-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2538.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+      "lastUpdated": "2026-08-02",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/li-xing.md",
+      "initials": "李",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "脊髓损伤微环境、神经再生、内源神经干/前体细胞及功能生物支架。",
+            "evidenceIds": [
+              "E5"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "可能涉及水凝胶与纳米颗粒制备、释放动力学和材料表征。",
+            "evidenceIds": [
+              "E1",
+              "E2"
+            ]
+          },
+          {
+            "text": "可能涉及小胶质细胞、神经干细胞迁移分化及分子信号评价。",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E3"
+            ]
+          },
+          {
+            "text": "可能涉及啮齿动物脊髓损伤模型、组织学、神经环路与运动功能评估。",
+            "evidenceIds": [
+              "E3",
+              "E4"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "比较两类响应递送系统",
+            "evidenceIds": [
+              "E1",
+              "E2"
+            ]
+          },
+          {
+            "text": "追踪神经干细胞微环境证据",
+            "evidenceIds": [
+              "E3"
+            ]
+          },
+          {
+            "text": "复核抗体修饰胶原支架机制",
+            "evidenceIds": [
+              "E4"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "970ac5ae179aedf11ed9f1954599eef7c98645a84192cc29f1f0a56da8364a05"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "liu-jing",
+      "nameZh": "刘静",
+      "nameEn": "Jing Liu",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物化学与分子生物学系",
+      "position": "教授",
+      "publicRoles": [
+        "博士生导师"
+      ],
+      "summary": {
+        "text": "根据公开文献与官方主页合成，研究聚焦造血发育调控、多发性骨髓瘤（MM）增殖机制与耐药干预策略。重点探索 MM 单细胞异质性与新诊疗靶点、TRIB3/USP10/SSRP1 去泛素化稳定性调控、抗 BCMA 纳米光热干预，以及木犀草素抑制 TGF-β 克服硼替佐米耐药的分子通路。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "中南大学生命科学学院官方个人主页显示研究方向为造血发育调控、恶性肿瘤增殖与免疫调控、肿瘤耐药/免疫新分子及综合治疗策略。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "造血发育调控",
+          "explanation": "依据中南大学生命科学学院官方个人主页显示，研究方向包括造血发育调控基础机制。",
+          "undergraduateMeaning": "在官方主页公开发布范围内，有助于理解造血干/祖细胞发育与分化调控的基本生物学过程。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "term": "多发性骨髓瘤细胞异质性与诊疗靶点",
+          "explanation": "根据公开论文分析，利用单细胞转录组测序探究多发性骨髓瘤（MM）细胞及骨髓微环境细胞通讯的异质性，识别新型诊疗靶点。",
+          "undergraduateMeaning": "基于公开证据，有助于学习单细胞测序技术在揭示骨髓瘤微环境异质性及识别诊疗靶点中的应用。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "term": "TRIB3/USP10/SSRP1 轴向与肿瘤增殖机制",
+          "explanation": "基于文献证据推测，研究假激酶 TRIB3 通过招募去泛素化酶 USP10 稳定 SSRP1 蛋白，进而促进多发性骨髓瘤恶性进展的分子通路。",
+          "undergraduateMeaning": "在公开技术路线中，学习关键蛋白质修饰（去泛素化）如何调控肿瘤蛋白稳定性与肿瘤生长。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "term": "骨髓瘤耐药克服与纳米/小分子干预",
+          "explanation": "根据公开论文推测，探索抗 BCMA 仿生纳米导弹及木犀草素抑制 TGF-β 信号通路克服多发性骨髓瘤对硼替佐米耐药的干预策略。",
+          "undergraduateMeaning": "基于论文路线，学习如何利用纳米载体或天然小分子克服肿瘤化疗与靶向药物耐药性。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开文献推测，单细胞测序分析如何揭示多发性骨髓瘤骨髓微环境中的细胞通讯异常及新诊疗靶点？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "依据论文证据分析，假激酶 TRIB3 如何通过 USP10 介导的去泛素化作用稳定 SSRP1 促进骨髓瘤进展？",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "在公开研究路线中，抗 BCMA 纳米导弹与木犀草素分子分别如何通过调控 NF-κB 或 TGF-β 通路克服骨髓瘤耐药？",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "根据公开论文分析，可能包含多发性骨髓瘤（MM）细胞株培养及耐药株建立",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "依据文献实验记录，可能涉及单细胞转录组测序（scRNA-seq）及骨髓微环境细胞通讯生物信息学分析",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "根据论文证据推测，可能包括蛋白质去泛素化检测、Co-IP 免疫共沉淀及 Western blot 验证",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "在公开研究路线中，可能包含抗 BCMA 表面修饰仿生纳米导弹构建、光热疗法评价及小鼠异种移植模型",
+          "evidenceIds": [
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开文献推测，可能从单细胞测序或基因表达数据库中筛选骨髓瘤细胞异质性因子与诊疗靶点",
+          "evidenceIds": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "text": "在公开论文路线中，可能通过分子生物学实验验证 TRIB3/USP10 去泛素化稳定 SSRP1 的分子机制",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "根据论文试验设计，可能利用仿生纳米递送载体或木犀草素在体外与小鼠异种移植模型中评估抗骨髓瘤及耐药克服效果",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "多发性骨髓瘤分子文献整理与数据库检索",
+          "context": "协助收集骨髓瘤诊疗靶点、去泛素化调控及耐药克服的相关文献与数据",
+          "purpose": "熟悉生物信息学与骨髓瘤异质性分析流程",
+          "methods": [
+            "单细胞数据整理",
+            "通路富集分析",
+            "PubMed检索"
+          ],
+          "output": "结构化文献综述表格或数据分析图表",
+          "uncertaintyNote": "仅为基于公开技术栈推测的潜在学术训练方向，不代表实验室确定任务安排",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "task": "骨髓瘤耐药文献整理与分子通路图绘制",
+          "context": "协助检索 TGF-β、NF-κB 或泛素化调控通路的相关文献",
+          "purpose": "建立对骨髓瘤耐药克服与小分子干预机制的基本认知",
+          "methods": [
+            "靶向药敏数据记录",
+            "分子通路绘制",
+            "文献摘要整理"
+          ],
+          "output": "分子通路图解与文献笔记",
+          "uncertaintyNote": "仅为基于公开论文分析方法的抽象推测，具体安排须视导师与学生实际沟通",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "基于公开证据，可能需要生物化学、分子生物学及细胞生物学基础知识。",
+          "evidenceIds": [
+            "E1",
+            "E6"
+          ]
+        },
+        {
+          "text": "基于公开论文路线，阅读英文科研文献与掌握基础数据统计分析方法将有所帮助。",
+          "evidenceIds": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于公开文献，可能需要补充多发性骨髓瘤生物学、蛋白质去泛素化与纳米递送概念，建议从梳理代表性论文路线开始。",
+        "evidenceIds": [
+          "E1",
+          "E3"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "学习生物化学与细胞培养基础概念",
+            "阅读多发性骨髓瘤及肿瘤耐药机制代表性论文"
+          ],
+          "possibleOutputs": [
+            "分子通路示意图",
+            "文献阅读笔记"
+          ],
+          "uncertaintyNote": "为基于技术栈推测的通用成长框架，非具体承诺",
+          "evidenceIds": [
+            "E1",
+            "E6"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "参与组会文献讨论",
+            "协助整理表达数据与耐药靶点文献"
+          ],
+          "possibleOutputs": [
+            "数据整理表格",
+            "组会报告 PPT"
+          ],
+          "uncertaintyNote": "任务与进度取决于个人投入与实际课题需求",
+          "evidenceIds": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "tags": [
+        "单细胞测序",
+        "多发性骨髓瘤",
+        "去泛素化",
+        "肿瘤耐药"
+      ],
+      "categoryTags": [
+        "单细胞测序",
+        "多发性骨髓瘤",
+        "去泛素化",
+        "肿瘤耐药"
+      ],
+      "searchKeywords": [
+        "单细胞测序",
+        "多发性骨髓瘤",
+        "刘静",
+        "生物化学与分子生物学系",
+        "中南大学",
+        "BCMA",
+        "TRIB3"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Single-cell sequencing analysis of multiple myeloma heterogeneity and identification of new theranostic targets",
+          "year": 2024,
+          "doi": "10.1038/s41419-024-07027-4",
+          "sourceUrl": "https://doi.org/10.1038/s41419-024-07027-4"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "Anti-BCMA surface engineered biomimetic photothermal nanomissile enhances multiple myeloma cell apoptosis and overcomes the disturbance of NF-κB signaling in vivo",
+          "year": 2023,
+          "doi": "10.1016/j.biomaterials.2023.122096",
+          "sourceUrl": "https://doi.org/10.1016/j.biomaterials.2023.122096"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Pseudokinase TRIB3 stabilizes SSRP1 via USP10-mediated deubiquitination to promote multiple myeloma progression",
+          "year": 2025,
+          "doi": "10.1038/s41388-024-03245-4",
+          "sourceUrl": "https://doi.org/10.1038/s41388-024-03245-4"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Luteolin inhibits the TGF-β signaling pathway to overcome bortezomib resistance in multiple myeloma",
+          "year": 2023,
+          "doi": "10.1016/j.canlet.2022.216019",
+          "sourceUrl": "https://doi.org/10.1016/j.canlet.2022.216019"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "中南大学生命科学学院刘静教授个人主页",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2544.htm"
+        }
+      ],
+      "boundaryStatement": "本页面仅包含基于中南大学生命科学学院官方主页及正式出版论文合成的学术信息。不包含任何导师性格、实验室氛围、具体名额、经费、招生承诺或毕业保证。具体的科研任务与指导安排需由学生与导师通过官方渠道直接沟通确定。",
+      "lastUpdated": "2026-08-04",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/liu-jing.md",
+      "initials": "刘",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "中南大学生命科学学院官方个人主页显示研究方向为造血发育调控、恶性肿瘤增殖与免疫调控、肿瘤耐药/免疫新分子及综合治疗策略。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "根据公开论文分析，可能包含多发性骨髓瘤（MM）细胞株培养及耐药株建立",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "依据文献实验记录，可能涉及单细胞转录组测序（scRNA-seq）及骨髓微环境细胞通讯生物信息学分析",
+            "evidenceIds": [
+              "E1"
+            ]
+          },
+          {
+            "text": "根据论文证据推测，可能包括蛋白质去泛素化检测、Co-IP 免疫共沉淀及 Western blot 验证",
+            "evidenceIds": [
+              "E3"
+            ]
+          },
+          {
+            "text": "在公开研究路线中，可能包含抗 BCMA 表面修饰仿生纳米导弹构建、光热疗法评价及小鼠异种移植模型",
+            "evidenceIds": [
+              "E2",
+              "E3",
+              "E4"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "多发性骨髓瘤分子文献整理与数据库检索",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "骨髓瘤耐药文献整理与分子通路图绘制",
+            "evidenceIds": [
+              "E2",
+              "E4"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "48bf7fc4658febe2b73a932a43a8680fd7773e78c7cba83cddb12bf77ecdebb4"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "su-haomiao",
+      "nameZh": "苏浩淼",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物化学与分子生物学系",
+      "position": "特聘副教授",
+      "publicRoles": [
+        "硕士生导师"
+      ],
+      "summary": {
+        "text": "官方方向聚焦非经典翻译、未注解小蛋白和多组学发现；基于已采用论文，可进一步看到微蛋白EMBOW功能、G-四链体相关蛋白识别、DNA分子逻辑与活细胞mRNA成像等研究。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "非经典翻译与未注解小蛋白生物学；内部开放阅读框的表达调控、翻译机制与功能；多组学整合发现和验证新编码事件。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "未注解小蛋白与非经典编码事件",
+          "explanation": "基于公开论文，可把这一方向理解为发现传统注释可能遗漏的小蛋白，并研究它们对蛋白互作、染色质和细胞分裂功能的影响。",
+          "undergraduateMeaning": "本科阶段可能先从开放阅读框注释、表达证据和功能结果的对应关系入手。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "term": "核酸结构与结合蛋白识别",
+          "explanation": "依据公开论文，该主题可能利用光活性G-四链体配体在细胞环境中识别多种相关蛋白，并考察序列容忍度。",
+          "undergraduateMeaning": "适合学习化学探针、富集鉴定和特异性边界。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "term": "DNA分子计算与活细胞RNA成像",
+          "explanation": "基于公开论文，可关注链置换合成构建DNA算术与逻辑系统，以及Pepper适配体介导的内源mRNA识别和成像。",
+          "undergraduateMeaning": "需要分别理解体外核酸逻辑与活细胞成像的设计约束。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开研究，未注解微蛋白EMBOW可能如何改变WDR5互作组、染色质相关功能和有丝分裂过程？",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "依据公开论文，光活性G-四链体配体可能怎样识别细胞中的相关蛋白，同时容纳不同核酸序列？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "基于公开研究，链置换合成可能如何提高DNA算术与逻辑系统的效率和可集成性？",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "依据公开论文，惰性Pepper适配体可能怎样实现活细胞中内源mRNA的识别与成像？",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "可能涉及微蛋白发现、蛋白互作组分析、染色质功能和有丝分裂表型验证。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "可能涉及光活性核酸配体、细胞内靶标捕获以及相关蛋白鉴定。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "可能涉及DNA链置换反应、分子逻辑电路设计与性能比较。",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "可能涉及RNA适配体设计、内源mRNA识别和活细胞荧光成像。",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开论文，流程可能先从候选核酸结构、开放阅读框或分子电路的设计与筛选开始。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "随后可能通过捕获鉴定、互作分析、表达检测、成像或反应性能测试获得证据。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "最后可围绕特异性、序列容忍度、细胞功能或可集成性设置对照并界定结论。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "整理未注解微蛋白的证据链",
+          "context": "基于EMBOW论文，可能拆解候选发现、表达证据、互作变化和功能表型。",
+          "purpose": "理解新编码事件从发现到功能验证的多个证据层。",
+          "methods": [
+            "归类互作与染色质读出",
+            "核对功能实验",
+            "整理开放阅读框信息"
+          ],
+          "output": "微蛋白证据流程图",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "task": "比较两类核酸识别工具",
+          "context": "依据G-四链体配体和Pepper适配体论文，可能比较化学探针捕获与RNA成像的设计目标。",
+          "purpose": "区分蛋白鉴定和活细胞核酸成像的输入、读出与限制。",
+          "methods": [
+            "比较检测对象",
+            "记录特异性控制",
+            "提取探针组成"
+          ],
+          "output": "核酸工具比较表",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E4"
+          ]
+        },
+        {
+          "task": "复核DNA逻辑系统的反应结构",
+          "context": "基于链置换合成论文，可能整理输入、反应模块、逻辑输出和效率评价。",
+          "purpose": "建立核酸分子计算中的模块化和误差意识。",
+          "methods": [
+            "比较性能指标",
+            "标注逻辑门",
+            "绘制反应网络"
+          ],
+          "output": "分子逻辑示意图",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E2"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "建议准备分子生物学、核酸结构、基因表达与蛋白互作的基础概念。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能需要理解开放阅读框、翻译、染色质和有丝分裂等术语。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "若进入核酸工具方向，建议补充链置换反应、荧光成像和基础动力学知识。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于这些公开论文，入门成本可能来自非经典编码注释、蛋白互作与染色质功能，以及核酸化学、分子计算和活细胞成像方法的跨领域衔接。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "认识开放阅读框和微蛋白",
+            "学习核酸结构与翻译基础",
+            "阅读分子探针与链置换示意图"
+          ],
+          "possibleOutputs": [
+            "机制图注释",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "复核一种核酸工具的对照",
+            "绘制一个分子逻辑模块",
+            "整理一个微蛋白证据链"
+          ],
+          "possibleOutputs": [
+            "反应流程图",
+            "工具比较表",
+            "证据表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "加入特异性与可重复性检查",
+            "在明确边界下比较一种新编码事件或核酸识别方案"
+          ],
+          "possibleOutputs": [
+            "带限制说明的报告",
+            "小型验证方案"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "tags": [
+        "非经典翻译",
+        "核酸工具",
+        "生物化学与分子生物学",
+        "小蛋白"
+      ],
+      "categoryTags": [
+        "非经典翻译",
+        "核酸工具",
+        "生物化学与分子生物学",
+        "小蛋白"
+      ],
+      "searchKeywords": [
+        "DNA logic system",
+        "DNA strand displacement",
+        "EMBOW",
+        "G-quadruplex",
+        "internal open reading frame",
+        "microprotein",
+        "noncanonical translation",
+        "Pepper aptamer",
+        "photoactive ligand",
+        "WDR5"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Photoactive G-Quadruplex Ligand Identifies Multiple G-Quadruplex-Related Proteins with Extensive Sequence Tolerance in the Cellular Environment",
+          "year": 2021,
+          "doi": "10.1021/jacs.0c10792",
+          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33471508/"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "High-efficiency and integrable DNA arithmetic and logic system based on strand displacement synthesis",
+          "year": 2019,
+          "doi": "10.1038/s41467-019-13310-2",
+          "sourceUrl": "https://www.nature.com/articles/s41467-019-13310-2"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Unannotated microprotein EMBOW regulates the interactome and chromatin and mitotic functions of WDR5",
+          "year": 2023,
+          "doi": "10.1016/j.celrep.2023.113145",
+          "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S2211124723011025"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Inert Pepper aptamer-mediated endogenous mRNA recognition and imaging in living cells",
+          "year": 2022,
+          "doi": "10.1093/nar/gkac368",
+          "sourceUrl": "https://academic.oup.com/nar/article/50/14/e84/6586873"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "苏浩淼-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1138/3051.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+      "lastUpdated": "2026-08-02",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/su-haomiao.md",
+      "initials": "苏",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "非经典翻译与未注解小蛋白生物学；内部开放阅读框的表达调控、翻译机制与功能；多组学整合发现和验证新编码事件。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "可能涉及微蛋白发现、蛋白互作组分析、染色质功能和有丝分裂表型验证。",
+            "evidenceIds": [
+              "E3"
+            ]
+          },
+          {
+            "text": "可能涉及光活性核酸配体、细胞内靶标捕获以及相关蛋白鉴定。",
+            "evidenceIds": [
+              "E1"
+            ]
+          },
+          {
+            "text": "可能涉及DNA链置换反应、分子逻辑电路设计与性能比较。",
+            "evidenceIds": [
+              "E2"
+            ]
+          },
+          {
+            "text": "可能涉及RNA适配体设计、内源mRNA识别和活细胞荧光成像。",
+            "evidenceIds": [
+              "E4"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "整理未注解微蛋白的证据链",
+            "evidenceIds": [
+              "E3"
+            ]
+          },
+          {
+            "text": "比较两类核酸识别工具",
+            "evidenceIds": [
+              "E1",
+              "E4"
+            ]
+          },
+          {
+            "text": "复核DNA逻辑系统的反应结构",
+            "evidenceIds": [
+              "E2"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "645244c8eab3624e2319a69bb0ba851ab4e1106dd1ad2759e1937732565ec281"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "tan-jieqiong",
+      "nameZh": "谭洁琼",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院遗传学系",
+      "position": "教授",
+      "publicRoles": [
+        "博士生导师"
+      ],
+      "summary": {
+        "text": "官方方向聚焦神经退行性疾病中的异常蛋白聚集、溶酶体清除及细胞器功能；基于已采用论文，还可看到CRISPR筛选、PSAP人群变异、ATP13A2相关融合机制和甲羟戊酸激酶疾病变异等证据。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "神经退行性疾病中蛋白质异常聚集机制；溶酶体清除异常聚集蛋白与药物发现；线粒体、溶酶体功能和神经疾病机制。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "异常蛋白聚集与溶酶体清除",
+          "explanation": "基于公开论文，可把这一方向理解为寻找影响α-突触核蛋白寡聚体降解的基因与细胞通路，并研究内体—溶酶体系统的作用。",
+          "undergraduateMeaning": "本科阶段可能先从蛋白稳态、细胞器功能和筛选结果的证据链入手。",
+          "evidenceIds": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "term": "神经退行性疾病的遗传与细胞机制",
+          "explanation": "依据公开论文，该主题可能同时关注人群中的PSAP变异线索，以及ATP13A2参与自噬体—溶酶体融合的细胞机制。",
+          "undergraduateMeaning": "需要区分人群关联证据与细胞机制证据，避免相互替代。",
+          "evidenceIds": [
+            "E2",
+            "E3"
+          ]
+        },
+        {
+          "term": "遗传变异与疾病表型",
+          "explanation": "基于已采用论文，还可看到甲羟戊酸激酶新突变与播散性浅表性光化性汗孔角化症的遗传研究案例。",
+          "undergraduateMeaning": "可用于学习变异证据、疾病表型和因果措辞之间的边界。",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开研究，哪些基因可能影响α-突触核蛋白寡聚体的降解，TSPAN3相关内体—溶酶体通路可能处于什么位置？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "依据公开论文，ATP13A2可能如何促进HDAC6募集并影响自噬体—溶酶体融合？",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "text": "基于大队列研究，PSAP变异可能与神经退行性疾病风险呈现怎样的关联，需要哪些复核？",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "依据公开病例与遗传证据，甲羟戊酸激酶新突变可能怎样与相应皮肤病表型联系？",
+          "evidenceIds": [
+            "E4"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "可能涉及全基因组CRISPR-Cas9敲除筛选及候选基因验证。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "可能涉及蛋白聚集、内体—溶酶体运输、自噬体—溶酶体融合和细胞成像指标。",
+          "evidenceIds": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "text": "可能涉及大样本人群变异分析、基因型—表型比较与遗传证据解释。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开论文，细胞机制路线可能先用无偏筛选获得候选基因，再进行通路与表型验证。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "溶酶体机制研究随后可能比较蛋白降解、细胞器定位和融合过程中的关键读出。",
+          "evidenceIds": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "text": "遗传研究路线可能从变异发现与质量控制开始，再比较人群或家系表型并限制因果推断。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "整理CRISPR筛选到机制验证的证据链",
+          "context": "基于TSPAN3论文，可能拆解筛选命中、候选验证和蛋白降解表型之间的关系。",
+          "purpose": "理解无偏筛选结果如何进入机制实验。",
+          "methods": [
+            "记录关键对照",
+            "提取筛选步骤",
+            "整理候选验证指标"
+          ],
+          "output": "筛选—验证流程图",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "task": "比较两条溶酶体相关机制",
+          "context": "依据TSPAN3和ATP13A2论文，可能比较内体—溶酶体通路与自噬体—溶酶体融合的不同读出。",
+          "purpose": "建立细胞器过程、蛋白降解和疾病机制的对应关系。",
+          "methods": [
+            "比较实验表型",
+            "标注直接与间接证据",
+            "整理蛋白与细胞器节点"
+          ],
+          "output": "机制比较表",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "task": "复核遗传变异研究的结论边界",
+          "context": "基于PSAP队列和甲羟戊酸激酶突变论文，可能比较人群研究与疾病变异报告的证据结构。",
+          "purpose": "练习区分关联、分离证据与功能解释。",
+          "methods": [
+            "比较表型定义",
+            "记录样本与变异类型",
+            "检查结论措辞"
+          ],
+          "output": "遗传证据核对卡片",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "建议准备细胞生物学、遗传学、蛋白稳态和神经生物学的基础概念。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        },
+        {
+          "text": "可能需要理解CRISPR筛选、溶酶体、自噬和细胞成像的基本读出。",
+          "evidenceIds": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "text": "若处理遗传证据，建议掌握变异注释、队列比较和基础统计。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于这些公开论文，入门成本可能来自蛋白聚集与细胞器机制、CRISPR筛选以及人群遗传证据三类方法语言的衔接。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "认识常见遗传变异术语",
+            "学习蛋白稳态与溶酶体基础",
+            "阅读细胞机制图"
+          ],
+          "possibleOutputs": [
+            "机制图注释",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "比较一组遗传结论",
+            "复核一条候选基因证据链",
+            "整理一种细胞器表型"
+          ],
+          "possibleOutputs": [
+            "变异摘要",
+            "实验读出清单",
+            "证据表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "设计可证伪的比较方案",
+            "在明确边界下提出一个蛋白清除或变异解释问题"
+          ],
+          "possibleOutputs": [
+            "带限制说明的分析报告",
+            "小型研究方案"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "tags": [
+        "蛋白质稳态",
+        "溶酶体",
+        "神经退行性疾病",
+        "遗传学"
+      ],
+      "categoryTags": [
+        "蛋白质稳态",
+        "溶酶体",
+        "神经退行性疾病",
+        "遗传学"
+      ],
+      "searchKeywords": [
+        "alpha-synuclein oligomers",
+        "ATP13A2",
+        "autophagosome-lysosome fusion",
+        "CRISPR-Cas9 screening",
+        "endo-lysosome",
+        "HDAC6",
+        "mevalonate kinase",
+        "protein aggregation",
+        "PSAP variants",
+        "TSPAN3"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Genome-wide CRISPR-Cas9 Knockout Screening Reveals a TSPAN3-mediated Endo-lysosome Pathway Regulating the Degradation of alpha-Synuclein Oligomers",
+          "year": 2023,
+          "doi": "10.1007/s12035-023-03495-5",
+          "sourceUrl": "https://doi.org/10.1007/s12035-023-03495-5"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "PSAP variants in Parkinson's disease: a large cohort study in Chinese mainland population",
+          "year": 2021,
+          "doi": "10.1093/brain/awaa391",
+          "sourceUrl": "https://doi.org/10.1093/brain/awaa391"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "ATP13A2 facilitates HDAC6 recruitment to lysosome to promote autophagosome-lysosome fusion",
+          "year": 2019,
+          "doi": "10.1083/jcb.201804165",
+          "sourceUrl": "https://doi.org/10.1083/jcb.201804165"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Novel mutations in mevalonate kinase cause disseminated superficial actinic porokeratosis",
+          "year": 2019,
+          "doi": "10.1111/bjd.17596",
+          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "谭洁琼-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2562.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+      "lastUpdated": "2026-08-02",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/tan-jieqiong.md",
+      "initials": "谭",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "神经退行性疾病中蛋白质异常聚集机制；溶酶体清除异常聚集蛋白与药物发现；线粒体、溶酶体功能和神经疾病机制。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "可能涉及全基因组CRISPR-Cas9敲除筛选及候选基因验证。",
+            "evidenceIds": [
+              "E1"
+            ]
+          },
+          {
+            "text": "可能涉及蛋白聚集、内体—溶酶体运输、自噬体—溶酶体融合和细胞成像指标。",
+            "evidenceIds": [
+              "E1",
+              "E3"
+            ]
+          },
+          {
+            "text": "可能涉及大样本人群变异分析、基因型—表型比较与遗传证据解释。",
+            "evidenceIds": [
+              "E2",
+              "E4"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "整理CRISPR筛选到机制验证的证据链",
+            "evidenceIds": [
+              "E1"
+            ]
+          },
+          {
+            "text": "比较两条溶酶体相关机制",
+            "evidenceIds": [
+              "E1",
+              "E3"
+            ]
+          },
+          {
+            "text": "复核遗传变异研究的结论边界",
+            "evidenceIds": [
+              "E2",
+              "E4"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "dd515f869409d4916f86482596b9eaa62697969520c7975e97ee572da47459b1"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "wang-shixiang",
+      "nameZh": "王诗翔",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物医学信息学系",
+      "position": "特聘副教授",
+      "publicRoles": [
+        "硕士生导师"
+      ],
+      "summary": {
+        "text": "公开证据显示其工作集中于肿瘤生物信息学与组学数据方法；基于已采用论文，可进一步理解为围绕大规模数据整合、基因组结构特征识别、免疫治疗相关资源和交互式分析工具展开。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "肿瘤（免疫治疗）组学大数据资源整合与数据挖掘；肿瘤生物信息学算法与工具研究与应用；肿瘤基因组学、多组学整合、单细胞组学与机器学习。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "肿瘤组学大数据与算法工具",
+          "explanation": "基于公开论文，可把这一方向理解为整合大规模肿瘤组学数据，并开发可复用的分析方法或软件工具。",
+          "undergraduateMeaning": "本科阶段可能先从理解数据结构、复现公开分析和使用现成工具开始。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "term": "肿瘤免疫治疗中的环状RNA资源",
+          "explanation": "依据公开论文，该主题可能围绕汇集癌症免疫治疗相关的环状RNA信息并支持查询与比较。",
+          "undergraduateMeaning": "适合关注数据库字段、证据注释和可重复检索流程。",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "term": "肿瘤基因组结构变化",
+          "explanation": "基于公开论文，可关注染色体外DNA和拷贝数特征如何被计算识别，以及它们与癌症临床特征的关联。",
+          "undergraduateMeaning": "需要把基因组数据处理、统计建模与结果边界区分开。",
+          "evidenceIds": [
+            "E1",
+            "E5"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开研究，大规模队列中可能如何识别染色体外DNA，并评估其与癌症临床特征的关系？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "依据公开论文，如何把癌症免疫治疗相关环状RNA信息组织成可检索、可比较的资源？",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "基于已发表工具论文，多组学数据可能如何通过交互式分析支持个体化肿瘤研究问题？",
+          "evidenceIds": [
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "依据公开研究，拷贝数特征可能怎样用于区分突变过程并分析临床结局？",
+          "evidenceIds": [
+            "E5"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "可能涉及面向大规模队列的机器学习识别与临床关联分析。",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "可能涉及环状RNA数据资源整合、注释、检索与比较。",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "text": "可能使用R语言工具和UCSC Xena数据开展交互式多组学分析。",
+          "evidenceIds": [
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能涉及拷贝数特征提取、模式比较与结局关联分析。",
+          "evidenceIds": [
+            "E5"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开论文，流程可能从队列或公共组学数据的整理与质量核查开始。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        },
+        {
+          "text": "随后可按研究问题进行特征识别、资源注释或交互式计算分析。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        },
+        {
+          "text": "最后可能通过独立数据比较、临床变量关联或可复现报告检查结论边界。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E5"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "复现一个公开肿瘤组学分析示例",
+          "context": "基于UCSC Xena相关公开工具论文，可能选择小规模公开数据完成可重复分析。",
+          "purpose": "理解数据字段、分析步骤与结果可视化之间的关系。",
+          "methods": [
+            "公开数据字段核对",
+            "脚本运行与图表复核",
+            "R环境准备"
+          ],
+          "output": "带说明的复现笔记或小型分析报告",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "task": "整理环状RNA资源字段与证据",
+          "context": "依据TCCIA公开论文，可能围绕资源中的数据类型、注释字段和查询逻辑做结构化整理。",
+          "purpose": "练习数据库阅读、字段字典和来源追踪。",
+          "methods": [
+            "抽样核对来源",
+            "阅读资源说明",
+            "整理字段含义"
+          ],
+          "output": "字段说明表或查询示例",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E2"
+          ]
+        },
+        {
+          "task": "比较基因组结构特征的分析思路",
+          "context": "基于ecDNA和拷贝数特征论文，可能对不同特征定义、计算输入和临床关联方式做文献级比较。",
+          "purpose": "建立从基因组特征到统计结论的证据链意识。",
+          "methods": [
+            "比较输入输出",
+            "记录适用边界",
+            "提取方法要点"
+          ],
+          "output": "方法比较表或流程图",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E5"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "建议准备R或Python中的一种，并具备表格数据处理和基础可视化能力。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        },
+        {
+          "text": "可能需要理解基因组、转录组、拷贝数和环状RNA等基本概念。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E5"
+          ]
+        },
+        {
+          "text": "建议掌握基础统计、可重复分析记录和英文论文方法部分的阅读方式。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于这些公开论文，入门成本可能主要来自肿瘤组学概念、异构数据格式、R/Python分析环境以及统计结果的谨慎解释。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "熟悉R或Python数据处理",
+            "学习肿瘤组学基本概念",
+            "阅读工具论文的输入输出说明"
+          ],
+          "possibleOutputs": [
+            "可运行的基础示例",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "复现一项公开数据分析",
+            "核对数据字段与证据来源",
+            "记录参数和失败条件"
+          ],
+          "possibleOutputs": [
+            "复现脚本",
+            "简短结果说明",
+            "字段核对表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "加入可重复性和敏感性检查",
+            "在明确边界下比较一种特征或分析方法"
+          ],
+          "possibleOutputs": [
+            "带限制说明的报告",
+            "小型分析模块"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E5"
+          ]
+        }
+      ],
+      "tags": [
+        "计算生物学",
+        "生物医学信息学",
+        "数据工具",
+        "肿瘤组学"
+      ],
+      "categoryTags": [
+        "计算生物学",
+        "生物医学信息学",
+        "数据工具",
+        "肿瘤组学"
+      ],
+      "searchKeywords": [
+        "多组学整合",
+        "机器学习",
+        "肿瘤生物信息学",
+        "肿瘤组学",
+        "cancer immunotherapy",
+        "circRNA",
+        "copy number signature",
+        "ecDNA",
+        "extrachromosomal DNA",
+        "UCSC Xena"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Machine learning-based extrachromosomal DNA identification in large-scale cohorts reveals its clinical implications in cancer",
+          "year": 2024,
+          "doi": "10.1038/s41467-024-45479-6",
+          "sourceUrl": "https://doi.org/10.1038/s41467-024-45479-6"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "TCCIA: a comprehensive resource for exploring CircRNA in cancer immunotherapy",
+          "year": 2024,
+          "doi": "10.1136/jitc-2023-008040",
+          "sourceUrl": "https://doi.org/10.1136/jitc-2023-008040"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny",
+          "year": 2024,
+          "doi": "10.1038/s42003-024-06891-2",
+          "sourceUrl": "https://www.nature.com/articles/s42003-024-06891-2"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "UCSCXenaShiny: an R/CRAN package for interactive analysis of UCSC Xena data",
+          "year": 2022,
+          "doi": "10.1093/bioinformatics/btab561",
+          "sourceUrl": "https://doi.org/10.1093/bioinformatics/btab561"
+        },
+        {
+          "evidenceId": "E5",
+          "title": "Copy number signature analysis tool and its application in prostate cancer reveals distinct mutational processes and clinical outcomes",
+          "year": 2021,
+          "doi": "10.1371/journal.pgen.1009557",
+          "sourceUrl": "https://doi.org/10.1371/journal.pgen.1009557"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "王诗翔-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2493.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+      "lastUpdated": "2026-08-02",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/wang-shixiang.md",
+      "initials": "王",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "肿瘤（免疫治疗）组学大数据资源整合与数据挖掘；肿瘤生物信息学算法与工具研究与应用；肿瘤基因组学、多组学整合、单细胞组学与机器学习。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "可能涉及面向大规模队列的机器学习识别与临床关联分析。",
+            "evidenceIds": [
+              "E1"
+            ]
+          },
+          {
+            "text": "可能涉及环状RNA数据资源整合、注释、检索与比较。",
+            "evidenceIds": [
+              "E2"
+            ]
+          },
+          {
+            "text": "可能使用R语言工具和UCSC Xena数据开展交互式多组学分析。",
+            "evidenceIds": [
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "可能涉及拷贝数特征提取、模式比较与结局关联分析。",
+            "evidenceIds": [
+              "E5"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "复现一个公开肿瘤组学分析示例",
+            "evidenceIds": [
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "整理环状RNA资源字段与证据",
+            "evidenceIds": [
+              "E2"
+            ]
+          },
+          {
+            "text": "比较基因组结构特征的分析思路",
+            "evidenceIds": [
+              "E1",
+              "E5"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "0e34e34b2995f6f7be27bc27f43ef4d85d36cab4a544f69dc2a7d7b4be8f1f7e"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "xiang-rong",
+      "nameZh": "项荣",
+      "nameEn": "Rong Xiang",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院细胞生物学系",
+      "position": "教授",
+      "publicRoles": [
+        "博士生导师"
+      ],
+      "summary": {
+        "text": "官方主页显示，项荣为中南大学生命科学学院细胞生物学系教授、博士生导师，研究聚焦疾病相关细胞器、信号、物质运输和代谢异常，以及心血管疾病机制与标志物。基于已采用论文，可进一步理解其公开研究线索包括 RTN3 与脂质代谢、线粒体功能、鞘脂信号和血压调控。",
+        "evidenceIds": [
+          "E6",
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "研究病原微生物感染、肿瘤、原发性多囊肾等疾病发生过程中，相关细胞器、细胞信号转导、细胞物质运输和细胞代谢等细胞结构与功能异常。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "text": "运用新一代测序、色谱、细胞免疫等技术，从基因、分子、细胞、模式动物及人体层面研究动脉粥样硬化、高血脂、心肌病等心血管相关疾病机制，并结合临床筛选早期检测诊断分子和预后标志物。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "疾病中的细胞器与细胞功能异常",
+          "explanation": "依据官方主页，可把这一方向理解为研究细胞器、信号、物质运输和代谢变化如何与感染、肿瘤或肾脏疾病相关。",
+          "undergraduateMeaning": "本科生可先从梳理“疾病—细胞结构—通路—表型”的公开证据链开始。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "term": "心血管疾病机制与标志物",
+          "explanation": "依据官方主页，研究可能把测序、色谱和细胞免疫等技术连接到高血脂、动脉粥样硬化或心肌病机制及临床标志物筛选。",
+          "undergraduateMeaning": "需要区分机制实验、临床样本证据和标志物关联，不能把关联直接写成诊断结论。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "term": "RTN3相关代谢与血管机制",
+          "explanation": "基于已采用论文，可进一步理解为研究 RTN3 如何关联脂质代谢、线粒体功能、鞘脂信号和血压调控。",
+          "undergraduateMeaning": "可能涉及公开数据、患者样本、细胞、动物模型和分子通路的多层证据比较。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开论文，RTN3 与 HSPA5 的相互作用可能如何影响脂滴、甘油三酯积累及肥胖表型？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "依据公开论文，RTN3 相关线粒体功能变化可能如何连接脂质处理与非酒精性脂肪性肝病？",
+          "evidenceIds": [
+            "E2",
+            "E3"
+          ]
+        },
+        {
+          "text": "基于已采用论文，RTN3、CERS2 与鞘氨醇-1-磷酸信号可能如何参与血压调控？",
+          "evidenceIds": [
+            "E4"
+          ]
+        },
+        {
+          "text": "依据公开 Research Highlight，GCGR 作为慢性肾病潜在靶点的证据边界和待验证问题是什么？",
+          "evidenceIds": [
+            "E5"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "官方主页列出新一代测序、色谱和细胞免疫等技术，并说明研究跨越基因、分子、细胞、模式动物及人体层面。",
+          "evidenceIds": [
+            "E6"
+          ]
+        },
+        {
+          "text": "基于已采用论文，可能涉及公开数据分析、患者或队列样本比较、转基因/基因缺失动物模型、细胞培养和分子互作验证。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "依据公开论文，可能使用表达检测、脂质或代谢相关读出、单细胞转录组分析、蛋白互作与通路验证；具体项目方法不能由论文反推。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开证据，研究可能先从疾病表型、临床样本或公开数据中提出候选细胞过程与分子问题。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "随后可能结合细胞和动物模型、表达与代谢读出、分子互作或通路干预来检验机制。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "最后可能把多层结果与人体证据、疾病表型或潜在标志物联系起来，并明确相关性与因果解释的边界。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "整理 RTN3 疾病机制证据矩阵",
+          "context": "基于已采用公开论文，比较 RTN3 在脂质代谢、肝脏、血管和肾脏相关问题中的证据",
+          "purpose": "区分共同分子线索、不同模型与结论边界",
+          "methods": [
+            "通路和表型映射",
+            "文献检索与结构化摘录",
+            "证据等级标注"
+          ],
+          "output": "可复核的疾病—模型—通路证据表",
+          "uncertaintyNote": "仅为基于公开证据推导的可能任务，不代表实验室真实分工、当前项目、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        },
+        {
+          "task": "复现公开图表或数据处理逻辑",
+          "context": "依据已采用论文中的公开数据、组学或队列分析线索，复核变量、分组与图表逻辑",
+          "purpose": "理解从原始数据到机制或关联结论的分析边界",
+          "methods": [
+            "分析步骤记录",
+            "公开数据整理",
+            "基础统计与可视化"
+          ],
+          "output": "可复现图表、脚本或方法笔记",
+          "uncertaintyNote": "公开论文不能证明实验室会提供相同数据、软件、指导或本科生任务。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "task": "在成熟方案下协助单一实验读出",
+          "context": "基于公开论文的细胞和分子实验技术栈，在明确边界下理解单一指标如何支持机制判断",
+          "purpose": "训练实验记录、对照意识和结果边界表达",
+          "methods": [
+            "表达或代谢读出核验",
+            "对照与重复检查",
+            "实验记录整理"
+          ],
+          "output": "规范记录、质控表或单一指标结果摘要",
+          "uncertaintyNote": "具体 protocol、准入、安全培训、样本资源和指导方式均需导师或实验室另行确认。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "可能需要细胞生物学、分子生物学、生理与代谢基础，以及英文论文阅读和结构化记录能力。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "text": "若参与数据方向，可能需要基础统计、表格处理或脚本复现；若参与实验方向，则需先完成相应安全和技术训练。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "公开技术栈跨越临床或人体证据、细胞与动物模型、分子实验和数据分析，学习成本取决于实际任务边界，不能据论文给出固定时长。",
+        "evidenceIds": [
+          "E1",
+          "E3",
+          "E4",
+          "E6"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "建立细胞器、代谢、心血管疾病与 RTN3 的概念词表",
+            "练习证据边界标注",
+            "阅读官方研究方向和代表论文摘要"
+          ],
+          "possibleOutputs": [
+            "术语表",
+            "文献笔记",
+            "小型证据矩阵"
+          ],
+          "uncertaintyNote": "通用学习场景，不代表导师官方培养方案或时间表。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E6"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "复核一个公开数据图表",
+            "在成熟方案下辅助一个明确读出",
+            "整理一个通路的多篇证据"
+          ],
+          "possibleOutputs": [
+            "复现图表",
+            "规范实验记录",
+            "结构化证据表"
+          ],
+          "uncertaintyNote": "是否存在相关数据、实验条件和指导资源必须另行确认。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "在已有数据或明确实验边界下完成一个小型复现或证据整合子模块"
+          ],
+          "possibleOutputs": [
+            "阶段性研究备忘录",
+            "可复现分析记录"
+          ],
+          "uncertaintyNote": "公开证据不能证明本科生会获得独立项目、论文、推荐或其他成果。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4",
+            "E5"
+          ]
+        }
+      ],
+      "tags": [
+        "代谢与心血管",
+        "疾病机制",
+        "细胞生物学",
+        "RTN3"
+      ],
+      "categoryTags": [
+        "代谢与心血管",
+        "疾病机制",
+        "细胞生物学",
+        "RTN3"
+      ],
+      "searchKeywords": [
+        "高血脂",
+        "慢性肾病",
+        "细胞器",
+        "细胞物质运输",
+        "细胞信号转导",
+        "线粒体功能",
+        "项荣",
+        "心血管疾病",
+        "血压",
+        "脂质代谢",
+        "Rong Xiang",
+        "RTN3"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Increased Reticulon 3 (RTN3) Leads to Obesity and Hypertriglyceridemia by Interacting With Heat Shock Protein Family A (Hsp70) Member 5 (HSPA5)",
+          "year": 2018,
+          "doi": "10.1161/CIRCULATIONAHA.117.030718",
+          "sourceUrl": "https://doi.org/10.1161/CIRCULATIONAHA.117.030718"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "Mitochondrial dysfunction in lipid processing and gastrointestinal disorders",
+          "year": 2024,
+          "doi": "10.1016/j.tem.2024.02.009",
+          "sourceUrl": "https://doi.org/10.1016/j.tem.2024.02.009"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Increased RTN3 phenocopies nonalcoholic fatty liver disease by inhibiting the AMPK-IDH2 pathway",
+          "year": 2023,
+          "doi": "10.1002/mco2.226",
+          "sourceUrl": "https://doi.org/10.1002/mco2.226"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Reticulon 3 regulates sphingosine-1-phosphate synthesis in endothelial cells to control blood pressure",
+          "year": 2024,
+          "doi": "10.1002/mco2.480",
+          "sourceUrl": "https://doi.org/10.1002/mco2.480"
+        },
+        {
+          "evidenceId": "E5",
+          "title": "GCGR: novel potential therapeutic target for chronic kidney disease",
+          "year": 2024,
+          "doi": "10.1007/s11427-024-2576-x",
+          "sourceUrl": "https://doi.org/10.1007/s11427-024-2576-x"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "项荣-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2515.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自中南大学生命科学学院官方主页；AI整理仅依据本导师已采用的正式出版物。不展示基金、实验室氛围、导师管理风格、当前名额、招募承诺、毕业或论文保证，也不代表真实本科生分工。",
+      "lastUpdated": "2026-08-03",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/xiang-rong.md",
+      "initials": "项",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "研究病原微生物感染、肿瘤、原发性多囊肾等疾病发生过程中，相关细胞器、细胞信号转导、细胞物质运输和细胞代谢等细胞结构与功能异常。",
+            "evidenceIds": [
+              "E6"
+            ]
+          },
+          {
+            "text": "运用新一代测序、色谱、细胞免疫等技术，从基因、分子、细胞、模式动物及人体层面研究动脉粥样硬化、高血脂、心肌病等心血管相关疾病机制，并结合临床筛选早期检测诊断分子和预后标志物。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "官方主页列出新一代测序、色谱和细胞免疫等技术，并说明研究跨越基因、分子、细胞、模式动物及人体层面。",
+            "evidenceIds": [
+              "E6"
+            ]
+          },
+          {
+            "text": "基于已采用论文，可能涉及公开数据分析、患者或队列样本比较、转基因/基因缺失动物模型、细胞培养和分子互作验证。",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "依据公开论文，可能使用表达检测、脂质或代谢相关读出、单细胞转录组分析、蛋白互作与通路验证；具体项目方法不能由论文反推。",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "整理 RTN3 疾病机制证据矩阵",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4",
+              "E5"
+            ]
+          },
+          {
+            "text": "复现公开图表或数据处理逻辑",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          },
+          {
+            "text": "在成熟方案下协助单一实验读出",
+            "evidenceIds": [
+              "E1",
+              "E3",
+              "E4"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "77f0e73b9fac497f5b8dfe083d064a0f763261d73b51ef027039d29a2a322bfd"
+    },
+    {
+      "dtoVersion": "1.0.4",
+      "id": "zhao-yuetao",
+      "nameZh": "赵岳涛",
+      "institution": "中南大学",
+      "schoolOrDepartment": "生命科学学院生物化学与分子生物学系",
+      "position": "副教授",
+      "publicRoles": [
+        "硕士生导师"
+      ],
+      "summary": {
+        "text": "官方方向聚焦新型生物材料及其医学应用；基于已采用论文，可进一步理解为围绕光热纳米治疗、肿瘤免疫通路调节以及外泌体蛋白检测平台开展研究。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "researchDirections": [
+        {
+          "text": "新型生物材料构建及生物医学应用；生物材料的结构、功能与安全性调节；光热治疗、肿瘤免疫与疾病检测材料。",
+          "evidenceIds": [
+            "E6"
+          ]
+        }
+      ],
+      "researchDirectionsPlain": [
+        {
+          "term": "生物材料与光热肿瘤治疗",
+          "explanation": "基于公开论文，可把这一方向理解为设计具有靶向或仿生特征的纳米材料，并利用光热刺激参与肿瘤治疗研究。",
+          "undergraduateMeaning": "本科阶段可能先从材料设计逻辑、对照组设置和公开结果解读入手。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "term": "肿瘤免疫微环境调节",
+          "explanation": "依据公开论文，该主题可能关注腺苷相关通路如何影响T细胞浸润与活性，以及材料干预和光热刺激的协同关系。",
+          "undergraduateMeaning": "需要区分材料作用、免疫机制和动物实验结论的证据层级。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "term": "外泌体蛋白检测",
+          "explanation": "基于公开论文，可关注利用增强拉曼平台和深度学习对多种外泌体蛋白进行无标记分析，以探索早期癌症检测。",
+          "undergraduateMeaning": "适合练习信号数据预处理、分类评估与检测性能边界。",
+          "evidenceIds": [
+            "E3"
+          ]
+        }
+      ],
+      "researchQuestions": [
+        {
+          "text": "基于公开研究，仿生光热纳米材料可能如何增强多发性骨髓瘤细胞凋亡并影响NF-κB信号干扰？",
+          "evidenceIds": [
+            "E1"
+          ]
+        },
+        {
+          "text": "依据公开论文，阻断腺苷-A2AR或CD73相关环节可能怎样与光热刺激协同改善抗肿瘤免疫反应？",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "text": "基于公开研究，无标记多重SERS信号与深度学习可能如何组合用于外泌体蛋白分析和早期癌症识别？",
+          "evidenceIds": [
+            "E3"
+          ]
+        }
+      ],
+      "mainTechniques": [
+        {
+          "text": "可能涉及靶向或仿生纳米材料构建、光热刺激及细胞凋亡评估。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能涉及腺苷-A2AR、CD73和T细胞相关免疫指标的检测与比较。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能使用三维增强SERS平台、外泌体蛋白多重检测与深度学习分类。",
+          "evidenceIds": [
+            "E3"
+          ]
+        }
+      ],
+      "researchWorkflow": [
+        {
+          "text": "基于公开论文，流程可能先从材料功能目标、靶点或检测对象的界定开始。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "随后可能进行材料或传感平台构建，并通过理化表征、信号采集或生物学实验检查性能。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "最后可在细胞、动物或分类数据层面比较对照条件，并谨慎解释治疗或诊断指标。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "possibleUndergraduateTasks": [
+        {
+          "task": "整理光热纳米材料的设计变量",
+          "context": "基于三篇治疗方向论文，可能比较靶向方式、材料功能、光热刺激和免疫通路设置。",
+          "purpose": "理解材料结构、作用机制和评价指标之间的对应关系。",
+          "methods": [
+            "比较关键终点",
+            "提取材料组成",
+            "整理实验分组"
+          ],
+          "output": "设计变量与证据对应表",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "task": "复核外泌体蛋白检测流程",
+          "context": "依据SERS与深度学习论文，可能拆解样本、信号、特征和分类评价步骤。",
+          "purpose": "建立检测数据从采集到模型评估的流程意识。",
+          "methods": [
+            "绘制处理流程",
+            "记录训练与测试边界",
+            "整理性能指标"
+          ],
+          "output": "检测流程图或指标核对表",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E3"
+          ]
+        },
+        {
+          "task": "比较腺苷通路干预策略",
+          "context": "基于A2AR和CD73相关公开论文，可能比较两种干预位置及其与光热刺激的组合。",
+          "purpose": "练习机制假设与实验读出的对应分析。",
+          "methods": [
+            "比较免疫指标",
+            "标注证据限制",
+            "整理通路节点"
+          ],
+          "output": "机制比较摘要",
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E2",
+            "E4"
+          ]
+        }
+      ],
+      "prerequisiteSkills": [
+        {
+          "text": "建议准备材料科学、细胞生物学与肿瘤免疫的基础概念。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "text": "可能需要理解光热转换、纳米材料表征、SERS信号和常见生物学对照。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "text": "若处理检测数据，建议具备基础统计、Python数据分析和模型评价知识。",
+          "evidenceIds": [
+            "E3"
+          ]
+        }
+      ],
+      "learningCost": {
+        "text": "基于这些公开论文，入门成本可能来自纳米材料表征、肿瘤免疫机制、光热实验和信号或模型数据分析的跨学科衔接。",
+        "evidenceIds": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      "genericGrowthPath": [
+        {
+          "stage": "foundation",
+          "possibleActivities": [
+            "识别常见材料和生物学评价指标",
+            "学习纳米生物材料与肿瘤免疫基础",
+            "阅读实验分组"
+          ],
+          "possibleOutputs": [
+            "论文方法卡片",
+            "术语表"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E2",
+            "E4"
+          ]
+        },
+        {
+          "stage": "bounded_task",
+          "possibleActivities": [
+            "复核图表与对照组",
+            "记录关键参数",
+            "整理一类材料或检测平台的输入输出"
+          ],
+          "possibleOutputs": [
+            "变量表",
+            "流程图",
+            "图表复核笔记"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E1",
+            "E3",
+            "E4"
+          ]
+        },
+        {
+          "stage": "independent_module",
+          "possibleActivities": [
+            "加入重复性和边界检查",
+            "在明确问题下比较一种材料功能或信号分析方案"
+          ],
+          "possibleOutputs": [
+            "带限制说明的分析报告",
+            "小型比较模块"
+          ],
+          "uncertaintyNote": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+          "evidenceIds": [
+            "E2",
+            "E3",
+            "E4"
+          ]
+        }
+      ],
+      "tags": [
+        "疾病检测",
+        "纳米生物材料",
+        "生物化学与分子生物学",
+        "肿瘤免疫"
+      ],
+      "categoryTags": [
+        "疾病检测",
+        "纳米生物材料",
+        "生物化学与分子生物学",
+        "肿瘤免疫"
+      ],
+      "searchKeywords": [
+        "光热治疗",
+        "生物材料",
+        "肿瘤免疫",
+        "adenosine A2AR",
+        "biomimetic nanodrug",
+        "CD73",
+        "deep learning",
+        "exosomal proteins",
+        "multiple myeloma",
+        "SERS"
+      ],
+      "publicEvidence": [
+        {
+          "evidenceId": "E1",
+          "title": "Anti-BCMA surface engineered biomimetic photothermal nanomissile enhances multiple myeloma cell apoptosis and overcomes the disturbance of NF-κB signaling in vivo",
+          "year": 2023,
+          "doi": "10.1016/j.biomaterials.2023.122096",
+          "sourceUrl": "https://doi.org/10.1016/j.biomaterials.2023.122096"
+        },
+        {
+          "evidenceId": "E2",
+          "title": "Photothermal nanobomb blocking metabolic adenosine-A2AR potentiates infiltration and activity of T cells for robust antitumor immunotherapy",
+          "year": 2022,
+          "doi": "10.1016/j.cej.2022.138139",
+          "sourceUrl": "https://doi.org/10.1016/j.cej.2022.138139"
+        },
+        {
+          "evidenceId": "E3",
+          "title": "Label-Free Multiplex Profiling of Exosomal Proteins with a Deep Learning-Driven 3D Surround-Enhancing SERS Platform for Early Cancer Diagnosis",
+          "year": 2024,
+          "doi": "10.1021/acs.analchem.4c00669",
+          "sourceUrl": "https://doi.org/10.1021/acs.analchem.4c00669"
+        },
+        {
+          "evidenceId": "E4",
+          "title": "Biomimetic nanodrug blocks CD73 to inhibit adenosine and boosts antitumor immune response synergically with photothermal stimulation",
+          "year": 2024,
+          "doi": "10.1186/s12951-024-02487-4",
+          "sourceUrl": "https://doi.org/10.1186/s12951-024-02487-4"
+        },
+        {
+          "evidenceId": "E6",
+          "title": "赵岳涛-中南大学生命科学学院",
+          "sourceUrl": "https://life.csu.edu.cn/info/1042/2530.htm"
+        }
+      ],
+      "boundaryStatement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+      "lastUpdated": "2026-08-02",
+      "publicationStatus": "approved",
+      "releaseEligible": true,
+      "schemaVersion": "1.0.4",
+      "version": "1.0.4",
+      "evidenceType": "academic_only",
+      "hasExperienceEvidence": false,
+      "experienceCaseCount": 0,
+      "reportPath": "reports/zhao-yuetao.md",
+      "initials": "赵",
+      "quickSummary": {
+        "coreDirections": [
+          {
+            "text": "新型生物材料构建及生物医学应用；生物材料的结构、功能与安全性调节；光热治疗、肿瘤免疫与疾病检测材料。",
+            "evidenceIds": [
+              "E6"
+            ]
+          }
+        ],
+        "mainTechniques": [
+          {
+            "text": "可能涉及靶向或仿生纳米材料构建、光热刺激及细胞凋亡评估。",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E4"
+            ]
+          },
+          {
+            "text": "可能涉及腺苷-A2AR、CD73和T细胞相关免疫指标的检测与比较。",
+            "evidenceIds": [
+              "E2",
+              "E4"
+            ]
+          },
+          {
+            "text": "可能使用三维增强SERS平台、外泌体蛋白多重检测与深度学习分类。",
+            "evidenceIds": [
+              "E3"
+            ]
+          }
+        ],
+        "undergraduatePaths": [
+          {
+            "text": "整理光热纳米材料的设计变量",
+            "evidenceIds": [
+              "E1",
+              "E2",
+              "E4"
+            ]
+          },
+          {
+            "text": "复核外泌体蛋白检测流程",
+            "evidenceIds": [
+              "E3"
+            ]
+          },
+          {
+            "text": "比较腺苷通路干预策略",
+            "evidenceIds": [
+              "E2",
+              "E4"
+            ]
+          }
+        ]
+      },
+      "reportSha256": "af7339df2b8d78e5323b0cc498277f5cd890e79bdbb779e60ccba22271118bae"
     }
   ]
 }

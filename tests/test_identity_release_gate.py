@@ -93,14 +93,14 @@ class AdvisorIdentityReleaseGateTests(unittest.TestCase):
         self.assertTrue(report["release_eligible"], report)
         self.assertEqual(report["effective_publication_status"], "approved")
 
-    def test_09_xiang_rong_remains_valid_review_pending(self):
+    def test_09_xiang_rong_user_approval_is_release_eligible(self):
         public = json.loads((XIANG_PACKAGE / "public-advisor-v1.json").read_text(encoding="utf-8"))
         manifest = json.loads((XIANG_PACKAGE / "evidence-manifest-v1.json").read_text(encoding="utf-8"))
         identity = json.loads((XIANG_PACKAGE / "identity-review-v1.json").read_text(encoding="utf-8"))
         report = validate_package(public, manifest, identity, package_dir=XIANG_PACKAGE)
         self.assertTrue(report["valid"], report)
-        self.assertFalse(report["release_eligible"], report)
-        self.assertEqual(report["effective_publication_status"], "review_pending")
+        self.assertTrue(report["release_eligible"], report)
+        self.assertEqual(report["effective_publication_status"], "approved")
 
 
 if __name__ == "__main__":

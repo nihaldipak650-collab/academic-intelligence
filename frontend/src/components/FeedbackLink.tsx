@@ -6,7 +6,8 @@ interface FeedbackLinkProps {
 
 export function FeedbackLink({ compact = false }: FeedbackLinkProps) {
   const { siteConfig } = useAdvisorData();
-  if (!siteConfig.feedbackUrl) {
+  const feedbackUrl = siteConfig?.feedbackUrl ?? null;
+  if (!feedbackUrl) {
     return (
       <span className={compact ? "feedback-link is-muted" : "button is-muted"}>
         反馈链接待配置
@@ -16,7 +17,7 @@ export function FeedbackLink({ compact = false }: FeedbackLinkProps) {
   return (
     <a
       className={compact ? "feedback-link" : "button button--secondary"}
-      href={siteConfig.feedbackUrl}
+      href={feedbackUrl}
       target="_blank"
       rel="noopener noreferrer"
     >

@@ -1,0 +1,693 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "guo-hui",
+  "record_created_at": "2026-08-03",
+  "migrated_at": "2026-08-03",
+  "name_zh": {
+    "value": "郭辉",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-03",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Hui Guo",
+    "value_en": "Hui Guo",
+    "source_url": "https://doi.org/10.1172/JCI159806",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "publication",
+    "last_verified_at": "2026-08-03",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-03",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院遗传学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-03",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "研究员",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-03",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-03",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2565.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+      "source_ref": "evidence-manifest-v1.json#E6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-03",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": "guohui@sklmg.edu.cn",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F7",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-03",
+      "missing_status": "available"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "利用基因组学和遗传统计解析孤独症遗传结构，鉴定风险变异并关注非编码变异及其调控机制。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "利用医学遗传学和临床表型组学研究孤独症及相关神经发育障碍的高风险基因、基因型-表型关系与分子分型。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "综合分子生物学、细胞生物学、神经生物学和功能基因组学研究共性分子致病机制。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "构建神经发育障碍基因组信息解读系统，研究早期诊断与风险预警应用。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "孤独症遗传结构与分子分型",
+      "explanation_zh": "依据官方方向和采用论文，可把这一主题理解为从患者队列与变异数据中寻找风险基因，并比较基因型、临床表型和分子机制之间的联系。",
+      "undergraduate_meaning": "需要区分变异发现、统计关联、分子分型和功能验证四类证据。",
+      "evidence_ids": [
+        "E1",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "应激颗粒与RNA调控机制",
+      "explanation_zh": "基于公开论文，UBAP2L相关应激颗粒网络、PABPC1和CSDE1等RNA结合或翻译调控因子可连接神经发生、突触与神经发育障碍表型。",
+      "undergraduate_meaning": "可先从“变异—RNA/蛋白过程—细胞表型—疾病表型”的证据链入手。",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E5"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "从候选基因到功能机制",
+      "explanation_zh": "依据GIGYF1、NCKAP1等论文，研究可能把人群遗传证据与细胞、神经元或动物模型中的功能读出连接起来。",
+      "undergraduate_meaning": "同一基因的统计证据、细胞机制和动物行为不能相互替代，需要分别核验。",
+      "evidence_ids": [
+        "E1",
+        "E4"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开证据，孤独症及相关神经发育障碍的罕见变异和高风险基因如何与临床表型及分子亚型建立可复核的联系？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开论文，应激颗粒核心网络及UBAP2L相关变化可能如何影响神经发生和神经发育障碍表型？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1126/sciadv.abo7112"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于PABPC1和CSDE1论文，RNA结合、翻译起始或转录后调控变化可能如何影响皮层神经发生与突触功能？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.gim.2022.04.013",
+        "https://doi.org/10.1126/sciadv.aax2166"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据NCKAP1研究，细胞骨架和神经元发育异常可能如何连接到孤独症核心特征？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.ajhg.2020.10.002"
+      ],
+      "evidence_ids": [
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "基于官方方向与采用论文，可能涉及基因组学、遗传统计、外显子或基因组变异分析及基因型—表型比较。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及临床表型整理、变异致病性评估和神经发育障碍分子分型。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1016/j.gim.2022.04.013",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及细胞培养、原代神经元、免疫荧光、蛋白互作、神经发生和突触功能读出。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.gim.2022.04.013",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开论文，部分问题还使用小鼠或其他模式生物以及行为和神经发育表型。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于公开方向，研究可能先从患者队列、基因组数据或临床表型中发现候选变异和高风险基因。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "随后可能通过基因型—表型分析与分子分型，明确候选基因对应的临床和生物学问题。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1016/j.gim.2022.04.013",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "最后可能结合细胞、神经元或动物模型，检验RNA调控、应激颗粒、神经发生和突触表型，并限制从模型到临床的外推。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.gim.2022.04.013",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "仍需用户人工审核；未选择featured论文。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "整理风险基因—表型—机制证据矩阵",
+      "task_context": "基于采用论文，比较GIGYF1、NCKAP1、CSDE1等基因的人群证据、细胞机制和疾病表型。",
+      "task_purpose": "练习区分变异发现、机制验证与临床外推。",
+      "possible_methods": [
+        "文献结构化摘录",
+        "基因—表型映射",
+        "证据等级标注"
+      ],
+      "possible_output": "可复核的基因—表型—机制表",
+      "evidence_ids": [
+        "E1",
+        "E4",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "仅为基于公开证据推导的可能任务，不代表实验室真实分工、当前项目、名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "复现公开变异分析或论文图表逻辑",
+      "task_context": "依据公开论文的队列、变异或功能数据线索，核对分组、变量、统计步骤和结论边界。",
+      "task_purpose": "理解从原始数据或图表到遗传结论的分析链。",
+      "possible_methods": [
+        "公开数据整理",
+        "基础R/Python分析",
+        "图表复现与步骤记录"
+      ],
+      "possible_output": "可复现图表、脚本或方法笔记",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "公开论文不能证明实验室会提供相同数据、软件、指导或本科生任务。"
+    },
+    {
+      "task": "在成熟方案下协助单一细胞或神经元读出",
+      "task_context": "基于应激颗粒、RNA调控和神经发生论文，理解单一实验指标如何支持机制判断。",
+      "task_purpose": "训练对照、记录、重复和证据边界意识。",
+      "possible_methods": [
+        "实验记录整理",
+        "免疫荧光或表达读出核验",
+        "基础图像或数据质控"
+      ],
+      "possible_output": "规范记录、质控表或单一指标摘要",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "具体protocol、准入、安全培训、样本资源和指导方式均需导师或实验室另行确认。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "建议准备遗传学、分子生物学、神经生物学和基础统计知识。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若走计算路径，可能需要R或Python、Linux、变异注释和基因组数据基础。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1172/JCI159806",
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若走实验路径，可能需要理解细胞培养、免疫荧光、蛋白互作和神经元或模式生物实验的基本读出。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1126/sciadv.abo7112",
+        "https://doi.org/10.1016/j.gim.2022.04.013",
+        "https://doi.org/10.1016/j.ajhg.2020.10.002",
+        "https://doi.org/10.1126/sciadv.aax2166",
+        "https://life.csu.edu.cn/info/1042/2565.htm"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于公开证据，入门成本主要来自医学遗传学、基因组数据分析与细胞/神经生物学机制三类语言的衔接；完整干湿结合路线通常需要分阶段学习。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://doi.org/10.1172/JCI159806",
+      "https://doi.org/10.1126/sciadv.abo7112",
+      "https://doi.org/10.1016/j.gim.2022.04.013",
+      "https://doi.org/10.1016/j.ajhg.2020.10.002",
+      "https://doi.org/10.1126/sciadv.aax2166",
+      "https://life.csu.edu.cn/info/1042/2565.htm"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习孤独症与神经发育障碍遗传学",
+        "认识变异与基因型—表型术语",
+        "练习阅读机制图"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "论文证据卡片"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4",
+        "E6"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "整理一个风险基因证据链",
+        "复现一个公开图表",
+        "核对一个细胞表型读出"
+      ],
+      "possible_outputs": [
+        "证据矩阵",
+        "复现脚本",
+        "质控清单"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确边界下提出一个变异解释或机制问题",
+        "设计可证伪的比较方案"
+      ],
+      "possible_outputs": [
+        "小型研究方案",
+        "带限制说明的分析报告"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "公共身份与研究方向只来自中南大学官方主页；AI整理仅依据本导师已采用的正式论文和官方方向。不包含学生Experience，不评价导师管理风格、实验室氛围、经费、真实名额、毕业难度或成果保证。可能任务与成长路径不代表真实实验室安排或招募承诺。",
+  "update_status": "verified",
+  "summary": {
+    "text": "官方主页显示，郭辉为中南大学生命科学学院遗传学系研究员、博士生导师，研究聚焦孤独症及相关神经发育障碍的遗传结构、分子分型、共性机制与基因组信息解读。基于五篇官网代表论文，可进一步理解其公开研究线索包括GIGYF1、应激颗粒、PABPC1、NCKAP1和CSDE1相关的变异、神经发生与突触机制。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1172/JCI159806",
+      "https://doi.org/10.1126/sciadv.abo7112",
+      "https://doi.org/10.1016/j.gim.2022.04.013",
+      "https://doi.org/10.1016/j.ajhg.2020.10.002",
+      "https://doi.org/10.1126/sciadv.aax2166",
+      "https://life.csu.edu.cn/info/1042/2565.htm"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "官方身份、ORCID候选和五篇官网代表论文种子已完成v1.0.4机械核验；人工身份审核、页面内容审核、featured选择和公开发布授权仍待项目负责人完成。",
+  "search_keywords": [
+    "autism",
+    "neurodevelopmental disorders",
+    "medical genetics",
+    "genomics",
+    "rare variants",
+    "stress granules",
+    "UBAP2L",
+    "GIGYF1",
+    "PABPC1",
+    "NCKAP1",
+    "CSDE1",
+    "neurogenesis",
+    "synapse"
+  ],
+  "tags": [
+    "孤独症",
+    "神经发育障碍",
+    "医学遗传学",
+    "基因组学"
+  ],
+  "version": "1.0.4",
+  "publication_status": "review_pending",
+  "report_path": "reports/guo-hui.md"
+}

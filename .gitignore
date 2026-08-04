@@ -17,6 +17,8 @@ venv/
 .pytest_cache/
 .coverage
 .pages-preview/
+/frontend/.local-staging/
+/frontend/.local-review/
 
 # 编辑器与操作系统文件
 .idea/

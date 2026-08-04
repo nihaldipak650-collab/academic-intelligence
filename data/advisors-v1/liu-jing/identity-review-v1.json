@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "liu-jing",
+  "review_status": "verified",
+  "reviewed_at": "2026-08-04",
+  "reviewer_role": "user",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "not_found",
+    "candidate_orcid": null,
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+    "human_review_status": "verified",
+    "notes": "中南大学生命科学学院官方主页确认刘静、生物化学与分子生物学系、教授、博士生导师身份。项目负责人已完成人工审核通过。"
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式 DOI 与 PubMed 页面确认 Jing Liu 为 Cell Death & Disease 2024 通讯作者，匹配中南大学生命科学学院生物化学与分子生物学系。"
+      ],
+      "matched_author_name": "Jing Liu",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色：last，is_co_first=false，is_corresponding=true。"
+    },
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式 DOI 与 Biomaterials 2023 页面确认 Jing Liu 为通讯作者，匹配中南大学生命科学学院生物化学与分子生物学系。"
+      ],
+      "matched_author_name": "Jing Liu",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色：last，is_co_first=false，is_corresponding=true。"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式 DOI 与 Oncogene 2025 卷期页面确认 Jing Liu 为通讯作者，匹配中南大学生命科学学院生物化学与分子生物学系。"
+      ],
+      "matched_author_name": "Jing Liu",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色：last，is_co_first=false，is_corresponding=true。"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式 DOI 与 Cancer Letters 2023 卷期页面确认 Jing Liu 是论文作者。未确认是通讯作者，降级标记 is_corresponding=false。"
+      ],
+      "matched_author_name": "Jing Liu",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色：middle（第 15 作者），is_co_first=false，is_corresponding=false（确认论文作者，未确认通讯）。"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式 DOI 与 Advanced Science 2024 卷期页面确认 Jing Liu 为中间合作作者（非通讯）。肝细胞癌主题保留在 Manifest 内部审计，不作为公开核心证据。"
+      ],
+      "matched_author_name": "Jing Liu",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "作者角色：middle，is_co_first=false，is_corresponding=false。非公开核心证据。"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-08-04",
+      "notes": "life.csu.edu.cn 为中南大学生命科学学院官方域名，页面姓名、机构、院系和研究方向与正式Roster一致。"
+    }
+  ],
+  "p0_blockers": [],
+  "notes": "完成第二次精细修正：统一正式卷期年份 E3(2025)、E4(2023)、E5(2024)；降级 E4 为非通讯作者；将 E5(肝细胞癌) 排除出公开 Safe DTO 核心证据；按 E6/E1 拆分造血发育调控与多发性骨髓瘤异质性方向。CONTACT_POLICY_SCHEMA_FOLLOWUP 保留。人工审核维持 pending。"
+}
