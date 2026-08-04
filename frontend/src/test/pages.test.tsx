@@ -171,8 +171,6 @@ describe("advisor detail", () => {
   it("lets content Evidence tags locate the public Evidence item", async () => {
     const user = userEvent.setup();
     renderDetail("synthetic-approved", "dto");
-    expect(screen.queryByRole("button", { name: "定位到 Evidence E1" })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: /方法与技术路线/ }));
     const buttons = screen.getAllByRole("button", { name: "定位到 Evidence E1" });
     await user.click(buttons[0]);
     await waitFor(() => {

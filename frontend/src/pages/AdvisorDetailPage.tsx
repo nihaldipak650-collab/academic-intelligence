@@ -276,7 +276,7 @@ export function AdvisorDetailPage() {
             </div>
           </section>
 
-          <StudentDecisionOverview advisor={advisor} />
+          <StudentDecisionOverview advisor={advisor} onLocateEvidence={locateEvidence} />
 
           <section className="content-section" id="questions">
             <span className="section-number">03</span>

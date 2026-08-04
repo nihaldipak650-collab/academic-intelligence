@@ -1,20 +1,35 @@
 import type { PublicAdvisor, TraceableText } from "../types/advisor";
+import { EvidenceRefs } from "./EvidenceRefs";
 
-function TraceableItems({ items }: { items: TraceableText[] }) {
+function TraceableItems({
+  items,
+  onLocateEvidence,
+}: {
+  items: TraceableText[];
+  onLocateEvidence?: (evidenceId: string) => void;
+}) {
   if (!items.length) return <p className="decision-empty">暂无可靠公开证据</p>;
   return (
     <ul className="decision-list">
       {items.map((item) => (
         <li key={item.text}>
           <span>{item.text}</span>
+          <EvidenceRefs evidenceIds={item.evidenceIds} onLocate={onLocateEvidence} />
         </li>
       ))}
     </ul>
   );
 }
 
-export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor }) {
+export function StudentDecisionOverview({
+  advisor,
+  onLocateEvidence,
+}: {
+  advisor: PublicAdvisor;
+  onLocateEvidence?: (evidenceId: string) => void;
+}) {
   const scenario = advisor.undergraduateScenarios[0];
+  const evidenceIds = advisor.publicEvidence.map((item) => item.evidenceId);
 
   return (
     <section className="content-section decision-section" id="decision">
@@ -28,19 +43,19 @@ export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor })
           <article>
             <span className="decision-index">01</span>
             <h3>核心研究问题</h3>
-            <TraceableItems items={advisor.researchQuestions.slice(0, 2)} />
+            <TraceableItems items={advisor.researchQuestions.slice(0, 2)} onLocateEvidence={onLocateEvidence} />
           </article>
 
           <article>
             <span className="decision-index">02</span>
             <h3>研究工作形态</h3>
-            <TraceableItems items={advisor.researchWorkflow.slice(0, 2)} />
+            <TraceableItems items={advisor.researchWorkflow.slice(0, 2)} onLocateEvidence={onLocateEvidence} />
           </article>
 
           <article>
             <span className="decision-index">03</span>
             <h3>常用技术与数据</h3>
-            <TraceableItems items={advisor.techniques.slice(0, 3)} />
+            <TraceableItems items={advisor.techniques.slice(0, 3)} onLocateEvidence={onLocateEvidence} />
           </article>
 
           <article>
@@ -50,6 +65,7 @@ export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor })
               <>
                 <strong>{scenario.task}</strong>
                 <p>{scenario.context}</p>
+                <EvidenceRefs evidenceIds={scenario.evidenceIds} onLocate={onLocateEvidence} />
               </>
             ) : (
               <p className="decision-empty">暂无可靠公开证据</p>
@@ -59,14 +75,17 @@ export function StudentDecisionOverview({ advisor }: { advisor: PublicAdvisor })
           <article>
             <span className="decision-index">05</span>
             <h3>建议准备</h3>
-            <TraceableItems items={advisor.prerequisiteSkills.slice(0, 3)} />
+            <TraceableItems items={advisor.prerequisiteSkills.slice(0, 3)} onLocateEvidence={onLocateEvidence} />
           </article>
 
           <article>
             <span className="decision-index">06</span>
             <h3>公开成果与 Evidence</h3>
             {advisor.publicEvidence.length ? (
-              <p>当前结构化记录关联 {advisor.publicEvidence.length} 条公开 Evidence，可在「证据」章节展开后复核原始条目。</p>
+              <>
+                <p>当前结构化记录关联 {advisor.publicEvidence.length} 条公开 Evidence，可跳转至原始条目复核。</p>
+                <EvidenceRefs evidenceIds={evidenceIds} onLocate={onLocateEvidence} />
+              </>
             ) : (
               <p className="decision-empty">暂无可靠公开证据</p>
             )}
