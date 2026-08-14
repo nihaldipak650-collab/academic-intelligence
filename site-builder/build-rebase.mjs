@@ -34,6 +34,7 @@ function buildDirectory() {
   fs.copyFileSync(path.join(C01SRC, "css", "r2-green.css"), path.join(dst, "css", "r2-green.css"));
 
   let app = fs.readFileSync(path.join(C01SRC, "js", "app.js"), "utf8");
+  app = app.replace(/\r\n/g, "\n");
   // bake public-only: force reviewMode=false, hide review toggle, rows -> T02 profile page
   app = app.replace(
     "const IS_PUBLIC = new URLSearchParams(window.location.search).get('public') === '1';",

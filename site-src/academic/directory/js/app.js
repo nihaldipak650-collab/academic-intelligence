@@ -53,8 +53,10 @@
       const rt = document.querySelector('.reviewtoggle');
       if (rt) rt.style.display = 'none';
     } else {
-      document.getElementById('rev-on').setAttribute('aria-pressed', String(state.reviewMode));
-      document.getElementById('rev-off').setAttribute('aria-pressed', String(!state.reviewMode));
+      const revOn = document.getElementById('rev-on');
+      const revOff = document.getElementById('rev-off');
+      if (revOn) revOn.setAttribute('aria-pressed', String(state.reviewMode));
+      if (revOff) revOff.setAttribute('aria-pressed', String(!state.reviewMode));
     }
     const note = document.getElementById('tb-note');
     note.textContent = IS_PUBLIC || !state.reviewMode ? `公开导师 ${D.publicCount} 位` : `导师档案 ${D.reviewCount} · 公开 ${D.publicCount} · 评审中 ${D.reviewOnlyCount}`;
@@ -292,8 +294,10 @@
 
   document.getElementById('mode-overview').addEventListener('click', () => { window.location.hash = '#/overview'; });
   document.getElementById('mode-category').addEventListener('click', () => { window.location.hash = '#/category'; });
-  document.getElementById('rev-on').addEventListener('click', () => { state.reviewMode = true; render(); });
-  document.getElementById('rev-off').addEventListener('click', () => { state.reviewMode = false; render(); });
+  const revOn = document.getElementById('rev-on');
+  const revOff = document.getElementById('rev-off');
+  if (revOn) revOn.addEventListener('click', () => { state.reviewMode = true; render(); });
+  if (revOff) revOff.addEventListener('click', () => { state.reviewMode = false; render(); });
   /* Public mode: mentor rows navigate natively to the T02 static profile page
    * (profile/profile.html?id=<mentor-id>&t=t02) baked by the site builder. */
   window.addEventListener('hashchange', () => applyRoute(parseHash()));
