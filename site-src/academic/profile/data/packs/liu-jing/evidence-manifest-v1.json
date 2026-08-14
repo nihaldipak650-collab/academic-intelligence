@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "liu-jing",
+  "source_scope": "中南大学生命科学学院官方个人主页及代表性出版物正式 DOI/出版社/PubMed 页面。经权威核验：E1–E4 正式卷期主题均为多发性骨髓瘤（Multiple Myeloma）；E5 主题为肝细胞癌（HCC），作为合作作者论文保留在 Manifest 中作为内部候选，但不进入公开页面核心证据（adopted_public_evidence_ids）。正式卷期年份统一为：E1(2024)、E2(2023)、E3(2025)、E4(2023)、E5(2024)。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41419-024-07027-4",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=liu-jing",
+      "last_verified_at": "2026-08-04",
+      "notes": "Cell Death & Disease 2024 正式出版物；Jing Liu 为末位通讯作者。经 PubMed/Crossref 核验，正确题名为 Single-cell sequencing analysis of multiple myeloma heterogeneity and identification of new theranostic targets。",
+      "title": "Single-cell sequencing analysis of multiple myeloma heterogeneity and identification of new theranostic targets",
+      "publication_year": 2024,
+      "doi": "10.1038/s41419-024-07027-4",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.biomaterials.2023.122096",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=liu-jing",
+      "last_verified_at": "2026-08-04",
+      "notes": "Biomaterials 2023 正式卷期出版物（Vol 297, 122096）；Jing Liu 为末位通讯作者。经 Crossref/ScienceDirect 核验，正确题名为 Anti-BCMA surface engineered biomimetic photothermal nanomissile enhances multiple myeloma cell apoptosis and overcomes the disturbance of NF-κB signaling in vivo。",
+      "title": "Anti-BCMA surface engineered biomimetic photothermal nanomissile enhances multiple myeloma cell apoptosis and overcomes the disturbance of NF-κB signaling in vivo",
+      "publication_year": 2023,
+      "doi": "10.1016/j.biomaterials.2023.122096",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41388-024-03245-4",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=liu-jing",
+      "last_verified_at": "2026-08-04",
+      "notes": "Oncogene 正式卷期出版物（Vol 44, Issue 1, 2025 年卷期）；Jing Liu 为末位通讯作者。经 PubMed/Nature 核验，正确题名为 Pseudokinase TRIB3 stabilizes SSRP1 via USP10-mediated deubiquitination to promote multiple myeloma progression。",
+      "title": "Pseudokinase TRIB3 stabilizes SSRP1 via USP10-mediated deubiquitination to promote multiple myeloma progression",
+      "publication_year": 2025,
+      "doi": "10.1038/s41388-024-03245-4",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.canlet.2022.216019",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=liu-jing",
+      "last_verified_at": "2026-08-04",
+      "notes": "Cancer Letters 2023 正式卷期出版物（Vol 554, 216019）；Jing Liu 确认是论文作者（第 15 作者），但未确认是通讯作者。标记 is_corresponding: false。",
+      "title": "Luteolin inhibits the TGF-β signaling pathway to overcome bortezomib resistance in multiple myeloma",
+      "publication_year": 2023,
+      "doi": "10.1016/j.canlet.2022.216019",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/advs.202306623",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "summary",
+        "research_directions_plain_language",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=liu-jing",
+      "last_verified_at": "2026-08-04",
+      "notes": "Advanced Science 2024 正式卷期出版物（Vol 11, Issue 15, 2306623）；Jing Liu 为中间合作作者（非通讯）。主题为肝细胞癌（HCC），保留为 Manifest 内部候选证据（candidate_statuses: candidate），不进入公开页面核心证据。",
+      "title": "Targeting C21orf58 is a Novel Treatment Strategy of Hepatocellular Carcinoma by Disrupting the Formation of JAK2/C21orf58/STAT3 Complex",
+      "publication_year": 2024,
+      "doi": "10.1002/advs.202306623",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "data/rosters/life-sciences-faculty-roster-v1.json#person_id=liu-jing",
+      "last_verified_at": "2026-08-04",
+      "notes": "中南大学生命科学学院官方主页。",
+      "page_title": "中南大学生命科学学院刘静教授个人主页",
+      "profile_name": "刘静",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物化学与分子生物学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "教授",
+          "fact_category": "professional_title",
+          "source_section": "师资队伍",
+          "source_anchor": "职称",
+          "supported_public_fields": [
+            "position",
+            "school_or_department"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "博士生导师",
+          "fact_category": "supervisor_type",
+          "source_section": "师资队伍",
+          "source_anchor": "导师类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "官方主页记载造血发育调控与恶性肿瘤增殖机制研究方向",
+          "fact_category": "research_direction",
+          "source_section": "研究方向",
+          "source_anchor": "研究方向1",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "官方主页与代表性研究显示运用生物信息学、分子与细胞生物学、动物模型及临床数据分析等研究手段",
+          "fact_category": "research_method",
+          "source_section": "研究方向/代表成果",
+          "source_anchor": "研究方法",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "官方主页记载肿瘤耐药克服、免疫新分子及综合治疗策略",
+          "fact_category": "research_direction",
+          "source_section": "研究方向",
+          "source_anchor": "研究方向2",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "fact_text": "官方主页包含个人联系方式，已确认存在，但按 Safe DTO 隐私政策不进入公开数据",
+          "fact_category": "official_contact",
+          "source_section": "联系方式",
+          "source_anchor": "联系方式",
+          "supported_public_fields": [
+            "contact"
+          ]
+        }
+      ]
+    }
+  ]
+}

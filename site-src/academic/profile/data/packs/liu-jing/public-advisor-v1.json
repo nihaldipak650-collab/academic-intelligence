@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "liu-jing",
+  "record_created_at": "2026-08-04",
+  "migrated_at": "2026-08-04",
+  "name_zh": {
+    "value": "刘静",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Jing Liu",
+    "value_en": "Jing Liu",
+    "source_url": "https://doi.org/10.1038/s41419-024-07027-4",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "publication",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院生物化学与分子生物学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-04",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2544.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-04",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "summary": {
+    "text": "根据公开文献与官方主页合成，研究聚焦造血发育调控、多发性骨髓瘤（MM）增殖机制与耐药干预策略。重点探索 MM 单细胞异质性与新诊疗靶点、TRIB3/USP10/SSRP1 去泛素化稳定性调控、抗 BCMA 纳米光热干预，以及木犀草素抑制 TGF-β 克服硼替佐米耐药的分子通路。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1038/s41419-024-07027-4",
+      "https://doi.org/10.1016/j.biomaterials.2023.122096",
+      "https://doi.org/10.1038/s41388-024-03245-4",
+      "https://doi.org/10.1016/j.canlet.2022.216019"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "research_directions_original": [
+    {
+      "text": "中南大学生命科学学院官方个人主页显示研究方向为造血发育调控、恶性肿瘤增殖与免疫调控、肿瘤耐药/免疫新分子及综合治疗策略。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2544.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "造血发育调控",
+      "explanation_zh": "依据中南大学生命科学学院官方个人主页显示，研究方向包括造血发育调控基础机制。",
+      "undergraduate_meaning": "在官方主页公开发布范围内，有助于理解造血干/祖细胞发育与分化调控的基本生物学过程。",
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "confidence": "High"
+    },
+    {
+      "term_original": "多发性骨髓瘤细胞异质性与诊疗靶点",
+      "explanation_zh": "根据公开论文分析，利用单细胞转录组测序探究多发性骨髓瘤（MM）细胞及骨髓微环境细胞通讯的异质性，识别新型诊疗靶点。",
+      "undergraduate_meaning": "基于公开证据，有助于学习单细胞测序技术在揭示骨髓瘤微环境异质性及识别诊疗靶点中的应用。",
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "confidence": "Medium"
+    },
+    {
+      "term_original": "TRIB3/USP10/SSRP1 轴向与肿瘤增殖机制",
+      "explanation_zh": "基于文献证据推测，研究假激酶 TRIB3 通过招募去泛素化酶 USP10 稳定 SSRP1 蛋白，进而促进多发性骨髓瘤恶性进展的分子通路。",
+      "undergraduate_meaning": "在公开技术路线中，学习关键蛋白质修饰（去泛素化）如何调控肿瘤蛋白稳定性与肿瘤生长。",
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "confidence": "Medium"
+    },
+    {
+      "term_original": "骨髓瘤耐药克服与纳米/小分子干预",
+      "explanation_zh": "根据公开论文推测，探索抗 BCMA 仿生纳米导弹及木犀草素抑制 TGF-β 信号通路克服多发性骨髓瘤对硼替佐米耐药的干预策略。",
+      "undergraduate_meaning": "基于论文路线，学习如何利用纳米载体或天然小分子克服肿瘤化疗与靶向药物耐药性。",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "confidence": "Medium"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开文献推测，单细胞测序分析如何揭示多发性骨髓瘤骨髓微环境中的细胞通讯异常及新诊疗靶点？",
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41419-024-07027-4"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据论文证据分析，假激酶 TRIB3 如何通过 USP10 介导的去泛素化作用稳定 SSRP1 促进骨髓瘤进展？",
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41388-024-03245-4"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "在公开研究路线中，抗 BCMA 纳米导弹与木犀草素分子分别如何通过调控 NF-κB 或 TGF-β 通路克服骨髓瘤耐药？",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1016/j.canlet.2022.216019"
+      ],
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "根据公开论文分析，可能包含多发性骨髓瘤（MM）细胞株培养及耐药株建立",
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41419-024-07027-4",
+        "https://doi.org/10.1038/s41388-024-03245-4",
+        "https://doi.org/10.1016/j.canlet.2022.216019"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据文献实验记录，可能涉及单细胞转录组测序（scRNA-seq）及骨髓微环境细胞通讯生物信息学分析",
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41419-024-07027-4"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "根据论文证据推测，可能包括蛋白质去泛素化检测、Co-IP 免疫共沉淀及 Western blot 验证",
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41388-024-03245-4"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "在公开研究路线中，可能包含抗 BCMA 表面修饰仿生纳米导弹构建、光热疗法评价及小鼠异种移植模型",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1038/s41388-024-03245-4",
+        "https://doi.org/10.1016/j.canlet.2022.216019"
+      ],
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于公开文献推测，可能从单细胞测序或基因表达数据库中筛选骨髓瘤细胞异质性因子与诊疗靶点",
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41419-024-07027-4",
+        "https://doi.org/10.1038/s41388-024-03245-4"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "在公开论文路线中，可能通过分子生物学实验验证 TRIB3/USP10 去泛素化稳定 SSRP1 的分子机制",
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41388-024-03245-4"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "根据论文试验设计，可能利用仿生纳米递送载体或木犀草素在体外与小鼠异种移植模型中评估抗骨髓瘤及耐药克服效果",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1016/j.biomaterials.2023.122096",
+        "https://doi.org/10.1016/j.canlet.2022.216019"
+      ],
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E6"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "未经人工审阅精选代表作。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "多发性骨髓瘤分子文献整理与数据库检索",
+      "task_context": "协助收集骨髓瘤诊疗靶点、去泛素化调控及耐药克服的相关文献与数据",
+      "task_purpose": "熟悉生物信息学与骨髓瘤异质性分析流程",
+      "possible_methods": [
+        "PubMed检索",
+        "单细胞数据整理",
+        "通路富集分析"
+      ],
+      "possible_output": "结构化文献综述表格或数据分析图表",
+      "uncertainty_note": "仅为基于公开技术栈推测的潜在学术训练方向，不代表实验室确定任务安排",
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "confidence": "Medium"
+    },
+    {
+      "task": "骨髓瘤耐药文献整理与分子通路图绘制",
+      "task_context": "协助检索 TGF-β、NF-κB 或泛素化调控通路的相关文献",
+      "task_purpose": "建立对骨髓瘤耐药克服与小分子干预机制的基本认知",
+      "possible_methods": [
+        "文献摘要整理",
+        "分子通路绘制",
+        "靶向药敏数据记录"
+      ],
+      "possible_output": "分子通路图解与文献笔记",
+      "uncertainty_note": "仅为基于公开论文分析方法的抽象推测，具体安排须视导师与学生实际沟通",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "confidence": "Medium"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "基于公开证据，可能需要生物化学、分子生物学及细胞生物学基础知识。",
+      "evidence_ids": [
+        "E1",
+        "E6"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41419-024-07027-4",
+        "https://life.csu.edu.cn/info/1042/2544.htm"
+      ],
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于公开论文路线，阅读英文科研文献与掌握基础数据统计分析方法将有所帮助。",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41419-024-07027-4",
+        "https://doi.org/10.1016/j.biomaterials.2023.122096"
+      ],
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于公开文献，可能需要补充多发性骨髓瘤生物学、蛋白质去泛素化与纳米递送概念，建议从梳理代表性论文路线开始。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1038/s41419-024-07027-4",
+      "https://doi.org/10.1038/s41388-024-03245-4"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E3"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "阅读多发性骨髓瘤及肿瘤耐药机制代表性论文",
+        "学习生物化学与细胞培养基础概念"
+      ],
+      "possible_outputs": [
+        "文献阅读笔记",
+        "分子通路示意图"
+      ],
+      "uncertainty_note": "为基于技术栈推测的通用成长框架，非具体承诺",
+      "evidence_ids": [
+        "E1",
+        "E6"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "协助整理表达数据与耐药靶点文献",
+        "参与组会文献讨论"
+      ],
+      "possible_outputs": [
+        "数据整理表格",
+        "组会报告 PPT"
+      ],
+      "uncertainty_note": "任务与进度取决于个人投入与实际课题需求",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "本页面仅包含基于中南大学生命科学学院官方主页及正式出版论文合成的学术信息。不包含任何导师性格、实验室氛围、具体名额、经费、招生承诺或毕业保证。具体的科研任务与指导安排需由学生与导师通过官方渠道直接沟通确定。",
+  "update_status": "verified",
+  "data_status_note": "官方身份与研究证据已完成结构化核验；当前资料仍待项目负责人完成人工发布审核。",
+  "search_keywords": [
+    "刘静",
+    "中南大学",
+    "生物化学与分子生物学系",
+    "多发性骨髓瘤",
+    "单细胞测序",
+    "TRIB3",
+    "BCMA"
+  ],
+  "tags": [
+    "多发性骨髓瘤",
+    "单细胞测序",
+    "去泛素化",
+    "肿瘤耐药"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/liu-jing.md"
+}

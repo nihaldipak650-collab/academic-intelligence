@@ -1,0 +1,553 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "tan-jieqiong",
+  "record_created_at": "2026-08-02",
+  "migrated_at": null,
+  "name_zh": {
+    "value": "谭洁琼",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": null,
+    "value_en": null,
+    "source_url": null,
+    "source_ref": null,
+    "source_authority": null,
+    "last_verified_at": null,
+    "missing_status": "no_public_information"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院遗传学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "博士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-01",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2562.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+      "source_ref": "evidence-manifest-v1.json#E6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-01",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "神经退行性疾病中蛋白质异常聚集机制；溶酶体清除异常聚集蛋白与药物发现；线粒体、溶酶体功能和神经疾病机制。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2562.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "异常蛋白聚集与溶酶体清除",
+      "explanation_zh": "基于公开论文，可把这一方向理解为寻找影响α-突触核蛋白寡聚体降解的基因与细胞通路，并研究内体—溶酶体系统的作用。",
+      "undergraduate_meaning": "本科阶段可能先从蛋白稳态、细胞器功能和筛选结果的证据链入手。",
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "神经退行性疾病的遗传与细胞机制",
+      "explanation_zh": "依据公开论文，该主题可能同时关注人群中的PSAP变异线索，以及ATP13A2参与自噬体—溶酶体融合的细胞机制。",
+      "undergraduate_meaning": "需要区分人群关联证据与细胞机制证据，避免相互替代。",
+      "evidence_ids": [
+        "E2",
+        "E3"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "遗传变异与疾病表型",
+      "explanation_zh": "基于已采用论文，还可看到甲羟戊酸激酶新突变与播散性浅表性光化性汗孔角化症的遗传研究案例。",
+      "undergraduate_meaning": "可用于学习变异证据、疾病表型和因果措辞之间的边界。",
+      "evidence_ids": [
+        "E4"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开研究，哪些基因可能影响α-突触核蛋白寡聚体的降解，TSPAN3相关内体—溶酶体通路可能处于什么位置？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开论文，ATP13A2可能如何促进HDAC6募集并影响自噬体—溶酶体融合？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1083/jcb.201804165"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于大队列研究，PSAP变异可能与神经退行性疾病风险呈现怎样的关联，需要哪些复核？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1093/brain/awaa391"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开病例与遗传证据，甲羟戊酸激酶新突变可能怎样与相应皮肤病表型联系？",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+      ],
+      "evidence_ids": [
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "可能涉及全基因组CRISPR-Cas9敲除筛选及候选基因验证。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及蛋白聚集、内体—溶酶体运输、自噬体—溶酶体融合和细胞成像指标。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5",
+        "https://doi.org/10.1083/jcb.201804165"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及大样本人群变异分析、基因型—表型比较与遗传证据解释。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1093/brain/awaa391",
+        "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于公开论文，细胞机制路线可能先用无偏筛选获得候选基因，再进行通路与表型验证。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "溶酶体机制研究随后可能比较蛋白降解、细胞器定位和融合过程中的关键读出。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5",
+        "https://doi.org/10.1083/jcb.201804165"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "遗传研究路线可能从变异发现与质量控制开始，再比较人群或家系表型并限制因果推断。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1093/brain/awaa391",
+        "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E6"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "仍需用户人工审核；未选择featured论文。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "整理CRISPR筛选到机制验证的证据链",
+      "task_context": "基于TSPAN3论文，可能拆解筛选命中、候选验证和蛋白降解表型之间的关系。",
+      "task_purpose": "理解无偏筛选结果如何进入机制实验。",
+      "possible_methods": [
+        "提取筛选步骤",
+        "记录关键对照",
+        "整理候选验证指标"
+      ],
+      "possible_output": "筛选—验证流程图",
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "比较两条溶酶体相关机制",
+      "task_context": "依据TSPAN3和ATP13A2论文，可能比较内体—溶酶体通路与自噬体—溶酶体融合的不同读出。",
+      "task_purpose": "建立细胞器过程、蛋白降解和疾病机制的对应关系。",
+      "possible_methods": [
+        "整理蛋白与细胞器节点",
+        "比较实验表型",
+        "标注直接与间接证据"
+      ],
+      "possible_output": "机制比较表",
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "复核遗传变异研究的结论边界",
+      "task_context": "基于PSAP队列和甲羟戊酸激酶突变论文，可能比较人群研究与疾病变异报告的证据结构。",
+      "task_purpose": "练习区分关联、分离证据与功能解释。",
+      "possible_methods": [
+        "记录样本与变异类型",
+        "比较表型定义",
+        "检查结论措辞"
+      ],
+      "possible_output": "遗传证据核对卡片",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "建议准备细胞生物学、遗传学、蛋白稳态和神经生物学的基础概念。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5",
+        "https://doi.org/10.1093/brain/awaa391",
+        "https://doi.org/10.1083/jcb.201804165"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能需要理解CRISPR筛选、溶酶体、自噬和细胞成像的基本读出。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1007/s12035-023-03495-5",
+        "https://doi.org/10.1083/jcb.201804165"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "若处理遗传证据，建议掌握变异注释、队列比较和基础统计。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://doi.org/10.1093/brain/awaa391",
+        "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于这些公开论文，入门成本可能来自蛋白聚集与细胞器机制、CRISPR筛选以及人群遗传证据三类方法语言的衔接。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://doi.org/10.1007/s12035-023-03495-5",
+      "https://doi.org/10.1093/brain/awaa391",
+      "https://doi.org/10.1083/jcb.201804165",
+      "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习蛋白稳态与溶酶体基础",
+        "认识常见遗传变异术语",
+        "阅读细胞机制图"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "机制图注释"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "复核一条候选基因证据链",
+        "整理一种细胞器表型",
+        "比较一组遗传结论"
+      ],
+      "possible_outputs": [
+        "证据表",
+        "实验读出清单",
+        "变异摘要"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确边界下提出一个蛋白清除或变异解释问题",
+        "设计可证伪的比较方案"
+      ],
+      "possible_outputs": [
+        "小型研究方案",
+        "带限制说明的分析报告"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+  "update_status": "verified",
+  "summary": {
+    "text": "官方方向聚焦神经退行性疾病中的异常蛋白聚集、溶酶体清除及细胞器功能；基于已采用论文，还可看到CRISPR筛选、PSAP人群变异、ATP13A2相关融合机制和甲羟戊酸激酶疾病变异等证据。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1007/s12035-023-03495-5",
+      "https://doi.org/10.1093/brain/awaa391",
+      "https://doi.org/10.1083/jcb.201804165",
+      "https://pubmed.ncbi.nlm.nih.gov/30597534/"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "身份、论文与官方来源已完成机械核验，但人工身份审核、featured选择和发布授权仍待用户完成。",
+  "search_keywords": [
+    "alpha-synuclein oligomers",
+    "TSPAN3",
+    "CRISPR-Cas9 screening",
+    "endo-lysosome",
+    "ATP13A2",
+    "HDAC6",
+    "autophagosome-lysosome fusion",
+    "PSAP variants",
+    "mevalonate kinase",
+    "protein aggregation"
+  ],
+  "tags": [
+    "遗传学",
+    "神经退行性疾病",
+    "溶酶体",
+    "蛋白质稳态"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/tan-jieqiong.md"
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "guo-hui",
+  "source_scope": "中南大学生命科学学院官方个人主页、公开 ORCID 记录，以及官网五篇代表论文种子对应的正式 DOI、出版社和 PubMed/PMC 页面；candidate_retrieval_lane=chatgpt_web_research。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1172/JCI159806",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/guo-hui-v1.0.4-migration-review.md#guo-hui-e1",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、JCI/PubMed 题名和作者信息一致；Hui Guo 为末位通讯作者，中南大学生命科学学院医学遗传学研究中心地址与官方工作邮箱形成身份桥接。",
+      "title": "GIGYF1 disruption associates with autism and impaired IGF-1R signaling",
+      "publication_year": 2022,
+      "doi": "10.1172/JCI159806",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1126/sciadv.abo7112",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/guo-hui-v1.0.4-migration-review.md#guo-hui-e2",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、Science Advances/PubMed 记录一致；Hui Guo 为末位作者并列为通讯作者，公开记录展示其 ORCID 与中南大学机构信息。",
+      "title": "De novo variants in genes regulating stress granule assembly associate with neurodevelopmental disorders",
+      "publication_year": 2022,
+      "doi": "10.1126/sciadv.abo7112",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.gim.2022.04.013",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/guo-hui-v1.0.4-migration-review.md#guo-hui-e3",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、Genetics in Medicine 记录一致；Hui Guo 为中间作者和通讯作者，公开记录列出中南大学生命科学学院医学遗传学研究中心。",
+      "title": "De novo variants in the PABP domain of PABPC1 lead to developmental delay",
+      "publication_year": 2022,
+      "doi": "10.1016/j.gim.2022.04.013",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.ajhg.2020.10.002",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/guo-hui-v1.0.4-migration-review.md#guo-hui-e4",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、AJHG/PubMed 记录一致；Hui Guo 为第一作者、共同第一作者和通讯作者，中南大学机构信息一致。",
+      "title": "NCKAP1 Disruptive Variants Lead to a Neurodevelopmental Disorder with Core Features of Autism",
+      "publication_year": 2020,
+      "doi": "10.1016/j.ajhg.2020.10.002",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1126/sciadv.aax2166",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/guo-hui-v1.0.4-migration-review.md#guo-hui-e5",
+      "last_verified_at": "2026-08-03",
+      "notes": "学院官网代表论文种子与正式 DOI、Science Advances/PubMed 记录一致；Hui Guo 为第一作者和通讯作者，中南大学机构及固定共同作者形成身份桥接。",
+      "title": "Disruptive variants of CSDE1 associate with autism and interfere with neuronal development and synaptic transmission",
+      "publication_year": 2019,
+      "doi": "10.1126/sciadv.aax2166",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2565.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/guo-hui-v1.0.4-migration-review.md#guo-hui-official-profile",
+      "last_verified_at": "2026-08-03",
+      "notes": "中南大学生命科学学院官方个人主页；只采用身份、院系、职称、导师类型、研究方向、官方工作邮箱和五篇代表论文种子，不迁移基金数量、奖项、期刊影响因子或宣传性评价。",
+      "page_title": "郭辉-中南大学生命科学学院",
+      "profile_name": "郭辉",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院遗传学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "郭辉为中南大学生命科学学院遗传学系研究员。",
+          "fact_category": "professional_title",
+          "source_section": "师资队伍/个人简介",
+          "source_anchor": "职称与院系",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "官方页面明确记载导师类型为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "师资队伍",
+          "source_anchor": "类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "利用基因组学和遗传统计解析孤独症遗传结构，关注风险变异、非编码变异及遗传调控机制。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[1]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "利用医学遗传学和临床表型组学研究孤独症及相关神经发育障碍的高风险基因、基因型-表型关系和分子分型。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[2]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "综合分子、细胞、神经生物学和功能基因组学研究神经发育障碍的共性分子机制。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[3]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "summary",
+            "prerequisite_skills",
+            "learning_cost",
+            "generic_growth_path"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "fact_text": "构建神经发育障碍基因组信息解读系统，研究早期诊断和风险预警应用。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "方向[4]",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_directions_plain_language",
+            "research_questions",
+            "main_techniques",
+            "research_workflow",
+            "summary"
+          ]
+        },
+        {
+          "fact_id": "F7",
+          "fact_text": "官方工作邮箱为 guohui@sklmg.edu.cn。",
+          "fact_category": "official_contact",
+          "source_section": "个人简介",
+          "source_anchor": "Email",
+          "supported_public_fields": [
+            "contact"
+          ]
+        },
+        {
+          "fact_id": "F8",
+          "fact_text": "官方主页列出五篇代表论文，分别涉及GIGYF1、应激颗粒、PABPC1、NCKAP1和CSDE1。",
+          "fact_category": "representative_publication_seed",
+          "source_section": "代表论文",
+          "source_anchor": "代表论文[1]-[5]",
+          "supported_public_fields": [
+            "summary"
+          ]
+        }
+      ]
+    }
+  ]
+}

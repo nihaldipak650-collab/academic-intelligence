@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "wang-shixiang",
+  "source_scope": "学院官方个人页、正式期刊/DOI页面与可复核书目信息；候选检索由 Luna web research 完成",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-024-45479-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#wang-shixiang-e1",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=first，is_co_first=true，is_corresponding=false；人工身份与发布授权仍 pending。正式角色来源：https://www.nature.com/articles/s41467-024-45479-6",
+      "title": "Machine learning-based extrachromosomal DNA identification in large-scale cohorts reveals its clinical implications in cancer",
+      "publication_year": 2024,
+      "doi": "10.1038/s41467-024-45479-6",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1136/jitc-2023-008040",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#wang-shixiang-e2",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=first，is_co_first=false，is_corresponding=false；人工身份与发布授权仍 pending。正式角色来源：https://doi.org/10.1136/jitc-2023-008040",
+      "title": "TCCIA: a comprehensive resource for exploring CircRNA in cancer immunotherapy",
+      "publication_year": 2024,
+      "doi": "10.1136/jitc-2023-008040",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://www.nature.com/articles/s42003-024-06891-2",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#wang-shixiang-e3",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=last，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://www.nature.com/articles/s42003-024-06891-2",
+      "title": "Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny",
+      "publication_year": 2024,
+      "doi": "10.1038/s42003-024-06891-2",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/bioinformatics/btab561",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#wang-shixiang-e4",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=first，is_co_first=true，is_corresponding=false；人工身份与发布授权仍 pending。正式角色来源：https://academic.oup.com/bioinformatics/article/38/2/527/6369562",
+      "title": "UCSCXenaShiny: an R/CRAN package for interactive analysis of UCSC Xena data",
+      "publication_year": 2022,
+      "doi": "10.1093/bioinformatics/btab561",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1371/journal.pgen.1009557",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#wang-shixiang-e5",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=first，is_co_first=false，is_corresponding=false；人工身份与发布授权仍 pending。正式角色来源：https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009557",
+      "title": "Copy number signature analysis tool and its application in prostate cancer reveals distinct mutational processes and clinical outcomes",
+      "publication_year": 2021,
+      "doi": "10.1371/journal.pgen.1009557",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#wang-shixiang-official-profile",
+      "last_verified_at": "2026-08-01",
+      "notes": "中南大学生命科学学院官方个人主页。",
+      "page_title": "王诗翔-中南大学生命科学学院",
+      "profile_name": "王诗翔",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物医学信息学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "王诗翔为中南大学生命科学学院生物医学信息学系特聘副教授、硕导导师。",
+          "fact_category": "professional_title",
+          "source_anchor": "个人简介",
+          "supported_public_fields": [
+            "position",
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "肿瘤（免疫治疗）组学大数据资源整合与数据挖掘；肿瘤生物信息学算法与工具研究与应用；肿瘤基因组学、多组学整合、单细胞组学与机器学习",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向",
+          "supported_public_fields": [
+            "research_directions_original"
+          ]
+        }
+      ]
+    }
+  ]
+}

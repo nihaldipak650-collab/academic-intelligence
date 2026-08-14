@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>导师目录 · C01</title>
+<link rel="stylesheet" href="css/base.css">
+<script src="assets/data.js"></script>
+</head>
+<body class="route-overview" data-variant="c01">
+<header class="topbar">
+  <a class="brand" href="#/overview"><b>Academic <em>Intelligence</em></b><span>· 导师目录</span></a>
+  <nav class="modeswitch" aria-label="浏览模式">
+    <button id="mode-overview" aria-pressed="true">导师总览</button>
+    <button id="mode-category" aria-pressed="false">分类浏览</button>
+  </nav>
+  <div class="reviewtoggle" aria-label="评审 / 公开">
+    <button id="rev-on" aria-pressed="true">评审 13</button>
+    <button id="rev-off" aria-pressed="false">公开 11</button>
+  </div>
+  <span class="tb-note" id="tb-note"></span>
+</header>
+
+<noscript>
+  <div class="noscript">本评审站需要启用 JavaScript 以渲染导师目录（内容由真实数据绑定生成）。</div>
+</noscript>
+
+<main class="shell">
+  <section class="view" id="view-overview"><div id="ov-list"></div></section>
+  <section class="view" id="view-category"><div id="cat-list"></div></section>
+  <section class="view" id="view-profile"><div id="prof-list"></div></section>
+</main>
+
+<footer class="shell site-foot">
+  <span>Academic Intelligence · 导师目录</span>
+  <span>导师档案 <b id="foot-count">—</b></span>
+  <span>2026 · 评审版</span>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

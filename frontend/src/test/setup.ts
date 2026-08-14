@@ -24,10 +24,3 @@ Object.defineProperty(window, "scrollTo", {
   writable: true,
   value: () => undefined,
 });
-
-Object.defineProperty(Element.prototype, "scrollIntoView", {
-  writable: true,
-  value(this: Element) {
-    (this as HTMLElement).focus();
-  },
-});

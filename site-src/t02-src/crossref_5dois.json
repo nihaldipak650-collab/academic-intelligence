@@ -1,0 +1,395 @@
+{
+ "10.1172/jci.insight.177032": {
+  "title": "Intergenic sequences harboring potential enhancer elements contribute to Axenfeld-Rieger syndrome by regulating PITX2",
+  "year": 2024,
+  "container": "JCI Insight",
+  "type": "journal-article",
+  "authors": [
+   {
+    "name": "Yizheng Jiang",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Yu Peng",
+    "orcid": "https://orcid.org/0000-0003-4021-3003",
+    "affiliations": [
+     "Department of Medical Genetics, The Affiliated Children’s Hospital of Xiangya School of Medicine, Central South University, Changsha, China."
+    ]
+   },
+   {
+    "name": "Qi Tian",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Zhe Cheng",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Bei Feng",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Junping Hu",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Lu Xia",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Hui Guo",
+    "orcid": "https://orcid.org/0000-0002-1570-2545",
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   },
+   {
+    "name": "Kun Xia",
+    "orcid": null,
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and",
+     "MOE Key Laboratory of Rare Pediatric Diseases, Hengyang Medical School, University of South China, Hengyang, China."
+    ]
+   },
+   {
+    "name": "Liang Zhou",
+    "orcid": null,
+    "affiliations": [
+     "Department of Ophthalmology, The Second Xiangya Hospital, Central South University, Changsha, China."
+    ]
+   },
+   {
+    "name": "Zhengmao Hu",
+    "orcid": "https://orcid.org/0000-0002-3921-8205",
+    "affiliations": [
+     "MOE Key Laboratory of Rare Pediatric Diseases & Hunan Key Laboratory of Medical Genetics of the School of Life Sciences and"
+    ]
+   }
+  ],
+  "hu_zhengmao_present": true
+ },
+ "10.1007/s11684-023-1005-y": {
+  "title": "Association of TRMT2B gene variants with juvenile amyotrophic lateral sclerosis",
+  "year": 2023,
+  "container": "Frontiers of Medicine",
+  "type": "journal-article",
+  "authors": [
+   {
+    "name": "Yanling Liu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Xi He",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Yanchun Yuan",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Bin Li",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Zhen Liu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Wanzhen Li",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Kaixuan Li",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Shuo Tan",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Quan Zhu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Zhengyan Tang",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Feng Han",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Ziqiang Wu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Lu Shen",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Hong Jiang",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Beisha Tang",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Jian Qiu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Zhengmao Hu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Junling Wang",
+    "orcid": null,
+    "affiliations": []
+   }
+  ],
+  "hu_zhengmao_present": true
+ },
+ "10.1136/jmedgenet-2022-108425": {
+  "title": "<i>GLRA2</i>gene mutations cause high myopia in humans and mice",
+  "year": 2022,
+  "container": "Journal of Medical Genetics",
+  "type": "journal-article",
+  "authors": [
+   {
+    "name": "Qi Tian",
+    "orcid": "https://orcid.org/0000-0003-0798-2759",
+    "affiliations": []
+   },
+   {
+    "name": "Ping Tong",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Gong Chen",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Meichun Deng",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Tian'e Cai",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Runyi Tian",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Zimin Zhang",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Kun Xia",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Zhengmao Hu",
+    "orcid": "https://orcid.org/0000-0002-3921-8205",
+    "affiliations": []
+   }
+  ],
+  "hu_zhengmao_present": true
+ },
+ "10.1007/s00439-021-02429-2": {
+  "title": "Case series of congenital pseudarthrosis of the tibia unfulfilling neurofibromatosis type 1 diagnosis: 21% with somatic NF1 haploinsufficiency in the periosteum",
+  "year": 2022,
+  "container": "Human Genetics",
+  "type": "journal-article",
+  "authors": [
+   {
+    "name": "Yu Zheng",
+    "orcid": "https://orcid.org/0000-0002-2511-961X",
+    "affiliations": []
+   },
+   {
+    "name": "Guanghui Zhu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Yaoxi Liu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Weihua Zhao",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Yongjia Yang",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Zhenqing Luo",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Yuyan Fu",
+    "orcid": null,
+    "affiliations": []
+   },
+   {
+    "name": "Haibo Mei",
+    "orcid": "https://orcid.org/0000-0002-9434-1716",
+    "affiliations": []
+   },
+   {
+    "name": "Zhengmao Hu",
+    "orcid": null,
+    "affiliations": []
+   }
+  ],
+  "hu_zhengmao_present": true
+ },
+ "10.1093/hmg/ddab233": {
+  "title": "The autism risk gene <i>CNTN4</i> modulates dendritic spine formation",
+  "year": 2021,
+  "container": "Human Molecular Genetics",
+  "type": "journal-article",
+  "authors": [
+   {
+    "name": "Rongjuan Zhao",
+    "orcid": null,
+    "affiliations": [
+     "Center for Medical Genetics & Hunan Key Laboratory of Medical Genetics, School of Life Sciences, Central South University, Changsha, Hunan 410008, China"
+    ]
+   },
+   {
+    "name": "Tengfei Zhu",
+    "orcid": null,
+    "affiliations": [
+     "Department of Critical Care Medicine, The Third people’s hospital of Shenzhen, The Second Affiliated Hospital of Southern University of Science and Technology, Shenzhen 518000, China",
+     "Department of Critical Care Medicine, Zhongda Hospital, School of Medicine, Southeast University, Nanjing 210000, China"
+    ]
+   },
+   {
+    "name": "Qiong Liu",
+    "orcid": null,
+    "affiliations": [
+     "Department of Neurology & Key Laboratory of Hunan Province in Neurodegenerative Disorders, Xiangya Hospital, Central South University, Changsha 410008, China"
+    ]
+   },
+   {
+    "name": "Qi Tian",
+    "orcid": null,
+    "affiliations": [
+     "Center for Medical Genetics & Hunan Key Laboratory of Medical Genetics, School of Life Sciences, Central South University, Changsha, Hunan 410008, China"
+    ]
+   },
+   {
+    "name": "Meng Wang",
+    "orcid": null,
+    "affiliations": [
+     "Center for Medical Genetics & Hunan Key Laboratory of Medical Genetics, School of Life Sciences, Central South University, Changsha, Hunan 410008, China"
+    ]
+   },
+   {
+    "name": "Jingjing Chen",
+    "orcid": null,
+    "affiliations": [
+     "Reproductive Medicine Center, Xiangya Hospital, Central South University, Changsha, Hunan 410008, China"
+    ]
+   },
+   {
+    "name": "Dali Tong",
+    "orcid": null,
+    "affiliations": [
+     "Center for Excellence in Brain Science and Intelligence Technology, Institute of Neuroscience, State Key Laboratory of Neuroscience, Chinese Academy of Sciences, Shanghai, 200031, China"
+    ]
+   },
+   {
+    "name": "Bin Yu",
+    "orcid": null,
+    "affiliations": [
+     "Center for Excellence in Brain Science and Intelligence Technology, Institute of Neuroscience, State Key Laboratory of Neuroscience, Chinese Academy of Sciences, Shanghai, 200031, China"
+    ]
+   },
+   {
+    "name": "Hui Guo",
+    "orcid": null,
+    "affiliations": [
+     "Center for Medical Genetics & Hunan Key Laboratory of Medical Genetics, School of Life Sciences, Central South University, Changsha, Hunan 410008, China",
+     "Hunan Key Laboratory of Animal Models for Human Diseases, Central South University, Changsha, Hunan 410008, China"
+    ]
+   },
+   {
+    "name": "Kun Xia",
+    "orcid": null,
+    "affiliations": [
+     "Center for Medical Genetics & Hunan Key Laboratory of Medical Genetics, School of Life Sciences, Central South University, Changsha, Hunan 410008, China",
+     "Hunan Key Laboratory of Animal Models for Human Diseases, Central South University, Changsha, Hunan 410008, China",
+     "Center for Excellence in Brain Science and Intelligences Technology (CEBSIT), CAS Key Laboratory of Primate Neurobiology, Chinese Academy of Sciences, Shanghai 200031, China"
+    ]
+   },
+   {
+    "name": "Zilong Qiu",
+    "orcid": null,
+    "affiliations": [
+     "Center for Excellence in Brain Science and Intelligence Technology, Institute of Neuroscience, State Key Laboratory of Neuroscience, Chinese Academy of Sciences, Shanghai, 200031, China",
+     "Center for Excellence in Brain Science and Intelligences Technology (CEBSIT), CAS Key Laboratory of Primate Neurobiology, Chinese Academy of Sciences, Shanghai 200031, China"
+    ]
+   },
+   {
+    "name": "Zhengmao Hu",
+    "orcid": null,
+    "affiliations": [
+     "Center for Medical Genetics & Hunan Key Laboratory of Medical Genetics, School of Life Sciences, Central South University, Changsha, Hunan 410008, China",
+     "Hunan Key Laboratory of Animal Models for Human Diseases, Central South University, Changsha, Hunan 410008, China"
+    ]
+   }
+  ],
+  "hu_zhengmao_present": true
+ }
+}

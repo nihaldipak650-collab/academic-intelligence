@@ -50,20 +50,12 @@ export function PlatformHeader() {
             >
               常用服务
             </a>
-            <a
-              href="#workspace"
-              onClick={(event) => handleNavClick(event, "workspace")}
-            >
-              学生工作台
-            </a>
-            <Link to="/updates" onClick={() => setMenuOpen(false)}>
-              更新日志
-            </Link>
+            <a href="updates.html">更新日志</a>
           </nav>
           <div className="nav-actions">
-            <Link className="nav-ai" to="/advisors">
+            <a className="nav-ai" href="academic/">
               Academic Intelligence <span aria-hidden="true">↗</span>
-            </Link>
+            </a>
             <button
               className="menu-button"
               type="button"

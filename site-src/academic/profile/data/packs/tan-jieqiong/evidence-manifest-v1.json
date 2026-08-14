@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "tan-jieqiong",
+  "source_scope": "学院官方个人页、正式期刊/DOI页面与可复核书目信息；候选检索由 Luna web research 完成",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s12035-023-03495-5",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#tan-jieqiong-e1",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=last，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://link.springer.com/article/10.1007/s12035-023-03495-5",
+      "title": "Genome-wide CRISPR-Cas9 Knockout Screening Reveals a TSPAN3-mediated Endo-lysosome Pathway Regulating the Degradation of alpha-Synuclein Oligomers",
+      "publication_year": 2023,
+      "doi": "10.1007/s12035-023-03495-5",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/brain/awaa391",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#tan-jieqiong-e2",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=middle，is_co_first=false，is_corresponding=false；人工身份与发布授权仍 pending。正式角色来源：https://academic.oup.com/brain/article/144/2/370/6025583",
+      "title": "PSAP variants in Parkinson's disease: a large cohort study in Chinese mainland population",
+      "publication_year": 2021,
+      "doi": "10.1093/brain/awaa391",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1083/jcb.201804165",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#tan-jieqiong-e3",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=middle，is_co_first=false，is_corresponding=false；人工身份与发布授权仍 pending。正式角色来源：https://rupress.org/jcb/article/218/1/267/120287/ATP13A2-facilitates-HDAC6-recruitment-to-lysosome",
+      "title": "ATP13A2 facilitates HDAC6 recruitment to lysosome to promote autophagosome-lysosome fusion",
+      "publication_year": 2019,
+      "doi": "10.1083/jcb.201804165",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/30597534/",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#tan-jieqiong-e4",
+      "last_verified_at": "2026-08-01",
+      "notes": "作者角色最终复核：正式论文作者栏、等贡献声明与通讯栏已复核；author_position=last，is_co_first=false，is_corresponding=true；人工身份与发布授权仍 pending。正式角色来源：https://pubmed.ncbi.nlm.nih.gov/30597534/",
+      "title": "Novel mutations in mevalonate kinase cause disseminated superficial actinic porokeratosis",
+      "publication_year": 2019,
+      "doi": "10.1111/bjd.17596",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate",
+        "identity_pending"
+      ],
+      "reason": "正式 DOI 未在本轮锁定，保留为候选待人工核对",
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#tan-jieqiong-e5",
+      "last_verified_at": "2026-08-01",
+      "notes": "学院官方个人页代表论文种子；标题、年份、作者角色及机构桥接需按期刊页复核。期刊：Molecular Neurobiology。",
+      "title": "CELF2 Deficiency Demonstrates Autism-Like Behaviors and Interferes with Late Development of Cortical Neurons in Mice",
+      "publication_year": 2024,
+      "doi": null,
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": false,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2562.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-03-v1.0.4-review.md#tan-jieqiong-official-profile",
+      "last_verified_at": "2026-08-01",
+      "notes": "中南大学生命科学学院官方个人主页。",
+      "page_title": "谭洁琼-中南大学生命科学学院",
+      "profile_name": "谭洁琼",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院遗传学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "谭洁琼为中南大学生命科学学院遗传学系教授、博导导师。",
+          "fact_category": "professional_title",
+          "source_anchor": "个人简介",
+          "supported_public_fields": [
+            "position",
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "神经退行性疾病中蛋白质异常聚集机制；溶酶体清除异常聚集蛋白与药物发现；线粒体、溶酶体功能和神经疾病机制",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向",
+          "supported_public_fields": [
+            "research_directions_original"
+          ]
+        }
+      ]
+    }
+  ]
+}

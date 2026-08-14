@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "li-xing",
+  "source_scope": "正式Roster、学院官方主页与经官网题名种子核对的Crossref/DOI/出版社/PubMed等正式来源；candidate_retrieval_lane=gpt_5_6_sol_web_research。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.jconrel.2025.114180",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-05-v1.0.4-review.md#li-xing-e1",
+      "last_verified_at": "2026-08-02",
+      "notes": "官网题名种子与Crossref/正式来源核对；完整作者集合已复核；author_position=last，is_co_first=false，is_corresponding=true；不以作者排序推断未明确角色。",
+      "title": "A hydrogel-based nanoparticles sustained-release system selectively targeting pro-inflammatory microglia for spinal cord injury repair",
+      "publication_year": 2025,
+      "doi": "10.1016/j.jconrel.2025.114180",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1021/acsnano.4c16875",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-05-v1.0.4-review.md#li-xing-e2",
+      "last_verified_at": "2026-08-02",
+      "notes": "官网题名种子与Crossref/正式来源核对；完整作者集合已复核；author_position=last，is_co_first=false，is_corresponding=true；不以作者排序推断未明确角色。",
+      "title": "Neuronal Dual-Specificity Phosphatase 26 Inhibition via Reactive-Oxygen-Species Responsive Mesoporous-Silica-Loaded Hydrogel for Spinal Cord Injury Repair",
+      "publication_year": 2025,
+      "doi": "10.1021/acsnano.4c16875",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/adhm.202301662",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-05-v1.0.4-review.md#li-xing-e3",
+      "last_verified_at": "2026-08-02",
+      "notes": "官网题名种子与Crossref/正式来源核对；完整作者集合已复核；author_position=last，is_co_first=false，is_corresponding=true；不以作者排序推断未明确角色。",
+      "title": "Functional Hydrogel Co‐Remolding Migration and Differentiation Microenvironment for Severe Spinal Cord Injury Repair",
+      "publication_year": 2024,
+      "doi": "10.1002/adhm.202301662",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": true,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.biomaterials.2017.05.027",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-05-v1.0.4-review.md#li-xing-e4",
+      "last_verified_at": "2026-08-02",
+      "notes": "官网题名种子与Crossref/正式来源核对；完整作者集合已复核；author_position=first，is_co_first=true，is_corresponding=false；不以作者排序推断未明确角色。",
+      "title": "Cetuximab modified collagen scaffold directs neurogenesis of injury-activated endogenous neural stem cells for acute spinal cord injury repair",
+      "publication_year": 2017,
+      "doi": "10.1016/j.biomaterials.2017.05.027",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": true,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2538.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "summary"
+      ],
+      "repository_source_ref": "docs/advisor-batches/batch-05-v1.0.4-review.md#li-xing-official-profile",
+      "last_verified_at": "2026-08-02",
+      "notes": "中南大学生命科学学院官方个人主页。",
+      "page_title": "李星-中南大学生命科学学院",
+      "profile_name": "李星",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物化学与分子生物学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "李星为中南大学生命科学学院教授。",
+          "fact_category": "professional_title",
+          "source_anchor": "师资队伍/个人简介",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "官方页面明确记载导师类型为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_anchor": "师资队伍/类型",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "脊髓损伤微环境、神经再生、内源神经干/前体细胞及功能生物支架。",
+          "fact_category": "research_direction",
+          "source_anchor": "主要研究方向",
+          "supported_public_fields": [
+            "research_directions_original",
+            "summary"
+          ]
+        }
+      ]
+    }
+  ]
+}

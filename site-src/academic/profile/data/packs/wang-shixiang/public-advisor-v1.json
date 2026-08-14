@@ -1,0 +1,596 @@
+{
+  "schema_version": "1.0.4",
+  "advisor_id": "wang-shixiang",
+  "record_created_at": "2026-08-02",
+  "migrated_at": null,
+  "name_zh": {
+    "value": "王诗翔",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": null,
+    "value_en": null,
+    "source_url": null,
+    "source_ref": null,
+    "source_authority": null,
+    "last_verified_at": null,
+    "missing_status": "no_public_information"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院生物医学信息学系",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+    "source_ref": "evidence-manifest-v1.json#E6",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "特聘副教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+    "source_ref": "evidence-manifest-v1.json#E6:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-08-01",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "硕士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-01",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2493.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2493.htm",
+      "source_ref": "evidence-manifest-v1.json#E6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-08-01",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "肿瘤（免疫治疗）组学大数据资源整合与数据挖掘；肿瘤生物信息学算法与工具研究与应用；肿瘤基因组学、多组学整合、单细胞组学与机器学习。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2493.htm"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "肿瘤组学大数据与算法工具",
+      "explanation_zh": "基于公开论文，可把这一方向理解为整合大规模肿瘤组学数据，并开发可复用的分析方法或软件工具。",
+      "undergraduate_meaning": "本科阶段可能先从理解数据结构、复现公开分析和使用现成工具开始。",
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "肿瘤免疫治疗中的环状RNA资源",
+      "explanation_zh": "依据公开论文，该主题可能围绕汇集癌症免疫治疗相关的环状RNA信息并支持查询与比较。",
+      "undergraduate_meaning": "适合关注数据库字段、证据注释和可重复检索流程。",
+      "evidence_ids": [
+        "E2"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    },
+    {
+      "term_original": "肿瘤基因组结构变化",
+      "explanation_zh": "基于公开论文，可关注染色体外DNA和拷贝数特征如何被计算识别，以及它们与癌症临床特征的关联。",
+      "undergraduate_meaning": "需要把基因组数据处理、统计建模与结果边界区分开。",
+      "evidence_ids": [
+        "E1",
+        "E5"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "基于公开研究，大规模队列中可能如何识别染色体外DNA，并评估其与癌症临床特征的关系？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开论文，如何把癌症免疫治疗相关环状RNA信息组织成可检索、可比较的资源？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1136/jitc-2023-008040"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "基于已发表工具论文，多组学数据可能如何通过交互式分析支持个体化肿瘤研究问题？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1093/bioinformatics/btab561"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "依据公开研究，拷贝数特征可能怎样用于区分突变过程并分析临床结局？",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "可能涉及面向大规模队列的机器学习识别与临床关联分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及环状RNA数据资源整合、注释、检索与比较。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1136/jitc-2023-008040"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能使用R语言工具和UCSC Xena数据开展交互式多组学分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1093/bioinformatics/btab561"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能涉及拷贝数特征提取、模式比较与结局关联分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "基于公开论文，流程可能从队列或公共组学数据的整理与质量核查开始。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6",
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1093/bioinformatics/btab561",
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "随后可按研究问题进行特征识别、资源注释或交互式计算分析。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6",
+        "https://doi.org/10.1136/jitc-2023-008040",
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1093/bioinformatics/btab561",
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "最后可能通过独立数据比较、临床变量关联或可复现报告检查结论边界。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6",
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "featured_publication_evidence_ids": [],
+  "featured_selection_status": "pending_manual_review",
+  "featured_selection_review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "reviewer_role": null,
+    "selection_criteria": [],
+    "notes": "仍需用户人工审核；未选择featured论文。"
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "复现一个公开肿瘤组学分析示例",
+      "task_context": "基于UCSC Xena相关公开工具论文，可能选择小规模公开数据完成可重复分析。",
+      "task_purpose": "理解数据字段、分析步骤与结果可视化之间的关系。",
+      "possible_methods": [
+        "R环境准备",
+        "公开数据字段核对",
+        "脚本运行与图表复核"
+      ],
+      "possible_output": "带说明的复现笔记或小型分析报告",
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "整理环状RNA资源字段与证据",
+      "task_context": "依据TCCIA公开论文，可能围绕资源中的数据类型、注释字段和查询逻辑做结构化整理。",
+      "task_purpose": "练习数据库阅读、字段字典和来源追踪。",
+      "possible_methods": [
+        "阅读资源说明",
+        "整理字段含义",
+        "抽样核对来源"
+      ],
+      "possible_output": "字段说明表或查询示例",
+      "evidence_ids": [
+        "E2"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "task": "比较基因组结构特征的分析思路",
+      "task_context": "基于ecDNA和拷贝数特征论文，可能对不同特征定义、计算输入和临床关联方式做文献级比较。",
+      "task_purpose": "建立从基因组特征到统计结论的证据链意识。",
+      "possible_methods": [
+        "提取方法要点",
+        "比较输入输出",
+        "记录适用边界"
+      ],
+      "possible_output": "方法比较表或流程图",
+      "evidence_ids": [
+        "E1",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "建议准备R或Python中的一种，并具备表格数据处理和基础可视化能力。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6",
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1093/bioinformatics/btab561",
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "可能需要理解基因组、转录组、拷贝数和环状RNA等基本概念。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6",
+        "https://doi.org/10.1136/jitc-2023-008040",
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "建议掌握基础统计、可重复分析记录和英文论文方法部分的阅读方式。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1038/s41467-024-45479-6",
+        "https://doi.org/10.1136/jitc-2023-008040",
+        "https://www.nature.com/articles/s42003-024-06891-2",
+        "https://doi.org/10.1093/bioinformatics/btab561",
+        "https://doi.org/10.1371/journal.pgen.1009557"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "基于这些公开论文，入门成本可能主要来自肿瘤组学概念、异构数据格式、R/Python分析环境以及统计结果的谨慎解释。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://doi.org/10.1038/s41467-024-45479-6",
+      "https://doi.org/10.1136/jitc-2023-008040",
+      "https://www.nature.com/articles/s42003-024-06891-2",
+      "https://doi.org/10.1093/bioinformatics/btab561",
+      "https://doi.org/10.1371/journal.pgen.1009557"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "学习肿瘤组学基本概念",
+        "熟悉R或Python数据处理",
+        "阅读工具论文的输入输出说明"
+      ],
+      "possible_outputs": [
+        "术语表",
+        "可运行的基础示例"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "复现一项公开数据分析",
+        "核对数据字段与证据来源",
+        "记录参数和失败条件"
+      ],
+      "possible_outputs": [
+        "复现脚本",
+        "字段核对表",
+        "简短结果说明"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "在明确边界下比较一种特征或分析方法",
+        "加入可重复性和敏感性检查"
+      ],
+      "possible_outputs": [
+        "小型分析模块",
+        "带限制说明的报告"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "公共事实仅来自学院官方主页；AI整理仅依据本导师已采用论文证据。不代表实验室真实分工、实际培养方案、当前名额、招募承诺或成果保证。",
+  "update_status": "verified",
+  "summary": {
+    "text": "公开证据显示其工作集中于肿瘤生物信息学与组学数据方法；基于已采用论文，可进一步理解为围绕大规模数据整合、基因组结构特征识别、免疫治疗相关资源和交互式分析工具展开。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://doi.org/10.1038/s41467-024-45479-6",
+      "https://doi.org/10.1136/jitc-2023-008040",
+      "https://www.nature.com/articles/s42003-024-06891-2",
+      "https://doi.org/10.1093/bioinformatics/btab561",
+      "https://doi.org/10.1371/journal.pgen.1009557"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "身份、论文与官方来源已完成机械核验，但人工身份审核、featured选择和发布授权仍待用户完成。",
+  "search_keywords": [
+    "肿瘤生物信息学",
+    "肿瘤组学",
+    "extrachromosomal DNA",
+    "ecDNA",
+    "circRNA",
+    "cancer immunotherapy",
+    "UCSC Xena",
+    "copy number signature",
+    "多组学整合",
+    "机器学习"
+  ],
+  "tags": [
+    "生物医学信息学",
+    "肿瘤组学",
+    "计算生物学",
+    "数据工具"
+  ],
+  "version": "1.0.4",
+  "publication_status": "approved",
+  "report_path": "reports/wang-shixiang.md"
+}

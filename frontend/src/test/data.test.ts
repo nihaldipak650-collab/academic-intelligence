@@ -1,103 +1,115 @@
-import { describe, expect, it, vi } from "vitest";
-import publicAdvisorJson from "../../public/data/advisors.json";
-import { loadAdvisorSnapshot, resolveAdvisorDataMode } from "../data/AdvisorDataContext";
-import {
-  adaptAdvisorCandidates,
-  adaptPublicAdvisorDtoEnvelope,
-  filterAndSortAdvisors,
-  getTagCounts,
-} from "../data/advisorData";
-import { blockedMockIds, mockCandidates } from "../mocks/advisors";
-import { emptyPublicDto, syntheticPublicDto } from "./fixtures/advisors";
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import path from "node:path";
+import { describe, expect, it } from "vitest";
+import advisorJson from "../../public/data/advisors.json";
+import { filterAdvisors } from "../data/advisorData";
+import type { Advisor } from "../types/advisor";
 
-describe("safe public DTO mode", () => {
-  it("loads only the eleven approved real DTO records without mock fallback", () => {
-    expect(publicAdvisorJson.advisorCount).toBe(11);
-    const snapshot = adaptPublicAdvisorDtoEnvelope(publicAdvisorJson);
-    expect(snapshot.mode).toBe("dto");
-    expect(snapshot.advisors.map((advisor) => advisor.id)).toEqual([
-      "chen-miao",
-      "hu-dehua",
-      "li-faxiang",
+interface DtoAdvisor {
+  id: string;
+  nameZh: string;
+  nameEn?: string;
+  summary: unknown;
+  tags: string[];
+  position?: string;
+  institution?: string;
+  quickSummary?: {
+    mainTechniques?: unknown[];
+    undergraduatePaths?: unknown[];
+    coreDirections?: unknown[];
+  };
+  reportPath: string;
+  reportSha256?: string;
+  releaseEligible: boolean;
+  publicationStatus: string;
+  evidenceType: string;
+  hasExperienceEvidence: boolean;
+  experienceCaseCount: number;
+}
+
+const data = advisorJson as unknown as {
+  schemaVersion: number;
+  advisorCount: number;
+  advisors: DtoAdvisor[];
+};
+const frontendRoot = process.cwd();
+const asAdvisors = (list: DtoAdvisor[]): Advisor[] =>
+  list as unknown as Advisor[];
+
+describe("真实导师数据（public DTO · 11 位公开导师）", () => {
+  it("公开导师数量为 11，且 envelope 有效", () => {
+    expect(data.schemaVersion).toBe(1);
+    expect(data.advisorCount).toBe(11);
+    expect(data.advisors).toHaveLength(11);
+    expect(data.advisorCount).toBe(data.advisors.length);
+  });
+
+  it("导师 ID 唯一", () => {
+    const ids = data.advisors.map((advisor) => advisor.id);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it("报告路径唯一且使用相对 URL", () => {
+    const paths = data.advisors.map((advisor) => advisor.reportPath);
+    expect(new Set(paths).size).toBe(paths.length);
+    paths.forEach((reportPath) => {
+      expect(reportPath).toMatch(/^reports\/.+\.md$/);
+      expect(reportPath).not.toMatch(/^[a-z]:\\/i);
+    });
+  });
+
+  it("全部为安全公开 DTO：releaseEligible / 非 review_pending / academic-only / 无学生经历", () => {
+    for (const advisor of data.advisors) {
+      expect(advisor.releaseEligible).toBe(true);
+      expect(advisor.publicationStatus).not.toBe("review_pending");
+      expect(advisor.evidenceType).toBe("academic_only");
+      expect(advisor.hasExperienceEvidence).toBe(false);
+      expect(advisor.experienceCaseCount).toBe(0);
+    }
+  });
+
+  it("公开报告与 DTO 记录的报告哈希一致", () => {
+    for (const advisor of data.advisors) {
+      const name = advisor.reportPath.replace("reports/", "");
+      const publicReport = readFileSync(
+        path.join(frontendRoot, "public", "reports", name),
+        "utf8",
+      );
+      const hash = createHash("sha256").update(publicReport).digest("hex");
+      expect(hash).toBe(advisor.reportSha256);
+    }
+  });
+
+  it("搜索中文姓名能找到公开导师", () => {
+    expect(filterAdvisors(asAdvisors(data.advisors), "李家大", "")[0]?.id).toBe(
       "li-jiada",
-      "li-xing",
-      "liu-jing",
-      "su-haomiao",
-      "tan-jieqiong",
-      "wang-shixiang",
-      "xiang-rong",
-      "zhao-yuetao",
-    ]);
-    expect(snapshot.rejectedCount).toBe(0);
-    expect(snapshot.advisors.some((advisor) => advisor.id.startsWith("demo-"))).toBe(false);
+    );
   });
 
-  it("maps one synthetic DTO record to one complete UI advisor", () => {
-    const snapshot = adaptPublicAdvisorDtoEnvelope(syntheticPublicDto);
-    expect(snapshot.advisors).toHaveLength(1);
-    expect(snapshot.advisors[0]).toEqual(expect.objectContaining({
-      name: "合成批准导师",
-      publicRoles: ["合成研究导师"],
-      publicationStatus: "approved",
-    }));
-    expect(snapshot.advisors[0].researchWorkflow).toHaveLength(1);
+  it("搜索技术手段（冷冻电镜）能找到李发祥", () => {
+    expect(
+      filterAdvisors(asAdvisors(data.advisors), "冷冻电镜", "").some(
+        (advisor) => advisor.id === "li-faxiang",
+      ),
+    ).toBe(true);
   });
 
-  it("fails closed for malformed DTO envelopes", () => {
-    expect(() => adaptPublicAdvisorDtoEnvelope({ ...emptyPublicDto, advisorCount: 1 })).toThrow("PUBLIC_DTO_ENVELOPE_INVALID");
+  it("生产数据中没有禁止的占位字符串", () => {
+    const productionData = JSON.stringify(data);
+    expect(productionData).not.toMatch(
+      /placeholder|example\.com|10\.0000\/|lorem ipsum|mock advisor|待人工核验后补充|demo doi/i,
+    );
   });
 
-  it("fails closed when a content Evidence ID is absent from publicEvidence", () => {
-    const broken = structuredClone(syntheticPublicDto);
-    broken.advisors[0].mainTechniques[0].evidenceIds = ["E9"];
-    expect(() => adaptPublicAdvisorDtoEnvelope(broken)).toThrow("PUBLIC_DTO_EVIDENCE_LINK_INVALID");
-  });
-
-  it("keeps missing journal absent instead of inventing one", () => {
-    const advisor = adaptPublicAdvisorDtoEnvelope(syntheticPublicDto).advisors[0];
-    expect(advisor.publicEvidence[0].journal).toBeUndefined();
-  });
-
-  it("searches and counts only exported DTO advisors", () => {
-    const advisors = adaptPublicAdvisorDtoEnvelope(syntheticPublicDto).advisors;
-    expect(filterAndSortAdvisors(advisors, { query: "证据整理", tags: [], sort: "name" })).toHaveLength(1);
-    expect(filterAndSortAdvisors(advisors, { query: "示例导师甲", tags: [], sort: "name" })).toEqual([]);
-    expect(new Map(getTagCounts(advisors)).get("公开学术")).toBe(1);
-  });
-});
-
-describe("explicit data modes", () => {
-  it("keeps unknown modes fail-closed", () => {
-    expect(resolveAdvisorDataMode("dto")).toBe("dto");
-    expect(resolveAdvisorDataMode("mock")).toBe("mock");
-    expect(resolveAdvisorDataMode("staging")).toBe("closed");
-    expect(resolveAdvisorDataMode("production")).toBe("closed");
-    expect(resolveAdvisorDataMode(undefined)).toBe("closed");
-  });
-
-  it("does not fetch the real DTO in mock mode", async () => {
-    const fetcher = vi.fn();
-    const snapshot = await loadAdvisorSnapshot("mock", fetcher as unknown as typeof fetch);
-    expect(fetcher).not.toHaveBeenCalled();
-    expect(snapshot.mode).toBe("mock");
-    expect(snapshot.advisors).toHaveLength(3);
-  });
-});
-
-describe("synthetic mock release gate", () => {
-  const snapshot = adaptAdvisorCandidates(mockCandidates);
-
-  it("admits only three synthetic records", () => {
-    expect(snapshot.advisors).toHaveLength(3);
-    expect(snapshot.rejectedCount).toBe(4);
-  });
-
-  it.each(blockedMockIds)("does not expose blocked id %s", (id) => {
-    expect(snapshot.advisors.some((advisor) => advisor.id === id)).toBe(false);
-  });
-
-  it("keeps search and tag AND/OR behavior", () => {
-    const result = filterAndSortAdvisors(snapshot.advisors, { query: "合成", tags: ["网络分析", "发育机制"], sort: "name" });
-    expect(result.map((item) => item.id).sort()).toEqual(["demo-cell-map", "demo-compute"]);
+  it("使用 Hash Router 和相对 Vite base", () => {
+    const app = readFileSync(path.join(frontendRoot, "src", "App.tsx"), "utf8");
+    const vite = readFileSync(
+      path.join(frontendRoot, "vite.config.ts"),
+      "utf8",
+    );
+    expect(app).toContain("HashRouter");
+    expect(app).toContain("PlatformHomePage");
+    expect(vite).toContain('base: "./"');
   });
 });

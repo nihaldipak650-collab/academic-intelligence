@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导师档案 · 生命科学本科生平台</title>
+<link rel="stylesheet" href="css/template.css">
+<style>
+  .r1-toolbar { position: sticky; top: 0; z-index: 30; background: #f7f4ee; border-bottom: 1px solid #d8d2c6;
+    padding: 8px 18px; font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; display: flex; gap: 16px; }
+  .r1-toolbar a { color: #146b4a; text-decoration: none; }
+  .r1-toolbar a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="r1-toolbar">
+  <a href="../">← 返回导师目录</a>
+  <a href="../../">← 返回本科生平台</a>
+</div>
+<div id="root"></div>
+<script type="module">
+  import { mountProfile } from './app.js';
+  const q = new URLSearchParams(location.search);
+  const t = q.get('t') || 't02';
+  const allowed = ['t01', 't02', 't03'];
+  if (!allowed.includes(t)) location.search = 't=t02';
+  mountProfile();
+</script>
+</body>
+</html>
