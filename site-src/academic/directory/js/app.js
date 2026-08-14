@@ -294,14 +294,8 @@
   document.getElementById('mode-category').addEventListener('click', () => { window.location.hash = '#/category'; });
   document.getElementById('rev-on').addEventListener('click', () => { state.reviewMode = true; render(); });
   document.getElementById('rev-off').addEventListener('click', () => { state.reviewMode = false; render(); });
-  /* Platform integration shim: in PUBLIC mode, mentor rows route to the parent
-   * platform's T02 profile surface (#/academic/mentor/<id>). */
-  if (IS_PUBLIC) {
-    document.addEventListener('click', function (ev) {
-      const a = ev.target.closest ? ev.target.closest('a.mrow[data-mentor]') : null;
-      if (a) { ev.preventDefault(); window.parent.location.hash = '#/academic/mentor/' + encodeURIComponent(a.dataset.mentor); }
-    });
-  }
+  /* Public mode: mentor rows navigate natively to the T02 static profile page
+   * (profile/profile.html?id=<mentor-id>&t=t02) baked by the site builder. */
   window.addEventListener('hashchange', () => applyRoute(parseHash()));
   applyRoute(parseHash());
 })();
