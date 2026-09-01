@@ -77,17 +77,23 @@ describe("父平台首页", () => {
     expect(featureCards.length).toBe(2);
     for (const fc of featureCards) expect(fc.tagName.toLowerCase()).toBe("div");
 
-    // 预览卡区域内无箭头
-    expect(container.querySelectorAll(".services-section .arrow").length).toBe(0);
+    // 预览卡区域内无箭头（学科入口除外）
+    const previewCards = container.querySelectorAll(
+      "#services .service-item.display-only, #services .feature-card",
+    );
+    for (const card of previewCards) {
+      if (card.querySelector(".subject-roster")) continue;
+      expect(card.textContent?.includes("→")).toBe(false);
+      expect(card.textContent?.includes("›")).toBe(false);
+    }
 
-    // 整个 Everyday AI 区域不允许出现箭头字符（点击暗示）
-    const servicesText = container.querySelector("#services")?.textContent ?? "";
-    expect(servicesText.includes("→")).toBe(false);
-    expect(servicesText.includes("›")).toBe(false);
-
-    // 预览卡无链接/按钮语义
+    // 预览卡无链接/按钮语义；学科入口允许一个直达链接
     const servicesSection = container.querySelector("#services");
-    expect(servicesSection?.querySelectorAll("a,button").length ?? 0).toBe(0);
+    const subjectLinks = servicesSection?.querySelectorAll(".subject-roster-item--link") ?? [];
+    expect(subjectLinks.length).toBe(1);
+    expect(
+      servicesSection?.querySelectorAll("a:not(.subject-roster-item--link), button").length ?? 0,
+    ).toBe(0);
 
     // 真实入口保持可点：Academic / 更新日志 / 问卷
     expect(

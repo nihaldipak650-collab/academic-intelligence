@@ -135,15 +135,25 @@ function normalizedRelativePath(root, file) {
   return path.relative(root, file).replaceAll("\\", "/");
 }
 
+function isAllowedPhysicsReviewPath(relativePath) {
+  if (!relativePath.startsWith("review/physics-c/")) return false;
+  if (/^review\/physics-c\/(?:index\.html|styles\.css|app\.js|feedback\.js|read\.html|read\.css|read\.js)$/i.test(relativePath)) return true;
+  if (/^review\/physics-c\/docs\/[^/]+\.md$/i.test(relativePath)) return true;
+  if (/^review\/physics-c\/资料\/(?:[^/]+\/)*[^/]+\.(?:pdf|doc|docx|md)$/i.test(relativePath)) return true;
+  return false;
+}
+
 function isAllowedGeneratedPath(relativePath, expectedReports) {
   if (
     relativePath === "index.html" ||
     relativePath === "data/advisors.json" ||
-    relativePath === "data/site-config.json"
+    relativePath === "data/site-config.json" ||
+    relativePath === "data/latest-update.json"
   ) {
     return true;
   }
   if (/^assets\/(?:[^/]+\/)*[^/]+\.(?:js|css)$/i.test(relativePath)) return true;
+  if (isAllowedPhysicsReviewPath(relativePath)) return true;
   return expectedReports.has(relativePath);
 }
 

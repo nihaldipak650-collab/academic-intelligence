@@ -565,40 +565,7 @@ function buildServices() {
 }
 
 /* ---------- Public update log (visitor-facing; user language, not release notes) ---------- */
-const PUBLIC_UPDATES = [
-  {
-    version: "2026年8月14日",
-    title: "AI 可以帮你干什么？第一批 Everyday AI 方向上线",
-    points: [
-      "新增「AI 可以帮你干什么？」展示区，把正在尝试解决的真实问题摆出来。",
-      "加入 PPT、报销、Excel、请假等现实任务方向。",
-      "加入文件、C盘、手机和重复操作等数字生活方向。",
-      "加入 AI 辅助学习与 AI 使用专题。",
-      "开始通过问卷收集最值得优先做实的问题。",
-      "Academic Intelligence 继续保留并持续完善。",
-    ],
-    latest: true,
-  },
-  {
-    version: "v1.0 · 2026年8月5日",
-    title: "生命科学本科生培养与科研服务平台首版上线",
-    points: [
-      "平台首页。",
-      "导师与研究方向信息库。",
-      "首批公开导师。",
-      "搜索 / 筛选。",
-      "信息来源。",
-      "科研问题 / 方法路线等。",
-    ],
-    latest: false,
-  },
-  {
-    version: "v0.5 Beta · 2026年7月29日",
-    title: "导师信息库测试版",
-    points: ["导师信息库测试版。"],
-    latest: false,
-  },
-];
+const PUBLIC_UPDATES = readJSON(path.join(__dirname, "public-updates.json"));
 
 function buildUpdateLog() {
   const dst = path.join(SITE, "updates.html");
@@ -622,6 +589,19 @@ function buildUpdateLog() {
 <div class="foot">更多更新会陆续在这里发布。</div>
 </div></body></html>`;
   fs.writeFileSync(dst, html);
+
+  const latest = PUBLIC_UPDATES.find((u) => u.latest) ?? PUBLIC_UPDATES[0];
+  const latestPayload = {
+    id: latest.id,
+    version: latest.version,
+    title: latest.title,
+    points: latest.points,
+  };
+  fs.mkdirSync(path.join(SITE, "data"), { recursive: true });
+  fs.writeFileSync(
+    path.join(SITE, "data", "latest-update.json"),
+    `${JSON.stringify(latestPayload, null, 2)}\n`,
+  );
   console.log("public update log written");
 }
 

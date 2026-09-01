@@ -6,12 +6,14 @@ import { PlatformHero } from "../components/platform/PlatformHero";
 import { PlatformRealityProbe } from "../components/platform/PlatformRealityProbe";
 import { PlatformServices } from "../components/platform/PlatformServices";
 import { PlatformToastProvider } from "../components/platform/PlatformToast";
+import { PlatformUpdateNotice } from "../components/platform/PlatformUpdateNotice";
 import "../styles/platform-home.css";
 
 export function PlatformHomePage() {
   return (
     <div className="platform-home">
       <PlatformToastProvider>
+        <PlatformUpdateNotice />
         <PlatformHeader />
         <PlatformHero />
         <main className="shell">

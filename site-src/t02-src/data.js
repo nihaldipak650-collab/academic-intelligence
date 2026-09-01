@@ -170,6 +170,14 @@ function buildContact(pack) {
 
 function val(f) { return f && f.value ? f.value : null; }
 
+const jsonCache = new Map();
+
 function fetchJson(url) {
-  return fetch(url).then(r => { if (!r.ok) throw new Error('fetch failed ' + url); return r.json(); });
+  if (jsonCache.has(url)) return jsonCache.get(url);
+  const promise = fetch(url).then(r => {
+    if (!r.ok) throw new Error('fetch failed ' + url);
+    return r.json();
+  });
+  jsonCache.set(url, promise);
+  return promise;
 }

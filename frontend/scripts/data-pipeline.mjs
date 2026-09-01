@@ -328,6 +328,15 @@ export async function syncAdvisorData(pathOverrides = {}) {
       typeof sourceSiteConfig.feedback_url === "string"
         ? sourceSiteConfig.feedback_url.trim()
         : "",
+    physicsFeedbackUrl:
+      typeof sourceSiteConfig.physics_feedback_url === "string"
+        ? sourceSiteConfig.physics_feedback_url.trim()
+        : "",
+    feedbackEmail:
+      typeof sourceSiteConfig.feedback_email === "string" &&
+      sourceSiteConfig.feedback_email.trim()
+        ? sourceSiteConfig.feedback_email.trim()
+        : null,
   };
 
   await mkdir(paths.publicDataDir, { recursive: true });
