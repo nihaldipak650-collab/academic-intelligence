@@ -77,5 +77,7 @@ export interface AdvisorDataEnvelope {
 
 export interface SiteConfig {
   feedbackUrl: string;
+  physicsFeedbackUrl?: string;
+  feedbackEmail?: string | null;
 }
 

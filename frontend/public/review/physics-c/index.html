@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="大学物理 C 补考速成 — 三天、一周怎么快速过？真题、保姆级、提纲一条龙">
+  <title>大学物理 C 补考 · 速成指南</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <button type="button" class="sidebar-toggle" aria-label="打开目录" aria-expanded="false" aria-controls="sidebar">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H1.75Z"/>
+      </svg>
+    </button>
+    <a class="header-platform-link" href="../../index.html" title="返回本科生平台">← AI 平台</a>
+    <div class="site-logo" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="#fff">
+        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.066V5.934a.25.25 0 0 1 .379-.216Z"/>
+      </svg>
+    </div>
+    <div class="site-title">物理补考 <span>/ 速成指南</span></div>
+    <div class="header-search">
+      <label for="site-search" class="visually-hidden">搜索资料文件名</label>
+      <input id="site-search" type="search" placeholder="搜索资料文件名…" autocomplete="off">
+    </div>
+    <span class="header-meta">补考 · 全册</span>
+  </header>
+
+  <div class="materials-note" id="materials-note" hidden>
+    <strong>资料提示：</strong>线上已放期中卷、历年真题、保姆级解析和黄本答案。官方课件和那份 37 页老扫描卷暂不收录。
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="站点目录">
+      <div class="sidebar-group">
+        <div class="sidebar-group-title">开始</div>
+        <ul class="sidebar-nav">
+          <li><a href="#now" class="is-active">从这里开始</a></li>
+          <li><a href="#crash">几天能过？</a></li>
+          <li><a href="#how">资料怎么用</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-group-title">刷题</div>
+        <ul class="sidebar-nav">
+          <li><a href="#topics">按专题</a></li>
+          <li><a href="#shijuan">按试卷</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-group-title">资料地图</div>
+        <ul class="sidebar-nav">
+          <li><a href="#map">五类资料总览</a></li>
+          <li><a href="#cat-tigang">① 知识点提纲</a></li>
+          <li><a href="#cat-zhenti">③ 历年真题</a></li>
+          <li><a href="#cat-biji">④ 摘要笔记</a></li>
+          <li><a href="#cat-kejian">⑤ 课件 PPT</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-group-title">说明</div>
+        <ul class="sidebar-nav">
+          <li><a href="#limits">限制与缺口</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="banner" id="now">
+        <span class="banner-label">大学物理 C · 补考</span>
+        <h1>时间不多，物理怎么快速过？</h1>
+        <p class="banner-lead">
+          这是给<strong>补考同学</strong>用的速成站。不用从头啃课本——<strong>先刷题</strong>，卡步骤看保姆级，概念忘了翻提纲。有黄本就刷黄本，没有就用真题顶上。
+        </p>
+
+        <div class="crash-guide" id="crash">
+          <h2 class="crash-title">只剩几天，怎么走？</h2>
+          <p class="crash-lead">补考的目标不是「全会」，是<strong>先把会考的题型摸清楚</strong>。按你剩的时间，选下面一条路。</p>
+          <div class="crash-tracks">
+            <article class="crash-track crash-track--hot">
+              <div class="crash-track-head">
+                <h3>只剩 3 天</h3>
+                <span class="crash-badge">最紧</span>
+              </div>
+              <ol class="crash-steps">
+                <li><strong>第 1 天 · 摸底</strong>做一套卷（推荐 <a href="资料/03_历年真题/2026年上学期大学物理C（医用物理学）期中试卷.pdf">2026 期中卷</a>），对答案，记下完全不会的题号。</li>
+                <li><strong>第 2 天 · 补步骤</strong>不会的题翻 <a href="资料/04_摘要与笔记/期中试卷_保姆级逐题解析.md">期中保姆级</a>；大题再看光学、电磁摘要。</li>
+                <li><strong>第 3 天 · 收网</strong>过一遍 <a href="资料/01_知识点大纲提纲/(供参考）大学物理C复习提纲.pdf">复习提纲</a>，再限时做一套历年卷，错题回提纲对应章。</li>
+              </ol>
+            </article>
+            <article class="crash-track">
+              <div class="crash-track-head">
+                <h3>还有 1 周</h3>
+                <span class="crash-badge crash-badge--calm">更稳</span>
+              </div>
+              <ol class="crash-steps">
+                <li><strong>前 2 天</strong>按 <a href="#topics">专题</a> 过一遍：力学 → 热学 → 电磁 → 光学，每块先保姆级再同类题。</li>
+                <li><strong>中间 3 天</strong>刷 2–3 套 <a href="#shijuan">历年真题</a>，每天一套，错题必须标号。</li>
+                <li><strong>最后 2 天</strong>提纲全文过一遍 + 再做一套卷；概念题翻 <a href="#cat-kejian">课件</a> 补缺。</li>
+              </ol>
+            </article>
+          </div>
+          <p class="crash-foot">不管几天，顺序都一样：<strong>做题 → 对答案 → 卡住了看保姆级 → 概念模糊了看提纲</strong>。</p>
+        </div>
+
+        <div class="follow-box">
+          <div class="follow-head">
+            <h2>今天就能开干 · 先这三步</h2>
+            <span class="checklist-progress" aria-live="polite">0 / 3 步已完成</span>
+          </div>
+          <ol class="checklist">
+            <li class="checklist-item">
+              <input type="checkbox" id="check-1" data-check-id="midterm-paper" aria-describedby="check-1-desc">
+              <div class="checklist-body">
+                <label class="checklist-text" for="check-1" id="check-1-desc">先做一套卷 · 2026 期中</label>
+                <div class="checklist-meta">看看题型，心里有个数</div>
+                <a class="checklist-action" href="资料/03_历年真题/2026年上学期大学物理C（医用物理学）期中试卷.pdf" target="_blank" rel="noopener">打开试卷</a>
+                <a class="checklist-action" href="资料/03_历年真题/2026年上学期大学物理C期中考试答案.pdf" target="_blank" rel="noopener">官方答案</a>
+              </div>
+            </li>
+            <li class="checklist-item">
+              <input type="checkbox" id="check-2" data-check-id="midterm-md" aria-describedby="check-2-desc">
+              <div class="checklist-body">
+                <label class="checklist-text" for="check-2" id="check-2-desc">卡住了 · 看保姆级解析</label>
+                <div class="checklist-meta">一步一步对着看，别硬扛</div>
+                <a class="checklist-action" href="资料/04_摘要与笔记/期中试卷_保姆级逐题解析.md">打开解析</a>
+              </div>
+            </li>
+            <li class="checklist-item">
+              <input type="checkbox" id="check-3" data-check-id="summaries" aria-describedby="check-3-desc">
+              <div class="checklist-body">
+                <label class="checklist-text" for="check-3" id="check-3-desc">大题还不会 · 翻这几个摘要</label>
+                <div class="checklist-meta">光学、电磁大题；选择填空另有一本</div>
+                <a class="checklist-action" href="资料/04_摘要与笔记/光学大题_保姆级逐题解析.md">光学大题</a>
+                <a class="checklist-action" href="资料/04_摘要与笔记/电磁学大题_保姆级逐题解析.md">电磁大题</a>
+                <a class="checklist-action" href="资料/04_摘要与笔记/光学选择填空_保姆级.md">光学选择填空</a>
+              </div>
+            </li>
+          </ol>
+          <p style="margin-top:1rem;font-size:0.875rem;color:var(--fg-muted)">
+            有黄本就刷黄本，对着 <a href="#huangben">练习册答案</a> 对；没有就往下翻「按专题」或历年真题。
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:1.25rem">
+          <div class="card-head">
+            <h3>这套卷 · 建议先做这几题</h3>
+          </div>
+          <div class="card-body">
+            <ul class="steps">
+              <li><strong>计算 1</strong> 刚体 + 摩擦矩（力学母题）</li>
+              <li><strong>计算 4</strong> 布雷顿循环（热学必考型）</li>
+              <li><strong>计算 5</strong> 平行双导线电容（静电大题入门）</li>
+              <li><strong>选择 5</strong> 简谐振动相位（经典坑）</li>
+              <li><strong>选择 12</strong> 静电场环路定理（概念题）</li>
+            </ul>
+            <p style="margin-top:0.5rem;font-size:0.875rem">都在上面那份期中卷里，步骤见期中保姆级。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="priority-flow" role="list" aria-label="复习顺序">
+        <span class="priority-item p1">① 先做题</span>
+        <span class="priority-arrow" aria-hidden="true">→</span>
+        <span class="priority-item p2">② 卡了看保姆级</span>
+        <span class="priority-arrow" aria-hidden="true">→</span>
+        <span class="priority-item p2">③ 概念翻提纲</span>
+        <span class="priority-arrow" aria-hidden="true">→</span>
+        <span class="priority-item p3">④ 考前再过一遍卷</span>
+      </div>
+
+      <section class="section" id="how">
+        <div class="section-header">
+          <h2>资料怎么用（就记住三件事）</h2>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>就三步</h3>
+          </div>
+          <div class="card-body">
+            <ol class="steps" style="list-style:decimal;padding-left:1.25rem">
+              <li><strong>知道材料是干嘛的</strong> — 看下面「总体原则」。</li>
+              <li><strong>开刷</strong> — 两条路：<a href="#topics">按专题</a>，或 <a href="#shijuan">按试卷</a>（历年卷、期中卷）。</li>
+              <li><strong>对答案，错题回提纲</strong> — 翻 <a href="资料/01_知识点大纲提纲/(供参考）大学物理C复习提纲.pdf">复习提纲</a> 对应章。</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>总体原则</h3>
+          </div>
+          <div class="card-body">
+            <ul class="steps">
+              <li>
+                <strong>黄本、历年真题是主力。</strong>
+                期末题很多就从这儿出。黄本没有就刷真题，一回事。
+              </li>
+              <li>
+                <strong>保姆级摘要排第二。</strong>
+                光学大题、电磁大题、期中保姆级 — 卡步骤的时候看。
+              </li>
+              <li>
+                <strong>提纲很重要。</strong>
+                考前过一遍，错题一定要回去对一下提纲里那章。
+                <a href="资料/01_知识点大纲提纲/(供参考）大学物理C复习提纲.pdf">复习提纲 PDF</a>
+              </li>
+              <li>
+                <strong>老扫描合集不上线。</strong>
+                那份 37 页期末扫描卷年份杂、扫不清楚，优先刷 2022–2026 的真题 doc / 期中卷就行。
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" id="study-block">
+          <div class="card-head">
+            <h3>刷一套卷子</h3>
+          </div>
+          <div class="card-body">
+            <ul class="steps">
+              <li>限时做一张卷（期中或某年真题）。</li>
+              <li>对答案，错的标题号。</li>
+              <li>看不懂的翻保姆级；概念模糊的翻提纲。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="topics">
+        <div class="section-header">
+          <h2>按专题刷</h2>
+        </div>
+        <p class="section-intro">
+          一块一块来。先看保姆级，再去卷子里找同类题。细表在
+          <a href="docs/资料分类清单.md">本站资料说明</a>。
+        </p>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>专题 A · 力学 / 刚体 / 流体</h3>
+          </div>
+          <div class="card-body">
+            <p><strong>先看：</strong>期中保姆级 · 计算 1、2，填空 2</p>
+            <p><strong>试卷：</strong>
+              <a href="资料/03_历年真题/2026年上学期大学物理C（医用物理学）期中试卷.pdf">2026 期中卷</a>（选择 1–4、计算 1–2）·
+              2019–2023 下 <code>试卷.doc</code>（见下方按试卷区）
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>专题 B · 振动 / 波动 / 声</h3>
+          </div>
+          <div class="card-body">
+            <p><strong>先看：</strong>期中保姆级 · 选择 5–8、计算 3</p>
+            <p><strong>试卷：</strong>2026 期中（选择 5–8、填空 4–5、计算 3）· 2020–2022 下卷波动题</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>专题 C · 统计 / 热力学</h3>
+          </div>
+          <div class="card-body">
+            <p><strong>先看：</strong>期中保姆级 · 选择 9–11、计算 4</p>
+            <p><strong>试卷：</strong>2026 期中同题号 · 2018–2024 下热学大题</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>专题 D · 静电场</h3>
+          </div>
+          <div class="card-body">
+            <p><strong>先看：</strong><a href="资料/04_摘要与笔记/电磁学大题_保姆级逐题解析.md">电磁大题</a> 前 3 道 · 期中计算 5</p>
+            <p><strong>试卷：</strong>2026 期中静电部分 · 2020/2023 下期末 doc</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>专题 E · 磁场 / 电磁感应</h3>
+          </div>
+          <div class="card-body">
+            <p><strong>先看：</strong><a href="资料/04_摘要与笔记/电磁学大题_保姆级逐题解析.md">电磁大题</a> 后 3 道</p>
+            <p><strong>试卷：</strong>2021 下、2024 上/下 <code>试卷.doc</code></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>专题 F · 光学 + 量子</h3>
+          </div>
+          <div class="card-body">
+            <p><strong>光学先：</strong><a href="资料/04_摘要与笔记/光学大题_保姆级逐题解析.md">光学大题</a> ·
+              <a href="资料/04_摘要与笔记/光学选择填空_保姆级.md">选择填空</a></p>
+            <p><strong>量子后：</strong>练习 31–34 答案 · 2022–2025 卷里量子题</p>
+          </div>
+        </div>
+
+        <div class="card" id="shijuan">
+          <div class="card-head">
+            <h3>按试卷刷</h3>
+          </div>
+          <div class="card-body">
+            <p>期末优先刷<strong>下学期</strong>的卷。doc 用 Word / WPS 开。</p>
+            <div class="file-list">
+              <div class="file-row"><a href="资料/03_历年真题/2026年上学期大学物理C（医用物理学）期中试卷.pdf">2026 期中试卷.pdf</a><span class="file-meta">先刷这个</span></div>
+              <div class="file-row"><a href="资料/03_历年真题/2026年上学期大学物理C期中考试答案.pdf">2026 期中答案.pdf</a></div>
+              <div class="file-row"><a href="资料/03_历年真题/2024年下学期医用物理学试卷.doc">2024 下 试卷.doc</a></div>
+              <div class="file-row"><a href="资料/03_历年真题/2023年下学期医用物理学试卷.doc">2023 下 试卷.doc</a></div>
+              <div class="file-row"><a href="资料/03_历年真题/2022年下学期医用物理学试卷.doc">2022 下 试卷.doc</a></div>
+            </div>
+            <p style="margin-top:0.75rem">模拟顺序建议：2023 下 → 2024 下 → 2025 上。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="huangben">
+        <div class="section-header">
+          <h2>黄本 · 练习册</h2>
+        </div>
+        <p class="section-intro">有题目就刷黄本，对着下面答案对。题目正文本地还不全，缺了就用真题顶。</p>
+
+        <div class="placeholder" id="huangben-slot">
+          <h3>黄本题目还没导全</h3>
+          <p>微信里扫过练习 1–4，放进 <code>02_练习题/黄本题目/</code> 后会在这显示。</p>
+          <div class="placeholder-path">资料/02_练习题/黄本题目/</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>练习册答案（34 份）</h3>
+          </div>
+          <div class="card-body">
+            <p>文件名写「练习 N」，<strong>里面是答案</strong>，得和黄本题目配对着看。</p>
+            <div class="file-list">
+﻿              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习1 力学基本定律（一）.pdf">练习1 力学基本定律（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习10  机械振动（二）.pdf">练习10  机械振动（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习11  波动（一）.pdf">练习11  波动（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习12 波动（二）.pdf">练习12 波动（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习13 统计物理学基础（一）.pdf">练习13 统计物理学基础（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习14  统计物理学基础（二）.pdf">练习14  统计物理学基础（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习15  统计物理学基础（三）.pdf">练习15  统计物理学基础（三）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习16  热力学基础（一）.pdf">练习16  热力学基础（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习17  热力学基础（二）.pdf">练习17  热力学基础（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习18  热力学基础（三）.pdf">练习18  热力学基础（三）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习19  静电场（一）.pdf">练习19  静电场（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习2  力学基本定律（二）.pdf">练习2  力学基本定律（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习20  静电场（二）.pdf">练习20  静电场（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习21   静电场（三）.pdf">练习21   静电场（三）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习22  恒定电流.pdf">练习22  恒定电流.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习23  稳恒磁场（一）.pdf">练习23  稳恒磁场（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习24  稳恒磁场（二）.pdf">练习24  稳恒磁场（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习25  电磁感应与电磁波（一）.pdf">练习25  电磁感应与电磁波（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习26  电磁感应与电磁波（二）.pdf">练习26  电磁感应与电磁波（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习27  波动光学（一）.pdf">练习27  波动光学（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习28  波动光学（二）.pdf">练习28  波动光学（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习29  几何光学（一）.pdf">练习29  几何光学（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习3  力学基本定律（三）.pdf">练习3  力学基本定律（三）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习30  几何光学（一）.pdf">练习30  几何光学（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习31  量子力学基础（一）.pdf">练习31  量子力学基础（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习32  量子力学基础（二）.pdf">练习32  量子力学基础（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习33  激光及其医学应用.pdf">练习33  激光及其医学应用.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习34 X射线.pdf">练习34 X射线.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习4  力学基本定律（四）.pdf">练习4  力学基本定律（四）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习5 力学基本定律（五）.pdf">练习5 力学基本定律（五）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习6  物体的形变.pdf">练习6  物体的形变.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习7  流体力学（一）.pdf">练习7  流体力学（一）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习8  流体力学（二）.pdf">练习8  流体力学（二）.pdf</a><span class="file-meta">答案</span></div>
+              <div class="file-row"><a href="资料/02_练习题/练习册答案/医用物理学练习册答案/练习9  机械振动（一）.pdf">练习9  机械振动（一）.pdf</a><span class="file-meta">答案</span></div>
+              <a class="file-more" href="#huangben">查看全部 34 份练习册答案 ↓</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="map">
+        <div class="section-header">
+          <h2>资料地图</h2>
+        </div>
+        <p class="section-intro">找文件用。上面搜文件名也行。</p>
+
+        <div class="material-grid">
+          <a class="material-card" href="#cat-zhenti">
+            <div class="material-card-top">
+              <span class="material-num">01</span>
+              <span class="label label-green">主力</span>
+            </div>
+            <h3>历年真题 + 黄本</h3>
+            <p>真题 doc、期中 pdf。黄本答案在练习册区。</p>
+            <div class="material-card-foot">
+              <span>试卷</span>
+              <span>进入 →</span>
+            </div>
+          </a>
+          <a class="material-card" href="#cat-biji">
+            <div class="material-card-top">
+              <span class="material-num">02</span>
+              <span class="label label-blue">保姆级</span>
+            </div>
+            <h3>摘要笔记</h3>
+            <p>光学、电磁、期中保姆级。卡步骤的时候翻。</p>
+            <div class="material-card-foot">
+              <span>MD</span>
+              <span>进入 →</span>
+            </div>
+          </a>
+          <a class="material-card" href="#cat-tigang">
+            <div class="material-card-top">
+              <span class="material-num">03</span>
+              <span class="label label-green">很重要</span>
+            </div>
+            <h3>复习提纲</h3>
+            <p>28 页官方要点。错题回去对章节。</p>
+            <div class="material-card-foot">
+              <span>1 PDF</span>
+              <span>进入 →</span>
+            </div>
+          </a>
+          <a class="material-card" href="#huangben">
+            <div class="material-card-top">
+              <span class="material-num">04</span>
+              <span class="label label-yellow">有就用</span>
+            </div>
+            <h3>黄本练习册</h3>
+            <p>34 份答案已有。题目不全，有扫描就做。</p>
+            <div class="material-card-foot">
+              <span>答案 PDF</span>
+              <span>进入 →</span>
+            </div>
+          </a>
+          <a class="material-card" href="#cat-kejian">
+            <div class="material-card-top">
+              <span class="material-num">05</span>
+              <span class="label label-purple">补充</span>
+            </div>
+            <h3>课件 PPT</h3>
+            <p>概念忘了再翻，不用从头看。</p>
+            <div class="material-card-foot">
+              <span>16 章</span>
+              <span>进入 →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" id="cat-tigang">
+          <div class="card-head">
+            <h3>① 知识点大纲提纲</h3>
+            <span class="label label-green">官方</span>
+          </div>
+          <div class="card-body">
+            <p>官方 28 页。考前过一遍，错题回对应章。</p>
+            <div class="file-list">
+              <div class="file-row"><a href="资料/01_知识点大纲提纲/(供参考）大学物理C复习提纲.pdf">(供参考）大学物理C复习提纲.pdf</a><span class="file-meta">28 页</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="cat-zhenti">
+          <div class="card-head">
+            <h3>历年真题</h3>
+          </div>
+          <div class="card-body">
+            <p>下学期卷优先。先刷 2026 期中，再刷 2022–2024 下 doc。</p>
+            <div class="file-list">
+              <div class="file-row"><a href="资料/03_历年真题/2024年下学期医用物理学试卷.doc">2024年下学期 试卷.doc</a></div>
+              <div class="file-row"><a href="资料/03_历年真题/2023年下学期医用物理学试卷.doc">2023年下学期 试卷.doc</a></div>
+              <div class="file-row"><a href="资料/03_历年真题/2022年下学期医用物理学试卷.doc">2022年下学期 试卷.doc</a></div>
+              <div class="file-row"><a href="资料/03_历年真题/2026年上学期大学物理C（医用物理学）期中试卷.pdf">2026 上学期 期中试卷.pdf</a><span class="file-meta">6 页</span></div>
+              <div class="file-row"><a href="资料/03_历年真题/2026年上学期大学物理C期中考试答案.pdf">2026 期中 官方答案.pdf</a><span class="file-meta">3 页</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="cat-biji">
+          <div class="card-head">
+            <h3>摘要笔记（保姆级）</h3>
+          </div>
+          <div class="card-body">
+            <p>大题步骤、期中逐题解析。卡住了再看，别当标准答案抄。</p>
+            <div class="file-list">
+              <div class="file-row"><a href="资料/04_摘要与笔记/期中试卷_保姆级逐题解析.md">期中试卷_保姆级逐题解析.md</a></div>
+              <div class="file-row"><a href="资料/04_摘要与笔记/电磁学大题_保姆级逐题解析.md">电磁学大题_保姆级逐题解析.md</a></div>
+              <div class="file-row"><a href="资料/04_摘要与笔记/光学大题_保姆级逐题解析.md">光学大题_保姆级逐题解析.md</a></div>
+              <div class="file-row"><a href="资料/04_摘要与笔记/光学选择填空_保姆级.md">光学选择填空_保姆级.md</a><span class="file-meta">薄膜/偏振</span></div>
+              <div class="file-row"><a href="docs/资料分类清单.md">本站资料说明.md</a><span class="file-meta">已上线/未上线</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="cat-kejian">
+          <div class="card-head">
+            <h3>官方课件（补充）</h3>
+            <span class="label label-purple">PPT</span>
+          </div>
+          <div class="card-body">
+            <p>概念忘了再翻。官方课件体积大，<strong>暂未放线上</strong>；本地有第 1、7、10、11、13 章可作补充。</p>
+            <div class="file-list file-list--offline">
+              <div class="file-row is-offline"><span>第1章 力学基本定律.pptx</span><span class="file-meta">暂未上线</span></div>
+              <div class="file-row is-offline"><span>第7章 静电场.pptx</span><span class="file-meta">暂未上线</span></div>
+              <div class="file-row is-offline"><span>第10章 电磁感应.pptx</span><span class="file-meta">暂未上线</span></div>
+              <div class="file-row is-offline"><span>第11章 波动光学.pptx</span><span class="file-meta">暂未上线</span></div>
+              <div class="file-row is-offline"><span>第13章 量子力学.pptx</span><span class="file-meta">暂未上线</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="limits">
+        <div class="section-header">
+          <h2>说明</h2>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <ul>
+              <li>考的是<strong>全册</strong>，不是只考期中那几章。</li>
+              <li>黄本题目还没导全，缺了就用真题代替。</li>
+              <li>历年卷多是 .doc，用 Word 或 WPS 打开。</li>
+              <li>37 页老扫描期末卷<strong>不上线</strong>（年份杂、扫不清楚），优先刷 doc 真题和期中卷。</li>
+              <li>线上已放：2026 期中卷+答案、2022–2024 下真题、复习提纲、4 份保姆级、黄本 34 份答案。</li>
+              <li>更细的说明：<a href="docs/资料分类清单.md">本站资料说明</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        大学物理 C 补考速成站 · 进度勾选保存在浏览器本地<br>
+        资料说明见 <a href="docs/资料分类清单.md">本站资料说明</a>
+        <p id="physics-feedback" class="physics-feedback">加载反馈入口…</p>
+      </footer>
+    </main>
+
+    <aside class="page-toc" aria-label="本页目录">
+      <div class="page-toc-title">本页</div>
+      <ul>
+        <li><a href="#now">从这里开始</a></li>
+        <li><a href="#crash">几天能过？</a></li>
+        <li><a href="#how">资料怎么用</a></li>
+        <li><a href="#topics">按专题</a></li>
+        <li><a href="#shijuan">按试卷</a></li>
+        <li><a href="#huangben">黄本</a></li>
+        <li><a href="#map">资料地图</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+  <script src="feedback.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

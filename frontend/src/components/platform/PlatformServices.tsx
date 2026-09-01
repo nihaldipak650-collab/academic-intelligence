@@ -4,12 +4,21 @@ function ServiceIcon({ children }: { children: ReactNode }) {
   return <span className="service-icon">{children}</span>;
 }
 
+interface SubjectRosterItem {
+  name: string;
+  statusLabel: string;
+  href?: string;
+  featured?: boolean;
+  hint?: string;
+}
+
 interface EverydayEntry {
   num: string;
   title: string;
   subtitle: string;
   tag?: string;
   support?: string;
+  subjects?: SubjectRosterItem[];
   icon: ReactNode;
 }
 
@@ -102,8 +111,13 @@ const ICON = {
   ),
 };
 
-const make = (num: string, title: string, subtitle: string, icon: ReactNode, extra?: { tag?: string; support?: string }) =>
-  ({ num, title, subtitle, icon, tag: extra?.tag, support: extra?.support }) as EverydayEntry;
+const make = (
+  num: string,
+  title: string,
+  subtitle: string,
+  icon: ReactNode,
+  extra?: { tag?: string; support?: string; subjects?: SubjectRosterItem[] },
+) => ({ num, title, subtitle, icon, tag: extra?.tag, support: extra?.support, subjects: extra?.subjects }) as EverydayEntry;
 
 const PPT_MODES = [
   { name: "可编辑 PPT", desc: "可以继续改文字、结构、图片和版式，支持二次编辑。" },
@@ -132,7 +146,20 @@ const learningFeatures: EverydayEntry[] = [
 ];
 
 const sectionThreeExamples: EverydayEntry[] = [
-  make("13", "把一学期的辅学资料变成 AI 学习系统", "PPT、PDF、讲义和课本，不只是存下来，而是变成能问、能解释、能练习、能复习的学习系统。", ICON.books, { tag: "例子" }),
+  make(
+    "13",
+    "把一学期的辅学资料变成 AI 学习系统",
+    "PPT、PDF、讲义和课本，不只是存下来，而是变成能问、能解释、能练习、能复习的学习系统。",
+    ICON.books,
+    {
+      tag: "例子",
+      subjects: [
+        { name: "物理", statusLabel: "已收录", href: "review/physics-c/index.html", featured: true, hint: "补考速成站" },
+        { name: "有机化学", statusLabel: "还在收录" },
+        { name: "计算机", statusLabel: "也在收录" },
+      ],
+    },
+  ),
   make("14", "用 AI 把一个脑洞写成第一篇一万字小说", "从一句想法开始，让 AI 帮你扩展人物、世界观、冲突和章节，再由人不断选择、修改和继续创作。", ICON.pen, { tag: "例子" }),
 ];
 
@@ -147,6 +174,33 @@ export function PlatformServices() {
             {entry.tag ? <span className="service-tag">{entry.tag}</span> : null}
           </strong>
           <small>{entry.subtitle}</small>
+          {entry.subjects ? (
+            <ul className="subject-roster" aria-label="学科收录进度">
+              {entry.subjects.map((subject) =>
+                subject.href ? (
+                  <li key={subject.name}>
+                    <a
+                      className={`subject-roster-item subject-roster-item--link${subject.featured ? " subject-roster-item--featured" : ""}`}
+                      href={subject.href}
+                    >
+                      <span className="subject-copy">
+                        <span className="subject-name">{subject.name}</span>
+                        {subject.hint ? <span className="subject-hint">{subject.hint}</span> : null}
+                      </span>
+                      <span className="subject-status">
+                        {subject.statusLabel} <span aria-hidden="true">→</span>
+                      </span>
+                    </a>
+                  </li>
+                ) : (
+                  <li className="subject-roster-item is-pending" key={subject.name}>
+                    <span className="subject-name">{subject.name}</span>
+                    <span className="subject-status">{subject.statusLabel}</span>
+                  </li>
+                ),
+              )}
+            </ul>
+          ) : null}
         </span>
       </>
     );

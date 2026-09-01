@@ -4,6 +4,7 @@
    Integration copy: per-id public mount (?id=), T02 default.
    ========================================================================= */
 import { loadAll } from './data.js';
+import { renderTemplate } from './template.js';
 
 export function esc(s) {
   return String(s == null ? '' : s)
@@ -113,11 +114,19 @@ export function initScrollspy() {
 /* ---------- mounting ---------- */
 const DENSITY = { t01: 'ULTRA-COMPACT', t02: 'BALANCED', t03: 'DETAILED-READABLE' };
 
+function showLoading(root) {
+  root.innerHTML = `<div class="profile-loading" aria-busy="true" aria-live="polite">
+    <div class="profile-loading-bar" role="progressbar" aria-label="正在加载导师档案"></div>
+    <p>正在加载导师档案…</p>
+  </div>`;
+}
+
 export async function mountProfile() {
   const q = new URLSearchParams(location.search);
   const t = q.get('t') || 't02';
   const id = q.get('id') || '';
   const root = document.getElementById('root');
+  showLoading(root);
   const { mentors } = await loadAll(id);
   const m = mentors[id];
   if (!m || !m.release.eligible) {
@@ -127,10 +136,16 @@ export async function mountProfile() {
     </div>`;
     return;
   }
-  const mod = await import('./template.js');
-  const html = mod.renderTemplate(m, t, DENSITY[t] || DENSITY.t02);
+  const html = renderTemplate(m, t, DENSITY[t] || DENSITY.t02);
   root.innerHTML = html;
   document.title = `${m.nameZh} · 导师档案`;
-  measureBudget();
-  initScrollspy();
+  if (q.get('debug') === 'budget') {
+    measureBudget();
+  }
+  const runScrollspy = () => initScrollspy();
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(runScrollspy, { timeout: 500 });
+  } else {
+    requestAnimationFrame(runScrollspy);
+  }
 }
