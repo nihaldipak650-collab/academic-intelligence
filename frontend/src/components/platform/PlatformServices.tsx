@@ -154,7 +154,7 @@ const sectionThreeExamples: EverydayEntry[] = [
     {
       tag: "例子",
       subjects: [
-        { name: "物理", statusLabel: "已收录", href: "review/physics-c/course-v1.html", featured: true, hint: "完整课程 · 实验版" },
+        { name: "物理", statusLabel: "已收录", href: "review/physics-c/course.html", featured: true, hint: "完整资料站 · Beta" },
         { name: "有机化学", statusLabel: "还在收录" },
         { name: "计算机", statusLabel: "也在收录" },
       ],

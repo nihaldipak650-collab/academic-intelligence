@@ -2,6 +2,10 @@
   'use strict';
 
   var ALLOWED_PREFIXES = ['资料/', 'docs/'];
+  var RETURN_TARGETS = {
+    course: { href: 'course.html', label: '← 返回资料站' },
+    sprint: { href: 'index.html', label: '← 返回速成站' },
+  };
   var MATH_DELIMS = [
     { left: '$$', right: '$$', display: true },
     { left: '$', right: '$', display: false },
@@ -24,8 +28,35 @@
     return match ? match[1].toLowerCase() : '';
   }
 
-  function setTitle(name) {
-    document.title = name + ' · 物理补考';
+  function resolveReturn(params) {
+    var from = (params.get('from') || '').toLowerCase();
+    if (from === 'course') return RETURN_TARGETS.course;
+    return RETURN_TARGETS.sprint;
+  }
+
+  function setupBackLink(params) {
+    var target = resolveReturn(params);
+    var back = document.getElementById('read-back');
+    if (back) {
+      back.href = target.href;
+      back.textContent = target.label;
+    }
+    document.title = document.title.replace('物理补考', fromLabel(params));
+  }
+
+  function fromLabel(params) {
+    return params.get('from') === 'course' ? '物理资料站' : '物理补考';
+  }
+
+  function readerHref(path, params) {
+    var from = params.get('from');
+    var q = 'read.html?path=' + encodeURIComponent(path);
+    if (from) q += '&from=' + encodeURIComponent(from);
+    return q;
+  }
+
+  function setTitle(name, params) {
+    document.title = name + ' · ' + fromLabel(params);
     var el = document.getElementById('read-title');
     if (el) el.textContent = name;
   }
@@ -43,10 +74,18 @@
       .replace(/"/g, '&quot;');
   }
 
-  function showError(message) {
+  function showError(message, params) {
     var main = document.getElementById('read-main');
+    var back = resolveReturn(params || new URLSearchParams());
     if (main) {
-      main.innerHTML = '<p class="read-error">' + escapeHtml(message) + '</p>';
+      main.innerHTML =
+        '<p class="read-error">' +
+        escapeHtml(message) +
+        '</p><p><a class="read-btn" href="' +
+        escapeHtml(back.href) +
+        '">' +
+        escapeHtml(back.label) +
+        '</a></p>';
     }
   }
 
@@ -57,7 +96,7 @@
     return '<a ' + attrs + ' rel="noopener">' + escapeHtml(label) + '</a>';
   }
 
-  function renderMarkdown(path) {
+  function renderMarkdown(path, params) {
     setActions(
       actionButton('下载原文', path, false, basename(path)) +
         actionButton('新标签打开', path, false),
@@ -79,14 +118,14 @@
             throwOnError: false,
           });
         }
-        enhanceReaderLinks(main);
+        enhanceReaderLinks(main, params);
       })
       .catch(function (err) {
-        showError(err.message || 'Markdown 加载失败');
+        showError(err.message || 'Markdown 加载失败', params);
       });
   }
 
-  function renderPdf(path) {
+  function renderPdf(path, params) {
     setActions(
       actionButton('下载 PDF', path, true, basename(path)) +
         actionButton('新标签预览', path, false),
@@ -101,7 +140,7 @@
     main.appendChild(frame);
   }
 
-  function renderDoc(path) {
+  function renderDoc(path, params) {
     var name = basename(path);
     setActions(actionButton('下载试卷', path, true, name));
     var main = document.getElementById('read-main');
@@ -114,7 +153,7 @@
       '</div>';
   }
 
-  function enhanceReaderLinks(root) {
+  function enhanceReaderLinks(root, params) {
     root.querySelectorAll('a[href]').forEach(function (anchor) {
       var href = anchor.getAttribute('href');
       if (!href || href.indexOf('..') !== -1 || /^https?:/i.test(href) || href.charAt(0) === '#') {
@@ -122,7 +161,7 @@
       }
       var ext = extname(href);
       if (ext === 'md' || ext === 'pdf' || ext === 'doc' || ext === 'docx') {
-        anchor.setAttribute('href', 'read.html?path=' + encodeURIComponent(href));
+        anchor.setAttribute('href', readerHref(href, params));
         anchor.setAttribute('target', '_blank');
         anchor.setAttribute('rel', 'noopener');
       }
@@ -131,20 +170,22 @@
 
   function boot() {
     var params = new URLSearchParams(window.location.search);
+    setupBackLink(params);
+
     var path = params.get('path');
     if (!path || !isAllowedPath(path)) {
-      showError('资料路径无效，请从速成站重新打开。');
+      showError('资料路径无效，请从资料站或速成站重新打开。', params);
       return;
     }
 
     var name = basename(path);
-    setTitle(name);
+    setTitle(name, params);
     var ext = extname(path);
 
-    if (ext === 'md') renderMarkdown(path);
-    else if (ext === 'pdf') renderPdf(path);
-    else if (ext === 'doc' || ext === 'docx') renderDoc(path);
-    else showError('暂不支持这种文件格式。');
+    if (ext === 'md') renderMarkdown(path, params);
+    else if (ext === 'pdf') renderPdf(path, params);
+    else if (ext === 'doc' || ext === 'docx') renderDoc(path, params);
+    else showError('暂不支持这种文件格式。', params);
   }
 
   if (document.readyState === 'loading') {

@@ -162,7 +162,7 @@
   }
 
   function readerUrl(href) {
-    return 'read.html?path=' + encodeURIComponent(href);
+    return 'read.html?path=' + encodeURIComponent(href) + '&from=sprint';
   }
 
   function initMaterialLinks() {

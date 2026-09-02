@@ -137,7 +137,7 @@ function normalizedRelativePath(root, file) {
 
 function isAllowedPhysicsReviewPath(relativePath) {
   if (!relativePath.startsWith("review/physics-c/")) return false;
-  if (/^review\/physics-c\/(?:index\.html|course-v1\.html|course-v2\.html|course-v2-1\.html|course-v2-2\.html|course-v2-3\.html|course-v2-3-1\.html|course-v2-3-2\.html|course-v2-3-3\.html|course-v2-3-4\.html|course-v2-3-5\.html|styles\.css|course-v1\.css|course-v2\.css|course-v2-1\.css|course-v2-2\.css|course-v2-3\.css|course-v2-3-1\.css|course-v2-3-2\.css|course-v2-3-3\.css|course-v2-3-4\.css|course-v2-3-5\.css|app\.js|course-v1\.js|course-v2\.js|course-v2-1\.js|course-v2-2\.js|course-v2-3\.js|course-v2-3-1\.js|course-v2-3-2\.js|course-v2-3-3\.js|course-v2-3-4\.js|course-v2-3-5\.js|feedback\.js|read\.html|read\.css|read\.js)$/i.test(relativePath)) return true;
+  if (/^review\/physics-c\/(?:index\.html|course\.html|course-v1\.html|course-v2\.html|course-v2-1\.html|course-v2-2\.html|course-v2-3\.html|course-v2-3-1\.html|course-v2-3-2\.html|course-v2-3-3\.html|course-v2-3-4\.html|course-v2-3-5\.html|styles\.css|course\.css|course-v1\.css|course-v2\.css|course-v2-1\.css|course-v2-2\.css|course-v2-3\.css|course-v2-3-1\.css|course-v2-3-2\.css|course-v2-3-3\.css|course-v2-3-4\.css|course-v2-3-5\.css|app\.js|course\.js|course-v1\.js|course-v2\.js|course-v2-1\.js|course-v2-2\.js|course-v2-3\.js|course-v2-3-1\.js|course-v2-3-2\.js|course-v2-3-3\.js|course-v2-3-4\.js|course-v2-3-5\.js|feedback\.js|read\.html|read\.css|read\.js)$/i.test(relativePath)) return true;
   if (/^review\/physics-c\/docs\/[^/]+\.md$/i.test(relativePath)) return true;
   if (/^review\/physics-c\/资料\/(?:[^/]+\/)*[^/]+\.(?:pdf|doc|docx|md)$/i.test(relativePath)) return true;
   return false;
