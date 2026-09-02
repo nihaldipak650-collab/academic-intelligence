@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="大学物理 C 完整课程辅学站 V1 实验版 — 知识地图、学习模式、资料用法">
+  <title>大学物理 C · 完整课程辅学 V1</title>
+  <link rel="stylesheet" href="course-v1.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="header-platform-link" href="../../index.html" title="返回本科生平台">← AI 平台</a>
+    <div class="site-title">大学物理 C <span>/ 完整课程辅学</span></div>
+    <span class="badge-v1">V1 实验版</span>
+    <a class="header-platform-link" href="index.html" style="margin-left:auto">补考冲刺站 →</a>
+  </header>
+
+  <main class="main">
+    <section class="hero" id="top">
+      <div class="hero-label">Contract Discovery · 导航完整，非全册教材</div>
+      <h1>一门课从头学到尾，资料该什么时候用？</h1>
+      <p class="hero-lead">
+        这是<strong>完整课程辅学站 V1（实验版）</strong>。它用官方复习提纲做知识地图，
+        把你<strong>当前已上线</strong>的真题、保姆级和黄本答案串成可执行路线。
+        它<strong>不替代</strong>已上线的<a href="index.html">补考/冲刺站</a>。
+      </p>
+      <div class="boundary-box" role="note">
+        <strong>当前边界（请先看）</strong>
+        <ul>
+          <li>有：复习提纲 PDF、2026 期中、2022–2024 下真题、4 份保姆级、黄本 34 份<strong>答案</strong></li>
+          <li>无：官方 PPT、黄本题目正文、37 页扫描卷、2016–2021 真题、量子专题保姆级</li>
+          <li>保姆级为 AI 辅助整理，<strong>不是阅卷标准答案</strong>；公式以提纲 PDF 原页为准</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="modes">
+      <div class="section-header">
+        <h2>你现在是什么状态？</h2>
+        <p class="section-intro">
+          四种学习模式共用同一套知识地图与资料，只改变<strong>推荐顺序、优先级与完成标准</strong>。
+        </p>
+      </div>
+      <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="学习模式"></div>
+      <div id="mode-panels"></div>
+    </section>
+
+    <section class="section" id="map">
+      <div class="section-header">
+        <h2>整门课到底学什么？</h2>
+        <p class="section-intro">
+          章节划分来自
+          <a href="read.html?path=%E8%B5%84%E6%96%99%01_%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%A7%E7%BA%B2%E6%8F%90%E7%BA%B2%(%E4%BE%9B%E5%8F%82%E8%80%83%EF%BC%89%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86C%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2.pdf">2026 上学期复习提纲 PDF</a>
+          （仅供参考）。点击各块查看资料与缺口。
+        </p>
+      </div>
+      <div class="map-grid" id="topic-grid"></div>
+    </section>
+
+    <section class="section" id="materials">
+      <div class="section-header">
+        <h2>资料到底怎么用？</h2>
+        <p class="section-intro">从「文件列表」升级为「学习工具」— 仅含当前已上线资料。</p>
+      </div>
+      <div class="material-guide" id="material-guide"></div>
+      <h3 style="font-size:0.95rem;margin:1.25rem 0 0.5rem">明确未上线（勿当作可用）</h3>
+      <ul class="offline-list" id="offline-list"></ul>
+    </section>
+
+    <section class="section" id="loop">
+      <div class="section-header">
+        <h2>学习闭环</h2>
+        <p class="section-intro">不要只「读总结」— 每轮学习尽量走完一圈。</p>
+      </div>
+      <div class="loop-steps">
+        <div class="loop-step"><div><strong>定位</strong> — 选学习模式 + 打开对应章节块，看提纲要求什么。</div></div>
+        <div class="loop-step"><div><strong>学知识</strong> — 读复习提纲该章；概念模糊时查课堂笔记（本站暂无 PPT）。</div></div>
+        <div class="loop-step"><div><strong>看例题</strong> — 保姆级 MD 或期中/真题中的典型题，模仿步骤。</div></div>
+        <div class="loop-step"><div><strong>自己做题</strong> — 黄本（有题目时）或历年真题 / 期中卷限时练习。</div></div>
+        <div class="loop-step"><div><strong>对答案</strong> — 官方答案 PDF 或黄本答案 PDF。</div></div>
+        <div class="loop-step"><div><strong>找错因</strong> — 标错题号，判断是概念、公式还是计算。</div></div>
+        <div class="loop-step"><div><strong>回到知识点</strong> — 回流提纲对应页；必要时再看保姆级同题型。</div></div>
+        <div class="loop-step"><div><strong>再测一次</strong> — 同类题或下一套卷，确认真的会了。</div></div>
+      </div>
+    </section>
+
+    <section class="section sprint-cta" id="sprint">
+      <h2 style="font-size:1.1rem;margin:0 0 0.5rem">已经来不及了？</h2>
+      <p style="margin:0;color:var(--fg-muted);font-size:0.9rem">
+        3 天 / 1 周临考路径已在<strong>补考速成站</strong>编排完成。完整课程站不重复造轮子。
+      </p>
+      <a class="btn" href="index.html">进入补考 / 冲刺站 →</a>
+    </section>
+
+    <section class="section">
+      <p style="font-size:0.85rem;color:var(--fg-muted)">
+        维护说明：<a href="docs/COURSE_V1_REVIEW.md">COURSE_V1_REVIEW.md</a>（本轮 contract discovery 记录）·
+        学生向资料清单：<a href="docs/资料分类清单.md">本站资料说明</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    大学物理 C 完整课程辅学 V1（实验预览）· 不覆盖补考冲刺站<br>
+    <p id="physics-feedback" class="physics-feedback">加载反馈入口…</p>
+  </footer>
+
+  <script src="feedback.js" defer></script>
+  <script src="course-v1.js" defer></script>
+</body>
+</html>

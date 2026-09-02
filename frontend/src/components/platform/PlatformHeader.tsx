@@ -1,17 +1,23 @@
 import { useState, type MouseEvent } from "react";
-import { Link } from "react-router-dom";
-
-function scrollToId(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-}
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { scrollToPlatformSection } from "../../lib/platformNav";
 
 export function PlatformHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
 
   function handleNavClick(event: MouseEvent<HTMLAnchorElement>, id: string) {
     event.preventDefault();
-    scrollToId(id);
     setMenuOpen(false);
+
+    if (isHome) {
+      scrollToPlatformSection(id);
+      return;
+    }
+
+    navigate("/", { state: { scrollTo: id } });
   }
 
   return (
@@ -43,6 +49,12 @@ export function PlatformHeader() {
               onClick={(event) => handleNavClick(event, "growth-path")}
             >
               成长路径
+            </a>
+            <a
+              href="#growth-navigator"
+              onClick={(event) => handleNavClick(event, "growth-navigator")}
+            >
+              成长导航
             </a>
             <a
               href="#services"
