@@ -59,14 +59,13 @@ export function PlatformFeedbackFloat({
             ) : (
               <span className="fb-float-muted">问卷正在配置</span>
             )}
-            {mailtoHref ? (
-              <a href={mailtoHref}>
-                发邮件 →
-              </a>
-            ) : (
-              <span className="fb-float-muted">邮件正在配置</span>
-            )}
           </div>
+          {feedbackEmail ? (
+            <p className="fb-float-email">
+              也可以直接发邮件：
+              <a href={mailtoHref}>{feedbackEmail}</a>
+            </p>
+          ) : null}
         </div>
       ) : null}
       <button

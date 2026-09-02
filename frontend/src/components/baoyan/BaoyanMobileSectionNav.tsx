@@ -1,10 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { BAOYAN_TOC } from "../../data/baoyanMockData";
-
-import { resolveBaoyanAnchorElement, scrollToBaoyanAnchor } from "../../lib/baoyanAnchors";
+import { scrollToBaoyanAnchor } from "../../lib/baoyanAnchors";
 
 function scrollToAnchor(id: string) {
   scrollToBaoyanAnchor(id);
+}
+
+function scrollActiveChipHorizontally(chip: HTMLButtonElement | null) {
+  if (!chip) return;
+
+  const scrollContainer = chip.closest(".baoyan-mobile-nav-scroll");
+  if (!(scrollContainer instanceof HTMLElement)) return;
+
+  const chipCenter = chip.offsetLeft + chip.offsetWidth / 2;
+  const nextLeft = chipCenter - scrollContainer.clientWidth / 2;
+
+  scrollContainer.scrollTo({
+    left: Math.max(0, nextLeft),
+    behavior: "smooth",
+  });
 }
 
 const SECTION_IDS = BAOYAN_TOC.map((section) => section.id);
@@ -39,11 +53,7 @@ export function BaoyanMobileSectionNav() {
   }, []);
 
   useEffect(() => {
-    activeChipRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
+    scrollActiveChipHorizontally(activeChipRef.current);
   }, [activeId]);
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { PlatformHeader } from "../components/platform/PlatformHeader";
+import { PlatformFeedbackFloat } from "../components/platform/PlatformFeedbackFloat";
 import { EditorialHero } from "../components/baoyan/prototype-b/EditorialHero";
 import {
   EditorialContents,
@@ -251,6 +252,7 @@ export function BaoyanPrototypeBPage() {
           人工核验待完成
         </p>
       </footer>
+      <PlatformFeedbackFloat mailSubject="[保研导航反馈]" />
     </div>
   );
 }

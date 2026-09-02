@@ -710,6 +710,22 @@
   color: var(--muted);
   font-size: 13px;
 }
+.platform-home .fb-float-email {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.platform-home .fb-float-email a {
+  margin-left: 4px;
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-all;
+}
+.platform-home .fb-float-email a:hover {
+  text-decoration: underline;
+}
 .platform-home .fb-float > .fb-float-btn {
   display: inline-block;
   padding: 7px 13px;
@@ -883,7 +899,13 @@
 }
 
 /* ---- R5.2.2: Showcase final calibration (intro, PPT full-width split, display-only cards, email) ---- */
-.platform-home .services-section .section-heading { align-items: end; gap: clamp(24px, 4vw, 48px); }
+@media (min-width: 761px) {
+  .platform-home .services-section .section-heading {
+    align-items: end;
+    gap: clamp(24px, 4vw, 48px);
+  }
+}
+
 .platform-home .services-section .section-intro {
   flex: 0 1 460px;
   max-width: min(460px, 46%);
@@ -1033,6 +1055,15 @@
   .platform-home #academic-intelligence .section-intro,
   .platform-home .services-section .section-intro { flex: 0 0 auto; }
   .platform-home .services-section .section-intro { max-width: none; }
+  .platform-home .growth-navigator-section .section-heading,
+  .platform-home .services-section .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .platform-home .growth-navigator-section,
+  .platform-home .growth-navigator-grid,
+  .platform-home .growth-nav-card,
   .platform-home .services-section,
   .platform-home .everyday-group,
   .platform-home .service-list,
