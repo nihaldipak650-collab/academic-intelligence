@@ -370,7 +370,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     publishedDate: "2025-09-12",
     cohort: "2026届",
     url: null,
-    localPdfPath: "/baoyan/sources/2026-school-notice.pdf",
+    localPdfPath: "baoyan/sources/2026-school-notice.pdf",
     overviewBullets: [
       "各专业推免指标分配（含工程硕博等类型）",
       "补考、重修合格课程按 60 分计入学业成绩加权平均",

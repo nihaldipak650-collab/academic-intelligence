@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BaoyanLocalPdfLinks } from "./BaoyanLocalPdfLinks";
 import { OFFICIAL_SOURCES, SOURCE_ARCHIVE_GROUPS, SOURCE_AVAILABILITY_LABEL } from "../../data/baoyanMockData";
 
 export function BaoyanSourceArchive() {
@@ -97,14 +98,7 @@ export function BaoyanSourceArchive() {
                             </a>
                           )}
                           {source.localPdfPath && (
-                            <a
-                              className="baoyan-source-link baoyan-source-link--pdf"
-                              href={source.localPdfPath}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              查看 PDF
-                            </a>
+                            <BaoyanLocalPdfLinks localPdfPath={source.localPdfPath} />
                           )}
                           {!source.url && !source.localPdfPath && (
                             <span className="baoyan-source-archive-unavailable">暂无公开链接</span>

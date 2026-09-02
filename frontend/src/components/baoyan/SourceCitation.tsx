@@ -1,4 +1,5 @@
 import type { OfficialSource } from "../../data/baoyanMockData";
+import { BaoyanLocalPdfLinks } from "./BaoyanLocalPdfLinks";
 
 interface SourceCitationProps {
   source: OfficialSource;
@@ -23,14 +24,7 @@ export function SourceCitation({ source }: SourceCitationProps) {
           </a>
         )}
         {source.localPdfPath && (
-          <a
-            className="baoyan-source-link baoyan-source-link--pdf"
-            href={source.localPdfPath}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            查看 PDF
-          </a>
+          <BaoyanLocalPdfLinks localPdfPath={source.localPdfPath} />
         )}
       </div>
     </footer>
