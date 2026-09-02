@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="大学物理 C 资料站 — 提纲、黄本、真题和站长整理">
+  <title>大学物理 C · 资料怎么用？</title>
+  <link rel="stylesheet" href="course.css">
+</head>
+<body>
+  <header class="site-header">
+    <button type="button" class="sidebar-toggle" aria-label="打开目录" aria-expanded="false" aria-controls="sidebar">☰</button>
+    <a class="header-platform-link" href="../../index.html" title="返回 Academic Intelligence">← 主站</a>
+    <div class="site-title">大学物理 C <span>/ 资料站</span></div>
+    <span class="header-spacer"></span>
+    <a class="header-link header-link--prev" href="course-v2-3-5.html">Preview</a>
+    <a class="header-link header-link--action" href="index.html">补考冲刺站 →</a>
+  </header>
+
+  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+
+  <div class="page-wrap">
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="页面目录">
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">开始</div>
+          <ul class="sidebar-nav">
+            <li><a href="#start" class="is-active">这里有什么</a></li>
+            <li><a href="#how-page">使用说明</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">资料</div>
+          <ul class="sidebar-nav">
+            <li><a href="#have">资料库</a></li>
+            <li><a href="#tools">资料说明</a></li>
+            <li><a href="#mat-outline">复习提纲</a></li>
+            <li><a href="#mat-huangben">黄本</a></li>
+            <li><a href="#mat-finals">历年真题</a></li>
+            <li><a href="#mat-midterm">2026 期中</a></li>
+            <li><a href="#mat-guides">站长整理</a></li>
+            <li><a href="#external">外部学习资源</a></li>
+            <li><a href="#college">学院辅学活动</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">按时间选</div>
+          <ul class="sidebar-nav" id="sidebar-modes"></ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">课程</div>
+          <ul class="sidebar-nav">
+            <li><a href="#map">这门课学什么</a></li>
+            <li><a href="#loop">简单学习闭环</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">考试</div>
+          <ul class="sidebar-nav">
+            <li><a href="#history">历史考试经验分享</a></li>
+            <li><a href="#sprint">补考冲刺</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">说明</div>
+          <ul class="sidebar-nav">
+            <li><a href="#about">来源与边界</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="hero section" id="start">
+          <h1 class="hero-title">
+            <span class="hero-title-part">大学物理 C</span>
+            <span class="hero-title-part hero-title-part--sub">资料怎么用？</span>
+          </h1>
+          <p class="hero-lead">提纲、黄本、真题和整理好的解析都放在这里。先看资料库里有什么，再根据你剩下的时间挑最值得用的。</p>
+          <p class="hero-note">站长整理仅供参考，不是阅卷标准答案；课程范围、公式和考试要求以任课老师及官方资料为准。</p>
+        </header>
+
+        <section class="section" id="how-page">
+          <h2>这个页面怎么用？</h2>
+          <p class="section-lead">左边目录跳转；每份资料一句话加打开按钮，细节点开再看。选时间只是筛资料，不是排课表。</p>
+        </section>
+
+        <section class="section" id="have">
+          <h2>目前收录的资料</h2>
+          <ul class="have-list" id="have-list"></ul>
+          <p class="section-lead section-lead--tight">本站还未收录</p>
+          <ul class="miss-list" id="miss-list"></ul>
+        </section>
+
+        <section class="section" id="tools">
+          <h2>这些资料分别是干嘛的</h2>
+          <p class="section-lead">每份资料是干什么的看卡片；什么时候优先用，看下面「按时间选」。</p>
+          <div id="tool-cards"></div>
+        </section>
+
+        <section class="section" id="external"></section>
+        <section class="section" id="college"></section>
+
+        <section class="section" id="time">
+          <h2>你还剩多少时间？</h2>
+          <p class="section-lead">只是帮你筛资料，不是四套固定学习计划。不同档位可以交叉参考。</p>
+          <div class="mode-tabs" id="mode-tabs"></div>
+          <div id="mode-panels"></div>
+        </section>
+
+        <section class="section" id="map">
+          <h2>这门课学什么</h2>
+          <p class="section-lead">忘了有哪些内容时来查。不用从第一章硬学到第十三章。</p>
+          <div class="map" id="topic-map"></div>
+        </section>
+
+        <section class="section" id="loop">
+          <h2>简单学习闭环</h2>
+          <div class="loop-chain">
+            <span>看知识</span><span class="arrow">→</span>
+            <span>看例题</span><span class="arrow">→</span>
+            <span>自己做题</span><span class="arrow">→</span>
+            <span>对答案</span><span class="arrow">→</span>
+            <span>找错因</span><span class="arrow">→</span>
+            <span>回去补</span><span class="arrow">→</span>
+            <span>再做一次</span>
+          </div>
+        </section>
+
+        <section class="section" id="history">
+          <h2>历史考试经验分享</h2>
+          <div id="history-root"></div>
+        </section>
+
+        <section class="section" id="sprint">
+          <div class="sprint-box">
+            <h2>只剩约 3 天？</h2>
+            <p>直接用补考冲刺站，按「做题 → 对答案 → 看解析」走。</p>
+            <a class="btn btn--primary" href="index.html">进入补考冲刺站 →</a>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <h2>来源与边界</h2>
+          <div class="about-box" id="about-root"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    大学物理 C 资料站 · Beta · 基于 V2.3.5<br>
+    <p id="physics-feedback" class="physics-feedback">加载反馈入口…</p>
+  </footer>
+
+  <script src="feedback.js" defer></script>
+  <script src="course.js" defer></script>
+</body>
+</html>
