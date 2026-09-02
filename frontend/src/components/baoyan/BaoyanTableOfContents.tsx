@@ -50,6 +50,7 @@ export function BaoyanTableOfContents() {
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToBaoyanAnchor(section.id);
+                  setActiveId(section.id);
                 }}
               >
                 {section.label}
@@ -66,6 +67,7 @@ export function BaoyanTableOfContents() {
                         onClick={(e) => {
                           e.preventDefault();
                           scrollToBaoyanAnchor(child.id);
+                          setActiveId(child.id);
                         }}
                       >
                         {child.label}
