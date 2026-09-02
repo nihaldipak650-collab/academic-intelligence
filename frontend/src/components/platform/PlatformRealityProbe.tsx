@@ -1,18 +1,13 @@
-import { useEffect, useState } from "react";
+import { useSiteFeedbackConfig } from "../../hooks/useSiteFeedbackConfig";
 import { usePlatformToast } from "./PlatformToast";
 
 const CONTACT_EMAIL = (import.meta.env.VITE_PUBLIC_CONTACT_EMAIL as string | undefined)?.trim() || null;
 
 export function PlatformRealityProbe() {
-  const [feedbackUrl, setFeedbackUrl] = useState<string | null>(null);
+  const config = useSiteFeedbackConfig();
   const { showToast } = usePlatformToast();
-
-  useEffect(() => {
-    fetch("data/site-config.json")
-      .then((r) => r.json())
-      .then((j) => setFeedbackUrl(j.feedbackUrl ?? null))
-      .catch(() => setFeedbackUrl(null));
-  }, []);
+  const feedbackUrl = config?.feedbackUrl ?? "";
+  const feedbackEmail = config?.feedbackEmail ?? CONTACT_EMAIL;
 
   return (
     <section className="reality-probe" aria-labelledby="probe-title">
@@ -38,11 +33,11 @@ export function PlatformRealityProbe() {
           我也有这个问题 →
         </button>
       )}
-      {CONTACT_EMAIL ? (
+      {feedbackEmail ? (
         <p className="contact-email">
           有其他问题，也可以直接发邮件联系我：
-          <a href={`mailto:${CONTACT_EMAIL}`} rel="noopener">
-            {CONTACT_EMAIL}
+          <a href={`mailto:${feedbackEmail}`} rel="noopener noreferrer">
+            {feedbackEmail}
           </a>
         </p>
       ) : null}

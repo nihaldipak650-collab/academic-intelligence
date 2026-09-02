@@ -1,26 +1,25 @@
-import { useEffect, useState } from "react";
+import { useSiteFeedbackConfig } from "../../hooks/useSiteFeedbackConfig";
+import { PlatformFeedbackFloat } from "./PlatformFeedbackFloat";
 
 export function PlatformFooter() {
-  const [cfg, setCfg] = useState<{ feedbackUrl?: string; feedbackEmail?: string | null } | null>(null);
-
-  useEffect(() => {
-    fetch("data/site-config.json")
-      .then((r) => r.json())
-      .then((j) => setCfg(j))
-      .catch(() => setCfg({}));
-  }, []);
+  const cfg = useSiteFeedbackConfig();
 
   const formEl = cfg?.feedbackUrl ? (
-    <a href={cfg.feedbackUrl} target="_blank" rel="noopener">[填写反馈]</a>
+    <a href={cfg.feedbackUrl} target="_blank" rel="noopener noreferrer">
+      [填写反馈]
+    </a>
   ) : (
     <span className="muted">反馈问卷正在配置</span>
   );
   const mailEl = cfg?.feedbackEmail ? (
     <a
       href={
-        "mailto:" + cfg.feedbackEmail +
-        "?subject=" + encodeURIComponent("[本科生平台反馈] 首页") +
-        "&body=" + encodeURIComponent("当前页面：" + window.location.href)
+        "mailto:" +
+        cfg.feedbackEmail +
+        "?subject=" +
+        encodeURIComponent("[本科生平台反馈] 首页") +
+        "&body=" +
+        encodeURIComponent("当前页面：" + window.location.href)
       }
     >
       [邮件联系]
@@ -53,27 +52,7 @@ export function PlatformFooter() {
           </p>
         </div>
       </div>
-      <div className="fb-float">
-        {cfg?.feedbackUrl ? (
-          <a
-            href={cfg.feedbackUrl}
-            target="_blank"
-            rel="noopener"
-            aria-label="反馈 / 联系我"
-          >
-            反馈
-          </a>
-        ) : (
-          <button
-            type="button"
-            className="fb-float-btn"
-            onClick={() => window.alert("反馈问卷正在配置")}
-            aria-label="反馈 / 联系我"
-          >
-            反馈
-          </button>
-        )}
-      </div>
+      <PlatformFeedbackFloat />
     </footer>
   );
 }
