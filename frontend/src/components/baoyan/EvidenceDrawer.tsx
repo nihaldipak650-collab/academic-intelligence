@@ -1,4 +1,5 @@
 import type { OfficialSource } from "../../data/baoyanMockData";
+import { BaoyanLocalPdfLinks } from "./BaoyanLocalPdfLinks";
 import { SourceBadge } from "./SourceBadge";
 
 interface EvidenceDrawerProps {
@@ -91,14 +92,12 @@ export function EvidenceDrawer({
                       </a>
                     )}
                     {source.localPdfPath && (
-                      <a
-                        className="baoyan-evidence-link baoyan-evidence-link--pdf"
-                        href={source.localPdfPath}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        查看本地 PDF
-                      </a>
+                      <BaoyanLocalPdfLinks
+                        localPdfPath={source.localPdfPath}
+                        linkClassName="baoyan-evidence-link baoyan-evidence-link--pdf"
+                        viewLabel="查看本地 PDF"
+                        downloadLabel="下载 PDF"
+                      />
                     )}
                     {!source.url && !source.localPdfPath && (
                       <p className="baoyan-evidence-note">该文件暂无公开链接或本地副本。</p>

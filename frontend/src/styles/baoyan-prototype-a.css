@@ -1896,7 +1896,24 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .baoyan-quickfact--entry {
+  #qf-bio-quota {
+    order: 1;
+  }
+
+  #qf-info-quota {
+    order: 2;
+  }
+
+  #qf-eng-quota {
+    order: 3;
+  }
+
+  #qf-retake {
+    order: 4;
+  }
+
+  #qf-entry {
+    order: 5;
     grid-column: 1 / -1;
   }
 
@@ -2055,7 +2072,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 360px) {
   .baoyan-prototype-a {
     --baoyan-page-gutter: 16px;
   }
@@ -2064,8 +2081,9 @@
     grid-template-columns: 1fr;
   }
 
-  .baoyan-quickfact--entry {
+  #qf-entry {
     grid-column: auto;
+    order: 5;
   }
 
   .baoyan-source-link {

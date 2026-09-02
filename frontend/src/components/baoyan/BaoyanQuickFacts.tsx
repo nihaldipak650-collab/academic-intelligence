@@ -15,6 +15,7 @@ export function BaoyanQuickFacts({ items, cohortLabel }: BaoyanQuickFactsProps) 
         {items.map((item) => (
           <div
             key={item.id}
+            id={item.id}
             className={`baoyan-quickfact baoyan-quickfact--${item.variant}`}
           >
             <span className="baoyan-quickfact-label">{item.label}</span>
