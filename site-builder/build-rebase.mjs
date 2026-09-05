@@ -532,7 +532,14 @@ function buildProfileModule() {
   let copied = 0;
   for (const id of pids) {
     const srcPack = path.join(srcData, "packs", id);
-    if (fs.existsSync(srcPack)) { fs.cpSync(srcPack, path.join(dst, "data", "packs", id), { recursive: true }); copied++; }
+    if (fs.existsSync(srcPack)) {
+      const dstPack = path.join(dst, "data", "packs", id);
+      fs.mkdirSync(dstPack, { recursive: true });
+      fs.copyFileSync(path.join(srcPack, "public-advisor-v1.json"), path.join(dstPack, "public-advisor-v1.json"));
+      fs.copyFileSync(path.join(srcPack, "evidence-manifest-v1.json"), path.join(dstPack, "evidence-manifest-v1.json"));
+      fs.copyFileSync(path.join(srcPack, "validation-report-v1.json"), path.join(dstPack, "validation-report-v1.json"));
+      copied++;
+    }
   }
   console.log("T02 profile module written; public packs copied:", copied);
 }
@@ -672,11 +679,11 @@ function cleanupOldProfiles() {
 
 /* ---------- 4. Build-time public projection (P1: review-only must NOT ship) ----------
  * Canonical/review data stays in the internal workspace; the PUBLIC artifact is a
- * projection that removes review-only mentors (guo-hui, hu-zhengmao) and demo/synthetic
+ * projection that removes review-only mentors (currently guo-hui) and demo/synthetic
  * report files. UI-runtime hiding is NOT sufficient.
  */
 function publicProjection() {
-  const REVIEW_ONLY = ["guo-hui", "hu-zhengmao"];
+  const REVIEW_ONLY = ["guo-hui"];
   const DEMO_REPORTS = ["Liu_advisor_profile_v1_5_demo_display.md", "Li_advisor_profile_v1_5_demo_display.md"];
   const REVIEW_REPORTS = ["Hu_Zhengmao_profile_academic_zh.md", "Guo_Hui_profile_academic_zh.md"];
   const isReviewOnly = (id) => REVIEW_ONLY.some((r) => String(id || "").toLowerCase().includes(r));
@@ -725,5 +732,6 @@ buildUpdateLog();
 
 cleanupOldProfiles();
 injectFeedback();
+publicProjection();
 
 console.log('site assembly complete');

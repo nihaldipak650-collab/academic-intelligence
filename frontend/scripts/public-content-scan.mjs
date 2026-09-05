@@ -147,7 +147,23 @@ function isAllowedBaoyanSourcePath(relativePath) {
   return /^baoyan\/sources\/[^/]+\.pdf$/i.test(relativePath);
 }
 
-function isAllowedGeneratedPath(relativePath, expectedReports) {
+function isAllowedAcademicProfilePackPath(relativePath, approvedAdvisorIds) {
+  const match = relativePath.match(
+    /^academic\/profile\/data\/packs\/([a-z0-9]+(?:-[a-z0-9]+)*)\/(public-advisor-v1|evidence-manifest-v1|validation-report-v1)\.json$/i,
+  );
+  return !!match && approvedAdvisorIds.has(match[1]);
+}
+
+function isAllowedAcademicPath(relativePath, approvedAdvisorIds) {
+  if (
+    /^(?:academic\/(?:index\.html|assets\/data\.js|css\/(?:base|r2-green)\.css|js\/app\.js)|academic\/profile\/(?:app\.js|data\.js|profile\.html|template\.js|css\/template\.css|data\/public-dto\.json|data\/evidence\/(?:crossref_5dois|crossref_dates)\.json)|services\/(?:aifu|baoxiao|excel|lab|ppt|qingjia)\.html|updates\.html)$/i.test(relativePath)
+  ) {
+    return true;
+  }
+  return isAllowedAcademicProfilePackPath(relativePath, approvedAdvisorIds);
+}
+
+function isAllowedGeneratedPath(relativePath, expectedReports, approvedAdvisorIds = new Set()) {
   if (
     relativePath === "index.html" ||
     relativePath === "data/advisors.json" ||
@@ -159,6 +175,7 @@ function isAllowedGeneratedPath(relativePath, expectedReports) {
   if (/^assets\/(?:[^/]+\/)*[^/]+\.(?:js|css)$/i.test(relativePath)) return true;
   if (isAllowedPhysicsReviewPath(relativePath)) return true;
   if (isAllowedBaoyanSourcePath(relativePath)) return true;
+  if (isAllowedAcademicPath(relativePath, approvedAdvisorIds)) return true;
   return expectedReports.has(relativePath);
 }
 
@@ -248,15 +265,18 @@ async function scanGeneratedAllowlist({ mode, root }) {
     evaluatePublishedAdvisor(advisor).map((reason) => `${advisor.id ?? "unknown"}:${reason}`),
   );
   const expectedReports = new Set(data.advisors.map((advisor) => advisor.reportPath));
+  const approvedAdvisorIds = new Set(data.advisors.map((advisor) => advisor.id));
   invariant(expectedReports.size === data.advisors.length, "公开数据存在重复报告路径");
   const relativeFiles = new Map(
     allFiles.map((file) => [normalizedRelativePath(root, file), file]),
   );
-  const blockedPaths = [...relativeFiles.keys()].filter((relativePath) =>
-    blockedPathPatterns.some((pattern) => pattern.test(relativePath)),
+  const blockedPaths = [...relativeFiles.keys()].filter(
+    (relativePath) =>
+      blockedPathPatterns.some((pattern) => pattern.test(relativePath)) &&
+      !isAllowedAcademicProfilePackPath(relativePath, approvedAdvisorIds),
   );
   const unexpectedPaths = [...relativeFiles.keys()].filter(
-    (relativePath) => !isAllowedGeneratedPath(relativePath, expectedReports),
+    (relativePath) => !isAllowedGeneratedPath(relativePath, expectedReports, approvedAdvisorIds),
   );
   const markdownReports = reportFiles.filter((file) => file.toLowerCase().endsWith(".md"));
   const actualReports = new Set(
@@ -290,7 +310,7 @@ async function scanGeneratedAllowlist({ mode, root }) {
   const secretFiles = [];
   let sensitiveNameHits = 0;
   for (const [relativePath, file] of relativeFiles) {
-    if (!isAllowedGeneratedPath(relativePath, expectedReports)) continue;
+    if (!isAllowedGeneratedPath(relativePath, expectedReports, approvedAdvisorIds)) continue;
     const text = await readFile(file, "utf8");
     const extension = path.extname(relativePath).toLowerCase();
     if ([".html", ".json", ".md", ".txt"].includes(extension)) {
@@ -300,7 +320,8 @@ async function scanGeneratedAllowlist({ mode, root }) {
       if (findPatternViolations(text, patterns).length) experienceFiles.push(relativePath);
     }
     sensitiveNameHits += countSensitiveNameHits(text, approvedSensitiveNames);
-    if ([...LEGACY_REPORT_NAMES].some((name) => text.includes(name))) {
+    const isEvidenceProvenance = /^academic\/profile\/data\/packs\/[^/]+\/evidence-manifest-v1\.json$/i.test(relativePath);
+    if (!isEvidenceProvenance && [...LEGACY_REPORT_NAMES].some((name) => text.includes(name))) {
       legacyReferenceFiles.push(relativePath);
     }
     if (findPatternViolations(text, localAbsolutePathPatterns).length) localPathFiles.push(relativePath);

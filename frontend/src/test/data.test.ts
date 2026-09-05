@@ -37,11 +37,11 @@ const frontendRoot = process.cwd();
 const asAdvisors = (list: DtoAdvisor[]): Advisor[] =>
   list as unknown as Advisor[];
 
-describe("真实导师数据（public DTO · 11 位公开导师）", () => {
-  it("公开导师数量为 11，且 envelope 有效", () => {
+describe("真实导师数据（public DTO · 12 位公开导师）", () => {
+  it("公开导师数量为 12，且 envelope 有效", () => {
     expect(data.schemaVersion).toBe(1);
-    expect(data.advisorCount).toBe(11);
-    expect(data.advisors).toHaveLength(11);
+    expect(data.advisorCount).toBe(12);
+    expect(data.advisors).toHaveLength(12);
     expect(data.advisorCount).toBe(data.advisors.length);
   });
 

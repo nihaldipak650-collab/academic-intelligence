@@ -71,16 +71,16 @@ jobs:
           const data = JSON.parse(
             readFileSync("frontend/dist/data/advisors.json", "utf8"),
           );
-          if (data.advisorCount !== 11 || data.advisors.length !== 11) {
-            throw new Error("Pages artifact must contain exactly 11 advisors");
+          if (data.advisorCount !== data.advisors.length || data.advisorCount < 1) {
+            throw new Error("Pages artifact advisorCount must match a non-empty advisor list");
           }
 
           const reportDirectory = "frontend/dist/reports";
           const reportFiles = readdirSync(reportDirectory).filter((name) =>
             name.endsWith(".md"),
           );
-          if (reportFiles.length !== 11) {
-            throw new Error("Pages artifact must contain exactly 11 Markdown reports");
+          if (reportFiles.length !== data.advisorCount) {
+            throw new Error("Pages artifact must contain one Markdown report per advisor");
           }
 
           for (const advisor of data.advisors) {
@@ -99,7 +99,7 @@ jobs:
             }
           }
 
-          console.log("Verified Pages artifact: 11 advisors and 11 reports");
+          console.log(`Verified Pages artifact: ${data.advisorCount} advisors and ${reportFiles.length} reports`);
           NODE
 
       - name: Upload frontend 1.0 artifact

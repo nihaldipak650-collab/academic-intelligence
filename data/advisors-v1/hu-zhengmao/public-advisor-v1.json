@@ -66,17 +66,26 @@
       "source_authority": "official_institution",
       "last_verified_at": "2026-08-04",
       "missing_status": "available"
+    },
+    {
+      "value": "生命科学学院副院长",
+      "value_en": null,
+      "source_url": "https://faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm",
+      "source_ref": "evidence-manifest-v1.json#E11:F4",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-04",
+      "missing_status": "available"
     }
   ],
   "contact": {
     "official_profile_url": {
-      "value": null,
+      "value": "https://life.csu.edu.cn/info/1042/2564.htm",
       "value_en": null,
-      "source_url": null,
-      "source_ref": null,
-      "source_authority": null,
-      "last_verified_at": null,
-      "missing_status": "no_public_information"
+      "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+      "source_ref": "evidence-manifest-v1.json#E6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-04",
+      "missing_status": "available"
     },
     "official_lab_url": {
       "value": null,
@@ -88,13 +97,13 @@
       "missing_status": "no_public_information"
     },
     "official_email": {
-      "value": null,
+      "value": "huzhengmao@sklmg.edu.cn",
       "value_en": null,
-      "source_url": null,
-      "source_ref": null,
-      "source_authority": null,
-      "last_verified_at": null,
-      "missing_status": "no_public_information"
+      "source_url": "https://life.csu.edu.cn/info/1042/2564.htm",
+      "source_ref": "evidence-manifest-v1.json#E6:F6",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-04",
+      "missing_status": "available"
     },
     "official_phone": {
       "value": null,
@@ -648,7 +657,7 @@
   "boundary_statement": "公共身份、导师资格、研究方向和方法只来自中南大学官方页面；AI整理仅依据本导师已采用的正式论文和官方方向。页面不纳入未由公开学术证据支持的内部评价、资源信息或培养承诺；可能任务与成长路径仅为条件式学习参考，不代表真实实验室安排。",
   "update_status": "verified",
   "summary": {
-    "text": "官方页面显示，胡正茂为中南大学生命科学学院遗传学系研究员、博士生导师和硕士生导师，公开研究聚焦人类遗传性疾病致病基因鉴定与功能研究，重点包括高度近视和儿童自闭症。基于五篇官网代表论文，可进一步理解其公开研究线索涉及非编码调控、罕见变异、高度近视基因、体细胞NF1变异和CNTN4相关神经细胞表型。",
+    "text": "官方页面显示，胡正茂为中南大学生命科学学院遗传学系研究员、博士生导师和硕士生导师；教师个人主页当前标注其职务为生命科学学院副院长。公开研究聚焦人类遗传性疾病致病基因鉴定与功能研究，重点包括高度近视和儿童自闭症。基于五篇官网代表论文，可进一步理解其公开研究线索涉及非编码调控、罕见变异、高度近视基因、体细胞NF1变异和CNTN4相关神经细胞表型。",
     "evidence_status": "partially_verified",
     "confidence": "Medium",
     "source_urls": [
@@ -672,7 +681,7 @@
     "evidence_lane": "ai_synthesis",
     "no_evidence_reason": null
   },
-  "data_status_note": "官方身份、独立 ORCID 桥接、五篇官网代表论文、历史候选排除与预印本去重已完成 v1.0.4 机械核验；人工身份确认、页面内容审核、featured 选择和公开发布授权仍待项目负责人完成。",
+  "data_status_note": "2026-09-04 已重新核对中南大学生命科学学院主页与教师个人主页；项目负责人于 2026-09-05 完成人工页面审核并批准进入公开候选。论文证据沿用既有 v1.0.4 证据包；featured 代表作选择仍未开放。",
   "search_keywords": [
     "human genetics",
     "hereditary disease",
@@ -694,6 +703,6 @@
     "医学遗传学"
   ],
   "version": "1.0.4",
-  "publication_status": "review_pending",
+  "publication_status": "approved",
   "report_path": "reports/hu-zhengmao.md"
 }

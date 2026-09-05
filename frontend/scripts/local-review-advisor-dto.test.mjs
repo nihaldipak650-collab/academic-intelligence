@@ -70,13 +70,13 @@ describe("local review advisor DTO (13 advisor cohort)", () => {
     });
   });
 
-  it("applies the approved gate to 11 advisors and the review_pending gate to guo-hui/hu-zhengmao", async () => {
+  it("applies the approved gate to 12 advisors and the review_pending gate to guo-hui", async () => {
     const result = await buildLocalReviewDto();
     const pendingIds = new Set(REVIEW_PENDING_IDS);
-    expect(pendingIds.size).toBe(2);
+    expect(pendingIds.size).toBe(1);
 
     const approved = result.envelope.advisors.filter((advisor) => !pendingIds.has(advisor.id));
-    expect(approved).toHaveLength(11);
+    expect(approved).toHaveLength(12);
     approved.forEach((advisor) => {
       expect(advisor.releaseEligible).toBe(true);
       expect(["approved", "published"]).toContain(advisor.publicationStatus);
@@ -84,7 +84,7 @@ describe("local review advisor DTO (13 advisor cohort)", () => {
     });
 
     const pending = result.envelope.advisors.filter((advisor) => pendingIds.has(advisor.id));
-    expect(pending).toHaveLength(2);
+    expect(pending).toHaveLength(1);
     pending.forEach((advisor) => {
       expect(advisor.releaseEligible).toBe(false);
       expect(advisor.publicationStatus).toBe("review_pending");
@@ -168,9 +168,9 @@ describe("local review advisor DTO (13 advisor cohort)", () => {
     }
   });
 
-  it("keeps the formal deployable DTO scoped to the approved 11 (not 13)", async () => {
+  it("keeps the formal deployable DTO scoped to the approved 12 (not 13)", async () => {
     const formalDto = JSON.parse(await readFile(path.join(process.cwd(), "public", "data", "advisors.json"), "utf8"));
-    expect(formalDto.advisorCount).toBe(11);
+    expect(formalDto.advisorCount).toBe(12);
     expect(formalDto.source).toBe("approved-public-advisor-contract");
   });
 

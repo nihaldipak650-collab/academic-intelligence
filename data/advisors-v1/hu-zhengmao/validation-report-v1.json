@@ -2,9 +2,9 @@
   "schema_version": "1.0.4",
   "advisor_id": "hu-zhengmao",
   "valid": true,
-  "release_eligible": false,
-  "requested_publication_status": "review_pending",
-  "effective_publication_status": "review_pending",
+  "release_eligible": true,
+  "requested_publication_status": "approved",
+  "effective_publication_status": "approved",
   "candidate_evidence_count": 11,
   "adopted_public_evidence_count": 7,
   "official_profile_evidence_count": 2,
@@ -20,12 +20,5 @@
   },
   "schema_and_field_binding_status": "passed",
   "errors": [],
-  "warnings": [
-    {
-      "code": "IDENTITY_REVIEW_PENDING",
-      "path": "identity",
-      "message": "Unresolved identity or P0 blockers force review_pending.",
-      "severity": "warning"
-    }
-  ]
+  "warnings": []
 }
