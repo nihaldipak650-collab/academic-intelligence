@@ -195,8 +195,8 @@
         "summary"
       ],
       "repository_source_ref": "official-profile:life.csu.edu.cn/info/1042/2564.htm",
-      "last_verified_at": "2026-08-04",
-      "notes": "中南大学生命科学学院官方主页；采用姓名、职称、导师类型、院系、研究方向、官方邮箱和五篇代表论文种子。基金数量、奖项和宣传性表述不进入安全 DTO；官方邮箱只保留在本权威证据文件。",
+      "last_verified_at": "2026-09-04",
+      "notes": "中南大学生命科学学院官方主页；2026-09-04 复核时仍公开显示姓名、职称、博导类型、遗传学系、研究方向、教师个人主页、工作邮箱和五篇代表论文种子。基金数量、奖项和宣传性表述不进入安全 DTO。",
       "page_title": "胡正茂-中南大学生命科学学院",
       "profile_name": "胡正茂",
       "institution": "中南大学",
@@ -409,8 +409,8 @@
         "summary"
       ],
       "repository_source_ref": "official-profile:faculty.csu.edu.cn/huzhengmao/zh_CN/index.htm",
-      "last_verified_at": "2026-08-04",
-      "notes": "中南大学教师个人主页；采用姓名、单位、职称、博士/硕士生导师资格，以及传统基因定位、候选克隆、外显子组捕获和高通量测序等公开方法描述。办公地点等联系信息不进入安全 DTO。",
+      "last_verified_at": "2026-09-04",
+      "notes": "中南大学教师个人主页；2026-09-04 复核时仍显示姓名、单位、研究员、博士/硕士生导师、生命科学学院副院长职务，以及传统基因定位、候选克隆、外显子组捕获和高通量测序等公开方法描述。办公地点不进入安全 DTO。",
       "page_title": "中南大学 胡正茂",
       "profile_name": "胡正茂",
       "institution": "中南大学",
@@ -454,6 +454,17 @@
             "prerequisite_skills",
             "learning_cost",
             "generic_growth_path"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "教师个人主页当前标注胡正茂职务为生命科学学院副院长。",
+          "fact_category": "other_official_fact",
+          "source_section": "基本信息",
+          "source_anchor": "职务",
+          "supported_public_fields": [
+            "public_roles",
+            "summary"
           ]
         }
       ]

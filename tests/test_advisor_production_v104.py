@@ -312,13 +312,17 @@ class TypedEvidenceContractV104Tests(unittest.TestCase):
         report = validate_package(public, manifest, identity)
         self.assertTrue(report["valid"], report)
 
-    def test_28_local_review_pending_packages_remain_review_pending(self):
-        for advisor_id in ("guo-hui", "hu-zhengmao"):
-            with self.subTest(advisor_id=advisor_id):
-                public, manifest, identity = load_advisor_package(advisor_id)
-                report = validate_package(public, manifest, identity)
-                self.assertFalse(report["release_eligible"], report)
-                self.assertEqual("review_pending", report["effective_publication_status"])
+    def test_28_guo_hui_remains_review_pending_and_hu_zhengmao_is_approved(self):
+        public, manifest, identity = load_advisor_package("guo-hui")
+        report = validate_package(public, manifest, identity)
+        self.assertFalse(report["release_eligible"], report)
+        self.assertEqual("review_pending", report["effective_publication_status"])
+
+        public, manifest, identity = load_advisor_package("hu-zhengmao")
+        report = validate_package(public, manifest, identity)
+        self.assertTrue(report["valid"], report)
+        self.assertTrue(report["release_eligible"], report)
+        self.assertEqual("approved", report["effective_publication_status"])
 
     def test_29_guo_hui_markdown_is_byte_deterministic(self):
         public, manifest, _identity = load_advisor_package("guo-hui")
@@ -342,6 +346,12 @@ class TypedEvidenceContractV104Tests(unittest.TestCase):
         evidence_types = {item["evidence_id"]: item["evidence_type"] for item in manifest["candidate_evidence"]}
         self.assertEqual(6, public.get("schema_version") and len(public["adopted_public_evidence_ids"]))
         self.assertTrue(all(evidence_types[eid] in {"publication", "official_profile"} for eid in public["adopted_public_evidence_ids"]))
+
+    def test_32_hu_zhengmao_contact_fields_keep_their_semantic_types(self):
+        public, _manifest, _identity = load_advisor_package("hu-zhengmao")
+        self.assertEqual("https://life.csu.edu.cn/info/1042/2564.htm", public["contact"]["official_profile_url"]["value"])
+        self.assertIsNone(public["contact"]["official_lab_url"]["value"])
+        self.assertEqual("huzhengmao@sklmg.edu.cn", public["contact"]["official_email"]["value"])
 
 
 if __name__ == "__main__":

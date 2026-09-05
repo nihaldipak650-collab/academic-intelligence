@@ -132,7 +132,7 @@ export async function mountProfile() {
   if (!m || !m.release.eligible) {
     root.innerHTML = `<div style="max-width:720px;margin:80px auto;padding:0 20px;font-family:Georgia,'Songti SC',serif;color:#1f1d1a">
       <h1 style="font-size:26px">该档案尚未公开</h1>
-      <p>公开档案仅限已核验的 11 位导师；该档案不在公开范围，或地址无效。</p>
+      <p>该档案不在已核验的公开导师范围内，或地址无效。</p>
     </div>`;
     return;
   }

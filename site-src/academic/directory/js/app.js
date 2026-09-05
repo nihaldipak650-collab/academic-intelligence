@@ -164,9 +164,9 @@
             <li>新增导师与更细的筛选将逐步开放。</li>
           </ul>
           <p class="guide-k">信息边界</p>
-          <p class="guide-p">档案内容来自学院公开页面与公开论文；AI 整理内容有标注，不代表导师原话或承诺。当前公开 11 位导师；其余档案在整理中，暂不开放。</p>
+          <p class="guide-p">档案内容来自学院公开页面与公开论文；AI 整理内容有标注，不代表导师原话或承诺。当前公开 ${D.publicCount} 位导师；其余档案在整理中，暂不开放。</p>
           <p class="guide-k">当前版本</p>
-          <p class="guide-p">试用版（公开 11 位导师）。后续更新会在此说明。</p>
+          <p class="guide-p">试用版（公开 ${D.publicCount} 位导师）。后续更新会在此说明。</p>
         </div>
       </details>
       <div class="ov-grid">
@@ -215,7 +215,7 @@
       ${mastHtml(
         '<span class="dot"></span> 按系查看导师 <span class="dot"></span> Academic Intelligence · 2026',
         '按<span class="y">系</span>找导师',
-        '四个系，十一份公开导师档案。选一个系，看看里面有哪些导师和方向。',
+        `${D.departments.length} 个系，${D.publicCount} 份公开导师档案。选一个系，看看里面有哪些导师和方向。`,
         `
           <div class="mast-stat"><b>${depts.length}</b><span>个系</span></div>
           <div class="mast-stat"><b>${state.reviewMode ? D.reviewCount : D.publicCount}</b><span>位导师</span></div>

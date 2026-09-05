@@ -155,13 +155,14 @@ afterEach(async () => {
 });
 
 describe("fail-closed public advisor DTO exporter", () => {
-  it("当前本地 13 位白名单导出 11 位公开候选", async () => {
+  it("当前本地 13 位白名单导出 12 位公开候选", async () => {
     const result = await buildPublicAdvisorDto();
     expect(result.sourceAdvisorCount).toBe(13);
-    expect(result.envelope.advisorCount).toBe(11);
+    expect(result.envelope.advisorCount).toBe(12);
     expect(result.envelope.advisors.map((advisor) => advisor.id)).toEqual([
       "chen-miao",
       "hu-dehua",
+      "hu-zhengmao",
       "li-faxiang",
       "li-jiada",
       "li-xing",
@@ -172,7 +173,7 @@ describe("fail-closed public advisor DTO exporter", () => {
       "xiang-rong",
       "zhao-yuetao",
     ]);
-    expect(result.rejections.map((item) => item.advisorId).sort()).toEqual(["guo-hui", "hu-zhengmao"]);
+    expect(result.rejections.map((item) => item.advisorId).sort()).toEqual(["guo-hui"]);
   });
 
   it("合成合法批准导师导出 1 位且只含显式公开 DTO", async () => {

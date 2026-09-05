@@ -2,8 +2,8 @@
   "schema_version": "1.0.4",
   "advisor_id": "hu-zhengmao",
   "review_status": "verified",
-  "reviewed_at": "2026-08-04",
-  "reviewer_role": "codex_mechanical_migration",
+  "reviewed_at": "2026-09-05",
+  "reviewer_role": "user",
   "advisor_identity": {
     "name_match_status": "verified",
     "institution_match_status": "verified",
@@ -12,8 +12,8 @@
     "orcid_status": "verified",
     "candidate_orcid": "0000-0002-3921-8205",
     "official_profile_url": "https://life.csu.edu.cn/info/1042/2564.htm",
-    "human_review_status": "pending",
-    "notes": "中南大学生命科学学院官方主页与教师个人主页共同确认胡正茂、生命科学学院遗传学系、研究员和导师资格。旧报告中的 ORCID 不直接继承；正式 GLRA2 论文页面将 Zhengmao Hu、ORCID 0000-0002-3921-8205 与中南大学生命科学学院直接关联。人工内容与公开发布批准仍待项目负责人完成。"
+    "human_review_status": "verified",
+    "notes": "中南大学生命科学学院官方主页与教师个人主页共同确认胡正茂、生命科学学院遗传学系、研究员和导师资格。旧报告中的 ORCID 不直接继承；正式 GLRA2 论文页面将 Zhengmao Hu、ORCID 0000-0002-3921-8205 与中南大学生命科学学院直接关联。项目负责人于 2026-09-05 完成人工页面审核并批准进入公开候选。"
   },
   "publication_identity": [
     {

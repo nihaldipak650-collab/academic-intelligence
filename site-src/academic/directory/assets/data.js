@@ -5,8 +5,8 @@ window.DIRECTORY_DATA = {
  "generatedFrom": "mission-04/mentor-review-site/public/data (real contract data)",
  "generatedAt": "2026-08-10",
  "reviewCount": 13,
- "publicCount": 11,
- "reviewOnlyCount": 2,
+ "publicCount": 12,
+ "reviewOnlyCount": 1,
  "departments": [
   {
    "id": "生物化学与分子生物学系",
@@ -231,8 +231,8 @@ window.DIRECTORY_DATA = {
     2024,
     2023
    ],
-   "eligible": false,
-   "pubStatus": "review_pending"
+   "eligible": true,
+   "pubStatus": "approved"
   },
   {
    "id": "li-faxiang",

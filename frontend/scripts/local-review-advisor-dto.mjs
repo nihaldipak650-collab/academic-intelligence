@@ -13,7 +13,7 @@ export const REVIEW_DTO_VERSION = "1.0.4";
 export const REVIEW_SCOPE = "local_review_only";
 export const REVIEW_SOURCE = "local-review-advisor-contract";
 export const REVIEW_PENDING_NOTE = "待项目负责人人工审核，仅用于本地预览，未经公开批准。";
-export const REVIEW_PENDING_IDS = Object.freeze(["guo-hui", "hu-zhengmao"]);
+export const REVIEW_PENDING_IDS = Object.freeze(["guo-hui"]);
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const frontendDir = path.resolve(scriptDir, "..");
