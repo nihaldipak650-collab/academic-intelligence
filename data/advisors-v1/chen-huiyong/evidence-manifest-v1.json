@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0.5",
+  "advisor_id": "chen-huiyong",
+  "source_scope": "中南大学生命科学学院官方导师主页及其代表论文的公开记录；仅用于本地试生产候选证据包。",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2529.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "学院官方导师主页，作为身份、职务、联系方式和研究方向的一手来源。",
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E1",
+      "last_verified_at": "2026-09-06",
+      "notes": "本记录只保留官方页面公开信息，不推断实验室氛围、培养承诺、招生名额或研究结果。",
+      "page_title": "陈慧勇",
+      "profile_name": "陈慧勇",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物化学与分子生物学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职务为副教授。",
+          "fact_category": "professional_title",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：position",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "公开角色为硕士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：public_roles",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "研究方向包括铁代谢和红细胞发育调控。",
+          "fact_category": "research_direction",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：research_directions_original, research_questions",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "公开页面提到β-地中海贫血小鼠模型、体外细胞培养和分子生物学方法。",
+          "fact_category": "research_method",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：main_techniques, research_workflow",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "公开方向关注铁失衡、无效红细胞生成及其干预机制。",
+          "fact_category": "research_direction",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：research_directions_original, research_questions",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1182/bloodadvances.2024012679",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary",
+        "name_en"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E2",
+      "last_verified_at": "2026-09-06",
+      "notes": "PubMed正式记录确认Huiyong Chen为末位作者并列出中南大学生命科学学院 affiliation；通讯作者角色保留null。",
+      "title": "Mitoxantrone ameliorates ineffective erythropoiesis in a β-thalassemia intermedia mouse model.",
+      "publication_year": 2024,
+      "doi": "10.1182/bloodadvances.2024012679",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1182/bloodadvances.2024012679",
+      "publication_types": [
+        "journal_article"
+      ]
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1111/bjh.18706",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary",
+        "name_en"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E3",
+      "last_verified_at": "2026-09-06",
+      "notes": "PubMed正式记录确认Huiyong Chen为倒数第二位作者，Central South University affiliations已核对；通讯作者角色保留null。",
+      "title": "Single-cell profiling of ineffective erythropoiesis in a mouse model of β-thalassaemia intermedia.",
+      "publication_year": 2023,
+      "doi": "10.1111/bjh.18706",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": false,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1111/bjh.18706",
+      "publication_types": [
+        "journal_article"
+      ]
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/ijc.34142",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary",
+        "name_en"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E4",
+      "last_verified_at": "2026-09-06",
+      "notes": "PubMed正式记录同时标注Journal Article与Meta-Analysis；v1.0.5保留为meta_analysis，不归类为review。",
+      "title": "The addition of oral iron improves chemotherapy-induced anemia in patients receiving erythropoiesis-stimulating agents.",
+      "publication_year": 2022,
+      "doi": "10.1002/ijc.34142",
+      "source_type": "meta_analysis",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1002/ijc.34142",
+      "publication_types": [
+        "journal_article",
+        "meta_analysis"
+      ]
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1111/bjh.16156",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary",
+        "name_en"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E5",
+      "last_verified_at": "2026-09-06",
+      "notes": "PubMed正式记录确认Huiyong Chen为末位作者并列出Central South University affiliation；通讯作者角色保留null。",
+      "title": "GDF11 contributes to hepatic hepcidin (HAMP) inhibition through SMURF1-mediated BMP-SMAD signalling suppression.",
+      "publication_year": 2020,
+      "doi": "10.1111/bjh.16156",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": false,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1111/bjh.16156",
+      "publication_types": [
+        "journal_article"
+      ]
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3324/haematol.2015.127902",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": null,
+      "supported_fields": [
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary",
+        "name_en"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E6",
+      "last_verified_at": "2026-09-06",
+      "notes": "PubMed正式记录确认Huiyong Chen为第一作者；中南大学 affiliation及版本日期已核对。",
+      "title": "Increased hepcidin in transferrin-treated thalassemic mice correlates with increased liver BMP2 expression and decreased hepatocyte ERK activation.",
+      "publication_year": 2016,
+      "doi": "10.3324/haematol.2015.127902",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": false,
+      "is_corresponding": false,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_affiliations": [
+        "New York Blood Center"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3324/haematol.2015.127902",
+      "publication_types": [
+        "journal_article"
+      ]
+    }
+  ]
+}

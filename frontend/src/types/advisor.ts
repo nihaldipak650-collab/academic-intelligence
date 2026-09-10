@@ -41,7 +41,9 @@ export interface Advisor {
   nameZh: string;
   nameEn?: string;
   institution?: string;
+  schoolOrDepartment?: string;
   position?: string;
+  publicRoles?: string[];
   contact?: AdvisorContact;
   initials: string;
   summary: string;
@@ -56,6 +58,14 @@ export interface Advisor {
   experienceCaseCount: number;
   version: string;
   status: AdvisorStatus;
+  publicationStatus?: "review_pending" | "approved" | "published";
+  releaseEligible?: boolean;
+  publicationIdentityStatus?: "pending_verification" | "verified";
+  publicationSearchStatus?: "not_run" | "complete";
+  publicationCandidateCount?: number;
+  adoptedPublicationCount?: number;
+  dataStatusNote?: string;
+  officialHomepage?: string | null;
   lastUpdated: string | null;
   reportPath: string;
   reportSha256: string;
@@ -70,7 +80,11 @@ export interface Advisor {
 
 export interface AdvisorDataEnvelope {
   schemaVersion: 1;
-  source: "web/advisors.json + web/reports";
+  source: string;
+  dtoVersion?: string;
+  scope?: "local_review_only";
+  publicReleaseApproved?: false;
+  cohortDate?: string;
   advisorCount: number;
   advisors: Advisor[];
 }

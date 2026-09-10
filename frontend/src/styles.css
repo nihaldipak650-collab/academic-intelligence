@@ -2002,3 +2002,59 @@ button {
     animation-duration: 0.01ms !important;
   }
 }
+
+.review-status-bar {
+  position: sticky;
+  top: 76px;
+  z-index: 45;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  padding: 10px 24px;
+  border-bottom: 1px solid #d6b86b;
+  color: #5d4516;
+  background: #fff4cf;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.pending-review-chip {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #6b4515;
+  background: #fff0c9;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.publication-pending-copy {
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  padding: 10px;
+  border-left: 3px solid var(--amber);
+  color: #624d2f !important;
+  background: var(--amber-soft);
+}
+
+.phase2-review-note {
+  display: grid;
+  gap: 7px;
+  margin: 24px 0;
+  padding: 16px 18px;
+  border: 1px solid #e4c66f;
+  border-left: 5px solid var(--amber);
+  border-radius: 12px;
+  color: #5c461d;
+  background: #fff7df;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.profile-meta a {
+  color: var(--green-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

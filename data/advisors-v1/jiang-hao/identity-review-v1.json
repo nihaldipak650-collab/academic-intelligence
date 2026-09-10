@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "jiang-hao",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "unresolved",
+    "candidate_orcid": "0000-0001-7270-1939",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2499.htm",
+    "human_review_status": "pending",
+    "notes": "Publication identity was checked per paper; human review remains pending. ORCID state follows the recorded chain and is not a release approval.",
+    "official_profile_email": null,
+    "official_profile_email_source_url": null,
+    "orcid_verification_evidence_ids": [],
+    "orcid_verification_basis": [
+      "Only one publication-level ORCID chain record was closed; advisor-level ORCID remains unresolved."
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus first-author position and exact biomedical-informatics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1002/advs.202306623",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus first-author position and exact biomedical-informatics affiliation."
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact ORCID, email and biomedical-informatics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41417-023-00719-7",
+      "matched_author_email": "jianghao1209@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1038/s41417-023-00719-7",
+      "matched_orcid": "0000-0001-7270-1939",
+      "orcid_source_url": "https://doi.org/10.1038/s41417-023-00719-7",
+      "notes": "Official representative list plus exact ORCID, email and biomedical-informatics affiliation."
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact biomedical-informatics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fcell.2023.1237530",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus exact biomedical-informatics affiliation."
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "Official profile and Crossref close title/first author, but reviewed metadata did not close publication-time affiliation; retained unresolved."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": null,
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official profile and Crossref close title/first author, but reviewed metadata did not close publication-time affiliation; retained unresolved."
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact biomedical-informatics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3390/cancers14133057",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus exact biomedical-informatics affiliation."
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact biomedical-informatics unit and established tumor/STAT3 network."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.isci.2026.117246",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact biomedical-informatics unit and established tumor/STAT3 network."
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "conflict",
+      "verification_basis": [
+        "Same-name author has a different hospital and radiation-oncology network."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "First Affiliated Hospital of Bengbu Medical University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.jtocrr.2026.101022",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Same-name author has a different hospital and radiation-oncology network."
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "conflict",
+      "verification_basis": [
+        "Same-name author is in physics and an unrelated field/network."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "Central South University School of Physics",
+      "matched_institution_source_url": "https://doi.org/10.1021/acs.inorgchem.6c01622",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Same-name author is in physics and an unrelated field/network."
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "conflict",
+      "verification_basis": [
+        "Same-name author has a different hospital and radiation-oncology network."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": "First Affiliated Hospital of Bengbu Medical University",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41392-026-02707-3",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Same-name author has a different hospital and radiation-oncology network."
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "Department text fits, but the listed email is jianhao1209@csu.edu.cn rather than the publication identity email; keep unresolved."
+      ],
+      "matched_author_name": "Hao Jiang",
+      "matched_institution": null,
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Department text fits, but the listed email is jianhao1209@csu.edu.cn rather than the publication identity email; keep unresolved."
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-09",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "Owner human identity review is pending; machine closure is not approval.",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "notes": "Official-list anchors, publication-time affiliations, email/ORCID where available, and explicit same-name counterexamples were kept advisor-local. Owner publication decision 2026-09-10 accepted adopted/featured content only; global identity and release review remain pending."
+}

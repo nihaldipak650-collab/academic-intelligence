@@ -2,4 +2,8 @@ node_modules/
 dist/
 .vite/
 *.tsbuildinfo
+.local-review/
+.local-review-phase2-8/
+.local-review-phase2-8-latest/
+.release-preview-phase2-cohort8/
 

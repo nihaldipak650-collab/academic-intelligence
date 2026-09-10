@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.5",
+  "advisor_id": "chen-chao",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0002-5114-2282",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2563.htm",
+    "human_review_status": "pending",
+    "notes": "官方主页身份字段已机械核对；人工身份审核尚未完成，不能视为已批准。",
+    "official_profile_email": "chenchao@sklmg.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2563.htm",
+    "orcid_verification_evidence_ids": [
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "orcid_verification_basis": [
+      "E2-E6正式论文记录均列出Chao Chen，且E2/E3与官网邮箱、机构和ORCID形成可复核身份链。",
+      "E4-E6跨多篇论文重复出现同一ORCID与中南大学机构信息。"
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Chao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-5114-2282",
+      "notes": "正式论文记录确认Chao Chen为末位作者和通讯作者，机构、邮箱与ORCID身份链已补齐，待人工审核。",
+      "matched_institution_source_url": "https://doi.org/10.1126/scitranslmed.adh9974",
+      "matched_author_email": "chenchao@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1126/scitranslmed.adh9974",
+      "orcid_source_url": "https://doi.org/10.1126/scitranslmed.adh9974"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Chao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-5114-2282",
+      "notes": "正式论文记录确认Chao Chen为末位作者和通讯作者，机构、邮箱与ORCID身份链已补齐，待人工审核。",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41380-023-02243-4",
+      "matched_author_email": "chenchao@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1038/s41380-023-02243-4",
+      "orcid_source_url": "https://doi.org/10.1038/s41380-023-02243-4"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Chao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-5114-2282",
+      "notes": "Nature正式版本列出Chao Chen、Central South University affiliation及corresponding author信息。",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41467-023-40861-2",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1038/s41467-023-40861-2"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Chao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-5114-2282",
+      "notes": "Oxford Academic正式记录确认Chao Chen为末位作者及通讯作者，Central South University affiliation已核对。",
+      "matched_institution_source_url": "https://doi.org/10.1093/schbul/sbad003",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1093/schbul/sbad003"
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Chao Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0002-5114-2282",
+      "notes": "Springer正式记录显示版本记录日期为2022-10-24；卷期标注为2024，采用版本记录年份并保留该版本说明。",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41380-022-01834-x",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1038/s41380-022-01834-x"
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "预印本作为E3正式版本的重复候选保留，不重复采用。"
+      ],
+      "matched_author_name": null,
+      "matched_institution": null,
+      "matched_orcid": null,
+      "notes": "重复候选，不作为采用Evidence；待人工复核版本关系。",
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": null
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-06",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "人工审核尚未完成；本地机械校验不能替代人工身份确认。",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "notes": "陈超E2/E3已按正式论文记录、末位/通讯作者、机构、邮箱和ORCID链补齐；E7保留为同版本组重复候选。人工审核仍 pending。"
+}

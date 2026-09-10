@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "fan-liangliang",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "unresolved",
+    "candidate_orcid": "0000-0001-7431-1838",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2514.htm",
+    "human_review_status": "pending",
+    "notes": "Publication identity was checked per paper; human review remains pending. ORCID state follows the recorded chain and is not a release approval.",
+    "official_profile_email": "swfanliangliang@csu.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2514.htm",
+    "orcid_verification_evidence_ids": [],
+    "orcid_verification_basis": [
+      "Only one publication-level ORCID chain record was closed; advisor-level ORCID remains unresolved."
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus first-author position and publication-time CSU affiliations.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1038/s12276-022-00763-7",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus first-author position and publication-time CSU affiliations."
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus first-author position and publication-time CSU affiliations.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.gendis.2022.02.011",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus first-author position and publication-time CSU affiliations."
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact ORCID and current affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1002/mco2.480",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": "0000-0001-7431-1838",
+      "orcid_source_url": "https://doi.org/10.1002/mco2.480",
+      "notes": "Official representative list plus exact ORCID and current affiliation."
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus official email and current affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s43556-025-00317-z",
+      "matched_author_email": "swfanliangliang@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1186/s43556-025-00317-z",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus official email and current affiliation."
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus current affiliation and Lipin3 coauthor continuity.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.7150/ijbs.110125",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus current affiliation and Lipin3 coauthor continuity."
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current cell-biology unit and medical-genetics topic."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fmed.2026.1864944",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current cell-biology unit and medical-genetics topic."
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current cell-biology unit and medical-genetics topic."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fcell.2026.1816964",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current cell-biology unit and medical-genetics topic."
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current unit and model-organism method."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.11817/j.issn.1672-7347.2026.260005",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current unit and model-organism method."
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current unit and medical-genetics topic."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fnins.2026.1864983",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current unit and medical-genetics topic."
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current unit and renal-genetics topic."
+      ],
+      "matched_author_name": "Liang-Liang Fan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fped.2026.1864993",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current unit and renal-genetics topic."
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-09",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "Owner human identity review is pending; machine closure is not approval.",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "notes": "Official-list anchors, publication-time affiliations, email/ORCID where available, and explicit same-name counterexamples were kept advisor-local. Owner publication decision 2026-09-10 accepted adopted/featured content only; global identity and release review remain pending."
+}

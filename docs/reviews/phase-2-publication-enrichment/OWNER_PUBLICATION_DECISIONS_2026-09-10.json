@@ -1,0 +1,19 @@
+{
+  "decision_date": "2026-09-10",
+  "scope": "phase_2_cohort_8_publication_content_and_featured_review_only",
+  "owner_decision": "ACCEPT_WITH_NOTES",
+  "release_authorized": false,
+  "global_human_approved": false,
+  "final_website_visual_review_required": true,
+  "advisors": {
+    "chen-shuhua": {"keep_adopted":["E2","E3","E4","E5","E6","E7"],"promote":[],"keep_candidate":["E8","E9","E10","E11","E12","E13","E14","E15","E16","E17","E18","E19","E20"],"rejected":["E21","E22"],"unresolved":["E23"],"orcid":{"status":"verified","value":"0000-0003-2373-3402","note":"E2 + E7 publication chain; not a complete public ORCID profile"},"featured":["E2","E3","E5","E7"]},
+    "deng-meichun": {"keep_adopted":["E2","E3","E4","E5","E6"],"promote":["E7","E8","E10","E11"],"keep_candidate":["E9"],"rejected":[],"unresolved":[],"orcid":{"status":"verified","value":"0000-0002-3558-1314"},"featured":["E2","E4","E6","E7","E11"]},
+    "deng-suixin": {"keep_adopted":["E2","E3","E4","E5","E6"],"promote":["E7","E8"],"keep_candidate":["E9"],"rejected":[],"unresolved":[],"orcid":{"status":"verified","value":"0000-0003-4795-2570"},"featured":["E2","E3","E6","E7","E8"]},
+    "duan-ranhui": {"keep_adopted":["E2","E3","E4","E5","E6"],"promote":["E7","E8","E11"],"keep_candidate":["E9","E10"],"rejected":[],"unresolved":[],"orcid":{"status":"verified","value":"0000-0001-7117-4487"},"featured":["E2","E5","E6","E7","E11"],"version_note":"E3 formal DOI 10.1038/s41419-024-06934-w is canonical; Research Square 10.21203/rs.3.rs-3754446/v1 remains a relation only"},
+    "fan-liangliang": {"keep_adopted":["E2","E3","E4","E5","E6"],"promote":[],"keep_candidate":["E7","E8","E9","E10","E11"],"rejected":[],"unresolved":[],"orcid":{"status":"unresolved","value":"0000-0001-7431-1838","note":"single clean publication chain only; not advisor-level verified"},"featured":["E2","E3","E4","E5","E6"]},
+    "guo-yi": {"keep_adopted":["E2","E3","E4","E5","E6"],"promote":["E8","E9"],"keep_candidate":["E10"],"rejected":["E11"],"unresolved":["E7"],"orcid":{"status":"verified","value":"0000-0003-2727-9809"},"featured":["E2","E5","E6","E8","E9"]},
+    "jiang-hao": {"keep_adopted":["E2","E3","E4","E6"],"promote":["E7"],"keep_candidate":[],"rejected":["E8","E9","E10"],"unresolved":["E5","E11"],"orcid":{"status":"unresolved","value":"0000-0001-7270-1939","note":"single clean publication chain only; not advisor-level verified"},"featured":["E2","E3","E4","E6","E7"],"follow_up":{"code":"TARGETED_IDENTITY_FOLLOWUP","evidence_id":"E5","note":"officially listed high-value paper; publication-time author affiliation still not closed"},"limitation":"adopted evidence supports tumor mechanisms more strongly than tumor-nerve interaction"},
+    "li-jinchen": {"keep_adopted":["E2","E3","E4","E5","E6"],"promote":["E9","E11"],"keep_candidate":["E10"],"rejected":[],"unresolved":["E7","E8"],"orcid":{"status":"unresolved","value":null,"conflicting_values":["0000-0003-3335-9303","0000-0001-5522-806X"]},"featured":["E2","E3","E5","E9","E11"]}
+  }
+}
+

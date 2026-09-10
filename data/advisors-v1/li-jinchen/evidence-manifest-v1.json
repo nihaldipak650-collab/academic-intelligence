@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "li-jinchen",
+  "source_scope": "Official CSU advisor profile/representative list plus DOI, PubMed and Europe PMC discovery metadata; local Owner review only.",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2483.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "学院官方导师主页，作为身份、职务、联系方式与研究方向的一手来源。",
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E1",
+      "last_verified_at": "2026-09-09",
+      "notes": "只保留官方页面公开信息；不推断招生、培养承诺或实验室氛围。 官方页面公开课题组链接：http://genemed.tech/jclab。",
+      "page_title": "李津臣",
+      "profile_name": "李津臣",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职称为特聘教授、研究员。",
+          "fact_category": "professional_title",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：position",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "公开角色为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：public_roles",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "利用生物信息学和医学遗传学研究复杂疾病，特别是神经精神疾病的关键基因、分子机制、临床亚型与分子亚型。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：research_directions_original",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "主页公开方法或方向涉及多组学分析、致病变异和候选基因识别、数据库与生物信息学方法开发。",
+          "fact_category": "research_method",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：main_techniques",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "fact_text": "官方页面公开课题组链接：http://genemed.tech/jclab。",
+          "fact_category": "official_contact",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：contact.official_lab_url",
+          "supported_public_fields": [
+            "contact"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.ebiom.2023.104928",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus official email and multi-unit CSU affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E2",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 38113761; Official representative list plus official email and multi-unit CSU affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Prioritizing de novo potential non-canonical splicing variants in neurodevelopmental disorders.",
+      "publication_year": 2024,
+      "doi": "10.1016/j.ebiom.2023.104928",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.ebiom.2023.104928"
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/nar/gkad1061",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact author and multi-unit CSU affiliation; publication ORCID conflicts with another official paper and is not adopted as advisor ORCID.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E3",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 37956311; Official representative list plus exact author and multi-unit CSU affiliation; publication ORCID conflicts with another official paper and is not adopted as advisor ORCID. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "VarCards2: an integrated genetic and clinical database for ACMG-AMP variant-interpretation guidelines in the human whole genome.",
+      "publication_year": 2024,
+      "doi": "10.1093/nar/gkad1061",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1093/nar/gkad1061"
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-024-52310-9",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus official email and multi-unit CSU affiliation; ORCID conflicts with E3 and remains unresolved.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E4",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 39278973; Official representative list plus official email and multi-unit CSU affiliation; ORCID conflicts with E3 and remains unresolved. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "A metabolomic profile of biological aging in 250,341 individuals from the UK Biobank.",
+      "publication_year": 2024,
+      "doi": "10.1038/s41467-024-52310-9",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41467-024-52310-9"
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/nar/gkaf980",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact author and multi-unit CSU affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E5",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41024706; Official representative list plus exact author and multi-unit CSU affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Gene4Denovo2: an updated platform for human de novo mutations discovery and interpretation.",
+      "publication_year": 2026,
+      "doi": "10.1093/nar/gkaf980",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1093/nar/gkaf980"
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.scib.2025.10.028",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus official email and multi-unit CSU affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E6",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41203482; Official representative list plus official email and multi-unit CSU affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Interactions between rare and common variant genetic risks in determining telomere length.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.scib.2025.10.028",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.scib.2025.10.028"
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/bib/bbag428",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "identity_pending"
+      ],
+      "reason": "Relevant unit but carries ORCID 0000-0003-3335-9303, one side of the unresolved two-ORCID conflict.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E7",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42574277; Relevant unit but carries ORCID 0000-0003-3335-9303, one side of the unresolved two-ORCID conflict. Candidate/adoption is not a featured or release decision.",
+      "title": "DeNovoSeer: a deep learning framework for pathogenicity prediction of de novo mutations.",
+      "publication_year": 2026,
+      "doi": "10.1093/bib/bbag428",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": null,
+      "publication_affiliation_source_url": null
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41380-026-03754-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "identity_pending"
+      ],
+      "reason": "Relevant unit but carries ORCID 0000-0001-5522-806X, the other side of the unresolved two-ORCID conflict.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E8",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42463903; Relevant unit but carries ORCID 0000-0001-5522-806X, the other side of the unresolved two-ORCID conflict. Candidate/adoption is not a featured or release decision.",
+      "title": "Genomic landscape of rare variants in a Chinese autism cohort and discovery of novel risk genes.",
+      "publication_year": 2026,
+      "doi": "10.1038/s41380-026-03754-6",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": null,
+      "publication_affiliation_source_url": null
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.scib.2026.07.038",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact multi-unit CSU bioinformatics/medical-genetics affiliation and official disease direction.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E9",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42463407; Exact multi-unit CSU bioinformatics/medical-genetics affiliation and official disease direction. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Biallelic hexose-6-phosphate dehydrogenase variants cause mitochondrial dysfunction underlying Parkinson's disease.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.scib.2026.07.038",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.scib.2026.07.038"
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.ebiom.2026.106383",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "Exact multi-unit CSU affiliation and official neuropsychiatric-disease direction.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E10",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42447752; Exact multi-unit CSU affiliation and official neuropsychiatric-disease direction. Candidate/adoption is not a featured or release decision.",
+      "title": "Metabolomic signatures for diagnosis and clinical severity in Parkinson's disease.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.ebiom.2026.106383",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.ebiom.2026.106383"
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.ebiom.2026.106224",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official email, exact multi-unit CSU affiliation and disease direction.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E11",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41864063; Official email, exact multi-unit CSU affiliation and disease direction. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Large-scale profiling of blood microbial signatures in patients with Parkinson's disease and its association with disease progression: a cross-sectional study.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.ebiom.2026.106224",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.ebiom.2026.106224"
+    }
+  ]
+}

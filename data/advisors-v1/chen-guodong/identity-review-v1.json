@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.5",
+  "advisor_id": "chen-guodong",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-9399-9252",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2549.htm",
+    "human_review_status": "pending",
+    "notes": "官方主页身份字段已机械核对；人工身份审核尚未完成，不能视为已批准。",
+    "official_profile_email": "guodong.chen@csu.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2549.htm",
+    "orcid_verification_evidence_ids": [
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "orcid_verification_basis": [
+      "E3-E6保留来源记录可闭合的ORCID论文链；E2的公开论文元数据未明确提供该作者ORCID，因此保持null。",
+      "同一ORCID跨Boston University、当前中南大学论文与官网邮箱链可复核。"
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "该论文公开元数据未明确提供作者ORCID，因此逐论文ORCID保持null。"
+      ],
+      "matched_author_name": "Guo-Dong Chen",
+      "matched_institution": "Chinese Academy of Sciences, Shanghai",
+      "matched_orcid": null,
+      "notes": "Nature正式记录列出Guo-Dong Chen为共同第一作者之一；Xu Guoliang及其他对应作者信息已核对。",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41586-019-1160-0",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": null
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Guo-Dong Chen",
+      "matched_institution": "Boston University",
+      "matched_orcid": "0000-0001-9399-9252",
+      "notes": "PubMed正式记录确认Guo-Dong Chen为第一作者，作者身份和Central South University affiliation已核对。",
+      "matched_institution_source_url": "https://doi.org/10.1126/sciadv.abo7605",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1126/sciadv.abo7605"
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Guodong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9399-9252",
+      "notes": "PubMed正式记录确认Guodong Chen为末位作者并列有中南大学生命科学学院 affiliation；通讯作者标记未在本轮充分核对，保留null。",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.fsi.2024.109661",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1016/j.fsi.2024.109661"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Guodong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9399-9252",
+      "notes": "MDPI正式记录/论文页面确认Guodong Chen为末位通讯作者，机构和作者身份已核对。",
+      "matched_institution_source_url": "https://doi.org/10.3390/ijms252312879",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.3390/ijms252312879"
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Guodong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-9399-9252",
+      "notes": "PubMed正式记录列出Guodong Chen为末位作者，并列出guodong.chen@csu.edu.cn；通讯作者角色保留null。",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.fsi.2025.110411",
+      "matched_author_email": "guodong.chen@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.fsi.2025.110411",
+      "orcid_source_url": "https://doi.org/10.1016/j.fsi.2025.110411"
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-06",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "人工审核尚未完成；本地机械校验不能替代人工身份确认。",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "notes": "陈国栋E2/E3保留论文发表时真实历史机构；E3-E6构成有来源闭合的ORCID链，E2未公开ORCID保持null。人工审核仍 pending。"
+}

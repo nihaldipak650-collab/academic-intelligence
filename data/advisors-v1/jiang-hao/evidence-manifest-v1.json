@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "jiang-hao",
+  "source_scope": "Official CSU advisor profile/representative list plus DOI, PubMed and Europe PMC discovery metadata; local Owner review only.",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2499.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "学院官方导师主页，作为身份、职务、联系方式与研究方向的一手来源。",
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E1",
+      "last_verified_at": "2026-09-09",
+      "notes": "只保留官方页面公开信息；不推断招生、培养承诺或实验室氛围。",
+      "page_title": "姜浩",
+      "profile_name": "姜浩",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物医学信息学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职称为副教授。",
+          "fact_category": "professional_title",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：position",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "公开角色为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：public_roles",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "表观遗传修饰因子在肿瘤恶性进展中的作用与机制，以及恶性肿瘤和神经之间的相互作用。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：research_directions_original",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "主页公开方法或方向涉及肿瘤分子机制研究、表观遗传分析和潜在靶向治疗线索评估。",
+          "fact_category": "research_method",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：main_techniques",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/advs.202306623",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus first-author position and exact biomedical-informatics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E2",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 38342622; Official representative list plus first-author position and exact biomedical-informatics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Targeting C21orf58 is a Novel Treatment Strategy of Hepatocellular Carcinoma by Disrupting the Formation of JAK2/C21orf58/STAT3 Complex.",
+      "publication_year": 2024,
+      "doi": "10.1002/advs.202306623",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1002/advs.202306623"
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41417-023-00719-7",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID, email and biomedical-informatics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E3",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 38135698; Official representative list plus exact ORCID, email and biomedical-informatics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "STAT5a and SH2B3 novel mutations display malignancy roles in a triple-negative primary myelofibrosis patient.",
+      "publication_year": 2024,
+      "doi": "10.1038/s41417-023-00719-7",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41417-023-00719-7"
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fcell.2023.1237530",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact biomedical-informatics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E4",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 37829187; Official representative list plus exact biomedical-informatics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Deubiquitinase OTUD3: a double-edged sword in immunity and disease.",
+      "publication_year": 2023,
+      "doi": "10.3389/fcell.2023.1237530",
+      "source_type": "review",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "review"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3389/fcell.2023.1237530"
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s12274-023-5786-8",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "identity_pending"
+      ],
+      "reason": "Official profile and Crossref close title/first author, but reviewed metadata did not close publication-time affiliation; retained unresolved.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E5",
+      "last_verified_at": "2026-09-10",
+      "notes": "Crossref DOI record; Official profile and Crossref close title/first author, but reviewed metadata did not close publication-time affiliation; retained unresolved. Candidate/adoption is not a featured or release decision.",
+      "title": "Immunostimulant nanomodulator boosts antitumor immune response in triple negative breast cancer by synergism of vessel normalization and photothermal therapy.",
+      "publication_year": 2023,
+      "doi": "10.1007/s12274-023-5786-8",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": null,
+      "publication_affiliation_source_url": null
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/cancers14133057",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact biomedical-informatics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E6",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 35804829; Official representative list plus exact biomedical-informatics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Upregulated GATA3/miR205-5p Axis Inhibits MFNG Transcription and Reduces the Malignancy of Triple-Negative Breast Cancer.",
+      "publication_year": 2022,
+      "doi": "10.3390/cancers14133057",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3390/cancers14133057"
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.isci.2026.117246",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact biomedical-informatics unit and established tumor/STAT3 network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E7",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42662404; Exact biomedical-informatics unit and established tumor/STAT3 network. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "RFC5 and STAT3 form a transcriptional complex to drive NSCLC progression via c-Myc.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.isci.2026.117246",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.isci.2026.117246"
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.jtocrr.2026.101022",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded",
+        "identity_pending"
+      ],
+      "reason": "Same-name author has a different hospital and radiation-oncology network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E8",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42529258; Same-name author has a different hospital and radiation-oncology network. Candidate/adoption is not a featured or release decision.",
+      "title": "Durvalumab Consolidation Treatment Following Concurrent Chemoradiotherapy in Limited-Stage SCLC: ADRIATIC China Subgroup Analysis.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.jtocrr.2026.101022",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "First Affiliated Hospital of Bengbu Medical University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.jtocrr.2026.101022"
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1021/acs.inorgchem.6c01622",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded",
+        "identity_pending"
+      ],
+      "reason": "Same-name author is in physics and an unrelated field/network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E9",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42443070; Same-name author is in physics and an unrelated field/network. Candidate/adoption is not a featured or release decision.",
+      "title": "Lattice Geometry Modulation of Heisenberg Superexchange in B/C/N-Substituted MXenes.",
+      "publication_year": 2026,
+      "doi": "10.1021/acs.inorgchem.6c01622",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University School of Physics"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1021/acs.inorgchem.6c01622"
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41392-026-02707-3",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded",
+        "identity_pending"
+      ],
+      "reason": "Same-name author has a different hospital and radiation-oncology network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E10",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42260304; Same-name author has a different hospital and radiation-oncology network. Candidate/adoption is not a featured or release decision.",
+      "title": "Efficacy and safety of toripalimab in combination with cetuximab in patients with recurrent or metastatic head and neck squamous cell carcinoma: a phase 1b/2 study.",
+      "publication_year": 2026,
+      "doi": "10.1038/s41392-026-02707-3",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "First Affiliated Hospital of Bengbu Medical University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41392-026-02707-3"
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s00604-026-08166-5",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "identity_pending"
+      ],
+      "reason": "Department text fits, but the listed email is jianhao1209@csu.edu.cn rather than the publication identity email; keep unresolved.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E11",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42246990; Department text fits, but the listed email is jianhao1209@csu.edu.cn rather than the publication identity email; keep unresolved. Candidate/adoption is not a featured or release decision.",
+      "title": "One-pot fabrication and characterization of ZnO nanoflowers using Zanthoxylum simulans and evaluating their biomedical claims.",
+      "publication_year": 2026,
+      "doi": "10.1007/s00604-026-08166-5",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": null,
+      "publication_affiliation_source_url": null
+    }
+  ]
+}

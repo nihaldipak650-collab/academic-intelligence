@@ -1,0 +1,414 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "deng-suixin",
+  "source_scope": "Official CSU advisor profile/representative list plus DOI, PubMed and Europe PMC discovery metadata; local Owner review only.",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "学院官方导师主页，作为身份、职务、联系方式与研究方向的一手来源。",
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E1",
+      "last_verified_at": "2026-09-09",
+      "notes": "只保留官方页面公开信息；不推断招生、培养承诺或实验室氛围。",
+      "page_title": "邓穗馨",
+      "profile_name": "邓穗馨",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院遗传学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职称为讲师。",
+          "fact_category": "professional_title",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：position",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "公开角色为硕士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：public_roles",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "神经突触与环路机制及其与脑功能和疾病的关系，包括运动、社交、睡眠节律和情绪相关环路。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：research_directions_original",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "主页公开方法或方向涉及在体与离体电生理、光遗传/化学遗传、光纤记录、脑深部刺激、神经示踪与形态学。",
+          "fact_category": "research_method",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：main_techniques",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1186/s12993-025-00287-w",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus official email and current affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E2",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 40646562; Official representative list plus official email and current affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Knockout of Bmal1 in dopaminergic neurons induces ADHD-like symptoms via hyperactive dopamine signaling in male mice.",
+      "publication_year": 2025,
+      "doi": "10.1186/s12993-025-00287-w",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1186/s12993-025-00287-w"
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-025-59113-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID, email and current affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E3",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 40253429; Official representative list plus exact ORCID, email and current affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Deep brain stimulation alleviates Parkinsonian motor deficits through desynchronizing GABA release in mice.",
+      "publication_year": 2025,
+      "doi": "10.1038/s41467-025-59113-6",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41467-025-59113-6"
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-023-43292-1",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID and publication-time Fudan affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E4",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 37978295; Official representative list plus exact ORCID and publication-time Fudan affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "GDF11 slows excitatory neuronal senescence and brain ageing by repressing p21.",
+      "publication_year": 2023,
+      "doi": "10.1038/s41467-023-43292-1",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Fudan University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41467-023-43292-1"
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41380-022-01790-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID and publication-time Fudan affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E5",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 36138130; Official representative list plus exact ORCID and publication-time Fudan affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Human antimicrobial peptide LL-37 contributes to Alzheimer's disease progression.",
+      "publication_year": 2022,
+      "doi": "10.1038/s41380-022-01790-6",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Fudan University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41380-022-01790-6"
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.neuron.2019.10.038",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus PubMed DOI, first-author position and publication-time BNU affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E6",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 31806492; Official representative list plus PubMed DOI, first-author position and publication-time BNU affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Regulation of Recurrent Inhibition by Asynchronous Glutamate Release in Neocortex.",
+      "publication_year": 2020,
+      "doi": "10.1016/j.neuron.2019.10.038",
+      "source_type": "journal_article",
+      "author_position": "first",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Beijing Normal University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.neuron.2019.10.038"
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41398-026-04219-8",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact ORCID, official email and current affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E7",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42443162; Exact ORCID, official email and current affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Increased activity of DRD1-MSNs in dorsolateral striatum underlies Cry1Δ11 mutation-induced repetitive behaviors.",
+      "publication_year": 2026,
+      "doi": "10.1038/s41398-026-04219-8",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41398-026-04219-8"
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41380-026-03681-6",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact current unit and official neurodevelopment direction; retained as candidate.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E8",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42297935; Exact current unit and official neurodevelopment direction; retained as candidate. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Evidence supporting the role of GIGYF2 in synapse development and autism.",
+      "publication_year": 2026,
+      "doi": "10.1038/s41380-026-03681-6",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41380-026-03681-6"
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41467-026-72935-2",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "Exact current unit and coherent neuroscience network; retained as candidate.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E9",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42120382; Exact current unit and coherent neuroscience network; retained as candidate. Candidate/adoption is not a featured or release decision.",
+      "title": "Spindle neurons in human cortex possess distinctive firing properties and transcriptomic signatures.",
+      "publication_year": 2026,
+      "doi": "10.1038/s41467-026-72935-2",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41467-026-72935-2"
+    }
+  ]
+}

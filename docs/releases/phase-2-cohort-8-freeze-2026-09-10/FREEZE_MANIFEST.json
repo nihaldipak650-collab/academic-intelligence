@@ -1,0 +1,418 @@
+{
+  "freeze_id": "phase-2-cohort-8-freeze-2026-09-10",
+  "created_at": "2026-09-10T11:45:41+08:00",
+  "repository": {
+    "head": "fed26decc26a709379b0f087be8d68c1b50f2642",
+    "branch": "codex/luna-advisor-pilot-3",
+    "worktree_clean_assumed": false
+  },
+  "schema_version": "1.0.6",
+  "contract_version": "1.0.6",
+  "advisor_ids": [
+    "chen-shuhua",
+    "deng-meichun",
+    "deng-suixin",
+    "duan-ranhui",
+    "fan-liangliang",
+    "guo-yi",
+    "jiang-hao",
+    "li-jinchen"
+  ],
+  "canonical_package_files": [
+    "public-advisor-v1.json",
+    "evidence-manifest-v1.json",
+    "identity-review-v1.json",
+    "public-advisor-v1.md",
+    "validation-report-v1.json"
+  ],
+  "advisors": {
+    "chen-shuhua": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E5",
+        "E7"
+      ],
+      "unresolved_publication_evidence_ids": [
+        "E23"
+      ],
+      "excluded_publication_evidence_ids": [
+        "E21",
+        "E22"
+      ],
+      "advisor_orcid_status": "verified",
+      "candidate_orcid": "0000-0003-2373-3402",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 22,
+        "adopted": 6,
+        "verified_candidate": 13,
+        "excluded": 2,
+        "identity_pending": 1
+      }
+    },
+    "deng-meichun": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E10",
+        "E11"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E4",
+        "E6",
+        "E7",
+        "E11"
+      ],
+      "unresolved_publication_evidence_ids": [],
+      "excluded_publication_evidence_ids": [],
+      "advisor_orcid_status": "verified",
+      "candidate_orcid": "0000-0002-3558-1314",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 10,
+        "adopted": 9,
+        "verified_candidate": 1,
+        "excluded": 0,
+        "identity_pending": 0
+      }
+    },
+    "deng-suixin": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "unresolved_publication_evidence_ids": [],
+      "excluded_publication_evidence_ids": [],
+      "advisor_orcid_status": "verified",
+      "candidate_orcid": "0000-0003-4795-2570",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 8,
+        "adopted": 7,
+        "verified_candidate": 1,
+        "excluded": 0,
+        "identity_pending": 0
+      }
+    },
+    "duan-ranhui": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E11"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E5",
+        "E6",
+        "E7",
+        "E11"
+      ],
+      "unresolved_publication_evidence_ids": [],
+      "excluded_publication_evidence_ids": [],
+      "advisor_orcid_status": "verified",
+      "candidate_orcid": "0000-0001-7117-4487",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 10,
+        "adopted": 8,
+        "verified_candidate": 2,
+        "excluded": 0,
+        "identity_pending": 0
+      }
+    },
+    "fan-liangliang": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "unresolved_publication_evidence_ids": [],
+      "excluded_publication_evidence_ids": [],
+      "advisor_orcid_status": "unresolved",
+      "candidate_orcid": "0000-0001-7431-1838",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 10,
+        "adopted": 5,
+        "verified_candidate": 5,
+        "excluded": 0,
+        "identity_pending": 0
+      }
+    },
+    "guo-yi": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E8",
+        "E9"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E5",
+        "E6",
+        "E8",
+        "E9"
+      ],
+      "unresolved_publication_evidence_ids": [
+        "E7"
+      ],
+      "excluded_publication_evidence_ids": [
+        "E11"
+      ],
+      "advisor_orcid_status": "verified",
+      "candidate_orcid": "0000-0003-2727-9809",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 10,
+        "adopted": 7,
+        "verified_candidate": 1,
+        "excluded": 1,
+        "identity_pending": 1
+      }
+    },
+    "jiang-hao": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E6",
+        "E7"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E6",
+        "E7"
+      ],
+      "unresolved_publication_evidence_ids": [
+        "E5",
+        "E11"
+      ],
+      "excluded_publication_evidence_ids": [
+        "E8",
+        "E9",
+        "E10"
+      ],
+      "advisor_orcid_status": "unresolved",
+      "candidate_orcid": "0000-0001-7270-1939",
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 10,
+        "adopted": 5,
+        "verified_candidate": 0,
+        "excluded": 3,
+        "identity_pending": 2
+      }
+    },
+    "li-jinchen": {
+      "adopted_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E9",
+        "E11"
+      ],
+      "featured_publication_evidence_ids": [
+        "E2",
+        "E3",
+        "E5",
+        "E9",
+        "E11"
+      ],
+      "unresolved_publication_evidence_ids": [
+        "E7",
+        "E8"
+      ],
+      "excluded_publication_evidence_ids": [],
+      "advisor_orcid_status": "unresolved",
+      "candidate_orcid": null,
+      "human_review_state": "pending",
+      "publication_status": "review_pending",
+      "release_eligible": false,
+      "publication_counts": {
+        "total_candidates": 10,
+        "adopted": 7,
+        "verified_candidate": 1,
+        "excluded": 0,
+        "identity_pending": 2
+      }
+    }
+  },
+  "cohort_totals": {
+    "publication_candidates": 90,
+    "adopted": 54,
+    "verified_candidate": 24,
+    "excluded": 6,
+    "identity_pending": 6,
+    "featured": 39
+  },
+  "owner_review": {
+    "verdict": "OWNER_FINAL_WEB_REVIEW_PASS_WITH_NOTES",
+    "scope": "focused high-risk and representative spot-check; not exhaustive field-by-field or paper-by-paper re-verification",
+    "publication_decision_artifact": "docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.json",
+    "publication_decision_sha256": "4fb0a337f8a4b4184dd5a4a41fc88b68861d25532b37484516fa5b08ea733b82",
+    "release_authorized": false
+  },
+  "ledger": {
+    "path": "docs/reviews/phase-2-publication-enrichment/publication_identity_ledger.csv",
+    "sha256": "e7d8234eaab86462d98f6d5d78cc74fd5280df1022e92068e91ee32ee30a4e5e"
+  },
+  "source_artifact_paths": [
+    "data/advisors-v1/chen-shuhua/public-advisor-v1.json",
+    "data/advisors-v1/chen-shuhua/evidence-manifest-v1.json",
+    "data/advisors-v1/chen-shuhua/identity-review-v1.json",
+    "data/advisors-v1/chen-shuhua/public-advisor-v1.md",
+    "data/advisors-v1/chen-shuhua/validation-report-v1.json",
+    "data/advisors-v1/deng-meichun/public-advisor-v1.json",
+    "data/advisors-v1/deng-meichun/evidence-manifest-v1.json",
+    "data/advisors-v1/deng-meichun/identity-review-v1.json",
+    "data/advisors-v1/deng-meichun/public-advisor-v1.md",
+    "data/advisors-v1/deng-meichun/validation-report-v1.json",
+    "data/advisors-v1/deng-suixin/public-advisor-v1.json",
+    "data/advisors-v1/deng-suixin/evidence-manifest-v1.json",
+    "data/advisors-v1/deng-suixin/identity-review-v1.json",
+    "data/advisors-v1/deng-suixin/public-advisor-v1.md",
+    "data/advisors-v1/deng-suixin/validation-report-v1.json",
+    "data/advisors-v1/duan-ranhui/public-advisor-v1.json",
+    "data/advisors-v1/duan-ranhui/evidence-manifest-v1.json",
+    "data/advisors-v1/duan-ranhui/identity-review-v1.json",
+    "data/advisors-v1/duan-ranhui/public-advisor-v1.md",
+    "data/advisors-v1/duan-ranhui/validation-report-v1.json",
+    "data/advisors-v1/fan-liangliang/public-advisor-v1.json",
+    "data/advisors-v1/fan-liangliang/evidence-manifest-v1.json",
+    "data/advisors-v1/fan-liangliang/identity-review-v1.json",
+    "data/advisors-v1/fan-liangliang/public-advisor-v1.md",
+    "data/advisors-v1/fan-liangliang/validation-report-v1.json",
+    "data/advisors-v1/guo-yi/public-advisor-v1.json",
+    "data/advisors-v1/guo-yi/evidence-manifest-v1.json",
+    "data/advisors-v1/guo-yi/identity-review-v1.json",
+    "data/advisors-v1/guo-yi/public-advisor-v1.md",
+    "data/advisors-v1/guo-yi/validation-report-v1.json",
+    "data/advisors-v1/jiang-hao/public-advisor-v1.json",
+    "data/advisors-v1/jiang-hao/evidence-manifest-v1.json",
+    "data/advisors-v1/jiang-hao/identity-review-v1.json",
+    "data/advisors-v1/jiang-hao/public-advisor-v1.md",
+    "data/advisors-v1/jiang-hao/validation-report-v1.json",
+    "data/advisors-v1/li-jinchen/public-advisor-v1.json",
+    "data/advisors-v1/li-jinchen/evidence-manifest-v1.json",
+    "data/advisors-v1/li-jinchen/identity-review-v1.json",
+    "data/advisors-v1/li-jinchen/public-advisor-v1.md",
+    "data/advisors-v1/li-jinchen/validation-report-v1.json",
+    "docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.json",
+    "docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.md",
+    "docs/reviews/phase-2-publication-enrichment/publication_identity_ledger.csv",
+    "docs/reviews/phase-2-publication-enrichment/phase-2-cohort-8-publication-batch-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/phase-2-cohort-8-publication-owner-review.md",
+    "docs/reviews/phase-2-publication-enrichment/00_START_HERE.md",
+    "docs/reviews/phase-2-publication-enrichment/chen-shuhua-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/deng-meichun-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/deng-suixin-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/duan-ranhui-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/fan-liangliang-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/guo-yi-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/jiang-hao-publication-audit.md",
+    "docs/reviews/phase-2-publication-enrichment/li-jinchen-publication-audit.md",
+    "docs/advisor-template-v1/production-contract-v1.0.6.md",
+    "docs/advisor-template-v1/public-advisor-schema-v1.0.6.json",
+    "docs/advisor-template-v1/evidence-manifest-schema-v1.0.6.json",
+    "docs/advisor-template-v1/identity-review-schema-v1.0.6.json",
+    "docs/advisor-template-v1/display-label-mapping-v1.0.6.json",
+    "src/advisor_production/validator.py",
+    "src/advisor_production/renderer.py",
+    "tests/test_advisor_production_v106.py",
+    "tests/test_phase2_publication_enrichment.py",
+    "tests/test_chen_shuhua_publication_pilot.py",
+    "tests/test_phase2_cohort8_freeze.py",
+    "frontend/scripts/local-review-phase2-advisor-dto.mjs",
+    "frontend/scripts/local-review-phase2-latest-site.mjs",
+    "frontend/scripts/local-review-phase2-advisor-dto.test.mjs",
+    "frontend/scripts/local-review-phase2-latest-site.test.mjs",
+    "frontend/src/test/phase2-review-ui.test.tsx",
+    "scripts/check-phase2-cohort8-freeze.py",
+    "docs/releases/phase-2-cohort-8-freeze-2026-09-10/00_FREEZE_README.md",
+    "docs/releases/phase-2-cohort-8-freeze-2026-09-10/KNOWN_OPEN_RISKS.md"
+  ],
+  "hash_inventory_path": "docs/releases/phase-2-cohort-8-freeze-2026-09-10/FREEZE_FILE_HASHES.csv",
+  "derived_review_artifact": {
+    "path": "frontend/.local-review-phase2-8-latest/",
+    "canonical": false,
+    "status": "OWNER_PUBLICATION_DECISIONS_APPLIED_READY_FOR_FINAL_WEB_REVIEW"
+  },
+  "relevant_tests": {
+    "python_unittest_discover_expected": 143,
+    "frontend_vitest_expected": 107,
+    "freeze_checker_expected": "MATCH"
+  },
+  "independent_reviewer": {
+    "verdict": "INDEPENDENT_REVIEWER_PASS",
+    "p0_p1_findings": 0,
+    "evidence": "73 hash matches; 143 Python tests; 107 frontend tests; exact 54/24/6/6 ledger and 39 featured state; protected public/site/deploy content unchanged"
+  },
+  "prohibited_claims": [
+    "HUMAN_APPROVED",
+    "READY_FOR_RELEASE",
+    "DEPLOYED",
+    "PUBLISHED"
+  ]
+}

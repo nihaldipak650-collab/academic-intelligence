@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "duan-ranhui",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-7117-4487",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2559.htm",
+    "human_review_status": "pending",
+    "notes": "Publication identity was checked per paper; human review remains pending. ORCID state follows the recorded chain and is not a release approval.",
+    "official_profile_email": "duanranhui@sklmg.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2559.htm",
+    "orcid_verification_evidence_ids": [
+      "E2",
+      "E3"
+    ],
+    "orcid_verification_basis": [
+      "Publication records E2, E3 carry the same ORCID 0000-0001-7117-4487 and at least one current-CSU link."
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact ORCID, email and current affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1038/s44321-025-00217-3",
+      "matched_author_email": "duanranhui@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1038/s44321-025-00217-3",
+      "matched_orcid": "0000-0001-7117-4487",
+      "orcid_source_url": "https://doi.org/10.1038/s44321-025-00217-3",
+      "notes": "Official representative list plus exact ORCID, email and current affiliation."
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact ORCID, email and current affiliation; formal article selected over preprint 10.21203/rs.3.rs-3754446/v1.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41419-024-06934-w",
+      "matched_author_email": "duanranhui@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1038/s41419-024-06934-w",
+      "matched_orcid": "0000-0001-7117-4487",
+      "orcid_source_url": "https://doi.org/10.1038/s41419-024-06934-w",
+      "notes": "Official representative list plus exact ORCID, email and current affiliation; formal article selected over preprint 10.21203/rs.3.rs-3754446/v1."
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus official email and current affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.jmoldx.2024.06.005",
+      "matched_author_email": "duanranhui@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.jmoldx.2024.06.005",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus official email and current affiliation."
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus current affiliation and Drosophila disease-model continuity.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1096/fj.202200212r",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus current affiliation and Drosophila disease-model continuity."
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus current medical-genetics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1002/mds.29041",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus current medical-genetics affiliation."
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current unit and fragile-X topic."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1007/s12035-026-06115-0",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current unit and fragile-X topic."
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official email, current unit and Drosophila network."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s13578-026-01578-z",
+      "matched_author_email": "duanranhui@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1186/s13578-026-01578-z",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official email, current unit and Drosophila network."
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current unit and repeat-expansion neurodegeneration context."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.ebiom.2026.106127",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current unit and repeat-expansion neurodegeneration context."
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact current unit and molecular-genetics network."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1093/nar/gkaf1347",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact current unit and molecular-genetics network."
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official email and current unit."
+      ],
+      "matched_author_name": "Ranhui Duan",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.ijbiomac.2025.149540",
+      "matched_author_email": "duanranhui@sklmg.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.ijbiomac.2025.149540",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official email and current unit."
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-09",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "Owner human identity review is pending; machine closure is not approval.",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    }
+  ],
+  "notes": "Official-list anchors, publication-time affiliations, email/ORCID where available, and explicit same-name counterexamples were kept advisor-local. Owner publication decision 2026-09-10 accepted adopted/featured content only; global identity and release review remain pending."
+}

@@ -8,6 +8,10 @@ import {
 import { PlatformHomePage } from "./pages/PlatformHomePage";
 import { BaoyanPrototypeAPage } from "./pages/BaoyanPrototypeAPage";
 import { BaoyanPrototypeBPage } from "./pages/BaoyanPrototypeBPage";
+import { AppShell } from "./components/AppShell";
+import { AdvisorDataProvider } from "./data/AdvisorDataContext";
+import { AdvisorDetailPage } from "./pages/AdvisorDetailPage";
+import { AdvisorListPage } from "./pages/AdvisorListPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -20,6 +24,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const reviewMode = import.meta.env.VITE_DATA_MODE === "review";
+
   return (
     <HashRouter>
       <ScrollToTop />
@@ -27,6 +33,18 @@ export default function App() {
         <Route index element={<PlatformHomePage />} />
         <Route path="baoyan/prototype-a" element={<BaoyanPrototypeAPage />} />
         <Route path="baoyan/prototype-b" element={<BaoyanPrototypeBPage />} />
+        {reviewMode && (
+          <Route
+            element={
+              <AdvisorDataProvider>
+                <AppShell />
+              </AdvisorDataProvider>
+            }
+          >
+            <Route path="advisors" element={<AdvisorListPage />} />
+            <Route path="advisor/:id" element={<AdvisorDetailPage />} />
+          </Route>
+        )}
         <Route path="*" element={<PlatformHomePage />} />
       </Routes>
     </HashRouter>

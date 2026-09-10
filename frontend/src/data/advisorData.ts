@@ -22,7 +22,54 @@ export async function loadAdvisorData(): Promise<AdvisorDataEnvelope> {
   ) {
     throw new Error("导师数据格式无效");
   }
-  return data;
+  const reviewCohort = import.meta.env.VITE_REVIEW_COHORT;
+  if (reviewCohort === "phase2-cohort-8-v106") {
+    if (
+      data.source !== "phase2-cohort-8-v106-local-review" ||
+      data.dtoVersion !== "1.0.6-review" ||
+      data.scope !== "local_review_only" ||
+      data.publicReleaseApproved !== false ||
+      data.advisorCount !== 8 ||
+      data.advisors.some(
+        (advisor) =>
+          advisor.releaseEligible !== false ||
+          advisor.publicationStatus !== "review_pending" ||
+          advisor.publicationIdentityStatus !== "pending_verification" ||
+          advisor.publicationSearchStatus !== "not_run" ||
+          advisor.publicationCandidateCount !== 0 ||
+          advisor.adoptedPublicationCount !== 0,
+      )
+    ) {
+      throw new Error("Phase 2 本地审核 DTO 未通过页面门禁");
+    }
+  }
+  const toText = (item: unknown): string =>
+    typeof item === "string" ? item : ((item as { text?: string })?.text ?? "");
+  const advisors = data.advisors.map((advisor) => {
+    const raw = advisor as Advisor & {
+      summary: unknown;
+      quickSummary?: {
+        coreDirections?: unknown[];
+        mainTechniques?: unknown[];
+        undergraduatePaths?: unknown[];
+      };
+    };
+    return {
+      ...advisor,
+      summary: toText(raw.summary),
+      status: advisor.status ?? advisor.publicationStatus ?? "review_pending",
+      authorMatchConfidence: advisor.authorMatchConfidence ?? "Unknown",
+      authorConfidenceSource: advisor.authorConfidenceSource ?? "author_match_confidence",
+      sourceTypeLabel: advisor.sourceTypeLabel ?? "本地审核 DTO",
+      sourceLabel: advisor.sourceLabel ?? "本地审核报告",
+      quickSummary: {
+        coreDirections: (raw.quickSummary?.coreDirections ?? []).map(toText).filter(Boolean),
+        mainTechniques: (raw.quickSummary?.mainTechniques ?? []).map(toText).filter(Boolean),
+        undergraduatePaths: (raw.quickSummary?.undergraduatePaths ?? []).map(toText).filter(Boolean),
+      },
+    } as Advisor;
+  });
+  return { ...data, advisors };
 }
 
 export async function loadSiteConfig(): Promise<SiteConfig> {

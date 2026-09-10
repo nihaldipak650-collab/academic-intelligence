@@ -1,0 +1,26 @@
+{
+  "version": "advisor-research-reuse-v1",
+  "required_lanes": ["PUBLIC_FACT", "PUBLICATION_SUPPORTED", "AI_SYNTHESIS", "UNRESOLVED"],
+  "decision_order": ["P0_IDENTITY_HAZARDS", "P1_ADOPTED", "P2_FEATURED", "P3_VERIFIED_CANDIDATES", "P4_RENDERED_LANGUAGE"],
+  "owner_decisions": ["ACCEPT", "ACCEPT_WITH_NOTES", "FIX", "REJECT"],
+  "per_advisor_checks": [
+    "official_profile_verified",
+    "publication_search_state_recorded",
+    "candidate_author_inventory_retained",
+    "same_name_counterexamples_checked",
+    "article_local_doi_verified",
+    "historical_affiliations_checked",
+    "orcid_evidence_and_conflicts_checked",
+    "per_paper_identity_decided",
+    "unresolved_and_excluded_preserved",
+    "versions_deduplicated",
+    "synthesis_uses_only_adopted_verified_evidence",
+    "featured_is_separate_owner_decision",
+    "local_latest_surface_reviewed"
+  ],
+  "release_defaults": {
+    "human_review": "pending",
+    "publication_status": "review_pending",
+    "release_eligible": false
+  }
+}

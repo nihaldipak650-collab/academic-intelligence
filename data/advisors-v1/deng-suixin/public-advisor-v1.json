@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "deng-suixin",
+  "record_created_at": "2026-09-09",
+  "migrated_at": null,
+  "name_zh": {
+    "value": "邓穗馨",
+    "value_en": "邓穗馨",
+    "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Suixin Deng",
+    "value_en": "Suixin Deng",
+    "source_url": "https://doi.org/10.1186/s12993-025-00287-w",
+    "source_ref": "evidence-manifest-v1.json#E2",
+    "source_authority": "publication",
+    "last_verified_at": "2026-09-10",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院遗传学系",
+    "value_en": "School of Life Sciences",
+    "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "讲师",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+    "source_ref": "evidence-manifest-v1.json#E1:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "硕士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+      "source_ref": "evidence-manifest-v1.json#E1:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-09",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2547.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+      "source_ref": "evidence-manifest-v1.json#E1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-09",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": "sxdeng@csu.edu.cn",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2547.htm",
+      "source_ref": "evidence-manifest-v1.json#E1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-09",
+      "missing_status": "available"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "神经突触与环路机制及其与脑功能和疾病的关系，包括运动、社交、睡眠节律和情绪相关环路。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2547.htm"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "神经突触与环路机制",
+      "explanation_zh": "可将公开方向理解为围绕神经突触与环路机制建立可核对的问题、数据或实验链；具体项目内容仍需向导师确认。",
+      "undergraduate_meaning": "适合先从公开论文和基础方法入手，区分已公开事实、研究假设与尚未核验的信息。",
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "根据官方方向与已核验论文，可能进一步核对其核心疾病问题、分子或信息学机制及证据链；具体当前项目仍需向导师确认。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2547.htm",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41467-025-59113-6",
+        "https://doi.org/10.1038/s41467-023-43292-1",
+        "https://doi.org/10.1038/s41380-022-01790-6",
+        "https://doi.org/10.1016/j.neuron.2019.10.038",
+        "https://doi.org/10.1038/s41398-026-04219-8",
+        "https://doi.org/10.1038/s41380-026-03681-6"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "根据官方主页和已核验论文，可能涉及页面已列方法以及论文中公开的方法类型；具体平台、样本和当前使用范围需项目确认。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2547.htm",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41467-025-59113-6",
+        "https://doi.org/10.1038/s41467-023-43292-1",
+        "https://doi.org/10.1038/s41380-022-01790-6",
+        "https://doi.org/10.1016/j.neuron.2019.10.038",
+        "https://doi.org/10.1038/s41398-026-04219-8",
+        "https://doi.org/10.1038/s41380-026-03681-6"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "可将已核验论文整理为问题、数据或模型、方法、结果与限制的可复核链；这是跨来源AI整理，不代表实验室固定流程。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2547.htm",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41467-025-59113-6",
+        "https://doi.org/10.1038/s41467-023-43292-1",
+        "https://doi.org/10.1038/s41380-022-01790-6",
+        "https://doi.org/10.1016/j.neuron.2019.10.038",
+        "https://doi.org/10.1038/s41398-026-04219-8",
+        "https://doi.org/10.1038/s41380-026-03681-6"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "E8"
+  ],
+  "featured_publication_evidence_ids": [
+    "E2",
+    "E3",
+    "E6",
+    "E7",
+    "E8"
+  ],
+  "featured_selection_status": "manually_reviewed",
+  "featured_selection_review": {
+    "status": "approved",
+    "reviewed_at": "2026-09-10",
+    "reviewer_role": "user",
+    "selection_criteria": [
+      "publication identity confidence",
+      "coverage of official research directions",
+      "complementarity across selected papers",
+      "recency where useful",
+      "author role where useful",
+      "student interpretability"
+    ],
+    "notes": "Owner-approved publication-content featured selection for final local website review only; not global human identity approval or release authorization."
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "建立官方方向与已核验论文的证据矩阵",
+      "task_context": "区分论文事实、作者身份、方法线索和跨论文归纳。",
+      "task_purpose": "练习可审计文献阅读和不确定性标注。",
+      "possible_methods": [
+        "结构化摘录",
+        "DOI与作者身份复核",
+        "证据矩阵"
+      ],
+      "possible_output": "一份带Evidence ID和限制说明的审计表",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是根据公开研究方向与已核验论文设计的任务类型示例，不代表导师已安排该本科任务、名额、培养方式或结果保证；实际任务必须向导师确认。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "可能需要相关生命科学基础、论文阅读和可复核记录能力；具体要求需以项目为准。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2547.htm",
+        "https://doi.org/10.1186/s12993-025-00287-w",
+        "https://doi.org/10.1038/s41467-025-59113-6",
+        "https://doi.org/10.1038/s41467-023-43292-1",
+        "https://doi.org/10.1038/s41380-022-01790-6",
+        "https://doi.org/10.1016/j.neuron.2019.10.038",
+        "https://doi.org/10.1038/s41398-026-04219-8",
+        "https://doi.org/10.1038/s41380-026-03681-6"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "公开证据仅支持谨慎判断：学习成本可能来自领域概念、方法和证据边界的同时掌握，不代表具体培养安排。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://life.csu.edu.cn/info/1042/2547.htm",
+      "https://doi.org/10.1186/s12993-025-00287-w",
+      "https://doi.org/10.1038/s41467-025-59113-6",
+      "https://doi.org/10.1038/s41467-023-43292-1",
+      "https://doi.org/10.1038/s41380-022-01790-6",
+      "https://doi.org/10.1016/j.neuron.2019.10.038",
+      "https://doi.org/10.1038/s41398-026-04219-8",
+      "https://doi.org/10.1038/s41380-026-03681-6"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "阅读基础概念与公开代表论文",
+        "记录模型、方法和限制"
+      ],
+      "possible_outputs": [
+        "概念图",
+        "证据卡片"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用示例，不代表实验室培养流程。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "完成边界清楚的文献或数据小任务",
+        "对照原始来源检查结论"
+      ],
+      "possible_outputs": [
+        "证据矩阵",
+        "复核记录"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用示例，不代表实验室培养流程。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "提出可检验的候选问题",
+        "比较解释并记录未决点"
+      ],
+      "possible_outputs": [
+        "研究备忘录",
+        "边界说明"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用示例，不代表实验室培养流程。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "官方身份与原始研究方向属于PUBLIC FACT；采用论文题名、作者位置、发表时机构及身份决定由相应Evidence支持；研究问题、流程和本科任务属于条件化AI SYNTHESIS。候选不等于采用、精选或发布，不推断当前招生、在研项目、实验室氛围、带教方式、疗效或结果承诺。",
+  "update_status": "partially_verified",
+  "summary": {
+    "text": "根据官方主页与7篇已采用论文，可概括该导师的公开身份与研究方向；另有1篇身份已核验候选、0篇同名错配和0篇未决。精选论文由Owner完成内容选择，但仍待最终网页审核，不构成发布许可。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://life.csu.edu.cn/info/1042/2547.htm",
+      "https://doi.org/10.1186/s12993-025-00287-w",
+      "https://doi.org/10.1038/s41467-025-59113-6",
+      "https://doi.org/10.1038/s41467-023-43292-1",
+      "https://doi.org/10.1038/s41380-022-01790-6",
+      "https://doi.org/10.1016/j.neuron.2019.10.038",
+      "https://doi.org/10.1038/s41398-026-04219-8",
+      "https://doi.org/10.1038/s41380-026-03681-6"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "Owner publication decision 2026-09-10 applied locally: candidates 8, adopted 7, verified non-adopted 1, rejected 0, unresolved 0, featured 5. Final website visual review and global human identity review remain pending; publication_status stays review_pending.",
+  "search_keywords": [
+    "neural circuit",
+    "electrophysiology",
+    "optogenetics",
+    "circadian rhythm"
+  ],
+  "tags": [
+    "神经环路",
+    "电生理",
+    "光遗传",
+    "睡眠节律"
+  ],
+  "version": "1.0.6",
+  "publication_status": "review_pending",
+  "report_path": "reports/deng-suixin.md"
+}

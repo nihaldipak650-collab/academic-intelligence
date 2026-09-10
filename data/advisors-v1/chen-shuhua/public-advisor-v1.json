@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "chen-shuhua",
+  "record_created_at": "2026-09-09",
+  "migrated_at": null,
+  "name_zh": {
+    "value": "陈淑华",
+    "value_en": "陈淑华",
+    "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "name_en": {
+    "value": "Shuhua Chen",
+    "value_en": "Shuhua Chen",
+    "source_url": "https://doi.org/10.1111/jcmm.17356",
+    "source_ref": "evidence-manifest-v1.json#E2",
+    "source_authority": "publication",
+    "last_verified_at": "2026-09-10",
+    "missing_status": "available"
+  },
+  "institution": {
+    "value": "中南大学",
+    "value_en": "Central South University",
+    "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "school_or_department": {
+    "value": "生命科学学院生物化学与分子生物学系",
+    "value_en": "School of Life Sciences",
+    "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+    "source_ref": "evidence-manifest-v1.json#E1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "position": {
+    "value": "教授",
+    "value_en": null,
+    "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+    "source_ref": "evidence-manifest-v1.json#E1:F1",
+    "source_authority": "official_institution",
+    "last_verified_at": "2026-09-09",
+    "missing_status": "available"
+  },
+  "public_roles": [
+    {
+      "value": "硕士生导师",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+      "source_ref": "evidence-manifest-v1.json#E1:F2",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-09",
+      "missing_status": "available"
+    }
+  ],
+  "contact": {
+    "official_profile_url": {
+      "value": "https://life.csu.edu.cn/info/1042/2536.htm",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+      "source_ref": "evidence-manifest-v1.json#E1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-09",
+      "missing_status": "available"
+    },
+    "official_lab_url": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "official_email": {
+      "value": "shuhuachen@csu.edu.cn",
+      "value_en": null,
+      "source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+      "source_ref": "evidence-manifest-v1.json#E1",
+      "source_authority": "official_institution",
+      "last_verified_at": "2026-09-09",
+      "missing_status": "available"
+    },
+    "official_phone": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    },
+    "lab_address": {
+      "value": null,
+      "value_en": null,
+      "source_url": null,
+      "source_ref": null,
+      "source_authority": null,
+      "last_verified_at": null,
+      "missing_status": "no_public_information"
+    }
+  },
+  "research_directions_original": [
+    {
+      "text": "炎症与血管疾病发生机制，结合细胞生物学、生物化学与分子生物学、生物信息学及临床医学寻找生物标志物与干预靶点。",
+      "evidence_status": "verified",
+      "confidence": "High",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2536.htm"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "public_fact",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_directions_plain_language": [
+    {
+      "term_original": "炎症与血管疾病机制",
+      "explanation_zh": "可将公开方向理解为围绕炎症与血管疾病机制建立可核对的问题、数据或实验链；具体项目内容仍需向导师确认。",
+      "undergraduate_meaning": "适合先从公开论文和基础方法入手，区分已公开事实、研究假设与尚未核验的信息。",
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "Medium",
+      "evidence_lane": "ai_synthesis"
+    }
+  ],
+  "research_questions": [
+    {
+      "text": "公开方向与已核验论文共同支持关注高糖/糖尿病环境下的内皮损伤、EndMT、线粒体动力学及血管屏障机制；具体当前项目仍需向导师确认。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2536.htm",
+        "https://doi.org/10.1111/jcmm.17356",
+        "https://doi.org/10.1177/14791641221102513",
+        "https://doi.org/10.1111/jcmm.13975",
+        "https://doi.org/10.1186/s12882-019-1323-0"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "从已核验论文可归纳出创伤失血后的持续性炎症与组织损伤，以及PACS2/铁死亡相关血管机制；这不等于当前全部在研方向。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1189/jlb.3a0716-333r",
+        "https://doi.org/10.1142/s0192415x26500229"
+      ],
+      "evidence_ids": [
+        "E6",
+        "E7"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "main_techniques": [
+    {
+      "text": "论文支持的公开方法线索包括细胞与分子生物学实验、内皮功能与线粒体功能检测、自噬通量分析及动物/疾病模型；具体平台条件需项目确认。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1177/14791641221102513",
+        "https://doi.org/10.1111/jcmm.13975",
+        "https://doi.org/10.1186/s12882-019-1323-0",
+        "https://doi.org/10.1189/jlb.3a0716-333r",
+        "https://doi.org/10.1142/s0192415x26500229"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    },
+    {
+      "text": "官方主页另明确提及生物信息学和临床医学结合；其在当前具体项目中的使用范围不能由这些论文单独确定。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2536.htm"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "research_workflow": [
+    {
+      "text": "可从疾病或炎症表型出发，提出候选通路，使用细胞/动物模型与分子指标验证，再把机制结果与血管功能表型对照；这是对已核验论文的流程性归纳。",
+      "evidence_status": "partially_verified",
+      "confidence": "Medium",
+      "source_urls": [
+        "https://doi.org/10.1177/14791641221102513",
+        "https://doi.org/10.1111/jcmm.13975",
+        "https://doi.org/10.1186/s12882-019-1323-0",
+        "https://doi.org/10.1189/jlb.3a0716-333r",
+        "https://doi.org/10.1142/s0192415x26500229"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "adopted_public_evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7"
+  ],
+  "featured_publication_evidence_ids": [
+    "E2",
+    "E3",
+    "E5",
+    "E7"
+  ],
+  "featured_selection_status": "manually_reviewed",
+  "featured_selection_review": {
+    "status": "approved",
+    "reviewed_at": "2026-09-10",
+    "reviewer_role": "user",
+    "selection_criteria": [
+      "publication identity confidence",
+      "coverage of official research directions",
+      "complementarity across selected papers",
+      "recency where useful",
+      "author role where useful",
+      "student interpretability"
+    ],
+    "notes": "Owner-approved publication-content featured selection for final local website review only; not global human identity approval or release authorization."
+  },
+  "publication_identity_status": "verified",
+  "possible_undergraduate_tasks": [
+    {
+      "task": "建立已核验论文的机制—模型—指标证据矩阵",
+      "task_context": "围绕EndMT、自噬、线粒体动力学、S1PR2/ROCK1或PACS2/铁死亡等已公开主题，区分论文事实与跨论文归纳。",
+      "task_purpose": "练习文献证据闭合、方法分类和不确定性标注。",
+      "possible_methods": [
+        "结构化文献摘录",
+        "DOI与作者身份复核",
+        "机制图与证据矩阵"
+      ],
+      "possible_output": "一份带Evidence ID、原始来源和限制说明的研究证据表",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "这是根据公开方向与已核验论文设计的任务类型示例，不代表导师已提供该本科任务、名额、培养安排或结果保证；实际任务必须向导师确认。"
+    }
+  ],
+  "prerequisite_skills": [
+    {
+      "text": "可能需要相关生命科学基础、论文阅读和可复核记录能力；具体要求需以项目为准。",
+      "evidence_status": "partially_verified",
+      "confidence": "Low",
+      "source_urls": [
+        "https://life.csu.edu.cn/info/1042/2536.htm"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "evidence_lane": "ai_synthesis",
+      "no_evidence_reason": null
+    }
+  ],
+  "learning_cost": {
+    "text": "公开证据仅支持谨慎判断：学习成本可能来自领域概念、方法和证据边界的同时掌握，不代表具体培养安排。",
+    "evidence_status": "partially_verified",
+    "confidence": "Low",
+    "source_urls": [
+      "https://life.csu.edu.cn/info/1042/2536.htm"
+    ],
+    "evidence_ids": [
+      "E1"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "generic_growth_path": [
+    {
+      "stage": "foundation",
+      "possible_activities": [
+        "阅读基础概念与公开代表论文",
+        "记录模型、方法和限制"
+      ],
+      "possible_outputs": [
+        "概念图",
+        "证据卡片"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用示例，不代表实验室培养流程。"
+    },
+    {
+      "stage": "bounded_task",
+      "possible_activities": [
+        "完成边界清楚的文献或数据小任务",
+        "对照原始来源检查结论"
+      ],
+      "possible_outputs": [
+        "证据矩阵",
+        "复核记录"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用示例，不代表实验室培养流程。"
+    },
+    {
+      "stage": "independent_module",
+      "possible_activities": [
+        "提出可检验的候选问题",
+        "比较解释并记录未决点"
+      ],
+      "possible_outputs": [
+        "研究备忘录",
+        "边界说明"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "Low",
+      "evidence_lane": "ai_synthesis",
+      "uncertainty_note": "通用示例，不代表实验室培养流程。"
+    }
+  ],
+  "evidence_status": "partially_verified",
+  "confidence": "Medium",
+  "public_fact_or_ai_synthesis": "mixed_labeled",
+  "no_evidence_reason": null,
+  "boundary_statement": "官方身份与原始研究方向属于PUBLIC FACT；论文题名、作者位置、发表时机构和采用决定由E2-E7支撑；研究问题、技术路线和本科任务属于明确标注的AI SYNTHESIS。候选论文不等于采用、精选或公开发布，不推断当前招生、在研项目、实验室氛围、带教方式、疗效或结果承诺。",
+  "update_status": "partially_verified",
+  "summary": {
+    "text": "根据官方主页与6篇已采用论文，可概括该导师的公开身份与研究方向；另有13篇身份已核验候选、2篇同名错配和1篇未决。精选论文由Owner完成内容选择，但仍待最终网页审核，不构成发布许可。",
+    "evidence_status": "partially_verified",
+    "confidence": "Medium",
+    "source_urls": [
+      "https://life.csu.edu.cn/info/1042/2536.htm",
+      "https://doi.org/10.1111/jcmm.17356",
+      "https://doi.org/10.1177/14791641221102513",
+      "https://doi.org/10.1111/jcmm.13975",
+      "https://doi.org/10.1186/s12882-019-1323-0",
+      "https://doi.org/10.1189/jlb.3a0716-333r",
+      "https://doi.org/10.1142/s0192415x26500229"
+    ],
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7"
+    ],
+    "evidence_lane": "ai_synthesis",
+    "no_evidence_reason": null
+  },
+  "data_status_note": "Owner publication decision 2026-09-10 applied locally: candidates 22, adopted 6, verified non-adopted 13, rejected 2, unresolved 1, featured 4. Final website visual review and global human identity review remain pending; publication_status stays review_pending.",
+  "search_keywords": [
+    "inflammation",
+    "vascular disease",
+    "biomarker",
+    "bioinformatics"
+  ],
+  "tags": [
+    "炎症",
+    "血管疾病",
+    "生物标志物",
+    "生物信息学"
+  ],
+  "version": "1.0.6",
+  "publication_status": "review_pending",
+  "report_path": "reports/chen-shuhua.md"
+}

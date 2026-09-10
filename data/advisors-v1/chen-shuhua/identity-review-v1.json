@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "chen-shuhua",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0003-2373-3402",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+    "human_review_status": "pending",
+    "notes": "官方身份字段已机械核对；两篇论文记录携带同一ORCID并至少一篇闭合当前中南大学生命科学学院身份。人工审核仍pending。",
+    "official_profile_email": "shuhuachen@csu.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2536.htm",
+    "orcid_verification_evidence_ids": [
+      "E2",
+      "E7"
+    ],
+    "orcid_verification_basis": [
+      "E2与E7的正式论文元数据均为作者Shuhua/Shu-Hua Chen提供ORCID 0000-0003-2373-3402。",
+      "两篇均记录中南大学生命科学学院发表时机构，研究主题与官方方向及长期共作者网络一致。",
+      "ORCID记录本身未提供足够完整的公开任职/作品列表，因此结论依赖逐论文闭合而非ORCID页面单点。"
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official profile representative-publication list; DOI and PubMed author metadata agree.",
+        "The official CSU profile explicitly lists this title among representative publications.",
+        "The publication record carries the exact candidate ORCID.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry and Molecular Biology, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1111/jcmm.17356",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": "0000-0003-2373-3402",
+      "orcid_source_url": "https://doi.org/10.1111/jcmm.17356",
+      "notes": "Official profile representative-publication list; DOI and PubMed author metadata agree."
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official profile representative-publication list; DOI and PubMed author metadata agree.",
+        "The official CSU profile explicitly lists this title among representative publications.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1177/14791641221102513",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official profile representative-publication list; DOI and PubMed author metadata agree."
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official profile representative-publication list; DOI and PubMed author metadata agree.",
+        "The official CSU profile explicitly lists this title among representative publications.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1111/jcmm.13975",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official profile representative-publication list; DOI and PubMed author metadata agree."
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official profile representative-publication list; DOI and PubMed author metadata agree.",
+        "The official CSU profile explicitly lists this title among representative publications.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s12882-019-1323-0",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official profile representative-publication list; DOI and PubMed author metadata agree."
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official profile representative-publication list; DOI and PubMed author metadata agree.",
+        "The official CSU profile explicitly lists this title among representative publications.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1189/jlb.3a0716-333r",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official profile representative-publication list; DOI and PubMed author metadata agree."
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact ORCID, current department, topic, and coauthor network agree across DOI and PubMed metadata.",
+        "The publication record carries the exact candidate ORCID.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1142/s0192415x26500229",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": "0000-0003-2373-3402",
+      "orcid_source_url": "https://doi.org/10.1142/s0192415x26500229",
+      "notes": "Exact ORCID, current department, topic, and coauthor network agree across DOI and PubMed metadata."
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact official email and current department in PubMed metadata.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry and Molecular Biology, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.bcp.2026.117794",
+      "matched_author_email": "shuhuachen@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.bcp.2026.117794",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact official email and current department in PubMed metadata."
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department, vascular topic, and established PACS2/coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s12967-026-08076-3",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department, vascular topic, and established PACS2/coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department, vascular topic, and established coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s12944-026-02932-3",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department, vascular topic, and established coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established PACS2/vascular coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.bcp.2025.117164",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established PACS2/vascular coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E12",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established high-glucose/cardiovascular coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1002/jbt.70395",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established high-glucose/cardiovascular coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E13",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established S1PR2/vascular coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1002/jbt.70351",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established S1PR2/vascular coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E14",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established S1PR/RhoA/ROCK1 coauthor cluster agree; topical shift retained for Owner review.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.pnpbp.2025.111256",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established S1PR/RhoA/ROCK1 coauthor cluster agree; topical shift retained for Owner review."
+    },
+    {
+      "evidence_id": "E15",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established PACS2/cardiovascular coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s12933-024-02514-6",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established PACS2/cardiovascular coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E16",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established S1PR coauthor cluster agree; cancer topic retained for Owner review.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s13046-024-03230-5",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established S1PR coauthor cluster agree; cancer topic retained for Owner review."
+    },
+    {
+      "evidence_id": "E17",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and cardiovascular topic agree; observational-method shift retained for Owner review.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s12889-024-18622-7",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and cardiovascular topic agree; observational-method shift retained for Owner review."
+    },
+    {
+      "evidence_id": "E18",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and cardiovascular topic agree; observational-method shift retained for Owner review.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences, Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1186/s12933-024-02152-y",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and cardiovascular topic agree; observational-method shift retained for Owner review."
+    },
+    {
+      "evidence_id": "E19",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established S1PR2/EndMT coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.lfs.2023.121853",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established S1PR2/EndMT coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E20",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Current department and established S1PR1/EndMT coauthor cluster agree.",
+        "The publication-time affiliation is recorded separately and matches the documented career context."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Biochemistry, School of Life Sciences of Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.pupt.2023.102228",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Current department and established S1PR1/EndMT coauthor cluster agree."
+    },
+    {
+      "evidence_id": "E21",
+      "identity_status": "conflict",
+      "verification_basis": [
+        "Same-name author belongs to a different institution, department, field, and coauthor network."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Neurology Department, Beijing Children's Hospital, Capital Medical University",
+      "matched_institution_source_url": "https://doi.org/10.1212/wnl.0000000000214260",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Same-name author belongs to a different institution, department, field, and coauthor network."
+    },
+    {
+      "evidence_id": "E22",
+      "identity_status": "conflict",
+      "verification_basis": [
+        "Same-name author belongs to a different institution and clinical department."
+      ],
+      "matched_author_name": "Shuhua Chen",
+      "matched_institution": "Department of Otolaryngology, The Second People's Hospital of Foshan",
+      "matched_institution_source_url": "https://doi.org/10.1038/s12276-020-0428-7",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Same-name author belongs to a different institution and clinical department."
+    },
+    {
+      "evidence_id": "E23",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "Topic and some record-level CSU context are plausible, but the target author lacks a directly closed affiliation, email, or ORCID."
+      ],
+      "matched_author_name": "Shu-hua Chen",
+      "matched_institution": null,
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Topic and some record-level CSU context are plausible, but the target author lacks a directly closed affiliation, email, or ORCID."
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-09",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "人工审核尚未完成；机器完成的论文身份闭合不能替代Owner批准。",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E7"
+      ]
+    }
+  ],
+  "notes": "Pilot逐篇保留verified、conflict与unresolved结论；OpenAlex同名实体存在错误合并和碎片化，未作为单点授予verified的依据。 Owner publication decision 2026-09-10 accepted adopted/featured content only; global identity and release review remain pending."
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "local_review_only",
+  "review_id": "phase2-cohort-8-v106",
+  "cohort_date": "2026-09-09",
+  "schema_version": "1.0.6",
+  "public_release_approved": false,
+  "advisor_ids": [
+    "chen-shuhua",
+    "deng-meichun",
+    "deng-suixin",
+    "duan-ranhui",
+    "fan-liangliang",
+    "guo-yi",
+    "jiang-hao",
+    "li-jinchen"
+  ]
+}

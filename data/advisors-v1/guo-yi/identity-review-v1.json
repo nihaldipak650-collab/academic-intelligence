@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "guo-yi",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0003-2727-9809",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2500.htm",
+    "human_review_status": "pending",
+    "notes": "Publication identity was checked per paper; human review remains pending. ORCID state follows the recorded chain and is not a release approval.",
+    "official_profile_email": "yiguo@csu.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2500.htm",
+    "orcid_verification_evidence_ids": [
+      "E4",
+      "E5"
+    ],
+    "orcid_verification_basis": [
+      "Publication records E4, E5 carry the same ORCID 0000-0003-2727-9809 and at least one current-CSU link."
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact biomedical-informatics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fpsyg.2022.966033",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus exact biomedical-informatics affiliation."
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact biomedical-informatics affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fpubh.2022.811792",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus exact biomedical-informatics affiliation."
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact ORCID and biomedical-information affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3390/vaccines10010090",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": "0000-0003-2727-9809",
+      "orcid_source_url": "https://doi.org/10.3390/vaccines10010090",
+      "notes": "Official representative list plus exact ORCID and biomedical-information affiliation."
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact ORCID and biomedical-information affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3390/ijerph191811783",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": "0000-0003-2727-9809",
+      "orcid_source_url": "https://doi.org/10.3390/ijerph191811783",
+      "notes": "Official representative list plus exact ORCID and biomedical-information affiliation."
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus first-author position and medical-information affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fnagi.2021.648151",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus first-author position and medical-information affiliation."
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "Name and broad School of Life Sciences affiliation fit, but department/email/ORCID do not close the common-name risk."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": null,
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Name and broad School of Life Sciences affiliation fit, but department/email/ORCID do not close the common-name risk."
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact medical-information unit and genetics topic."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.jgg.2025.05.008",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact medical-information unit and genetics topic."
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact biomedical-informatics unit and online-health coauthor/topic continuity."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.3389/fpubh.2024.1379094",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact biomedical-informatics unit and online-health coauthor/topic continuity."
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact biomedical-informatics unit and research-information topic."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1371/journal.pone.0308377",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact biomedical-informatics unit and research-information topic."
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "conflict",
+      "verification_basis": [
+        "Same-name author is in dermatology with a different department and coauthor network."
+      ],
+      "matched_author_name": "Yi Guo",
+      "matched_institution": "Xiangya Hospital Department of Dermatology",
+      "matched_institution_source_url": "https://doi.org/10.34133/research.0976",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Same-name author is in dermatology with a different department and coauthor network."
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-09",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "Owner human identity review is pending; machine closure is not approval.",
+      "evidence_ids": [
+        "E1",
+        "E4",
+        "E5"
+      ]
+    }
+  ],
+  "notes": "Official-list anchors, publication-time affiliations, email/ORCID where available, and explicit same-name counterexamples were kept advisor-local. Owner publication decision 2026-09-10 accepted adopted/featured content only; global identity and release review remain pending."
+}

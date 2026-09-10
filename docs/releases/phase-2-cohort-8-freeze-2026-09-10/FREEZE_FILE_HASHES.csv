@@ -1,0 +1,74 @@
+path,role,canonical_or_generated,sha256,advisor_id,notes
+data/advisors-v1/chen-shuhua/public-advisor-v1.json,public-advisor,canonical,6c1c7bbe3c8882f21b3c4c8986f27f05ed26ab4bb118ecf40ec0eb341526c700,chen-shuhua,v1.0.6 advisor package
+data/advisors-v1/chen-shuhua/evidence-manifest-v1.json,evidence-manifest,canonical,4d5ba8357f7e6ae0540a397adf36ef056e75bc25d549bc549eeb9e8c49c144ad,chen-shuhua,v1.0.6 advisor package
+data/advisors-v1/chen-shuhua/identity-review-v1.json,identity-review,canonical,7ee58075c5095971ab4ddb35246eeefcb78452d9a1e8408b4739858ede484fa7,chen-shuhua,v1.0.6 advisor package
+data/advisors-v1/chen-shuhua/public-advisor-v1.md,public-advisor,generated,1814493cfa174bd6f91039bf1adddb093b9f205a19d89488e3ee67c0c60618c2,chen-shuhua,v1.0.6 advisor package
+data/advisors-v1/chen-shuhua/validation-report-v1.json,validation-report,generated,8d7a3565e44737750a7bd63bb5dc006148f29efca5aa1cb97c77236d3bdae99d,chen-shuhua,v1.0.6 advisor package
+data/advisors-v1/deng-meichun/public-advisor-v1.json,public-advisor,canonical,20d68be9bf59ab6dad45955704cd363301fbfb00acc4fb216578874e346f38a1,deng-meichun,v1.0.6 advisor package
+data/advisors-v1/deng-meichun/evidence-manifest-v1.json,evidence-manifest,canonical,38adb56a318e9d2164a494d4b6316624ccc92419cfa2fb8acf6a6864f207464c,deng-meichun,v1.0.6 advisor package
+data/advisors-v1/deng-meichun/identity-review-v1.json,identity-review,canonical,6b056151598b01583f619c1c1929bff28d043cc187502d397eb85d4fea12a46d,deng-meichun,v1.0.6 advisor package
+data/advisors-v1/deng-meichun/public-advisor-v1.md,public-advisor,generated,e6fd0585e9c0c07612ef2ddb81fbbdccc0fbeee3b620c5db78e6d845cd06ffa3,deng-meichun,v1.0.6 advisor package
+data/advisors-v1/deng-meichun/validation-report-v1.json,validation-report,generated,44e9bce9a2a7e500e4ea9e7025223f2a6950ad72e33335292af710487114cab1,deng-meichun,v1.0.6 advisor package
+data/advisors-v1/deng-suixin/public-advisor-v1.json,public-advisor,canonical,e6fabe82ec4cccb2fcea9a172dd7dedbe892c005b86c3894786ca7d0170c8db6,deng-suixin,v1.0.6 advisor package
+data/advisors-v1/deng-suixin/evidence-manifest-v1.json,evidence-manifest,canonical,86aff36067c51daf6f4b65900a93bd5abe91b0d944e8c42a1b9b65765649ad77,deng-suixin,v1.0.6 advisor package
+data/advisors-v1/deng-suixin/identity-review-v1.json,identity-review,canonical,be22a0c9ea781cb103a9592de56569be4dba782ca778634f36758ea18f6b1440,deng-suixin,v1.0.6 advisor package
+data/advisors-v1/deng-suixin/public-advisor-v1.md,public-advisor,generated,c574f46297cf3d61574da7c2a1a676af817e8e82ca05df4a8df0a665a76bb82d,deng-suixin,v1.0.6 advisor package
+data/advisors-v1/deng-suixin/validation-report-v1.json,validation-report,generated,99d0a213d8b6c0f64949d12fd11a0981d439d16fd4f927cfb9bee5113528fbed,deng-suixin,v1.0.6 advisor package
+data/advisors-v1/duan-ranhui/public-advisor-v1.json,public-advisor,canonical,95ce82eef41b371a3d79cb151f3aaf4295d858ed2b1d9e0d64157beb9366a8fe,duan-ranhui,v1.0.6 advisor package
+data/advisors-v1/duan-ranhui/evidence-manifest-v1.json,evidence-manifest,canonical,11ddc73c100240cea0aa3260da6d94f2463ecc0745743a0c7d9bc9f3a68fb7c7,duan-ranhui,v1.0.6 advisor package
+data/advisors-v1/duan-ranhui/identity-review-v1.json,identity-review,canonical,96f74b94387412ef698013468bee7782b1118198f2925b76685d10f6294b2788,duan-ranhui,v1.0.6 advisor package
+data/advisors-v1/duan-ranhui/public-advisor-v1.md,public-advisor,generated,5f2e0e16723f1acfc2db85063f5172a1b300634a0425f7636388cf9587d13369,duan-ranhui,v1.0.6 advisor package
+data/advisors-v1/duan-ranhui/validation-report-v1.json,validation-report,generated,3b32ec5f6fc8255f17416e3750bd0e6a2581da37b9deee3d73670f373fcab024,duan-ranhui,v1.0.6 advisor package
+data/advisors-v1/fan-liangliang/public-advisor-v1.json,public-advisor,canonical,281aacd289a8be000abdf20ec41729b2295af717a1b11d0d29d5b991e3d869f8,fan-liangliang,v1.0.6 advisor package
+data/advisors-v1/fan-liangliang/evidence-manifest-v1.json,evidence-manifest,canonical,3ce8c7c30b25919fbddb1245918d82a18e1673c33fd24e161e5ca3a088380c70,fan-liangliang,v1.0.6 advisor package
+data/advisors-v1/fan-liangliang/identity-review-v1.json,identity-review,canonical,5c15b8fb0d52bedd0dc5ecbf53029edf5859bfb8cc8e0fefcf9430527ffd0f36,fan-liangliang,v1.0.6 advisor package
+data/advisors-v1/fan-liangliang/public-advisor-v1.md,public-advisor,generated,9c7a82c565189e1cb2304f1c4909e935095481894c6629cda7fd7e409ac3dc5f,fan-liangliang,v1.0.6 advisor package
+data/advisors-v1/fan-liangliang/validation-report-v1.json,validation-report,generated,a4456c4b3af303593fad18e1f6b4722bb5a108561caabfd881266c2ada07063d,fan-liangliang,v1.0.6 advisor package
+data/advisors-v1/guo-yi/public-advisor-v1.json,public-advisor,canonical,ae3b61a0ad8d3fc97f8c44c8ab3b43b97cc11005bae40d029524c36273a6f5b8,guo-yi,v1.0.6 advisor package
+data/advisors-v1/guo-yi/evidence-manifest-v1.json,evidence-manifest,canonical,c27b029edbfbf228f95140b0ec518df1293922d170f4da86ca9e06b048c3d3a5,guo-yi,v1.0.6 advisor package
+data/advisors-v1/guo-yi/identity-review-v1.json,identity-review,canonical,46d3bb46a10c81a4a37e266c4f0954ce23bcbfecf8c21ee2e481bc439ef206e4,guo-yi,v1.0.6 advisor package
+data/advisors-v1/guo-yi/public-advisor-v1.md,public-advisor,generated,7a24b9b1bb65cc2597837b13564d997504a50153aaab89c5e8c6afdde2c074c0,guo-yi,v1.0.6 advisor package
+data/advisors-v1/guo-yi/validation-report-v1.json,validation-report,generated,22d714c1f78421cec959dbabcd2f2f9090ea06ce888f1f41bafd9fa36fedbec0,guo-yi,v1.0.6 advisor package
+data/advisors-v1/jiang-hao/public-advisor-v1.json,public-advisor,canonical,76605c4c369f3c96dd94cb03d5944745942eed53de3dbf872e72b8c3d6654980,jiang-hao,v1.0.6 advisor package
+data/advisors-v1/jiang-hao/evidence-manifest-v1.json,evidence-manifest,canonical,d6a212b3f1d10c6bf453cbed8cb63b6b1ed09d43096dee1b774572971dd3d468,jiang-hao,v1.0.6 advisor package
+data/advisors-v1/jiang-hao/identity-review-v1.json,identity-review,canonical,eab9d2e0a064fb5a31837966500f2fe77be33942f80d7225ec0885f7b0e90f96,jiang-hao,v1.0.6 advisor package
+data/advisors-v1/jiang-hao/public-advisor-v1.md,public-advisor,generated,8652aad9441ebaecd6a0ff2ae8ba0bd64145f4871375dc598a3dc2c5f7be3ff7,jiang-hao,v1.0.6 advisor package
+data/advisors-v1/jiang-hao/validation-report-v1.json,validation-report,generated,46b92749864e750a8fc0653e8c2de787bebf582a28517914e4e8a15101238eab,jiang-hao,v1.0.6 advisor package
+data/advisors-v1/li-jinchen/public-advisor-v1.json,public-advisor,canonical,1060a1d41119e9236d182d83d2d51fd7d1572d0814f520b0ccb5029d9121551b,li-jinchen,v1.0.6 advisor package
+data/advisors-v1/li-jinchen/evidence-manifest-v1.json,evidence-manifest,canonical,5442a1ffd55767a9fec94991f4d3ee4d39d67d00a77b54ecf9bc4d37e3da2a95,li-jinchen,v1.0.6 advisor package
+data/advisors-v1/li-jinchen/identity-review-v1.json,identity-review,canonical,b6596309d570e91c52d5a90cc98adbf1e84a8cb0e1a72aca1588dd998836609a,li-jinchen,v1.0.6 advisor package
+data/advisors-v1/li-jinchen/public-advisor-v1.md,public-advisor,generated,53e60057a968129a3a4986c7328c36f09f40604fd100df13c33b3f825215019d,li-jinchen,v1.0.6 advisor package
+data/advisors-v1/li-jinchen/validation-report-v1.json,validation-report,generated,f10bcc285c0f4e71d9f92eb52dc9dbaa198ae9f86d5c4ba9885546e953ab2d3a,li-jinchen,v1.0.6 advisor package
+docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.json,owner_decision,canonical,4fb0a337f8a4b4184dd5a4a41fc88b68861d25532b37484516fa5b08ea733b82,,Phase 2 publication review source
+docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.md,owner_decision_human_mirror,canonical,53ed3d516857fabcf882b609963976ecc8bb20571ec9ce10b4192687bcba019c,,Phase 2 publication review source
+docs/reviews/phase-2-publication-enrichment/publication_identity_ledger.csv,publication_identity_ledger,canonical,e7d8234eaab86462d98f6d5d78cc74fd5280df1022e92068e91ee32ee30a4e5e,,Phase 2 publication review source
+docs/reviews/phase-2-publication-enrichment/phase-2-cohort-8-publication-batch-audit.md,cohort_audit,canonical,fcda6a317502195859cebd3e209f3495fce284228dde6888f37cb5537e212308,,Phase 2 publication review source
+docs/reviews/phase-2-publication-enrichment/phase-2-cohort-8-publication-owner-review.md,owner_review_matrix,canonical,25969051a85b64200f3552b4ad58638b26740727bdc32ab91c5fedd078285051,,Phase 2 publication review source
+docs/reviews/phase-2-publication-enrichment/00_START_HERE.md,review_entrypoint,canonical,71af6eb5e3908befde10b310b5d829680b72d17ca1a110e83c9ccaf6abcad233,,Phase 2 publication review source
+docs/reviews/phase-2-publication-enrichment/chen-shuhua-publication-audit.md,advisor_publication_audit,canonical,a0bc23024d3a6510aa028ae4d98d55078d5c4ccbf69138ede4fb26433a0fca26,chen-shuhua,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/deng-meichun-publication-audit.md,advisor_publication_audit,canonical,d3350246c7abe01128d541d0f3abbca0c36ce2cc33b8be3709ffea3be392bb0d,deng-meichun,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/deng-suixin-publication-audit.md,advisor_publication_audit,canonical,894c666f87fa9a63bf18dfdebbce6eaae0a75961c8521031d78431c0f350450f,deng-suixin,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/duan-ranhui-publication-audit.md,advisor_publication_audit,canonical,0281755a69495825483221d2c574a34ec1ffe86fb2ac81fedcae550763cb222d,duan-ranhui,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/fan-liangliang-publication-audit.md,advisor_publication_audit,canonical,91d51477e040b3da020b9c9871158ada986ad2691ff4bf97c5fa0ba7321cd95e,fan-liangliang,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/guo-yi-publication-audit.md,advisor_publication_audit,canonical,ea51fa7991df8909c26751a16db9b311713d71dc7a6544e1178fece5c4f9e1a8,guo-yi,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/jiang-hao-publication-audit.md,advisor_publication_audit,canonical,095e89e60d65939cf536da4fddb16e9e903a09a9fe9e8c61f027bbfab471547d,jiang-hao,Per-advisor review trail
+docs/reviews/phase-2-publication-enrichment/li-jinchen-publication-audit.md,advisor_publication_audit,canonical,3f3b9b477274a8bbd768231b1315071209730b965eda95a23a88dee6ee706ae9,li-jinchen,Per-advisor review trail
+docs/advisor-template-v1/production-contract-v1.0.6.md,production_contract,canonical,a219058ee6b0b7c003c970e67701517f6bff6cacafecf3889a657d0771b6a19f,,v1.0.6 contract surface
+docs/advisor-template-v1/public-advisor-schema-v1.0.6.json,public_advisor_schema,canonical,d73f0e60e9925cb22a9cf54718f5f0dd2b5bea8544e40c5743699f7bb4962487,,v1.0.6 contract surface
+docs/advisor-template-v1/evidence-manifest-schema-v1.0.6.json,evidence_manifest_schema,canonical,232d1fbc0f441c978d06035a6046e473f5a5121b719e693a5601c983dfcd70b4,,v1.0.6 contract surface
+docs/advisor-template-v1/identity-review-schema-v1.0.6.json,identity_review_schema,canonical,363759f137a6f968341b652f700eb4275feea821d3132c6391eb5dc639184d7f,,v1.0.6 contract surface
+docs/advisor-template-v1/display-label-mapping-v1.0.6.json,display_mapping,canonical,fbec0c01c4c3482bfbd2c50977756648f96fe26ba5192204d684e8184221818b,,v1.0.6 contract surface
+src/advisor_production/validator.py,validator,canonical,811f36ce99f42781174d11af05d63ec23a2ce21f0e2bc5dbb9dd67dbdd3e81e4,,Freeze support or reproducibility source
+src/advisor_production/renderer.py,renderer,canonical,4eda31138c76efee32ec4927a1216150e2b6102a938992aca879b463d54bed3b,,Freeze support or reproducibility source
+tests/test_advisor_production_v106.py,v106_regression_test,canonical,6d8cb90174b8586c6d2b5d865dc8ed1330572e1108c242c8bd838e42a764d1b3,,Freeze support or reproducibility source
+tests/test_phase2_publication_enrichment.py,cohort_regression_test,canonical,49f82b2e0a86bd064ce8b4fa73742ae567e958808e72afee58449ebb253d1a33,,Freeze support or reproducibility source
+tests/test_chen_shuhua_publication_pilot.py,pilot_regression_test,canonical,d2be0d256eada51b3efac3ab70a74cf5c0a5c3161db116ec948d8cacf7bd4b7c,,Freeze support or reproducibility source
+tests/test_phase2_cohort8_freeze.py,freeze_regression_test,canonical,b62765c3b8b2a977f92dfc9cc22a388ca5fe1fde57730f68f536d2112f184c23,,Freeze support or reproducibility source
+frontend/scripts/local-review-phase2-advisor-dto.mjs,review_dto_adapter,generated,237d1f8ee2356ea8b5a71cd313ec87c3711ca5d4a182955767881b04e7f0a64a,,Freeze support or reproducibility source
+frontend/scripts/local-review-phase2-latest-site.mjs,latest_surface_builder,generated,e7c20eb72393fe388b0d4d44c3eba347c4db5fe9fd8fff4827ea9b79fbc2abaf,,Freeze support or reproducibility source
+frontend/scripts/local-review-phase2-advisor-dto.test.mjs,review_adapter_test,generated,48e7306bd548562f5042864b6a811dd8e8459fd1007a41d01c236b19dafe469a,,Freeze support or reproducibility source
+frontend/scripts/local-review-phase2-latest-site.test.mjs,latest_surface_test,generated,a5f2afa46f085981e5b5ee43ac798415e3ff9f7c17031002e3df7c4c5a0e5ba3,,Freeze support or reproducibility source
+frontend/src/test/phase2-review-ui.test.tsx,review_ui_test,generated,7d229578c94a1ee06d04c388a01b95f38c3c5c4a5b0b19ff82a37f36c13350bb,,Freeze support or reproducibility source
+scripts/check-phase2-cohort8-freeze.py,freeze_drift_checker,canonical,cf0dfeb64d66546d14568165feb478a61238e8b37ed416afd34086e8716d43f7,,Freeze support or reproducibility source
+docs/releases/phase-2-cohort-8-freeze-2026-09-10/00_FREEZE_README.md,freeze_readme,canonical,3138642892cdefb67d58e49179c09c7237aa0e9a12b9ff9497cca4ed1caf36ac,,Freeze support or reproducibility source
+docs/releases/phase-2-cohort-8-freeze-2026-09-10/KNOWN_OPEN_RISKS.md,known_open_risks,canonical,50bbdb58958c795a93df37651f0c9582bdb114e8654842a3efbc765cb0f8e64c,,Freeze support or reproducibility source

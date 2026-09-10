@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.5",
+  "advisor_id": "chen-huiyong",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "verified",
+    "candidate_orcid": "0000-0001-8162-4381",
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2529.htm",
+    "human_review_status": "pending",
+    "notes": "官方主页身份字段已机械核对；人工身份审核尚未完成，不能视为已批准。",
+    "official_profile_email": "chenhuiyong@csu.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2529.htm",
+    "orcid_verification_evidence_ids": [
+      "E2",
+      "E4",
+      "E5"
+    ],
+    "orcid_verification_basis": [
+      "E2、E4、E5保留来源记录可闭合的ORCID论文链；E3与E6的公开论文元数据未明确提供该作者ORCID，因此保持null。",
+      "同一ORCID跨多篇中南大学论文出现，并与当前机构链形成可复核关系。"
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Huiyong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-8162-4381",
+      "notes": "PubMed正式记录确认Huiyong Chen为末位作者并列出中南大学生命科学学院 affiliation；通讯作者角色保留null。",
+      "matched_institution_source_url": "https://doi.org/10.1182/bloodadvances.2024012679",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1182/bloodadvances.2024012679"
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "该论文公开元数据未明确提供作者ORCID，因此逐论文ORCID保持null。"
+      ],
+      "matched_author_name": "Huiyong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": null,
+      "notes": "PubMed正式记录确认Huiyong Chen为倒数第二位作者，Central South University affiliations已核对；通讯作者角色保留null。",
+      "matched_institution_source_url": "https://doi.org/10.1111/bjh.18706",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": null
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Huiyong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-8162-4381",
+      "notes": "PubMed正式记录同时标注Journal Article与Meta-Analysis；v1.0.5保留为meta_analysis，不归类为review。",
+      "matched_institution_source_url": "https://doi.org/10.1002/ijc.34142",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1002/ijc.34142"
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "ORCID为跨论文身份链的一部分，最终发布仍需人工审核。"
+      ],
+      "matched_author_name": "Huiyong Chen",
+      "matched_institution": "Central South University",
+      "matched_orcid": "0000-0001-8162-4381",
+      "notes": "PubMed正式记录确认Huiyong Chen为末位作者并列出Central South University affiliation；通讯作者角色保留null。",
+      "matched_institution_source_url": "https://doi.org/10.1111/bjh.16156",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": "https://doi.org/10.1111/bjh.16156"
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "正式论文记录列出作者姓名、DOI与发表时机构。",
+        "论文发表时机构已与导师当前机构分开记录。",
+        "该论文公开元数据未明确提供作者ORCID，因此逐论文ORCID保持null。"
+      ],
+      "matched_author_name": "Huiyong Chen",
+      "matched_institution": "New York Blood Center",
+      "matched_orcid": null,
+      "notes": "PubMed正式记录确认Huiyong Chen为第一作者；中南大学 affiliation及版本日期已核对。",
+      "matched_institution_source_url": "https://doi.org/10.3324/haematol.2015.127902",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "orcid_source_url": null
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-06",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "人工审核尚未完成；本地机械校验不能替代人工身份确认。",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "notes": "陈慧勇E6保留论文发表时纽约血液中心机构，E4文献类型为meta_analysis；E2、E4、E5构成有来源闭合的ORCID链，E3/E6未公开ORCID保持null。人工审核仍 pending。"
+}

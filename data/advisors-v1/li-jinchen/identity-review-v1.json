@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.6",
+  "advisor_id": "li-jinchen",
+  "review_status": "unresolved",
+  "reviewed_at": null,
+  "reviewer_role": "codex_mechanical_migration",
+  "advisor_identity": {
+    "name_match_status": "verified",
+    "institution_match_status": "verified",
+    "school_or_department_match_status": "verified",
+    "official_profile_match_status": "verified",
+    "orcid_status": "unresolved",
+    "candidate_orcid": null,
+    "official_profile_url": "https://life.csu.edu.cn/info/1042/2483.htm",
+    "human_review_status": "pending",
+    "notes": "Publication identity was checked per paper; human review remains pending. ORCID state follows the recorded chain and is not a release approval.",
+    "official_profile_email": "lijinchen@csu.edu.cn",
+    "official_profile_email_source_url": "https://life.csu.edu.cn/info/1042/2483.htm",
+    "orcid_verification_evidence_ids": [],
+    "orcid_verification_basis": [
+      "Two incompatible publication ORCIDs remain unresolved; no candidate ORCID is selected."
+    ]
+  },
+  "publication_identity": [
+    {
+      "evidence_id": "E2",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus official email and multi-unit CSU affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.ebiom.2023.104928",
+      "matched_author_email": "lijinchen@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.ebiom.2023.104928",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus official email and multi-unit CSU affiliation."
+    },
+    {
+      "evidence_id": "E3",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact author and multi-unit CSU affiliation; publication ORCID conflicts with another official paper and is not adopted as advisor ORCID.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1093/nar/gkad1061",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus exact author and multi-unit CSU affiliation; publication ORCID conflicts with another official paper and is not adopted as advisor ORCID."
+    },
+    {
+      "evidence_id": "E4",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus official email and multi-unit CSU affiliation; ORCID conflicts with E3 and remains unresolved.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1038/s41467-024-52310-9",
+      "matched_author_email": "lijinchen@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1038/s41467-024-52310-9",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus official email and multi-unit CSU affiliation; ORCID conflicts with E3 and remains unresolved."
+    },
+    {
+      "evidence_id": "E5",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus exact author and multi-unit CSU affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1093/nar/gkaf980",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus exact author and multi-unit CSU affiliation."
+    },
+    {
+      "evidence_id": "E6",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official representative list plus official email and multi-unit CSU affiliation.",
+        "The official CSU profile explicitly lists this publication."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.scib.2025.10.028",
+      "matched_author_email": "lijinchen@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.scib.2025.10.028",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official representative list plus official email and multi-unit CSU affiliation."
+    },
+    {
+      "evidence_id": "E7",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "Relevant unit but carries ORCID 0000-0003-3335-9303, one side of the unresolved two-ORCID conflict."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": null,
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Relevant unit but carries ORCID 0000-0003-3335-9303, one side of the unresolved two-ORCID conflict."
+    },
+    {
+      "evidence_id": "E8",
+      "identity_status": "unresolved",
+      "verification_basis": [
+        "Relevant unit but carries ORCID 0000-0001-5522-806X, the other side of the unresolved two-ORCID conflict."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": null,
+      "matched_institution_source_url": null,
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Relevant unit but carries ORCID 0000-0001-5522-806X, the other side of the unresolved two-ORCID conflict."
+    },
+    {
+      "evidence_id": "E9",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact multi-unit CSU bioinformatics/medical-genetics affiliation and official disease direction."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.scib.2026.07.038",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact multi-unit CSU bioinformatics/medical-genetics affiliation and official disease direction."
+    },
+    {
+      "evidence_id": "E10",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Exact multi-unit CSU affiliation and official neuropsychiatric-disease direction."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.ebiom.2026.106383",
+      "matched_author_email": null,
+      "matched_author_email_source_url": null,
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Exact multi-unit CSU affiliation and official neuropsychiatric-disease direction."
+    },
+    {
+      "evidence_id": "E11",
+      "identity_status": "verified",
+      "verification_basis": [
+        "Official email, exact multi-unit CSU affiliation and disease direction."
+      ],
+      "matched_author_name": "Jinchen Li",
+      "matched_institution": "Central South University",
+      "matched_institution_source_url": "https://doi.org/10.1016/j.ebiom.2026.106224",
+      "matched_author_email": "lijinchen@csu.edu.cn",
+      "matched_author_email_source_url": "https://doi.org/10.1016/j.ebiom.2026.106224",
+      "matched_orcid": null,
+      "orcid_source_url": null,
+      "notes": "Official email, exact multi-unit CSU affiliation and disease direction."
+    }
+  ],
+  "official_source_identity": [
+    {
+      "evidence_id": "E1",
+      "identity_status": "verified",
+      "official_domain_status": "verified",
+      "profile_name_match_status": "verified",
+      "institution_match_status": "verified",
+      "reviewed_at": "2026-09-09",
+      "notes": "页面位于中南大学生命科学学院官方域名，标题姓名和机构匹配。"
+    }
+  ],
+  "p0_blockers": [
+    {
+      "code": "HUMAN_IDENTITY_REVIEW_PENDING",
+      "description": "Owner human identity review is pending; machine closure is not approval.",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "notes": "Official-list anchors, publication-time affiliations, email/ORCID where available, and explicit same-name counterexamples were kept advisor-local. Owner publication decision 2026-09-10 accepted adopted/featured content only; global identity and release review remain pending."
+}

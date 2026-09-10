@@ -1,0 +1,116 @@
+{
+  "manifest_version": 1,
+  "release_candidate_id": "phase-2-cohort-8-local-rc-2026-09-10",
+  "created_at": "2026-09-10T13:00:00+08:00",
+  "original_head": "fed26decc26a709379b0f087be8d68c1b50f2642",
+  "release_candidate_sha": "RESOLVE_AS_CONTAINING_COMMIT",
+  "branch": "codex/luna-advisor-pilot-3",
+  "upstream": null,
+  "locally_known_origin_main_relation": {
+    "head_ahead": 0,
+    "origin_main_ahead": 2,
+    "fetch_performed": false
+  },
+  "schema_version": "1.0.6",
+  "contract_version": "1.0.6",
+  "advisor_ids": [
+    "chen-shuhua",
+    "deng-meichun",
+    "deng-suixin",
+    "duan-ranhui",
+    "fan-liangliang",
+    "guo-yi",
+    "jiang-hao",
+    "li-jinchen"
+  ],
+  "cohort_totals": {
+    "publication_candidates": 90,
+    "adopted": 54,
+    "verified_candidate": 24,
+    "excluded": 6,
+    "identity_pending": 6,
+    "featured": 39
+  },
+  "canonical_state": {
+    "publication_status": "review_pending",
+    "release_eligible": false,
+    "release_authorized": false,
+    "owner_verdict": "OWNER_FINAL_WEB_REVIEW_PASS_WITH_NOTES"
+  },
+  "frozen_authority": {
+    "manifest_path": "docs/releases/phase-2-cohort-8-freeze-2026-09-10/FREEZE_MANIFEST.json",
+    "manifest_sha256": "d15785d9f137b89603c66321734c6f649de52bd9e1195191501a1255d87a2223",
+    "expected_hash_result": { "MATCH": 73, "DRIFT": 0, "MISSING": 0, "UNEXPECTED": 0 },
+    "owner_decision_path": "docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.json",
+    "owner_decision_sha256": "4fb0a337f8a4b4184dd5a4a41fc88b68861d25532b37484516fa5b08ea733b82",
+    "ledger_path": "docs/reviews/phase-2-publication-enrichment/publication_identity_ledger.csv",
+    "ledger_sha256": "e7d8234eaab86462d98f6d5d78cc74fd5280df1022e92068e91ee32ee30a4e5e"
+  },
+  "commit_allowlist": [
+    ".gitattributes",
+    "data/advisors-v1/{chen-chao,chen-guodong,chen-huiyong,chen-shuhua,deng-meichun,deng-suixin,duan-ranhui,fan-liangliang,guo-yi,jiang-hao,li-jinchen}/**",
+    "docs/advisor-template-v1/*v1.0.5*",
+    "docs/advisor-template-v1/*v1.0.6*",
+    "docs/playbooks/advisor-research-reuse-v1/**",
+    "docs/releases/phase-2-cohort-8-freeze-2026-09-10/**",
+    "docs/releases/phase-2-cohort-8-release-prep-2026-09-10/**",
+    "docs/reviews/luna-pilot-3-repair-audit-v1.md",
+    "docs/reviews/phase-2-**",
+    "frontend/.env.review-phase2",
+    "frontend/.gitignore",
+    "frontend/config/local-review-phase2-cohort-8-v106.json",
+    "frontend/package.json",
+    "frontend/scripts/local-review-phase2-**",
+    "frontend/scripts/release-preview-phase2-cohort8.*",
+    "frontend/scripts/public-advisor-dto.test.mjs",
+    "frontend/src/{App.tsx,styles.css}",
+    "frontend/src/components/**",
+    "frontend/src/data/{advisorData.ts,AdvisorDataContext.tsx}",
+    "frontend/src/pages/**",
+    "frontend/src/test/phase2-review-ui.test.tsx",
+    "frontend/src/types/advisor.ts",
+    "frontend/vite.config.ts",
+    "scripts/check-phase2-cohort8-freeze.py",
+    "src/advisor_production/{renderer.py,validator.py}",
+    "tests/test_advisor_production_v105.py",
+    "tests/test_advisor_production_v106.py",
+    "tests/test_chen_shuhua_publication_pilot.py",
+    "tests/test_phase2_cohort8_freeze.py",
+    "tests/test_phase2_publication_enrichment.py",
+    "tests/test_phase2_release_preparation.py"
+  ],
+  "explicit_exclusions": [
+    "frontend/public/**",
+    "frontend/.local-review*/**",
+    "frontend/.release-preview-phase2-cohort8/**",
+    "site-src/**",
+    "site-builder/**",
+    ".github/workflows/**",
+    "node_modules/**",
+    "dist/**",
+    "caches and screenshots"
+  ],
+  "preview": {
+    "path": "frontend/.release-preview-phase2-cohort8/",
+    "canonical": false,
+    "status": "LOCAL_RELEASE_CANDIDATE_PREVIEW",
+    "current_public_advisors": 12,
+    "proposed_added_advisors": 8,
+    "projected_public_advisors": 20,
+    "production_gate_modified": false
+  },
+  "expected_regression": {
+    "python_tests_expected": 149,
+    "frontend_tests_expected": 109,
+    "failures": 0,
+    "freeze": "MATCH",
+    "release_preview": "PASS"
+  },
+  "remote_actions": {
+    "push": false,
+    "merge": false,
+    "rebase": false,
+    "deploy": false,
+    "publish": false
+  }
+}

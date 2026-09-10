@@ -1,4 +1,4 @@
-"""Deterministically render v1.0.3 and typed v1.0.4 advisor documents."""
+"""Deterministically render v1.0.3 through v1.0.6 advisor documents."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from typing import Any, Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-MAPPING_PATH = REPO_ROOT / "docs" / "advisor-template-v1" / "display-label-mapping-v1.0.4.json"
+MAPPING_PATH = REPO_ROOT / "docs" / "advisor-template-v1" / "display-label-mapping-v1.0.6.json"
 NO_PUBLIC_INFO = "暂无公开信息"
 NEEDS_VERIFICATION = "待核验"
 NO_RELIABLE_EVIDENCE = "暂无可靠公开证据"
@@ -131,7 +131,17 @@ def render_markdown(public: dict[str, Any], manifest: dict[str, Any]) -> str:
     lines.extend(["", "## 7. 代表性论文", ""])
     featured = set(public["featured_publication_evidence_ids"])
     if public["featured_selection_status"] == "pending_manual_review" and not featured:
-        lines.append("代表性论文尚待人工筛选。完整候选证据已保存在内部证据清单中。")
+        publication_candidate_count = sum(
+            item.get("evidence_type") == "publication"
+            for item in manifest["candidate_evidence"]
+        )
+        if public.get("schema_version") == "1.0.6":
+            if publication_candidate_count == 0:
+                lines.append("当前未纳入论文候选证据，代表论文及作者身份尚待检索与核验。")
+            else:
+                lines.append(f"已保存 {publication_candidate_count} 条论文候选证据，代表性论文尚待人工筛选。")
+        else:
+            lines.append("代表性论文尚待人工筛选。完整候选证据已保存在内部证据清单中。")
     else:
         lines.extend(["| 证据编号 | 论文原题 | 年份 | DOI | 来源类型 | 作者位置 | 共同第一作者 | 通讯作者 | 公开来源 |", "|---|---|---:|---|---|---|---|---|---|"])
         for item in sorted(manifest["candidate_evidence"], key=_publication_sort_key):
@@ -152,7 +162,7 @@ def render_markdown(public: dict[str, Any], manifest: dict[str, Any]) -> str:
     lines.extend(["## 11. 联系前准备与线下核验", "", "- 当前招募、名额、真实任务、组会要求、资源与反馈方式：待核验。", "- 可根据公开研究方向准备具体问题，但不得把可能任务视为承诺。", ""])
 
     records = manifest["candidate_evidence"]
-    if public.get("schema_version") == "1.0.4":
+    if public.get("schema_version") in {"1.0.4", "1.0.5", "1.0.6"}:
         adopted = set(public["adopted_public_evidence_ids"])
         official_profiles = [item for item in records if item.get("evidence_type") == "official_profile"]
         publications = [item for item in records if item.get("evidence_type") == "publication"]
