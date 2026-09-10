@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://academic-intelligence.local/schemas/identity-review-schema-v1.0.7.json",
+  "title": "Academic Intelligence Typed Identity Review v1.0.7",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "advisor_id", "review_status", "reviewed_at", "reviewer_role", "advisor_identity", "publication_identity", "official_source_identity", "owner_release_review", "p0_blockers", "notes"],
+  "properties": {
+    "schema_version": {"const": "1.0.7"},
+    "advisor_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "review_status": {"enum": ["verified", "unresolved", "conflict"]},
+    "reviewed_at": {"type": ["string", "null"], "format": "date"},
+    "reviewer_role": {"enum": ["human_reviewer", "user", "content_reviewer", "codex_mechanical_migration"]},
+    "advisor_identity": {"$ref": "#/$defs/advisor_identity"},
+    "publication_identity": {"type": "array", "items": {"$ref": "#/$defs/publication_identity"}},
+    "official_source_identity": {"type": "array", "items": {"$ref": "#/$defs/official_source_identity"}},
+    "owner_release_review": {"$ref": "#/$defs/owner_release_review"},
+    "p0_blockers": {"type": "array", "items": {"$ref": "#/$defs/p0_blocker"}},
+    "notes": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "evidence_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+    "match_status": {"enum": ["verified", "unresolved", "conflict"]},
+    "advisor_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name_match_status", "institution_match_status", "school_or_department_match_status", "official_profile_match_status", "orcid_status", "orcid_release_classification", "candidate_orcid", "conflicting_orcid_candidates", "official_profile_url", "official_profile_email", "official_profile_email_source_url", "orcid_verification_evidence_ids", "orcid_verification_basis", "human_review_status", "notes"],
+      "properties": {
+        "name_match_status": {"$ref": "#/$defs/match_status"},
+        "institution_match_status": {"$ref": "#/$defs/match_status"},
+        "school_or_department_match_status": {"$ref": "#/$defs/match_status"},
+        "official_profile_match_status": {"$ref": "#/$defs/match_status"},
+        "orcid_status": {"enum": ["verified", "not_found", "unresolved", "conflict"]},
+        "orcid_release_classification": {"enum": ["verified_identifier", "identifier_not_found", "optional_identifier_unresolved", "conflicting_optional_identifiers"]},
+        "candidate_orcid": {"type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"},
+        "conflicting_orcid_candidates": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"}},
+        "official_profile_url": {"type": ["string", "null"], "format": "uri"},
+        "official_profile_email": {"type": ["string", "null"], "format": "email"},
+        "official_profile_email_source_url": {"type": ["string", "null"], "format": "uri"},
+        "orcid_verification_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/evidence_id"}},
+        "orcid_verification_basis": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "human_review_status": {"enum": ["verified", "pending", "rejected"]},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "publication_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "identity_status", "verification_basis", "matched_author_name", "matched_institution", "matched_institution_source_url", "matched_author_email", "matched_author_email_source_url", "matched_orcid", "orcid_source_url", "notes"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/evidence_id"},
+        "identity_status": {"$ref": "#/$defs/match_status"},
+        "verification_basis": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "matched_author_name": {"type": ["string", "null"]},
+        "matched_institution": {"type": ["string", "null"]},
+        "matched_institution_source_url": {"type": ["string", "null"], "format": "uri"},
+        "matched_author_email": {"type": ["string", "null"], "format": "email"},
+        "matched_author_email_source_url": {"type": ["string", "null"], "format": "uri"},
+        "matched_orcid": {"type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"},
+        "orcid_source_url": {"type": ["string", "null"], "format": "uri"},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "official_source_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "identity_status", "official_domain_status", "profile_name_match_status", "institution_match_status", "reviewed_at", "notes"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/evidence_id"},
+        "identity_status": {"$ref": "#/$defs/match_status"},
+        "official_domain_status": {"$ref": "#/$defs/match_status"},
+        "profile_name_match_status": {"$ref": "#/$defs/match_status"},
+        "institution_match_status": {"$ref": "#/$defs/match_status"},
+        "reviewed_at": {"type": ["string", "null"], "format": "date"},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "owner_release_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewer_role", "reviewed_at", "review_scope", "advisor_ids", "publication_decision_artifact_ref", "publication_decision_sha256", "featured_decision_artifact_ref", "known_open_risks_sha256", "known_open_risks_acknowledged", "exhaustive_review", "release_authorized", "notes"],
+      "properties": {
+        "status": {"enum": ["pending", "approved", "approved_with_notes", "rejected"]},
+        "reviewer_role": {"const": "owner"},
+        "reviewed_at": {"type": ["string", "null"], "format": "date"},
+        "review_scope": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "advisor_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "publication_decision_artifact_ref": {"type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:\\\\|/).+$"},
+        "publication_decision_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "featured_decision_artifact_ref": {"type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:\\\\|/).+$"},
+        "known_open_risks_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "known_open_risks_acknowledged": {"type": "boolean"},
+        "exhaustive_review": {"const": false},
+        "release_authorized": {"type": "boolean"},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "p0_blocker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "description", "evidence_ids"],
+      "properties": {
+        "code": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/evidence_id"}}
+      }
+    }
+  }
+}

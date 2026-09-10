@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.7",
+  "review_id": "phase-2-cohort-8-owner-scoped-release-review-2026-09-10",
+  "status": "approved_with_notes",
+  "reviewer_role": "owner",
+  "reviewed_at": "2026-09-10",
+  "review_scope": [
+    "publication_adoption_decisions",
+    "rejected_and_unresolved_publications",
+    "orcid_anomalies",
+    "featured_publications",
+    "focused_final_web_spot_check"
+  ],
+  "advisor_ids": [
+    "chen-shuhua",
+    "deng-meichun",
+    "deng-suixin",
+    "duan-ranhui",
+    "fan-liangliang",
+    "guo-yi",
+    "jiang-hao",
+    "li-jinchen"
+  ],
+  "publication_decision_artifact_ref": "docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.json",
+  "publication_decision_sha256": "4fb0a337f8a4b4184dd5a4a41fc88b68861d25532b37484516fa5b08ea733b82",
+  "featured_decision_artifact_ref": "docs/reviews/phase-2-publication-enrichment/OWNER_PUBLICATION_DECISIONS_2026-09-10.json",
+  "known_open_risks_artifact_ref": "docs/releases/phase-2-cohort-8-freeze-2026-09-10/KNOWN_OPEN_RISKS.md",
+  "known_open_risks_sha256": "50bbdb58958c795a93df37651f0c9582bdb114e8654842a3efbc765cb0f8e64c",
+  "known_open_risks_acknowledged": true,
+  "exhaustive_review": false,
+  "release_authorized": false,
+  "advisor_orcid_release": {
+    "chen-shuhua": {"classification": "verified_identifier", "conflicting_orcid_candidates": []},
+    "deng-meichun": {"classification": "verified_identifier", "conflicting_orcid_candidates": []},
+    "deng-suixin": {"classification": "verified_identifier", "conflicting_orcid_candidates": []},
+    "duan-ranhui": {"classification": "verified_identifier", "conflicting_orcid_candidates": []},
+    "fan-liangliang": {"classification": "optional_identifier_unresolved", "conflicting_orcid_candidates": []},
+    "guo-yi": {"classification": "verified_identifier", "conflicting_orcid_candidates": []},
+    "jiang-hao": {"classification": "optional_identifier_unresolved", "conflicting_orcid_candidates": []},
+    "li-jinchen": {
+      "classification": "conflicting_optional_identifiers",
+      "conflicting_orcid_candidates": ["0000-0003-3335-9303", "0000-0001-5522-806X"]
+    }
+  },
+  "notes": "Owner reviewed publication adoption decisions, unresolved/excluded records, ORCID anomalies, featured selections, and representative high-risk web surfaces. This was focused release review with notes, not exhaustive field-by-field human approval. No push or deployment is authorized by this record."
+}
