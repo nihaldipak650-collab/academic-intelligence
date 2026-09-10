@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0.7",
+  "advisor_id": "guo-yi",
+  "source_scope": "Official CSU advisor profile/representative list plus DOI, PubMed and Europe PMC discovery metadata; local Owner review only.",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2500.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "学院官方导师主页，作为身份、职务、联系方式与研究方向的一手来源。",
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E1",
+      "last_verified_at": "2026-09-09",
+      "notes": "只保留官方页面公开信息；不推断招生、培养承诺或实验室氛围。",
+      "page_title": "虢毅",
+      "profile_name": "虢毅",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院生物医学信息学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职称为教授。",
+          "fact_category": "professional_title",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：position",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "公开角色为硕士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：public_roles",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "生物信息学、疾病遗传机制、生物医学大数据挖掘和健康信息学。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：research_directions_original",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "主页公开方法或方向涉及生物信息学、遗传数据分析、生物医学大数据挖掘与健康信息行为研究。",
+          "fact_category": "research_method",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：main_techniques",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpsyg.2022.966033",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact biomedical-informatics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E2",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 36324785; Official representative list plus exact biomedical-informatics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Research on the influencing factors of users' information processing in online health communities based on heuristic-systematic model.",
+      "publication_year": 2022,
+      "doi": "10.3389/fpsyg.2022.966033",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3389/fpsyg.2022.966033"
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2022.811792",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact biomedical-informatics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E3",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 35284387; Official representative list plus exact biomedical-informatics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Effect of Information Framing on Wearing Masks During the COVID-19 Pandemic: Interaction With Social Norms and Information Credibility.",
+      "publication_year": 2022,
+      "doi": "10.3389/fpubh.2022.811792",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3389/fpubh.2022.811792"
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/vaccines10010090",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID and biomedical-information affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E4",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 35062751; Official representative list plus exact ORCID and biomedical-information affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "The Uptake and Vaccination Willingness of COVID-19 Vaccine among Chinese Residents: Web-Based Online Cross-Sectional Study.",
+      "publication_year": 2022,
+      "doi": "10.3390/vaccines10010090",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3390/vaccines10010090"
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3390/ijerph191811783",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID and biomedical-information affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E5",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 36142055; Official representative list plus exact ORCID and biomedical-information affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Exploring Users' Health Behavior Changes in Online Health Communities: Heuristic-Systematic Perspective Study.",
+      "publication_year": 2022,
+      "doi": "10.3390/ijerph191811783",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3390/ijerph191811783"
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fnagi.2021.648151",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus first-author position and medical-information affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E6",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 34456707; Official representative list plus first-author position and medical-information affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Genetic Analysis and Literature Review of SNCA Variants in Parkinson's Disease.",
+      "publication_year": 2021,
+      "doi": "10.3389/fnagi.2021.648151",
+      "source_type": "review",
+      "author_position": "first",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "review"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3389/fnagi.2021.648151"
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1080/08989621.2025.2554696",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "identity_pending"
+      ],
+      "reason": "Name and broad School of Life Sciences affiliation fit, but department/email/ORCID do not close the common-name risk.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E7",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 40908928; Name and broad School of Life Sciences affiliation fit, but department/email/ORCID do not close the common-name risk. Candidate/adoption is not a featured or release decision.",
+      "title": "Assessing the influence of generative artificial intelligence (GenAI) on awareness and behavior in medical research integrity: An online survey study.",
+      "publication_year": 2025,
+      "doi": "10.1080/08989621.2025.2554696",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": null,
+      "publication_affiliation_source_url": null
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.jgg.2025.05.008",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact medical-information unit and genetics topic.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E8",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 40446958; Exact medical-information unit and genetics topic. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Genetic architecture of amyotrophic lateral sclerosis: a comprehensive review.",
+      "publication_year": 2025,
+      "doi": "10.1016/j.jgg.2025.05.008",
+      "source_type": "review",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "review"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.jgg.2025.05.008"
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.3389/fpubh.2024.1379094",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact biomedical-informatics unit and online-health coauthor/topic continuity.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E9",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 39351031; Exact biomedical-informatics unit and online-health coauthor/topic continuity. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Factors influencing user's health information discernment abilities in online health communities: based on SEM and fsQCA.",
+      "publication_year": 2024,
+      "doi": "10.3389/fpubh.2024.1379094",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.3389/fpubh.2024.1379094"
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1371/journal.pone.0308377",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "Exact biomedical-informatics unit and research-information topic.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E10",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 39102401; Exact biomedical-informatics unit and research-information topic. Candidate/adoption is not a featured or release decision.",
+      "title": "Scientific misconduct responsibility attribution: An empirical study on byline position and team identity in Chinese medical papers.",
+      "publication_year": 2024,
+      "doi": "10.1371/journal.pone.0308377",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1371/journal.pone.0308377"
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.34133/research.0976",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "excluded",
+        "identity_pending"
+      ],
+      "reason": "Same-name author is in dermatology with a different department and coauthor network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E11",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41268215; Same-name author is in dermatology with a different department and coauthor network. Candidate/adoption is not a featured or release decision.",
+      "title": "HOXC10 Protects from Skin Aging by Targeting the FZD6/Wnt/β-Catenin Signaling Pathway.",
+      "publication_year": 2025,
+      "doi": "10.34133/research.0976",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": false,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Xiangya Hospital Department of Dermatology"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.34133/research.0976"
+    }
+  ]
+}

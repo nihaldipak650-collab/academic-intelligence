@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "dtoVersion": "1.0.4",
-  "source": "approved-public-advisor-contract",
-  "advisorCount": 12,
+  "dtoVersion": "1.0.7",
+  "source": "approved-public-advisor-contract-v1.0.7-scoped-release",
+  "advisorCount": 20,
   "advisors": [
     {
       "dtoVersion": "1.0.4",
@@ -5256,6 +5256,165 @@
         ]
       },
       "reportSha256": "af7339df2b8d78e5323b0cc498277f5cd890e79bdbb779e60ccba22271118bae"
+    },
+    {
+      "id": "chen-shuhua",
+      "publicationCandidateCount": 22,
+      "adoptedPublicationCount": 6,
+      "orcidReviewStatus": "verified",
+      "ownerFeaturedIds": [
+        "E2",
+        "E3",
+        "E5",
+        "E7"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "deng-meichun",
+      "publicationCandidateCount": 10,
+      "adoptedPublicationCount": 9,
+      "orcidReviewStatus": "verified",
+      "ownerFeaturedIds": [
+        "E2",
+        "E4",
+        "E6",
+        "E7",
+        "E11"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "deng-suixin",
+      "publicationCandidateCount": 8,
+      "adoptedPublicationCount": 7,
+      "orcidReviewStatus": "verified",
+      "ownerFeaturedIds": [
+        "E2",
+        "E3",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "duan-ranhui",
+      "publicationCandidateCount": 10,
+      "adoptedPublicationCount": 8,
+      "orcidReviewStatus": "verified",
+      "ownerFeaturedIds": [
+        "E2",
+        "E5",
+        "E6",
+        "E7",
+        "E11"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "fan-liangliang",
+      "publicationCandidateCount": 10,
+      "adoptedPublicationCount": 5,
+      "orcidReviewStatus": "unresolved",
+      "ownerFeaturedIds": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "guo-yi",
+      "publicationCandidateCount": 10,
+      "adoptedPublicationCount": 7,
+      "orcidReviewStatus": "verified",
+      "ownerFeaturedIds": [
+        "E2",
+        "E5",
+        "E6",
+        "E8",
+        "E9"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "jiang-hao",
+      "publicationCandidateCount": 10,
+      "adoptedPublicationCount": 5,
+      "orcidReviewStatus": "unresolved",
+      "ownerFeaturedIds": [
+        "E2",
+        "E3",
+        "E4",
+        "E6",
+        "E7"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
+    },
+    {
+      "id": "li-jinchen",
+      "publicationCandidateCount": 10,
+      "adoptedPublicationCount": 7,
+      "orcidReviewStatus": "unresolved",
+      "ownerFeaturedIds": [
+        "E2",
+        "E3",
+        "E5",
+        "E9",
+        "E11"
+      ],
+      "dtoVersion": "1.0.7",
+      "schemaVersion": "1.0.7",
+      "version": "1.0.7",
+      "releaseEligible": true,
+      "publicationStatus": "approved",
+      "status": "approved",
+      "publicationIdentityStatus": "verified"
     }
   ]
 }

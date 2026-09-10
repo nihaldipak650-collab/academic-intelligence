@@ -95,6 +95,15 @@ async function readJson(file) {
   return JSON.parse(await readFile(file, "utf8"));
 }
 
+async function readJsonIfPresent(file) {
+  try {
+    return await readJson(file);
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
+}
+
 function safeReportName(value) {
   return (
     typeof value === "string" &&
@@ -252,24 +261,79 @@ function setDifferences(actual, expected) {
 
 async function scanGeneratedAllowlist({ mode, root }) {
   const dataFile = path.join(root, "data", "advisors.json");
+  const academicDtoFile = path.join(root, "academic", "profile", "data", "public-dto.json");
   const reportRoot = path.join(root, "reports");
-  const [data, allFiles, reportFiles] = await Promise.all([
+  const [data, academicDto, allFiles, reportFiles] = await Promise.all([
     readJson(dataFile),
+    readJsonIfPresent(academicDtoFile),
     walkFiles(root),
     walkFiles(reportRoot),
   ]);
   invariant(Array.isArray(data.advisors), `${dataFile} 缺少 advisors 数组`);
   invariant(data.advisorCount === data.advisors.length, `${dataFile} advisorCount 不一致`);
+  if (academicDto) {
+    invariant(Array.isArray(academicDto.advisors), `${academicDtoFile} 缺少 advisors 数组`);
+    invariant(academicDto.advisorCount === academicDto.advisors.length, `${academicDtoFile} advisorCount 不一致`);
+  }
 
   const advisorViolations = data.advisors.flatMap((advisor) =>
     evaluatePublishedAdvisor(advisor).map((reason) => `${advisor.id ?? "unknown"}:${reason}`),
   );
+  const academicAdvisorViolations = (academicDto?.advisors || []).flatMap((advisor) => {
+    const reasons = [];
+    if (advisor.releaseEligible !== true) reasons.push("release_eligible_not_true");
+    if (!ALLOWED_PUBLICATION_STATUSES.has(advisor.publicationStatus)) reasons.push("publication_status_not_allowed");
+    return reasons.map((reason) => `academic:${advisor.id ?? "unknown"}:${reason}`);
+  });
   const expectedReports = new Set(data.advisors.map((advisor) => advisor.reportPath));
-  const approvedAdvisorIds = new Set(data.advisors.map((advisor) => advisor.id));
+  const approvedAdvisorIds = new Set((academicDto?.advisors || []).map((advisor) => advisor.id));
   invariant(expectedReports.size === data.advisors.length, "公开数据存在重复报告路径");
   const relativeFiles = new Map(
     allFiles.map((file) => [normalizedRelativePath(root, file), file]),
   );
+  const academicPackageViolations = [];
+  for (const advisor of academicDto?.advisors || []) {
+    const prefix = `academic/profile/data/packs/${advisor.id}/`;
+    const required = {
+      publicAdvisor: `${prefix}public-advisor-v1.json`,
+      manifest: `${prefix}evidence-manifest-v1.json`,
+      validation: `${prefix}validation-report-v1.json`,
+    };
+    const missing = Object.values(required).filter((relativePath) => !relativeFiles.has(relativePath));
+    if (missing.length) {
+      academicPackageViolations.push(`${advisor.id}:missing:${missing.join("|")}`);
+      continue;
+    }
+    const [publicAdvisor, manifest, validation] = await Promise.all([
+      readJson(relativeFiles.get(required.publicAdvisor)),
+      readJson(relativeFiles.get(required.manifest)),
+      readJson(relativeFiles.get(required.validation)),
+    ]);
+    if ([publicAdvisor, manifest, validation].some((item) => item.advisor_id !== advisor.id)) {
+      academicPackageViolations.push(`${advisor.id}:advisor_id_mismatch`);
+    }
+    if (!(validation.valid === true && validation.release_eligible === true)) {
+      academicPackageViolations.push(`${advisor.id}:validation_report_not_release_eligible`);
+    }
+    if (!ALLOWED_PUBLICATION_STATUSES.has(publicAdvisor.publication_status)) {
+      academicPackageViolations.push(`${advisor.id}:public_package_status_not_allowed`);
+    }
+    if (!(Array.isArray(manifest.candidate_evidence) && Array.isArray(publicAdvisor.adopted_public_evidence_ids) && Array.isArray(publicAdvisor.featured_publication_evidence_ids))) {
+      academicPackageViolations.push(`${advisor.id}:package_shape_invalid`);
+      continue;
+    }
+    const evidenceById = new Map(manifest.candidate_evidence.map((item) => [item.evidence_id, item]));
+    const adopted = new Set(publicAdvisor.adopted_public_evidence_ids);
+    for (const evidenceId of adopted) {
+      const evidence = evidenceById.get(evidenceId);
+      if (!evidence?.candidate_statuses?.includes("adopted") || (evidence.evidence_type === "publication" && evidence.identity_verified !== true)) {
+        academicPackageViolations.push(`${advisor.id}:unsafe_adopted:${evidenceId}`);
+      }
+    }
+    for (const evidenceId of publicAdvisor.featured_publication_evidence_ids) {
+      if (!adopted.has(evidenceId)) academicPackageViolations.push(`${advisor.id}:featured_not_adopted:${evidenceId}`);
+    }
+  }
   const blockedPaths = [...relativeFiles.keys()].filter(
     (relativePath) =>
       blockedPathPatterns.some((pattern) => pattern.test(relativePath)) &&
@@ -330,6 +394,8 @@ async function scanGeneratedAllowlist({ mode, root }) {
 
   const failures = [];
   if (advisorViolations.length) failures.push(`公开导师门禁违规：${advisorViolations.join(", ")}`);
+  if (academicAdvisorViolations.length) failures.push(`Academic 公开导师门禁违规：${academicAdvisorViolations.join(", ")}`);
+  if (academicPackageViolations.length) failures.push(`Academic 公开包门禁违规：${academicPackageViolations.join(", ")}`);
   if (blockedPaths.length) failures.push(`可部署目录含禁止路径：${blockedPaths.join(", ")}`);
   if (unexpectedPaths.length) failures.push(`可部署目录含白名单外路径：${unexpectedPaths.join(", ")}`);
   if (differences.unexpected.length) {
@@ -348,6 +414,7 @@ async function scanGeneratedAllowlist({ mode, root }) {
   return {
     mode,
     publicAdvisorRecords: data.advisors.length,
+    academicPublicAdvisorRecords: academicDto?.advisors?.length || 0,
     trackedOrArtifactReports: actualReports.size,
     experienceRecords: experienceRecords.length,
     experienceContentFiles: experienceFiles.length,

@@ -267,6 +267,94 @@ describe("reusable public content allowlist scanner", () => {
     await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/禁止路径|白名单外/);
   });
 
+  it("仅允许 Academic 公开 DTO 明确列出的导师三文件包", async () => {
+    const paths = await makeTree();
+    const academicRoot = path.join(paths.artifactRoot, "academic", "profile", "data");
+    const packRoot = path.join(academicRoot, "packs", "phase2-safe-advisor");
+    await mkdir(packRoot, { recursive: true });
+    await writeFile(
+      path.join(academicRoot, "public-dto.json"),
+      JSON.stringify({
+        advisorCount: 1,
+        advisors: [{ id: "phase2-safe-advisor", publicationStatus: "approved", releaseEligible: true }],
+      }),
+    );
+    await writeFile(path.join(packRoot, "public-advisor-v1.json"), JSON.stringify({
+      advisor_id: "phase2-safe-advisor",
+      publication_status: "approved",
+      adopted_public_evidence_ids: ["E2"],
+      featured_publication_evidence_ids: ["E2"],
+    }));
+    await writeFile(path.join(packRoot, "evidence-manifest-v1.json"), JSON.stringify({
+      advisor_id: "phase2-safe-advisor",
+      candidate_evidence: [{ evidence_id: "E2", evidence_type: "publication", identity_verified: true, candidate_statuses: ["adopted"] }],
+    }));
+    await writeFile(path.join(packRoot, "validation-report-v1.json"), JSON.stringify({
+      advisor_id: "phase2-safe-advisor",
+      valid: true,
+      release_eligible: true,
+    }));
+    await expect(scanPublicContent({ mode: "artifact", ...paths })).resolves.toEqual(
+      expect.objectContaining({ academicPublicAdvisorRecords: 1 }),
+    );
+    await mkdir(path.join(academicRoot, "packs", "not-approved"), { recursive: true });
+    await writeFile(path.join(academicRoot, "packs", "not-approved", "public-advisor-v1.json"), "{}\n");
+    await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/白名单外/);
+  });
+
+  it("拒绝 Academic 公开 DTO 中未通过发布门禁的导师", async () => {
+    const paths = await makeTree();
+    const academicRoot = path.join(paths.artifactRoot, "academic", "profile", "data");
+    await mkdir(academicRoot, { recursive: true });
+    await writeFile(
+      path.join(academicRoot, "public-dto.json"),
+      JSON.stringify({
+        advisorCount: 1,
+        advisors: [{ id: "pending-advisor", publicationStatus: "review_pending", releaseEligible: false }],
+      }),
+    );
+    await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/Academic 公开导师门禁违规/);
+  });
+
+  it("拒绝 Academic 包中失效的 validation report 或未核验 adopted Evidence", async () => {
+    const paths = await makeTree();
+    const academicRoot = path.join(paths.artifactRoot, "academic", "profile", "data");
+    const packRoot = path.join(academicRoot, "packs", "unsafe-advisor");
+    await mkdir(packRoot, { recursive: true });
+    await writeFile(path.join(academicRoot, "public-dto.json"), JSON.stringify({
+      advisorCount: 1,
+      advisors: [{ id: "unsafe-advisor", publicationStatus: "approved", releaseEligible: true }],
+    }));
+    await writeFile(path.join(packRoot, "public-advisor-v1.json"), JSON.stringify({
+      advisor_id: "unsafe-advisor",
+      publication_status: "approved",
+      adopted_public_evidence_ids: ["E2"],
+      featured_publication_evidence_ids: ["E2"],
+    }));
+    await writeFile(path.join(packRoot, "evidence-manifest-v1.json"), JSON.stringify({
+      advisor_id: "unsafe-advisor",
+      candidate_evidence: [{ evidence_id: "E2", evidence_type: "publication", identity_verified: false, candidate_statuses: ["identity_pending"] }],
+    }));
+    await writeFile(path.join(packRoot, "validation-report-v1.json"), JSON.stringify({
+      advisor_id: "unsafe-advisor",
+      valid: false,
+      release_eligible: false,
+    }));
+    await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/Academic 公开包门禁违规/);
+  });
+
+  it("没有 Academic public DTO 时拒绝与 legacy 导师同 ID 的 Academic 包", async () => {
+    const paths = await makeTree();
+    const advisor = publishedAdvisor();
+    await writeGeneratedTree(paths.artifactRoot, [advisor], {
+      "future-safe-advisor.md": "# 未来测试导师\n",
+    });
+    const packRoot = path.join(paths.artifactRoot, "academic", "profile", "data", "packs", advisor.id);
+    await mkdir(packRoot, { recursive: true });
+    await writeFile(path.join(packRoot, "public-advisor-v1.json"), "{}\n");
+    await expect(scanPublicContent({ mode: "artifact", ...paths })).rejects.toThrow(/白名单外/);
+  });
+
   it("拒绝 reports 下未由 advisors 明确列出的 TXT", async () => {
     const paths = await makeTree();
     await writeFile(path.join(paths.artifactRoot, "reports", "leak.txt"), "synthetic leak\n");

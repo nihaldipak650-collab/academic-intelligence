@@ -276,3 +276,5 @@ footer { border-top: 1px solid var(--ink); margin-top: 3rem; padding: 2rem 1.4re
 .traj-title { font-size: 13px; line-height: 1.5; }
 .traj-meta { font-size: 11.5px; color: #77705f; }
 .traj-meta .doi { color: #146b4a; }
+
+.orcid-open-risk{margin-top:.55rem;padding:.55rem .7rem;border-left:3px solid #b88700;background:#fff8dc;color:#5e4a00}

@@ -142,7 +142,7 @@ export function renderTemplate(m, t, densityName) {
   const evItems = t === 't01' ? `<div class="ev-item"><span class="ev-k">来源</span><h3>学院官网 + 学术数据库</h3><p>${esc(trustLine(m))}</p></div>`
     : `
       <div class="ev-item"><span class="ev-k">身份信息</span><h3>${esc(m.release.identityStatus === 'verified' ? '已核验' : '核验中')}</h3><p>姓名 · 职称 · 院系 · 导师资格来自学院官方页面。</p></div>
-      <div class="ev-item"><span class="ev-k">论文信息</span><h3>已核验 ${pc.count} 篇</h3><p>题名与年份经 Crossref / DOI 交叉核验，年份以正式卷期为准。</p></div>
+      <div class="ev-item"><span class="ev-k">论文信息</span><h3>已采用 ${pc.count} 篇</h3><p>题名、版本与作者身份依据正式论文元数据逐篇核验。</p>${m.release.orcidReviewStatus === 'unresolved' ? '<p class="orcid-open-risk">导师级 ORCID 尚未唯一核验；页面不展示候选或冲突编号，公开结论不依赖其取值。</p>' : ''}</div>
       <div class="ev-item"><span class="ev-k">整理说明</span><h3>公开资料整理</h3><p>方向解释与任务建议基于官方方向与已采纳论文；内容不代表导师原话或承诺。</p></div>`;
 
   const evTech = review && t === 't03' ? `
@@ -234,7 +234,7 @@ export function renderTemplate(m, t, densityName) {
       <h2>${pc.featuredEmpty ? '已核验成果' : '代表成果'}</h2>
       <p class="section-note">${pc.featuredEmpty ? '按年份排列的已核验公开成果（精选展示仍待人工评审，本页不做挑选推荐）。' : '经人工评审的代表成果。'}</p>
       <div class="pub-list">${pubRows}</div>
-      ${pubs.length > pubRowsCount(t, pubs) ? `<p class="section-note" style="margin-top:1.2rem">共 ${pc.count} 篇已核验；其余在深读层。</p>` : ''}
+      ${pubs.length > pubRowsCount(t, pubs) ? `<p class="section-note" style="margin-top:1.2rem">共 ${pc.count} 篇已采用；其余已采用论文在深读层。</p>` : ''}
     </section>
 
     <section id="trajectory" class="block">

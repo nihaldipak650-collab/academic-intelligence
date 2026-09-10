@@ -34,7 +34,13 @@ export async function loadAll(mentorId) {
 function buildAdvisor({ pack, manifest, validation }, recs, dates, dto) {
   const release = releaseEligibility(validation);
   const adopted = (manifest.candidate_evidence || []).filter(e => (e.candidate_statuses || []).includes('adopted'));
-  const pubEv = adopted.filter(e => e.evidence_type === 'publication');
+  const allPubEv = (manifest.candidate_evidence || []).filter(e => e.evidence_type === 'publication');
+  const featuredOrder = new Map((pack.featured_publication_evidence_ids || []).map((id, index) => [id, index]));
+  const pubEv = adopted.filter(e => e.evidence_type === 'publication').sort((a, b) => {
+    const ai = featuredOrder.has(a.evidence_id) ? featuredOrder.get(a.evidence_id) : Number.MAX_SAFE_INTEGER;
+    const bi = featuredOrder.has(b.evidence_id) ? featuredOrder.get(b.evidence_id) : Number.MAX_SAFE_INTEGER;
+    return ai - bi;
+  });
   const profileEv = adopted.filter(e => e.evidence_type === 'official_profile');
 
   const pubs = pubEv.map(e => {
@@ -44,7 +50,7 @@ function buildAdvisor({ pack, manifest, validation }, recs, dates, dto) {
     return {
       id: e.evidence_id,
       title: e.title,
-      year: canonicalYear(dt, rec),
+      year: canonicalYear(dt, rec) || e.publication_year || null,
       doi,
       venue: rec.container || null,
       volume: dt.volume || null,
@@ -60,6 +66,7 @@ function buildAdvisor({ pack, manifest, validation }, recs, dates, dto) {
   }).sort((a, b) => (b.year || 0) - (a.year || 0));
 
   const contact = buildContact(pack);
+  const reviewMeta = (dto.advisors || []).find(item => item.id === pack.advisor_id) || {};
 
   return {
     id: pack.advisor_id,
@@ -82,6 +89,13 @@ function buildAdvisor({ pack, manifest, validation }, recs, dates, dto) {
       featuredStatus: pack.featured_selection_status,
       featuredIds: pack.featured_publication_evidence_ids || [],
       dataStatusNote: pack.data_status_note,
+      publicationCandidateCount: allPubEv.length,
+      adoptedPublicationCount: pubEv.length,
+      unresolvedPublicationCount: allPubEv.filter(e => !e.identity_verified && !(e.candidate_statuses || []).includes('excluded')).length,
+      rejectedPublicationCount: allPubEv.filter(e => (e.candidate_statuses || []).includes('excluded')).length,
+      orcidReviewStatus: reviewMeta.orcidReviewStatus || 'unresolved',
+      orcidReviewBasis: reviewMeta.orcidReviewBasis || [],
+      ownerFeaturedIds: reviewMeta.ownerFeaturedIds || [],
       warnings: (validation.warnings || []).map(w => ({ code: w.code, severity: w.severity, message: w.message })),
     },
     directions: {

@@ -1,0 +1,496 @@
+{
+  "schema_version": "1.0.7",
+  "advisor_id": "duan-ranhui",
+  "source_scope": "Official CSU advisor profile/representative list plus DOI, PubMed and Europe PMC discovery metadata; local Owner review only.",
+  "candidate_evidence": [
+    {
+      "evidence_id": "E1",
+      "evidence_type": "official_profile",
+      "source_url": "https://life.csu.edu.cn/info/1042/2559.htm",
+      "source_authority": "official_institution",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "学院官方导师主页，作为身份、职务、联系方式与研究方向的一手来源。",
+      "supported_fields": [
+        "name_zh",
+        "institution",
+        "school_or_department",
+        "position",
+        "public_roles",
+        "contact",
+        "research_directions_original",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E1",
+      "last_verified_at": "2026-09-09",
+      "notes": "只保留官方页面公开信息；不推断招生、培养承诺或实验室氛围。",
+      "page_title": "段然慧",
+      "profile_name": "段然慧",
+      "institution": "中南大学",
+      "school_or_department": "生命科学学院遗传学系",
+      "extracted_facts": [
+        {
+          "fact_id": "F1",
+          "fact_text": "职称为教授。",
+          "fact_category": "professional_title",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：position",
+          "supported_public_fields": [
+            "position"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "fact_text": "公开角色为博士生导师。",
+          "fact_category": "supervisor_type",
+          "source_section": "学院官方导师主页",
+          "source_anchor": "公开字段：public_roles",
+          "supported_public_fields": [
+            "public_roles"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "fact_text": "致病基因功能和疾病分子机制，重点包括脆性X相关疾病、多核苷酸重复扩增疾病以及神经系统疾病果蝇模型。",
+          "fact_category": "research_direction",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：research_directions_original",
+          "supported_public_fields": [
+            "research_directions_original",
+            "research_questions"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "fact_text": "主页公开方法或方向涉及生物化学、分子与细胞生物学、临床遗传筛查、果蝇模型和CRISPR/Cas9基因编辑。",
+          "fact_category": "research_method",
+          "source_section": "主要研究方向",
+          "source_anchor": "公开字段：main_techniques",
+          "supported_public_fields": [
+            "main_techniques",
+            "research_workflow"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_id": "E2",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s44321-025-00217-3",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID, email and current affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E2",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 40133672; Official representative list plus exact ORCID, email and current affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Modulating CCTG repeat expansion toxicity in DM2 Drosophila model through TDP1 inhibition.",
+      "publication_year": 2025,
+      "doi": "10.1038/s44321-025-00217-3",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s44321-025-00217-3"
+    },
+    {
+      "evidence_id": "E3",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1038/s41419-024-06934-w",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus exact ORCID, email and current affiliation; formal article selected over preprint 10.21203/rs.3.rs-3754446/v1.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E3",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 39085203; Official representative list plus exact ORCID, email and current affiliation; formal article selected over preprint 10.21203/rs.3.rs-3754446/v1. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Eg5 UFMylation promotes spindle organization during mitosis.",
+      "publication_year": 2024,
+      "doi": "10.1038/s41419-024-06934-w",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": "duan-ranhui-eg5",
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1038/s41419-024-06934-w"
+    },
+    {
+      "evidence_id": "E4",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.jmoldx.2024.06.005",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus official email and current affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E4",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 39032823; Official representative list plus official email and current affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Strategic Implementation of Fragile X Carrier Screening in China: A Focused Pilot Study.",
+      "publication_year": 2024,
+      "doi": "10.1016/j.jmoldx.2024.06.005",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.jmoldx.2024.06.005"
+    },
+    {
+      "evidence_id": "E5",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1096/fj.202200212r",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus current affiliation and Drosophila disease-model continuity.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E5",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 35695805; Official representative list plus current affiliation and Drosophila disease-model continuity. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Loss of Drosophila NUS1 results in cholesterol accumulation and Parkinson's disease-related neurodegeneration.",
+      "publication_year": 2022,
+      "doi": "10.1096/fj.202200212r",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1096/fj.202200212r"
+    },
+    {
+      "evidence_id": "E6",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1002/mds.29041",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official representative list plus current medical-genetics affiliation.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E6",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 35521937; Official representative list plus current medical-genetics affiliation. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Assessment of GGC Repeat Expansion in GIPC1 in Patients with Parkinson's Disease.",
+      "publication_year": 2022,
+      "doi": "10.1002/mds.29041",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1002/mds.29041"
+    },
+    {
+      "evidence_id": "E7",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1007/s12035-026-06115-0",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Exact current unit and fragile-X topic.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E7",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42557527; Exact current unit and fragile-X topic. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "FYN, a Novel Target of Fragile X Mental Retardation Protein, Potentially Underlies ERK1/2 Hyperactivation in Fragile X Syndrome.",
+      "publication_year": 2026,
+      "doi": "10.1007/s12035-026-06115-0",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1007/s12035-026-06115-0"
+    },
+    {
+      "evidence_id": "E8",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1186/s13578-026-01578-z",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official email, current unit and Drosophila network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E8",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 42035222; Official email, current unit and Drosophila network. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "Integrator subunit IntS11 orchestrates the temporal dynamics of neural lineage progression in Drosophila.",
+      "publication_year": 2026,
+      "doi": "10.1186/s13578-026-01578-z",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1186/s13578-026-01578-z"
+    },
+    {
+      "evidence_id": "E9",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.ebiom.2026.106127",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "Exact current unit and repeat-expansion neurodegeneration context.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E9",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41539185; Exact current unit and repeat-expansion neurodegeneration context. Candidate/adoption is not a featured or release decision.",
+      "title": "Plasma p-tau species are elevated in presymptomatic and symptomatic neuronal intranuclear inclusion disease.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.ebiom.2026.106127",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.ebiom.2026.106127"
+    },
+    {
+      "evidence_id": "E10",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1093/nar/gkaf1347",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "candidate"
+      ],
+      "reason": "Exact current unit and molecular-genetics network.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E10",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41404809; Exact current unit and molecular-genetics network. Candidate/adoption is not a featured or release decision.",
+      "title": "Genome-wide modulation of alternative splicing by a predicted alpha helix in U2AF2.",
+      "publication_year": 2025,
+      "doi": "10.1093/nar/gkaf1347",
+      "source_type": "journal_article",
+      "author_position": "middle",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1093/nar/gkaf1347"
+    },
+    {
+      "evidence_id": "E11",
+      "evidence_type": "publication",
+      "source_url": "https://doi.org/10.1016/j.ijbiomac.2025.149540",
+      "source_authority": "publication",
+      "candidate_statuses": [
+        "adopted"
+      ],
+      "reason": "Official email and current unit.",
+      "supported_fields": [
+        "name_en",
+        "research_directions_plain_language",
+        "research_questions",
+        "main_techniques",
+        "research_workflow",
+        "possible_undergraduate_tasks",
+        "prerequisite_skills",
+        "learning_cost",
+        "generic_growth_path",
+        "summary"
+      ],
+      "repository_source_ref": "evidence-manifest-v1.json#E11",
+      "last_verified_at": "2026-09-10",
+      "notes": "PubMed PMID 41360240; Official email and current unit. Candidate/adoption is not a featured or release decision. Owner decision 2026-09-10: adopted for local publication review; not release approval.",
+      "title": "UBA5 missense variants disrupt UFM1 activation: Structural, dynamic, and functional dissection.",
+      "publication_year": 2026,
+      "doi": "10.1016/j.ijbiomac.2025.149540",
+      "source_type": "journal_article",
+      "author_position": "last",
+      "is_co_first": null,
+      "is_corresponding": null,
+      "identity_verified": true,
+      "version_group": null,
+      "publication_types": [
+        "journal_article"
+      ],
+      "publication_affiliations": [
+        "Central South University"
+      ],
+      "publication_affiliation_source_url": "https://doi.org/10.1016/j.ijbiomac.2025.149540"
+    }
+  ]
+}

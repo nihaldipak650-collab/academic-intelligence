@@ -30,7 +30,7 @@
     "validate:release-preview:phase2": "node scripts/release-preview-phase2-cohort8.mjs --check",
     "test:release-preview:phase2": "vitest run scripts/release-preview-phase2-cohort8.test.mjs",
     "pretest": "npm run sync:data && npm run validate:data",
-    "test": "vitest run --no-file-parallelism --exclude src/test/phase2-review-ui.test.tsx",
+    "test": "vitest run --no-file-parallelism --exclude src/test/phase2-review-ui.test.tsx --exclude scripts/local-review-phase2-latest-site.test.mjs --exclude scripts/release-preview-phase2-cohort8.test.mjs",
     "build:mock": "npm run typecheck && vite build --mode mock",
     "build:safe": "npm run scan:prebuild && npm run sync:data && npm run validate:data && npm run scan:public && npm run typecheck && vite build --mode dto && npm run scan:artifact",
     "build": "npm run build:safe && node ../site-builder/build-rebase.mjs && npm run scan:artifact",
